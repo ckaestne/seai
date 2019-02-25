@@ -6,7 +6,8 @@ This course is aimed at **software engineers** who want to understand the specif
 
 * How can correctness or usefulness of a system with an AI component be specified or evaluated? How does *requirements engineering* change for AI-enabled systems?
 * How to analyze and mitigate wrong results and how to design robust systems? Is *modular design* still possible with AI components?
-* How and where to deploy models, how and when to update models, and what telemetry to collect? How to design learning and evaluation infrastructure that scales? * How to compose multiple AI components within a system and detect feedback loops? What does *software architecture* for AI-enabled systems look like?
+* How and where to deploy models, how and when to update models, and what telemetry to collect? How to design learning and evaluation infrastructure that scales? 
+* How to compose multiple AI components within a system and detect feedback loops? What does *software architecture* for AI-enabled systems look like?
 * How to detect poor data quality, poor model quality, and data drift? What would *unit testing* for data look like?
 * How to assure quality of an AI-enabled system? How would *test automation* look like to test correctness of infrastructure or models?
 * How to assure *fairness and privacy* of AI-enabled systems?
