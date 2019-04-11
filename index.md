@@ -1,5 +1,3 @@
-# Software Engineering for AI-Enabled Systems
-
 The course takes a **software engineering perspective** on building software systems with a significant **machine learning or AI component**. It discusses how to take an idea and a model developed by a data scientist (e.g., scripts and Jupyter notebook) and deploy it as part of scalable and maintainable system (e.g., mobile apps, web applications, IoT devices). Rather than focusing on modeling and learning itself, this course assumes a working relationship with a data scientist and focuses on issues of design, implementation, operation, and assurance and how those interact with the data scientist's modeling.
 
 This course is aimed at **software engineers** who want to understand the specific challenges of working with AI components and at **data scientists** who want to understand the challenges of getting a prototype model into production; it facilitates communication and collaboration between both roles.
@@ -8,7 +6,8 @@ This course is aimed at **software engineers** who want to understand the specif
 
 * How can correctness or usefulness of a system with an AI component be specified or evaluated? How does *requirements engineering* change for AI-enabled systems?
 * How to analyze and mitigate wrong results and how to design robust systems? Is *modular design* still possible with AI components?
-* How and where to deploy models, how and when to update models, and what telemetry to collect? How to design learning and evaluation infrastructure that scales? * How to compose multiple AI components within a system and detect feedback loops? What does *software architecture* for AI-enabled systems look like?
+* How and where to deploy models, how and when to update models, and what telemetry to collect? How to design learning and evaluation infrastructure that scales? 
+* How to compose multiple AI components within a system and detect feedback loops? What does *software architecture* for AI-enabled systems look like?
 * How to detect poor data quality, poor model quality, and data drift? What would *unit testing* for data look like?
 * How to assure quality of an AI-enabled system? How would *test automation* look like to test correctness of infrastructure or models?
 * How to assure *fairness and privacy* of AI-enabled systems?
@@ -23,11 +22,13 @@ This course is aimed at **software engineers** who want to understand the specif
 
 ## Logistics and People
 
-Fall 2019, 12 units
+17-445/17-645, Fall 2019, 12 units
+
+Monday/Wednesday 1:30-2:50
 
 [Christian Kaestner](https://www.cs.cmu.edu/~ckaestne/) and [Eunsuk Kang](https://eskang.github.io/)
 
-Open to undergraduate and master students
+Open to undergraduate and master students meeting the prerequisites.
 
 Both instructors have an open door policy: If either of the instructors' office doors are open and no-one else is meeting with us, we are happy to answer any course-related questions. If you prefer an appointment, email the instructors.
 
@@ -72,6 +73,7 @@ The course uses Canvas for homework submission, grading, discussion, questions, 
 **Prerequisites:** We expect basic exposure to (a) software engineering and (b) machine learning as well as reasonable programming skills. The prerequisites can be filled in many forms; if the formal course requirements are not met, email the instructors with a description of your background or experience. We may administer an online test to assess knowledge in both areas.
 * Regarding software engineering you should have a basic familiarity with using version control, gathering requirements, software design and modeling, testing and test automation. Courses 17-313, and  17-654, 17-655 apply, but you may also have prerequisite software engineering knowledge from other courses or practical work experience.
 * Regarding machine learning, you should have basic familiarity with the process of extracting features, building and evaluating models, and a basic understanding of how different kinds of learning techniques work. Courses such as 10-301, 10-315, and 05-434 apply, but project experience or self-learning from books or online courses will likely be sufficient for our purposes.
+If you have questions about the prerequisites please email the instructors.
 
 **Teamwork:** Teamwork is an essential part of this course. Many assignments are done in teams of 3-5 students. Teams will be assigned by the instructor and stay together for multiple assignments. A team policy posted on Canvas applies and describes roles and teams and how to deal with conflicts and imbalances.
 
