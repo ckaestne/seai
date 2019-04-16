@@ -28,6 +28,8 @@ Monday/Wednesday 1:30-2:50
 
 [Christian Kaestner](https://www.cs.cmu.edu/~ckaestne/) and [Eunsuk Kang](https://eskang.github.io/)
 
+Unless you have questions to specific instructors, we prefer that you email us at se-ai@lists.andrew.cmu.edu, where you will reach the entire teaching staff of the course.
+
 Open to undergraduate and master students meeting the prerequisites.
 
 Both instructors have an open door policy: If either of the instructors' office doors are open and no-one else is meeting with us, we are happy to answer any course-related questions. If you prefer an appointment, email the instructors.
@@ -70,9 +72,11 @@ The following schedule describes the current planing status and the covered conc
 
 The course uses Canvas for homework submission, grading, discussion, questions, announcements, and supplementary documents; slides will be posted here; github is used to coordinate group work.
 
-**Prerequisites:** We expect basic exposure to (a) software engineering and (b) machine learning as well as reasonable programming skills. The prerequisites can be filled in many forms; if the formal course requirements are not met, email the instructors with a description of your background or experience. We may administer an online test to assess knowledge in both areas.
-* Regarding software engineering you should have a basic familiarity with using version control, gathering requirements, software design and modeling, testing and test automation. Courses 17-313, and  17-654, 17-655 apply, but you may also have prerequisite software engineering knowledge from other courses or practical work experience.
-* Regarding machine learning, you should have basic familiarity with the process of extracting features, building and evaluating models, and a basic understanding of how different kinds of learning techniques work. Courses such as 10-301, 10-315, and 05-434 apply, but project experience or self-learning from books or online courses will likely be sufficient for our purposes.
+**Prerequisites:** We expect basic exposure to (a) software engineering and (b) machine learning as well as reasonable programming skills. The prerequisites can be filled in many forms:
+* Regarding software engineering you should have a basic familiarity with using version control, gathering requirements, software design and modeling, testing and test automation. Courses 17-313, and  17-654, 17-655 apply, but you may also have prerequisite software engineering knowledge from other courses or practical work experience. 
+* Regarding machine learning, you should have basic familiarity with the process of extracting features, building and evaluating models, and a basic understanding of how different kinds of learning techniques work. Courses such as 10-301, 10-315, and 05-434 apply, but project experience or self-learning from books or online courses will likely be sufficient for our purposes. 
+
+If you do not meet the formal course requirements, sign up for the waitlist and then email the instructors (se-ai@lists.andrew.cmu.edu) with a description of your background or experience. If you show evidence of prior relevant courses or experience, we may wave the requirement directly. Alternatively, we may assess your background with a short online quiz; in that case we will email you a link to a quiz that you can complete online; you will have 30 minutes to answer the questions, once you start the quiz.
 If you have questions about the prerequisites please email the instructors.
 
 **Teamwork:** Teamwork is an essential part of this course. Many assignments are done in teams of 3-5 students. Teams will be assigned by the instructor and stay together for multiple assignments. A team policy posted on Canvas applies and describes roles and teams and how to deal with conflicts and imbalances.
