@@ -2,6 +2,9 @@ The course takes a **software engineering perspective** on building software sys
 
 This course is aimed at **software engineers** who want to understand the specific challenges of working with AI components and at **data scientists** who want to understand the challenges of getting a prototype model into production; it facilitates communication and collaboration between both roles.
 
+[![Course Poster](poster_small.jpg "Course Poster")](poster.jpg)
+
+
 ## Questions
 
 * How can correctness or usefulness of a system with an AI component be specified or evaluated? How to collect *requirements* for AI-enabled systems?
