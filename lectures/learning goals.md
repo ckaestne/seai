@@ -47,7 +47,7 @@ Readings:
 Overview:
 
 * Specifications or lack thereof for ML-components, probabilistic specifications in certain AI components; inevitability 
-* Introduction to risk analysis, fault trees, and hazard analysis; writing of requirements
+* Introduction to risk analysis and fault trees; writing of requirements
 * Overview of fault handling strategies (redundancies, voting, fallback, undo, forcefulness, ...)
 
 Learning goals:
@@ -94,14 +94,16 @@ Learning goals:
 
 Overview:
 
+* Goals and measurement
 * Metrics and experimental designs to assess model quality, including measures beyond accuracy and RUC
-* Telemetry designs to assess model quality in production (and related design tradeoffs)
-* Data drift, stale models, and methods to detect it
+* *Telemetry* designs to assess model quality in production (and related design tradeoffs)
+* Data drift, stale models, and methods to detect 
 * Automated assessment, dashboards, continuous integration, continuous experimentation
 * Notions of test suits and coverage for models
 
 Learning goals:
 
+* Identify and describe the goals of an AI component and define outcome quality measures
 * Explain the limits of evaluating model quality on a static dataset and design telemetry for assessment in production
 * Assess model quality with suitable measures and compare quality of multiple models
 * Design a test suite for assuring model quality
@@ -115,8 +117,8 @@ Assignment:
 
 Overview:
 
-* Introduction to data cleaning
-* Introduction to data schema (databases, xml, Avro, ...) and unit testing for data
+* Introduction to *data cleaning*
+* Introduction to *data schema* (databases, xml, Avro, ...) and unit testing for data
 * Comparing data distributions and detecting data drift
 * Quality assurance for the data processing pipelines
 * Measures of noise, accuracy, and precision, and consequences for AI components (robustness)
@@ -135,30 +137,31 @@ Overview:
 
 * Unit testing vs integration testing vs system testing
 * Testing all parts of the ML-pipleline
-* Test automation with Continuous Integration tools
+* Test automation with *Continuous Integration* tools
 * Performance testing and performance regression testing
 * Introduction to DevOps and Continuous Deployment
-* Canary releases and rolling releases
-* Feature flags and corresponding infrastructure
+* *Canary releases* and rolling releases
+* *Feature flags* and corresponding infrastructure
 
 Learning goals:
 
+* Deploy a service for models using container infrastructure
 * Design and implement an infrastructure canary/rolling releases using feature flags
 * Implement and automate tests for all parts of the ML pipeline
 
 
-## Lecture: Sensitivity Analysis and Experimentation
+## Lecture: Experimentation
 
 Overview:
 
-* Introduction to the scientific method (experimental design, statistical tests)
+* Introduction to the scientific method (experimental design, statistical tests, causality)
 * Offline experimentation
-  * Introduction to sensitivity analysis
-  * Hyper-parameter tuning
+  * Introduction to *sensitivity analysis*
+  * Use cases regarding robustness, bias, performance tuning, ...
   * Sampling in high-dimensional spaces
 * Online experimentation
   * Testing in production, chaos engineering
-  * A/B testing
+  * *A/B testing*
   * Necessary statistics foundation
   * Concurrent A/B tests
 * Infrastructure for experimentation, planning and tracking experiments
@@ -170,6 +173,168 @@ Learning goals:
 * Examine experimental results with statistical rigor
 * Perform sensitivity analysis in large configuration/design spaces
 
+## Lecture: Ethics + Fairness
+
+Overview:
+
+* Introductions to ethics
+* Overview of notions of *bias and fairness* and corresponding measures
+* Techniques for detecting bias, fairness testing
+* Overview of possible interventions to reduce or mitigate bias
+
+Learning goals:
+
+* Review the importance of ethical considerations in designing AI-enabled systems
+* Recall basic strategies to reason about ethical challenges
+* Diagnose potential ethical issues in a given system
+* Design and execute tests to check for bias/fairness issues
+* Evaluate and apply mitigation strategies
+
+Assignment:
+
+* Analyze a given component for potential bias, design a mitigation, and deploy automated tests 
+
+
+## Lecture: Safety
+
+Overview:
+
+* Introduction to safety and ethics; safety vs reliability
+* Introduction to *hazard analysis* (requirements)
+* Safety concerns in everyday applications
+* Architectural safety tactics -- how to build safe systems from unreliable components
+* Introduction to assurance cases and software certification; evidence collection for safety claims
+
+Learning goals:
+
+* Perform a hazard analysis for a system to derive safety requirements
+* Diagnose potential safety issues in a given system
+* Collect evidence and sketch an argument for a safety case
+* Design architectural safeguards against safety-relevant mistakes from AI components
+* Describe the typical processes for safety evaluations and their limitations
+
+Assignment: (?)
+
+* Perform a hazard analysis of a given system, identify suitable mitigations, and sketch an argument for a safety case
+
+## Lecture: Security, Adversarial Learning, and Feedback Loops
+
+Overview:
+
+* Attack scenarios against AI components and possible defenses
+* Basics of adversarial learning techniques
+* Feedback loops and how to detect them
+* Dangers of leaking sensitive data, deanonymization, and *differential privacy*
+* *Threat modeling*
+* Overview of common security patterns/tactics
+* Anomaly detection, intrusion detection
+* Process and team considerations for security
+
+Learning goals:
+
+* Describe common attacks against AI component 
+* Conduct threat modeling for a given system and derive security requirements
+* Suggest counter measures against attacks for specific systems
+* Discuss challenges in anonymizing data 
+
+
+## Lecture: Scalability and distributed systems 
+
+Overview:
+
+* Survey of scalability challenges for learning and serving in AI-enabled systems
+* Introduction to distributed systems and corresponding challenges (faults, consistency, atomicity, ...)
+* Overview of common architectures for scalability (faster computers to clusters of commodity hardware)
+* Overview of common abstractions and designs, including reusable open-source infrastructure
+* Software architecture modeling and analysis
+
+Learning goals:
+
+* Summarize the challenges of distributed systems
+* Outline strategies to scale systems and their tradeoffs
+* Diagnose bottlenecks with architectural modeling and identify which parts of a system can be parallelized
+* Recommend suitable abstractions for scaling a given system
+
+
+## Lecture: Managing Large Datasets
+
+Overview:
+
+* Introduction to data storage strategies and their tradeoffs
+* Schema vs noschema storage (data lakes)
+* Overview of common technologies (relational databases, NoSQL storage, OLAP/OLTP, streaming systems, replication and partitioning)
+* Mutable vs immutable data
+* Common design patterns (e.g., batch processing, stream processing, lambda architecture)
+
+Learning goals:
+
+* Organize different data management solutions and their tradeoffs
+* Recommend and justify a design and corresponding technologies for a given system
+
+
+## Lecture: Data Provenance, Reproducability, and Explainability
+
+Overview:
+
+* Goal: Explaining why decisions have been made
+* Documenting and tracking data provenance (modeling), techniques for automated tracking
+* Versioning of data and models
+* Logging and audit traces
+* Explanatory power of different AI techniques, retrofitting explanations
+
+Learning goals:
+
+* Judge the importance of data provenance, reproducibility and explainability for a given system
+* Create documentation for data dependencies and provenance in a given system
+* Propose versioning strategies for data and models
+* Test systems for reproducibility
+
+## Lecture: Configuration Management and Operations at Scale
+
+Overview:
+
+* Managing computing resources, own and cloud resources
+* Automated configuration management challenges and tools (Kubernetis, puppet, ansible)
+* Overview of cloud infrastructure services (containers, serverless, app engines, ...) and relevant tradeoffs
+* Version control strategies, feature flags vs branches
+* Introduction to logging and analysis at scale
+* Debugging and monitoring tools for distributed systems
+
+Learning goals:
+
+* Describe common deployment options and their tradeoffs
+* Design and justify a scalable deployment strategy for a given system
+* Automate common configuration management tasks
+* Devise a monitoring strategy and suggest suitable components for implementing it
+* Diagnose common operations problems
+
+## Lecture: Process and Team Reflections
+
+Overview:
+
+* Different roles in developing AI-enabled systems and their respective goals and concerns
+* Communication strategies for cross-disciplinary teams
+	- Understand basic management, engineering, science, and operations mindsets
+	- Going beyond accuracy
+	- Communicating the importance of process
+* Agile techniques in AI-enabled systems
+* Technical debt 
+
+Learning goals:
+
+* Plan development activities in an inclusive fashion for participants in different roles
+* Describe agile techniques to address common process and communication issues
+* Diagnose technical debt in a given system and propose a system to track, assess and remove technical debt
+
+## Lecture: Planning an AI-enabled product in a startup
+
+todo (guest lecture Michael Hilton)
+
+## Lecture: Usability
+
+todo
+
+
 ## Todo:
 
 Good engineering practices
@@ -179,3 +344,4 @@ Good engineering practices
 * Modularity, design for extensibility
 * Documentation, naming
 * Test automation and continuous integration
+* Big data analytics debugging
