@@ -56,7 +56,7 @@ digraph G {
         "HW: Modeling Basics" -> "Components of an AI-Enabled System"
         "HW: AI Tradeoffs" -> "Tradeoffs among AI Techniques"
         "HW: AI Tradeoffs" -> "HW: Modeling Basics"
-        "HW: Architecture" -> "Updating Models"
+        "HW: Architecture" -> "Software Architecture"
         "HW: Requirements" -> "Dealing with Mistakes"
         "HW: Quality"-> "Model Quality"
         "HW: Quality" -> "Data Quality"
