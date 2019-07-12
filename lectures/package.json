@@ -1,0 +1,17 @@
+{
+  "name": "slides-test",
+  "version": "1.0.0",
+  "scripts": {
+    "presentation": "reveal-md .",
+    "generate": "reveal-md . --static"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ckaestne/slide-test.git"
+  },
+  "author": "Christian Kaestner",
+  "devDependencies": {
+    "gh-pages": "^2.0.1",
+    "reveal-md": "github:ckaestne/reveal-md#master"
+  }
+}

@@ -1,1 +1,4 @@
 other_lectures/test
+lectures/_static/
+lectures/node_modules/
+_site/
