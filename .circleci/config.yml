@@ -29,6 +29,7 @@ jobs:
           name: generate main html page
           command: |
             mkdir _site
+            touch _site/.nojekyll
             cp .assets/template.html _site/index.html
             lectures/node_modules/marked/bin/marked -i index.md >> _site/index.html
             cat .assets/template_end.html >> _site/index.html
