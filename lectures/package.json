@@ -12,6 +12,7 @@
   "author": "Christian Kaestner",
   "devDependencies": {
     "gh-pages": "^2.0.1",
+    "marked": "^0.7.0",
     "reveal-md": "github:ckaestne/reveal-md#master"
   }
 }
