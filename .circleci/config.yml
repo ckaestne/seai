@@ -16,16 +16,16 @@ jobs:
             - v1-dependencies-
 
       - run: |
-        cd lectures
-        npm install
-        cd ..
+          cd lectures
+          npm install
+          cd ..
 
       - save_cache:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "lectures/package.json" }}
 
-      - run
+      - run:
         name: generate main html page
         command: |
           mkdir _site
@@ -35,9 +35,9 @@ jobs:
           cp *.png _site/
           cp *.jpg _site/
 
-      - run
+      - run:
         name: generate static reveal.js slides
-        command: | 
+        command: |
           cd lectures
           npm run generate
           cp -r _static/ ../_site/slides
@@ -46,10 +46,9 @@ jobs:
       - add_ssh_keys:
           fingerprints:
             - "86:ba:3d:bf:47:f3:b4:24:8f:cc:bb:34:53:10:3f:e1"
-      - run: 
+      - run:
           name: deploy _site directory to gh-pages
           command: |
             git config user.email "ci-build@cs.cmu.edu"
             git config user.name "ci-build"
             node node_modules/gh-pages/bin/gh-pages.js --dist _static -m 'update static slides [ci skip]'
-
