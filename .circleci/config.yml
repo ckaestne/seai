@@ -26,22 +26,22 @@ jobs:
           key: v1-dependencies-{{ checksum "lectures/package.json" }}
 
       - run:
-        name: generate main html page
-        command: |
-          mkdir _site
-          cp .assets/template.html _site/index.html
-          marked -i index.md >> _site/index.html
-          cat .assets/template.end.html >> _site/index.html
-          cp *.png _site/
-          cp *.jpg _site/
+          name: generate main html page
+          command: |
+            mkdir _site
+            cp .assets/template.html _site/index.html
+            marked -i index.md >> _site/index.html
+            cat .assets/template.end.html >> _site/index.html
+            cp *.png _site/
+            cp *.jpg _site/
 
       - run:
-        name: generate static reveal.js slides
-        command: |
-          cd lectures
-          npm run generate
-          cp -r _static/ ../_site/slides
-          cd ..
+          name: generate static reveal.js slides
+          command: |
+            cd lectures
+            npm run generate
+            cp -r _static/ ../_site/slides
+            cd ..
 
       - add_ssh_keys:
           fingerprints:
