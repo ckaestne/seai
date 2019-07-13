@@ -365,12 +365,10 @@ Software engineers have long development methods to deal with uncertainty, missi
 > "Machine learning: The high interest credit card of technical debt" -- Sculley et al. 2014
 
 ![](debt.jpg)
-
 ----
 
-<div class="stretch">
-[![](debt.png)](https://www.monkeyuser.com/2018/tech-debt/)
-</div>
+[![](debt.png)](https://www.monkeyuser.com/2018/tech-debt/) 
+<!-- .element: class="stretch" -->
 
 
 ----
@@ -379,10 +377,8 @@ Software engineers have long development methods to deal with uncertainty, missi
 
 > Jupyter Notebooks are a gift from God to those who work with data. They allow us to do quick experiments with Julia, Python, R, and more -- [John Paul Ada](https://towardsdatascience.com/no-hassle-machine-learning-experiments-with-azure-notebooks-e1a22e8782c3)
 
-<div class="stretch">
-![](jupyter.png)
-</div>
-
+![](jupyter.png) 
+<!-- .element: class="stretch" -->
 
 Instructor Notes: Discuss benefits and drawbacks of Jupyter style notebooks
 
