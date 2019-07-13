@@ -51,4 +51,4 @@ jobs:
           command: |
             git config user.email "ci-build@cs.cmu.edu"
             git config user.name "ci-build"
-            node node_modules/gh-pages/bin/gh-pages.js --dist _static -m 'update static slides [ci skip]'
+            node lectures/node_modules/gh-pages/bin/gh-pages.js --dist _site -m 'update static slides [ci skip]'
