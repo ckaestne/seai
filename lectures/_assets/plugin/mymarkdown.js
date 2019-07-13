@@ -50,6 +50,8 @@ renderer.html=function( html) {
 		return '</div><div class="col">'
 	if (html.trim() == "<!-- colend -->")
 		return '</div></div>'
+	if (html.trim() == "<!-- references -->")
+		return '<div class="stretch"></div><div class="references">'
 	return html
 };
 
@@ -81,6 +83,9 @@ this.marked = function(x, opt, cb) {
 	if (/<!--[^-]*\Wsplit\W[^-]*-/.test(x)) {
 		pre = pre + "<div class='container'><div class='col'>"
 		post = "</div></div>"+post
+	}
+	if (/<!-- references -->/.test(x)) {
+		post = "</div>"+post
 	}
 	if (/<!--[^-]*\Wleft\W[^-]*-/.test(x)) {
 		pre = pre + "<div class='left'>"

@@ -20,13 +20,12 @@ Christian Kaestner and Eunsuk Kang
 
 ## Transcription services
 
-Take audio or video files and produce text.
+* Take audio or video files and produce text.
+    - Used by academics to analyze interview text
+    - Podcast show notes
+    - Subtitles for videos
 
-* Used by academics to analyze interview text
-* Podcast show notes
-* Subtitles for videos
-
-State of the art: Manual transcription, often mechanical turk (1.5 $/min)
+* State of the art: Manual transcription, often mechanical turk (1.5 $/min)
 
 ----
 
@@ -44,7 +43,7 @@ Idea: Let's commercialize the software and sell to academics and conference orga
 
 ## Likely challenges?
 
-Instructor Notes: Ask students to write at least 3 challenges each, collect answers on board
+Notes: Ask students to write at least 3 challenges each, collect answers on board
 
 ----
 ## Data scientist
@@ -96,6 +95,8 @@ Instructor Notes: Ask students to write at least 3 challenges each, collect answ
 * Serviceability
 * Aesthetics
 * Perceived Quality
+
+<!-- references -->
 
 Reference:
 Garvin, David A., [What Does Product Quality Really Mean](http://oqrm.org/English/What_does_product_quality_really_means.pdf). Sloan management review 25 (1984).
@@ -251,6 +252,8 @@ public int read(byte[] buf) throws IOException
 ## Example: Protocol Specification
 
 ![protocol](protocol.png)
+<!-- .element: class="stretch" -->
+
 
 Source: Ryzhyk. On the Construction of Reliable Device Drivers. PhD Thesis 2009
 
@@ -307,6 +310,8 @@ List<Product> suggestedPurchases(List<Product> pastPurchases);
 ----
 
 [![](inductive.png)](https://danielmiessler.com/blog/the-difference-between-deductive-and-inductive-reasoning/)
+<!-- .element: class="stretch" -->
+
 
 (Daniel Miessler, CC SA 2.0)
 
@@ -362,7 +367,7 @@ Software engineers have long development methods to deal with uncertainty, missi
 
 # Technical Debt
 
-> "Machine learning: The high interest credit card of technical debt" -- Sculley et al. 2014
+> "Machine learning: The high interest credit card of technical debt" -- [Sculley et al. 2014](https://storage.googleapis.com/pub-tools-public-publication-data/pdf/43146.pdf)
 
 ![](debt.jpg)
 ----
@@ -380,7 +385,7 @@ Software engineers have long development methods to deal with uncertainty, missi
 ![](jupyter.png) 
 <!-- .element: class="stretch" -->
 
-Instructor Notes: Discuss benefits and drawbacks of Jupyter style notebooks
+Notes: Discuss benefits and drawbacks of Jupyter style notebooks
 
 ----
 
@@ -409,7 +414,9 @@ Instructor Notes: Discuss benefits and drawbacks of Jupyter style notebooks
     - Data drift and feedback loops
     - Magic constants and dead experimental code paths
 
-Further reading: Sculley, David, et al. "[Hidden technical debt in machine learning systems](http://papers.nips.cc/paper/5656-hidden-technical-debt-in-machine-learning-systems.pdf)." Advances in Neural Information Processing Systems. 2015.
+
+<!-- references -->
+Further reading: Sculley, David, et al. [Hidden technical debt in machine learning systems](http://papers.nips.cc/paper/5656-hidden-technical-debt-in-machine-learning-systems.pdf). Advances in Neural Information Processing Systems. 2015.
 
 
 ---
@@ -492,10 +499,11 @@ Empirical research is fairly clear:
 Smoking section policy: *Avoid laptops beyond note-taking. If you want to use laptops, sit in the back.*
 
 
-Footnotes: 
-[1]: Faria Sana, Tina Weston, and Nicholas J. Cepeda. 2013. Laptop multitasking hinders classroom learning for both users and nearby peers. Comput. Educ. 62 (March 2013), 24-31. 
-[2]: Psychol Sci. 2014 Jun;25(6):Epub 2014 Apr 23.
-The pen is mightier than the keyboard: advantages of longhand over laptop note taking. Mueller PA1, Oppenheimer DM2.
+<!-- references -->
+
+[1]: Faria Sana, Tina Weston, and Nicholas J. Cepeda. 2013. [Laptop multitasking hinders classroom learning for both users and nearby peers](https://www.sciencedirect.com/science/article/pii/S0360131512002254). *Comput. Educ.* 62 (March 2013), 24-31. 
+
+[2]: Mueller, Pam A., and Daniel M. Oppenheimer. [The pen is mightier than the keyboard: advantages of longhand over laptop note taking](https://journals.sagepub.com/doi/full/10.1177/0956797614524581) *Psychological science* 25.6 (2014): 1159-1168.
 
 
 ----
@@ -608,4 +616,6 @@ Survey helps us to tailor class and form teams.
 
 * *Data scientists* and *software engineers* have different goals and focuses
   * Building systems requires both
-  * Various 
+  * Various qualities are relevant, beyond just accuracy
+  * Deliberate engineering for production, beyond experimentation notebooks
+* Inductive reasoning and lack of specifications
