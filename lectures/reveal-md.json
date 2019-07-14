@@ -1,5 +1,5 @@
 {
-  "footer": "17-445 Software Engineering for AI-Enabled Systems, Christian Kaestner",
+  "footer": "17-445 Software Engineering for AI-Enabled Systems",
   "theme": "white",
   "css": "_assets/cmu.css",
   "scripts": "_assets/mermaid.min.js,_assets/loadmymarkdown.js",

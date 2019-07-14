@@ -1,7 +1,8 @@
 ---
 author: Christian Kaestner
 title: "17-445: Introduction and Motivation"
-date: Fall 2019
+semester: Fall 2019
+footer: "17-445 Software Engineering for AI-Enabled Systems, Christian Kaestner"
 ---  
 
 # Introduction and Motivation
