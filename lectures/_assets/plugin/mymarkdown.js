@@ -7,7 +7,7 @@ var mermaidCounter = 0
 /** rendering mermaid code */
 renderer.rcode = renderer.code;
 renderer.code=function( code,  infostring,  escaped) { 
-	console.log("code("+code+","+infostring+","+escaped+")"); 
+	// console.log("code("+code+","+infostring+","+escaped+")"); 
 	if (infostring==="mermaid") {
 		mermaidCounter++
 		return mermaid.render('mermaid'+mermaidCounter,code)
@@ -43,7 +43,7 @@ renderer.heading=function( a,  b,  c, d) {
 
 // renderer.blockquote=function( quote) { console.log("blockquote("+quote+")");};
 renderer.html=function( html) { 
-	console.log("html("+html.trim()+")"); 
+	// console.log("html("+html.trim()+")"); 
 	if (html.trim() == "<!-- colstart -->")
 		return '<div class="container"><div class="col">'
 	if (html.trim() == "<!-- col -->" || html.trim() == "<!-- split -->")
@@ -63,7 +63,7 @@ renderer.listitem= function(text, task, checked) {
 }
 
 this.marked.setOptions({renderer:renderer})
-console.log(this.marked.defaults)
+// console.log(this.marked.defaults)
 
 const _marked = this.marked
 this.marked = function(x, opt, cb) { 
