@@ -30,7 +30,7 @@ jobs:
           command: |
             mkdir _site
             cp .assets/template.html _site/index.html
-            lectures/node_modules/marked/bin/marked -i index.md >> _site/index.html
+            lectures/node_modules/marked/bin/marked -i README.md >> _site/index.html
             cat .assets/template_end.html >> _site/index.html
             cp *.png _site/
             cp *.jpg _site/
