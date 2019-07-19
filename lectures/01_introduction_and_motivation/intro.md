@@ -11,6 +11,14 @@ Christian Kaestner and Eunsuk Kang
 
 ---
 
+## Learning Goals
+
+* Explain the typical machine-learning process
+* Illustrate the challenges in engineering an AI-enabled system beyond accuracy
+* Summarize the respective goals and challenges of software engineers vs data scientists
+
+---
+
 # Case Study: The Transcription Service Startup
 
 ----
