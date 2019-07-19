@@ -1,0 +1,1122 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><style>@font-face {
+  font-family: octicons-anchor;
+  src: url(https://cdnjs.cloudflare.com/ajax/libs/octicons/4.4.0/font/octicons.woff) format('woff');
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 980px;
+    margin-right: auto;
+    margin-left: auto;
+    color:#333;
+    background:#fff;
+}
+
+body .markdown-body {
+    padding: 45px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    word-wrap: break-word;
+}
+
+pre {
+    font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+.markdown-body {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  color: #333;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.markdown-body a {
+  background-color: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline: 0;
+}
+
+.markdown-body strong {
+  font-weight: bold;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.markdown-body img {
+  border: 0;
+}
+
+.markdown-body hr {
+  box-sizing: content-box;
+  height: 0;
+}
+
+.markdown-body pre {
+  overflow: auto;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+.markdown-body input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body html input[disabled] {
+  cursor: default;
+}
+
+.markdown-body input {
+  line-height: normal;
+}
+
+.markdown-body input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body input {
+  font: 13px / 1.4 Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.markdown-body a {
+  color: #4078c0;
+  text-decoration: none;
+}
+
+.markdown-body a:hover,
+.markdown-body a:active {
+  text-decoration: underline;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.markdown-body hr:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body hr:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.markdown-body h1 {
+  font-size: 30px;
+}
+
+.markdown-body h2 {
+  font-size: 21px;
+}
+
+.markdown-body h3 {
+  font-size: 16px;
+}
+
+.markdown-body h4 {
+  font-size: 14px;
+}
+
+.markdown-body h5 {
+  font-size: 12px;
+}
+
+.markdown-body h6 {
+  font-size: 11px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+  font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+.markdown-body .select::-ms-expand {
+  opacity: 0;
+}
+
+.markdown-body .octicon {
+  font: normal normal normal 16px/1 octicons-anchor;
+  display: inline-block;
+  text-decoration: none;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.markdown-body .octicon-link:before {
+  content: '\f05c';
+}
+
+.markdown-body:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.markdown-body .anchor {
+  display: inline-block;
+  padding-right: 2px;
+  margin-left: -18px;
+}
+
+.markdown-body .anchor:focus {
+  outline: none;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  color: #000;
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+
+.markdown-body h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h1 .anchor {
+  line-height: 1;
+}
+
+.markdown-body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h2 .anchor {
+  line-height: 1;
+}
+
+.markdown-body h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+.markdown-body h3 .anchor {
+  line-height: 1.2;
+}
+
+.markdown-body h4 {
+  font-size: 1.25em;
+}
+
+.markdown-body h4 .anchor {
+  line-height: 1.2;
+}
+
+.markdown-body h5 {
+  font-size: 1em;
+}
+
+.markdown-body h5 .anchor {
+  line-height: 1.1;
+}
+
+.markdown-body h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+.markdown-body h6 .anchor {
+  line-height: 1.1;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+.markdown-body table th {
+  font-weight: bold;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  box-sizing: content-box;
+  background-color: #fff;
+}
+
+.markdown-body code {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+.markdown-body code:before,
+.markdown-body code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .highlight {
+  margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body pre code:before,
+.markdown-body pre code:after {
+  content: normal;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb;
+}
+
+.markdown-body .pl-c {
+  color: #969896;
+}
+
+.markdown-body .pl-c1,
+.markdown-body .pl-s .pl-v {
+  color: #0086b3;
+}
+
+.markdown-body .pl-e,
+.markdown-body .pl-en {
+  color: #795da3;
+}
+
+.markdown-body .pl-s .pl-s1,
+.markdown-body .pl-smi {
+  color: #333;
+}
+
+.markdown-body .pl-ent {
+  color: #63a35c;
+}
+
+.markdown-body .pl-k {
+  color: #a71d5d;
+}
+
+.markdown-body .pl-pds,
+.markdown-body .pl-s,
+.markdown-body .pl-s .pl-pse .pl-s1,
+.markdown-body .pl-sr,
+.markdown-body .pl-sr .pl-cce,
+.markdown-body .pl-sr .pl-sra,
+.markdown-body .pl-sr .pl-sre {
+  color: #183691;
+}
+
+.markdown-body .pl-v {
+  color: #ed6a43;
+}
+
+.markdown-body .pl-id {
+  color: #b52a1d;
+}
+
+.markdown-body .pl-ii {
+  background-color: #b52a1d;
+  color: #f8f8f8;
+}
+
+.markdown-body .pl-sr .pl-cce {
+  color: #63a35c;
+  font-weight: bold;
+}
+
+.markdown-body .pl-ml {
+  color: #693a17;
+}
+
+.markdown-body .pl-mh,
+.markdown-body .pl-mh .pl-en,
+.markdown-body .pl-ms {
+  color: #1d3e81;
+  font-weight: bold;
+}
+
+.markdown-body .pl-mq {
+  color: #008080;
+}
+
+.markdown-body .pl-mi {
+  color: #333;
+  font-style: italic;
+}
+
+.markdown-body .pl-mb {
+  color: #333;
+  font-weight: bold;
+}
+
+.markdown-body .pl-md {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.markdown-body .pl-mi1 {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.markdown-body .pl-mdr {
+  color: #795da3;
+  font-weight: bold;
+}
+
+.markdown-body .pl-mo {
+  color: #1d3e81;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb;
+}
+
+.markdown-body .plan-price-unit {
+  color: #767676;
+  font-weight: normal;
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 0.35em 0.25em -1.6em;
+  vertical-align: middle;
+}
+
+.markdown-body .plan-choice {
+  padding: 15px;
+  padding-left: 40px;
+  display: block;
+  border: 1px solid #e0e0e0;
+  position: relative;
+  font-weight: normal;
+  background-color: #fafafa;
+}
+
+.markdown-body .plan-choice.open {
+  background-color: #fff;
+}
+
+.markdown-body .plan-choice.open .plan-choice-seat-breakdown {
+  display: block;
+}
+
+.markdown-body .plan-choice-free {
+  border-radius: 3px 3px 0 0;
+}
+
+.markdown-body .plan-choice-paid {
+  border-radius: 0 0 3px 3px;
+  border-top: 0;
+  margin-bottom: 20px;
+}
+
+.markdown-body .plan-choice-radio {
+  position: absolute;
+  left: 15px;
+  top: 18px;
+}
+
+.markdown-body .plan-choice-exp {
+  color: #999;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.markdown-body .plan-choice-seat-breakdown {
+  margin-top: 10px;
+  display: none;
+}
+
+.markdown-body :checked+.radio-label {
+  z-index: 1;
+  position: relative;
+  border-color: #4078c0;
+}
+
+@media print {
+  body .markdown-body {
+    padding: 0;
+    border: none;
+  }
+}
+</style><title>se</title></head><body><article class="markdown-body"><hr>
+<h2>
+<a id="user-content-author-christian-kaestnertitle-17-445-software-engineering-bootcampsemester-fall-2019footer-17-445-software-engineering-for-ai-enabled-systems-christian-kaestner" class="anchor" href="#author-christian-kaestnertitle-17-445-software-engineering-bootcampsemester-fall-2019footer-17-445-software-engineering-for-ai-enabled-systems-christian-kaestner" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>author: Christian Kaestner
+title: "17-445: Software Engineering Bootcamp"
+semester: Fall 2019
+footer: "17-445 Software Engineering for AI-Enabled Systems, Christian Kaestner"</h2>
+<h1>
+<a id="user-content-software-engineering-bootcamp" class="anchor" href="#software-engineering-bootcamp" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Software Engineering Bootcamp</h1>
+<p>Christian Kaestner</p>
+<p>Notes:</p>
+<p>Most students will know this; this is a refresher and provides an overview. This is the bare minimum of software engineering practices a la <a href="https://software-carpentry.org/" rel="nofollow">https://software-carpentry.org/</a></p>
+<hr>
+<h1>
+<a id="user-content-learning-goals" class="anchor" href="#learning-goals" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Learning Goals</h1>
+<ul>
+<li>Recognize the importance of process</li>
+<li>Describe common agile practices and their goals</li>
+<li>Apply basic software engineering practices during coding (including version control, documentation, issue tracking)</li>
+<li>Use milestones for planning and progress measurement</li>
+<li>Describe common qualities of interest and how to measure them</li>
+</ul>
+<hr>
+<h1>
+<a id="user-content-process" class="anchor" href="#process" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Process</h1>
+<hr>
+<h2>
+<a id="user-content-innovative-vs-routine-projects" class="anchor" href="#innovative-vs-routine-projects" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Innovative vs Routine Projects</h2>
+<ul>
+<li>Most software projects are innovative
+<ul>
+<li>Google, Amazon, Ebay, Netflix</li>
+<li>Vehicles and robotics</li>
+<li>Language processing, Graphics, AI</li>
+</ul>
+</li>
+<li>Routine (now, not 20 years ago)
+<ul>
+<li>E-commerce websites?</li>
+<li>Product recommendation? Voice recognition?</li>
+<li>Routine gets automated -&gt; innovation cycle</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2>
+<a id="user-content-a-simple-process" class="anchor" href="#a-simple-process" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>A Simple Process</h2>
+<ol>
+<li>Discuss the software that needs to be written</li>
+<li>Write some code</li>
+<li>Test the code to identify the defects</li>
+<li>Debug to find causes of defects</li>
+<li>Fix the defects</li>
+<li>If not done, return to step 1</li>
+</ol>
+<hr>
+<h2>
+<a id="user-content-software-process" class="anchor" href="#software-process" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Software Process</h2>
+<blockquote>
+<p>“The set of activities and associated results that produce a software product”</p>
+</blockquote>
+<p>Examples?</p>
+<p><a href="///C://Users/ckaestne/CloudStation/work/seai/lectures/03_se_bootcamp/discussion.png" target="_blank" rel="noopener noreferrer"><img src="///C://Users/ckaestne/CloudStation/work/seai/lectures/03_se_bootcamp/discussion.png" alt="discussion" style="max-width:100%;"></a></p>
+<p>Notes:</p>
+<p>Writing down all requirements
+Require approval for all changes to requirements
+Use version control for all changes
+Track all reported bugs
+Review requirements and code
+Break down development into smaller tasks and schedule and monitor them
+Planning and conducting quality assurance
+Have daily status meetings
+Use Docker containers to push code between developers and operation</p>
+<hr>
+<p><a href="///C://Users/ckaestne/CloudStation/work/seai/lectures/03_se_bootcamp/process1.png" target="_blank" rel="noopener noreferrer"><img src="///C://Users/ckaestne/CloudStation/work/seai/lectures/03_se_bootcamp/process1.png" alt="full" style="max-width:100%;"></a></p>
+<h2>
+<a id="user-content-notes-visualization-following-mcconnell-steve-software-project-survival-guide-pearson-education-1998" class="anchor" href="#notes-visualization-following-mcconnell-steve-software-project-survival-guide-pearson-education-1998" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Notes: Visualization following McConnell, Steve. Software project survival guide. Pearson Education, 1998.</h2>
+<h2>
+<a id="user-content-notes-idea-spent-most-of-the-time-on-coding-accept-a-little-rework" class="anchor" href="#notes-idea-spent-most-of-the-time-on-coding-accept-a-little-rework" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><a href="///C://Users/ckaestne/CloudStation/work/seai/lectures/03_se_bootcamp/process2.png" target="_blank" rel="noopener noreferrer"><img src="///C://Users/ckaestne/CloudStation/work/seai/lectures/03_se_bootcamp/process2.png" alt="full" style="max-width:100%;"></a>
+Notes: Idea: spent most of the time on coding, accept a little rework</h2>
+<h2>
+<a id="user-content-notes-negative-view-of-process-pure-overhead-reduces-productive-work-limits-creativity" class="anchor" href="#notes-negative-view-of-process-pure-overhead-reduces-productive-work-limits-creativity" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><a href="///C://Users/ckaestne/CloudStation/work/seai/lectures/03_se_bootcamp/process3.png" target="_blank" rel="noopener noreferrer"><img src="///C://Users/ckaestne/CloudStation/work/seai/lectures/03_se_bootcamp/process3.png" alt="full" style="max-width:100%;"></a>
+Notes: negative view of process. pure overhead, reduces productive work, limits creativity</h2>
+<p><a href="///C://Users/ckaestne/CloudStation/work/seai/lectures/03_se_bootcamp/process4.png" target="_blank" rel="noopener noreferrer"><img src="///C://Users/ckaestne/CloudStation/work/seai/lectures/03_se_bootcamp/process4.png" alt="full" style="max-width:100%;"></a></p>
+<p>Notes: Real experience if little attention is payed to process: increasingly complicated, increasing rework; attempts to rescue by introducing process</p>
+<hr>
+<h2>
+<a id="user-content-example-of-process-problems" class="anchor" href="#example-of-process-problems" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Example of Process Problems?</h2>
+<p><a href="///C://Users/ckaestne/CloudStation/work/seai/lectures/03_se_bootcamp/discussion.png" target="_blank" rel="noopener noreferrer"><img src="///C://Users/ckaestne/CloudStation/work/seai/lectures/03_se_bootcamp/discussion.png" alt="discussion" style="max-width:100%;"></a></p>
+<p>Notes:
+Collect examples of what could go wrong:</p>
+<p>Change Control: Mid-project informal agreement to changes suggested by customer or manager. Project scope expands 25-50%
+Quality Assurance: Late detection of requirements and design issues. Test-debug-reimplement cycle limits development of new features. Release with known defects.
+Defect Tracking: Bug reports collected informally, forgotten
+System Integration: Integration of independently developed components at the very end of the project. Interfaces out of sync.
+Source Code Control: Accidentally overwritten changes, lost work.
+Scheduling: When project is behind, developers are asked weekly for new estimates.</p>
+<hr>
+<h2>
+<a id="user-content-example-of-process-problems-for-ai-enabled-systems" class="anchor" href="#example-of-process-problems-for-ai-enabled-systems" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Example of Process Problems for AI-Enabled Systems?</h2>
+<p><a href="///C://Users/ckaestne/CloudStation/work/seai/lectures/03_se_bootcamp/discussion.png" target="_blank" rel="noopener noreferrer"><img src="///C://Users/ckaestne/CloudStation/work/seai/lectures/03_se_bootcamp/discussion.png" alt="discussion" style="max-width:100%;"></a></p>
+<hr>
+<h2>
+<a id="user-content-survival-mode" class="anchor" href="#survival-mode" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Survival Mode</h2>
+<ul>
+<li>Missed deadlines -&gt; "solo development mode" to meet own deadlines</li>
+<li>Ignore integration work</li>
+<li>Stop interacting with testers, technical writers, managers, ...</li>
+</ul>
+<hr>
+<p>Hypothesis: Process increases flexibility and efficiency +  Upfront investment for later greater returns</p>
+<h2>
+<a id="user-content-notes-ideal-setting-of-little-process-investment-upfront" class="anchor" href="#notes-ideal-setting-of-little-process-investment-upfront" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><a href="///C://Users/ckaestne/CloudStation/work/seai/lectures/03_se_bootcamp/process5.png" target="_blank" rel="noopener noreferrer"><img src="///C://Users/ckaestne/CloudStation/work/seai/lectures/03_se_bootcamp/process5.png" alt="" style="max-width:100%;"></a>
+Notes: ideal setting of little process investment upfront</h2>
+<h2>
+<a id="user-content-notes-empirically-well-established-rule-bugs-are-increasingly-expensive-to-fix-the-larger-the-distance-between-the-phase-where-they-are-created-vs-where-they-are-corrected" class="anchor" href="#notes-empirically-well-established-rule-bugs-are-increasingly-expensive-to-fix-the-larger-the-distance-between-the-phase-where-they-are-created-vs-where-they-are-corrected" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><a href="///C://Users/ckaestne/CloudStation/work/seai/lectures/03_se_bootcamp/defectcost.jpg" target="_blank" rel="noopener noreferrer"><img src="///C://Users/ckaestne/CloudStation/work/seai/lectures/03_se_bootcamp/defectcost.jpg" alt="full" style="max-width:100%;"></a>
+Notes: Empirically well established rule: Bugs are increasingly expensive to fix the larger the distance between the phase where they are created vs where they are corrected.</h2>
+<p><a href="///C://Users/ckaestne/CloudStation/work/seai/lectures/03_se_bootcamp/dodprocess.jpg" target="_blank" rel="noopener noreferrer"><img src="///C://Users/ckaestne/CloudStation/work/seai/lectures/03_se_bootcamp/dodprocess.jpg" alt="full" style="max-width:100%;"></a>
+Notes: Complicated processes like these are often what people associate with "process". Software process is needed, but does not need to be complicated.</p>
+<hr>
+<h1>
+<a id="user-content-basic-software-engineering-practices" class="anchor" href="#basic-software-engineering-practices" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Basic Software Engineering Practices</h1>
+<hr>
+<h2>
+<a id="user-content-abstraction--automation" class="anchor" href="#abstraction--automation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Abstraction &amp; Automation</h2>
+<p>Avoid repetition:</p>
+<p>Code clone ▶ Method ▶ Library</p>
+<p>Similar problems, programs ▶ Frameworks, Configurations, Product Lines</p>
+<p>Data gathering ▶ List comprehensions ▶ SQL</p>
+<p>Command line steps ▶ Compilers and code generators ▶ Build systems</p>
+<p>Manual testing ▶ Unit testing ▶ Continuous integration and deployment</p>
+<p>Code inspection ▶ Static analysis</p>
+<p>Manual issue tracking ▶ Issue tracking systems ▶ Bots and AI</p>
+<p><strong>Abstraction &amp; automation for AI-enabled systems?</strong></p>
+<hr>
+<h2>
+<a id="user-content-abstraction--automation-when-building-ai-enabled-systems" class="anchor" href="#abstraction--automation-when-building-ai-enabled-systems" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Abstraction &amp; Automation when Building AI-Enabled Systems?</h2>
+<p><a href="///C://Users/ckaestne/CloudStation/work/seai/lectures/03_se_bootcamp/discussion.png" target="_blank" rel="noopener noreferrer"><img src="///C://Users/ckaestne/CloudStation/work/seai/lectures/03_se_bootcamp/discussion.png" alt="discussion" style="max-width:100%;"></a></p>
+<hr>
+<h2>
+<a id="user-content-version-control" class="anchor" href="#version-control" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Version control</h2>
+<h2>
+<a id="" class="anchor" href="#" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><a href="///C://Users/ckaestne/CloudStation/work/seai/lectures/03_se_bootcamp/revhistory.png" target="_blank" rel="noopener noreferrer"><img src="///C://Users/ckaestne/CloudStation/work/seai/lectures/03_se_bootcamp/revhistory.png" alt="revision history" style="max-width:100%;"></a>
+</h2>
+<h2>
+<a id="user-content-version-control-1" class="anchor" href="#version-control-1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Version control</h2>
+<ul>
+<li>System that records changes to a set of files over time
+<ul>
+<li>Revert files back to a previous state</li>
+<li>Revert entire project back to a previous state</li>
+<li>Compare changes over time</li>
+<li>See who last modified something that might be causing a problem</li>
+</ul>
+</li>
+<li>As opposed to:</li>
+</ul>
+<pre><code>hw1.java
+hw1_v2.java
+hw1_v3.java
+hw1_final.java
+hw1_final_new.java
+</code></pre>
+<hr>
+<h2>
+<a id="user-content-collaborative-editing" class="anchor" href="#collaborative-editing" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Collaborative editing</h2>
+<ul>
+<li>Working on local copies of a repository</li>
+<li>Work often affects different files
+<ul>
+<li>Pessimistic strategy: lock files</li>
+<li>Optimistic strategy: merge on conflict</li>
+</ul>
+</li>
+</ul>
+
+<p><a href="///C://Users/ckaestne/CloudStation/work/seai/lectures/03_se_bootcamp/merging1.png" target="_blank" rel="noopener noreferrer"><img src="///C://Users/ckaestne/CloudStation/work/seai/lectures/03_se_bootcamp/merging1.png" alt="" style="max-width:100%;"></a></p>
+
+<p><a href="///C://Users/ckaestne/CloudStation/work/seai/lectures/03_se_bootcamp/merging2.png" target="_blank" rel="noopener noreferrer"><img src="///C://Users/ckaestne/CloudStation/work/seai/lectures/03_se_bootcamp/merging2.png" alt="" style="max-width:100%;"></a></p>
+
+<hr>
+<h2>
+<a id="user-content-good-commit-practices" class="anchor" href="#good-commit-practices" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Good Commit Practices</h2>
+<ul>
+<li>Small cohesive commits</li>
+<li>Commit messages summarizing work and explaining rationale, short subject line</li>
+<li>Link to issue, task, or feature request where appropriate</li>
+</ul>
+<pre><code>add assertShape to validate templateElement (#10198)
+
+* add assertShape to validate templateElement
+
+* Update packages/babel-types/src/definitions/utils.js
+
+Co-Authored-By: Nicolò Ribaudo &lt;nicolo.ribaudo@gmail.com&gt;
+
+* templateElement optional cooked
+</code></pre>
+<p><a href="https://xkcd.com/1296/" rel="nofollow"><img src="https://camo.githubusercontent.com/1c4989b1a9729535c11498bb990b6c4622ebfb8b/68747470733a2f2f696d67732e786b63642e636f6d2f636f6d6963732f6769745f636f6d6d69742e706e67" alt="xkcd 1296" data-canonical-src="https://imgs.xkcd.com/comics/git_commit.png" style="max-width:100%;"></a></p>
+<hr>
+<h2>
+<a id="user-content-forks-and-pull-requests" class="anchor" href="#forks-and-pull-requests" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Forks and Pull Requests</h2>
+<p><a href="///C://Users/ckaestne/CloudStation/work/seai/lectures/03_se_bootcamp/forks.png" target="_blank" rel="noopener noreferrer"><img src="///C://Users/ckaestne/CloudStation/work/seai/lectures/03_se_bootcamp/forks.png" alt="" style="max-width:100%;"></a></p>
+<hr>
+<h2>
+<a id="user-content-release-management" class="anchor" href="#release-management" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Release management</h2>
+<p><a href="///C://Users/ckaestne/CloudStation/work/seai/lectures/03_se_bootcamp/releasemgmt.png" target="_blank" rel="noopener noreferrer"><img src="///C://Users/ckaestne/CloudStation/work/seai/lectures/03_se_bootcamp/releasemgmt.png" alt="" style="max-width:100%;"></a></p>
+<hr>
+<h2>
+<a id="user-content-what-files-to-manage" class="anchor" href="#what-files-to-manage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>What files to manage</h2>
+<ul>
+<li>All code and noncode files
+<ul>
+<li>Java code</li>
+<li>Build scripts</li>
+<li>Documentation</li>
+<li>Dependencies (maven, npm)</li>
+</ul>
+</li>
+<li>Configuration files
+<ul>
+<li>Application and system configuration</li>
+<li>e.g. Docker, Ansible, Puppet</li>
+</ul>
+</li>
+<li>Exclude generated files (.class) and secrets (passwords)</li>
+</ul>
+<hr>
+<h2>
+<a id="user-content-managing-variants" class="anchor" href="#managing-variants" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Managing Variants</h2>
+<ul>
+<li>Branching for variants does not scale well</li>
+<li>Requires special planning or tooling</li>
+<li>Many solutions
+<ul>
+<li>Configuration files, feature flags -&gt; runtime <em>if</em> statements</li>
+<li>Preprocessors</li>
+<li>Build systems</li>
+<li>DSLs</li>
+<li>Software product lines</li>
+<li>...</li>
+</ul>
+</li>
+</ul>
+
+<div class="highlight highlight-source-c"><pre><span class="pl-c"><span class="pl-c">/*</span> common parts <span class="pl-c">*/</span></span>
+...
+#<span class="pl-k">if</span> (OS == Unix)
+  <span class="pl-k">void</span> <span class="pl-en">load</span>(...) { ... }
+#<span class="pl-k">elif</span> (OS === VMS)
+  <span class="pl-k">void</span> <span class="pl-en">load</span>(...) { ... }
+  <span class="pl-k">void</span> <span class="pl-en">free</span>() { ... }
+#<span class="pl-k">else</span> 
+  <span class="pl-k">void</span> <span class="pl-en">load</span>(...) { ... }
+#<span class="pl-k">endif</span>
+...</pre></div>
+<hr>
+<h2>
+<a id="user-content-versioning-in-ai-enabled-systems" class="anchor" href="#versioning-in-ai-enabled-systems" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Versioning in AI-Enabled Systems?</h2>
+<p><a href="///C://Users/ckaestne/CloudStation/work/seai/lectures/03_se_bootcamp/discussion.png" target="_blank" rel="noopener noreferrer"><img src="///C://Users/ckaestne/CloudStation/work/seai/lectures/03_se_bootcamp/discussion.png" alt="discussion" style="max-width:100%;"></a></p>
+<hr>
+<h2>
+<a id="user-content-builds" class="anchor" href="#builds" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Builds</h2>
+<ul>
+<li>All but the smallest projects have a nontrivial build process</li>
+<li>You want to capture and automate the knowledge of how to build your system, ideally in a single command</li>
+<li>Build scripts are code (executable specifications) that need to be managed just like other pieces of code</li>
+<li>Use a build tool to script building, packaging, testing, and deploying your system
+<ul>
+<li>Most IDEs have an integrated build system</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>Makes sure the application builds also on other machines</li>
+</ul>
+<hr>
+<h2>
+<a id="user-content-quality-assurance" class="anchor" href="#quality-assurance" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Quality Assurance</h2>
+<ul>
+<li>Dynamic techniques (executing the code, select inputs)
+<ul>
+<li>Testing</li>
+<li>Dynamic analysis/instrumentation</li>
+</ul>
+</li>
+<li>Static techniques (not executing the code, all executions)
+<ul>
+<li>Code review/inspection</li>
+<li>Static analysis, data-flow analysis</li>
+<li>Formal verification</li>
+</ul>
+</li>
+<li>Process quality</li>
+</ul>
+<hr>
+<h2>
+<a id="user-content-test-automation" class="anchor" href="#test-automation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Test automation</h2>
+<div class="highlight highlight-source-java"><pre><span class="pl-k">@Test</span>
+<span class="pl-k">public</span> <span class="pl-k">void</span> testSanityTest(){
+    <span class="pl-c"><span class="pl-c">//</span>setup</span>
+    <span class="pl-smi">Graph</span> g1 <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-smi">AdjacencyListGraph</span>(<span class="pl-c1">10</span>);
+    <span class="pl-smi">Vertex</span> s1 <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-smi">Vertex</span>(<span class="pl-s"><span class="pl-pds">"</span>A<span class="pl-pds">"</span></span>);
+    <span class="pl-smi">Vertex</span> s2 <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-smi">Vertex</span>(<span class="pl-s"><span class="pl-pds">"</span>B<span class="pl-pds">"</span></span>);
+    <span class="pl-c"><span class="pl-c">//</span>check expected behavior</span>
+    assertEquals(<span class="pl-c1">true</span>, g1<span class="pl-k">.</span>addVertex(s1));
+    assertEquals(<span class="pl-c1">true</span>, g1<span class="pl-k">.</span>addVertex(s2));
+    assertEquals(<span class="pl-c1">true</span>, g1<span class="pl-k">.</span>addEdge(s1, s2));
+    assertEquals(s2, g1<span class="pl-k">.</span>getNeighbors(s1)[<span class="pl-c1">0</span>]);
+}</pre></div>
+<p><a href="///C://Users/ckaestne/CloudStation/work/seai/lectures/03_se_bootcamp/junit.png" target="_blank" rel="noopener noreferrer"><img src="///C://Users/ckaestne/CloudStation/work/seai/lectures/03_se_bootcamp/junit.png" alt="" style="max-width:100%;"></a></p>
+<hr>
+<h2>
+<a id="user-content-test-coverage" class="anchor" href="#test-coverage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Test Coverage</h2>
+<p><a href="///C://Users/ckaestne/CloudStation/work/seai/lectures/03_se_bootcamp/coverage.png" target="_blank" rel="noopener noreferrer"><img src="///C://Users/ckaestne/CloudStation/work/seai/lectures/03_se_bootcamp/coverage.png" alt="" style="max-width:100%;"></a></p>
+<hr>
+<h2>
+<a id="user-content-continuous-integration" class="anchor" href="#continuous-integration" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Continuous Integration</h2>
+<h2>
+<a id="user-content--1" class="anchor" href="#-1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><a href="///C://Users/ckaestne/CloudStation/work/seai/lectures/03_se_bootcamp/ci.png" target="_blank" rel="noopener noreferrer"><img src="///C://Users/ckaestne/CloudStation/work/seai/lectures/03_se_bootcamp/ci.png" alt="" style="max-width:100%;"></a>
+</h2>
+<h2>
+<a id="user-content-continuous-integration-1" class="anchor" href="#continuous-integration-1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Continuous Integration</h2>
+<p><a href="///C://Users/ckaestne/CloudStation/work/seai/lectures/03_se_bootcamp/ci-jenkins.png" target="_blank" rel="noopener noreferrer"><img src="///C://Users/ckaestne/CloudStation/work/seai/lectures/03_se_bootcamp/ci-jenkins.png" alt="" style="max-width:100%;"></a></p>
+<hr>
+<h2>
+<a id="user-content-continuous-deployment" class="anchor" href="#continuous-deployment" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Continuous Deployment</h2>
+<p><a href="///C://Users/ckaestne/CloudStation/work/seai/lectures/03_se_bootcamp/contdeploy.gif" target="_blank" rel="noopener noreferrer"><img src="///C://Users/ckaestne/CloudStation/work/seai/lectures/03_se_bootcamp/contdeploy.gif" alt="" style="max-width:100%;"></a></p>
+<hr>
+<h2>
+<a id="user-content-build-test-and-deployment-automation-in-ai-enabled-systems" class="anchor" href="#build-test-and-deployment-automation-in-ai-enabled-systems" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Build, Test, and Deployment Automation in AI-Enabled Systems?</h2>
+<p><a href="///C://Users/ckaestne/CloudStation/work/seai/lectures/03_se_bootcamp/discussion.png" target="_blank" rel="noopener noreferrer"><img src="///C://Users/ckaestne/CloudStation/work/seai/lectures/03_se_bootcamp/discussion.png" alt="discussion" style="max-width:100%;"></a></p>
+<hr>
+<h2>
+<a id="user-content-documentation-and-naming" class="anchor" href="#documentation-and-naming" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Documentation and Naming</h2>
+<ul>
+<li>Great code should not need documentation
+<ul>
+<li>Use self-documenting method and variable names</li>
+<li>Named constants rather than magic numbers</li>
+</ul>
+</li>
+<li>Documentation can still make it better though</li>
+<li>
+</li>
+<li>Document rationale, rather than repeating code</li>
+<li>API documentation at interfaces (contracts, information hiding)</li>
+</ul>
+<hr>
+<h2>
+<a id="user-content-defect-tracking" class="anchor" href="#defect-tracking" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Defect Tracking</h2>
+<ul>
+<li>Issues: Bug, feature request, query</li>
+<li>Basis for measurement (when, where, who, difficulty, ...)</li>
+<li>Facilitates communication
+<ul>
+<li>questions back to reporter</li>
+<li>ensures reports are not forgotten</li>
+</ul>
+</li>
+<li>Accountability</li>
+</ul>
+
+<p><a href="///C://Users/ckaestne/CloudStation/work/seai/lectures/03_se_bootcamp/issuetracker.png" target="_blank" rel="noopener noreferrer"><img src="///C://Users/ckaestne/CloudStation/work/seai/lectures/03_se_bootcamp/issuetracker.png" alt="BugZilla" style="max-width:100%;"></a></p>
+<hr>
+<h1>
+<a id="user-content-planning-requirements-and-design-in-a-nutshell" class="anchor" href="#planning-requirements-and-design-in-a-nutshell" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Planning, Requirements, and Design in a Nutshell</h1>
+<hr>
+<h2>
+<a id="user-content-a-simple-process-1" class="anchor" href="#a-simple-process-1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>A Simple Process</h2>
+<ol>
+<li>Discuss the software that needs to be written</li>
+<li>Write some code</li>
+<li>Test the code to identify the defects</li>
+<li>Debug to find causes of defects</li>
+<li>Fix the defects</li>
+<li>If not done, return to step 1</li>
+</ol>
+<hr>
+<p>CC-BY-SA-2.5</p>
+<hr>
+<h1>
+<a id="user-content-qualities-of-interest--measurement" class="anchor" href="#qualities-of-interest--measurement" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Qualities of Interest &amp; Measurement</h1>
+<hr>
+<h1>
+<a id="user-content-agile-practices-in-a-nutshell" class="anchor" href="#agile-practices-in-a-nutshell" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Agile Practices in a Nutshell</h1>
+<hr>
+<h1>
+<a id="user-content-summary" class="anchor" href="#summary" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Summary</h1>
+<p>(releasemgmt.png)</p>
+</article></body></html>
