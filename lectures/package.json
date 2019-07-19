@@ -1,5 +1,5 @@
 {
-  "name": "slides-test",
+  "name": "17445-seai",
   "version": "1.0.0",
   "scripts": {
     "presentation": "reveal-md .",
