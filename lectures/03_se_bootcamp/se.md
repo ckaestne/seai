@@ -3,7 +3,7 @@ author: Christian Kaestner
 title: "17-445: Software Engineering Bootcamp"
 semester: Fall 2019
 footer: "17-445 Software Engineering for AI-Enabled Systems, Christian Kaestner"
----  
+---
 
 # Software Engineering Bootcamp
 
@@ -41,7 +41,6 @@ Most students will know this; this is a refresher and provides an overview. This
     - E-commerce websites?
     - Product recommendation? Voice recognition?
     - Routine gets automated -> innovation cycle
-
 
 ----
 
@@ -131,6 +130,8 @@ Notes: Empirically well established rule: Bugs are increasingly expensive to fix
 ----
 ![full](dodprocess.jpg)
 Notes: Complicated processes like these are often what people associate with "process". Software process is needed, but does not need to be complicated.
+
+
 
 ---
 
@@ -255,7 +256,6 @@ Co-Authored-By: Nicolò Ribaudo <nicolo.ribaudo@gmail.com>
     - e.g. Docker, Ansible, Puppet
 * Exclude generated files (.class) and secrets (passwords)
 
-
 ----
 
 ## Managing Variants
@@ -344,7 +344,6 @@ public void testSanityTest(){
 
 ![](coverage.png)
 
-
 ----
 
 ## Continuous Integration
@@ -362,13 +361,11 @@ public void testSanityTest(){
 
 ![](contdeploy.gif)
 
-
 ----
 
 ## Build, Test, and Deployment Automation in AI-Enabled Systems?
 
 ![discussion](discussion.png)
-
 
 ----
 
@@ -381,7 +378,6 @@ public void testSanityTest(){
 *
 * Document rationale, rather than repeating code
 * API documentation at interfaces (contracts, information hiding) 
-
 
 ----
 
@@ -436,7 +432,6 @@ Notes: Although dated, the key idea is still essential -- think and plan before 
 > No other part is as difficult to rectify later.     — Fred Brooks
 
 ----
-
 ## Functional Req.
 
 * What the machine should do 
@@ -532,7 +527,6 @@ Example:
 
 Further reading: Victor R. Basili, Gianluigi Caldiera, H. Dieter Rombach. [The Goal Question Metric Approach](https://www.cs.umd.edu/~mvz/handouts/gqm.pdf). 1994
 
-
 ----
 
 ## Requirements, now what?
@@ -549,7 +543,6 @@ Requirements >> ??? >> Code
 
 "should efficiently use hardware resources"
 
-
 ----
 
 ## Architecture and Design
@@ -564,11 +557,11 @@ Planning and making tradeoff decisions among alternative designs:
     - provably correct vs. quickly delivered
     - first to market vs. fully featured
 * Analysis and modeling before committing to an implementation
-    
+  
+
 -
 
 **Tradeoff analysis is in the heart of software engineering**
-
 
 ----
 
@@ -590,11 +583,133 @@ Planning and making tradeoff decisions among alternative designs:
     - delays, changed requirements, technical problems, ...
     - request more time/money, reassign work, renegotiate requirements, ...
 
-
 ---
-
 # Agile Practices in a Nutshell
+
+----
+
+
+## Key challenge: Change
+
+* Software seems changeable ("soft")
+* Developers prone to changes and "extra features"
+* Customers often do not understand what is easy to change and what is hard
+* "Good enough" vs. "optimal"
+
+----
+
+![Waterfall model](waterfall.png)
+<!-- .element: class="stretch" -->
+
+([CC-BY-SA-2.5](https://commons.wikimedia.org/wiki/File:Waterfall_model.png))
+
+----
+
+## Sequencing
+
+* Enforce earlier software considerations 
+
+* Modeled after traditional engineering 
+  - blueprints before construction
+  - decide what to build, build it, test it, deploy
+  - reduce change
+
+* Successful model for routine development
+
+* Problematic at large scale
+
+* Requirements -> Delays -> Surprise!
+* **Need early and frequent feedback, support for constant adaptation, prioritize risk**
+
+----
+
+## Iterative Processes
+
+* Interleaving and repeating
+    * Requirements engineering, Risk assessment
+    * Architecture and design
+    * Implementation
+    * Quality assurance
+    * Deployment
+
+![](spiral-model.png)
+<!-- .element: class="stretch" -->
+
+----
+## Agile Manifesto
+
+> Individuals and interactions **over** processes and tools
+> Working software **over** comprehensive documentation
+> Customer collaboration **over** contract negotiation
+> Responding to change **over** following a plan
+
+
+Agile: A project management approach that seeks to respond to change and unpredictability, primarily using incremental, iterative work sequences (often called “sprints”) + a collection of practices to facility that approach.
+
+----
+## Agile Practices
+
+Backlogs (Product and Sprint), 
+Behavior-driven development (BDD), 
+Cross-functional team, 
+Continuous integration (CI), 
+Domain-driven design (DDD), 
+Information radiators (Kanban board, Task board, Burndown chart), 
+Acceptance test-driven development (ATDD), 
+Iterative and incremental development (IID), 
+Pair programming, 
+Planning poker, 
+Refactoring, 
+Scrum meetings (Sprint planning, Daily scrum, Sprint review and retrospective), 
+Small releases, 
+Simple design, 
+Test-driven development (TDD), 
+Agile testing, 
+Timeboxing, 
+Use case, 
+User story, 
+Story-driven modeling, 
+Retrospective, 
+On-site customer, 
+Agile Modeling, 
+40-hour weeks, 
+Short development cycles, 
+Collective ownership, 
+Open workspace, 
+Velocity tracking, 
+...
+
+----
+
+## Select Practices
+
+* Kanban Board
+* Simple Design
+* Refactoring vs Design
+* On-site Customer
+* Short Development Cycles
+
+----
+
+![](kanban.jpg)
+<!-- .element: class="stretch" -->
+
+(Kanban Board)
+
+----
+
+## Scrum
+
+![](scrum.png)
 
 ---
 
 # Summary
+
+* Software engineering is all about tradeoffs
+    - Limited resources 
+    - Competing quality goals
+    - Alternative designs
+* Process is important, planning vs reacting
+* Basic practices of version control, build and test automation
+
