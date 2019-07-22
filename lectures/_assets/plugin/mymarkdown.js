@@ -43,7 +43,7 @@ renderer.heading=function( a,  b,  c, d) {
 
 // renderer.blockquote=function( quote) { console.log("blockquote("+quote+")");};
 renderer.html=function( html) { 
-	// console.log("html("+html.trim()+")"); 
+	console.log("html("+html.trim()+")"); 
 	if (html.trim() == "<!-- colstart -->")
 		return '<div class="container"><div class="col">'
 	if (html.trim() == "<!-- col -->" || html.trim() == "<!-- split -->")
@@ -52,6 +52,8 @@ renderer.html=function( html) {
 		return '</div></div>'
 	if (html.trim() == "<!-- references -->")
 		return '<div class="stretch"></div><div class="references">'
+	if (html.trim() == "<!-- discussion -->")
+		return '<img src="/_assets/discussion.jpg" alt="Discussion" />'
 	return html
 };
 

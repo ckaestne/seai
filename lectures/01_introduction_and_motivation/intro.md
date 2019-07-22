@@ -80,6 +80,7 @@ Notes: Ask students to write at least 3 challenges each, collect answers on boar
 
 ## Likely challenges?
 
+<!-- discussion -->
 
 ----
 
@@ -112,6 +113,8 @@ Garvin, David A., [What Does Product Quality Really Mean](http://oqrm.org/Englis
 ----
 
 ## Relevant Qualities for Transcription Service?
+
+<!-- discussion -->
 
 ----
 

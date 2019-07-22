@@ -62,7 +62,7 @@ Most students will know this; this is a refresher and provides an overview. This
 
 Examples?
 
-![discussion](discussion.png)
+<!-- discussion -->
 
 Notes: 
 
@@ -95,7 +95,7 @@ Notes: Real experience if little attention is payed to process: increasingly com
 
 ## Example of Process Problems?
 
-![discussion](discussion.png)
+<!-- discussion -->
 
 Notes: 
 Collect examples of what could go wrong:
@@ -111,7 +111,7 @@ Scheduling: When project is behind, developers are asked weekly for new estimate
 
 ## Example of Process Problems for AI-Enabled Systems?
 
-![discussion](discussion.png)
+<!-- discussion -->
 
 ----
 ## Survival Mode
@@ -168,7 +168,7 @@ Manual issue tracking ▶ Issue tracking systems ▶ Bots and AI
 
 ## Abstraction & Automation when Building AI-Enabled Systems?
 
-![discussion](discussion.png)
+<!-- discussion -->
 
 ----
 ## Version control
@@ -292,7 +292,7 @@ Co-Authored-By: Nicolò Ribaudo <nicolo.ribaudo@gmail.com>
 
 ## Versioning in AI-Enabled Systems?
 
-![discussion](discussion.png)
+<!-- discussion -->
 
 ----
 
@@ -365,7 +365,7 @@ public void testSanityTest(){
 
 ## Build, Test, and Deployment Automation in AI-Enabled Systems?
 
-![discussion](discussion.png)
+<!-- discussion -->
 
 ----
 

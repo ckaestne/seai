@@ -25,6 +25,7 @@ Custom extensions in `/_assets/plugin/mymarkdown.js`:
 * Empty items in a list can be used as a space/separator between two list
 * `<!-- left -->` and `<!-- right -->` change the alignment
 * Mermaid diagrams can be integrated with a code blob in the `mermaid` language
+* `<!-- discussion  -->` marks the slide as a discussion slide, adding a picture (possibly exploring other design features later)
 
 Other useful suggestions:
 * `<!-- .element: class="stretch" -->` is a useful extension for figures that should stretch to the remainder of the page (add in new line after image)
