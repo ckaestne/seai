@@ -15,7 +15,6 @@ Christian Kaestner
 Required reading: 
 * Rick Kazman, Paul Clements, and Len Bass. [Software architecture in practice.](https://www.oreilly.com/library/view/software-architecture-in/9780132942799/?ar) Addison-Wesley Professional, 2012, Chapter 1
 * Hulten, Geoff. "[Building Intelligent Systems: A Guide to Machine Learning Engineering.](https://www.buildingintelligentsystems.com/)" Apress, 2018, Chapter 13.
-* 
 
 
 ---
@@ -23,12 +22,14 @@ Required reading:
 # Learning Goals
 
 
-* Create architectural models to reason about relevant characteristics
 * Understand important quality considerations when using ML components
+* Follow a design process to explicitly reason about alternative designs and their quality tradeoffs
+* Create architectural models to reason about relevant characteristics
 * Gather data to make informed decisions about what ML technique to use and where and how to deploy it
-* Deliberate how and when to update models and how to collect telemetry
 
+* Identify to what degree isolating an AI component is possible and benefitial
 * Critique the decision of where an AI model lives (e.g., cloud vs edge vs hybrid), considering the relevant tradeoffs 
+* Deliberate how and when to update models and how to collect telemetry
 
 ---
 
@@ -126,7 +127,7 @@ Raffi. [New Tweets per second record, and how!](https://blog.twitter.com/enginee
 * Ruby on Rails -> JVM/Scala 
 * Monolith -> Microservices
 * RPC framework with monitoring, connection pooling, failover strategies, loadbalancing, ... built in
-* New storage solution, temporal clustoring, "roughly sortable ids"
+* New storage solution, temporal clustering, "roughly sortable ids"
 * Data driven decision making
 
 ![Gizzard](gizzard.png)
@@ -340,7 +341,7 @@ From the reading:
 
 * Coupling of ML pipeline parts
 * Coupling with other parts of the system
-* Ability for different developers and analysists to collaborate
+* Ability for different developers and analysts to collaborate
 * Support online experiments
 * Ability to monitor
 
@@ -424,7 +425,7 @@ Microservice architecture:
 Model Inference and Model Learning as a RESTful Service?
 
 ----
-## Coupling and Changability
+## Coupling and Changeability
 
 What's the interface between the AI component and the rest of the system?
 
@@ -440,7 +441,7 @@ What's the interface between the AI component and the rest of the system?
 ----
 ## Model Service API
 
-Consider encapuslating the model as a microservice. Sketch a (REST) API.
+Consider encapsulating the model as a microservice. Sketch a (REST) API.
 
 <!-- colstart -->
 ![](googletranslate.png)
