@@ -24,7 +24,7 @@
 .reveal h1 { font-size: 80px; }
 .reveal h2 { font-size: 44px; }
 .reveal h3 { font-size: 28px; font-weight: bold; }
-.references { font-size: 70%; }
+.references { font-size: 70%; ; margin-bottom: 2em }
 #footer { font-size: 16px; color:gray; position: absolute;
         bottom: 0%;
-        left: 0%; }
+        left: 0%}
