@@ -49,7 +49,7 @@ Assignment:
 
 Readings:
 
-* 🕮 Hulten, Geoff. "Building Intelligent Systems: A Guide to Machine Learning Engineering." (2018), Chapters 2 and 5.
+* 🕮 Hulten, Geoff. "Building Intelligent Systems: A Guide to Machine Learning Engineering." (2018), Chapters 2, 5 and 20.
 
 
 ## Lecture: Software Engineering Bootcamp
@@ -102,7 +102,7 @@ Reading:
 Overview:
 
 * Specifications or lack thereof for ML-components, deductive reasoning, probabilistic specifications in certain AI components; inevitability 
-* Goals of AI-enabled systems and success measures
+* Goals of AI-enabled systems and success measures (intro, more later in model quality)
 * Introduction to risk analysis and fault trees; writing of requirements
 * Overview of fault handling strategies (redundancies, voting, fallback, undo, forcefulness, where and when to ask for human judgment...)
 

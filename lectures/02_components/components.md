@@ -11,7 +11,7 @@ Christian Kaestner
 
 <!-- references -->
 
-Required reading: Hulten, Geoff. "Building Intelligent Systems: A Guide to Machine Learning Engineering." (2018), Chapters 2 and 5.
+Required reading: Hulten, Geoff. "Building Intelligent Systems: A Guide to Machine Learning Engineering." (2018), Chapters 2, 5, and 20.
 
 ---
 
