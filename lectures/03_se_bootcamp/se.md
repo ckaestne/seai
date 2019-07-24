@@ -9,6 +9,11 @@ footer: "17-445 Software Engineering for AI-Enabled Systems, Christian Kaestner"
 
 Christian Kaestner
 
+<!-- references -->
+
+Required reading: 
+Mary Shaw (ed), [Software Engineering for the 21st Century: A basis for rethinking the curriculum](http://ra.adm.cs.cmu.edu/anon/usr0/anon/usr/ftp/isri2005/CMU-ISRI-05-108.pdf), 2015, Sec 1-3
+
 Notes:
 
 Most students will know this; this is a refresher and provides an overview. This is the bare minimum of software engineering practices a la https://software-carpentry.org/
