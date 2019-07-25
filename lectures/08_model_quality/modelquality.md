@@ -782,6 +782,7 @@ TODO
 * Model evaluation with testing data
     - Various measures for model quality (accuracy, recall, AUC, ...)
     - Generalization to unseen data (overfitting)
+    - Not all mistakes are equal
     - Evaluating test adequacy and confidence still challenging
     - Compare against baseline heuristics
 * Evaluation on static data vs evaluation in production
