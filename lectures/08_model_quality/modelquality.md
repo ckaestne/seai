@@ -26,11 +26,21 @@ Required reading:
 * Develop automated solutions to evaluate and monitor model quality
 
 ---
-## ML Algorithm Quality vs Model Quality
+## Preliminaries: Model Testing
+
+*model:* $\overline{X} \rightarrow Y$
+
+*test:* sets of $(\overline{X}, Y)$ pairs indicating desired outcomes for select inputs
+
+For our discussion: any form of model, including machine learning models, symbolic AI components, hardcoded heuristics, composed models, ...
+
+----
+## Preliminaries: ML Algorithm Quality vs Model Quality
 
 We focus on the quality of the produced model, not the algorithm used to learn the model
 
 i.e. assuming *Decision Tree Algorithm* and feature extraction are correctly implemented (according to specification), is the model learned from data any good?
+
 
 ---
 # Revisit: Goals and Measurement
@@ -77,13 +87,13 @@ Notes: System gets a video feed of the game from multiple cameras and produces a
 
 Picture: https://pixabay.com/photos/soccer-competition-game-women-673488/
 ----
-## System Goals and AI Component Goals?
+## System Goals and Model Quality?
 
 What are the overall goals of the system?
 
 Sketch a system architecture with relevant AI components. How do those components support the system goals?
 
-What are quality goals for the AI components?
+What are quality goals for the models?
 
 <!-- colstart -->
 ![MRI](mri.jpg)
@@ -92,9 +102,9 @@ What are quality goals for the AI components?
 <!-- colend -->
 
 ----
-## Comparing AI Components
+## Comparing Models
 
-Compare two components (different technologies or same technology, different models) for the same task:
+Compare two models (same or different implementation/learning technology) for the same task:
 
 * Which one supports the system goals better?
 * Which one makes fewer important mistakes?
@@ -221,6 +231,8 @@ Consider:
 * Predicting high demand for ride sharing services
 * Recognizing cancer 
 
+No answer vs wrong answer?
+
 ----
 ## Extreme Classifiers
 
@@ -236,7 +248,7 @@ Consider:
     - 100% false positive rate (all noncancer cases reported as warnings)
  
 ----
-## Consider the Base Line
+## Consider the Baseline Probability
 
 Predicting unlikely events -- 1 in 2000 has cancer ([stats](https://gis.cdc.gov/Cancer/USCS/DataViz.html))
 
@@ -319,7 +331,7 @@ Case Study: http://pic.twitter.com/ZJ1Je1C4NW
 
 # Measuring Generalization
 
-Does the AI model represent generalizable intelligence?
+Does the model represent generalizable intelligence?
 
 ----
 
@@ -342,20 +354,20 @@ Pictures: https://pixabay.com/photos/lost-places-panzer-wreck-metal-3907364/, ht
 ----
 ## Generalization
 
-Ideally an AI component represents real concepts of interest, an actual understanding of the problem (concepts of a tank, cancer, or consumer preference).
+Ideally a models represents real concepts of interest, an actual understanding of the problem (concepts of a tank, cancer, or consumer preference).
 
-ML models are trained on data, symbolic AI models are constructed with specific inputs. 
+ML models are trained on data, symbolic AI models are constructed with select inputs. 
 
 **Do the resulting models generalize to unseen problems?**
 
 ----
 ## Overfitting/Underfitting
 
-**Overfitting:** Model learns exactly the input data, but does not generalize to unseen data (e.g., exact memorization)
+**Overfitting:** Model learned exactly for the input data, but does not generalize to unseen data (e.g., exact memorization)
 
 **Underfitting:** Model makes very general observations but poorly fits to data (e.g., brightness in picture)
 
-Adjust degrees of freedom in the model to balance between overfitting and underfitting: can better learn the training data with more freedom; but with too much freedom, will memorize details of the training data rather than generalizing
+Typically adjust degrees of freedom during model learning to balance between overfitting and underfitting: can better learn the training data with more freedom (more complex models); but with too much freedom, will memorize details of the training data rather than generalizing
 
 ![Overfitting example](overfitting.png)
 
@@ -576,6 +588,30 @@ Renggli et. al, [Continuous Integration of Machine Learning Models with ease.ml/
 
 Matei Zaharia. [Introducing MLflow: an Open Source Machine Learning Platform](https://databricks.com/blog/2018/06/05/introducing-mlflow-an-open-source-machine-learning-platform.html), 2018
 
+
+
+---
+# Test Adequacy and Confidence
+
+Have we tested enough? Are we confident in correctness?
+
+----
+## Excursion: Testing Strategies in Software
+
+* Blackbox (specification-based):
+    - specification coverage, boundary condition analysis, partitioning
+    - combinatorial testing
+    - random testing, fuzzing
+* Whitebox (structural):
+    - line, branch coverage
+    - decision, data-flow coverage
+    - automated test generation
+* Adequacy:
+    - various forms of coverage
+    - mutation testing
+
+**Test coverage for models?**
+
 ----
 ## Test Coverage for AI Components
 
@@ -587,10 +623,19 @@ Various techniques to identify samples near decision boundaries
 
 Coverage criteria for neural networks
 
+Different test sets for different populations
+
+----
+## Formal guarantees?
+
+In code: Formal verification that implementation meets specifications
+
+For models: ??
 
 
+<!-- discussion -->
 
-
+Notes: Formal guarantees can be given for certain properties of certain models, especially symbolic AI and probabilistic models, but for most practical problems the lack of a specification limits formal guarantees.
 
 
 
@@ -696,24 +741,51 @@ Similar to labeling learning and testing data, have human annotators
 <!-- colend -->
 
 
+---
+# Comparisons against Heuristics
+----
+## Interpreting Model Quality Measures
+
+* Accuracy is hard to interpret in isolation
+    - acceptable values may depend on difficulty of problem
+    - biased by baseline probability 
+* Simpler approaches may achieve similar accuracy
+    - may make different mistakes
+    - complexity and operating cost worth the marginal improvement?
+
+----
+## Compare model quality against simpler models
+
+Sanity check -- what models to try for cancer detection?
+
+![](mri.jpg)
+
+----
+## Compare model quality against simpler models
+
+* Random models (e.g., .5 probability cancer)
+* Naive models (e.g., never cancer)
+* Simple hardcoded heuristics (e.g., 6 connected pixels 50% darker than surrounding pixels)
+* Simpler modeling technique (e.g., decision tree instead of DNN)
+* State of the art technique (+ hyperparameter optimization)
+
+*The new model should clearly outperform these to show value.*
 
 ---
-TODO: debugging
+# Debugging
 
-
-
----
-* Metrics and experimental designs to assess model quality, including measures beyond accuracy and RUC; assessment on static datasets vs live data
-* Challenge of getting test data
-* *Telemetry* designs to assess model quality in production (and related design tradeoffs)
-* Data drift, stale models, and methods to detect 
-* Automated assessment, dashboards, continuous integration, continuous experimentation
-* Notions of test suits and coverage for models (e.g., test by population segment)
-* Comparison against heuristics approaches
-
-
+TODO
 
 ---
 # Summary
 
-
+* Model evaluation with testing data
+    - Various measures for model quality (accuracy, recall, AUC, ...)
+    - Generalization to unseen data (overfitting)
+    - Evaluating test adequacy and confidence still challenging
+    - Compare against baseline heuristics
+* Evaluation on static data vs evaluation in production
+    - Design telemetry system
+    - Telemetry challenges: proxy measures, data volume, ...
+* Automate model evaluation just as code testing
+    - Scripting + continuous integration + dashboards
