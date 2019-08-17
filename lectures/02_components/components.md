@@ -17,20 +17,22 @@ Required reading: Hulten, Geoff. "Building Intelligent Systems: A Guide to Machi
 
 # Learning Goals
 
+* Understand when (not) to use AI
 * Understand the major components of a typical AI-enabled system and design
-  decisions involved
+  decisions to be made
 * Understand the components of a typical ML pipeline and their responsibilities
-* Illustrate the design space for AI-enabled systems for a given case study
 
 ---
 # When to use AI?
 ----
 ## When to use AI?
 
-* Big problems, requiring lots of work
-* Open-ended problems, continuing to grow over time
-* Time-changing problems, where the right answer changes over time
-* Intrinsically hard problems, pushing boundaries of what's considered possible
+* Difficult for computers, but easy for humans
+  * e.g., "Is this a cat?"
+* Unknown patterns
+  * Medical diagnosis
+* Requires a large amount of data
+  * Search engines
 
 ----
 
@@ -69,21 +71,38 @@ Picture by [David Mark](https://pixabay.com/users/12019-12019/?utm_source=link-a
 over time?
 
 ----
-## Example: Smart Light Switch
+## Case Study: Safe Browsing Feature
 
-[Figure of a light switch]
+![Safe Browsing](safe-browsing.png)
 
 ----
 ## Objectives
 
 * What is the system trying to achieve?
-  * Measurable, achievable, 
-* Q. What are the objectives of a smart light switch?
-  * Bad: Turn off light when no one is home
-  * OK: Maximize user's comfort
-  * Better: Minimize the amount of electricity
+  * Measurable
+  * Achievable
+  * Communicable
+* Q. What are the objectives of a safe browsing feature?
+  * Prevent users from being hacked
+  * Minimize users' inconvenience
+  * (Are these good? Can we do better?)
   
 Note: How different are these properties in nature? Quantitative vs qualitative.
+
+----
+## Measurable
+
+![Safe Browsing Statistics](safe-browsing-stats.png)
+
+----
+## Achievable?
+
+![No Perfect Security](100percent-secure.jpg)
+
+----
+## Communicable 
+
+![Google Safe Browsing](google-safe-browsing-objective.png)
 
 ----
 ## Experience
@@ -101,6 +120,7 @@ Note: How different are these properties in nature? Quantitative vs qualitative.
 * Prompt: Ask the user if an action should be taken
 * Organize: Display a set of items in an order
 * Annotate: Add information to a display
+* Q. What are options for safe browsing?
 
 ----
 ## Collecting Feedback
@@ -109,6 +129,12 @@ Note: How different are these properties in nature? Quantitative vs qualitative.
 	* Context of the interaction
 	* Action taken by the user
 	* Outcome (success, failure, in-between...)
+* Q. What information to collect for safe browsing?
+
+----
+## Collecting Feedback
+
+![Safe Browsing Feedback](safe-browsing-feedback.png)
 
 ----
 ## Minimizing Errors
@@ -119,12 +145,18 @@ Note: How different are these properties in nature? Quantitative vs qualitative.
 * Provide guidance for recovering from errors
 
 ----
+## Controling User Interactions
+
+![Safe Browsing Prompt](safe-browsing-prompt.jpg)
+
+----
 ## Intelligence
 
 * How does it achieve its objectives?
   * Rules & heuristics
   * Machine learning
   * Hybrid approach
+* Q. What kind of intelligence for safe browsing?
 
 ----
 ## Orchestration
@@ -135,6 +167,7 @@ Note: How different are these properties in nature? Quantitative vs qualitative.
   * Intelligence (a different ML model)
   * Experience (new users, usage patterns)
   * Errors (unexpected failures, abuse)
+* Q. Possible changes to safe browsing? 
 
 ----
 ## Managing Changes
@@ -144,17 +177,6 @@ Note: How different are these properties in nature? Quantitative vs qualitative.
   * Inspect & modify interaction
   * Update intelligence
   * Override intelligence when needed
-
----
-# Exercise: A Sample AI Problem
-
-[Figure: Illustrative photo]
-
-* How would to design its:
-  * Objectives?
-  * Experience (presentation, feedback, errors)?
-  * Intelligence?
-  * Mechanisms to manage possible changes?
 
 ---
 # ML-based Intelligent System
@@ -172,16 +194,122 @@ Note: How different are these properties in nature? Quantitative vs qualitative.
 [Need a CC figure]
 
 ----
+## Typical ML Pipeline
+
+* Static
+  * Get labeled data
+  * Identify and extract features
+  * Split data into training and evaluation set
+  * Learn model from training data
+  * Evaluate model on evaluation data
+  * Repeat, revising features
+* With production data
+  * Evaluate model on production data; monitor
+  * Select production data for retraining
+  * Update model regularly
+
+----
 ## Design Decisions in ML-based Systems
 
 * Data collection and preparation
   * Training vs test sets, sizes
 * Feature engineering
-	* Often the most time-consuming part!
-	* Requires in-depth domain knowledge
+  * Often the most time-consuming part!
+  * Requires in-depth domain knowledge
 * Model selection & configuration
-	* Structure: No. layers, decision tree depth...
-	* Search algorithms
+  * Structure: No. layers, decision tree depth...
+  * Search algorithms
+	
+----
+
+<!-- small -->
+
+## Example Data
+
+| RestaurantID | Order| OrderTime|ReadyTime|PickupTime|
+|-|-|-|-|-|
+| 5 |5A;3;10;11C;C:No onion| 18:11|18:23|18:31|
+|...|
+|...|
+|...|
+
+----
+
+## Feature Engineering
+
+* Identify parameters of interest that a model may learn on
+* Convert data into a useful form
+* Normalize data
+* Include context
+* Remove misleading things
+* In delivery prediction:
+
+----
+
+## Features?
+
+![Door Dash](doordash.png)
+
+----
+
+## Feature Extraction
+
+In delivery prediction:
+
+* Order time, day of week
+* Average number of orders in that hour
+* Order size
+* Special requests
+* Order items
+* Preparation time
+
+----
+
+## Data Cleaning
+
+* Removing outliers
+* Normalizing data
+* Missing values
+
+----
+
+## Data cleaning?
+
+![Door Dash](doordash.png)
+
+----
+
+## Learning
+
+Build a predictor that best describes an outcome for the observed features
+
+| RestaurantID | Order3 | SpecialRequest | DayOfWeek | PreparationTime |
+|-|-|-|-|-|
+|5|yes| yes|2|12|
+|...|
+|...|
+|...|
+
+----
+
+## Evaluation
+
+* Prediction accuracy on learned data vs prediction accuracy on unseen data
+  * Separate learning set, not used for training
+* For binary predictors: false positives vs false negatives, recall, precision
+* For numeric predictors: average (relative) distance between real and predicted value
+* For ranking predictors: topK etc
+
+----
+
+## Recall/Precision
+
+* Describes accuracy of a model in two (relative) numbers
+* Recall: how many useful answers
+* Precision: how much noise
+ 
+<!-- split -->
+![Recall vs Precision](recallprecision.png)
 
 ---
 # Summary
