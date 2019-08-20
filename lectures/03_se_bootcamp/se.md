@@ -643,10 +643,10 @@ Planning and making tradeoff decisions among alternative designs:
 ----
 ## Agile Manifesto
 
-> Individuals and interactions **over** processes and tools
-> Working software **over** comprehensive documentation
-> Customer collaboration **over** contract negotiation
-> Responding to change **over** following a plan
+> Individuals and interactions ▶ processes and tools
+> Working software ▶ comprehensive documentation
+> Customer collaboration ▶ contract negotiation
+> Responding to change ▶ following a plan
 
 
 Agile: A project management approach that seeks to respond to change and unpredictability, primarily using incremental, iterative work sequences (often called “sprints”) + a collection of practices to facility that approach.

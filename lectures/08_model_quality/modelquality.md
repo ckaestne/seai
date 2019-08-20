@@ -668,6 +668,14 @@ Ultimate held-out evaluation data: Unseen real user data
 
 <!-- discussion -->
 
+Notes: More:
+* SmartHome: Does it automatically turn of the lights/lock the doors/close the window at the right time?
+* Profanity filter: Does it block the right blog comments?
+* News website: Does it pick the headline alternative that attracts a user’s attention most?
+* Autonomous vehicles: Does it detect pedestrians in the street?
+
+
+
 ----
 ![Skype feedback dialog](skype1.jpg)
 <!-- split -->
