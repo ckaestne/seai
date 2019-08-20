@@ -1,4 +1,5 @@
-Preliminary schedule, subject to change
+
+(Preliminary schedule, subject to change)
 
 | Date  | Topic | Reading | Assignment due |
 | -     | -     | -       | -              |
@@ -10,9 +11,9 @@ Preliminary schedule, subject to change
 | Wed, Sep 11 | Requirements and Dealing with Mistakes  |   | G1: Modeling Basics |
 | Mon, Sep 16 | Tradeoffs among AI Techniques   |   |   |
 | Wed, Sep 18 |  [Software Architecture of AI-enabled Systems](https://ckaestne.github.io/seai/slides/07_architecture/architecture.html) | <!-- [Software architecture in practice](https://www.oreilly.com/library/view/software-architecture-in/9780132942799/?ar), Ch. 1 + [Building Intelligent Systems](https://www.buildingintelligentsystems.com/), Ch. 13 --> |  I2: Requirements/Risk |
-| Wed, Sep 23 | Model Quality   |   |   |
+| Wed, Sep 23 | [Model Quality](https://ckaestne.github.io/seai/slides/08_model_quality/modelquality.html)   |   |   |
 | Mon, Sep 25 | Tradeoffs among AI Techniques: Presentations    |   | G2: Technique Tradeoff Analysis |
-| Mon, Sep 30 | Experimentation |   |   |
+| Mon, Sep 30 | [Experimentation](https://ckaestne.github.io/seai/slides/09_experimentation/experimentation.html) |   |   |
 | Wed, Oct 2  | Data Quality    |   | I3: Architecture  |
 | Mon, Oct 7  | Test and Deployment Automation  |   |   |
 | Wed, Oct 9  |  **Midterm**   |   |  |
@@ -31,6 +32,5 @@ Preliminary schedule, subject to change
 | Mon, Nov 25 | tbd. |   | |
 | Wed, Nov 27 | **Thanksgiving, no class**    |   | |
 | Mon, Dec 2  | Planning an AI-Enabled Product in a Startup |   |   |
-| Wed, Dec 4  | Summary and Review  | [test][test]  | G5: System evolution |
+| Wed, Dec 4  | Summary and Review  |  | G5: System evolution |
 
-[test]: foo

@@ -53,34 +53,9 @@ Both instructors have an open door policy: If either of the instructors' office 
 
 ## Course content
 
-The following schedule describes the current planing status and the covered concepts. It is subject to change and will be updated as the semester progresses, especially to help focus on requested topics or support learning.
+Course content is still under development. A more detailed breakdown of topics and learning goals can be found under [Learning Goals](https://github.com/ckaestne/seai/blob/master/learning%20goals.md). Below is a table of the current schedule with links to select lectures. Of of this is subject to change and will be updated as the semester progresses, especially to help focus on requested topics or support learning.
 
-* Introduction motivation
-* Case study discussion and problem analysis
-* Basics of a data analytics pipeline (feature extraction etc) - End to end scenario
-* Intelligent systems - Components and challenges (experience vs intelligence vs orchestration)
-* Dealing with ML mistakes: Requirements and architectural tactics + Risk analysis
-* Architecture: Planning where models live and how they get updated
-* Understanding tradeoffs of modeling techniques: A quick survey
-* Understanding tradeoffs of modeling techniques: A quick survey - Part 2
-* Data quality
-* Model quality
-* QA automation 
-* Debugging and experimentation infrastructure, sensitivity analysis
-* Goals and measurement; testing in production 
-* Continuous deployment, architectural considerations, infrastructure, QA automation, detecting skew
-* Telemetry and monitoring and alerts
-* Ethics
-* Ethics + Fairness + Testing - Part 2
-* Infrastructure design, testing, and reuse; modularity and infrastructure churn
-* Scalability and distributed systems
-* Scalability and distributed systems - Part 2
-* Data provenance (modeling, analysis, tooling), feedback loops
-* Reproducibility and versioning at scale
-* Process and team reflection
-* Technical debt
-* Security and adversarial learning, threat modeling
-* Planning a ML product in a startup - end to end discussion 
+[Schedule](https://github.com/ckaestne/seai/blob/master/schedule.md)
 
 ![Course topics overview](overview.png "Course topics overview")
 
