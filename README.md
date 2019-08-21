@@ -40,15 +40,19 @@ In addition, students will gain familiarity with production-quality infrastructu
 
 17-445/17-645, Fall 2019, 12 units
 
-Monday/Wednesday 1:30-2:50
+Lectures Monday/Wednesdays 1:30-2:50, GHC 4211
 
-[Christian Kaestner](https://www.cs.cmu.edu/~ckaestne/) and [Eunsuk Kang](https://eskang.github.io/)
+Recitation Fridays 10:30-11:20, GHC 4102
+
+Instructors: [Christian Kaestner](https://www.cs.cmu.edu/~ckaestne/) and [Eunsuk Kang](https://eskang.github.io/)
+
+Teaching assistant: [Chu-Pan Wong](https://www.cs.cmu.edu/~chupanw/)
 
 Unless you have questions to specific instructors, we prefer that you email us at se-ai@lists.andrew.cmu.edu, where you will reach the entire teaching staff of the course.
 
 Open to undergraduate and graduate students meeting the prerequisites.
 
-Both instructors have an open door policy: If either of the instructors' office doors are open and no-one else is meeting with us, we are happy to answer any course-related questions. If you prefer an appointment, email the instructors.
+All instructors and teaching assistants have an open door policy: If our office door is open and no-one else is meeting with us, we are happy to answer any course-related questions. If you prefer an appointment, email the instructors or talk to us before or after class.
 
 
 ## Course content
