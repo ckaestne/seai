@@ -24,15 +24,16 @@ Required reading: Hulten, Geoff. "Building Intelligent Systems: A Guide to Machi
 
 ---
 # When to use AI?
+
 ----
 ## When to use AI?
 
-* Difficult for computers, but easy for humans
-  * e.g., "Is this a cat?"
-* Unknown patterns
-  * Medical diagnosis
-* Requires a large amount of data
-  * Search engines
+For everything!
+
+----
+## When to use AI?
+
+~~For everything!~~
 
 ----
 
@@ -56,7 +57,26 @@ Notes:
 ![stock exchange](plane.jpg)
 <!-- .element: class="stretch" -->
 
-Picture by [David Mark](https://pixabay.com/users/12019-12019/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=100624)
+Picture by
+[David Mark](https://pixabay.com/users/12019-12019/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=100624)
+
+----
+
+## Use of AI?
+
+![AI judge](AI-judge.jpg)
+<!-- .element: class="stretch" -->
+
+----
+## When to use AI?
+
+* Difficult for computers, but easy for humans
+  * e.g., "Is this a cat?"
+* Unknown patterns
+  * Medical diagnosis
+* A large amount of data required
+  * Search engines
+* (AI can complement, not necessarily replace, humans!)
 
 ---
 # Components of an AI-Enabled System
