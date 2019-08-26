@@ -52,6 +52,8 @@ Idea: Let's commercialize the software and sell to academics and conference orga
 
 ## Likely challenges?
 
+<!-- discussion -->
+
 Notes: Ask students to write at least 3 challenges each, collect answers on board
 
 ----
@@ -210,7 +212,8 @@ class Algorithms {
 class Algorithms {
     /**
      * This method finds the shortest distance between to 
-     * verticies. Method is only supported for connected verticies.
+     * verticies. Method is only supported 
+     * for connected verticies.
     */
     int shortestDistance(…) {…}
 }
