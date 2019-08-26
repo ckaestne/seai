@@ -11,6 +11,10 @@ Christian Kaestner and Eunsuk Kang
 
 ---
 
+# Disclaimer: New Class
+
+---
+
 ## Learning Goals
 
 * Explain the typical machine-learning process
@@ -461,6 +465,8 @@ Announcements through canvas
 
 Office hours and open door policy (When our door is open and we are not currently meeting with somebody else, feel free to interrupt us for course-related issues.)
 
+Materials on GitHub. Pull requests encouraged.
+
 ----
 
 ## Software engineering class
@@ -533,6 +539,8 @@ https://www.buildingintelligentsystems.com/
 Various chapters assigned throughout the semester
 
 Supplemented with research articles, blog posts, videos, podcasts, ...
+
+[Electronic version](https://link-springer-com.proxy.library.cmu.edu/book/10.1007%2F978-1-4842-3432-7) in the library
 
 <!-- split -->
 
