@@ -331,6 +331,59 @@ Build a predictor that best describes an outcome for the observed features
 <!-- split -->
 ![Recall vs Precision](recallprecision.png)
 
+
+----
+## Evaluation Data?
+
+![](doordash.png)
+
+----
+
+## Underfitting, Overfitting
+
+* **Overfitting**: Model learns exactly the input data, but does not generalize to unseen data
+* **Underfitting**: Model makes very general observations but poorly fits to data
+* Adjust degrees of freedom in the model to balance between overfitting and underfitting
+
+----
+## Underfitting example
+
+<!-- colstart -->
+
+|Text|Genre|
+|-|-|
+|When the earth stood ... |Science fiction|
+|Two households, both alike...|Romance|
+|To Sherlock Holmes she...|Adventure|
+
+<!-- col -->
+![](underfitting.png)
+<!-- colend -->
+
+----
+## Overfitting example
+
+<!-- colstart -->
+
+|Text|Genre|
+|-|-|
+|When the earth stood ... |Science fiction|
+|Two households, both alike...|Romance|
+|To Sherlock Holmes she...|Adventure|
+
+<!-- col -->
+![](overfitting.png)
+<!-- colend -->
+
+----
+## Learning and Evaluating in Production
+
+* Beyond static data sets, build telemetry
+* Design challenge: identify mistakes in practice
+* Use sample of live data for evaluation
+* Retrain models with sampled live data regularly
+* Monitor performance and intervene
+
 ---
 # Summary
 
