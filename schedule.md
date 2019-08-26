@@ -6,7 +6,7 @@
 | Mon, Aug 26 | [Introduction and Motivation](https://ckaestne.github.io/seai/slides/01_introduction_and_motivation/intro.html) |   |   |
 | Wed, Aug 28 | [Components of an AI-Enabled System](https://ckaestne.github.io/seai/slides/02_components/components.html)  | [Building Intelligent Systems](https://www.buildingintelligentsystems.com/), Ch. 2+5+20  |   |
 | Mon, Sep 2  | **Labor day, no class** |   |   |
-| Wed, Sep 4  | [Software Engineering Bootcamp](https://ckaestne.github.io/seai/slides/03_se_bootcamp/se.md)   | <!-- [Software Engineering for the 21st Century](http://ra.adm.cs.cmu.edu/anon/usr0/anon/usr/ftp/isri2005/CMU-ISRI-05-108.pdf) -->  | [I1: Case Study](https://github.com/ckaestne/seai/tree/master/assignments/01_case_study/assignment01.md)  |
+| Wed, Sep 4  | [Software Engineering Bootcamp](https://ckaestne.github.io/seai/slides/03_se_bootcamp/se.html)   | <!-- [Software Engineering for the 21st Century](http://ra.adm.cs.cmu.edu/anon/usr0/anon/usr/ftp/isri2005/CMU-ISRI-05-108.pdf) -->  | [I1: Case Study](https://github.com/ckaestne/seai/tree/master/assignments/01_case_study/assignment01.md)  |
 | Mon, Sep 9  | Engineering Challenges for AI-Enabled Systems   |   |   |
 | Wed, Sep 11 | Requirements and Dealing with Mistakes  |   | G1: Modeling Basics |
 | Mon, Sep 16 | Tradeoffs among AI Techniques   |   |   |
