@@ -46,7 +46,7 @@ Recitation Fridays 10:30-11:20, GHC 4102
 
 Instructors: [Christian Kaestner](https://www.cs.cmu.edu/~ckaestne/) and [Eunsuk Kang](https://eskang.github.io/)
 
-Teaching assistant: [Chu-Pan Wong](https://www.cs.cmu.edu/~chupanw/)
+Teaching assistant: [Chu-Pan Wong](https://www.cs.cmu.edu/~chupanw/) (Office hour: 15:00 - 16:00 on Wednesdays, WeH 4103)
 
 Unless you have questions to specific instructors, we prefer that you email us at se-ai@lists.andrew.cmu.edu, where you will reach the entire teaching staff of the course.
 
