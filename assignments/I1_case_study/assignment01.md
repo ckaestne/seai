@@ -31,5 +31,14 @@ Questions:
 
 4. **Question 4:** What lessons can be learned for future software projects of similar scale or importance? Identify and briefly describe at least two lessons that are worth sharing with other teams building AI-enabled systems, especially teams that are new to using AI techniques.
 
-Submit your answers as a single PDF document to Canvas by __. Make sure your document is clearly structured, such that it is recognizable which answer belongs to which question.
+Submit your answers as a single PDF document to Canvas by [see Canvas]. Make sure your document is clearly structured, such that it is recognizable which answer belongs to which question.
 
+
+## Grading
+
+The assignment is worth 100 points. For full credit, we expect:
+* A comprehensive discussion of the problem's difficulty, including why machine learning is a suitable solution (20 pt)
+* Identification of important qualities and corresponding measures (25 pt)
+* Discussion of 3 engineering challenges, including importance, considered alternatives, and chosen decision (25 pt)
+* Identification and description of two engineering lessons learned in the project (20 pt)
+* A clearly structured, well written document (10 pt)
