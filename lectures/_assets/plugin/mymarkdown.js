@@ -53,7 +53,7 @@ renderer.html=function( html) {
 	if (html.trim() == "<!-- references -->")
 		return '<div class="stretch"></div><div class="references">'
 	if (html.trim() == "<!-- discussion -->")
-		return '<img src="/_assets/discussion.jpg" alt="Discussion" />'
+		return '<img src="./../_assets/img/discussion.jpg" alt="Discussion" />'
 	return html
 };
 
