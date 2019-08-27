@@ -130,7 +130,7 @@ Required reading: Anders Arpteg, Björn Brinne, Luka Crnkovic-Friis, and Jan Bos
 
 ![Crime Map](crime-map.jpg)
 
----
+----
 ## Adversarial Environment
 
 * Some agents may try to game the system

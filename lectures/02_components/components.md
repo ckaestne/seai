@@ -1,8 +1,9 @@
 ---
-author: Christian Kaestner
+author: Christian Kaestner and Eunsuk Kang
 title: "17-445: Components of an AI-Enabled System"
 semester: Fall 2019
-footer: "17-445 Software Engineering for AI-Enabled Systems, Christian Kaestner"
+footer: "17-445 Software Engineering for AI-Enabled Systems, Christian
+Kaestner & Eunsuk Kang"
 ---  
 
 # Components of an AI-Enabled System
@@ -26,14 +27,42 @@ Required reading: Hulten, Geoff. "Building Intelligent Systems: A Guide to Machi
 # When to use AI?
 
 ----
-## When to use AI?
+# When to use AI?
 
-For everything!
+# For everything!
+
+----
+# When to use AI?
+
+# ~~For everything!~~
+
+![Wrong tool for the job](wrong-tool.jpg)
+<!-- .element: class="stretch" -->
 
 ----
 ## When to use AI?
 
-~~For everything!~~
+* Difficult for computers, but easy for humans
+<!-- .element: class="fragment" -->
+	* e.g., "Hotdog or not hotdog?"
+
+![hotdog](hotdog.jpg)
+<!-- .element: class="fragment" -->
+
+----
+## When to use AI?
+
+* Difficult for computers, but easy for humans
+  * Object detection
+  * Speech recognition & transcription
+* Complex/unknown patterns, difficult even for humans
+<!-- .element: class="fragment" -->  
+	* Medical diagnosis, drug discovery
+	* Sports data analytics
+* A large amount of data processing required
+<!-- .element: class="fragment" -->
+	* Search engines
+	* Movie recommendations
 
 ----
 
@@ -54,11 +83,8 @@ Notes:
 
 ## Use of AI?
 
-![stock exchange](plane.jpg)
+![flash crash](flash-crash.png)
 <!-- .element: class="stretch" -->
-
-Picture by
-[David Mark](https://pixabay.com/users/12019-12019/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=100624)
 
 ----
 
@@ -68,15 +94,25 @@ Picture by
 <!-- .element: class="stretch" -->
 
 ----
-## When to use AI?
+
+## Use of AI?
+
+![criminal detection](criminal-detection.png)
+<!-- .element: class="stretch" -->
+
+----
+## When to use AI: Caveat
 
 * Difficult for computers, but easy for humans
-  * e.g., "Is this a cat?"
-* Unknown patterns
-  * Medical diagnosis
-* A large amount of data required
-  * Search engines
-* (AI can complement, not necessarily replace, humans!)
+* Complex/unknown patterns, difficult even for humans
+* A large amount of data processing required
+* BUT  just because AI looks suitable, doesn't mean you always should
+use it!
+<!-- .element: class="fragment" -->
+   * Analyze potential risks of AI failures
+   * Weigh them against benefits
+   * Use AI only if risks are manageable or acceptably low
+   * (We will come back to this topic later!)
 
 ---
 # Components of an AI-Enabled System
@@ -85,10 +121,17 @@ Picture by
 ## Components of an AI-Enabled System
 
 * Objectives: What is the system trying to achieve?
-* Experience: What does it allow users to do? How does it receive feedback?
+<!-- .element: class="fragment" -->
+* Experience: What does it allow users to do? How does it receive
+feedback?
+<!-- .element: class="fragment" -->
 * Intelligence: How does it achieve its objectives?
+<!-- .element: class="fragment" -->
 * Orchestration: How is everything put together? How does it evolve
 over time?
+<!-- .element: class="fragment" -->
+* (We will cover each of these topics in more detail later)
+<!-- .element: class="fragment" -->
 
 ----
 ## Case Study: Safe Browsing Feature
@@ -99,13 +142,19 @@ over time?
 ## Objectives
 
 * What is the system trying to achieve?
-  * Measurable
-  * Achievable
-  * Communicable
+* Properties of "good" objectives
+  * Measurable: Enables tracking & objective comparison
+  * Achievable: Possible to achieve in time-to-market
+  * Communicable: Transparent & comprehensible by stakeholders
 * Q. What are the objectives of a safe browsing feature?
-  * Prevent users from being hacked
-  * Minimize users' inconvenience
+  <!-- .element: class="fragment" -->
+  * "Prevent users from being hacked"
+  <!-- .element: class="fragment" -->
+  * "Minimize users' inconvenience"
+  <!-- .element: class="fragment" -->
   * (Are these good? Can we do better?)
+  <!-- .element: class="fragment" -->
+
   
 Note: How different are these properties in nature? Quantitative vs qualitative.
 
@@ -128,7 +177,9 @@ Note: How different are these properties in nature? Quantitative vs qualitative.
 ## Experience
 
 * What does it allow users to do? How does it receive feedback?
+<!-- .element: class="fragment" -->
 * Aspects of a user interaction
+<!-- .element: class="fragment" -->
   * Presenting intelligence
   * Collecting feedback
   * Minimizing errors
@@ -137,19 +188,26 @@ Note: How different are these properties in nature? Quantitative vs qualitative.
 ## Presenting Intelligence
 
 * Automate: Take action on user's behalf
+<!-- .element: class="fragment" -->
 * Prompt: Ask the user if an action should be taken
+<!-- .element: class="fragment" -->
 * Organize: Display a set of items in an order
+<!-- .element: class="fragment" -->
 * Annotate: Add information to a display
-* Q. What are options for safe browsing?
+<!-- .element: class="fragment" -->
+* Q. What are design choices for safe browsing?
+<!-- .element: class="fragment" -->
 
 ----
 ## Collecting Feedback
 
 * Feedback mechanisms to collect:
+  <!-- .element: class="fragment" -->
 	* Context of the interaction
 	* Action taken by the user
 	* Outcome (success, failure, in-between...)
-* Q. What information to collect for safe browsing?
+* Q. What information would you collect for safe browsing?
+	<!-- .element: class="fragment" -->
 
 ----
 ## Collecting Feedback
@@ -160,86 +218,127 @@ Note: How different are these properties in nature? Quantitative vs qualitative.
 ## Minimizing Errors
 
 * Avoid performing risky actions
+<!-- .element: class="fragment" -->
 * Control and restrict user interactions
+<!-- .element: class="fragment" -->
 * Take less forceful actions (prompt vs automate)
+<!-- .element: class="fragment" -->
 * Provide guidance for recovering from errors
+<!-- .element: class="fragment" -->
 
 ----
 ## Controling User Interactions
 
-![Safe Browsing Prompt](safe-browsing-prompt.jpg)
+![Safe browsing warning](warning.png)
 
 ----
 ## Intelligence
 
 * How does it achieve its objectives?
+<!-- .element: class="fragment" -->
   * Rules & heuristics
+  * Symbolic AI methods
   * Machine learning
   * Hybrid approach
-* Q. What kind of intelligence for safe browsing?
+* Q. What kind of intelligence would you use for safe browsing?
+<!-- .element: class="fragment" -->
 
 ----
 ## Orchestration
 
 * How is everything put together?
+<!-- .element: class="fragment" -->
 * How does it manage changes in:
+<!-- .element: class="fragment" -->
   * Objective (e.g., a new metric to optimize)
   * Intelligence (a different ML model)
   * Experience (new users, usage patterns)
   * Errors (unexpected failures, abuse)
 * Q. Possible changes to safe browsing? 
+<!-- .element: class="fragment" -->
 
 ----
 ## Managing Changes
 
 * Design mechanisms to:
   * Monitor objectives
+  <!-- .element: class="fragment" -->
   * Inspect & modify interaction
+  <!-- .element: class="fragment" -->
   * Update intelligence
+  <!-- .element: class="fragment" -->
   * Override intelligence when needed
-
+  <!-- .element: class="fragment" -->
+  
 ---
-# ML-based Intelligent System
+# ML-based Intelligent Systems
 
 ----
-##  AI != ML
+#  AI != ML
+
+![AI vs ML](AIvsML.jpg)
 
 ----
-## Machine Learning Pipeline
+## Another Case Study: Food Delivery
+
+![Door Dash](doordash.png)
+
+----
+## Predicting Delivery Time
+
+* What are its objective? How do we evaluate it?
+<!-- .element: class="fragment" -->
+* How do we present intelligence & receive feedback?
+<!-- .element: class="fragment" -->
+* How do we build the intelligence?
+  <!-- .element: class="fragment" -->
+  * What factors does it depend on?
+  * What can be used for learning & prediction?
+
+----
+## Typical Machine Learning Pipeline
 
 ![ML Pipeline](ML-pipeline.png)
 
-[Semi Koen](https://towardsdatascience.com/not-yet-another-article-on-machine-learning-e67f8812ba86)
-
-[Need a CC figure]
+Figure by [Semi Koen](https://towardsdatascience.com/not-yet-another-article-on-machine-learning-e67f8812ba86)
 
 ----
-## Typical ML Pipeline
+## ML Tasks by Phase
 
-* Static
-  * Get labeled data
+* Before deployment:
+<!-- .element: class="fragment" -->
+  * Obtain labeled data
+  <!-- .element: class="fragment" -->
   * Identify and extract features
+  <!-- .element: class="fragment" -->
   * Split data into training and evaluation set
+  <!-- .element: class="fragment" -->
   * Learn model from training data
+  <!-- .element: class="fragment" -->
   * Evaluate model on evaluation data
+  <!-- .element: class="fragment" -->
   * Repeat, revising features
-* With production data
+  <!-- .element: class="fragment" -->
+* After deployment:
+<!-- .element: class="fragment" -->
   * Evaluate model on production data; monitor
+  <!-- .element: class="fragment" -->
   * Select production data for retraining
+  <!-- .element: class="fragment" -->
   * Update model regularly
+  <!-- .element: class="fragment" -->
 
-----
-## Design Decisions in ML-based Systems
+<!-- ---- -->
+<!-- ## Design Decisions in ML-based Systems -->
 
-* Data collection and preparation
-  * Training vs test sets, sizes
-* Feature engineering
-  * Often the most time-consuming part!
-  * Requires in-depth domain knowledge
-* Model selection & configuration
-  * Structure: No. layers, decision tree depth...
-  * Search algorithms
-	
+<!-- * Data collection and preparation -->
+<!--   * Training vs test sets, sizes -->
+<!-- * Feature engineering -->
+<!-- * Model selection & configuration -->
+<!--   * Structure: No. layers, decision tree depth, etc.,  -->
+<!--   * Search algorithms -->
+<!-- * (More in later lectures) -->
+
 ----
 
 <!-- small -->
@@ -261,8 +360,8 @@ Note: How different are these properties in nature? Quantitative vs qualitative.
 * Convert data into a useful form
 * Normalize data
 * Include context
-* Remove misleading things
-* In delivery prediction:
+* Remove misleading/useless items
+* Q. What features would you use for delivery prediction?
 
 ----
 
@@ -272,9 +371,7 @@ Note: How different are these properties in nature? Quantitative vs qualitative.
 
 ----
 
-## Feature Extraction
-
-In delivery prediction:
+## Features for delivery prediction
 
 * Order time, day of week
 * Average number of orders in that hour
@@ -287,9 +384,9 @@ In delivery prediction:
 
 ## Data Cleaning
 
-* Removing outliers
-* Normalizing data
-* Missing values
+* Remove outliers
+* Normalize data
+* Fill in missing values
 
 ----
 
@@ -314,36 +411,45 @@ Build a predictor that best describes an outcome for the observed features
 
 ## Evaluation
 
-* Prediction accuracy on learned data vs prediction accuracy on unseen data
+* Accuracy on learned data vs accuracy on unseen data
   * Separate learning set, not used for training
-* For binary predictors: false positives vs false negatives, recall, precision
-* For numeric predictors: average (relative) distance between real and predicted value
-* For ranking predictors: topK etc
+![data sets](data-sets.png)
 
 ----
 
-## Recall/Precision
+## Evaluation
 
-* Describes accuracy of a model in two (relative) numbers
-* Recall: how many useful answers
-* Precision: how much noise
- 
-<!-- split -->
-![Recall vs Precision](recallprecision.png)
-
+* For binary predictors: False positives vs false negatives, recall, precision
+<!-- .element: class="fragment" -->
+* For numeric predictors: Average (relative) distance between real & predicted values
+<!-- .element: class="fragment" -->
+* For ranking predictors: Top-K algorithms, etc., 
+<!-- .element: class="fragment" -->
 
 ----
-## Evaluation Data?
+## Evaluation Method?
 
 ![](doordash.png)
 
 ----
+## Recall vs Precision
 
-## Underfitting, Overfitting
+![Recall vs Precision](recallprecision.png)
+ 
+----
 
-* **Overfitting**: Model learns exactly the input data, but does not generalize to unseen data
-* **Underfitting**: Model makes very general observations but poorly fits to data
-* Adjust degrees of freedom in the model to balance between overfitting and underfitting
+## Underfitting vs Overfitting
+
+* Overfitting: Model learns exactly the input data, but does not
+generalize to unseen data
+<!-- .element: class="fragment" -->
+* Underfitting: Model makes very general observations but poorly
+fits to data
+<!-- .element: class="fragment" -->
+* Adjust degrees of freedom in the model to balance between
+overfitting and underfitting
+	<!-- .element: class="fragment" -->
+	* Challenging to get right in practice! 
 
 ----
 ## Underfitting example
@@ -379,14 +485,17 @@ Build a predictor that best describes an outcome for the observed features
 ## Learning and Evaluating in Production
 
 * Beyond static data sets, build telemetry
-* Design challenge: identify mistakes in practice
 * Use sample of live data for evaluation
 * Retrain models with sampled live data regularly
-* Monitor performance and intervene
+* Monitor objectives and intervene if necessary
 
 ---
 # Summary
 
-
+* Know when (not) to use AI
+  * Even if it looks suitable, think about risks!
+* Consider & analyze design decisions in all aspects of an AI-based system
+  * Objectives, experiences, intelligence, orchestration
+* Understand typical ML tasks & evaluation metrics
 
 
