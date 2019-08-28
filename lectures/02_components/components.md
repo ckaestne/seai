@@ -21,7 +21,7 @@ Required reading: Hulten, Geoff. "Building Intelligent Systems: A Guide to Machi
 * Understand when (not) to use AI
 * Understand the major components of a typical AI-enabled system and design
   decisions to be made
-* Understand the components of a typical ML pipeline and their responsibilities
+* Understand the major steps in a typical ML pipeline and their goals
 
 ---
 # When to use AI?
@@ -100,6 +100,8 @@ Notes:
 ![criminal detection](criminal-detection.png)
 <!-- .element: class="stretch" -->
 
+_"Automated Inference on Criminality using Face Images", Wu & Zhang (2016)_
+
 ----
 ## When to use AI: Caveat
 
@@ -143,9 +145,10 @@ over time?
 
 * What is the system trying to achieve?
 * Properties of "good" objectives
+  <!-- .element: class="fragment" -->
   * Measurable: Enables tracking & objective comparison
   * Achievable: Possible to achieve in time-to-market
-  * Communicable: Transparent & comprehensible by stakeholders
+  * Communicable: Transparent & comprehensible to stakeholders
 * Q. What are the objectives of a safe browsing feature?
   <!-- .element: class="fragment" -->
   * "Prevent users from being hacked"
@@ -176,9 +179,9 @@ Note: How different are these properties in nature? Quantitative vs qualitative.
 ----
 ## Experience
 
-* What does it allow users to do? How does it receive feedback?
+* What does the system allow users to do? How does it receive feedback?
 <!-- .element: class="fragment" -->
-* Aspects of a user interaction
+* Aspects of a user experience/interaction
 <!-- .element: class="fragment" -->
   * Presenting intelligence
   * Collecting feedback
@@ -215,7 +218,7 @@ Note: How different are these properties in nature? Quantitative vs qualitative.
 ![Safe Browsing Feedback](safe-browsing-feedback.png)
 
 ----
-## Minimizing Errors
+## Minimizing (Impact of) Errors
 
 * Avoid performing risky actions
 <!-- .element: class="fragment" -->
@@ -230,6 +233,11 @@ Note: How different are these properties in nature? Quantitative vs qualitative.
 ## Controling User Interactions
 
 ![Safe browsing warning](warning.png)
+
+----
+## Safe Interactions in Self-Driving Cars
+
+![Self driving cars](self-driving.png)
 
 ----
 ## Intelligence
@@ -254,7 +262,7 @@ Note: How different are these properties in nature? Quantitative vs qualitative.
   * Intelligence (a different ML model)
   * Experience (new users, usage patterns)
   * Errors (unexpected failures, abuse)
-* Q. Possible changes to safe browsing? 
+* Q. What are possible changes to safe browsing? 
 <!-- .element: class="fragment" -->
 
 ----
@@ -286,7 +294,7 @@ Note: How different are these properties in nature? Quantitative vs qualitative.
 ----
 ## Predicting Delivery Time
 
-* What are its objective? How do we evaluate it?
+* What are its objective? How do we measure success?
 <!-- .element: class="fragment" -->
 * How do we present intelligence & receive feedback?
 <!-- .element: class="fragment" -->
@@ -354,14 +362,21 @@ Figure by [Semi Koen](https://towardsdatascience.com/not-yet-another-article-on-
 
 ----
 
-## Feature Engineering
+## Data Processing
 
-* Identify parameters of interest that a model may learn on
-* Convert data into a useful form
-* Normalize data
-* Include context
-* Remove misleading/useless items
+* Data cleaning
+  <!-- .element: class="fragment" -->
+  * Remove outliers
+  * Normalize data
+  * Fill in missing values
+  * Remove misleading/useless items
+* Feature Engineering
+  <!-- .element: class="fragment" -->
+  * Identify parameters of interest that a model can learn on
+  * Convert initial data into feature set
+  * Select relevant subset of features
 * Q. What features would you use for delivery prediction?
+<!-- .element: class="fragment" -->
 
 ----
 
@@ -379,20 +394,6 @@ Figure by [Semi Koen](https://towardsdatascience.com/not-yet-another-article-on-
 * Special requests
 * Order items
 * Preparation time
-
-----
-
-## Data Cleaning
-
-* Remove outliers
-* Normalize data
-* Fill in missing values
-
-----
-
-## Data cleaning?
-
-![Door Dash](doordash.png)
 
 ----
 
@@ -417,13 +418,15 @@ Build a predictor that best describes an outcome for the observed features
 
 ----
 
-## Evaluation
+## Evaluation Methods
 
 * For binary predictors: False positives vs false negatives, recall, precision
 <!-- .element: class="fragment" -->
 * For numeric predictors: Average (relative) distance between real & predicted values
 <!-- .element: class="fragment" -->
 * For ranking predictors: Top-K algorithms, etc., 
+<!-- .element: class="fragment" -->
+* (More details in later lectures!)
 <!-- .element: class="fragment" -->
 
 ----
@@ -435,7 +438,7 @@ Build a predictor that best describes an outcome for the observed features
 ## Recall vs Precision
 
 ![Recall vs Precision](recallprecision.png)
- 
+
 ----
 
 ## Underfitting vs Overfitting
@@ -453,6 +456,7 @@ overfitting and underfitting
 
 ----
 ## Underfitting example
+<!-- .element: class="fragment" -->
 
 <!-- colstart -->
 
@@ -468,6 +472,7 @@ overfitting and underfitting
 
 ----
 ## Overfitting example
+<!-- .element: class="fragment" -->
 
 <!-- colstart -->
 
@@ -485,17 +490,20 @@ overfitting and underfitting
 ## Learning and Evaluating in Production
 
 * Beyond static data sets, build telemetry
+<!-- .element: class="fragment" -->
+  * (This week's recitation on Apache Kafka)
 * Use sample of live data for evaluation
+<!-- .element: class="fragment" -->
 * Retrain models with sampled live data regularly
+<!-- .element: class="fragment" -->
 * Monitor objectives and intervene if necessary
+<!-- .element: class="fragment" -->
 
 ---
 # Summary
 
-* Know when (not) to use AI
-  * Even if it looks suitable, think about risks!
-* Consider & analyze design decisions in all aspects of an AI-based system
+* Recognize when (not) to use AI
+  * Even if AI looks suitable, think about potential risks!
+* Consider & evaluate design decisions in all aspects of an AI-based system
   * Objectives, experiences, intelligence, orchestration
-* Understand typical ML tasks & evaluation metrics
-
-
+* Understand typical ML tasks & evaluation methods
