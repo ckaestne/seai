@@ -63,6 +63,9 @@ Required reading: Hulten, Geoff. "Building Intelligent Systems: A Guide to Machi
 <!-- .element: class="fragment" -->
 	* Search engines
 	* Movie recommendations
+* Dynamic, oft-changing environment
+<!-- .element: class="fragment" -->
+  * (Systems need to learn and adapt)
 
 ----
 
