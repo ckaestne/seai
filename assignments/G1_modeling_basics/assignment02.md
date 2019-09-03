@@ -18,7 +18,7 @@ Consider you are in the early days of video streaming and you want to foster sal
 
 In a later assignment you need to provide a function `recommend: UID -> List[MovieID]` that returns for a given user a ranked list of recommended movies to show to the user, but for now you may also focus on other forms of predictive models that may be useful for a recommendation system.
 
-**Provided data:** We provide an event stream of a streaming service site that records server logs, which include information about which user watched which video and ratings about those movies. In addition, we provide read-only access to an API to query information about users and movies. You are welcome to gather additional external information if it is useful for the task.
+**Provided data:** We provide an event stream of a streaming service site that records server logs, which include information about which user watched which video and ratings about those movies. In addition, we provide read-only access to an API to query information about users and movies. You are welcome to gather additional external information if it is useful for the task, for example, ids for [IMDB](https://www.imdb.com/) and [TMDB](https://www.themoviedb.org/) are provided.
 
 The information about the provided Kafka stream and the API can be found on Canvas.
 
@@ -39,13 +39,13 @@ Deliverables consist of a report (single PDF file) and supporting artifacts. Upl
 The report should include the name of all students who contributed to the assignment and answer the following questions in clearly labeled sections of the document:
 
 * Overall process (max 1 page): Describe your team's overall approach to developing the model. Describe how your team collocated, how you made decisions, and how you approached the problem.
-* Data and cleaning (max .5 page): Describe the data you used for learning (provided and external) and describe how you cleaned the data.
-* Features: Provide a full list of all features used in the model and a short description of how they were extracted. Provide a pointer to the implementation of the feature extraction process.
+* Data and cleaning (max .5 page): Describe the data you used for learning (provided and external), how you gathered it, and describe how you cleaned the data.
+* Features: Provide a full list of all features used in the model and a short description of how they were extracted. Provide a pointer to the implementation of the feature extraction process, as appropriate.
 * Learning (max 1 page): Describe the learning techniques used and provide a pointer to the implementation. Provide a brief justification why you decided to use this specific technique and implementation. Provide a pointer to the final model learned.
 * Evaluation (max 1 page): Describe how you evaluated the model. This should include at least a description of the evaluation metric and the evaluation data. Briefly justify both the used metric and how you separated evaluation data.
 * Evaluation results: Provide the evaluation results for the final model. In addition, demonstrate how the evaluation helped in designing the model by including results for one significant decision during the modeling process (e.g., comparing two learning techniques or comparing results with and without a certain feature). Provide a pointer to the corresponding artifacts.
-* Team meeting notes: Provide pointers to notes taken at team meetings. The notes should describe how work was divided and 
-* Process reflection (max 1 page): Think back about your team's process and reflect about what worked well and what did not. Focus especially on problems regarding teamwork and process and discuss what you would do different if you would do the assignment again.
+* Team meeting notes: Provide pointers to notes taken at team meetings. The notes should describe how work was divided. 
+* Process reflection (max .5 page): Think back about your team's process and reflect about what worked well and what did not. Focus especially on problems regarding teamwork and process and discuss what you would do different if you would do the assignment again.
 
 On page limits: Figures and tables do not count toward the page limit. All page limits are soft limits that should usually be obeyed but can be exceeded if there are specific reasons (e.g., unusual decisions that need more space for explanations).
 
