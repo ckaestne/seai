@@ -29,6 +29,28 @@ Most students will know this; this is a refresher and provides an overview. This
 * Describe common qualities of interest and how to measure them
 
 
+---
+
+# Scenario: Preventing Wildlife Poaching
+
+![](scenario.png)
+
+[More about this project](https://feifang.info/research/)
+
+Notes:
+
+Various forms of input:
+* Past poaching incidents and their locations
+* Past patrolling routes
+* Satellite and drone feeds (live/near live)
+* Position of rangers (live)
+* Positions of select animals (live)
+* Weather forcast (ever 4h)
+
+Output:
+* Static patrol routes
+* App with dynamic updates where to go next
+
 
 ---
 
@@ -145,7 +167,7 @@ Notes: Complicated processes like these are often what people associate with "pr
 
 
 
-# Basic Software Engineering Practices
+# SE Basics & Automation
 
 ----
 
@@ -167,7 +189,6 @@ Code inspection ▶ Static analysis
 
 Manual issue tracking ▶ Issue tracking systems ▶ Bots and AI
 
-**Abstraction & automation for AI-enabled systems?**
 
 ----
 
@@ -470,7 +491,8 @@ Notes: Although dated, the key idea is still essential -- think and plan before 
 * 
 * **Qualities in AI-Enabled Systems?**
 
-![](discussion.png)
+<!-- discussion -->
+
 
 ----
 
@@ -511,7 +533,8 @@ Hubbard, “[How to Measure Anything: Finding the Value of Intangibles in Busine
 
 
 
-![](discussion.png)
+<!-- discussion -->
+
 
 ----
 
@@ -654,45 +677,45 @@ Agile: A project management approach that seeks to respond to change and unpredi
 ----
 ## Agile Practices
 
-Backlogs (Product and Sprint), 
-Behavior-driven development (BDD), 
-Cross-functional team, 
-Continuous integration (CI), 
-Domain-driven design (DDD), 
-Information radiators (Kanban board, Task board, Burndown chart), 
-Acceptance test-driven development (ATDD), 
-Iterative and incremental development (IID), 
-Pair programming, 
-Planning poker, 
-Refactoring, 
-Scrum meetings (Sprint planning, Daily scrum, Sprint review and retrospective), 
-Small releases, 
-Simple design, 
-Test-driven development (TDD), 
-Agile testing, 
-Timeboxing, 
-Use case, 
-User story, 
-Story-driven modeling, 
-Retrospective, 
-On-site customer, 
-Agile Modeling, 
-40-hour weeks, 
-Short development cycles, 
-Collective ownership, 
-Open workspace, 
-Velocity tracking, 
-...
+Backlogs (Product and Sprint)
+⚫ Behavior-driven development (BDD) 
+⚫ Cross-functional team
+⚫ Continuous integration (CI)
+⚫ Domain-driven design (DDD)
+⚫ Information radiators (Kanban board, Task board, Burndown chart)
+⚫ Acceptance test-driven development (ATDD)
+⚫ Iterative and incremental development (IID)
+⚫ Pair programming
+⚫ Planning poker
+⚫ Refactoring
+⚫ Scrum meetings (Sprint planning, Daily scrum, Sprint review and retrospective)
+⚫ Small releases
+⚫ Simple design
+⚫ Test-driven development (TDD)
+⚫ Agile testing
+⚫ Timeboxing
+⚫ Use case
+⚫ User story
+⚫ Story-driven modeling
+⚫ Retrospective
+⚫ On-site customer
+⚫ Agile Modeling
+⚫ 40-hour weeks
+⚫ Short development cycles
+⚫ Collective ownership
+⚫ Open workspace
+⚫ Velocity tracking
+⚫ ...
 
 ----
 
 ## Select Practices
 
-* Kanban Board
-* Simple Design
-* Refactoring vs Design
-* On-site Customer
-* Short Development Cycles
+* Simple design
+* Refactoring vs design
+* On-site customer
+* Short development cycles
+* Kanban board
 
 ----
 
@@ -707,6 +730,38 @@ Velocity tracking,
 
 ![](scrum.png)
 
+
+---
+
+# Assignment G1
+
+* Group assignment, instructor assigned teams
+* "Simple" modeling task
+* Data provided through Kafka and APIs
+* Team choses tools and languages
+
+----
+
+## On Teamwork (Student Teams)
+
+* Meet initially and then regularly
+* Set communication standards and expectations
+* Divide work and integrate
+* Establish a process
+* Set and document clear responsibilities and expectations -- **summarize meeting outcomes!**
+* Every team member should understand the entire solution
+
+----
+
+## Debugging Team Problems
+
+* See team policy on Canvas
+* Team members have different backgrounds and skills, that's intentional
+* Most teams will encounter *some* problem
+    * Discuss issues within the team, earlier is better
+    * Escalate to course staff if needed
+    * We'll check in from time to time
+
 ---
 
 # Summary
@@ -717,4 +772,3 @@ Velocity tracking,
     - Alternative designs
 * Process is important, planning vs reacting
 * Basic practices of version control, build and test automation
-
