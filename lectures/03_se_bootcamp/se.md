@@ -34,6 +34,7 @@ Most students will know this; this is a refresher and provides an overview. This
 # Scenario: Preventing Wildlife Poaching
 
 ![](scenario.png)
+<!-- .element: class="stretch" -->
 
 [More about this project](https://feifang.info/research/)
 
