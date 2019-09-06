@@ -22,11 +22,11 @@ After taking this course, among others, students should be able to
 * implement production-quality systems that are robust to mistakes of AI components
 * design fault-tolerant and scalable data infrastructure for learning models, serving models, versioning, and experimentation
 * ensure quality of the entire machine learning pipeline with test automation and other quality assurance techniques, including automated checks for data quality, data drift, feedback loops, and model quality
-* build systems that can be tested in production and build deployment pipleines that allow careful rollouts and canary testing
+* build systems that can be tested in production and build deployment pipelines that allow careful rollouts and canary testing
 * consider privacy, fairness, and security when building complex AI-enabled systems
 * communicate effectively in teams with both software engineers and data analysists
 
-In addition, students will gain familiarity with production-quality infrastructure tools, including stream processing with Apache Kafka, distributed data storage with SQL and NoSQL databases, deployment with Docker and Kubernetis, and test automation with Travis and Jenkins.
+In addition, students will gain familiarity with production-quality infrastructure tools, including stream processing with Apache Kafka, distributed data storage with SQL and NoSQL databases, deployment with Docker and Kubernetes, and test automation with Travis and Jenkins.
 
 ## Design Rationale
 
