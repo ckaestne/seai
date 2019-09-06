@@ -26,7 +26,7 @@ After taking this course, among others, students should be able to
 * consider privacy, fairness, and security when building complex AI-enabled systems
 * communicate effectively in teams with both software engineers and data analysists
 
-In addition, students will gain familiarity with production-quality infrastructure tools, including stream processing with Apache Kafka, distributed data storage with SQL and NoSQL databases, deployment with Docker and Kubernetis, and test automation with Travis and Jenkins.
+In addition, students will gain familiarity with production-quality infrastructure tools, including stream processing with Apache Kafka, distributed data storage with SQL and NoSQL databases, deployment with Docker and Kubernetes, and test automation with Travis and Jenkins.
 
 ## Design Rationale
 
