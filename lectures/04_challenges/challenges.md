@@ -45,7 +45,7 @@ on measurements
 * Automobile: ~30,000 parts; Airplane: ~3,000,000 parts
 * MS Office: ~ 40,000,000 LOCs; Debian: ~ 400,000,000 LOCs
 
-## Q. How do we build such complex systems?
+### Q. How do we build such complex systems?
 
 ----
 ## Managing Complexity in Software
@@ -107,7 +107,7 @@ class Algorithms {
 <!-- .element: class="fragment" -->
   * In turn, affects input back to the system
   * Over time, may lead to undesirable (and difficult to reverse) outcome
-  * In AI, esp. true if initial model is biased
+  * Higher risks if initial data set & model is biased
 
 ![Feedback Loop](feedback-loop.png)
 
@@ -150,6 +150,7 @@ Know?"
 
 * Which project to fund?
 * Need more system testing?
+* Need more training?
 * Fast enough? Secure enough? 
 * Code quality sufficient?
 * Which features to focus on?
@@ -202,7 +203,7 @@ Know?"
 * Model Properties
 <!-- .element: class="fragment" -->
   * Accuracy of predictions, error rates
-  * Performance
+  * Performance (e.g., prediction time)
   * Cost: Training time, amount of data required
 
 ----
@@ -240,11 +241,15 @@ Know?"
 ----
 ## Risks of Metrics as Incentives
 
-* Can extinguish intrinsic motivation
-* Can diminish performance
-* Can encourage cheating, shortcuts, and unethical behavior
-* Can become addictive
-* Can foster short-term thinking
+* Metrics-driven incentives can:
+<!-- .element: class="fragment" -->
+  * Extinguish intrinsic motivation
+  * Diminish performance
+  * Encourage cheating, shortcuts, and unethical behavior
+  * Become addictive
+  * Foster short-term thinking
+* Often, different stakholders have different incentives!
+<!-- .element: class="fragment" -->
 
 ----
 ## Another Case Study: University Rankings
@@ -266,17 +271,22 @@ retention rates, alumni donations, etc.,
 * Are incentives for using these data good? Can they be misused?
 
 ----
-## Example: Abuse of Metrics
+## Examples: Risks of Metrics as Incentives
 
-* A university founded in early 2010's
-<!-- .element: class="fragment" -->
-* Math department ranked by US News as top 10 worldwide
-<!-- .element: class="fragment" -->
-* Top international faculty paid $$ as a visitor; asked to add affiliation
-<!-- .element: class="fragment" -->
-* Increase in publication citations => skyrocket ranking!
-<!-- .element: class="fragment" -->
-
+* Example 1
+  <!-- .element: class="fragment" -->
+  * Schools optimize metrics for higher ranking (add new classrooms, nicer
+  facilities)
+  * Tuition increases, but is not part of the model!
+  * Higher ranked schools become more expensive
+  * Advantage to students from wealthy families
+* Example 2
+  <!-- .element: class="fragment" -->
+  * A university founded in early 2010's
+  * Math department ranked by US News as top 10 worldwide
+  * Top international faculty paid $$ as a visitor; asked to add affiliation
+  * Increase in publication citations => skyrocket ranking!
+  
 ----
 ## Measurement Validity
 
@@ -348,3 +358,5 @@ retention rates, alumni donations, etc.,
 * Challenges in ML: Lack of specification, concept drift, feedback loop 
 * Introduction to measurements: Scales, validity, correlation & causation
 * Risks with measurements: Incentives & misuse
+  * Think about feedback loops & potential societal impact!
+
