@@ -1,126 +1,118 @@
 ---
-author: Eunsuk Kang
-title: "17-445: Engineering Challenges for AI-Enabled Systems"
+author: Christian Kaestner and Eunsuk Kang
+title: "17-445: Challenges and Measurements"
 semester: Fall 2019
-footer: "17-445 Software Engineering for AI-Enabled Systems, Eunsuk Kang"
+footer: "17-445 Software Engineering for AI-Enabled Systems, Christian
+Kaestner & Eunsuk Kang"
 ---  
 
-# Engineering Challenges for AI-Enabled Systems
+# Challenges and Measurements
 
 Eunsuk Kang
 
 <!-- references -->
 
-Required reading: Anders Arpteg, Björn Brinne, Luka Crnkovic-Friis, and Jan Bosch. "Software Engineering Challenges of Deep Learning." 
+Readings: D. Sculley et al. "Hidden Technical Debt in Machine Learning
+Systems" (2015) 
+
+Hulten, Geoff. "Building Intelligent Systems: A Guide to Machine
+Learning Engineering" (2018), Chapter 4.
 
 ---
 # Learning Goals
 
-* Understand the challenges of building AI-enabled systems
-* Understand the key differences between traditional software and
-  AI-enabled systems
+* Understand:
+  * Challenges in building AI-based systems
+  * Key differences from traditional software
+  * Use of measurements in AI-based systems 
+  * Difficulty and validity of measurements
+  * Limitations and risks of decisions and incentives based
+on measurements
 
 ---
-# Traditional Software vs AI
+# Challenges in Developing AI-Enabled Systems
 
 ----
-## Dealing with Complexity in Software
+## Traditional Programming vs ML
 
-* Information hiding & encapsulation: Hide design decisions & enforce
-  strict boundaries
-* Reuse: Provide reusable libraries & APIs with a well-defined contract
-* Composition: Build large components out of smaller ones
-* Q. Are these still applicable to AI-enabled systems?
-
----
-# Development Challenges
+![Programming vs ML](programming-vs-ml.png)
 
 ----
-## Specification
+## Complexity in Engineering Systems
 
-* No clear definition of "correct" behavior
-	* (Always true to some extent, but more pervasive in AI)
-* Optimizing metrics instead of correctness
-* Example: Viewer satisfaction in streaming apps
-* Q. Other examples?
+![Airplane](airplane.jpg)
 
-----
-## Specification Continued
+* Automobile: ~30,000 parts; Airplane: ~3,000,000 parts
+* MS Office: ~ 40,000,000 LOCs; Debian: ~ 400,000,000 LOCs
 
-* Design by contract: Pre- & post-conditions, invariants
-  * Post guaranteed as long as pre satisifed by client
-  * Invariant: A statement assumed to be true throughout execution
-	* e.g., "A set never contains duplicate elements''
-* Similar notions in ML models?
+## Q. How do we build such complex systems?
 
 ----
-## Deductive vs Inductive Method
+## Managing Complexity in Software
 
-* Traditional software: Encode an application logic as a
-  sequence of well-defined statements
-* In ML:
-  * Build an initial hypothesis (model) & evaluate on test data
-  * If results unsatisfactory, improve the model & repeat
-  * Not too far from what scientists do!
+* **Abstraction**: Hide details & focus on high-level behaviors
+* **Reuse**: Package into reusable libraries & APIs with well-defined _contracts_
+* **Composition**: Build large components out of smaller ones
 
-----
-## Implementation
-
-* Behavior is in the data, not in the code
-* Data collection & labeling
-  * Lack of representative data: Imbalanced training set
-  * Scarcity of labelled data: Where to obtain ground truth?
-	* Example: Anti-spam detector 
+```java
+class Algorithms {
+    /**
+     * Finds the shortest distance between to vertices.
+	 * This method is only supported for connected vertices.
+     */
+    int shortestDistance(Graph g, Vertice v1, v2) {…}
+}
+```
 
 ----
-## Implementation Continued
+## Contracts in ML?
 
-* Feature engineering
-  * Extracting useful features from raw data 
-  * Often considered "black art"; requires in-depth domain knowledge
-* Configuration
-  * Hyperparameters
-  * Again, usually obtained through experiments
-  * Must be versioned for reproducibility 
+![Vision contract](vision.png)
+
+**Q. Is this the same kind of contract as in software?**
 
 ----
-## Testng and Debugging
+## (Lack of) Modularity in ML
 
-* Traditional techniques: Unit testing, fault localization, breakpoints...
-  * No longer applicable!
-* Lack of transparency & interpretability
-  * Why did the model make this decision?
-* Can test the model, but how do we evaluate the quality of data?
-
----
-# Deployment Challenges
+* Often no clear specification of "correct" behavior
+  <!-- .element: class="fragment" -->
+  * Optimizing metrics instead of providing guarantees
+* Model behavior strongly dependent on training & test sets
+  <!-- .element: class="fragment" -->
+  * What happens if distribution changes?
+* Poorly understood interactions between models
+  <!-- .element: class="fragment" -->
+  * Ideally, develop models separately & compose together
+  * In general, must train & tune together
 
 ----
-## Data Drifts
+## Concept Drifts
 
-* ML estimates f(x) = y
-  * What if the relationship between x & y changes over time? 
-* A common problem in ML-driven systems
-* Example: Model of customer purchase behavior
-  * May change over time depending on the strength of the economy 
-* In general, impossible to predict; requires continuous monitoring &
-  model update
+* ML estimates "f(x) = y"
+<!-- .element: class="fragment" -->
+  * What if the relationship between "x" & "y" changes over time? 
+  * What if "f" does not capture certain relationships?
+* Q. Examples?
+<!-- .element: class="fragment" -->
+* In general, impossible to predict
+<!-- .element: class="fragment" -->
+	* Continuously monitor and update model
 
 ----
 ## Feedback loops
 
-* System is deployed as part of an environment
+* Every system is deployed as part of an environment
+<!-- .element: class="fragment" -->
 * Output influences the environment
+<!-- .element: class="fragment" -->
   * In turn, affects input back to the system
   * Over time, may lead to undesirable (and difficult to reverse) outcome
   * In AI, esp. true if initial model is biased
 
 ![Feedback Loop](feedback-loop.png)
 
-[Need a better diagram]
-
 ----
-## Example: Crime Predicition
+## Example: Crime Prediction
 
 * Use past data to predict crime rates 
 * Police increases the frequency of patrol in area X
@@ -131,60 +123,228 @@ Required reading: Anders Arpteg, Björn Brinne, Luka Crnkovic-Friis, and Jan Bos
 ![Crime Map](crime-map.jpg)
 
 ----
-## Adversarial Environment
+## Discussion: Product Recommendations
 
-* Some agents may try to game the system
+![Product recommendations](recommendations.png)
 
-* [TBD]
-
-----
-## Dependency Management
-
-* Dependencies on:
-  * features
-  * data sets
-  * configuration parameters
-  * hardware resources & software packages
-* CACE: Changing Anything Changes Everything
-  * Difficult to reproduce results
-  * Even more difficult to reuse models 
-* Version control & data management tools; still in infancy
-
-----
-## Exercise: University Rankings
-
-* Discuss potential challenges with:
-  * Specification?
-  * Data collection? Feature selection?
-  * Data drifts?
-  * Feedback loops?
-  
-![US News](us-news.jpg)
+* Specification/metrics?
+* Concept drift?
+* Feedback loop?
 
 ---
-# Organizational Challenges
-
-Don't ignore human factors!
+# Introduction to Measurements
 
 ----
-## Data Scientists & Engineers
+## What is Measurement?
 
-![Data Scientist](data-scientist.jpeg)
+* _Measurement is the empirical, objective assignment of numbers,
+according to a rule derived from a model or theory, to attributes of
+objects or events with the intent of describing them._ – Craner, Bond,
+“Software Engineering Metrics: What Do They Measure and How Do We
+Know?"
+
+* 	_A quantitatively expressed reduction of uncertainty based on one or more observations._ – Hubbard, “How to Measure Anything …"
 
 ----
-## Data Scientists & Engineers: Caricatures
+## Measurement for Decision Making
 
-* Data scientists
-  * Model development & evaluation
-  * Main tools: R, MATLAB, Jupyter Notebook
-  * May be new to SE concepts (version control, CI...)
-* Engineers
-  * Infrastructure, tools, processes
-  * Deployment & maintenance pipeline
-  * Models as a blackbox
-* Tensions sometime exist!
+* Which project to fund?
+* Need more system testing?
+* Fast enough? Secure enough? 
+* Code quality sufficient?
+* Which features to focus on?
+* Developer bonus?
+* Time and cost estimation? Predictions reliable?
+
+----
+## Measurement Scales
+
+* Scale: The type of data being measured.
+<!-- .element: class="fragment" -->
+  * Dictates what sorts of analysis/arithmetic is legitimate or meaningful.
+* Nominal: Categories
+<!-- .element: class="fragment" -->
+  * e.g., biological species, film genre, nationality
+* Ordinal: Order, but no meaningful magnitude
+<!-- .element: class="fragment" -->
+  * Difference between two values is not meaningful
+  * Even if numbers are used, they do not represent magnitude!
+  * e.g., weather severity, complexity classes in algorithms
+* Interval: Order, magnitude, but no definition of zero.
+<!-- .element: class="fragment" -->
+  * 0 is an arbitrary point; does not represent absence of quantity
+  * Ratio between values are not meaningful
+  * e.g., temperature (C or F)
+* Ratio: Order, magnitude, and zero.
+<!-- .element: class="fragment" -->
+  * e.g., mass, length, temperature (Kelvin)
+
+----
+##  Measurement Scales 
+
+![scales](scales.png)
+
+----
+## Measurements in AI-Enabled Systems
+
+* Organizational objectives
+<!-- .element: class="fragment" -->
+  * e.g., revenues, growth, lives saved, societal benefits 
+  * Often not directly measurable from system output; slow indicators
+* Leading indicators
+<!-- .element: class="fragment" -->
+  * Customer sentiment: Do they like the product?
+  * Customer engagement: How often do they use the product?
+  * But can be misleading (more daily active users => higher profits?)
+* User outcomes
+<!-- .element: class="fragment" -->
+	* Does the system achieve what it promises to users?
+* Model Properties
+<!-- .element: class="fragment" -->
+  * Accuracy of predictions, error rates
+  * Performance
+  * Cost: Training time, amount of data required
+
+----
+## Exercise: Metrics in Product Recommender
+
+![Product recommendations](recommendations.png)
+
+* Organization objectives?
+* Leading indicators?
+* User outcomes?
+* Model properties?
+* What are their scales?
+
+---
+# Challenges in Measurements
+
+----
+## The streetlight effect
+
+* A type of _observational bias_
+* People tend to look for something where it’s easiest to do so.
+
+![Streetlight](streetlight.jpg)
+
+----
+## Risks with Measurements
+
+* Bad statistics: A basic misunderstanding of measurement theory and what is being measured.
+<!-- .element: class="fragment" -->
+* Bad decisions: The incorrect use of measurement data, leading to unintended side effects.
+<!-- .element: class="fragment" -->
+* Bad incentives: Disregard for the human factors, or how the cultural change of taking measurements will affect people.
+<!-- .element: class="fragment" -->
+
+----
+## Risks of Metrics as Incentives
+
+* Can extinguish intrinsic motivation
+* Can diminish performance
+* Can encourage cheating, shortcuts, and unethical behavior
+* Can become addictive
+* Can foster short-term thinking
+
+----
+## Another Case Study: University Rankings
+
+![US News](us-news.jpg)
+
+* Originally: Opinion-based polls, but schools complained
+* Data-driven model: Rank colleges in terms of "educational excellence"
+* Input: SAT scores, student-teacher ratios, acceptance rates,
+retention rates, alumni donations, etc.,
+
+----
+## Discussion: University Rankings
+
+![US News](us-news.jpg)
+
+* What is (not) being measured? Any streetlight effect?
+* Is the measured data being used correctly?
+* Are incentives for using these data good? Can they be misused?
+
+----
+## Example: Abuse of Metrics
+
+* A university founded in early 2010's
+<!-- .element: class="fragment" -->
+* Math department ranked by US News as top 10 worldwide
+<!-- .element: class="fragment" -->
+* Top international faculty paid $$ as a visitor; asked to add affiliation
+<!-- .element: class="fragment" -->
+* Increase in publication citations => skyrocket ranking!
+<!-- .element: class="fragment" -->
+
+----
+## Measurement Validity
+
+* Construct: Are we measuring what we intended to measure?
+<!-- .element: class="fragment" -->
+  * Does the abstract concept match the specific scale/measurement used?
+  * e.g., IQ: What is it actually measuring?
+  * Other examples: Pain, language proficiency, personality...
+* Predictive: The extent to which the measurement can be used to explain some other characteristic of the entity being measured
+<!-- .element: class="fragment" -->
+	* e.g., Higher SAT scores => higher academic excellence?
+* External validity: Concerns the generalization of the findings to contexts and environments, other than the one studied
+<!-- .element: class="fragment" -->
+	* e.g., Drug effectiveness on test group: Does it hold over the general public? 
+
+----
+##  Correlation vs Causation
+
+![causation1](causation1.png)
+
+![causation2](causation2.png)
+
+----
+##  Correlation vs Causation
+
+* In general, ML learns correlation, not causation
+<!-- .element: class="fragment" -->
+	* (exception: Bayesian networks, certain symbolic AI methods)
+* To establish causality:
+<!-- .element: class="fragment" -->
+  * Develop a theory ("X causes Y") based on domain knowledge & independent data
+  * Identify relevant variables
+  * Design a controlled experiment & show correlation
+  * Demonstrate ability to predict new cases
+  
+----
+## Confounding Variables
+
+![confounding](confounding.png)
+
+* If you want to show correlation between X and Y:
+  * Identify potential confounding variables 
+  * Control for those variables during measurement
+* Examples
+  * Drink coffee => Pancreatic cancer?
+  * Degree from high-ranked schools => Higher-paying jobs?
+  
+----
+## Successful Measurement Program
+
+* Set solid measurement objectives and plans.
+* Make measurement part of the process.
+* Gain a thorough understanding of measurement.
+* Focus on cultural issues.
+* Create a safe environment to collect and report true data.
+* Cultivate a predisposition to change.
+* Develop a complementary suite of measures.
+
+----
+## Recitation This Week
+
+![jmeter](apache-jmeter.png)
+
+### Apache JMeter: Performance Measuring Tool
 
 ---
 # Summary
 
-
+* Challenges in ML: Lack of specification, concept drift, feedback loop 
+* Introduction to measurements: Scales, validity, correlation & causation
+* Risks with measurements: Incentives & misuse

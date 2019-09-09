@@ -1,6 +1,6 @@
 ---
 author: Eunsuk Kang
-title: "17-445: Requirements and Dealing with Mistakes"
+title: "17-445: Requirements and Risk Analysis"
 semester: Fall 2019
 footer: "17-445 Software Engineering for AI-Enabled Systems, Eunsuk Kang"
 ---  
@@ -48,11 +48,6 @@ Guide to Machine Learning Engineering." (2018), Chapters 6--8, and 24.
 
 * Measurable (optimizable)
 
-----
-## Example: Anti-Phishing System
-
-* From the textbook, Chapter 4
-
 ---
 # Mistakes in AI
 
@@ -68,41 +63,73 @@ Guide to Machine Learning Engineering." (2018), Chapters 6--8, and 24.
 
 * Security
 
-----
-## Safety Engineering 101
-
-* Quick intro
+---
+# Risk Analysis
 
 ----
-## Risk Analysis
+## Risks
 
-* What is risk analysis?
+* Risk = Impact * Likelihood
 
 ----
 ## Fault Tree Analysis (FTA)
 
 * What is FTA?
 
----
-# Dealing with Errors
+* A technique for systematically identifying root causes of a failure
+
+* FTA as a investigative tool
+
+* FTA as a decision making tool
 
 ----
-## Designing for Failures
+## Basic Definitions
 
-* Resilience engineering
+* Event
+	* Top Event
+* Gate
 
 ----
-## Fault Tolerance Techniques
+## FTA: Example
 
-* Redundancies (caution: N-version programming)
+* Small light failure example
 
-* Voting
+----
+## Analysis
 
-* Fallback
+* What can we do with FTA?
+  * Qualitative
+  * Quantitative
 
-* Undo
+----
+## Minimal Cut Analysis
 
-* Prompt user instead of automate (for critical actions)
+* Cut
+
+* MinCut
+
+----
+## Failure Likelihood Analysis
+
+* Probabilitistic analysis
+
+----
+## FTA Process
+
+1. Specify the system design
+   * Environment + machine domains 
+   * Phenomena
+2. Identify the top event(s)   
+3. Construct the fault tree
+4. Analyze the tree
+   * Identify minimal cut sets
+5. Consider alternative designs
+6. Repeat
+
+----
+## Case Study: Infusion Pump
+
+* Construct a FTA for the top event: Patient overdosed
 
 ---
 # Summary
