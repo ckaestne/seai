@@ -30,6 +30,7 @@ Questions:
 2. **Question 2:** 
 * a. Construct a fault tree to analyze the Uber accident from the NTSB report and identify potential root causes. Assume that the self-driving vehicle in the accident had the same software architecture as the one in Apollo 3.5.
 * b. Identify all minimal cut sets in your fault tree.
+(For this question, you may use any tool of your choice to construct the fault tree. A scan of a hand-drawn diagram is also acceptable, as long as it is clearly legible. There are also several free FTA tools you may wish to use; e.g., OpenFTA (http://www.openfta.com) and Open Reliability Editor (https://github.com/troeger/fuzzed)).
 
 3. **Question 3:** Based on your analysis in Question 2, what changes to the system design or operating procedures would you recommend to reduce the risk of similar types of failures?
 
