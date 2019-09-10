@@ -50,7 +50,7 @@ Teaching assistant: [Chu-Pan Wong](https://www.cs.cmu.edu/~chupanw/)
 
 Office Hours:
 
-* Christian, Monday 11-11:50, Wean 5126
+* Christian, Monday 9:30-10:25, Wean 5126
 * Eunsuk, By appointment, Wean 5319
 * Chu-Pan, Wednesday 15:00-16:00, Wean 4103
 
