@@ -347,13 +347,13 @@ obtained by removing a basic event.
 
 1. Specify the system structure
 <!-- .element: class="fragment" -->
-   * Environment entities & machine componetns
+   * Environment entities & machine components
    * Assumptions (ENV) & specifications (SPEC)
 2. Identify the top event as a violation of REQ
 <!-- .element: class="fragment" -->
 3. Construct the fault tree
 <!-- .element: class="fragment" -->
-  * Derive intermeiate events from violation of SPEC/ENV
+  * Intermediate events can be derived from violation of SPEC/ENV
 4. Analyze the tree
 <!-- .element: class="fragment" -->
   * Identify all possible minimal cut sets
