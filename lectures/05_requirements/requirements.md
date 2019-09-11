@@ -176,6 +176,8 @@ ground
   * They are just one part of the system!
 * Environmental assumptions are just as critical
 <!-- .element: class="fragment" -->
+  * But typically you can't modify these
+  * Must design SPEC while treating ENV as given
 * If you ignore/misunderstand these, your system may fail to satisfy
   its requirements!
 <!-- .element: class="fragment" -->
