@@ -208,7 +208,7 @@ ground
 <!-- .element: class="fragment" -->
 6. Check whether ENV ∧ SPEC ⊧ REQ
 <!-- .element: class="fragment" -->
-7. If NO, strengthen SPEC & repeat Step 5
+7. If NO, strengthen SPEC & repeat Step 6
 <!-- .element: class="fragment" -->
 
 ----
