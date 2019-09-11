@@ -41,8 +41,7 @@ Describe what the system will do (and not how it will do them)
 ![mythical-man-month](mythical.jpg)
 
 _"The hardest single part of building a software system is deciding
-precisely what to build...No other part of the work so cripples the resulting system if done wrong.
-No other part is as difficult to rectify later."_
+precisely what to build...No other part of the work so cripples the resulting system if done wrong."_
 -- Fred Brooks, Mythical Man Month (1975)
 
 ----
@@ -89,9 +88,20 @@ Q. What are functional & quality requirements?
 
 ![machine-world](machine-world.png)
 
+* No software lives in vacuum; every system is deployed as part of the world
 * A requirement describes a desired state of the world (i.e., environment)
 * Machine (software) is _created_ to manipulate the environment into
   this state
+
+----
+## Machine vs World
+
+![machine-world](machine-world.png)
+
+* Q. What is the environment for the following systems?
+  * Self-driving car: ??
+  * Smart home thermostats: ?? 
+  * Movie recommender: ??
 
 ----
 ## Requirement vs Specification
@@ -121,8 +131,8 @@ Q. What are functional & quality requirements?
 
 * Requirement (REQ): The ego vehicle must always maintain some minimum safe
 distance to the leading vehicle. 
-* Specification (SPEC): ?
 * Assumptions (ENV): ?
+* Specification (SPEC): ?
 
 ----
 ## Example: Adaptive Cruise Control
@@ -131,10 +141,10 @@ distance to the leading vehicle.
 
 * REQ: The ego vehicle must always maintain some minimum safe
 distance to the leading vehicle. 
+* ENV: Engine is working as intended; sensors are providing
+  accurate information about the leading car (current speed, distance...)
 * SPEC: Depending on the sensor readings, the controller must
   issue an actuator command to accelerate/decelerate the vehicle as needed.
-* ENV: Engine is working as intended;  sensors are giving
-  accurate values.
 
 ----
 ## What could go wrong?
@@ -191,12 +201,14 @@ ground
 <!-- .element: class="fragment" -->
 3. Identify the interface between the environment & machines
 <!-- .element: class="fragment" -->
-4. Specify environmental assumptions (ENV) & machine specifications
-(SPEC)
+4. Identify the environmental assumptions (ENV)
 <!-- .element: class="fragment" -->
-5. Check whether ENV ∧ SPEC ⊧ REQ
+5. Develop software specifications
+(SPEC) that are sufficient to establish REQ
 <!-- .element: class="fragment" -->
-6. If NO, strengthen SPEC & repeat Step 5.
+6. Check whether ENV ∧ SPEC ⊧ REQ
+<!-- .element: class="fragment" -->
+7. If NO, strengthen SPEC & repeat Step 5
 <!-- .element: class="fragment" -->
 
 ----
@@ -205,7 +217,7 @@ ground
 ![infusion-pump-pic](infusion-pump-pic.jpg)
 
 ----
-## Infusion Pump Architecture
+## Exercise: Infusion Pump
 
 ![infusion-pump](infusion-pump.png)
 
@@ -255,7 +267,7 @@ other types of requirement (e.g., poor performance, security attacks...)
 ## Fault Tree Analysis & AI
 
 * Increaseingly used in automotive, aeronautics, industrial control systems, etc.,
-* AI components are just one part of the system
+* AI is just one part of the system
 <!-- .element: class="fragment" -->
 * AI will EVENTUALLY make mistakes
 <!-- .element: class="fragment" -->
@@ -281,7 +293,8 @@ other types of requirement (e.g., poor performance, security attacks...)
   * OR: Any one of the sub-events may result in the parent event
 
 <!-- references -->
-Jaroslav Menčík, _Fault Tree Analysis and Reliability Block Diagram_ (2016). 
+Figure from _Fault Tree Analysis and Reliability Block Diagram_
+(2016), Jaroslav Menčík. 
 
 ----
 ## Fault Tree Example
@@ -289,10 +302,13 @@ Jaroslav Menčík, _Fault Tree Analysis and Reliability Block Diagram_ (2016).
 ![fta-example](fta-example.png)
 
 * Every tree begins with a TOP event (typically a violation of a requirement)
+<!-- .element: class="fragment" -->
 * Every branch of the tree must terminate with a basic event
+<!-- .element: class="fragment" -->
 
 <!-- references -->
-Jaroslav Menčík, _Fault Tree Analysis and Reliability Block Diagram_ (2016). 
+Figure from _Fault Tree Analysis and Reliability Block Diagram_
+(2016), Jaroslav Menčík. 
 
 ----
 ## Analysis
@@ -309,12 +325,9 @@ Jaroslav Menčík, _Fault Tree Analysis and Reliability Block Diagram_ (2016).
 
 * Cut set: A set of basic events whose simultaneous occurrence is
   sufficient to guarantee that the TOP event occurs.
-<!-- .element: class="fragment" -->
 * _Minimal_ cut set: A cut set from which a smaller cut set can be
 obtained by removing a basic event.
-<!-- .element: class="fragment" -->
 * Q. What are minimal cut sets in the above tree?
-<!-- .element: class="fragment" -->
 
 ----
 ## Failure Probability Analysis
@@ -340,7 +353,7 @@ obtained by removing a basic event.
 <!-- .element: class="fragment" -->
 3. Construct the fault tree
 <!-- .element: class="fragment" -->
-  * Violation of SPEC/ENV => intermediate events
+  * Derive intermeiate events from violation of SPEC/ENV
 4. Analyze the tree
 <!-- .element: class="fragment" -->
   * Identify all possible minimal cut sets
@@ -356,10 +369,10 @@ obtained by removing a basic event.
 
 * REQ: The ego vehicle must always maintain some minimum safe
 distance to the leading vehicle. 
+* ENV: Engine is working as intended; sensors are providing
+  accurate information about the leading car (current speed, distance...)
 * SPEC: Depending on the sensor readings, the controller must
   issue an actuator command to accelerate/decelerate the vehicle as needed.
-* ENV: Engine is working as intended;  sensors are giving
-  accurate values.
 
 ----
 ## Example: Adaptive Cruise Control
@@ -372,10 +385,11 @@ distance to the leading vehicle.
 ![infusion-pump](infusion-pump.png)
 
 * Perform FTA to identify potential causes for the following safety
-  violation: Patient receives a lower amount  of drug than prescribed 
+  violation: Patient receives a lower amount of drug than prescribed
+  (i.e., underdose)
 
 ----
-## Individual Assignment 2
+## Individual Assignment #2
 
 ![uber-crash](uber-crash.png)
 
@@ -388,7 +402,7 @@ distance to the leading vehicle.
 # Summary
 
 * Software requirements
-  * Machine vs world
+  * Machine vs World; specification vs requirements
   * Role of environmental assumptions in establishing requirements
 * Risk analysis
   * Fault tree analysis for identifying root causes of a failure

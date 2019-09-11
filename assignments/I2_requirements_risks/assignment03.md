@@ -23,14 +23,14 @@ Questions:
 
 1. **Question 1:** Consider the scenario depicted in the NTSB report.
 * a. Identify environmental entities and machine (software) components in the scenario.
-* b. Specify the system-level safety requirement that was violated during the accident.
-* c. Specify a list of environmental assumptions and software specifications that were needed to establish the system-level requirement.
+* b. Specify the safety requirement that was violated during the accident.
+* c. Specify a list of environmental assumptions and software specifications that were needed to establish this requirement.
 * d. Which of the assumptions and/or specifications in 1.c were violated during the accident? 
 
 2. **Question 2:** 
 * a. Construct a fault tree to analyze the Uber accident from the NTSB report and identify potential root causes. Assume that the self-driving vehicle in the accident had the same software architecture as the one in Apollo 3.5.
 * b. Identify all minimal cut sets in your fault tree.
-(For this question, you may use any tool of your choice to construct the fault tree. A scan of a hand-drawn diagram is also acceptable, as long as it is clearly legible. There are also several free FTA tools you may wish to use; e.g., OpenFTA (http://www.openfta.com) and Open Reliability Editor (https://github.com/troeger/fuzzed)).
+(For this question, you may use any tool of your choice to construct the fault tree. A scan of a hand-drawn diagram is also acceptable, as long as it is clearly legible. There are also several free FTA tools you may wish to use; e.g., OpenFTA (http://www.openfta.com) or Open Reliability Editor (https://github.com/troeger/fuzzed)).
 
 3. **Question 3:** Based on your analysis in Question 2, what changes to the system design or operating procedures would you recommend to reduce the risk of similar types of failures?
 
@@ -46,3 +46,5 @@ The assignment is worth 100 points. For full credit, we expect:
 * Q3. Discussion of potential mitigations to the failure (15 pt)
 * Q4. Discussion of the limitations of FTA (15 pt)
 * A clearly structured, well written document (10 pt)
+
+**Notes:** For Q2, there is no single "correct" fault tree that your submission will be evaluated against. Instead, we expect that your analysis is comprehensive enough to capture possible underlying causes for the accident that is described in the NTSB report.
