@@ -4,7 +4,7 @@
 
 ## Overview
 
-In this assignment, you will get practice on how to systematically identify system requirements and risks of their failures in an AI-enabled system. In particular, you will learn to (a) make a clear distinction between the roles that environmental and machine domains play in system dependability, and (2) apply fault tree analysis (FTA) to identify potential risks in a case study scenario involving a self-driving vehicle.
+In this assignment, you will get practice on how to systematically identify system requirements and risks of their failures in an AI-enabled system. In particular, you will learn to (a) make a clear distinction between the roles that environmental and machine entities play in system dependability, and (2) apply fault tree analysis (FTA) to identify potential risks in a case study scenario involving a self-driving vehicle.
 
 Learning goals:
 * Understand the role of the environment in establishing system requirements.
@@ -22,7 +22,7 @@ Answer the questions below. Wherever reasonable, provide evidence, for example b
 Questions:
 
 1. **Question 1:** Consider the scenario depicted in the NTSB report.
-* a. Identify environmental and machine domains in the scenario.
+* a. Identify environmental entities and machine (software) components in the scenario.
 * b. Specify the system-level safety requirement that was violated during the accident.
 * c. Specify a list of environmental assumptions and software specifications that were needed to establish the system-level requirement.
 * d. Which of the assumptions and/or specifications in 1.c were violated during the accident? 
@@ -41,7 +41,7 @@ Submit your answers as a single PDF document to Canvas by [see Canvas]. Make sur
 ## Grading
 
 The assignment is worth 100 points. For full credit, we expect:
-* Q1. Identification of relevant system requirements, assumptions, and specifications, including a clear distinction between environmental and machine domains (20 pt)
+* Q1. Identification of relevant system requirements, assumptions, and specifications, including a clear distinction between environmental entities and machine components (20 pt)
 * Q2. Construction of a syntactically valid fault tree that adequately captures the scenario depicted in NSTB report (40 pt)
 * Q3. Discussion of potential mitigations to the failure (15 pt)
 * Q4. Discussion of the limitations of FTA (15 pt)
