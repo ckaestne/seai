@@ -1,19 +1,19 @@
 ---
 author: Eunsuk Kang and Christian Kaestner
-title: "17-445: Requirements and Risk Analysis"
+title: "17-445: Requirements and Risks"
 semester: Fall 2019
 footer: "17-445 Software Engineering for AI-Enabled Systems, Christian
 Kaestner & Eunsuk Kang"
 ---  
 
-# Requirements and Dealing with Mistakes
+# Requirements and Risks
 
 Eunsuk Kang
 
 <!-- references -->
 
 Required reading: Hulten, Geoff. "Building Intelligent Systems: A
-Guide to Machine Learning Engineering." (2018), Chapters 6--7, and 24.
+Guide to Machine Learning Engineering." (2018), Chapters 6, 7, and 24.
 
 ---
 # Learning Goals
