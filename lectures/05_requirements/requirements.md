@@ -13,7 +13,7 @@ Eunsuk Kang
 <!-- references -->
 
 Required reading: Hulten, Geoff. "Building Intelligent Systems: A
-Guide to Machine Learning Engineering." (2018), Chapters 6--8, and 24.
+Guide to Machine Learning Engineering." (2018), Chapters 6--7, and 24.
 
 ---
 # Learning Goals
