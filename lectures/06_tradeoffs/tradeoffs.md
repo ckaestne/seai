@@ -52,7 +52,7 @@ Guide to Machine Learning Engineering." (2018), Chapters 6, 7, and 24.
 ![adaptive-cruise-control](acc.jpg)
 
 * Quality attributes (QAs): How well the product delivers its
-functionality (performance, reliability, availability...)
+functionality (performance, reliability, availability, security...)
 <!-- .element: class="fragment" -->
 * Project attributes: Time-to-market, development & HR cost...
 <!-- .element: class="fragment" -->
