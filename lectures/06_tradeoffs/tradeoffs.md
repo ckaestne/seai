@@ -200,6 +200,16 @@ News-Sharing Communities in Twitter_, Herdagdelen et al. (2012)
 
 * Tasks: Regression 
 * Linear relationship between input & output variables
+* Advantages: ??
+* Disadvantages: ??
+
+----
+## Linear Regression
+
+![linear-regression](linear-regression.png)
+
+* Tasks: Regression 
+* Linear relationship between input & output variables
 * Easy to interpret, low training cost, small model size
 * Can't capture non-linear relationships well
 
@@ -209,11 +219,31 @@ News-Sharing Communities in Twitter_, Herdagdelen et al. (2012)
 ![decision-tree-fraud](credit-card-fraud.png)
 
 * Tasks: Classification & regression
-* Non-leaft nodes: Conditional on input variables (features)
+* Non-leaf nodes: Conditional on input variables (features)
+* Leaf nodes: Class labels or continuous output values
+* Advantages: ??
+* Disadvantages: ??
+
+----
+## Decision Tree Learning
+
+![decision-tree-fraud](credit-card-fraud.png)
+
+* Tasks: Classification & regression
+* Non-leaf nodes: Conditional on input variables (features)
 * Leaf nodes: Class labels or continuous output values
 * Easy to interpret; can capture non-linearity; can do well with
   little data
 * Low accuracy (high risk of overfitting); possibly very large tree size
+
+----
+## Neural Network
+
+![neural-network](neural-network.png)
+
+* Tasks: Classification & regression
+* Advantages: ??
+* Disadvantages: ??
 
 ----
 ## Neural Network
@@ -234,7 +264,19 @@ News-Sharing Communities in Twitter_, Herdagdelen et al. (2012)
 * Infer the class/property of an object based on that of _k_ nearest neighbors
 * **Lazy learning**: Generalization is delayed until
   the inference takes place 
-* Easy to interpret; no training required (due to lazy learning); incremental (can continously add new data) 
+* Advantages: ??
+* Disadvantages: ??
+
+----
+## k-Nearest Neighbors (k-NN)
+
+![knn](knn.png)
+
+* Tasks: Classification & regression
+* Infer the class/property of an object based on that of _k_ nearest neighbors
+* **Lazy learning**: Generalization is delayed until
+  the inference takes place 
+* Easy to interpret; no training required (due to lazy learning); incremental (can continuously add new data) 
 * Potentially slow inference (again, due to lazy learning); high data storage
   requirement (must store training instances)
 
@@ -280,7 +322,7 @@ Linear regression, decision tree, neural network, or k-NN?
 <!-- ![hierarchical](hierarchical.png) -->
 
 <!-- * Task: Clustering -->
-<!-- * Can produce hierarhical clusters -->
+<!-- * Can produce hierarchical clusters -->
 <!-- * Slower than k-Means -->
 
 ----
@@ -293,7 +335,7 @@ provide high-accuracy predictions
 * Techniques:
   * Boosting (e.g., gradient boosting)
   * Bagging (random forest)
-  * Stacking
+  * Stacking, Bayesian model combination, bucketing...
 
 ----
 ## Random Forest
@@ -372,11 +414,31 @@ Workflows_, Bloom & Brink, O'Reilly Strata Conference (2014).
 ----
 ## ML Method Selection as MOO
 
-1. Identify a set of constraints 
-2. Eliminate methods that do not satisfy the constraints
+1. Identify a set of constraints
+<!-- .element: class="fragment" -->
+	* Start with problem & project constraints
+	* From them, derive design constraints on ML components
+2. Eliminate ML methods that do not satisfy the constraints
+<!-- .element: class="fragment" -->
 3. Evaluate remaining methods against each attribute
-4. Eliminate dominated methods to find the pareto frontier 
+<!-- .element: class="fragment" -->
+	* Measure everything that can be measured! (e.g., training cost,
+    accuracy, inference time...)
+4. Eliminate dominated methods to find the Pareto frontier 
+<!-- .element: class="fragment" -->
 5. Consider priorities among attributes to select an optimal method
+<!-- .element: class="fragment" -->
+	* Which attribute(s) do I care the most about?
+
+----
+## Example: Object Detection
+
+![pedestrian-detection](pedestrian-detection.png)
+
+* Constraints: ML task (classification), inference time (fast,
+ real-time), model size (moderate, for on-vehicle storage)
+* Invalid solutions: ??
+* Priority among attributes: ??
 
 ----
 ## Example: Object Detection
@@ -386,7 +448,7 @@ Workflows_, Bloom & Brink, O'Reilly Strata Conference (2014).
 * Constraints: ML task (classification), inference time (fast,
  real-time), model size (moderate, for on-vehicle storage)
 * Invalid solutions: Linear regression, k-NN
-* Priority among attributes: What if accuracy > interpretability > cost?
+* Priority among attributes: What if accuracy > interpretability = cost?
 
 ----
 ## Exercise: Medical Diagnosis
@@ -396,7 +458,7 @@ Workflows_, Bloom & Brink, O'Reilly Strata Conference (2014).
 * Constraints: Type of ML task? Accuracy?
 Interpretability?  
 * Which ML methods satisfy the constraints?
-* Which methods are pareto optimal?
+* Which methods are Pareto optimal?
 * Which method would you choose under what priority?
 
 <!-- ---- -->
