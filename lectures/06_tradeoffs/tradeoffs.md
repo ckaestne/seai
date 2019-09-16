@@ -167,7 +167,7 @@ News-Sharing Communities in Twitter_, Herdagdelen et al. (2012)
 <!-- .element: class="fragment" -->
 * Interpretability: Why did the model produce output X?
 <!-- .element: class="fragment" -->
-* Complexity
+* Problem complexity
 <!-- .element: class="fragment" -->
    * Linear vs. non-linear relationship between input & output variables
    * Number of features (dimensionality)
