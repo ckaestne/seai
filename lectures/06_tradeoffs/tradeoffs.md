@@ -106,6 +106,8 @@ availability, max. inference time
 * Clustering
 * (Dimensionality reduction)
 * (Reinforcement learning)
+* (Active learning)
+* ...
 
 ----
 ## Classification
