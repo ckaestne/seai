@@ -17,14 +17,15 @@ Guide to Machine Learning Engineering." (2018), Chapters 6, 7, and 24.
 ---
 # Learning Goals
 
-* Understand the major types of ML tasks and learning methods
-
+* Understand the major types of AI tasks and corresponding techniques
+* Understand and compare the attributes of major learning methods
 * Organize and prioritize the relevant qualities of concern for a given project
-
-* Plan and execute an evaluation of the qualities of alternative AI techniques for a given purpose
+* Plan and execute an evaluation alternative learning methods for a given purpose
 
 ---
 # Selection
+
+### How do I decide which ML method to use for my project?
 
 ----
 ## AI != Deep Learning
@@ -34,29 +35,61 @@ Guide to Machine Learning Engineering." (2018), Chapters 6, 7, and 24.
 (In this lecture, we will focus on ML)
 
 ----
-## ML Methods
+## ML Methods Today
 
 ![ml-methods-poll](ml-methods-poll.jpg)
 
 ----
 # Selection
 
-## How do I decide which ML technique to use for my project?
+## How do I decide which ML method to use for my project?
 
-----
 ## Criteria: Attributes & Constraints
 
-* Attributes 
-  * Quality attributes: What the user experiences 
-	* Performance, reliability, availability...
-  * Project attributes: Time-to-market, development & HR cost
-  * Design attributes: Type of ML method used, accuracy, training
-    time, prediction time, memory usage
-* Constraints: What you must satsify
-  * Problem constraints: What the product must provide to the user
-  * Project constraints: Deadline, project budget, available skills
-  * Design constraints: Type of ML task required, limits on computing resources, data
-	availability
+----
+## Attributes
+
+![adaptive-cruise-control](acc.jpg)
+
+* Quality attributes (QAs): How well the product delivers its
+functionality (performance, reliability, availability...)
+* Project attributes: Time-to-market, development & HR cost...
+* Design attributes: Type of ML method used, accuracy, training time, inference time, memory usage...
+* Q. Attributes for an adaptive cruise control (ACC) system?
+
+----
+## Constraints
+
+![constraints](constraints.png)
+
+* Constraints: Defines the space of attributes for valid design solutions
+
+----
+## Types of Constraints
+
+* Problem constraints: Minimum required QAs for an acceptable product
+<!-- .element: class="fragment" -->
+	* e.g. "The cruise control must maintain a minimum distance of X meters to pedestrians."
+* Project constraints: Deadline, project budget, available skills
+<!-- .element: class="fragment" -->
+	* "The product development must be completed within next 3 months."
+* Design constraints: Type of ML task required, limits on computing resources, data
+availability, max. inference time
+<!-- .element: class="fragment" -->
+	* "The ML component must be capable of performing object classification
+    within 0.5 seconds."
+	* "< 10K labeled samples are currently available for training."
+* Q. What's the relationship between these types of constraints?
+<!-- .element: class="fragment" -->
+
+----
+# Selection
+
+### How do I decide which ML method to use for my project?
+
+### Find a method that (1) satisfies the given constraints and (2) is optimal with respect to the set of attributes. 
+
+### (We will come back to this later.)
 
 ---
 # Types of ML Tasks
@@ -77,7 +110,7 @@ Guide to Machine Learning Engineering." (2018), Chapters 6, 7, and 24.
 * Which one of the given categories does a new
 observation belong to?
 	* e.g., e-mail spam filter, pedestrian detection
-	* Output is a _categorical_ value
+	* Output is a **categorical** value
 
 ----
 ## Regression
@@ -86,7 +119,7 @@ observation belong to?
 
 * What is the estimated value for an output given an observation?
 	* e.g., weather forecasting, sales prediction
-	* Output is a _numercal/continuous_ value
+	* Output is a **numercal/continuous** value
 
 ----
 ## Clustering
@@ -111,34 +144,43 @@ News-Sharing Communities in Twitter_, Herdagdelen et al. (2012)
 ### Q. What type of ML task(s) does the system perform?
 
 ---
-# Attributes of ML Methods
+# Attributes of ML Techniques
 
 ----
-## Attributes 
+## ML Attributes 
 
 * Type of ML task: Classification, regression, or clustering?
-* Type of data required
-  * Labeled vs. not labeled
-  * Categorical vs. numerical
-* Accuracy: (Number of correct predictions) / (Total number of predictions)
-* Interpretability: Why did the model make decision X?
+<!-- .element: class="fragment" -->
+* Type of training/input data required
+<!-- .element: class="fragment" -->
+  * Labeled vs not labeled
+  * Categorical vs numerical
+* Accuracy: Precision & recall (for classification), errors (regression)
+<!-- .element: class="fragment" -->
+* Interpretability: Why did the model produce output X?
+<!-- .element: class="fragment" -->
 * Complexity
+<!-- .element: class="fragment" -->
    * Linear vs. non-linear relationship between input & output variables
    * Number of features
 * Training costs
-  * Amount of training data required to reach high accuracy
+<!-- .element: class="fragment" -->
+  * Amount of training data required to reach desired accuracy
   * Training time
 * Model size: Can you store all your model in memory?
+<!-- .element: class="fragment" -->
 * Incrementality: Can you improve the model by gradually adding more data?
+<!-- .element: class="fragment" -->
 * Inference time: How long does it take for the model to make a decision?
+<!-- .element: class="fragment" -->
 
-----
-## Accuracy for Binary Classification
+<!-- ---- -->
+<!-- ## Accuracy for Binary Classification -->
 
-![accuracy-metrics](accuracy-metrics.jpg)
+<!-- ![accuracy-metrics](accuracy-metrics.jpg) -->
 
-* Recall = TP / (actual positive) = TP/ (TP + FN)
-* Precision = FP / (actual negatives) = FP / (TN + FP)
+<!-- * Recall = TP / (actual positive) = TP/ (TP + FN) -->
+<!-- * Precision = FP / (actual negatives) = FP / (TN + FP) -->
 
 ---
 # Types of ML Methods
@@ -159,7 +201,7 @@ News-Sharing Communities in Twitter_, Herdagdelen et al. (2012)
 ![decision-tree-fraud](credit-card-fraud.png)
 
 * Tasks: Classification & regression
-* Non-leaft nodes: Conditional on input variables
+* Non-leaft nodes: Conditional on input variables (features)
 * Leaf nodes: Class labels or continuous output values
 * Easy to interpret; can capture non-linearity; can do well with
   little data
@@ -176,17 +218,44 @@ News-Sharing Communities in Twitter_, Herdagdelen et al. (2012)
   data required, hyperparameter tuning)
 
 ----
-## k-Nearest Neighbors (kNN)
+## k-Nearest Neighbors (k-NN)
 
 ![knn](knn.png)
 
 * Tasks: Classification & regression
 * Infer the class/property of an object based on that of _k_ nearest neighbors
-* _Lazy learning_: Generalization is delayed until
+* **Lazy learning**: Generalization is delayed until
   the inference takes place 
-* Easy to interpret; little training costs (due to lazy learning)
+* Easy to interpret; no training required (due to lazy learning); incremental (can continously add new data) 
 * Potentially slow inference (again, due to lazy learning); high data storage
-  requirement (must store all training instances)
+  requirement (must store training instances)
+
+----
+## Which Method?
+
+### Sales forecast based on advertisement spendings
+
+![ads](outdoor-advertising.jpg)
+
+Linear regression, decision tree, neural network, or k-NN?
+
+----
+## Which Method?
+
+### Pedestrian detection
+
+![pedestrian-detection](pedestrian-detection.png)
+
+Linear regression, decision tree, neural network, or k-NN?
+
+----
+## Which Method?
+
+### Video Recommendations
+
+![youtube](youtube-recommendation.png)
+
+Linear regression, decision tree, neural network, or k-NN?
 
 <!-- ---- -->
 <!-- ## K-Means Clustering -->
@@ -238,17 +307,17 @@ provide high-accuracy predictions
 * Principal component analysis (PCA)
 * Markov networks
 * Clustering methods
-  * k-Means, hierarchical clustering
+  * k-means, hierarchical clustering
 * Symbolic methods
   * Multi-agent systems
   * Logic-based representations
-* and more...
+* and many more...
 
 ---
 # Tradeoff Analysis
 
 ----
-## Cost vs Benefit
+## Trade-offs: Cost vs Accuracy
 
 ![netflix-leaderboard](netflix-leaderboard.png)
 
@@ -273,30 +342,67 @@ _Overcoming the Barriers to Production-Ready Machine Learning
 Workflows_, Bloom & Brink, O'Reilly Strata Conference (2014).
 
 ----
-## Multi-Objective Optimization
+## Multi-Objective Optimization (MOO)
 
 ![moo](moo.png)
 
 * Determine optimal solutions given multiple, possibly
   **conflicting** objectives
 * **Dominated** solution: A solution that is inferior to
-  others in every way
+  others in every way 
 * **Pareto frontier**: A set of non-dominated solutions 
 
 ----
-## Selecting Optimal ML Methods
+## Example: Sales Forecast
+
+![ads](outdoor-advertising.jpg)
+
+* For problems with a linear relationship between input & output variables:
+  * Linear regression: Superior in terms of accuracy, interpretability, cost 
+  * Other methods are dominated (inferior) solutions
+
+----
+## ML Method Selection as MOO
 
 1. Identify a set of constraints 
 2. Eliminate methods that do not satisfy the constraints
-3. For each type of attribute, evaluate remaining methods
-4. Eliminate dominated methods
-5. Consider priorities among attributes to select an optimal solution
+3. Evaluate remaining methods against each attribute
+4. Eliminate dominated methods to find the pareto frontier 
+5. Consider priorities among attributes to select an optimal method
 
 ----
-## Selection
+## Example: Object Detection
 
-![scikit-learn](ml_map.png)
+![pedestrian-detection](pedestrian-detection.png)
+
+* Constraints: ML task (classification), inference time (fast,
+ real-time), model size (moderate, for on-vehicle storage)
+* Invalid solutions: Linear regression, k-NN
+* Priority among attributes: What if accuracy > interpretability > cost?
+
+----
+## Exercise: Medical Diagnosis
+
+![medical-diagnosis](medical-diagnosis.jpg)
+
+* Constraints: Type of ML task? Accuracy?
+Interpretability?  
+* Which ML methods satisfy the constraints?
+* Which methods are pareto optimal?
+* Which method would you choose under what prority?
+
+<!-- ---- -->
+<!-- ## Selection: Cheat Sheet -->
+
+<!-- ![scikit-learn](ml_map.png) -->
 
 ---
 # Summary
 
+* Criteria for selecting AI methods: Attributes & Constraints
+  * Problem, project, design attributes
+* Major types of AI tasks and corresponding techniques
+  * Classification, regression, clustering
+  * Linear regression, decision tree, neural networks, k-NN, ensemble
+    learning...
+* AI method selection as multi-objective optimization (MOO)
