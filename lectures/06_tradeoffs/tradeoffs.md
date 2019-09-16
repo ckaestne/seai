@@ -42,9 +42,9 @@ Guide to Machine Learning Engineering." (2018), Chapters 6, 7, and 24.
 ----
 # Selection
 
-## How do I decide which ML method to use for my project?
+### How do I decide which ML method to use for my project?
 
-## Criteria: Attributes & Constraints
+### Criteria: Attributes & Constraints
 
 ----
 ## Attributes
