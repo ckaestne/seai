@@ -170,7 +170,7 @@ News-Sharing Communities in Twitter_, Herdagdelen et al. (2012)
 * Complexity
 <!-- .element: class="fragment" -->
    * Linear vs. non-linear relationship between input & output variables
-   * Number of features
+   * Number of features (dimensionality)
 * Training costs
 <!-- .element: class="fragment" -->
   * Amount of training data required to reach desired accuracy
