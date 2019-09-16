@@ -307,24 +307,6 @@ Linear regression, decision tree, neural network, or k-NN?
 
 Linear regression, decision tree, neural network, or k-NN?
 
-<!-- ---- -->
-<!-- ## K-Means Clustering -->
-
-<!-- ![k-means](k-means.png) -->
-
-<!-- * Task: Clustering -->
-<!-- * Fast (for small _k_) -->
-<!-- * Manual choice of _k_ -->
-
-<!-- ---- -->
-<!-- ## Hierarchical Clustering -->
-
-<!-- ![hierarchical](hierarchical.png) -->
-
-<!-- * Task: Clustering -->
-<!-- * Can produce hierarchical clusters -->
-<!-- * Slower than k-Means -->
-
 ----
 ## Ensemble Learning
 
