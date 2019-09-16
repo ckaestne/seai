@@ -105,6 +105,7 @@ availability, max. inference time
 * Regression
 * Clustering
 * (Dimensionality reduction)
+* (Reinforcement learning)
 
 ----
 ## Classification
@@ -123,7 +124,7 @@ observation belong to?
 
 * What is the estimated value for an output given an observation?
 	* e.g., weather forecasting, sales prediction
-	* Output is a **numercal/continuous** value
+	* Output is a **numerical/continuous** value
 
 ----
 ## Clustering
@@ -132,7 +133,8 @@ observation belong to?
 
 * What is the best way to divide a set of observations into
 distinct groups?
-	* Output is a set of categories 
+	* An example of *unsupervised learning*: Input data aren't labeled
+	* Output is a set of *categories*
 	* e.g., human genetic clustering, social network analysis
 
 <!-- references -->
@@ -393,7 +395,7 @@ Workflows_, Bloom & Brink, O'Reilly Strata Conference (2014).
 Interpretability?  
 * Which ML methods satisfy the constraints?
 * Which methods are pareto optimal?
-* Which method would you choose under what prority?
+* Which method would you choose under what priority?
 
 <!-- ---- -->
 <!-- ## Selection: Cheat Sheet -->
