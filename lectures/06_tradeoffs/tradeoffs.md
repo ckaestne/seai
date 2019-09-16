@@ -53,9 +53,13 @@ Guide to Machine Learning Engineering." (2018), Chapters 6, 7, and 24.
 
 * Quality attributes (QAs): How well the product delivers its
 functionality (performance, reliability, availability...)
+<!-- .element: class="fragment" -->
 * Project attributes: Time-to-market, development & HR cost...
+<!-- .element: class="fragment" -->
 * Design attributes: Type of ML method used, accuracy, training time, inference time, memory usage...
+<!-- .element: class="fragment" -->
 * Q. Attributes for an adaptive cruise control (ACC) system?
+<!-- .element: class="fragment" -->
 
 ----
 ## Constraints
