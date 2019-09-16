@@ -301,7 +301,7 @@ Linear regression, decision tree, neural network, or k-NN?
 ----
 ## Which Method?
 
-### Video Recommendations
+### Video recommendations
 
 ![youtube](youtube-recommendation.png)
 
