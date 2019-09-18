@@ -208,11 +208,8 @@ Notes: Scalability through redundancy and replication; reliability wrt to single
 
 ---
 
-# Software Architecture and AI Components -- Two Case Studies
+# Case Study: Augmented Reality Translation
 
-----
-
-## Case Study: Augmented Reality Translation
 
 ![Seoul Street Signs](seoul.jpg)
 <!-- .element: class="stretch" -->
@@ -232,25 +229,13 @@ Notes: Consider you want to implement an instant translation service similar toG
 
 <!-- discussion -->
 
-----
-## Case Study: Uber Surge Prediction
-![Surge Screen in Uber App](ubersurge.png)
-Notes: Consider you work at Uber and want to predict where rider demand is going to be high.
-----
-## Qualities of Interest?
-
-<!-- discussion -->
 
 ---
 # Architectural Decision: Selecting AI Techniques
 
 What AI techniques to use and why? Tradeoffs?
 
-<!-- colstart -->
 ![](googletranslate.png)
-<!-- col -->
-![](ubersurge.png)
-<!-- colend -->
 
 Notes: Relate back to previous lecture about AI technique tradeoffs, including for example
 Accuracy
@@ -346,22 +331,6 @@ From the reading:
 * Ability to monitor
 
 
-----
-## Where Should the Model Live?
-
-* Car
-* Phone
-* Cloud
-
-What qualities are relevant for the decision? 
-
-<!-- split -->
-![](ubersurge.png)
-
-Notes: Trigger initial discussion
-
-
-
 
 
 
@@ -374,11 +343,7 @@ Notes: Trigger initial discussion
 
 How to evaluate mistakes in production?
 
-<!-- colstart -->
 ![](googletranslate.png)
-<!-- col -->
-![](ubersurge.png)
-<!-- colend -->
 
 Notes: Discuss strategies to determine accuracy in production. What kind of telemetry needs to be collected?
 
@@ -404,11 +369,7 @@ What data to collect? How much? When?
 
 Estimate data volume and possible bottlenecks in system.
 
-<!-- colstart -->
 ![](googletranslate.png)
-<!-- col -->
-![](ubersurge.png)
-<!-- colend -->
 
 Notes: Discuss alternatives and their tradeoffs. Draw models as suitable.
 
@@ -443,11 +404,7 @@ What's the interface between the AI component and the rest of the system?
 
 Consider encapsulating the model as a microservice. Sketch a (REST) API.
 
-<!-- colstart -->
 ![](googletranslate.png)
-<!-- col -->
-![](ubersurge.png)
-<!-- colend -->
 
 ----
 ## Future-Proofing an API
@@ -492,11 +449,7 @@ Consider encapsulating the model as a microservice. Sketch a (REST) API.
 
 What could happen if models become stale?
 
-<!-- colstart -->
 ![](googletranslate.png)
-<!-- col -->
-![](ubersurge.png)
-<!-- colend -->
 
 Risk: Discuss drift, adversarial interactions, feedback loops
 ----
@@ -504,11 +457,7 @@ Risk: Discuss drift, adversarial interactions, feedback loops
 
 Estimate the required update frequency and the related cost regarding training, data transfer, etc.
 
-<!-- colstart -->
 ![](googletranslate.png)
-<!-- col -->
-![](ubersurge.png)
-<!-- colend -->
 
 Notes: Discuss how frequently the involved models need to be updated. Are static models acceptable? Identify what information to collect and estimate 
 the relevant values.
@@ -565,11 +514,7 @@ Notes: Discuss privacy implications
 
 Qualities of interest? Important design tradeoffs? Decisions?
 
-<!-- colstart -->
 ![](googletranslate.png)
-<!-- col -->
-![](ubersurge.png)
-<!-- colend -->
 
 ---
 
@@ -585,3 +530,48 @@ Qualities of interest? Important design tradeoffs? Decisions?
     - whether and how to modularize the model service
     - when and how to update models
     - build vs buy, cloud resources
+
+
+
+---
+
+# Case Study 2: Uber Surge Prediction
+![Surge Screen in Uber App](ubersurge.png)
+Notes: Consider you work at Uber and want to predict where rider demand is going to be high.
+----
+## Qualities of Interest?
+
+<!-- discussion -->
+
+----
+
+
+<!-- colstart -->
+![](googletranslate.png)
+<!-- col -->
+![](ubersurge.png)
+<!-- colend -->
+
+----
+## Where Should the Model Live?
+
+* Car
+* Phone
+* Cloud
+
+What qualities are relevant for the decision? 
+
+<!-- split -->
+![](ubersurge.png)
+
+Notes: Trigger initial discussion
+
+
+----
+## Telemetry Design
+
+How to evaluate mistakes in production?
+
+![](ubersurge.png)
+
+
