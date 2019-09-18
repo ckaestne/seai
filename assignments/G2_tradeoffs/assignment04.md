@@ -13,25 +13,28 @@ Learning goals:
 
 ## Tasks
 
+Using the scenario and dataset from Assignment G1 (possibly enhanced by other data you might want to collect), you are planning to do additional prediction tasks.
+As a first step, you want to predict the popularity of movies (i.e., how many people are going to watch a movie per day) so that you can plan royalty payments and future movie acquisitions. You also want to show this information to users, e.g., to indicate which movies are *hot* right now.
+
 
 ### A: Technique comparison
 
-Pick *two* different AI/ML techniques for this assignment by claiming them in the Doodle poll linked in Canvas. Note that you cannot pick techniques claimed by other teams.
+Pick *two* different AI/ML techniques for this assignment from the Doodle poll linked in Canvas. Note that you cannot pick techniques already claimed by other teams.
 
-You will apply both techniques to the movie recommendation problem of Assignment G1 (**primary scenario**) and compare them across multiple qualities. That is, you will actually implement the recommendation mechanisms with that technique. If the techniques are not suitable for recommendations at all, you may consider a modified problem with the same dataset.
+You will apply both techniques to predict movie popularity (**primary scenario**) and compare them across multiple qualities. That is, you will actually implement the prediction mechanisms with both techniques. 
 
-Assume you want to deploy the technique in production, discuss and justify which technique you would use and why. Typically there are tradeoffs, where one technique does not fully dominate the other on all qualities of interest; in this case, explain how you made the tradeoff decision arriving at your recommendation. Your analysis and recommendation should be based on the specific scenario for a production system for which you anticipate more users in the future.
+Assume you want to deploy the technique in production, discuss and justify which technique you would use and why. Consider real-world production concerns if you would use this technique actually for making business decisions, including providing the infrastructure to compute predictions with MANY users/requests, update models, debugging, pursuing business goals, and so forth. Typically there are tradeoffs, where one technique does not fully dominate the other on all qualities of interest; in this case, explain how you made the tradeoff decision arriving at your recommendation. Your analysis and recommendation should be based on the specific scenario for a production system for which you anticipate more users in the future.
 
-Afterward find a task and dataset (**alternative scenario**) for which you would recommend the other technique. Again, measure the relevant qualities and make an argument why this technique is more suitable in a production environment.
+Afterward find a task (**alternative scenario**) for which you would recommend the other technique. Stay within the same movie streaming scenario, but you may collect different data if needed. Again, measure the relevant qualities and make an argument why this technique is more suitable when used for this alternative scenario in a production environment.
 
 
-You again have full technical freedom in selecting programming languages, frameworks, and tools as you prefer. For the alternative scenario, you may identify a different problem with the same dataset or find an alternative dataset altogether (e.g., from kaggle.com). The dataset of the alternative scenario can be significantly smaller.
+You again have full technical freedom in selecting programming languages, frameworks, and tools as you prefer. 
 
 
 ### B: Presenting results
 
 Assume you want to argue in a team meeting for which technique to deploy in the next version of the system.
-The audience consists of software engineers with only superficial background in AI, data analyst without experience in building production systems, and managers with basic technical understanding. Assume the decision was controversial within the team and you present results to make a specific data-supported recommendation; expect critical questions from the faction that sees their preferred solution not being recommended.
+The audience consists of (a) software engineers with only superficial background in AI, (b) data analyst without experience in building production systems, and (c) managers with basic technical understanding. Assume the decision was controversial within the team and you present results to make a specific data-supported recommendation; expect critical questions from the faction that sees their preferred solution not being recommended.
 
 Prepare a 10 minute presentation, in which you argue which technique to use and why. This will likely involve a brief explanation of how the techniques work as well as a discussion of measured or estimated results and their importance. Be prepared to answer the team's questions afterward.
 
@@ -48,10 +51,10 @@ Logistics: We expect that you present on your own laptop during class and provid
 
 The report should include the name of all students who contributed to the assignment and answer the following questions in clearly labeled sections of the document:
 
-* Two AI/ML techniques considered
+* Techniques (brief): Name the two AI/ML techniques considered and provide a link to your implementation and the learning libraries uses
 * Problem (max .5 pages): Problem and dataset analyzed. If it is the same as assignment G1, a single line stating that is sufficient.
 * Measurement (max 3 pages): A list of all measures considered, a description of how the measurement was performed, and the measurement results for both techniques. The description should be detailed enough that an experienced developer could reproduce them. Not all qualities are easily measurable -- discuss limitations where needed and provide a best effort measurement.
-* Recommendation (max 1 page): A discussion and justification why one technique should be preferred over the other, grounded in the measurements and the movie recommendation scenario. If there are tradeoffs, explain how you arrived at your recommendation. You may make additional assumptions (e.g., financial resources of the company) as long as you clearly document them.
+* Recommendation (max 1 page): A discussion and justification why one technique should be preferred over the other, grounded in the measurements and the movie streaming scenario. If there are tradeoffs, explain how you arrived at your recommendation. You may make additional assumptions (e.g., financial resources of the company) as long as you clearly document them.
 * Alternative scenario (max 2 pages): Describe a different problem and dataset for which you recommend the other technique. Provide measurement results for this scenario as well (explaining differences in measurement if needed). Justify why the technique should be preferred.
 * Discussion (max .5 page): Reflect on your work and discuss limitations of your measurement strategy, if any. In case you had more time or would start over, what would you change?
 
