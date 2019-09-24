@@ -35,11 +35,14 @@ Required reading:
 For our discussion: any form of model, including machine learning models, symbolic AI components, hardcoded heuristics, composed models, ...
 
 ----
-## Preliminaries: ML Algorithm Quality vs Model Quality
+## Preliminaries: ML Algorithm Quality vs Model Quality vs System Quality
 
 We focus on the quality of the produced model, not the algorithm used to learn the model
 
 i.e. assuming *Decision Tree Algorithm* and feature extraction are correctly implemented (according to specification), is the model learned from data any good?
+
+
+The model is just one component of the entire system.
 
 
 ---
@@ -147,6 +150,16 @@ False negatives: wrong prediction, miss, Type II error
 False positives: wrong prediction, false alarm, Type I error
 
  
+
+----
+## Multi-Class problems vs Two-Class Problem
+
+| | **Actually A** | **Actually B** | **Actually C** |
+| :--- | --- | --- | --- |
+|**AI predicts A** | **10** | 6 | 2 |
+|**AI predicts B** | 3 | **24**  | 10 |
+|**AI predicts C** | 5 | 22 | **82** |
+
 
 
 
@@ -782,7 +795,7 @@ Sanity check -- what models to try for cancer detection?
 ---
 # Debugging
 
-TODO
+<!-- discussion -->
 
 ---
 # Summary
