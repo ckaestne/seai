@@ -69,9 +69,12 @@ The report should have the following clearly labeled sections:
 ## Grading
 
 The assignment is worth 100 points. For full credit, we expect:
-* Reasonable ranking of qualities and plausible justification (10 pt)
-* Clean and understandable architecture diagrams, that relate to at least 3 quality attributes (30 points)
-* Plausible architecture justification that discusses alternatives and explicitly refers to estimated qualities (35 points)
-* Discussion of how uncertainty in estimates might affect architectural choices and how more accurate data can be collected (15 pt)
-* A clearly structured, well written document (10 pt)
+* [ ] Reasonable ranking of qualities and plausible justification (10 pt)
+* [ ] Clean and understandable architecture diagrams, that relate to at least 3 quality attributes (30 points)
+* [ ] Plausible architecture justification that discusses alternatives and explicitly refers to estimated qualities (35 points)
+* [ ] Discussion of how uncertainty in estimates might affect architectural choices and how more accurate data can be collected (15 pt)
+* [ ] A clearly structured, well written document (10 pt)
 
+## Hints
+
+Some architectural diagram of the solution will likely refer to different hardware locations. Some architectural diagram will likely include storage locations for images, and processes (ML and non-ML for processing). It might be useful to think about multiple stages of image recognition with different tradeoffs. It may be useful to think about storage, buffering, or queuing videos at multiple stages rather than trying to process a single stream. False positives and false negatives may not be equally bad. There might be more than one path a video could take from a dashcam to a central server.
