@@ -29,7 +29,7 @@ Think about how you would design such as system. What would be the main componen
 
 
 You are concerned at least about the following qualities:
-* Latency between reporting a child missing (with numerous pictures) too receiving potential matches from dashcam users
+* Latency between reporting a child missing (with numerous pictures) to receiving potential matches from dashcam users
 * Number of false positives and false negatives
 * Ability to observe how well the system works in production
 * Scalability and cost of running the infrastructure with many users across many countries
@@ -63,7 +63,7 @@ The report should have the following clearly labeled sections:
 1. **Qualities** (.5 pages max): Ranking of the qualities of interest and a brief justification of why the top 3 qualities are the most important qualities
 2. **Architecture diagrams**: One or more diagrams of the suggested system architecture, that allow you to reason about your top 3 qualities. All diagrams need to include a legend. Explicitly indicate which diagram(s) are suitable for reasoning about your top 3 qualities.
 3. **Architecture justification** (2 pages max): Justify your architectural design, explain your key choices (such as, where to locate AI components, how to distribute the system, where to store data, how to collect telemetry) and why they are better than alternatives. Refer to specific estimates for quality measures (e.g., operating costs, bandwidth, file sizes, latency) to justify your decision. Where possible, provide sources for your estimates.
-4. **Uncertainty analysis** (.5 pages max): Given that you suggested this architecture on estimates rather than specific measurements, discuss your confidence in the estimates and whether your architecture decision would change if actual numbers were different from. Outline which properties you would try to measure (e.g., with a prototype) before committing on an architecture decision and how.
+4. **Uncertainty analysis** (.5 pages max): Given that you suggested this architecture on estimates rather than specific measurements, discuss your confidence in the estimates and whether your architecture decision would change if actual numbers were different from the estimates. Outline which properties you would try to measure (e.g., with a prototype) before committing on an architecture decision and how.
 
 
 ## Grading
