@@ -307,6 +307,8 @@ Linear regression, decision tree, neural network, or k-NN?
 
 Linear regression, decision tree, neural network, or k-NN?
 
+(Youtube: 500 hours of videos uploaded per sec)
+
 ----
 ## Ensemble Learning
 
