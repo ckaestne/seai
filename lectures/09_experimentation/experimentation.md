@@ -13,7 +13,7 @@ Christian Kaestner
 <!-- references -->
 
 Required reading: 
-* tbd
+* Georgi Georgiev. [Statistical Significance in A/B Testing – a Complete Guide](http://blog.analytics-toolkit.com/2017/statistical-significance-ab-testing-complete-guide/). Blog post, 2018.
 
 ---
 
@@ -224,9 +224,9 @@ Often on static learning and evaluation set
     * no easy merging
     * comparison of many experiments challenging
     * pervasive copy + paste editing
+    * later cleanup often needed
 * Experiments may be expensive (time + resources, learning + evaluation)
 * Overfitting despite separate evaluation set
-* TODO
 
 <!-- references -->
 
@@ -520,6 +520,79 @@ Notes: Picture source: https://www.designforfounders.com/ab-testing-examples/
 
 
 ----
+
+## Implementing A/B Testing
+
+* Implement alternative versions of the system
+    * using feature flags (decisions in implementation)
+    * separate deployments (decision in router/load balancer)
+* Map users to treatment group
+    * Randomly from distribution
+    * Static user - group mapping
+    * Online service (e.g., [launchdarkly](https://launchdarkly.com/), [split](https://www.split.io/))
+* Monitor outcomes *per group*
+    * Telemetry, sales, time on site, server load, crash rate
+
+----
+
+## Comparing Averages
+
+<!-- colstart -->
+**Group A**
+
+2354158 Users
+
+average 3:13 min time on site
+
+<!-- col -->
+
+**Group B**
+
+1000 Users
+
+average 3:24 min time on site
+
+<!-- colend -->
+----
+## Comparing Distributions
+
+![Two distributions, 10000 samples each from a normal distribution](twodist.png)
+
+----
+## Different effect size, same deviations
+
+<!-- colstart -->
+![](twodist.png)
+<!-- col -->
+![](twodisteffect.png)
+<!-- colend -->
+
+----
+## Different effect size, same deviations
+
+<!-- colstart -->
+![](twodist.png)
+<!-- col -->
+![](twodisteffect.png)
+<!-- colend -->
+
+Larger effect --> Easier to recognize
+
+----
+## Same effect size, different deviations
+
+<!-- colstart -->
+![](twodist.png)
+<!-- col -->
+![](twodistnoise.png)
+<!-- colend -->
+
+Less noise --> Easier to recognize
+
+
+----
+
+
 
 
 * Introduction to the scientific method (experimental design, statistical tests, causality)
