@@ -139,12 +139,12 @@ Notes: Coffee drinking has a strong correlation with cancer, but not a causal re
 <!-- colend -->
 
 
----
+----
 ## Correlation vs Causation
 
 [![xkcd.com/552](https://imgs.xkcd.com/comics/correlation.png)](https://www.xkcd.com/552/)
 
----
+----
 ## Handling Confounds
 
 Strategies:
@@ -167,6 +167,18 @@ Notes:
 Without human subjects (e.g., comparing models) and with reliable measures for Y, we often have comparably little noise and can keep most factors constant.
 
 We'll come back to statistics in a bit.
+
+----
+## Research Design?
+
+<!-- colstart -->
+Does obtaining a CMU degree lead to a higher salary after graduation?
+![](graduation.jpg)
+<!-- col -->
+Do DNN produce higher accuracy models than random forests for forecasting the weather?
+![](weather.jpg)
+<!-- colend -->
+
 
 ---
 # Offline Experimentation
@@ -217,6 +229,11 @@ Repeated evaluation of model quality until no further improvement or good enough
 Often on static learning and evaluation set
 
 ----
+## Your Practices?
+
+<!-- discussion -->
+
+----
 ## Experimentation Challenges
 
 * Notebooks allow lightweight experimentation, but 
@@ -227,12 +244,15 @@ Often on static learning and evaluation set
     * later cleanup often needed
 * Experiments may be expensive (time + resources, learning + evaluation)
 * Overfitting despite separate evaluation set
+* Data versioning at scale
 
 <!-- references -->
 
 Further reading: Kery, M. B., Radensky, M., Arya, M., John, B. E., & Myers, B. A. (2018, April). [The story in the notebook: Exploratory data science using a literate programming tool](https://dl.acm.org/citation.cfm?id=3173748). In Proceedings of the 2018 CHI Conference on Human Factors in Computing Systems (p. 174). ACM.
 
-
+----
+[![PhD Comics: notFinal](http://www.phdcomics.com/comics/archive/phd101212s.gif)](http://phdcomics.com/comics/archive.php?comicid=1531)
+<!-- .element: class="stretch" -->
 ---
 # Sensitivity Analysis
 
@@ -262,6 +282,28 @@ What factors might influence the policy decision to build new train tracks in a 
 Which parameters are important for making an informed decision, which are not?
 
 Photo by [Michael Gaida](https://pixabay.com/photos/site-demolition-work-demolition-3688262/)
+
+----
+## Sensitivity Analysis 
+
+Goal: Understand influence of model choices and parameters
+
+Needs to understand the space
+
+For understanding, debugging, planning
+
+Examples: Understand influential features, test robustness
+
+<!-- split -->
+## Optimization
+
+Goal: Find the best choices and parameters
+
+Search problem
+
+For tuning
+
+Examples: Hyperparameter tuning, feature selection
 
 ----
 ## Classic Sensitivity Analysis Settings
@@ -744,9 +786,10 @@ Further readings:
 ----
 ## Challenges
 
-* Tracking of experiments, versioning
+* Tracking of experiments, versioning of modeling code *and* data
 * Slow experiments, slow feedback cycles
 * Many choices, many interactions
+* Many one-off experiments, little merging
 * Interaction with complex backends and datasets
 *
 * No standardized platforms
@@ -792,6 +835,14 @@ dvc push
 
 
 https://dvc.org/
+
+----
+## Others
+
+* Pachyderm, pipelines and data versioning: https://www.pachyderm.io/
+* MissingLink for deep learning: https://missinglink.ai/
+* Michaelangeo at Uber: https://eng.uber.com/michelangelo/
+* Tensorflow Extended for reproducibility: https://www.tensorflow.org/tfx/
 
 ---
 
