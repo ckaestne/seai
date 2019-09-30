@@ -532,7 +532,9 @@ Notes: Picture source: https://www.designforfounders.com/ab-testing-examples/
     * Online service (e.g., [launchdarkly](https://launchdarkly.com/), [split](https://www.split.io/))
 * Monitor outcomes *per group*
     * Telemetry, sales, time on site, server load, crash rate
-
+----
+![split.io screenshot](splitio.png)
+<!-- .element: class="stretch" --> 
 ----
 
 ## Comparing Averages
@@ -568,17 +570,6 @@ average 3:24 min time on site
 <!-- colend -->
 
 ----
-## Different effect size, same deviations
-
-<!-- colstart -->
-![](twodist.png)
-<!-- col -->
-![](twodisteffect.png)
-<!-- colend -->
-
-Larger effect --> Easier to recognize
-
-----
 ## Same effect size, different deviations
 
 <!-- colstart -->
@@ -590,25 +581,232 @@ Larger effect --> Easier to recognize
 Less noise --> Easier to recognize
 
 
+
 ----
 
+## Dependent vs. independent measurements
+
+* Pairwise (dependent) measurements
+    * Before/after comparison
+    * With same benchmark + environment
+    * e.g., new operating system/disc drive faster
+* Independent measurements
+    * Repeated measurements
+    * Input data regenerated for each measurement
+
+----
+## Significance level
+* Statistical change of an error
+* Define before executing the experiment
+    * use commonly accepted values
+    * based on cost of a wrong decision
+* Common:
+    * 0.05 significant
+    * 0.01 very significant
+* Statistically significant result =!> proof
+* Statistically significant result =!> important result
+* Covers only alpha error (more later)
+
+----
+
+## Intuition: Error Model
+* 1 random error, influence +/- 1
+* Real mean: 10
+* Measurements: 9 (50%) und 11 (50%)
+*
+* 2 random errors, each +/- 1
+* Measurements: 8 (25%), 10 (50%) und 12 (25%)
+* 
+* 3 random errors, each +/- 1
+* Measurements : 7 (12.5%), 9 (37.5), 11 (37.5), 12 (12.5)
+----
+<iframe src='https://gfycat.com/ifr/PleasingMeaslyGalapagossealion' frameborder='0' scrolling='no' allowfullscreen width='640' height='524'></iframe>
+----
+## Normal Distribution
+![Normal distribution](normaldist.png)
+
+<!-- references -->
+(CC 4.0 [D Wells](https://commons.wikimedia.org/wiki/File:Standard_Normal_Distribution.png))
+----
+## Confidence Intervals
+![](confint.png)
+----
+## Comparison with Confidence Intervals
+![](perfcomp.png)
+ 
+<!-- references -->
+Source: Andy Georges, Dries Buytaert, and Lieven Eeckhout. 2007. [Statistically rigorous java performance evaluation](https://dri.es/files/oopsla07-georges.pdf). In Proc. Conference on Object-Oriented Programming Systems and Applications (OOPSLA '07). ACM, 57-76.
+----
+# t-test
+
+```r
+> t.test(x, y, conf.level=0.9)
+
+        Welch Two Sample t-test
+
+t = 1.9988, df = 95.801, p-value = 0.04846
+alternative hypothesis: true difference in means is 
+not equal to 0 
+90 percent confidence interval:
+ 0.3464147 3.7520619 
+sample estimates:
+mean of x mean of y 
+ 51.42307  49.37383 
+
+> # paired t-test:
+> t.test(x-y, conf.level=0.9)
+```
+----
+![t-test in an A/B testing dashboard](testexample.png)
+<!-- references -->
+Source: https://conversionsciences.com/ab-testing-statistics/
+----
+![t-test in an A/B testing dashboard](testexample2.png)
+<!-- references -->
+Source: https://cognetik.com/why-you-should-build-an-ab-test-dashboard/
+----
+## How many samples needed?
+<!-- colstart -->
+**Too few?**
+
+<!-- Noise and random results -->
+<!-- col -->
+**Too many?**
+
+<!-- Risk of spreading bad designs -->
+<!-- colend -->
 
 
+<!-- discussion -->
+----
+## A/B testing automation
 
-* Introduction to the scientific method (experimental design, statistical tests, causality)
-* Offline experimentation
-  * Introduction to *sensitivity analysis*
-  * Use cases regarding robustness, bias, performance and hyperparameter tuning, ...
-  * Sampling in high-dimensional spaces
-* Online experimentation
-  * Testing in production, chaos engineering
-  * *A/B testing*
-  * Necessary statistics foundation
-  * Concurrent A/B tests
-* Infrastructure for experimentation, planning and tracking experiments
-* Interacting with and supporting data scientists
+* Experiment configuration through DSLs/scripts
+* Queue experiments
+* Stop experiments when confident in results
+* Stop experiments resulting in bad outcomes (crashes, very low sales)
+* Automated reporting, dashboards
 
+<!-- references -->
+
+Further readings:
+* Tang, Diane, et al. [Overlapping experiment infrastructure: More, better, faster experimentation](https://ai.google/research/pubs/pub36500.pdf). Proceedings of the 16th ACM SIGKDD international conference on Knowledge discovery and data mining. ACM, 2010. (Google)
+* Bakshy, Eytan, Dean Eckles, and Michael S. Bernstein. [Designing and deploying online field experiments](https://arxiv.org/pdf/1409.3174). Proceedings of the 23rd International Conference on World Wide Web. ACM, 2014. (Facebook)
+----
+## DSL for scripting A/B tests at Facebook
+```java
+button_color = uniformChoice(
+    choices=['#3c539a', '#5f9647', '#b33316'],
+    unit=cookieid);
+
+button_text = weightedChoice(
+    choices=['Sign up', 'Join now'],
+    weights=[0.8, 0.2],
+    unit=cookieid); 
+
+if (country == 'US') {
+    has_translate = bernoulliTrial(p=0.2, unit=userid);
+} else {
+    has_translate = bernoulliTrial(p=0.05, unit=userid);
+}
+```
+<!-- references -->
+
+Further readings:
+* Bakshy, Eytan, Dean Eckles, and Michael S. Bernstein. [Designing and deploying online field experiments](https://arxiv.org/pdf/1409.3174). Proceedings of the 23rd International Conference on World Wide Web. ACM, 2014. (Facebook)
+----
+## Concurrent A/B testing
+
+* Multiple experiments at the same time
+    * Independent experiments on different populations -- interactions not explored
+    * Multi-factorial designs, well understood but typically too complex, e.g., not all combinations valid or interesting
+    * Grouping in sets of experiments
+
+<!-- references -->
+
+Further readings:
+* Tang, Diane, et al. [Overlapping experiment infrastructure: More, better, faster experimentation](https://ai.google/research/pubs/pub36500.pdf). Proceedings of the 16th ACM SIGKDD international conference on Knowledge discovery and data mining. ACM, 2010. (Google)
+* Bakshy, Eytan, Dean Eckles, and Michael S. Bernstein. [Designing and deploying online field experiments](https://arxiv.org/pdf/1409.3174). Proceedings of the 23rd International Conference on World Wide Web. ACM, 2014. (Facebook)
+---
+# Planning and Tracking Experiments
+----
+## Your experimentation strategy?
+<!-- discussion -->
+----
+## Lots of Experimentation
+
+* Exploration of alternatives
+  * Versions of a notebook
+  * Copied and edited notebook cells
+  * Branches in version control system
+* Parameter tuning
+
+----
+## Challenges
+
+* Tracking of experiments, versioning
+* Slow experiments, slow feedback cycles
+* Many choices, many interactions
+* Interaction with complex backends and datasets
+*
+* No standardized platforms
+----
+## Many solutions
+
+* Many companies develop their own platforms
+* Many research platforms
+* Many startups
+*
+* Common strategies
+  * Visual frontends
+  * Make experiments explicit steps, record all experiments
+  * Archive all modeling code for reproducability
+  * Store models, evaluation results
+  * Dashboards for visualization
+----
+## Example: Neptune
+
+![](https://miro.medium.com/max/3834/1*kxpOMPG3YSDrePd3M-Ft-Q.png)
+
+https://neptune.ml/
+----
+## Example: ModelDB
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/gxBb4CjJcxQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+https://github.com/mitdbg/modeldb
+
+----
+## Example: DVC 
+
+```sh
+dvc add images
+dvc run -d images -o model.p cnn.py
+dvc remote add myrepo s3://mybucket
+dvc push
+```
+
+* Tracks models and datasets
+* Splits learning into steps, incrementalization
+* Orchestrates learning in cloud resources
+
+
+https://dvc.org/
+
+---
+
+
+# Interacting with and supporting data scientists
+
+<!-- discussion -->
 
 ---
 # Summary
 
+* Experimentation is important
+* Offline experimentation, adhoc + senstitivity analysis
+* Online experimentation: A/B testing
+  * Statistics
+  * Automation
+  * Dashboards
+* Infrastructure for experimentation
