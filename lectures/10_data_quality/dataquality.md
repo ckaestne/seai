@@ -29,7 +29,7 @@ Required reading: Schelter, S., Lange, D., Schmidt, P., Celikel, M., Biessmann, 
 # Data-Quality Challenges
 
 ----
-## Case Study: Aggiculture management to increase crop yields
+## Case Study: Agriculture management to increase crop yields
 
 ![Fields](fields.jpg)
 
@@ -43,7 +43,7 @@ Image: https://www.maxpixel.net/Agriculture-Campaign-Green-Aerial-View-Drone-404
 ----
 ## Data is noisy
 
-* Unreliable sensors
+* Unreliable sensors or data entry
 * Wrong results and computations, crashes
 * Duplicate data, near-duplicate data
 * Out of order data
@@ -71,22 +71,24 @@ Image: https://www.maxpixel.net/Agriculture-Campaign-Green-Aerial-View-Drone-404
 * **Examples?**
 
 ----
-## Dimensions of Data Quality (excerpt)
+## Criteria for Data Quality
 
-* Uniqueness (deduplication)
+* Accuracy
+  * The Data was recorded correctly.
 * Completeness
+  * All relevant data was recorded.
+* Uniqueness
+  * The entries are recorded once.
 * Consistency
-* Conformity
-* Relevance
-* Precision
+  * The data agrees with itself.
 * Timeliness
-*
-* **Examples?**
+  * The data is kept up to date.
 
 ---
 
 # Data Cleaning
 
+![Data cleaning](data-cleaning.jpg)
 
 ----
 
@@ -101,21 +103,30 @@ Source: Rahm, Erhard, and Hong Hai Do. [Data cleaning: Problems and current appr
 ## Single-Source Problem Examples
 
 * Schema level:
+<!-- .element: class="fragment" -->
     * Illegal attribute values: `bdate=30.13.70`
     * Violated attribute dependencies: `age=22, bdate=12.02.70`
     * Uniqueness violation: `(name=”John Smith”, SSN=”123456”), (name=”Peter Miller”, SSN=”123456”)`
     * Referential integrity violation: `emp=(name=”John Smith”, deptno=127)` if department 127 not defined
 * Instance level:
-    * Missing values: `phone=9999-999999`
+<!-- .element: class="fragment" -->
+	* Missing values: `phone=9999-999999`
     * Misspellings: `city=Pittsburg`
     * Misfielded values: `city=USA`
     * Duplicate records: `name=John Smith, name=J. Smith`
     * Wrong reference: `emp=(name=”John Smith”, deptno=127)` if department 127 defined but wrong
 
-
 <!-- references -->
 
 Further readings: Rahm, Erhard, and Hong Hai Do. [Data cleaning: Problems and current approaches](http://dc-pubs.dbs.uni-leipzig.de/files/Rahm2000DataCleaningProblemsand.pdf). IEEE Data Eng. Bull. 23.4 (2000): 3-13.
+
+----
+## Dirty Data: Example
+
+![Dirty data](dirty-data-example.jpeg)
+
+Q. Can you spot the problems with the data?
+
 ----
 ## Data Cleaning Overview
 
@@ -149,6 +160,13 @@ Further readings: Rahm, Erhard, and Hong Hai Do. [Data cleaning: Problems and cu
   * e.g., Testing for normal distribution, remove > 2σ
 * Normalization
   * e.g., range [0, 1], power transform
+
+----
+## Data Cleaning Tools
+
+![Open Refine](openrefine.jpg)
+
+OpenRefine (formerly Google Refine), Trifacta Wrangler, Drake, etc.,
 
 ---
 
