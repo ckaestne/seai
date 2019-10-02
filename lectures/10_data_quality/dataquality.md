@@ -29,16 +29,14 @@ Required reading: Schelter, S., Lange, D., Schmidt, P., Celikel, M., Biessmann, 
 # Data-Quality Challenges
 
 ----
-## Case Study: Agriculture management to increase crop yields
+## Case Study: Predicting Delivery Time
 
-![Fields](fields.jpg)
+![Door Dash](doordash.png)
 
-Notes:
+----
+## Order Delivery Database
 
-Sketch ideas what's possible.
-Collect typical data sources.
-
-Image: https://www.maxpixel.net/Agriculture-Campaign-Green-Aerial-View-Drone-4048496
+![Restaurant data](restaurant-data.jpg)
 
 ----
 ## Data is noisy
@@ -54,9 +52,9 @@ Image: https://www.maxpixel.net/Agriculture-Campaign-Green-Aerial-View-Drone-404
 ----
 ## Data changes
 
-* Sensors replaced
-* Software components replaced
-* Other models change
+* System objective changes over time
+* Software components are upgraded or replaced
+* Prediction models change
 * Quality of supplied data changes
 * User behavior changes
 *
@@ -65,8 +63,8 @@ Image: https://www.maxpixel.net/Agriculture-Campaign-Green-Aerial-View-Drone-404
 ----
 ## Users may deliberately change data
 
-* Users react to model predictions
-* Users try to attack the model
+* Users react to model output
+* Users try to game/deceive the model
 *
 * **Examples?**
 
@@ -74,7 +72,7 @@ Image: https://www.maxpixel.net/Agriculture-Campaign-Green-Aerial-View-Drone-404
 ## Criteria for Data Quality
 
 * Accuracy
-  * The Data was recorded correctly.
+  * The data was recorded correctly.
 * Completeness
   * All relevant data was recorded.
 * Uniqueness
@@ -140,14 +138,19 @@ Q. Can you spot the problems with the data?
   * Automated vs human guided
 
 ----
-## Many approaches, problem dependent
+## Error Detection
 
 * Illegal values: min, max, variance, deviations, cardinality
 * Misspelling: sorting + manual inspection, dictionary lookup
 * Missing values: null values, default values
 * Duplication: sorting, edit distance, normalization
-*
-* **Examples?**
+
+----
+## Error Detection: Example
+
+![Dirty data](dirty-data-example.jpeg)
+
+Q. Can we (automatically) detect errors? Which errors are problem-dependent?
 
 ----
 ## Common Strategies
@@ -160,6 +163,7 @@ Q. Can you spot the problems with the data?
   * e.g., Testing for normal distribution, remove > 2σ
 * Normalization
   * e.g., range [0, 1], power transform
+* Fill in missing values
 
 ----
 ## Data Cleaning Tools
@@ -418,7 +422,7 @@ if (detailedLogging) log.println("Log started");
     * Tokenizable string (long strings, all unique)
     * Zip code as number
 * Outliers and scaling
-    * Unormalized feature (varies widely)
+    * Unnormalized feature (varies widely)
     * Tailed distributions
     * Uncommon sign
 * Packaging
