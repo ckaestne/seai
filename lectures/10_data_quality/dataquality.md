@@ -39,6 +39,20 @@ Required reading: Schelter, S., Lange, D., Schmidt, P., Celikel, M., Biessmann, 
 ![Restaurant data](restaurant-data.jpg)
 
 ----
+## What makes good quality data?
+
+* Accuracy
+  * The data was recorded correctly.
+* Completeness
+  * All relevant data was recorded.
+* Uniqueness
+  * The entries are recorded once.
+* Consistency
+  * The data agrees with itself.
+* Timeliness
+  * The data is kept up to date.
+
+----
 ## Data is noisy
 
 * Unreliable sensors or data entry
@@ -67,20 +81,6 @@ Required reading: Schelter, S., Lange, D., Schmidt, P., Celikel, M., Biessmann, 
 * Users try to game/deceive the model
 *
 * **Examples?**
-
-----
-## Criteria for Data Quality
-
-* Accuracy
-  * The data was recorded correctly.
-* Completeness
-  * All relevant data was recorded.
-* Uniqueness
-  * The entries are recorded once.
-* Consistency
-  * The data agrees with itself.
-* Timeliness
-  * The data is kept up to date.
 
 ---
 
