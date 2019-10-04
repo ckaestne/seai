@@ -12,13 +12,13 @@
 | Mon, Sep 16 | [Tradeoffs among AI Techniques](https://ckaestne.github.io/seai/slides/06_tradeoffs/tradeoffs.html#/)   |   |   |
 | Wed, Sep 18 |  [Software Architecture of AI-enabled Systems](https://ckaestne.github.io/seai/slides/07_architecture/architecture.html) | <!-- [Software architecture in practice](https://www.oreilly.com/library/view/software-architecture-in/9780132942799/?ar), Ch. 1 + [Building Intelligent Systems](https://www.buildingintelligentsystems.com/), Ch. 13 --> |  [I2: Requirements/Risk](https://github.com/ckaestne/seai/blob/master/assignments/I2_requirements_risks/assignment03.md) |
 | Wed, Sep 23 | [Model Quality](https://ckaestne.github.io/seai/slides/08_model_quality/modelquality.html)   |   |   |
-| Mon, Sep 25 | Tradeoffs among AI Techniques: Presentations    |   | G2: Technique Tradeoff Analysis |
+| Mon, Sep 25 | Tradeoffs among AI Techniques: Presentations    |   | [G2: Technique Tradeoff Analysis](https://github.com/ckaestne/seai/blob/master/assignments/G2_tradeoffs/assignment04.md) |
 | Mon, Sep 30 | [Experimentation](https://ckaestne.github.io/seai/slides/09_experimentation/experimentation.html) |   |   |
-| Wed, Oct 2  | Data Quality    |   | I3: Architecture  |
+| Wed, Oct 2  | [Data Quality](https://ckaestne.github.io/seai/slides/10_data_quality/dataquality.html)    |   | [I3: Architecture](https://github.com/ckaestne/seai/blob/master/assignments/I3_architecture/assignment05.md)  |
 | Mon, Oct 7  | Test and Deployment Automation  |   |   |
 | Wed, Oct 9  |  **Midterm**   |   |  |
 | Mon, Oct 14 |  Ethics + Fairness   |   |    |
-| Wed, Oct 16 | Ethics + Fairness  |   | G3: Quality |
+| Wed, Oct 16 | Ethics + Fairness  |   | [G3: Infrastructure Quality](https://github.com/ckaestne/seai/blob/master/assignments/G3_quality/assignment06.md) |
 | Mon, Oct 21 | Safety  |   |   |
 | Wed, Oct 23 | Security, Adversarial Learning, and Feedback Loops  |   | I4: Fairness |
 | Mon, Oct 28 | Scalability and Distributed Systems     |   |   |
