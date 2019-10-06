@@ -682,7 +682,29 @@ Notes: Chaos Engineering is the discipline of experimenting on a distributed sys
 * *Minimize blast radius:* Contain experiment scope
 
 ----
-## Chaos Toolkit / Netflix's Simian Army
+## Netflix's Simian Army
+
+Chaos Monkey: randomly disable production instances
+
+Latency Monkey: induces artificial delays in our RESTful client-server communication layer
+
+Conformity Monkey: finds instances that don’t adhere to best-practices and shuts them down
+
+Doctor Monkey: monitors other external signs of health to detect unhealthy instances
+
+Janitor Monkey: ensures that our cloud environment is running free of clutter and waste
+
+Security Monkey: finds security violations or vulnerabilities, and terminates the offending instances
+
+10–18 Monkey: detects problems in instances serving customers in multiple geographic regions
+
+Chaos Gorilla is similar to Chaos Monkey, but simulates an outage of an entire Amazon availability zone.
+
+
+
+
+----
+## Chaos Toolkit
 
 * Infrastructure for chaos experiments
 * Driver for various infrastructure and failure cases
