@@ -15,7 +15,7 @@
 | Mon, Sep 25 | Tradeoffs among AI Techniques: Presentations    |   | [G2: Technique Tradeoff Analysis](https://github.com/ckaestne/seai/blob/master/assignments/G2_tradeoffs/assignment04.md) |
 | Mon, Sep 30 | [Experimentation](https://ckaestne.github.io/seai/slides/09_experimentation/experimentation.html) |   |   |
 | Wed, Oct 2  | [Data Quality](https://ckaestne.github.io/seai/slides/10_data_quality/dataquality.html)    |   | [I3: Architecture](https://github.com/ckaestne/seai/blob/master/assignments/I3_architecture/assignment05.md)  |
-| Mon, Oct 7  | Test and Deployment Automation  |   |   |
+| Mon, Oct 7  | [Infrastructure Quality](https://ckaestne.github.io/seai/slides/11_infrastructurequality/testing.html)  |   |   |
 | Wed, Oct 9  |  **Midterm**   |   |  |
 | Mon, Oct 14 |  Ethics + Fairness   |   |    |
 | Wed, Oct 16 | Ethics + Fairness  |   | [G3: Infrastructure Quality](https://github.com/ckaestne/seai/blob/master/assignments/G3_quality/assignment06.md) |
