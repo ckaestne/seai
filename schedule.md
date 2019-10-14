@@ -17,7 +17,7 @@
 | Wed, Oct 2  | [Data Quality](https://ckaestne.github.io/seai/slides/10_data_quality/dataquality.html)    |   | [I3: Architecture](https://github.com/ckaestne/seai/blob/master/assignments/I3_architecture/assignment05.md)  |
 | Mon, Oct 7  | [Infrastructure Quality](https://ckaestne.github.io/seai/slides/11_infrastructurequality/testing.html)  |   |   |
 | Wed, Oct 9  |  **Midterm**   |   |  |
-| Mon, Oct 14 |  Ethics + Fairness   |   |    |
+| Mon, Oct 14 | [DevOps](https://ckaestne.github.io/seai/slides/12_devops/devops.html)  |   |    |
 | Wed, Oct 16 | Ethics + Fairness  |   | [G3: Infrastructure Quality](https://github.com/ckaestne/seai/blob/master/assignments/G3_quality/assignment06.md) |
 | Mon, Oct 21 | Safety  |   |   |
 | Wed, Oct 23 | Security, Adversarial Learning, and Feedback Loops  |   | I4: Fairness |
