@@ -47,7 +47,9 @@ Matthews. "Algorithmic Accountability: A Primer", Data & Society
 
 * COMPAS (Correctional Offender Management Profiling for Alternative
 Sanctions)
-* In use throughout numerous states (PA, FL, NY, WI, CA, etc.,)
+	* Assess the likelihood of a defendant repeating an offence
+	* Used by judges in sentencing decisions
+	* In deployment throughout numerous states (PA, FL, NY, WI, CA, etc.,)
 
 ----
 ## Example: Recruiting
@@ -100,6 +102,7 @@ _Discrimination in Online Ad Delivery_, Latanya Sweeney, SSRN (2013).
 * Loan lending: Gender discrimination is illegal.
 * Medical diagnosis: Gender-specific diagnosis may be desirable.
 * Discrimination is a __domain-specific__ concept!
+* __Q. Other examples__?
 
 ---
 # Sources of Bias
@@ -257,9 +260,11 @@ _Bias in Online Freelance Marketplaces_, Hannak et al., CSCW (2017).
 
 * Address population bias
   * Does the dataset reflect the demographics in the target population?
-* Address representation issues
+* Address under- & over-representation issues
    * Ensure sufficient amount of data for all groups to avoid being
-     treated as "outliers" by ML
+   treated as "outliers" by ML
+   * But also avoid over-representation of certain groups (e.g.,
+     remove historical data)
 * Data augmentation: Synthesize data for minority groups
   * Observed: "He is a doctor" -> synthesize "She is a doctor"
 * Fairness-aware active learning
@@ -286,19 +291,22 @@ _Fairness-aware Machine Learning_, Bennett et al., WSDM Tutorial (2019).
 _Datasheets for Dataset_, Gebru et al., (2019). https://arxiv.org/abs/1803.09010
 
 ----
-## Data Collection: Example
+## Exercise: Crime Map
 
-![](college-admission.jpg)
+![](examples/crime-map.jpg)
+
+Q. How can we modify an existing dataset or change the data collection
+process to reduce the effects the feedback loop?
 
 ---
 # Summary
 
 * Types of harm that can be caused by ML
-  * Harm of allocation & harm of representation.
+  * Harm of allocation & harm of representation
 * Sources of bias in ML
   * Skewed sample, tainted examples, limited features, sample size
     disparity, proxies
-* Addressing fairness throughout the ML pipeline.
-* Data bias & data collection for fairness.
-* __Next class__: Definitions of fairness, measurement, testing for fairness.
+* Addressing fairness throughout the ML pipeline
+* Data bias & data collection for fairness
+* __Next class__: Definitions of fairness, measurement, testing for fairness
 
