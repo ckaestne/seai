@@ -59,7 +59,7 @@ Sanctions)
 * XING online recruiting platform
 
 ----
-## Types of Harm
+## Types of Harm on Society
 
 * __Harms of allocation__: Withhold opportunities or resources
 * __Harms of representation__: Reinforce stereotypes, subordination along
@@ -93,6 +93,27 @@ Commercial Gender Classification_, Buolamwini & Gebru, ACM FAT* (2018).
 <!-- references -->
 
 _Discrimination in Online Ad Delivery_, Latanya Sweeney, SSRN (2013).
+
+----
+## Identifying harms
+
+![](harms-table.png)
+
+* Multiple types of harms can be caused by a product!
+* Think about your system objectives & identify potential harms.
+
+<!-- references -->
+
+_Challenges of incorporating algorithmic fairness into practice_, FAT* Tutorial (2019).
+
+----
+## Case Study: College Admission
+
+![](college-admission.jpg)
+
+* Objective: Decide "Is this student likely to succeed"?
+* Possible harms: Allocation of resources? Quality of service?
+  Stereotyping? Denigration? Over-/Under-representation?
 
 ----
 ## Not all discrimination is harmful
