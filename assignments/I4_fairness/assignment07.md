@@ -4,7 +4,7 @@
 
 ## Overview
 
-In this assignment, you will get practice on how to systematically identify fairness issues in AI-enable systems. In particular, you will learn to (1) think about potential harms that can be caused by an unfair AI system, (2) identify potential sources of bias, and (3) use data analysis to evaluate and measure for a case study system involving credit card scoring.
+In this assignment, you will get practice on how to systematically identify fairness issues in AI-enable systems. In particular, you will learn to (1) think about potential harms that can be caused by an unfair AI system, (2) identify potential sources of bias, and (3) use data analysis to evaluate and measure fairness in a case study system involving credit card ratings.
 
 Learning goals:
 * Understand the potential negative impact of a biased AI-driven system on society.
