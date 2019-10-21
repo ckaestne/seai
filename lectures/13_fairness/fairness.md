@@ -1,8 +1,9 @@
 ---
 author: Eunsuk Kang
-title: "17-445: Trade-offs among AI Techniques"
+title: "17-445: Fairness"
 semester: Fall 2019
-footer: "17-445 Software Engineering for AI-Enabled Systems, Eunsuk Kang"
+footer: "17-445 Software Engineering for AI-Enabled Systems, Christian
+Kaestner  & Eunsuk Kang"
 ---  
 
 # Fairness in AI-Enabled Systems
