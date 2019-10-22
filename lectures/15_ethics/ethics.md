@@ -18,6 +18,9 @@ Christian Kaestner
 * Starting points to dig deeper
 
 ---
+[![Robot trapping wheelchair user](pittrobot.png)](https://twitter.com/EmilyEAckerman/status/1186363305851576321)
+
+---
 # Legal / Moral / Ethical
 
 ----
@@ -111,6 +114,9 @@ Web: [Center for Humane Technology](https://humanetech.com/)
 
 ---
 # Unforseen Consequences?
+
+----
+[![Robot trapping wheelchair user](pittrobot.png)](https://twitter.com/EmilyEAckerman/status/1186363305851576321)
 
 ----
 <!-- .slide: data-background="bird.jpg" data-background-size="contain" -->
