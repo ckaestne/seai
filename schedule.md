@@ -18,19 +18,21 @@
 | Mon, Oct 7  | [Infrastructure Quality](https://ckaestne.github.io/seai/slides/11_infrastructurequality/testing.html)  |   |   |
 | Wed, Oct 9  |  **Midterm**   |   |  |
 | Mon, Oct 14 | [DevOps](https://ckaestne.github.io/seai/slides/12_devops/devops.html)  |   |    |
-| Wed, Oct 16 | [Fairness](https://ckaestne.github.io/seai/slides/13_fairness/fairness.html)  |   | [G3: Infrastructure Quality](https://github.com/ckaestne/seai/blob/master/assignments/G3_quality/assignment06.md) |
-| Mon, Oct 21 | Safety  |   |   |
-| Wed, Oct 23 | Security, Adversarial Learning, and Feedback Loops  |   | I4: Fairness |
+| Wed, Oct 16 | [Fairness in AI-Enabled Systems](https://ckaestne.github.io/seai/slides/13_fairness/fairness.html)  |   | [G3: Infrastructure Quality](https://github.com/ckaestne/seai/blob/master/assignments/G3_quality/assignment06.md) |
+| Mon, Oct 21 | [Fairness Definitions and Measurement](https://ckaestne.github.io/seai/slides/14_fairness_2/fairness2.md)  |   |   |
+| Wed, Oct 23 | [Ethics](https://ckaestne.github.io/seai/slides/15_ethics/ethics.md)  |   | [I4: Fairness](https://github.com/ckaestne/seai/blob/master/assignments/I4_fairness/assignment07.md) |
 | Mon, Oct 28 | Scalability and Distributed Systems     |   |   |
-| Wed, Oct 30 | Managing and Processing Large Datasets  |   | I5: Safety/Security  |
-| Mon, Nov 4  | Data Provenance, Reproducability, and Explainability    |   |   |
-| Wed, Nov 6  | Configuration Management and Operations at Scale    |   |   |
+| Wed, Oct 30 | Managing and Processing Large Datasets  |   |   |
+| Mon, Nov 4  | Safety, Security, Adversarial Learning, and Feedback Loops   |   |   |
+| Wed, Nov 6  | Data Provenance, Reproducability, and Explainability    |   | G4: Test Automation  |
 | Mon, Nov 11 | Process and Team Reflections    |   |   |
-| Wed, Nov 13 | Symbolic AI in Systems  |   | G4: Test Automation  |
+| Wed, Nov 13 | Symbolic AI in Systems  |   | I5: Security   |
 | Mon, Nov 18 | AI Engineering for Self-Driving Cars    |   |   |
 | Wed, Nov 20 | Usability   |   |   |
 | Mon, Nov 25 | tbd. |   | |
 | Wed, Nov 27 | **Thanksgiving, no class**    |   | |
 | Mon, Dec 2  | Planning an AI-Enabled Product in a Startup |   |   |
 | Wed, Dec 4  | Summary and Review  |  | G5: System evolution |
+
+
 
