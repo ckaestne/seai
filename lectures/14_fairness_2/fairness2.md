@@ -266,10 +266,15 @@ and Narayanan (2019), Chapter 1.
 
 ![requirement-vs-spec](env-spec.png)
 
-* Requirement (REQ): What customer needs, as desired effects on the environment
+* Requirement (REQ): What the system should do, as desired effects on the environment
 * Assumptions (ENV): What’s assumed about the behavior/properties of
   the environment (based on domain knowledge)
-* Specification (SPEC): What machine must do in order to satisfy REQ
+* Specification (SPEC): What the software must do in order to satisfy REQ
+
+----
+## Case Study: College Admission
+
+![](college-admission.jpg)
 
 ----
 ## Requirements for Fair ML Systems
@@ -279,16 +284,66 @@ and Narayanan (2019), Chapter 1.
   * Consider all stakeholders, their backgrounds & characteristics
 2. State requirement (REQ) over the environment
 <!-- .element: class="fragment" -->
-   * What kind of harms are relevant/possible?
-   * Requirements as the prevention/reduction of harm
+   * What functions should the system serve? Quality attributes?
+   * But also: What kind of harms are possible & should be minimized?
+   * Legal & policy requirements
+
+----
+## "Four-fifth rule" (or "80% rule")
+
+$(P[R = 1 | A = a]) / (P[R = 1 | A = b]) \geq 0.8%$
+
+* Selection rate for a protected group (e.g., $A = a$) <
+highest rate => selection procedure considered as having "adverse
+impact"
+* Guideline adopted by Federal agencies (Department of Justice, Equal
+  Employment Opportunity Commission, etc.,) in 1978
+* If violated, must justify business necessity (i.e., the selection procedure is
+  essential to the safe & efficient operation)
+* Example: Hiring
+  * 50% of male applicants vs 20% female applicants hired
+  (0.2/0.5 = 0.4)
+  * Is there a business justification for hiring men at a higher rate?
+
+----
+## Case Study: College Admission
+
+![](college-admission.jpg)
+
+* Who are the stakeholders?
+* Types of harm?
+* Legal & policy considerations?
+
+----
+## Requirements for Fair ML Systems
+
+1. Identify all environmental entities
+2. State requirement (REQ) over the environment
 3. Identify the interface between the environment & machine (ML)
 <!-- .element: class="fragment" -->
   * What types of data will be sensed/measured by AI?
   * What types of actions will be performed by AI?
 4. Identify the environmental assumptions (ENV)
 <!-- .element: class="fragment" -->
-	* How do the stakeholders interact with the ML?
-	* Adversarial? Unintentional misuse?  
+	* How do stakeholders interact with the system?
+	* Adversarial? Misuse? Unfair (dis-)advantages?
+
+----
+## Case Study: College Admission
+
+![](college-admission.jpg)
+
+* Do certain groups of stakeholders have unfair (dis-)advantages that affect
+their behavior?
+* What types of data should the system measure?
+  
+----
+## Requirements for Fair ML Systems
+
+1. Identify all environmental entities
+2. State requirement (REQ) over the environment
+3. Identify the interface between the environment & machine (ML)
+4. Identify the environmental assumptions (ENV)
 5. Develop software specifications (SPEC) that are sufficient to
 establish REQ
 <!-- .element: class="fragment" -->
@@ -296,20 +351,15 @@ establish REQ
 6. Test whether ENV ∧ SPEC ⊧ REQ
 <!-- .element: class="fragment" -->
 	* Continually monitor the fairness metrics and user reports
-7. If NO, strengthen SPEC & repeat Step 6
-<!-- .element: class="fragment" -->
-	* Re-examine & modify the dataset to reduce bias
 
 ----
 ## Case Study: College Admission
 
 ![](college-admission.jpg)
 
-* Who are the stakeholders (i.e., environmental entities)?
-* Types of harm? 
-* Assumptions about the stakeholder behavior? 
-* Data measured by AI? Actions performed by AI?
 * What type of fairness definition is appropriate?
+  * Group fairness vs equalized odds? 
+* How do we monitor if the system is being fair?
 
 ---
 # Summary
