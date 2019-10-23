@@ -65,9 +65,9 @@ Christian Kaestner
 ## Boeing 
 
 ----
-<!-- .slide: data-background="uber.jpg" data-background-size="contain" -->
-
 ## Uber
+
+![](uber.jpg)
 
 ----
 # Legal / Moral / Ethical
@@ -77,9 +77,9 @@ Christian Kaestner
 
 ![Chimp](nrec.png)
 ----
-<!-- .slide: data-background="automation.jpg" data-background-size="contain" -->
-
 ## Automation
+
+![](automation.jpg)
 
 Notes: The dangers and risks of automating jobs.
 
@@ -87,9 +87,9 @@ Notes: The dangers and risks of automating jobs.
 # AI and Unhealthy Interactions
 
 ----
-<!-- .slide: data-background="twitter.jpg" data-background-size="contain" -->
-
 ## Twitter
+
+![](twitter.jpg)
 
 Notes: What consequences should Twitter have foreseen? How should they intervene now that negative consequences of interaction patterns are becoming apparent?
 
@@ -122,9 +122,9 @@ Web: [Center for Humane Technology](https://humanetech.com/)
 [![Robot trapping wheelchair user](pittrobot.png)](https://twitter.com/EmilyEAckerman/status/1186363305851576321)
 
 ----
-<!-- .slide: data-background="bird.jpg" data-background-size="contain" -->
-
 ## Bird
+
+![](bird.jpg)
 
 ----
 ![Bird Scooters in the News](bird2.png)
