@@ -18,6 +18,9 @@ Christian Kaestner
 * Starting points to dig deeper
 
 ---
+<iframe width="800" height="600" src="https://www.youtube.com/embed/P_zRwq9c8LY?start=10" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+----
 [![Robot trapping wheelchair user](pittrobot.png)](https://twitter.com/EmilyEAckerman/status/1186363305851576321)
 
 ---
