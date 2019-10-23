@@ -1,4 +1,4 @@
-# Group Assignment 3: Model Update Deployment and A/B Testing
+# Group Assignment 4: Model Update Deployment and A/B Testing
 
 (17-445/645 Software Engineering for AI-Enabled Systems)
 
@@ -21,6 +21,9 @@ Keep your recommendation service running as much as possible throughout the enti
 Prefer poor recommendations over missing or very slow answers from your service.
 We will look at the logs (public, in the Kafka stream) to assess downtime.
 
+You may use [Github classroom](https://classroom.github.com/g/oxo4b3bS) to
+create a private repository for this assignment.
+
 
 ### Continuous Integration for Pipeline Code
 
@@ -39,7 +42,7 @@ learning regularly from more recent data.
 We recommend to proceed roughly in the following steps:
 * Route incoming traffic through a point that can decide which of multiple servers to ask for a recommendation. Have flexible and easily changeable rules, which users are routed to which recommendation server.
 * Run the router and the multiple servers each in their own container and demonstrate that you can manually switch over from one server to another without downtime.
-* Create a process to regularly update your training data with recent data from the Kafka stream. Run this regularly as a cronjob (e.g., every night).
+* Create a process to regularly update your training data with recent data from the Kafka stream. Run this regularly with automation (e.g., as a cronjob every night).
 * Use Jenkins to trigger the learning process for every commit to the learning or inference infrastructure and every time your learning dataset is updated (this is independent from the tests of your infrastructure code above). Automate measuring model quality and building of a new Docker container. Abort deployment when tests do not pass or model quality degrades substantially.
 * Create a supervisor program that schedules and controls a new release (triggered by Jenkins): start the containers with the new server, decide where traffic is routed, observed the behavior of the new server, *automatically* roll back the release when problems are detected or eventually switch all traffic to the new release when no problems are detected.
 * Monitor the process and send automated messages (emails) for successful and aborted releases.
@@ -99,10 +102,10 @@ and a link to the Git repository and directory where we can find your implementa
 
 In the report, describe:
 * *Continuous integration*: Provide a link (and instructions or passwords if needed) to your Jenkins page that reports builds and tracks test coverage.
-* *Continuous delivery, canary testing, and A/B testing infrastructure* (2 page text max): Briefly describe the infrastructure you have build for automated model updates, continuous delivery, canary testing, and A/B testing in this assignment. Describe key components (with links to their implementations) and how they interact. Describe how the individual components are triggered (e.g., what is automatically triggered, where are developers in the loop). An architectural diagram will likely be helpful.
-* *Automated decisions in continuous delivery* (.5 pages text max): Describe which qualities you assess and what specific measures you use during a new release (both during the Jenkins phase and during the canary testing phase) and describe how your system decides when to abort a release (thresholds, statistical tests, etc).
-* *Release reports*: Provide evidence of at least one successful release, at least one release aborted during testing, and one release aborted during canary testing in production. Include the automatically generated messages and provide links to the corresponding Jenkins jobs.
-* *A/B experiments* (1 page text max): Describe two A/B experiments you conducted and their results. Include or link to the generated reports for these tests.
+* *Continuous delivery, canary testing, and A/B testing infrastructure* (2 page text max): Briefly describe the infrastructure you have build for automated model updates, continuous delivery, canary testing, and A/B testing in this assignment. Describe key components (with links to their implementations) and how they interact. Describe how the individual components are triggered (e.g., what is automatically triggered, where are developers in the loop). An architectural diagram will likely be helpful. Please include clear references to the code in your repository.
+* *Automated decisions in continuous delivery* (.5 pages text max): Describe which qualities you assess and what specific measures you use during a new release (both during the Jenkins phase and during the canary testing phase). Describe and justify how your system decides when to abort a release (thresholds, statistical tests, etc).
+* *Release reports*: Provide evidence of at least one successful release, at least one release aborted during testing, and one release aborted during canary testing in production. Include the automatically generated messages and provide links to the corresponding commits and Jenkins jobs.
+* *A/B experiments* (1 page text max): Describe two A/B experiments you conducted and their results. Describe the purpose of the experiments, and clearly document the setup (e.g., how many users are selected and how) with justification. Include or link to the generated reports for these tests.
 * *Availability report*: Compute downtime of your service based on the logs in the Kafka stream and report the availability you achieved during the two weeks of this assignment. If you had significant downtime, explain the reasons for that downtime.
 * *Reflection* (1 page text max): Look back at the assignment and the infrastructure you built. What worked well, what did not? Is your infrastructure itself robust? If you had more time or had to start over, what would you change? Would you consider using an external service like [LaunchDarkly](https://launchdarkly.com/) or [split.io](https://www.split.io/)?
 
