@@ -291,10 +291,10 @@ and Narayanan (2019), Chapter 1.
 ----
 ## "Four-fifth rule" (or "80% rule")
 
-$(P[R = 1 | A = a]) / (P[R = 1 | A = b]) \geq 0.8%$
+$(P[R = 1 | A = a]) / (P[R = 1 | A = b]) \geq 0.8$
 
 * Selection rate for a protected group (e.g., $A = a$) <
-highest rate => selection procedure considered as having "adverse
+80% of highest rate => selection procedure considered as having "adverse
 impact"
 * Guideline adopted by Federal agencies (Department of Justice, Equal
   Employment Opportunity Commission, etc.,) in 1978
