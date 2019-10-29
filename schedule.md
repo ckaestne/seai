@@ -21,10 +21,10 @@
 | Wed, Oct 16 | [Fairness in AI-Enabled Systems](https://ckaestne.github.io/seai/slides/13_fairness/fairness.html)  |   | [G3: Infrastructure Quality](https://github.com/ckaestne/seai/blob/master/assignments/G3_quality/assignment06.md) |
 | Mon, Oct 21 | [Fairness Definitions and Measurement](https://ckaestne.github.io/seai/slides/14_fairness_2/fairness2.html)  |   |   |
 | Wed, Oct 23 | [Ethics](https://ckaestne.github.io/seai/slides/15_ethics/ethics.html)  |   | [I4: Fairness](https://github.com/ckaestne/seai/blob/master/assignments/I4_fairness/assignment07.md) |
-| Mon, Oct 28 | Scalability and Distributed Systems     |   |   |
+| Mon, Oct 28 | [Scalability and Distributed Systems](https://ckaestne.github.io/seai/slides/16_distributed/systems.html)     |   |   |
 | Wed, Oct 30 | Managing and Processing Large Datasets  |   |   |
 | Mon, Nov 4  | Safety, Security, Adversarial Learning, and Feedback Loops   |   |   |
-| Wed, Nov 6  | Data Provenance, Reproducability, and Explainability    |   | G4: Test Automation  |
+| Wed, Nov 6  | Data Provenance, Reproducability, and Explainability    |   | [G4: Automated Model Updates](https://github.com/ckaestne/seai/blob/master/assignments/G4_continuousdelivery/assignment08.md)  |
 | Mon, Nov 11 | Process and Team Reflections    |   |   |
 | Wed, Nov 13 | Symbolic AI in Systems  |   | I5: Security   |
 | Mon, Nov 18 | AI Engineering for Self-Driving Cars    |   |   |
