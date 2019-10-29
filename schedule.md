@@ -22,7 +22,7 @@
 | Mon, Oct 21 | [Fairness Definitions and Measurement](https://ckaestne.github.io/seai/slides/14_fairness_2/fairness2.html)  |   |   |
 | Wed, Oct 23 | [Ethics](https://ckaestne.github.io/seai/slides/15_ethics/ethics.html)  |   | [I4: Fairness](https://github.com/ckaestne/seai/blob/master/assignments/I4_fairness/assignment07.md) |
 | Mon, Oct 28 | [Scalability and Distributed Systems](https://ckaestne.github.io/seai/slides/16_distributed/systems.html)     |   |   |
-| Wed, Oct 30 | Managing and Processing Large Datasets  |   |   |
+| Wed, Oct 30 | [Managing and Processing Large Datasets](https://ckaestne.github.io/seai/slides/17_dataatscale/data.md)  |   |   |
 | Mon, Nov 4  | Safety, Security, Adversarial Learning, and Feedback Loops   |   |   |
 | Wed, Nov 6  | Data Provenance, Reproducability, and Explainability    |   | [G4: Automated Model Updates](https://github.com/ckaestne/seai/blob/master/assignments/G4_continuousdelivery/assignment08.md)  |
 | Mon, Nov 11 | Process and Team Reflections    |   |   |
