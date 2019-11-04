@@ -23,7 +23,7 @@
 | Wed, Oct 23 | [Ethics](https://ckaestne.github.io/seai/slides/15_ethics/ethics.html)  |   | [I4: Fairness](https://github.com/ckaestne/seai/blob/master/assignments/I4_fairness/assignment07.md) |
 | Mon, Oct 28 | [Scalability and Distributed Systems](https://ckaestne.github.io/seai/slides/16_distributed/systems.html)     |   |   |
 | Wed, Oct 30 | [Managing and Processing Large Datasets](https://ckaestne.github.io/seai/slides/17_dataatscale/data.html)  |   |   |
-| Mon, Nov 4  | Safety, Security, Adversarial Learning, and Feedback Loops   |   |   |
+| Mon, Nov 4  | [Safety](https://ckaestne.github.io/seai/slides/18_safety/safety.html)   |   |   |
 | Wed, Nov 6  | Data Provenance, Reproducability, and Explainability    |   | [G4: Automated Model Updates](https://github.com/ckaestne/seai/blob/master/assignments/G4_continuousdelivery/assignment08.md)  |
 | Mon, Nov 11 | Process and Team Reflections    |   |   |
 | Wed, Nov 13 | Symbolic AI in Systems  |   | I5: Security   |
