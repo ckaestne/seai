@@ -246,9 +246,6 @@ events in FTA)
   * Most do not consider AI; new standards being developed (e.g., UL
     4600)
 
-----
-## Safety Standards
-
 ---
 # Designing for Safety
 
