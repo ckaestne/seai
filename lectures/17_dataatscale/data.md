@@ -14,7 +14,6 @@ Christian Kaestner
 
 Required reading: Martin Kleppmann. [Designing Data-Intensive Applications](https://dataintensive.net/). OReilly. 2017. Chapter 1
 
-
 ---
 
 # Learning Goals

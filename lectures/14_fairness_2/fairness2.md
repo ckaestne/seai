@@ -4,7 +4,7 @@ title: "17-445: Fairness Continued"
 semester: Fall 2019
 footer: "17-445 Software Engineering for AI-Enabled Systems, Christian
 Kaestner & Eunsuk Kang"
----  
+---
 
 # Fairness: Definitions and Measurements
 
