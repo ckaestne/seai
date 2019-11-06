@@ -29,13 +29,17 @@ Approach_ by Hernan, Lambert, Ostwald, and Shostack (MSDN, 2007).
 ## Elements of Security
 
 * Security requirements (policies)
+<!-- .element: class="fragment" -->
   * What does it mean for my system to be secure?
 * Threat model
+  <!-- .element: class="fragment" -->
   * What are the attacker's goal, capability, and incentive?
 * Attack surface
-  * Which parts of the system are exposed to the attacker?
+<!-- .element: class="fragment" -->
+	* Which parts of the system are exposed to the attacker?
 * Protection mechanisms
-  * How do we prevent the attacker from compromising a security requirement?
+<!-- .element: class="fragment" -->
+	* How do we prevent the attacker from compromising a security requirement?
 
 ----
 ## Security Requirements
@@ -56,12 +60,19 @@ Approach_ by Hernan, Lambert, Ostwald, and Shostack (MSDN, 2007).
 ----
 ## Confidentiality, integrity, or availability?
 
-* _Applications to the program can only be viewed by staff and faculty in the department._
-* _The application site should be able to handle requests on the
-  day of the application deadline._
-* _Application decisions are recorded only by the faculty and staff._ 
-* _The application site should backup all applications in case of a server failure._
-* _The acceptance notices can only be sent out by the program director._
+* Applications to the program can only be viewed by staff and faculty
+in the department.
+<!-- .element: class="fragment" -->
+* The application site should be able to handle requests on the
+day of the application deadline.
+<!-- .element: class="fragment" -->
+* Application decisions are recorded only by the faculty and staff.
+<!-- .element: class="fragment" -->
+* The application site should backup all applications in case of a
+server failure.
+<!-- .element: class="fragment" -->
+* The acceptance notices can only be sent out by the program director.
+<!-- .element: class="fragment" -->
 
 ---
 # Threat Modeling
@@ -78,7 +89,7 @@ Approach_ by Hernan, Lambert, Ostwald, and Shostack (MSDN, 2007).
   * __Goal__: What is the attacker trying to achieve?
   * __Capability__:
 	* Knowledge: What does the attacker know?
-	* Actions: What can the attacker perform?
+	* Actions: What can the attacker do?
 	* Resources: How much effort can it spend? 
   * __Incentive__: Why does the attacker want to do this?
 
@@ -88,14 +99,16 @@ Approach_ by Hernan, Lambert, Ostwald, and Shostack (MSDN, 2007).
 ## Attacker Goal
 
 * What is the attacker trying to achieve?
-* Example: College admission 
-  * Access other applicants info without being authorized
-  * Modify application status to “accepted”
-  * Cause website shutdown to sabotage other applicants
-* Relationship to security requirements
-  * Attacker’s goal achieved => requirement violated
-  * If not, the threat might not be relevant/important
-  * e.g., hack a website to display cat photos on front page; annoying, but not critical 
+  * Undermine one or more security requirements
+<!-- .element: class="fragment" -->
+* Example: College admission
+<!-- .element: class="fragment" -->
+	* Access other applicants info without being authorized
+	<!-- .element: class="fragment" -->
+	* Modify application status to “accepted”
+	<!-- .element: class="fragment" -->
+	* Cause website shutdown to sabotage other applicants
+	<!-- .element: class="fragment" -->
 
 ----
 ## Attacker Capability
@@ -103,17 +116,20 @@ Approach_ by Hernan, Lambert, Ostwald, and Shostack (MSDN, 2007).
 ![](admission-threat-model.jpg)
 
 * What are the attacker’s actions?
-  * Highly depends on system boundary & its exposed interfaces
-  * Use a system diagram to identify attack surface & actions
+  * Depends on system boundary & its exposed interfaces
+  * Use am architecture diagram to identify attack surface & actions
 * Example: College admission
+  <!-- .element: class="fragment" -->
   * Physical: Break into building & access server
+    <!-- .element: class="fragment" -->
   * Cyber: Send malicious HTTP requests for SQL injection,
-    DoS attack
+  DoS attack
+    <!-- .element: class="fragment" -->
   * Social: Send phishing e-mail, bribe an insider for access
+  <!-- .element: class="fragment" -->
 
 ----
-## System Diagram
-
+## Architecture Diagram for Threat Modeling
 
 ![](admission-threat-model.jpg)
 
@@ -149,11 +165,14 @@ Approach_ by Hernan, Lambert, Ostwald, and Shostack (MSDN, 2007).
 ## ML Attacker Goal
 
 * Confidentiality (privacy) attack
+  <!-- .element: class="fragment" -->
   * Infer a sensitive label for a data point (e.g., hospital record)
 * Integrity attacks
+    <!-- .element: class="fragment" -->
   * Induce a model to misclassify data points from one class to another
   * e.g., Spam filter: Classify a spam as a non-spam
 * Availability attacks
+    <!-- .element: class="fragment" -->
   * Reduce the accuracy of a model
   * Induce a model to misclassify many data points
 
@@ -164,7 +183,7 @@ Approach_ by Hernan, Lambert, Ostwald, and Shostack (MSDN, 2007).
 
 * Knowledge: Does the attacker have access to the model?
   * Training data? Learning algorithm used? Parameters?
-* Actions:
+* Attacker actions:
   * Training time: __Poisoning attack__
   * Inference time: __Evasion attack__
 
@@ -176,11 +195,15 @@ _Understanding Machine Learning_, Bhogavalli (2019)
 
 ![](virus.png)
 
-* Availability: Inject mislabeled training data to damage model quality
+* Availability: Inject mislabeled training data to damage model
+quality
+  <!-- .element: class="fragment" -->
   * 3% poisoning => 11% decrease in accuracy (Steinhardt, 2017)
 * Attacker must have some access to the training set
+    <!-- .element: class="fragment" -->
   * e.g., models trained on public data set (e.g., ImageNet)
 * Example: Anti-virus (AV) scanner
+  <!-- .element: class="fragment" -->
   * Online platform for submission of potentially malicious code
   * Some AV company (allegedly) poisoned competitor's model
   
@@ -213,8 +236,10 @@ Networks_, Shafahi et al. (2018)
 ![](data-sanitization.png)
 
 * Anomaly detection & data sanitization
+<!-- .element: class="fragment" -->
   * Identify and remove outliers in training set
 * Quality control over your training data
+  <!-- .element: class="fragment" -->
   * Who can modify or add to my training set? Do I trust the data
   source?
   * Use security mechanisms (e.g., authentication) and logging to
@@ -255,12 +280,15 @@ Face Recognition_, Sharif et al. (2016).
 ![](stop-sign.png)
 
 * Adversarial training
+  <!-- .element: class="fragment" -->
   * Generate/find a set of adversarial examples
   * Re-train your model with correct labels
 * Input sanitization
+    <!-- .element: class="fragment" -->
   * "Clean" & remove noise from input samples 
   * e.g., Color depth reduction, spatial smoothing, JPEG compression
 * Redundancy: Design multiple mechanisms to detect an attack
+  <!-- .element: class="fragment" -->
   * Stop sign: Insert a barcode as a checksum; harder to bypass
 
 
@@ -274,10 +302,13 @@ _Reliable Smart Road Signs_, Sayin et al. (2019).
 ![](arms-race.jpg)
 
 * On-going arms race (mostly among researchers)
+  <!-- .element: class="fragment" -->
   * Defenses proposed & quickly broken by noble attacks
 * Assume ML component is likely vulnerable
+  <!-- .element: class="fragment" -->
   * Design your system to minimize impact of an attack
 * Remember: There may be easier ways to compromise system
+  <!-- .element: class="fragment" -->
   * e.g., poor security misconfiguration (default password), lack of
     encryption, code vulnerabilities, etc., 
 
@@ -288,9 +319,11 @@ _Reliable Smart Road Signs_, Sayin et al. (2019).
 ## Secure Design Principles 
 
 * Principle of Least Privilege
+  <!-- .element: class="fragment" -->
   * A component should be given the minimal privileges needed to fulfill its functionality
   * Goal: Minimize the impact of a compromised component
 * Isolation
+  <!-- .element: class="fragment" -->
   * Components should be able to interact with each other no more than necessary
   * Goal: Reduce the size of trusted computing base (TCB) 
   * TCB: Components responsible for establishing a security requirement(s)
@@ -326,19 +359,22 @@ Flaw in one component =>  Limited impact on the rest of the system!
 ## Example: Mail Client
 
 * Requirements
+<!-- .element: class="fragment" -->
   * Receive & send email over external network
   * Place incoming email into local user inbox files
 * Sendmail
-  * Monolithic design
+  <!-- .element: class="fragment" -->
+  * Monolithic design; entire program runs as UNIX root
   * Historical source of many vulnerabilities
 * Qmail: “Security-aware” mail agent
+  <!-- .element: class="fragment" -->
   * Compartmentalized design
   * Isolation based on OS process isolation
 	* Separate modules run as separate “users” (UID)
-	* Each user only has access to specific resources (files, network sockets, …)
+	* Mutually distrusting processes
   * Least privilege 
-	* Minimal privileges for each UID
-	* Only one “root” user (with all privileges); in comparison, entire sendmail runs as root
+	* Minimal privileges for each UID; access to specific resources (files, network sockets, …)
+	* Only one “root” user (with all privileges)
 
 ----
 ## Qmail Architecture
