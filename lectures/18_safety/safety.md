@@ -195,7 +195,7 @@ possible deviations from expected behavior
 
 ![](hazop-eb.jpg)
 
-* Specificaton: EB must apply a maximum braking
+* Specification: EB must apply a maximum braking
 command to the engine.
   * __NONE__: EB does not generate any braking command.
   * __LESS__: EB applies less than max. braking.
@@ -216,10 +216,10 @@ command to the engine.
 
 ![](hazop-perception.jpg)
 
-* What is the specifcation of the perception component?
+* What is the specification of the perception component?
 * Use HAZOP to answer:
   * What are possible deviations from the specification?
-  * What are potential hazards resulting from these deviatations?
+  * What are potential hazards resulting from these deviations?
 
 ----
 ## HAZOP: Benefits & Limitations
@@ -308,7 +308,7 @@ events in FTA)
 
 * __Goal__: When a component fails, continue to provide the same
   functionality 
-* __Hot Standby__: Stanby watches & takes over when primary fails
+* __Hot Standby__: Standby watches & takes over when primary fails
 * __Voting__: Select the majority decision
 * Caution: Do components fail independently?
   * Reasonable assumption for hardware/mechanical failures
@@ -321,7 +321,7 @@ events in FTA)
 
 * __Goal__: When a component fails, continue to provide the same
   functionality 
-* __Hot Standby__: Stanby watches & takes over when primary fails
+* __Hot Standby__: Standby watches & takes over when primary fails
 * __Voting__: Select the majority decision
 * Caution: Do components fail independently?
   * Reasonable assumption for hardware/mechanical failures
@@ -365,7 +365,7 @@ events in FTA)
   * Add monitors/checks at interfaces
 * Identify and eliminate implicit interactions
   * Memory: Shared memory, global variables
-  * CPU resources: LC tasks running at high-priorty, starving HC tasks
+  * CPU resources: LC tasks running at high-priority, starving HC tasks
 * Is AI in my system performing an LC or HC task?
   * If HC, can we "demote" it into LC?
 
