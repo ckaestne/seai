@@ -44,6 +44,6 @@ The assignment is worth 100 points. For full credit, we expect:
 * Q1. Identification of security requirements (10 pt)
 * Q2. Construction of an architecture diagram that sufficiently enables reasoning about potential threats (25 pt)
 * Q3. Description of attacker goals (10 pt)
-* Q4. Identification of potential threats on the system (35 pt)
+* Q4. Identification of potential threats and mitigations on the system (35 pt)
 * Q5. Discussion of limitations of threat modeling (10 pt)
 * A clearly structured, well written document (10 pt)
