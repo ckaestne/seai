@@ -25,7 +25,7 @@
 | Wed, Oct 30 | [Managing and Processing Large Datasets](https://ckaestne.github.io/seai/slides/17_dataatscale/data.html)  |   |   |
 | Mon, Nov 4  | [Safety](https://ckaestne.github.io/seai/slides/18_safety/safety.html)   |   |   |
 | Wed, Nov 6  | [Security](https://ckaestne.github.io/seai/slides/19_security/security.html)    |   | [G4: Automated Model Updates](https://github.com/ckaestne/seai/blob/master/assignments/G4_continuousdelivery/assignment08.md)  |
-| Mon, Nov 11 | Process and Team Reflections    |   |   |
+| Mon, Nov 11 | [Process and Team Reflections](https://ckaestne.github.io/seai/slides/20_teams/teams.html)    |   |   |
 | Wed, Nov 13 | AI Engineering for Self-Driving Cars  |   | I5: Security   |
 | Mon, Nov 18 | Data Provenance, Reproducability, and Explainability    |   |   |
 | Wed, Nov 20 | Symbolic AI   |   |   |
