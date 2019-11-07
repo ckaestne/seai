@@ -26,7 +26,7 @@ Questions:
 
 **Question 2:** Construct an architecture diagram with which you can reason about potential security threats on the system. Show key system components, connections between them (e.g., data flow, invocation of an API function), and a trust boundary that indicates which of the components may be malicious. Be sure to include a legend.
 
-Your diagram must include, at minimum, the following components and connections between them: (1) an ML-based component for perception, (2) an ML component for speech dialogue, (3) a cloud-based learning component that periodically retrains a model, (4) a component that stores the log of a Fay's interaction with humans and uploads it to the cloud, and (5) a human user that interacts with Fay.
+Your diagram must include, at minimum, the following components and connections between them: (1) an ML-based component for perception, (2) an ML component for speech dialogue, (3) a cloud-based learning component that periodically re-trains a model, (4) a component that stores the log of a Fay's interaction with humans and uploads it to the cloud, and (5) a human user that interacts with Fay.
 
 **Question 3:** For each of the potentially malicious actors that you identified in Question 2, state its goal(s): What is it trying to achieve by carrying out an attack? Describe how the attacker's goals are related to the requirements that you stated in Question 1. 
 
