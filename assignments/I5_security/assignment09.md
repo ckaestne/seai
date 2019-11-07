@@ -34,8 +34,7 @@ Your diagram must include, at minimum, the following components and connections 
 
 **Question 5:** For at least three of the threats that you identified in Question 4, describe a potential mitigation strategy.
 
-* Hint: See [this article](https://blogs.msdn.microsoft.com/larryosterman/2007/09/05/threat-modeling-again-stride-mitigations/). 
- for common mitigations to threats in STRIDE.
+* Hint: See [this article](https://blogs.msdn.microsoft.com/larryosterman/2007/09/05/threat-modeling-again-stride-mitigations/) for common mitigations to threats in STRIDE.
 
 **Question 6:** If the system is implemented with mitigations against the threats you've identified, does this guarantee that the system will be completely secure? Based on your experience with Questions 1 to 5, discuss at least two fundamental limitations of threat modeling.
 
