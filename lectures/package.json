@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "presentation": "reveal-md .",
+    "run": "reveal-md . -w",
     "generate": "reveal-md . --static"
   },
   "repository": {
