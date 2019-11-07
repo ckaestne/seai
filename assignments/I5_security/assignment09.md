@@ -30,9 +30,12 @@ Your diagram must include, at minimum, the following components and connections 
 
 **Question 3:** For each of the potentially malicious actors that you identified in Question 2, state its goal(s): What is it trying to achieve by carrying out an attack? Describe how the attacker's goals are related to the requirements that you identified in Question 1. 
 
-**Question 4:** Identify a list of actions (i.e., threats) that an attacker may perform in order to achieve its goals. In particular, enumerate the six categories of threats from the STRIDE approach (i.e., spoofing, tampering, repudiation, information disclosure, denial of service, and elevation of privilege) and ML-specific attacks discussed in class (poisoning and evasion attacks): For each of these attacks, describe (1) whether the attack is relevant to what the attacker is trying to achieve (i.e., the attacker's goals from Q3), (2) which of the connections you identified in Q2 are vulnerable to this attack, and (3) a potential mitigation strategy for each of the vulnerable connections.
+**Question 4:** Identify a list of actions (i.e., threats) that an attacker may perform in order to achieve its goals. In particular, enumerate the six categories of threats from the STRIDE approach (i.e., spoofing, tampering, repudiation, information disclosure, denial of service, and elevation of privilege) and ML-specific attacks discussed in class (poisoning and evasion attacks): For each of these attacks, describe:
+* (1) whether the attack is relevant to what the attacker is trying to achieve (i.e., the attacker's goals from Q3)
+* (2) which of the connections you identified in Q2 are vulnerable to this attack
+* (3) a potential mitigation strategy for each of the vulnerable connections.
 
-* Hint: See [this article](https://blogs.msdn.microsoft.com/larryosterman/2007/09/05/threat-modeling-again-stride-mitigations/) for common mitigations to threats in STRIDE.
+__Hint__: See [this article](https://blogs.msdn.microsoft.com/larryosterman/2007/09/05/threat-modeling-again-stride-mitigations/) for common mitigations to threats in STRIDE.
 
 **Question 5:** If the system is implemented with mitigations against the threats you've identified, does this guarantee that the system will be completely secure? Based on your experience with Questions 1 to 4, discuss at least two fundamental limitations of threat modeling.
 
