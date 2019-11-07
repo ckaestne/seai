@@ -30,13 +30,11 @@ Your diagram must include, at minimum, the following components and connections 
 
 **Question 3:** For each of the potentially malicious actors that you identified in Question 2, state its goal(s): What is it trying to achieve by carrying out an attack? Describe how the attacker's goals are related to the requirements that you identified in Question 1. 
 
-**Question 4:** Identify a list of actions (i.e., threats) that an attacker may perform in order to achieve its goals. In particular, for each connection that you identified in Question 2, consider the six categories of threats from the STRIDE approach (i.e., spoofing, tampering, repudiation, information disclosure, denial of service, and elevation of privilege) as well as ML-specific attacks discussed in class (poisoning and evasion attacks). Note that not all of these threats may be relevant to the security requirements of this system; include only those that are relevant.
-
-**Question 5:** For at least three of the threats that you identified in Question 4, describe a potential mitigation strategy.
+**Question 4:** Identify a list of actions (i.e., threats) that an attacker may perform in order to achieve its goals. In particular, for each connection that you identified in Question 2, enumerate the six categories of threats from the STRIDE approach (i.e., spoofing, tampering, repudiation, information disclosure, denial of service, and elevation of privilege) and ML-specific attacks discussed in class (poisoning and evasion attacks). Not all of these threats will be applicable to this system; indicate which ones are relevant, and for each one of them, describe a mitigation strategy.
 
 * Hint: See [this article](https://blogs.msdn.microsoft.com/larryosterman/2007/09/05/threat-modeling-again-stride-mitigations/) for common mitigations to threats in STRIDE.
 
-**Question 6:** If the system is implemented with mitigations against the threats you've identified, does this guarantee that the system will be completely secure? Based on your experience with Questions 1 to 5, discuss at least two fundamental limitations of threat modeling.
+**Question 6:** If the system is implemented with mitigations against the threats you've identified, does this guarantee that the system will be completely secure? Based on your experience with Questions 1 to 4, discuss at least two fundamental limitations of threat modeling.
 
 Submit your answers as a single PDF document to Canvas by [see Canvas]. Make sure your document is clearly structured, such that it is recognizable which answer belongs to which question.
 
@@ -46,7 +44,6 @@ The assignment is worth 100 points. For full credit, we expect:
 * Q1. Identification of security requirements (10 pt)
 * Q2. Construction of an architecture diagram that sufficiently enables reasoning about potential threats (25 pt)
 * Q3. Description of attacker goals (10 pt)
-* Q4. Identification of potential threats on the system (25 pt)
-* Q5. Discussion of mitigation strategies (10 pt)
-* Q6. Discussion of limitations of threat modeling (10 pt)
+* Q4. Identification of potential threats on the system (35 pt)
+* Q5. Discussion of limitations of threat modeling (10 pt)
 * A clearly structured, well written document (10 pt)
