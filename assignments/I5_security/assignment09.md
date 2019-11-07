@@ -30,7 +30,7 @@ Your diagram must include, at minimum, the following components and connections 
 
 **Question 3:** For each of the potentially malicious actors that you identified in Question 2, state its goal(s): What is it trying to achieve by carrying out an attack? Describe how the attacker's goals are related to the requirements that you identified in Question 1. 
 
-**Question 4:** Identify a list of actions (i.e., threats) that an attacker may perform in order to achieve its goals. In order to do this, for each connection that you identified in Question 2, consider the six categories of threats from the STRIDE approach (i.e., spoofing, tampering, repudiation, information disclosure, denial of service, and elevation of privilege) as well as ML-specific attacks discussed in class (poisoning and evasion attacks). Note that not all of these threats may be relevant to the security requirements of this system; include only those that are relevant.
+**Question 4:** Identify a list of actions (i.e., threats) that an attacker may perform in order to achieve its goals. In particular, for each connection that you identified in Question 2, consider the six categories of threats from the STRIDE approach (i.e., spoofing, tampering, repudiation, information disclosure, denial of service, and elevation of privilege) as well as ML-specific attacks discussed in class (poisoning and evasion attacks). Note that not all of these threats may be relevant to the security requirements of this system; include only those that are relevant.
 
 **Question 5:** For at least three of the threats that you identified in Question 4, describe a potential mitigation strategy.
 
