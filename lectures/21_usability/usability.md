@@ -29,8 +29,6 @@ Chapter 8.
 
 ![](echo.jpg)
 
-https://www.nngroup.com/articles/intelligent-assistant-usability/
-
 ----
 ## Dimensions of Usability
 
