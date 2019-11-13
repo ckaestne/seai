@@ -84,12 +84,17 @@ https://www.nngroup.com/articles/usability-101-introduction-to-usability/
 * Automate when:
   <!-- .element: class="fragment" -->
   * User lacks knowledge/ability to perform the task (e.g., prediction)
+    <!-- .element: class="fragment" -->
   * Boring, repetitive, dangerous tasks
+    <!-- .element: class="fragment" -->
 * Augment when:
 <!-- .element: class="fragment" -->
   * High stakes & accountability needed
+     <!-- .element: class="fragment" -->
   * Difficult to communicate user's need to AI
+     <!-- .element: class="fragment" -->
   * User enjoys performing the task (e.g., driving)
+     <!-- .element: class="fragment" -->
 
 ----
 ##  User Needs for Intelligent Assistant
