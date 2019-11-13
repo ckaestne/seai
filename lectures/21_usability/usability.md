@@ -6,7 +6,7 @@ footer: "17-445 Software Engineering for AI-Enabled Systems, Christian
 Kaestner & Eunsuk Kang"
 ---
 
-# Security
+# Usability
 
 Eunsuk Kang
 
@@ -57,7 +57,7 @@ https://www.nngroup.com/articles/usability-101-introduction-to-usability/
 
 
 ----
-##  Voice-Controlled Intelligent Assistant
+##  Interaction Cost for Intelligent Assistants
 
 ![](echo.jpg)
 
@@ -82,9 +82,11 @@ https://www.nngroup.com/articles/usability-101-introduction-to-usability/
 * For each task, decide between __automate vs. augment__
   * Is AI good for this particular task?
 * Automate when:
+  <!-- .element: class="fragment" -->
   * User lacks knowledge/ability to perform the task (e.g., prediction)
   * Boring, repetitive, dangerous tasks
 * Augment when:
+<!-- .element: class="fragment" -->
   * High stakes & accountability needed
   * Difficult to communicate user's need to AI
   * User enjoys performing the task (e.g., driving)
@@ -94,7 +96,7 @@ https://www.nngroup.com/articles/usability-101-introduction-to-usability/
 
 ![](echo.jpg)
 
-* What user needs are assistants designed to fulfill?
+* What user needs are intelligent assistants designed to fulfill?
 * Which of these are automated? Augmented?
 
 ----
@@ -103,13 +105,15 @@ https://www.nngroup.com/articles/usability-101-introduction-to-usability/
 ![](mental-model.jpg)
 
 * What the user believes about the system
+<!-- .element: class="fragment" -->
   * Plans actions based on the model
   * Belief, not facts: May not reflect the reality, only what
     user believes
 * Challenge: Align system with the user's mental model
+<!-- .element: class="fragment" -->
   * Mismatch between user's & designer's mental models
-  * User's model may be preconceived based on prior experience
-  * User's model may evolve over time
+  * User's model preconceived based on prior experience
+  * User's model evolving over time
 
 ----
 ## Example: Shopping Cart Checkout 
@@ -148,9 +152,11 @@ https://baymard.com/blog/checkout-process-should-be-linear
 * User: "What is the AI doing, and how do I use it?"
   * Typically less transparent than traditional applications
 * Unclear inputs: What are possible actions? Which of these actions matter? When
-    does my action take effect?
+does my action take effect?
+<!-- .element: class="fragment" -->
 * Lack of control over output: Why am I being given these
   recommendations? Why is the output displayed in this order?
+<!-- .element: class="fragment" -->
 
 <!-- references -->
 https://www.nngroup.com/articles/machine-learning-ux/
@@ -159,11 +165,14 @@ https://www.nngroup.com/articles/machine-learning-ux/
 ## Design Principles: Mental Model 
 
 * Identify user's existing mental models
+<!-- .element: class="fragment" -->
   * Find similar apps & identify common patterns
 * Make the system conform to the user's mental model
+  <!-- .element: class="fragment" -->
   * Collect & analyze errors made by user
   * Do these point to a mismatch vs. user's mental model?
 * Improve/adjust the user's mental model
+<!-- .element: class="fragment" -->
   * Set user's expectations through onboarding 
   * Increase transparency and explain decisions made by AI
 
@@ -198,8 +207,8 @@ https://www.nngroup.com/articles/machine-learning-ux/
 
 * Reasons for failures:
   * (1) User doesn't know how to get AI to do X
-  * (2) AI simply can't do X
-* Users settle on simpler tasks over time; small improvements
+  * (2) User says X, but AI simply can't do X
+* Users settle on simpler tasks over time; small but limited improvements
 
 ----
 ## Failing to User's Expectations 
@@ -216,14 +225,18 @@ https://www.nngroup.com/articles/mental-model-ai-assistants/
 ## Dealing with Errors
 
 * Define errors & failures
+<!-- .element: class="fragment" -->
   * User errors: Mistakes made by users (e.g., click on a wrong button)
   * System errors: Failure of a system to provide correct outcome
     (e.g., bad movie recommendation)
 * Detect & record occurrences of errors
+<!-- .element: class="fragment" -->
 * Identify sources of errors
+<!-- .element: class="fragment" -->
   * User errors: Mismatched mental model or poor UX design
   * System errors: Poor model accuracy, training data, etc.,
 * Provide actionable error messages & guidelines
+<!-- .element: class="fragment" -->
 
 ----
 ## Error Messages: Suggest user actions
@@ -260,14 +273,18 @@ https://www.nngroup.com/articles/mental-model-ai-assistants/
 ## Feedback and Control
 
 * Implicit feedback: Data about user behaviors collected by system
+<!-- .element: class="fragment" -->
   * e.g., times of day, duration of usage, 
     recommendations accepted/rejected, click patterns, etc.,
 * Explicit feedback: Prompted or deliberately provided by user
+<!-- .element: class="fragment" -->
   * Surveys, ratings, thumbs up, feedback forms, etc., 
 * Design considerations for feedback
+<!-- .element: class="fragment" -->
   * Align feedback with improving interactions (and AI)
   * Acknowledge user feedback & respond immediately 
 * In addition to feedback, provide a way for user to adjust AI behavior
+<!-- .element: class="fragment" -->
 
 ----
 ## Responding to Feedback 
