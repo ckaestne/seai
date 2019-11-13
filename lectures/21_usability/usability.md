@@ -220,7 +220,9 @@ https://www.nngroup.com/articles/machine-learning-ux/
 
 >“So, this week, I realized that I don't use my IA nearly as much as I thought I did. I do use it often. However it's very much normally the same like five things over and over again."
 
-Poor UX design => User settles on a suboptimal mental model & fails to benefit from the full capabilities of AI.
+* Poor UX design => User settles on a suboptimal mental model & fails to benefit from the full capabilities of AI.
+* Q. What are some possible ways to improve user's mental model?
+  Onboarding? Explaining outcomes?
 
 <!-- references -->
 
