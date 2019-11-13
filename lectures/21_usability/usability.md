@@ -25,7 +25,7 @@ Chapter 8.
 # Usability
 
 ----
-##  Voice-Controlled Intelligent Assistants
+## Case Study: Voice-Controlled Intelligent Assistants
 
 ![](echo.jpg)
 
