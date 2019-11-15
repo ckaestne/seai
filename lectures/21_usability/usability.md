@@ -1,9 +1,8 @@
 ---
 author: Eunsuk Kang
-title: "17-445: Security"
+title: "17-445: Usability"
 semester: Fall 2019
-footer: "17-445 Software Engineering for AI-Enabled Systems, Christian
-Kaestner & Eunsuk Kang"
+footer: "17-445 Software Engineering for AI-Enabled Systems, Christian Kaestner & Eunsuk Kang"
 ---
 
 # Usability
