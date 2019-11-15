@@ -63,7 +63,7 @@ We expect an available recommendation service that is running through the period
 * **Description of Monitoring and Detection Infrastructure** (2 page max): Describe the architecture of your monitoring and detection infrastructure and discuss how you could scale it as the system becomes more used.
 Explain how your implementation achieves detection of feedback loops or adversarial attacks described in the previous sections. Clearly explain your detection mechanism in the report with clear mapping to source code. Document assumptions, if you make any. 
 * **Screenshots of Reports:** Provide screenshots of your reports for all three teams. Include some explanation of how to read the reports if necessary.
-* **Service Reflection** (1 page max): Looking back at the entire semester in which you have designed, implemented, deployed, and monitored the recommendation service. What parts were the most challenging? Which aspects are still unstable and would require additional investment if you had to deploy the recommendation service at scale in production? How would you address these issues if you had more time and more resources?
+* **Recommendation Service Reflection** (1 page max): Looking back at the entire semester in which you have designed, implemented, deployed, and monitored the recommendation service. What parts were the most challenging? Which aspects are still unstable and would require additional investment if you had to deploy the recommendation service at scale in production? How would you address these issues if you had more time and more resources?
 * **Team reflection** (1 page max): Think back on your team's teamwork throughout this semester. What went well or less well in the team assignments? What were some of the main challenges you faced in teamwork?  What could have been done better in your future collaboration in other teams? We are looking for honest reflections that are open about potential issues; we grade only the quality of the reflection, not the quality of the teamwork described in the reflection.
 
 As usual, all page limits are soft limits that can be broken if there is a specific reason. Screenshots and figures do not count toward the page limit.
@@ -74,6 +74,14 @@ As usual, all page limits are soft limits that can be broken if there is a speci
 
 
 We will use approximately the following rubric for a total of 200 points:
- - tbd.
+ - [ ] 30 points: Appropriate discussion of at least 2 potential feedback loops, their consequences, and their possible detection.
+ - [ ] 30 points: Appropriate discussion of at least 2 potential attacks and corresponding detection and mitigation strategies.
+ - [ ] 15 points: Description of the monitoring and detection infrastructure
+ - [ ] 35 points: Implementation of the monitoring service using the Lambda architecture, using both batch and stream processing
+ - [ ] 20 points: Web service showing results for all 3 teams (screenshots + working service)
+ - [ ] 15 points: High availability of the recommendation service throughout this assignment
+ - [ ] 20 points: Meaningful recommendation-service reflection, grounded in your experiences throughout this semester, beyond superficial statements and mere truisms.
+ - [ ] 20 points: Meaningful teamwork reflection, grounded in your experiences throughout this semester, beyond superficial statements and mere truisms.
+ - [ ] 15 points: Report and code quality, including quality of your commit log
 
 Unless exceptional situations arise that require a discussion with the course staff, all team members who contribute to the solution will receive the same grade. Please try to first solve teamwork issues within the team and contact the course staff for advice and help if the situation does not improve.
