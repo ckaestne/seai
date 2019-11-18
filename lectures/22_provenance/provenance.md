@@ -414,7 +414,7 @@ Source: B. Zhou, A. Khosla, A. Lapedriza, A. Oliva, and A. Torralba. [Learning D
 | | | |
 |-|-|-|
 | IF | age between 18-20 and sex is male | THEN predict arrest (within 2 years) |
-| ELSE IF | age between 21-23 and 2-3 prior offenses | THEN predict arrest }
+| ELSE IF | age between 21-23 and 2-3 prior offenses | THEN predict arrest |
 | ELSE IF | more than three priors | THEN predict arrest |
 | ELSE |predict no arrest.| |
 
@@ -429,7 +429,7 @@ Rudin, Cynthia. "Stop explaining black box machine learning models for high stak
 
 * Provenance is important for debugging and accountability, versioning and data tracking
 * Algorithmic transparency can impact users and usability
-* Explainability is an open challenge, explainable models vs post-hoc extracted explanations
+* Explainability is an open challenge, interpretable models vs post-hoc extracted explanations
 
 
 
