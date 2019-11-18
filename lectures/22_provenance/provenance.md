@@ -227,6 +227,7 @@ Eslami, Motahhare, Aimee Rickman, Kristen Vaccaro, Amirhossein Aleyasen, Andy Vu
 
 ----
 ## Case Study: Facebook's Feed Curation
+<!-- smallish -->
 
 * 62% of interviewees were not aware of curation algorithm
 * Surprise and anger when learning about curation
@@ -242,6 +243,10 @@ family were not shown in their feeds [...] participants often attributed missing
 
 Eslami, Motahhare, Aimee Rickman, Kristen Vaccaro, Amirhossein Aleyasen, Andy Vuong, Karrie Karahalios, Kevin Hamilton, and Christian Sandvig. [I always assumed that I wasn't really that close to [her]: Reasoning about Invisible Algorithms in News Feeds](http://eslamim2.web.engr.illinois.edu/publications/Eslami_Algorithms_CHI15.pdf). In Proceedings of the 33rd annual ACM conference on human factors in computing systems, pp. 153-162. ACM, 2015.
 
+----
+## Case Study: HR Application Screening
+
+[![Twitter post](hiringai.png)](https://twitter.com/TheWrongNoel/status/1194842728862892033)
 
 ----
 ## Appropriate Level of Algorithmic Transparency
@@ -254,7 +259,10 @@ How to design? How much control to give?
 
 ---
 
-# Explainability
+# Explainability & Interpretability
+
+
+
 
 ----
 
@@ -342,7 +350,7 @@ Source: https://towardsdatascience.com/a-guide-to-decision-trees-for-machine-lea
 
 * Learn simpler model by sampling from more complex one
     - e.g., decision tree learned from DNN outputs
-* Sensitivity analysis to identify key parameters
+* Roughly: Sensitivity analysis to identify key parameters
 
 ----
 ## SHAP Analysis (SHapley Additive exPlanation)
@@ -373,7 +381,7 @@ Source: https://www.datasciencecentral.com/profiles/blogs/demystifying-black-box
 ----
 ## "Stop explaining black box machine learning models for high stakes decisions and use interpretable models instead"
 
-<!-- small -->
+<!-- smallish -->
 
 Hypotheses:
 * It is a myth that there is necessarily a trade-off between accuracy and interpretability (when having meaningful features)
@@ -387,6 +395,34 @@ Hypotheses:
 
 Rudin, Cynthia. "Stop explaining black box machine learning models for high stakes decisions and use interpretable models instead." Nature Machine Intelligence 1.5 (2019): 206-215. ([Preprint](https://arxiv.org/abs/1811.10154))
 
+----
+
+## Attention Maps
+
+![Attention Maps](attentionmap.jpeg)
+
+Identifies which parts of the input lead to decisions (but not why!)
+
+<!-- references -->
+
+Source: B. Zhou, A. Khosla, A. Lapedriza, A. Oliva, and A. Torralba. [Learning Deep Features for Discriminative Localization](http://cnnlocalization.csail.mit.edu/Zhou_Learning_Deep_Features_CVPR_2016_paper.pdf). CVPR'16 
+
+----
+
+## CORELS’ model for recidivism risk prediction
+
+| | | |
+|-|-|-|
+| IF | age between 18-20 and sex is male | THEN predict arrest (within 2 years) |
+| ELSE IF | age between 21-23 and 2-3 prior offenses | THEN predict arrest }
+| ELSE IF | more than three priors | THEN predict arrest |
+| ELSE |predict no arrest.| |
+
+Simple, interpretable model with comparable accuracy to proprietary COMPAS model
+
+<!-- references -->
+
+Rudin, Cynthia. "Stop explaining black box machine learning models for high stakes decisions and use interpretable models instead." Nature Machine Intelligence 1.5 (2019): 206-215. ([Preprint](https://arxiv.org/abs/1811.10154))
 
 ---
 # Summary
