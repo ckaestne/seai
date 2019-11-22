@@ -26,7 +26,9 @@ as authors of the recommendation system. Plan how you would detect such a
 feedback loop and what you can do to avoid negative consequences once detected.
 
 **Adversarial attacks:** Think about how users or other stakeholders might try 
-to attack your recommendation system. Again, think about how you would 
+to attack your recommendation system. 
+Focus on attacks against the ML component, as discussed in class (e.g., poisoning and evasion attacks).
+Again, think about how you would 
 (a) make it harder to attack the system, 
 (b) detect such attack and 
 (c) what to do once detected.
@@ -59,7 +61,7 @@ You may create a separate team repository for this assignment on [Github Classro
 We expect an available recommendation service that is running through the period of this assignment. We expect a running implementation of the monitoring and detection service for all three teams in your virtual machine and the documented code of that service (following the lambda architecture) in your team's GitHub repository. Finally, upload a report to Canvas that covers the following sections:
 
 * **Analysis of Potential Feedback Loops** (2 pages max): Describe the process you used to analyze feedback loops and any potential (at least 2) feedback loops you identified. For each feedback loop, explain what might happen and what the positive or negative consequences are, and how it could be detected.
-* **Analysis of Potential Attacks** (2 pages max): Describe the process you used to analyze potential attacks and any potential (at least 2) attacks you identified. For each potential attack, describe the attack scenario, how it could be detected, how it could be mitigated or made harder to exploit, and what could be done once detected.
+* **Analysis of Potential Attacks** (2 pages max): Describe the process you used to analyze potential attacks and any potential (at least 2) attacks against the ML component you identified. For each potential attack, describe the attack scenario, how it could be detected, how it could be mitigated or made harder to exploit, and what could be done once detected.
 * **Description of Monitoring and Detection Infrastructure** (2 page max): Describe the architecture of your monitoring and detection infrastructure and discuss how you could scale it as the system becomes more used.
 Explain how your implementation achieves detection of feedback loops or adversarial attacks described in the previous sections. Clearly explain your detection mechanism in the report with clear mapping to source code. Document assumptions, if you make any. 
 * **Screenshots of Reports:** Provide screenshots of your reports for all three teams. Include some explanation of how to read the reports if necessary.
