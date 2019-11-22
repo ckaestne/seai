@@ -28,11 +28,12 @@
 | Mon, Nov 11 | [Process and Team Reflections](https://ckaestne.github.io/seai/slides/20_teams/teams.html)    |   |   |
 | Wed, Nov 13 | [Usability](https://ckaestne.github.io/seai/slides/21_usability/usability.html) |   | [I5: Security](https://github.com/ckaestne/seai/blob/master/assignments/I5_security/assignment09.md)   |
 | Mon, Nov 18 | [Data Provenance, Reproducability, and Explainability](https://ckaestne.github.io/seai/slides/22_provenance/provenance.html)    |   |   |
-| Wed, Nov 20 | Symbolic AI   |   |   |
+| Wed, Nov 20 | Symbolic AI (guest lecture)  |   |   |
 | Mon, Nov 25 | **No class** |   | |
 | Wed, Nov 27 | **Thanksgiving, no class**    |   | |
 | Mon, Dec 2  | Planning an AI-Enabled Product in a Startup |   |   |
 | Wed, Dec 4  | Summary and Review  |  | [G5: System monitoring](https://github.com/ckaestne/seai/blob/master/assignments/G5_feedbackloop/assignment10.md) |
+| Sun, Dec 15 | **Final exam** (in WEH 4623, 8:30-11:30) ||
 
 
 
