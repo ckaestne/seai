@@ -23,8 +23,8 @@ Any ML related risks?
 <!-- .element: class="fragment" -->
 	* Data collection? Telemetry? Model quality? Security or privacy
       issues?  Safety? Ethical or legal? 
-* What are ways to test your hypothesis and reduce the risks? What
-MVPs can you build to do so?
+* What are ways to test your hypothesis and address these specific risks? What
+MVPs can you use to do so?
 <!-- .element: class="fragment" -->
 
 ----
@@ -58,7 +58,7 @@ Idea: Let's commercialize the software and sell to academics and conference orga
 * Q2. Potential risks that might cause the hypothesis to fail? List
 three.
 <!-- .element: class="fragment" -->
-* Q3. MVPs to test your hypothesis and reduce the risks?
+* Q3. MVPs to test your hypothesis and reduce the specific risks?
 <!-- .element: class="fragment" -->
 
 ----
@@ -71,7 +71,7 @@ three.
 * Q2. Potential risks that might cause the hypothesis to fail? List
 three.
 <!-- .element: class="fragment" -->
-* Q3. MVPs to test your hypothesis and reduce the risks?
+* Q3. MVPs to test your hypothesis and reduce the specific risks?
 <!-- .element: class="fragment" -->
 
 ---
