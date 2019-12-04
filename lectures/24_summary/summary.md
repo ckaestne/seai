@@ -2002,7 +2002,7 @@ Boundaries_, Olteanu et al., Frontiers in Big Data (2016).
 
 Guest Lecture
 
-## Software engineering for machine learning at Microsoft
+# Software engineering for machine learning at Microsoft
 
 Andy Begel
 
@@ -3173,7 +3173,6 @@ Guest Lecture
 Bradley Schmerl
 
 
----
 
 ---
 
