@@ -3,9 +3,17 @@ author: Christian Kaestner and Ensuk Kang
 title: "17-445: Overview and Summary"
 semester: Fall 2019
 footer: "17-445 Software Engineering for AI-Enabled Systems, Christian Kaestner"
----  
+---
 
-# Overview & Summary
+# Overview & Summary 
+
+## 287 slides in 40 min
+
+Christian Kaestner and Eunsuk Kang
+
+
+---
+# Introduction and Motivation
 
 Christian Kaestner and Eunsuk Kang
 
@@ -18,11 +26,11 @@ Christian Kaestner and Eunsuk Kang
 * Summarize the respective goals and challenges of software engineers vs data scientists
 
 
----
+----
 
 # Disclaimer: New Class
 
----
+----
 
 # Case Study: The Transcription Service Startup
 
@@ -48,7 +56,7 @@ Christian Kaestner and Eunsuk Kang
 * Perceived Quality
 
 
----
+----
 
 # Correctness and Specifications
 
@@ -159,7 +167,7 @@ From guarantees to best effort
 
 
 
----
+----
 
 # Technical Debt
 
@@ -173,7 +181,7 @@ From guarantees to best effort
 
 
 
----
+----
 
 # Individual Assignment 1: Case Study on Malicious Ad Detection
 
@@ -203,7 +211,7 @@ Required reading: Hulten, Geoff. "Building Intelligent Systems: A Guide to Machi
   decisions to be made
 * Understand the major steps in a typical ML pipeline and their goals
 
----
+----
 
 # When to use AI?
 
@@ -219,7 +227,7 @@ Required reading: Hulten, Geoff. "Building Intelligent Systems: A Guide to Machi
 ![flash crash](flash-crash.png)
 <!-- .element: class="stretch" -->
 
----
+----
 
 
 ## Components of an AI-Enabled System
@@ -259,7 +267,7 @@ over time?
 
 
 
----
+----
 ## Typical Machine Learning Pipeline
 
 ![ML Pipeline](ML-pipeline.png)
@@ -296,14 +304,14 @@ Most students will know this; this is a refresher and provides an overview. This
 * Describe common qualities of interest and how to measure them
 
 
----
+----
 
 # Scenario: Preventing Wildlife Poaching
 
 ![](scenario.png)
 <!-- .element: class="stretch" -->
 
----
+----
 
 ## A Simple Process
 
@@ -319,7 +327,7 @@ Hypothesis: Process increases flexibility and efficiency +  Upfront investment f
 
 ![](process5.png)
 
----
+----
 
 
 ## Abstraction & Automation
@@ -415,7 +423,7 @@ public void testSanityTest(){
 * Fairness
 * Operation cost
 
----
+----
 # Agile Practices in a Nutshell
 ----
 
@@ -436,7 +444,7 @@ public void testSanityTest(){
 Agile: A project management approach that seeks to respond to change and unpredictability, primarily using incremental, iterative work sequences (often called “sprints”) + a collection of practices to facility that approach.
 
 
----
+----
 
 # Assignment G1
 
@@ -466,7 +474,7 @@ Agile: A project management approach that seeks to respond to change and unpredi
 
 
 
----  
+---
 
 # Challenges and Measurements
 
@@ -492,7 +500,7 @@ Learning Engineering" (2018), Chapter 4.
 on measurements
 
 
----
+----
 ## Traditional Programming vs ML
 
 ![Programming vs ML](programming-vs-ml.png)
@@ -539,7 +547,7 @@ on measurements
 
 
 
----
+----
 # Introduction to Measurements
 
 ----
@@ -598,7 +606,7 @@ on measurements
 
 
 
----  
+---
 
 # Requirements and Risks
 
@@ -688,7 +696,7 @@ other types of requirement (e.g., poor performance, security attacks...)
 
 
 
----  
+---
 
 # Trade-offs among AI Techniques
 
@@ -949,6 +957,8 @@ Challenges:
 * When and how to update models?
 * How to version? How to avoid mistakes?
 
+----
+## Individual Assignment: Architecture Reasoning for Dashcam System
 
 
 
@@ -1864,10 +1874,1338 @@ CC BY-SA 4.0, [G. Détrez](https://en.wikipedia.org/wiki/Continuous_delivery#/me
 
 
 
+----
+
+# Group Assignment: Infrastructure Deployment and Testing
+
+Docker, Jenkins, Unit tests
 
 
 ----
 
-# Group Assignment 3: Infrastructure Implementation and Testing
+# Group Assignment: Automated Model Updates
 
-Docker, Jenkins, Unit tests
+Canary testing and A/B testing
+
+
+
+
+
+
+
+
+
+---
+
+# Fairness in AI-Enabled Systems
+
+Eunsuk Kang
+
+<!-- references -->
+
+Required reading: R. Caplan, J. Donovan, L. Hanson, J.
+Matthews. "Algorithmic Accountability: A Primer", Data & Society
+(2018).
+
+----
+# Learning Goals
+
+* Understand the types of harm that can be caused by ML.
+* Understand the sources of bias in ML.
+* Discuss ways to reduce bias in training data. 
+
+----
+## Discrimination
+
+![](laws.jpg)
+
+* Population includes various minority groups
+  * Ethnic, religious, medical, geographic 
+* Protected by laws & policies
+* __How do we monitor & regulate decisions made by ML__?
+
+
+----
+## Example: Recidivism
+
+![](examples/recidivism-propublica.png)
+
+
+----
+## Types of Harm on Society
+
+* __Harms of allocation__: Withhold opportunities or resources
+* __Harms of representation__: Reinforce stereotypes, subordination along
+  the lines of identity
+
+<!-- references -->
+
+ “The Trouble With Bias”, Kate Crawford, Keynote@N(eur)IPS (2017).
+
+
+
+----
+## Case Study: College Admission
+
+![](college-admission.jpg)
+
+* Objective: Decide "Is this student likely to succeed"?
+* Possible harms: Allocation of resources? Quality of service?
+  Stereotyping? Denigration? Over-/Under-representation?
+
+
+----
+## Sources of Bias
+
+* Skewed sample
+* Tainted examples
+* Limited features
+* Sample size disparity
+* Proxies
+
+<!-- references -->
+
+_Big Data's Disparate Impact_, Barocas & Selbst California Law Review (2016).
+
+
+----
+## Skewed Sample
+
+![](examples/crime-map.jpg)
+
+* Initial bias in the data set, amplified through feedback loop
+* Example: Crime prediction for policing strategy
+
+
+----
+## Types of Data Bias
+
+* __Population bias__
+* __Behavioral bias__
+* Content production bias
+* Linking bias
+* Temporal bias
+
+<!-- references -->
+
+_Social Data: Biases, Methodological Pitfalls, and Ethical
+Boundaries_, Olteanu et al., Frontiers in Big Data (2016).
+
+
+
+
+
+
+
+
+---
+
+Guest Lecture
+
+## Software engineering for machine learning at Microsoft
+
+Andy Begel
+
+
+
+
+
+
+---
+
+# Fairness: Definitions and Measurements
+
+Eunsuk Kang
+
+<!-- references -->
+
+Required reading:"Fairness and Machine Learning" by Barocas, Hardt,
+and Narayanan (2019), Chapter 1.
+
+----
+# Learning Goals
+
+* Understand different definitions of fairness
+* Discuss methods for measuring fairness
+
+
+----
+## Fairness: Definitions
+
+* Fairness through Blindness
+* Group fairness
+* Equalized odds
+* Predictive rate parity
+
+
+----
+## Fairness through Blindness
+
+![](justice.jpeg)
+
+* Ignore/eliminate sensitive attributes from dataset
+* __Q. Why is this potentially a bad idea__?
+  * Sensitive attributes may be correlated with other features
+  * Some ML tasks need sensitive attributes (e.g., medical diagnosis)
+
+
+----
+## Group Fairness
+
+$P[R = 1 | A = a]  = P[R = 1 | A = b]$
+
+* Also called _statistical parity_, _demographic parity_, or the
+  _independence_ criterion
+* Mathematically, $R \perp A$
+  * Prediction must be independent of the sensitive attribute
+* Example: The predicted rate of recidivism is the same across all races
+  <!-- .element: class="fragment" -->
+* Q. What are limitations of group fairness?
+  <!-- .element: class="fragment" -->
+  * Ignores possible correlation between $Y$ and $A$
+    <!-- .element: class="fragment" -->
+  * Rules out perfect predictor $R = Y$ when $Y$ & $A$ are correlated
+  * Permits laziness: Intentionally give high ratings to
+  random people in one group
+    <!-- .element: class="fragment" -->
+* Q. But does this mean group fairness should never be used?
+  <!-- .element: class="fragment" -->
+
+----
+## Equalized Odds
+
+$P[R=0∣Y=1,A=a] = P[R=0∣Y=1,A=b]$
+$P[R=1∣Y=0,A=a] = P[R=1∣Y=0,A=b]$
+
+* Also called the _separation_ criterion
+* $R \perp A | Y$
+  * Prediction must be independent of the sensitive attribute
+  _conditional_ on the target variable
+
+
+
+----
+## Predictive Rate Parity
+
+$P[Y=1∣R=1,A=a] = P[Y=1∣R=1,A=b]$
+$P[Y=0∣R=0,A=a] = P[Y=0∣R=0,A=b]$
+
+* Also called the _sufficiency_ criterion
+* $Y \perp A | R$
+  *  Target variable must be independent of the sensitive attribute
+    _conditional_ on the prediction
+* i.e., $R$ is alone sufficient to identify $Y$; no need to see $A$
+
+
+
+----
+## Can we achieve fairness during the learning process?
+
+* Pre-processing:
+  * Clean the dataset to reduce correlation between the feature set
+    and sensitive attributes
+* Training time constraint
+  * ML is a constraint optimization problem (minimize errors)
+  * Impose additional parity constraint into ML optimization process
+* Post-processing
+  * Adjust the learned model to be uncorrelated with sensitive attributes
+* (Still active area of research! Many new techniques published each year)
+
+
+----
+## Trade-offs: Accuracy vs Fairness
+
+![](fairness-accuracy.jpeg)
+
+* In general, accuracy is at odds with fairness
+  * e.g., Impossible to achieve perfect accuracy ($R = Y$) while
+  ensuring group parity
+
+<!-- references -->
+
+_Fairness Constraints: Mechanisms for Fair Classification_, Zafar et
+al., AISTATS (2017).
+  
+
+----
+## Requirements for Fair ML Systems
+
+1. Identify all environmental entities
+  * Consider all stakeholders, their backgrounds & characteristics
+2. State requirement (REQ) over the environment
+   * What functions should the system serve? Quality attributes?
+   * But also: What kind of harms are possible & should be minimized?
+   * Legal & policy requirements  
+
+
+----
+
+## Individual Assignment: Fairness Analysis of Credit Scoring Data   
+
+
+---
+# Engineering Ethics
+
+Christian Kaestner
+
+----
+# Learning Goals
+
+* Awareness of ethical issues in software engineering
+* Reflection on decision making
+* Awareness of professional codes
+* Starting points to dig deeper
+
+----
+# Legal / Moral / Ethical
+
+* *Morality* governs private, personal interactions
+* *Ethics* governs professional interactions
+* *Law* governs society as a whole, often dealing with interactions between total strangers
+
+----
+[![Robot trapping wheelchair user](pittrobot.png)](https://twitter.com/EmilyEAckerman/status/1186363305851576321)
+
+----
+## Les Paul Doodle
+![Les Paul Doodle](doodle.png)
+
+> “Update Jun 17: Wow—in just 48 hours in the U.S., you recorded 5.1 years worth of 
+> music—40 million songs—using our doodle guitar. 
+> And those songs were played back 870,000 times!“
+
+
+----
+# Unforseen Consequences?
+
+![Bird Scooters in the News](bird2.png)
+
+<!-- references -->
+
+Catie Keck. (https://gizmodo.com/lime-reportedly-pulls-glitchy-e-scooters-in-switzerland-1831704890). Gizmodo. 2019
+
+
+----
+# Engineering Ethics
+## Medical, Legal, Business, Engineering Ethics
+
+* Many fields have well-developed professional ethics
+* Basic ethical duty to *“hold paramount the safety, health and welfare of the public”*
+
+<!-- split -->
+
+[![Citicopr Building](citicorp.jpg)](citicorp.jpg)
+
+http://ethics.wikia.com/wiki/Citicorp_Fiasco
+
+
+----
+## Malpractice vs. Negligence
+
+![You cannot have malpractice w/o prof. standards](malpractice.jpg)
+
+
+----
+## Ethics for Software Engineers and Data Sciensts?
+
+* Softare engineers often have large autonomy (e.g. push to production)
+* Fast release cycles
+* Time and budget pressures
+
+
+
+
+
+
+
+---
+# Scalable and Distributed Systems
+
+> “Don’t run a distributed system until you absolutely have to.” — Denise Yu
+
+Christian Kaestner
+
+----
+# Learning Goals
+
+* Summarize the challenges of distributed systems
+* Evaluate benefits and drawbacks of microservice architectures
+* Diagnose bottlenecks with architectural modeling and performance analysis
+* Plan for failure cases in a distributed systems
+* Deploy models as a service
+
+----
+# Scaling Computations
+
+<!-- colstart -->
+Efficent Algorithms
+<!-- col -->
+Faster Machines
+<!-- col -->
+More Machines
+<!-- colend -->
+
+
+----
+# Microservices 
+
+![](microservices_everywhere.jpg)
+
+
+----
+## Example
+
+[![eShopOnContainers Architecture](eshoponcontainers.png)](https://github.com/dotnet-architecture/eShopOnContainers)
+
+https://github.com/dotnet-architecture/eShopOnContainers
+
+----
+## Drawbacks
+
+* Complexities of distributed systems
+  * network latency, faults, inconsistencies
+  * testing challenges
+* Resource overhead, RPCs
+* Shifting complexities to the network
+* Operational complexity
+* Frequently adopted by breaking down monolithic application
+* HTTP/REST/JSON communication
+
+Do microservices solve problems, or push them down the line?
+
+----
+![Stop Fail](bluescreen.png)
+
+
+----
+## Common Distributed System Issues
+
+* Systems may crash
+* Messages take time
+* Messages may get lost
+* Messages may arrive out of order
+* Messages may arrive multiple times
+* Messages may get manipulated along the way
+* Bandwidth limits
+* Coordination overhead
+* Network partition
+* ...
+
+
+----
+## Performance Analysis
+
+* What is the average waiting?
+* How many customers are waiting on average? 
+* How long is the average service time?
+* What are the chances of one or more servers being idle? 
+* What is the average utilization of the servers?
+*
+* Early analysis of different designs for bottlenecks
+* Capacity planning
+
+
+----
+## Performance Monitoring of Distributed Systems
+
+* Instrumentation of (Service) APIs
+* Load of various servers
+* Typically measures: latency, traffic, errors, saturation
+* 
+* Monitoring long-term trends
+* Alerting
+* Automated releases/rollbacks
+* Canary testing and A/B testing
+
+
+
+
+
+
+---
+
+# Managing and Processing Large Datasets
+
+Christian Kaestner
+
+<!-- references -->
+
+Required reading: Martin Kleppmann. [Designing Data-Intensive Applications](https://dataintensive.net/). OReilly. 2017. Chapter 1
+
+----
+
+# Learning Goals
+
+* Organize different data management solutions and their tradeoffs
+* Explain the tradeoffs between batch processing and stream processing and the lambda architecture
+* Recommend and justify a design and corresponding technologies for a given system
+
+----
+# Case Study
+
+![Google Photos Screenshot](gphotos.png)
+
+----
+## Replication vs Partitioning
+
+<!-- discussion -->
+
+----
+## Partitioning
+
+Divide data:
+
+* Horizontal partitioning: Different rows in different tables; e.g., movies by decade, hashing often used
+* Vertical partitioning: Different columns in different tables; e.g., movie title vs. all actors
+
+**Tradeoffs?**
+
+```mermaid
+graph TD
+    Client --> Frontend
+    Client2[Client] --> Frontend2[Frontend]
+    Frontend --> Database1[Database West]
+    Frontend --> Database2[Database East]
+    Frontend --> Database3[Database Europe]
+    Frontend2 --> Database1
+    Frontend2 --> Database2
+    Frontend2 --> Database3
+```
+
+
+----
+# Batch Processing
+
+* Analyzing TB of data, typically distributed storage
+* Filtering, sorting, aggregating
+* Producing reports, models, ...
+
+```sh
+cat /var/log/nginx/access.log |
+    awk '{print $7}' |
+    sort |
+    uniq -c |
+    sort -r -n |
+    head -n 5
+```
+
+----
+## Dataflow Engines (Spark, Tez, Flink, ...)
+
+* Single job, rather than subjobs
+* More flexible than just map and reduce
+* Multiple stages with explicit dataflow between them
+* Often in-memory data
+* Pluming and distribution logic separated
+
+----
+# Stream Processing
+
+* Event-based systems, message passing style, publish subscribe
+
+
+----
+## Common Designs
+
+Like shell programs: Read from stream, produce output in other stream. Loose coupling
+
+![](deletedissues.svg)
+
+----
+## Event Sourcing
+
+* Append only databases
+* Record edit events, never mutate data
+* Compute current state from all past events, can reconstruct old state
+* For efficiency, take state snapshots
+* Similar to traditional database logs
+
+```text
+createUser(id=5, name="Christian", dpt="SCS")
+updateUser(id=5, dpt="ISR")
+deleteUser(id=5)
+```
+
+
+----
+## Benefits of Immutability (Event Sourcing)
+
+* All history is stored, recoverable
+* Versioning easy by storing id of latest record
+* Can compute multiple views
+* Compare *git*
+
+> On a shopping website, a customer may add an item to their cart and then
+> remove it again. Although the second event cancels out the first event from the point
+> of view of order fulfillment, it may be useful to know for analytics purposes that the
+> customer was considering a particular item but then decided against it. Perhaps they
+> will choose to buy it in the future, or perhaps they found a substitute. This information is recorded in an event log, but would be lost in a database that deletes items
+> when they are removed from the cart.
+
+<!-- references -->
+
+Source: Greg Young. [CQRS and Event Sourcing](https://www.youtube.com/watch?v=JHGkaShoyNs). Code on the Beach 2014 via Martin Kleppmann. Designing Data-Intensive Applications. OReilly. 2017.
+
+
+----
+# The Lambda Architecture
+
+![Lambda Architecture](lambda.png)
+
+<!-- references -->
+Source: [Textractor](https://commons.wikimedia.org/wiki/File:Diagram_of_Lambda_Architecture_(named_components).png) (CC BY-SA 4.0)
+
+
+----
+## Lambda Architecture and Machine Learning
+
+![Lambda Architecture](lambdaml.png)
+
+* Learn accurate model in batch job
+* Learn incremental model in stream processor
+
+----
+
+## Group Assignment: System Monitoring
+
+Feedback loops, attacks, Lambda Architecture
+
+
+
+
+
+---
+
+# Safety
+
+Eunsuk Kang
+
+<!-- references -->
+
+Required reading: _Ironies of Automation_, Lisanne Bainbridge (1983) 
+
+----
+# Learning Goals
+
+* Understand major safety challenges in AI-enabled systems
+* Discuss the benefits and limitations of hazard analysis techniques
+* Discuss ways to design systems to be safe against potential failures
+
+----
+## What is Safety?
+
+* Prevention of a system failure or malfunction that results in:
+  * Death or serious injury to people
+  * Loss or severe damage to equipment/property
+  * Harm to the environment or society
+
+
+----
+## How did traditional vehicles become safe?
+
+![](nader-report.png)
+
+* National Traffic & Motor Safety Act (1966)
+  * Mandatory design changes (head rests, shatter-resistant
+  windshields, safety belts); road improvements (center lines,
+  reflectors, guardrails)
+
+----
+## Challenge: Edge/Unknown Cases
+
+![](av-weird-cases.jpg)
+
+* Gaps in training data; ML will unlikely to cover all unknown cases
+* __Q. Why is this a unique problem for AI__? What about humans?
+
+----
+## What is Hazard Analysis?
+
+![requirement-vs-spec](acc.png)
+
+* __Hazard__: A condition or event that may result in undesirable outcome
+  * e.g., "Ego vehicle is in risk of a collision with another vehicle."
+* __Safety requirement__: Intended to eliminate or reduce one or more hazards
+  * "Ego vehicle must always maintain some minimum safe distance to the leading vehicle."
+* __Hazard analysis__: Methods for identifying hazards & potential root causes 
+
+----
+## Review: Fault Tree Analysis (FTA)
+
+![](fta-example.png)
+
+* Top-down, __backward__ search method for root cause analysis
+  * Start with a given hazard (top event), derive a set of component
+    faults (basic events)
+  * Compute minimum cutsets as potential root causes
+  * __Q. But how do we identify relevant hazards in the first place?__
+
+----
+## Hazard and Operability Study (HAZOP)
+
+![](hazop.png)
+
+* A __forward search__ method to identify potential hazards
+* For each component, use a set of __guide words__ to generate
+possible deviations from expected behavior
+* Consider the impact of each generated deviation: Can it
+  result in a system-level hazard?
+
+
+----
+## Elements of Safe Design
+
+* __Assume__: Components will fail at some point
+* __Goal__: Minimize the impact of failures on safety
+* __Detection__
+  * Monitoring
+* __Control__
+  * Graceful degradation (fail-safe)
+  * Redundancy (fail over)
+* __Prevention__
+  * Decoupling & isolation
+
+
+----
+## Response: Graceful Degradation (Fail-safe)
+
+<video>
+    <source data-src="rc-car.mp4" type="video/mp4" />
+</video>
+
+* __Goal__: When a component failure occurs, continue to provide
+  safety (possibly at reduced functionality and performance)
+* Relies on a monitor to detect component failures
+* Example: Perception in autonomous vehicles
+  * If Lidar fails, switch to a lower-quality detector; be more
+  conservative
+  * __But what about other types of ML failures? (e.g., misclassification)__
+
+
+
+
+
+
+
+
+
+
+---
+
+# Security
+
+Eunsuk Kang
+
+<!-- references -->
+
+Required reading: _Uncover Security Design Flaws Using The STRIDE
+Approach_ by Hernan, Lambert, Ostwald, and Shostack (MSDN, 2007).
+
+----
+# Learning Goals
+
+* Understand key ingredients to achieving security
+* Understand the process of threat modeling
+* Understand emerging threat models for AI-enabled systems
+
+----
+## Security Requirements
+
+![](cia-triad.png)
+
+* "CIA triad" of information security
+* __Confidentiality__: Sensitive data must be accessed by authorized users only
+* __Integrity__: Sensitive data must be modifiable by authorized users only
+* __Availability__: Critical services must be available when needed by clients
+
+
+----
+## What is Threat Modeling?
+
+* Threat model: A profile of an attacker
+  * __Goal__: What is the attacker trying to achieve?
+  * __Capability__:
+  * Knowledge: What does the attacker know?
+  * Actions: What can the attacker do?
+  * Resources: How much effort can it spend? 
+  * __Incentive__: Why does the attacker want to do this?
+
+![](art-of-war.png)
+
+
+----
+## Architecture Diagram for Threat Modeling
+
+![](admission-threat-model.jpg)
+
+* You can use any notation, as long as:
+  * its constructs (e.g., boxes and lines) have clear meanings; use legend!
+  * it clearly shows potentially malicious/untrusted agent(s) & interactions
+    with the system
+
+
+
+----
+## ML Attacker Goal
+
+* Confidentiality (privacy) attack
+  * Infer a sensitive label for a data point (e.g., hospital record)
+* Integrity attacks
+  * Induce a model to misclassify data points from one class to another
+  * e.g., Spam filter: Classify a spam as a non-spam
+* Availability attacks
+  * Reduce the accuracy of a model
+  * Induce a model to misclassify many data points
+
+
+----
+## Poisoning Attack: Availability
+
+![](virus.png)
+
+* Availability: Inject mislabeled training data to damage model
+quality
+  <!-- .element: class="fragment" -->
+  * 3% poisoning => 11% decrease in accuracy (Steinhardt, 2017)
+* Attacker must have some access to the training set
+    <!-- .element: class="fragment" -->
+  * e.g., models trained on public data set (e.g., ImageNet)
+* Example: Anti-virus (AV) scanner
+  <!-- .element: class="fragment" -->
+  * Online platform for submission of potentially malicious code
+  * Some AV company (allegedly) poisoned competitor's model
+  
+
+----
+## Evasion Attack (Adversarial Examples)
+
+![](evasion-attack.png)
+
+* Add noise to an existing sample & cause misclassification
+* Attack at inference time
+  * Typically assumes knowledge of the model (algorithm, parameters)
+  * Recently, shown to be possible even when the attacker only has access to
+    model output ("blackbox" attack)
+
+<!-- references -->
+
+_Accessorize to a Crime: Real and Stealthy Attacks on State-of-the-Art
+Face Recognition_, Sharif et al. (2016).
+
+----
+## Secure Design Principles 
+
+* Principle of Least Privilege
+  * A component should be given the minimal privileges needed to fulfill its functionality
+  * Goal: Minimize the impact of a compromised component
+* Isolation
+  * Components should be able to interact with each other no more than necessary
+  * Goal: Reduce the size of trusted computing base (TCB) 
+  * TCB: Components responsible for establishing a security requirement(s)
+  * If any of TCB compromised => security violation
+  * Conversely, a flaw in non-TCB component => security still preserved!
+  * In poor system designs, TCB = entire system
+
+----
+## Individual Homework: Threat Modeling
+
+
+
+
+
+
+
+
+---
+
+# Process and Team Reflections
+
+Christian Kaestner
+
+<!-- references -->
+
+Required reading: DeMarco and Lister. Peopleware: Productive Projects and Teams. Addison-Wesley, 3rd ed., 2013. Chapters 22, 23, and 28.
+
+----
+
+# Learning Goals
+
+* Plan development activities in an inclusive fashion for participants in different roles
+* Describe agile techniques to address common process and communication issues
+
+
+----
+## How to structure teams?
+
+Banking app; 15 developers and data analysts
+
+<!-- colstart -->
+![Small team](team15.jpg)
+<!-- col -->
+![PNC app](pnc.jpg)
+<!-- colend -->
+
+----
+## Mythical Man Month
+
+> Brooks's law: Adding manpower to a late software project makes it later
+
+![](mmmbook.jpg)
+
+1975, describing experience at 
+IBM developing OS/360
+
+----
+## Process Costs
+
+![](connected.png)
+
+*n(n − 1) / 2* communication links
+
+
+----
+## Matrix Organization
+
+![](teammatrix.png)
+
+
+----
+## Conflicting Goals
+
+* Software engineers vs Data scientists
+* Software engineers vs Security specialists
+* Data scientists vs Privacy lawyers
+
+<!-- discussion -->
+
+
+----
+## Specialist Allocation (Organizational Architectures)
+
+* Centralized: development teams consult with a core group of  specialists when they need help
+* Distributed: development teams hire specialists to be a first-class member of the team
+* Weak Hybrid: centralized group of specialists and teams with  critical applications hire specialists
+* Strong Hybrid: centralized group of specialists and most teams also hire specialists
+
+**Tradeoffs?**
+
+----
+# Team issues: Groupthink
+
+![](groupthink.png)
+
+----
+![](svposter.png)
+
+
+----
+## Groupthink and AI
+
+* Fairness
+* Safety requirements (e.g. Pitt delivery robot)
+* Ethics
+
+----
+# Team issues: Social loafing
+
+![](tug.png)
+
+
+----
+## Mitigation Strategies
+
+* Involve all team members, colocation
+* Assign specific tasks with individual responsibility
+    * Increase identifiability
+    * Team contracts, measurement
+* Provide choices in selecting tasks
+* Promote involvement, challenge developers
+* Reviews and feedback
+* Team cohesion, team forming exercises
+* Small teams
+
+
+----
+## Motivation
+
+Autonomy * Mastery * Purpose
+
+![](drivebook.gif)
+
+
+
+
+
+
+
+
+
+
+---
+
+# Usability
+
+Eunsuk Kang
+
+<!-- references -->
+
+Required reading: Building Intelligent Systems by Geoff Hulten (2018),
+Chapter 8.
+
+----
+# Learning Goals
+
+* Understand key ingredients of usable experiences (UX)
+* Discuss factors to consider when designing UX for AI-enabled systems
+
+----
+
+## Case Study: Voice-Controlled Intelligent Assistants
+
+![](echo.jpg)
+
+
+----
+## Dimensions of Usability
+
+* __Learnability__: How easy is it for users to accomplish tasks the first time?
+* __Efficiency__: After learning, how efficiently can users perform the
+  tasks?
+* __Memorability__: Can users remember to perform the tasks after a period of
+  not using the system?
+* __Errors__: How often do users make errors, how severe are these errors, and how easily can they recover from the errors?
+* __Satisfaction__: How pleasant is it to use the design?
+
+<!-- references -->
+
+https://www.nngroup.com/articles/usability-101-introduction-to-usability/
+
+
+----
+##  Interaction Cost for Intelligent Assistants
+
+![](echo.jpg)
+
+* Holy grail of UX design: Reduce interaction cost to zero
+* Q. Is the cost actually smaller than in physical interfaces?
+
+
+----
+## Considerations for Usable AI Design
+
+* User needs: Automate or augment?
+* Mental model
+* Error handling
+* Feedback & control
+
+
+----
+## Mental Model
+
+![](mental-model.jpg)
+
+* What the user believes about the system
+  * Plans actions based on the model
+  * Belief, not facts: May not reflect the reality, only what
+    user believes
+* Challenge: Align system with the user's mental model
+  * Mismatch between user's & designer's mental models
+  * User's model preconceived based on prior experience
+  * User's model evolving over time
+
+----
+## Mental Model for AI-Based Systems
+
+![](ml-mental-model.jpg)
+
+* User: "What is the AI doing, and how do I use it?"
+  * Typically less transparent than traditional applications
+* Unclear inputs: What are possible actions? Which of these actions matter? When
+does my action take effect?
+<!-- .element: class="fragment" -->
+* Lack of control over output: Why am I being given these
+  recommendations? Why is the output displayed in this order?
+<!-- .element: class="fragment" -->
+
+<!-- references -->
+https://www.nngroup.com/articles/machine-learning-ux/
+
+
+----
+## Onboarding: Setting User's Expectations
+
+![](grammar.png)
+
+* Be clear about what AI can(not) do
+* Provide examples of how it works
+
+
+----
+## Error Messages: Suggest user actions
+
+![](run-ai-example.png)
+
+* Guide the user towards ways to recover from/prevent further errors
+
+<!--references -->
+
+https://pair.withgoogle.com/chapter/errors-failing/
+
+
+----
+## Responding to Feedback 
+
+![](run-feedback-example.jpg)
+
+* When possible, respond to feedback with an adjustment to AI behavior
+
+<!-- references -->
+
+https://pair.withgoogle.com/chapter/feedback-controls/
+
+
+
+
+
+
+
+
+
+---
+
+# Data Provenance, Reproducability, and Explainability
+
+Christian Kaestner
+
+<!-- references -->
+
+Required reading: Halevy, Alon, Flip Korn, Natalya F. Noy, Christopher Olston, Neoklis Polyzotis, Sudip Roy, and Steven Euijong Whang. [Goods: Organizing google's datasets](http://research.google.com/pubs/archive/45390.pdf). In Proceedings of the 2016 International Conference on Management of Data, pp. 795-806. ACM, 2016.
+
+----
+
+# Learning Goals
+
+* Judge the importance of data provenance, reproducibility and explainability for a given system
+* Create documentation for data dependencies and provenance in a given system
+* Propose versioning strategies for data and models
+* Design and test systems for reproducibility
+* Design strategies to make models transparent and explainable
+
+----
+[![Apple Card Tweet](applecard.png)](https://twitter.com/dhh/status/1192540900393705474)
+
+----
+
+## Debugging Questions
+
+* Can we reproduce the problem?
+* What were the inputs to the model?
+* Which exact model version was used?
+* What data was the model trained with?
+* What learning code (cleaning, feature extraction, ML algorithm) was the model trained with?
+* Where does the data come from? How was it processed and extracted?
+* Were other models involved? Which version? Based on which data?
+* What parts of the input are responsible for the (wrong) answer? How can we fix the model?
+
+
+----
+
+## Data Provenance
+
+* Track origin of all data
+    - Collected where?
+    - Modified by whom, when, why?
+    - Extracted from what other data or model or algorithm?
+* ML models often based on data drived from many sources through many steps, including other models
+
+----
+
+```mermaid
+graph TD
+    serverlogs --> extract(extract)
+    extract --> actionsDB
+    actionsDB --> gender(genderModel)
+    gender --> genderDB
+    actionsDB --> train(learning)
+    genderDB --> train
+    train --> recommendationModel
+    requests --> recommendationModel
+```
+
+----
+
+## Orchestrating Multiple Models
+
+* Try different modeling approaches in parallel
+* Pick one, voting, sequencing, metamodel, or responding with worst-case prediction
+
+<!-- colstart -->
+
+```mermaid
+graph TD
+input --> model1
+model1 --> model2
+model2 --> model3
+model1 --> yes
+model2 --> yes
+model3 --> yes
+model3 --> no
+```
+<!-- col -->
+```mermaid
+graph TD
+input --> model1
+input --> model2
+input --> model3
+model1 --> vote
+model2 --> vote
+model3 --> vote
+vote --> yes/no
+```
+<!-- col -->
+```mermaid
+graph TD
+input --> model1
+input --> model2
+input --> model3
+model1 --> metamodel
+model2 --> metamodel
+model3 --> metamodel
+metamodel --> yes/no
+```
+<!-- colend -->
+
+----
+
+## Chasing Bugs
+
+* Update, clean, add, remove data
+* Change modeling parameters
+* Add regression tests
+* Fixing one problem may lead to others, recognizable only later
+
+
+----
+# Transparency
+## Case Study: Facebook's Feed Curation
+
+![Facebook with and without filtering](facebook.png)
+
+<!-- references -->
+
+Eslami, Motahhare, Aimee Rickman, Kristen Vaccaro, Amirhossein Aleyasen, Andy Vuong, Karrie Karahalios, Kevin Hamilton, and Christian Sandvig. [I always assumed that I wasn't really that close to [her]: Reasoning about Invisible Algorithms in News Feeds](http://eslamim2.web.engr.illinois.edu/publications/Eslami_Algorithms_CHI15.pdf). In Proceedings of the 33rd annual ACM conference on human factors in computing systems, pp. 153-162. ACM, 2015.
+
+----
+# Explainability & Interpretability
+
+
+## "It's just the algorithm/model"
+
+* Specifications can be discussed, somebody made a decision
+* ML models are trained, some wrong results are to be expected 
+* Assigning blame: Person making decisions, algorithm/specification, opaque model? Path to appeal?
+
+
+----
+
+## Explaining Decisions
+
+Cat? Dog? Lion?
+
+Confidence? Why?
+
+![Cat](cat.png)
+
+
+----
+## SHAP Analysis (SHapley Additive exPlanation)
+
+![force plot](boston_instance.png)
+
+<!-- references -->
+
+Lundberg, Scott M., and Su-In Lee. [A unified approach to interpreting model predictions](http://papers.nips.cc/paper/7062-a-unified-approach-to-interpreting-model-predictions.pdf). Advances in Neural Information Processing Systems. 2017.
+
+
+----
+
+## Attention Maps
+
+![Attention Maps](attentionmap.jpeg)
+
+Identifies which parts of the input lead to decisions (but not why!)
+
+<!-- references -->
+
+Source: B. Zhou, A. Khosla, A. Lapedriza, A. Oliva, and A. Torralba. [Learning Deep Features for Discriminative Localization](http://cnnlocalization.csail.mit.edu/Zhou_Learning_Deep_Features_CVPR_2016_paper.pdf). CVPR'16 
+
+
+----
+
+## CORELS’ model for recidivism risk prediction
+
+| | | |
+|-|-|-|
+| IF | age between 18-20 and sex is male | THEN predict arrest (within 2 years) |
+| ELSE IF | age between 21-23 and 2-3 prior offenses | THEN predict arrest |
+| ELSE IF | more than three priors | THEN predict arrest |
+| ELSE |predict no arrest.| |
+
+Simple, interpretable model with comparable accuracy to proprietary COMPAS model
+
+<!-- references -->
+
+Rudin, Cynthia. "Stop explaining black box machine learning models for high stakes decisions and use interpretable models instead." Nature Machine Intelligence 1.5 (2019): 206-215. ([Preprint](https://arxiv.org/abs/1811.10154))
+
+
+
+
+
+
+
+
+
+---
+Guest Lecture
+
+# AI in Software Engineering Research
+
+Bradley Schmerl
+
+
+---
+
+---
+
+# Planning an AI-Enabled Product in a Startup
+
+Michael Hilton, Christian Kaestner, Eunsuk Kang
+
+----
+## Discussion Questions
+
+* What's the hypothesis behind your startup?
+  * i.e., What does it mean for it to succeed?
+* What are potential risks that might cause the hypothesis to fail?
+Any ML related risks?
+  * Data collection? Telemetry? Model quality? Security or privacy
+      issues?  Safety? Ethical or legal? 
+* What are ways to test your hypothesis and address these specific risks? What
+MVPs can you use to do so?
+
+----
+## Case Study #2: Delivery Robot
+
+![](delivery-robot.jpg)
+
+* Q1. Hypothesis behind your startup?
+* Q2. Potential risks that might cause the hypothesis to fail? List
+three.
+* Q3. MVPs to test your hypothesis and reduce the specific risks?
+
+
+---
+
+# Overview & Summary
+
+Christian Kaestner and Eunsuk Kang
