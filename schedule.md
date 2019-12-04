@@ -6,7 +6,7 @@
 | Mon, Aug 26 | [Introduction and Motivation](https://ckaestne.github.io/seai/slides/01_introduction_and_motivation/intro.html) |   |   |
 | Wed, Aug 28 | [Components of an AI-Enabled System](https://ckaestne.github.io/seai/slides/02_components/components.html)  | [Building Intelligent Systems](https://www.buildingintelligentsystems.com/), Ch. 2+5+20  |   |
 | Mon, Sep 2  | **Labor day, no class** |   |   |
-| Wed, Sep 4  | [Software Engineering Bootcamp](https://ckaestne.github.io/seai/slides/03_se_bootcamp/se.html)   | <!-- [Software Engineering for the 21st Century](http://ra.adm.cs.cmu.edu/anon/usr0/anon/usr/ftp/isri2005/CMU-ISRI-05-108.pdf) -->  | [I1: Case Study](https://github.com/ckaestne/seai/tree/master/assignments/01_case_study/assignment01.md)  |
+| Wed, Sep 4  | [Software Engineering Bootcamp](https://ckaestne.github.io/seai/slides/03_se_bootcamp/se.html)   | <!-- [Software Engineering for the 21st Century](http://ra.adm.cs.cmu.edu/anon/usr0/anon/usr/ftp/isri2005/CMU-ISRI-05-108.pdf) -->  | [I1: Case Study](https://github.com/ckaestne/seai/blob/master/assignments/I1_case_study/assignment01.md)  |
 | Mon, Sep 9  | [Challenges and Measurements](https://ckaestne.github.io/seai/slides/04_challenges/challenges.html)   |   |   |
 | Wed, Sep 11 | [Requirements and Risks](https://ckaestne.github.io/seai/slides/05_requirements/requirements.html)  |   | [G1: Modeling Basics](https://github.com/ckaestne/seai/blob/master/assignments/G1_modeling_basics/assignment02.md) |
 | Mon, Sep 16 | [Tradeoffs among AI Techniques](https://ckaestne.github.io/seai/slides/06_tradeoffs/tradeoffs.html#/)   |   |   |
@@ -28,10 +28,10 @@
 | Mon, Nov 11 | [Process and Team Reflections](https://ckaestne.github.io/seai/slides/20_teams/teams.html)    |   |   |
 | Wed, Nov 13 | [Usability](https://ckaestne.github.io/seai/slides/21_usability/usability.html) |   | [I5: Security](https://github.com/ckaestne/seai/blob/master/assignments/I5_security/assignment09.md)   |
 | Mon, Nov 18 | [Data Provenance, Reproducability, and Explainability](https://ckaestne.github.io/seai/slides/22_provenance/provenance.html)    |   |   |
-| Wed, Nov 20 | Symbolic AI (guest lecture)  |   |   |
+| Wed, Nov 20 | [Symbolic AI (guest lecture)](https://github.com/ckaestne/seai/raw/master/lectures/23_symbolic/ai_in_se.pdf)  |   |   |
 | Mon, Nov 25 | **No class** |   | |
 | Wed, Nov 27 | **Thanksgiving, no class**    |   | |
-| Mon, Dec 2  | Planning an AI-Enabled Product in a Startup |   |   |
+| Mon, Dec 2  | [Planning an AI-Enabled Product in a Startup](https://ckaestne.github.io/seai/slides/23_startup/startup.html) ([Intro slides](https://github.com/ckaestne/seai/raw/master/lectures/24_startup/SEforML_Startups.pdf)) |   |   |
 | Wed, Dec 4  | Summary and Review  |  | [G5: System monitoring](https://github.com/ckaestne/seai/blob/master/assignments/G5_feedbackloop/assignment10.md) |
 | Sun, Dec 15 | **Final exam** (in WEH 4623, 8:30-11:30) ||
 
