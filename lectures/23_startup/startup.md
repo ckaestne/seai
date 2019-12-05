@@ -18,12 +18,17 @@ Michael Hilton, Christian Kaestner, Eunsuk Kang
 * What's the hypothesis behind your startup?
 <!-- .element: class="fragment" -->
 	* i.e., What does it mean for it to succeed?
+	* e.g., "Our video streaming product will provide a reliable and accurate
+      recommendation service that increases number of customers"
 * What are potential risks that might cause the hypothesis to fail?
+(i.e., riskiest assumptions)
 Any ML related risks?
 <!-- .element: class="fragment" -->
 	* Data collection? Telemetry? Model quality? Security or privacy
-      issues?  Safety? Ethical or legal? 
-* What are ways to test your hypothesis and address these specific risks? What
+    issues?  Safety? Ethical or legal?
+	<!-- .element: class="fragment" -->
+* What are ways to test your hypothesis and address these specific
+risks (i.e., RAT)? What
 MVPs can you use to do so?
 <!-- .element: class="fragment" -->
 
@@ -59,6 +64,7 @@ Idea: Let's commercialize the software and sell to academics and conference orga
 three.
 <!-- .element: class="fragment" -->
 * Q3. MVPs to test your hypothesis and reduce the specific risks?
+(i.e., RAT)
 <!-- .element: class="fragment" -->
 
 ----
@@ -71,7 +77,7 @@ three.
 * Q2. Potential risks that might cause the hypothesis to fail? List
 three.
 <!-- .element: class="fragment" -->
-* Q3. MVPs to test your hypothesis and reduce the specific risks?
+* Q3. MVPs to test your hypothesis and reduce the specific risks? (i.e., RAT)
 <!-- .element: class="fragment" -->
 
 ---
