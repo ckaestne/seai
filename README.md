@@ -2,6 +2,9 @@ The course takes a **software engineering perspective** on building software sys
 
 This course is aimed at **software engineers** who want to understand the specific challenges of working with AI components and at **data scientists** who want to understand the challenges of getting a prototype model into production; it facilitates communication and collaboration between both roles.
 
+For researchers, educators, or others interested in this topic, we share all course material under a creative commons license on GitHub (https://github.com/ckaestne/seai/) and have recently published an article describing the rationale and the design of this course: [Teaching Software Engineering for AI-Enabled Systems](https://arxiv.org/abs/2001.06691).
+
+
 [![Course Poster](poster_small.jpg "Course Poster")](poster.jpg)
 
 
