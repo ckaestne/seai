@@ -18,7 +18,7 @@ https://github.com/ckaestne/seai
 ----
 
 
-## Software Engineering for AI-Enabled Systems != SE-4-ML-frameworks
+## Software Engineering for AI-Enabled Systems != coding ML frameworks
 
 ![SciKit Learn Logo](scikit.png)
 
@@ -43,10 +43,7 @@ https://github.com/ckaestne/seai
 ---
 ## Software Engineering
 
-> Software engineering is the branch of computer science that creates practical, cost-effective solutions to
-computing and information processing problems, preferentially by applying scientific knowledge,
-developing
- software systems in the service of mankind. 
+> Software engineering is the branch of computer science that creates practical, cost-effective solutions to computing and information processing problems, preferentially by applying scientific knowledge, developing software systems in the service of mankind. 
 
 Engineering judgements under limited information and resources
 
@@ -68,7 +65,7 @@ Mary Shaw. ed. Software Engineering for the 21st Century: A basis for rethinking
 
 Focus narrowly on modeling techniques or building models
 
-Using static datasets, evaluating accuracy
+Using notebooks, static datasets, evaluating accuracy
 
 Little attention to software engineering aspects of building complete systems
 
@@ -97,6 +94,8 @@ Little attention to software engineering aspects of building complete systems
 ---
 
 ![Overview](overview.png)
+
+https://github.com/ckaestne/seai
 
 ---
 ## What's different?
@@ -129,6 +128,8 @@ Little attention to software engineering aspects of building complete systems
 ---
 
 ![Overview](overview.png)
+
+https://github.com/ckaestne/seai
 
 ---
 ## Assignments
