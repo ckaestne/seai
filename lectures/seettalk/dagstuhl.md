@@ -9,6 +9,8 @@ Kaestner & Eunsuk Kang"
 
 Eunsuk Kang and Christian Kaestner
 
+https://github.com/ckaestne/seai
+
 ---
 
 ## Software Engineering for AI-Enabled Systems
