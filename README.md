@@ -48,21 +48,29 @@ In addition, students will gain familiarity with production-quality infrastructu
 
 Open to undergraduate and graduate students meeting the prerequisites.
 
-### Summer 2020
+### Summer 2020 
 
-Summer 2020: Tuesday+Thursday 3-4:20pm, Room 3SC 265 (Craig Street); Recitation Wednesday 12:30-1:50pm
+Targeted at students with a software engineering background (see prerequisites below)
+
+Lectures Tuesday+Thursday 3-4:20pm, Room 3SC 265 (Craig Street)
+
+Recitation Wednesday 12:30-1:50pm
 
 Instructor: [Christian Kaestner](https://www.cs.cmu.edu/~ckaestne/)
 
 ### Fall 2020
 
-Fall 2020: tdb.
+Targeted at students with a data science background (see prerequisites below)
+
+Lectures times tdb.
 
 Instructors: [Christian Kaestner](https://www.cs.cmu.edu/~ckaestne/) and [Eunsuk Kang](https://eskang.github.io/)
 
 ### Fall 2019
 
-Fall 2019: Monday/Wednesdays 1:30-2:50, GHC 4211; Recitation Fridays 10:30-11:20, GHC 4102
+Lectures Monday/Wednesdays 1:30-2:50, GHC 4211
+
+Recitation Fridays 10:30-11:20, GHC 4102
 
 Instructors: [Christian Kaestner](https://www.cs.cmu.edu/~ckaestne/) and [Eunsuk Kang](https://eskang.github.io/)
 
@@ -94,9 +102,13 @@ Course content is still under development. A more detailed breakdown of topics a
 
 The course uses Canvas for homework submission, grading, discussion, questions, announcements, and supplementary documents; slides will be posted here; github is used to coordinate group work.
 
-**Prerequisites:** We expect basic exposure to (a) software engineering and (b) machine learning as well as reasonable programming skills. The prerequisites can be filled in many forms:
-* Regarding software engineering you should have a basic familiarity with using version control, gathering requirements, software design and modeling, testing and test automation. Courses 17-313, and  17-654, 17-655 apply, but you may also have prerequisite software engineering knowledge from other courses or practical work experience. 
-* Regarding machine learning, you should have basic familiarity with the process of extracting features, building and evaluating models, and a basic understanding of how different kinds of learning techniques work. Courses such as 10-301, 10-315, and 05-434 apply, but project experience or self-learning from books or online courses will likely be sufficient for our purposes. 
+**Prerequisites:** Offerings in different semesters may be targeted at students with different backgrounds. The course does not have formal prerequesites, but we describe background knowledge that will help you be successful in the course. Also note that the course always has a substantial programming component, so solid programming skills will be benefitial (we do not prescribe a programming language, but most student teams decide to work primarily in Python).
+
+*Summer 2020:* We expect basic exposure to software engineering, but do not require machine learning skills. We suggest that you  have a basic familiarity with using version control, gathering requirements, software design and modeling, testing and test automation. Courses 17-313, and  17-654, 17-655 will prepare you well, but you may also have prerequisite software engineering knowledge from other courses or practical work experience, including software-engineering-heavy internships. The Summer 2020 offering will include a crash course on machine learning.
+
+*Fall 2020:* We expect basic exposure to machine learning and reasonable programming skills, but do not require a software engineering background. We suggest that you have basic familiarity with the process of extracting features, building and evaluating models, and a basic understanding of how and when different kinds of learning techniques work. Courses such as 10-301, 10-315, and 05-434 will prepare you well, but project experience or self-learning from books or online courses will likely be sufficient for our purposes. The Fall 2020 offering will cover basic software engineering concepts in more depth than the Summer 2020 offering.
+
+Students with both data science and software engineering background are well prepared for all offerings of the class.
 
 We have set up a *prerequisite knowledge check* in the course's Canvas repository, where we ask 10 questions on software engineering and 10 questions on machine learning, which help you assess your background. This is set up as an ungraded quiz, where you can compare your knowledge against what we believe is useful for you to be successful in this course. The system will give specific pointers to readings and exercises that may help you fill gaps in background knowledge. Email us (se-ai@lists.andrew.cmu.edu) if you would like access to this check before signing up for the course or if like to talk to us about prerequisites.
 
