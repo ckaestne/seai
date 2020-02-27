@@ -1,3 +1,6 @@
+**Update 2020: The class will be offered both in the Summer term and in the Fall semester 2020. The Summer offering will be more targeted towards students with software engineering experience (e.g., software engineering course, industrial experience, or internship experience), but will expect no data science background. The Fall offering will be targeted more at students with some data science experience (e.g., a machine learning course on campus or online), but will expect no software engineering background.**
+
+
 The course takes a **software engineering perspective** on building software systems with a significant **machine learning or AI component**. It discusses how to take an idea and a model developed by a data scientist (e.g., scripts and Jupyter notebook) and deploy it as part of scalable and maintainable system (e.g., mobile apps, web applications, IoT devices). Rather than focusing on modeling and learning itself, this course assumes a working relationship with a data scientist and focuses on issues of design, implementation, operation, and assurance and how those interact with the data scientist's modeling.
 
 This course is aimed at **software engineers** who want to understand the specific challenges of working with AI components and at **data scientists** who want to understand the challenges of getting a prototype model into production; it facilitates communication and collaboration between both roles.
@@ -41,11 +44,25 @@ In addition, students will gain familiarity with production-quality infrastructu
 
 ## Logistics and People
 
-17-445/17-645, Fall 2019, 12 units
+17-445/17-645, 12 Units
 
-Lectures Monday/Wednesdays 1:30-2:50, GHC 4211
+Open to undergraduate and graduate students meeting the prerequisites.
 
-Recitation Fridays 10:30-11:20, GHC 4102
+### Summer 2020
+
+Summer 2020: Tuesday+Thursday 3-4:20pm, Room 3SC 265 (Craig Street); Recitation Wednesday 12:30-1:50pm
+
+Instructor: [Christian Kaestner](https://www.cs.cmu.edu/~ckaestne/)
+
+### Fall 2020
+
+Fall 2020: tdb.
+
+Instructors: [Christian Kaestner](https://www.cs.cmu.edu/~ckaestne/) and [Eunsuk Kang](https://eskang.github.io/)
+
+### Fall 2019
+
+Fall 2019: Monday/Wednesdays 1:30-2:50, GHC 4211; Recitation Fridays 10:30-11:20, GHC 4102
 
 Instructors: [Christian Kaestner](https://www.cs.cmu.edu/~ckaestne/) and [Eunsuk Kang](https://eskang.github.io/)
 
@@ -57,9 +74,10 @@ Office Hours:
 * Eunsuk, By appointment, Wean 5319
 * Chu-Pan, Wednesday 15:00-16:00, Wean 4103
 
+### Coordination
+
 Unless you have questions to specific instructors, we prefer that you email us at se-ai@lists.andrew.cmu.edu, where you will reach the entire teaching staff of the course.
 
-Open to undergraduate and graduate students meeting the prerequisites.
 
 All instructors and teaching assistants have an open door policy: If our office door is open and no-one else is meeting with us, we are happy to answer any course-related questions. If you prefer an appointment, email the instructors or talk to us before or after class.
 
