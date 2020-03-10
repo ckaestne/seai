@@ -1,6 +1,4 @@
-**This is the site for the Summer 2020 offering of this course.
-For the initial Fall 2019 offering see [F2019 website](https://ckaestne.github.io/seai/F2019) and [F2019 GitHub branch](https://github.com/ckaestne/seai/tree/F2019). 
-For the Fall 2020 offering see [F2020 website](https://ckaestne.github.io/seai/F2020) and [F2020 GitHub branch](https://github.com/ckaestne/seai/tree/F2020).** 
+**This is the site for the Summer 2020 offering of this course. For the initial Fall 2019 offering with all slides and assignments see [F2019 website](https://ckaestne.github.io/seai/F2019) and [F2019 GitHub branch](https://github.com/ckaestne/seai/tree/F2019). For the planned Fall 2020 offering see [F2020 website](https://ckaestne.github.io/seai/F2020) and [F2020 GitHub branch](https://github.com/ckaestne/seai/tree/F2020).** 
 
 
 In 2020, the class will be offered both in the Summer term and in the Fall semester. The Summer offering will be more targeted towards students with software engineering experience (e.g., software engineering course, industrial experience, or internship experience), but will expect no data science background. The Fall offering will be targeted more at students with some data science experience (e.g., a machine learning course on campus or online), but will expect no software engineering background.
@@ -56,9 +54,7 @@ In addition, students will gain familiarity with production-quality infrastructu
 
 Open to undergraduate and graduate students meeting the prerequisites.
 
-### Summer 2020 
-
-Targeted at students with a software engineering background (see prerequisites below)
+The summer 2020 offering targets students with a software engineering background (see prerequisites below)
 
 Lectures Tuesday+Thursday 3-4:20pm, Room 3SC 265 (Craig Street)
 
@@ -66,41 +62,21 @@ Recitation Wednesday 12:30-1:50pm
 
 Instructor: [Christian Kaestner](https://www.cs.cmu.edu/~ckaestne/)
 
-### Fall 2020
-
-Targeted at students with a data science background (see prerequisites below)
-
-Lectures times tdb.
-
-Instructors: [Christian Kaestner](https://www.cs.cmu.edu/~ckaestne/) and [Eunsuk Kang](https://eskang.github.io/)
-
-### Fall 2019
-
-Lectures Monday/Wednesdays 1:30-2:50, GHC 4211
-
-Recitation Fridays 10:30-11:20, GHC 4102
-
-Instructors: [Christian Kaestner](https://www.cs.cmu.edu/~ckaestne/) and [Eunsuk Kang](https://eskang.github.io/)
-
-Teaching assistant: [Chu-Pan Wong](https://www.cs.cmu.edu/~chupanw/)
-
 Office Hours:
 
-* Christian, Monday 9:30-10:25, Wean 5126
-* Eunsuk, By appointment, Wean 5319
-* Chu-Pan, Wednesday 15:00-16:00, Wean 4103
+* tbd
 
 ### Coordination
 
 Unless you have questions to specific instructors, we prefer that you email us at se-ai@lists.andrew.cmu.edu, where you will reach the entire teaching staff of the course.
 
 
-All instructors and teaching assistants have an open door policy: If our office door is open and no-one else is meeting with us, we are happy to answer any course-related questions. If you prefer an appointment, email the instructors or talk to us before or after class.
+The instructor has an open door policy: If our office door is open and no-one else is meeting with us, we are happy to answer any course-related questions. If you prefer an appointment, email the instructors or talk to us before or after class.
 
 
 ## Course content
 
-Course content is still under development. A more detailed breakdown of topics and learning goals can be found under [Learning Goals](https://github.com/ckaestne/seai/blob/master/learning%20goals.md). Below is a table of the current schedule with links to select lectures. Of of this is subject to change and will be updated as the semester progresses, especially to help focus on requested topics or support learning.
+The course content evolves from semester to semester. See the course content of the [Fall 2019](https://ckaestne.github.io/seai/F2019) semester to get an overview and have a look at our [Learning Goals](https://github.com/ckaestne/seai/blob/master/learning%20goals.md). Below is a table of the current planned schedule. Of of this is subject to change and will be updated as the semester progresses, especially to help focus on requested topics or support learning.
 
 [Schedule](https://github.com/ckaestne/seai/blob/master/schedule.md)
 
@@ -113,10 +89,6 @@ The course uses Canvas for homework submission, grading, discussion, questions, 
 **Prerequisites:** Offerings in different semesters may be targeted at students with different backgrounds. The course does not have formal prerequesites, but we describe background knowledge that will help you be successful in the course. Also note that the course always has a substantial programming component, so solid programming skills will be benefitial (we do not prescribe a programming language, but most student teams decide to work primarily in Python).
 
 *Summer 2020:* We expect basic exposure to software engineering, but do not require machine learning skills. We suggest that you  have a basic familiarity with using version control, gathering requirements, software design and modeling, testing and test automation. Courses 17-313, and  17-654, 17-655 will prepare you well, but you may also have prerequisite software engineering knowledge from other courses or practical work experience, including software-engineering-heavy internships. The Summer 2020 offering will include a crash course on machine learning.
-
-*Fall 2020:* We expect basic exposure to machine learning and reasonable programming skills, but do not require a software engineering background. We suggest that you have basic familiarity with the process of extracting features, building and evaluating models, and a basic understanding of how and when different kinds of learning techniques work. Courses such as 10-301, 10-315, and 05-434 will prepare you well, but project experience or self-learning from books or online courses will likely be sufficient for our purposes. The Fall 2020 offering will cover basic software engineering concepts in more depth than the Summer 2020 offering.
-
-Students with both data science and software engineering background are well prepared for all offerings of the class.
 
 We have set up a *prerequisite knowledge check* in the course's Canvas repository, where we ask 10 questions on software engineering and 10 questions on machine learning, which help you assess your background. This is set up as an ungraded quiz, where you can compare your knowledge against what we believe is useful for you to be successful in this course. The system will give specific pointers to readings and exercises that may help you fill gaps in background knowledge. Email us (se-ai@lists.andrew.cmu.edu) if you would like access to this check before signing up for the course or if like to talk to us about prerequisites.
 
