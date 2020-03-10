@@ -1,9 +1,9 @@
-**This is the site for the Summer 2020 offering of this course.
+**This is the site for the planned Fall 2020 offering of this course.
 For the initial Fall 2019 offering see [F2019 website](https://ckaestne.github.io/seai/F2019) and [F2019 GitHub branch](https://github.com/ckaestne/seai/tree/F2019). 
-For the Fall 2020 offering see [F2020 website](https://ckaestne.github.io/seai/F2020) and [F2020 GitHub branch](https://github.com/ckaestne/seai/tree/F2020).** 
+For the Summer 2020 offering see [S2020 website](https://ckaestne.github.io/seai/S2020) and [S2020 GitHub branch](https://github.com/ckaestne/seai/tree/S2020).** 
 
 
-In 2020, the class will be offered both in the Summer term and in the Fall semester. The Summer offering will be more targeted towards students with software engineering experience (e.g., software engineering course, industrial experience, or internship experience), but will expect no data science background. The Fall offering will be targeted more at students with some data science experience (e.g., a machine learning course on campus or online), but will expect no software engineering background.
+Note: This Fall 2020 offering will be targeted more at students with some data science experience (e.g., a machine learning course on campus or online), but will not expect a software engineering background.
 
 For researchers, educators, or others interested in this topic, we share all course material under a creative commons license on GitHub (https://github.com/ckaestne/seai/) and have recently published an article describing the rationale and the design of this course: [Teaching Software Engineering for AI-Enabled Systems](https://arxiv.org/abs/2001.06691). We would be happy to see this course or a similar version taught somewhere else. See also an [annotated bibliography](https://github.com/ckaestne/seaibib) on the topic.
 
@@ -56,15 +56,6 @@ In addition, students will gain familiarity with production-quality infrastructu
 
 Open to undergraduate and graduate students meeting the prerequisites.
 
-### Summer 2020 
-
-Targeted at students with a software engineering background (see prerequisites below)
-
-Lectures Tuesday+Thursday 3-4:20pm, Room 3SC 265 (Craig Street)
-
-Recitation Wednesday 12:30-1:50pm
-
-Instructor: [Christian Kaestner](https://www.cs.cmu.edu/~ckaestne/)
 
 ### Fall 2020
 
@@ -73,22 +64,6 @@ Targeted at students with a data science background (see prerequisites below)
 Lectures times tdb.
 
 Instructors: [Christian Kaestner](https://www.cs.cmu.edu/~ckaestne/) and [Eunsuk Kang](https://eskang.github.io/)
-
-### Fall 2019
-
-Lectures Monday/Wednesdays 1:30-2:50, GHC 4211
-
-Recitation Fridays 10:30-11:20, GHC 4102
-
-Instructors: [Christian Kaestner](https://www.cs.cmu.edu/~ckaestne/) and [Eunsuk Kang](https://eskang.github.io/)
-
-Teaching assistant: [Chu-Pan Wong](https://www.cs.cmu.edu/~chupanw/)
-
-Office Hours:
-
-* Christian, Monday 9:30-10:25, Wean 5126
-* Eunsuk, By appointment, Wean 5319
-* Chu-Pan, Wednesday 15:00-16:00, Wean 4103
 
 ### Coordination
 
@@ -100,9 +75,9 @@ All instructors and teaching assistants have an open door policy: If our office 
 
 ## Course content
 
-Course content is still under development. A more detailed breakdown of topics and learning goals can be found under [Learning Goals](https://github.com/ckaestne/seai/blob/master/learning%20goals.md). Below is a table of the current schedule with links to select lectures. Of of this is subject to change and will be updated as the semester progresses, especially to help focus on requested topics or support learning.
+The course content is evolving from semester to semester. See the [Fall 2019](https://ckaestne.github.io/seai/F2019) and [Summer 2020](https://ckaestne.github.io/seai/S2020) offerings for what we covered in the past or look at the list of topics and learning goals under [Learning Goals](https://github.com/ckaestne/seai/blob/master/learning%20goals.md). Below is a table of a preliminary  schedule. Of of this is subject to change and will be updated as the semester progresses, especially to help focus on requested topics or support learning.
 
-[Schedule](https://github.com/ckaestne/seai/blob/master/schedule.md)
+[Schedule](https://github.com/ckaestne/seai/blob/F2020/schedule.md)
 
 ![Course topics overview](overview.png "Course topics overview")
 
@@ -112,9 +87,7 @@ The course uses Canvas for homework submission, grading, discussion, questions, 
 
 **Prerequisites:** Offerings in different semesters may be targeted at students with different backgrounds. The course does not have formal prerequesites, but we describe background knowledge that will help you be successful in the course. Also note that the course always has a substantial programming component, so solid programming skills will be benefitial (we do not prescribe a programming language, but most student teams decide to work primarily in Python).
 
-*Summer 2020:* We expect basic exposure to software engineering, but do not require machine learning skills. We suggest that you  have a basic familiarity with using version control, gathering requirements, software design and modeling, testing and test automation. Courses 17-313, and  17-654, 17-655 will prepare you well, but you may also have prerequisite software engineering knowledge from other courses or practical work experience, including software-engineering-heavy internships. The Summer 2020 offering will include a crash course on machine learning.
-
-*Fall 2020:* We expect basic exposure to machine learning and reasonable programming skills, but do not require a software engineering background. We suggest that you have basic familiarity with the process of extracting features, building and evaluating models, and a basic understanding of how and when different kinds of learning techniques work. Courses such as 10-301, 10-315, and 05-434 will prepare you well, but project experience or self-learning from books or online courses will likely be sufficient for our purposes. The Fall 2020 offering will cover basic software engineering concepts in more depth than the Summer 2020 offering.
+*Fall 2020:* We expect basic exposure to machine learning and reasonable programming skills, but do not require a software engineering background. We suggest that you have basic familiarity with the process of extracting features, building and evaluating models, and a basic understanding of how and when different kinds of learning techniques work. Courses such as 10-301, 10-315, and 05-434 will prepare you well, but project experience or self-learning from books or online courses will likely be sufficient for our purposes. (The Fall 2020 offering will cover basic software engineering concepts in more depth than the Summer 2020 offering.)
 
 Students with both data science and software engineering background are well prepared for all offerings of the class.
 
