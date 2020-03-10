@@ -1,4 +1,8 @@
-**This is the site for the Summer 2020 offering of this course. For the initial Fall 2019 offering with all slides and assignments see [F2019 website](https://ckaestne.github.io/seai/F2019) and [F2019 GitHub branch](https://github.com/ckaestne/seai/tree/F2019). For the planned Fall 2020 offering see [F2020 website](https://ckaestne.github.io/seai/F2020) and [F2020 GitHub branch](https://github.com/ckaestne/seai/tree/F2020).** 
+See the specific offering of the course you are interested in:
+
+* Fall 2019 (initial offering, complete slides and assignments): [F2019 website](https://ckaestne.github.io/seai/F2019) and [F2019 GitHub branch](https://github.com/ckaestne/seai/tree/F2019).
+* Summer 2020 (next offering):  [S2020 website](https://ckaestne.github.io/seai/S2020) and [S2020 GitHub branch](https://github.com/ckaestne/seai/tree/S2020)
+* Fall 2020: [F2020 website](https://ckaestne.github.io/seai/F2020) and [F2020 GitHub branch](https://github.com/ckaestne/seai/tree/F2020)
 
 
 In 2020, the class will be offered both in the Summer term and in the Fall semester. The Summer offering will be more targeted towards students with software engineering experience (e.g., software engineering course, industrial experience, or internship experience), but will expect no data science background. The Fall offering will be targeted more at students with some data science experience (e.g., a machine learning course on campus or online), but will expect no software engineering background.
@@ -50,51 +54,64 @@ In addition, students will gain familiarity with production-quality infrastructu
 
 ## Logistics and People
 
-17-445/17-645, 12 Units
-
-Open to undergraduate and graduate students meeting the prerequisites.
-
-The summer 2020 offering targets students with a software engineering background (see prerequisites below)
-
-Lectures Tuesday+Thursday 3-4:20pm, Room 3SC 265 (Craig Street)
-
-Recitation Wednesday 12:30-1:50pm
-
-Instructor: [Christian Kaestner](https://www.cs.cmu.edu/~ckaestne/)
-
-Office Hours:
-
-* tbd
-
-### Coordination
-
-Unless you have questions to specific instructors, we prefer that you email us at se-ai@lists.andrew.cmu.edu, where you will reach the entire teaching staff of the course.
-
-
-The instructor has an open door policy: If our office door is open and no-one else is meeting with us, we are happy to answer any course-related questions. If you prefer an appointment, email the instructors or talk to us before or after class.
+See the specific offering for details: [Fall 2019](https://ckaestne.github.io/seai/F2019), [Summer 2020](https://ckaestne.github.io/seai/S2020)  or [Fall 2020](https://ckaestne.github.io/seai/F2020)
 
 
 ## Course content
 
-The course content evolves from semester to semester. See the course content of the [Fall 2019](https://ckaestne.github.io/seai/F2019) semester to get an overview and have a look at our [Learning Goals](https://github.com/ckaestne/seai/blob/master/learning%20goals.md). Below is a table of the current planned schedule. Of of this is subject to change and will be updated as the semester progresses, especially to help focus on requested topics or support learning.
+The course content evolves from semester to semester. Below is the schedule from the initial Fall 2019 offering. See also [Summer 2020](https://ckaestne.github.io/seai/S2020) and [Fall 2020](https://ckaestne.github.io/seai/F2020).
 
-[Schedule](https://github.com/ckaestne/seai/blob/master/schedule.md)
+
+(Preliminary schedule, subject to change)
+
+| Date  | Topic | Reading | Assignment due |
+| -     | -     | -       | -              |
+| Mon, Aug 26 | [Introduction and Motivation](https://ckaestne.github.io/seai/F2019/slides/01_introduction_and_motivation/intro.html) |   |   |
+| Wed, Aug 28 | [Components of an AI-Enabled System](https://ckaestne.github.io/seai/F2019/slides/02_components/components.html)  | [Building Intelligent Systems](https://www.buildingintelligentsystems.com/), Ch. 2+5+20  |   |
+| Mon, Sep 2  | **Labor day, no class** |   |   |
+| Wed, Sep 4  | [Software Engineering Bootcamp](https://ckaestne.github.io/seai/F2019/slides/03_se_bootcamp/se.html)   |  [Software Engineering for the 21st Century](http://ra.adm.cs.cmu.edu/anon/usr0/anon/usr/ftp/isri2005/CMU-ISRI-05-108.pdf), Sec 1-3  | [I1: Case Study](https://github.com/ckaestne/seai/blob/F2019/assignments/I1_case_study/assignment01.md)  |
+| Mon, Sep 9  | [Challenges and Measurements](https://ckaestne.github.io/seai/F2019/slides/04_challenges/challenges.html)   | [Hidden Technical Debt in Machine Learning Systems](http://papers.nips.cc/paper/5656-hidden-technical-debt-in-machine-learning-systems.pdf) & [Building Intelligent Systems](https://www.buildingintelligentsystems.com/), Ch. 4    |   |
+| Wed, Sep 11 | [Requirements and Risks](https://ckaestne.github.io/seai/F2019/slides/05_requirements/requirements.html)  | [Building Intelligent Systems](https://www.buildingintelligentsystems.com/), Ch. 6+7+24  | [G1: Modeling Basics](https://github.com/ckaestne/seai/blob/F2019/assignments/G1_modeling_basics/assignment02.md) |
+| Mon, Sep 16 | [Tradeoffs among AI Techniques](https://ckaestne.github.io/seai/F2019/slides/06_tradeoffs/tradeoffs.html#/)   |  [Building Intelligent Systems](https://www.buildingintelligentsystems.com/), Ch. 16-18 |   |
+| Wed, Sep 18 |  [Software Architecture of AI-enabled Systems](https://ckaestne.github.io/seai/F2019/slides/07_architecture/architecture.html) |  [Software architecture in practice](https://www.oreilly.com/library/view/software-architecture-in/9780132942799/?ar), Ch. 1 & [Building Intelligent Systems](https://www.buildingintelligentsystems.com/), Ch. 13 |  [I2: Requirements/Risk](https://github.com/ckaestne/seai/blob/F2019/assignments/I2_requirements_risks/assignment03.md) |
+| Wed, Sep 23 | [Model Quality](https://ckaestne.github.io/seai/F2019/slides/08_model_quality/modelquality.html)   |  [Building Intelligent Systems](https://www.buildingintelligentsystems.com/), Ch. 15+19 |   |
+| Mon, Sep 25 | Tradeoffs among AI Techniques: Presentations    |   | [G2: Technique Tradeoff Analysis](https://github.com/ckaestne/seai/blob/F2019/assignments/G2_tradeoffs/assignment04.md) |
+| Mon, Sep 30 | [Experimentation](https://ckaestne.github.io/seai/F2019/slides/09_experimentation/experimentation.html) | [Statistical Significance in A/B Testing](http://blog.analytics-toolkit.com/2017/statistical-significance-ab-testing-complete-guide/)  |   |
+| Wed, Oct 2  | [Data Quality](https://ckaestne.github.io/seai/F2019/slides/10_data_quality/dataquality.html)    | [Automating large-scale data quality verification](http://www.vldb.org/pvldb/vol11/p1781-schelter.pdf)  | [I3: Architecture](https://github.com/ckaestne/seai/blob/F2019/assignments/I3_architecture/assignment05.md)  |
+| Mon, Oct 7  | [Infrastructure Quality](https://ckaestne.github.io/seai/F2019/slides/11_infrastructurequality/testing.html)  |  [The ML Test Score: A Rubric for ML Production Readiness and Technical Debt Reduction](https://research.google.com/pubs/archive/46555.pdf) |   |
+| Wed, Oct 9  |  **Midterm**   |   |  |
+| Mon, Oct 14 | [DevOps](https://ckaestne.github.io/seai/F2019/slides/12_devops/devops.html)  |   |    |
+| Wed, Oct 16 | [Fairness in AI-Enabled Systems](https://ckaestne.github.io/seai/F2019/slides/13_fairness/fairness.html)  | [Algorithmic Accountability: A Primer](https://datasociety.net/wp-content/uploads/2018/04/Data_Society_Algorithmic_Accountability_Primer_FINAL-4.pdf)   | [G3: Infrastructure Quality](https://github.com/ckaestne/seai/blob/F2019/assignments/G3_quality/assignment06.md) |
+| Mon, Oct 21 | [Fairness Definitions and Measurement](https://ckaestne.github.io/seai/F2019/slides/14_fairness_2/fairness2.html)  |  [Fairness and Machine Learning](https://fairmlbook.org/pdf/introduction.pdf), Ch. 1 |   |
+| Wed, Oct 23 | [Ethics](https://ckaestne.github.io/seai/F2019/slides/15_ethics/ethics.html)  |[Benefits & Risks of AI](https://futureoflife.org/background/benefits-risks-of-artificial-intelligence/)   | [I4: Fairness](https://github.com/ckaestne/seai/blob/F2019/assignments/I4_fairness/assignment07.md) |
+| Mon, Oct 28 | [Scalability and Distributed Systems](https://ckaestne.github.io/seai/F2019/slides/16_distributed/systems.html)     |  [Fallacies of Distributed Computing Explained](https://www.rgoarchitects.com/Files/fallacies.pdf) |   |
+| Wed, Oct 30 | [Managing and Processing Large Datasets](https://ckaestne.github.io/seai/F2019/slides/17_dataatscale/data.html)  |   [Designing Data-Intensive Applications](https://cmu.primo.exlibrisgroup.com/discovery/fulldisplay?docid=alma991019578119704436&context=L&vid=01CMU_INST:01CMU&search_scope=MyInst_and_CI&tab=Everything&lang=en), Ch. 1  | |
+| Mon, Nov 4  | [Safety](https://ckaestne.github.io/seai/F2019/slides/18_safety/safety.html)   |  [Ironies of Automation](https://www.ise.ncsu.edu/wp-content/uploads/2017/02/Bainbridge_1983_Automatica.pdf) |   |
+| Wed, Nov 6  | [Security](https://ckaestne.github.io/seai/F2019/slides/19_security/security.html)    | [Uncover Security Design Flaws Using The STRIDE Approach](https://github.com/ckaestne/seai/raw/master/other_material/readings/security/msnd_threatmodeling.pdf)  | [G4: Automated Model Updates](https://github.com/ckaestne/seai/blob/F2019/assignments/G4_continuousdelivery/assignment08.md)  |
+| Mon, Nov 11 | [Process and Team Reflections](https://ckaestne.github.io/seai/F2019/slides/20_teams/teams.html)    |  [Building Intelligent Systems](https://www.buildingintelligentsystems.com/), Ch. 25 & [Peopleware: Productive Projects and Teams](http://proquest.safaribooksonline.com/9780133440706), Ch. 22+23+28 |   |
+| Wed, Nov 13 | [Usability](https://ckaestne.github.io/seai/F2019/slides/21_usability/usability.html) |  [Building Intelligent Systems](https://www.buildingintelligentsystems.com/), Ch. 8 | [I5: Security](https://github.com/ckaestne/seai/blob/F2019/assignments/I5_security/assignment09.md)   |
+| Mon, Nov 18 | [Data Provenance, Reproducability, and Explainability](https://ckaestne.github.io/seai/F2019/slides/22_provenance/provenance.html)    | [Building Intelligent Systems](https://www.buildingintelligentsystems.com/), Ch. 21 & [Goods: Organizing Google's Datasets](http://research.google.com/pubs/archive/45390.pdf)  |   |
+| Wed, Nov 20 | [Symbolic AI (guest lecture)](https://github.com/ckaestne/seai/raw/master/lectures/23_symbolic/ai_in_se.pdf)  |   |   |
+| Mon, Nov 25 | **No class** |   | |
+| Wed, Nov 27 | **Thanksgiving, no class**    |   | |
+| Mon, Dec 2  | [Planning an AI-Enabled Product in a Startup](https://ckaestne.github.io/seai/F2019/slides/23_startup/startup.html) ([Intro slides](https://github.com/ckaestne/seai/raw/master/lectures/24_startup/SEforML_Startups.pdf)) | [What is the minimum viable product?](http://venturehacks.wpengine.com/wp-content/uploads/2009/03/what-is-the-minimum-viable-product.mp3)  |   |
+| Wed, Dec 4  | Summary and Review  |  | [G5: System monitoring](https://github.com/ckaestne/seai/blob/F2019/assignments/G5_feedbackloop/assignment10.md) |
+| Sun, Dec 15 | **Final exam** (in WEH 4623, 8:30-11:30) ||
+
+
+
 
 ![Course topics overview](overview.png "Course topics overview")
 
 ## Course Syllabus and Policies
 
+see [Fall 2019](https://ckaestne.github.io/seai/F2019), [Summer 2020](https://ckaestne.github.io/seai/S2020)  or [Fall 2020](https://ckaestne.github.io/seai/F2020) for details.
+
 The course uses Canvas for homework submission, grading, discussion, questions, announcements, and supplementary documents; slides will be posted here; github is used to coordinate group work.
 
-**Prerequisites:** Offerings in different semesters may be targeted at students with different backgrounds. The course does not have formal prerequesites, but we describe background knowledge that will help you be successful in the course. Also note that the course always has a substantial programming component, so solid programming skills will be benefitial (we do not prescribe a programming language, but most student teams decide to work primarily in Python).
-
-*Summer 2020:* We expect basic exposure to software engineering, but do not require machine learning skills. We suggest that you  have a basic familiarity with using version control, gathering requirements, software design and modeling, testing and test automation. Courses 17-313, and  17-654, 17-655 will prepare you well, but you may also have prerequisite software engineering knowledge from other courses or practical work experience, including software-engineering-heavy internships. The Summer 2020 offering will include a crash course on machine learning.
-
-We have set up a *prerequisite knowledge check* in the course's Canvas repository, where we ask 10 questions on software engineering and 10 questions on machine learning, which help you assess your background. This is set up as an ungraded quiz, where you can compare your knowledge against what we believe is useful for you to be successful in this course. The system will give specific pointers to readings and exercises that may help you fill gaps in background knowledge. Email us (se-ai@lists.andrew.cmu.edu) if you would like access to this check before signing up for the course or if like to talk to us about prerequisites.
+**Prerequisites:** Offerings in different semesters may be targeted at students with different backgrounds. The course does not have formal prerequesites, but we describe background knowledge that will help you be successful in the course, see [Fall 2019](https://ckaestne.github.io/seai/F2019), [Summer 2020](https://ckaestne.github.io/seai/S2020) or [Fall 2020](https://ckaestne.github.io/seai/F2020) for details. Also note that the course always has a substantial programming component, so solid programming skills will be benefitial (we do not prescribe a programming language, but most student teams decide to work primarily in Python).
 
 **Teamwork:** Teamwork is an essential part of this course. Many assignments are done in teams of 3-5 students. Teams will be assigned by the instructor and stay together for multiple assignments. A team policy posted on Canvas applies and describes roles and teams and how to deal with conflicts and imbalances.
-
-**Communication:** We make announcements through Canvas and use Canvas also for discussions, including clarifying homework assignments and other interactions. The instructors and TAs hold weekly office hours and are reachable by email; see above for information on how to contact us. Email them for additional appointments. They also have an open-door policy: When our door is open and we are not currently meeting with somebody else, feel free to interrupt us for course-related issues.
 
 **Textbook:** We will be using Goeff Hulten's *"Building Intelligent Systems: A Guide to Machine Learning Engineering"* (ISBN: 1484234316) throughout much of the course. The library provides an [electronic copy](https://link-springer-com.proxy.library.cmu.edu/book/10.1007%2F978-1-4842-3432-7). In addition, we will provide additional supplementary readings, including blog posts and academic papers, throughout the semester.
 
@@ -105,22 +122,6 @@ We have set up a *prerequisite knowledge check* in the course's Canvas repositor
 **Late work policy:** Late work in group assignments will receive feedback but no credit. Late work in individual assignments will be accepted with a 10% penalty per day, for up to 3 days. Exceptions to this policy will be made only in extraordinary circumstances, almost always involving a family or medical emergency---with your academic advisor or the Dean of Student Affairs requesting the exception on your behalf. Accommodations for travel (e.g., for interviews) might be possible if requested at least 3 days in advance. Please communicate also with your team about timing issues.
 
 **Writing:** Describing tradeoffs among decisions and communication with stakeholders from other backgrounds are key aspects of this class. Many homework assignments have a component that requires discussing issues in written form or reflecting about experiences. To practice writing skills, the Global Communications Center (GCC) offers one-on-one help for students, along with workshops. The instructors are also happy to provide additional guidance if requested.
-
-**Academic honesty and collaboration:** The usual policies apply, especially the University Policy on Academic Integrity. Many assignments will be done in groups. We expect that group members collaborate with one another, but that groups work independently from one another, not exchanging results with other groups. Within groups, we expect that you are honest about your contribution to the group's work. This implies not taking credit for others' work and not covering for team members that have not contributed to the team. Otherwise, our expectations regarding academic honestly and collaboration for group work are the same as for individual work, substituting elevated to the level of "group."
-The rest of this academic honesty and collaboration content is taken from the policy used in 15-214, which we reuse almost directly (with minor modifications, and attribution).
-"You may not copy any part of a solution to a problem that was written by another student, or was developed together with another student, or was copied from another unauthorized source such as the Internet. You may not look at another student's solution, even if you have completed your own, nor may you knowingly give your solution to another student or leave your solution where another student can see it.
-Here are some examples of behavior that are inappropriate:
-* Copying or retyping, or referring to, files or parts of files (such as source code, written text, or unit tests) from another person or source (whether in final or draft form, regardless of the permissions set on the associated files) while producing your own. This is true even if your version includes minor modifications such as style or variable name changes or minor logic modifications.
-* Getting help that you do not fully understand, and from someone whom you do not acknowledge on your solution.
-* Writing, using, or submitting a program that attempts to alter or erase grading information or otherwise compromise security of course resources.
-* Lying to course staff.
-* Giving copies of work to others, or allowing someone else to copy or refer to your code or written assignment to produce their own, either in draft or final form. This includes making your work publicly available in a way that other students (current or future) can access your solutions, even if others' access is accidental or incidental to your goals. Beware the privacy settings on your open source accounts!
-* Coaching others step-by-step without them understanding your help.
-If any of your work contains any statement that was not written by you, you must put it in quotes and cite the source. If you are paraphrasing an idea you read elsewhere, you must acknowledge the source. Using existing material without proper citation is plagiarism, a form of cheating. If there is any question about whether the material is permitted, you must get permission in advance. We will be using automated systems to detect software plagiarism.
-It is not considered cheating to clarify vague points in the assignments, lectures, lecture notes; to give help or receive help in using the computer systems, compilers, debuggers, profilers, or other facilities; or to discuss ideas at a very high level, without referring to or producing code.
-Any violation of this policy is cheating. The minimum penalty for cheating (including plagiarism) will be a zero grade for the whole assignment. Cheating incidents will also be reported through University channels, with possible additional disciplinary action (see the above-linked University Policy on Academic Integrity).
-If you have any question about how this policy applies in a particular situation, ask the instructors or TAs for clarification."
-Note that the instructors respect honesty in these (and indeed most!) situations.
 
 **Accommodations for students with disabilities:** If you have a disability and have an accommodations letter from the Disability Resources office, we encourage you to discuss your accommodations and needs with us as early in the semester as possible. We will work with you to ensure that accommodations are provided as appropriate. If you suspect that you may have a disability and would benefit from accommodations but are not yet registered with the Office of Disability Resources, we encourage you to contact them at access@andrew.cmu.edu.
 
