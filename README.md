@@ -75,7 +75,7 @@ All instructors and teaching assistants have an open door policy: If our office 
 
 ## Course content
 
-The course content is evolving from semester to semester. See the [Fall 2019](https://ckaestne.github.io/seai/F2019) and [Summer 2020](https://ckaestne.github.io/seai/S2020) offerings for what we covered in the past or look at the list of topics and learning goals under [Learning Goals](https://github.com/ckaestne/seai/blob/master/learning%20goals.md). Below is a table of a preliminary  schedule. Of of this is subject to change and will be updated as the semester progresses, especially to help focus on requested topics or support learning.
+The course content is evolving from semester to semester. See the [Fall 2019](https://ckaestne.github.io/seai/F2019) and [Summer 2020](https://ckaestne.github.io/seai/S2020) offerings for what we covered in the past or look at the list of topics and learning goals under [Learning Goals](https://github.com/ckaestne/seai/blob/F2020/learning_goals.md). Below is a table of a preliminary  schedule. Of of this is subject to change and will be updated as the semester progresses, especially to help focus on requested topics or support learning.
 
 [Schedule](https://github.com/ckaestne/seai/blob/F2020/schedule.md)
 
