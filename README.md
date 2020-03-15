@@ -76,9 +76,9 @@ The instructor has an open door policy: If our office door is open and no-one el
 
 ## Course content
 
-The course content evolves from semester to semester. See the course content of the [Fall 2019](https://ckaestne.github.io/seai/F2019) semester to get an overview and have a look at our [Learning Goals](https://github.com/ckaestne/seai/blob/master/learning%20goals.md). Below is a table of the current planned schedule. Of of this is subject to change and will be updated as the semester progresses, especially to help focus on requested topics or support learning.
+The course content evolves from semester to semester. See the course content of the [Fall 2019](https://ckaestne.github.io/seai/F2019) semester to get an overview and have a look at our [Learning Goals](https://github.com/ckaestne/seai/blob/S2020/learning_goals.md). Below is a table of the current planned schedule. Of of this is subject to change and will be updated as the semester progresses, especially to help focus on requested topics or support learning.
 
-[Schedule](https://github.com/ckaestne/seai/blob/master/schedule.md)
+[Schedule](https://github.com/ckaestne/seai/blob/S2020/schedule.md)
 
 ![Course topics overview](overview.png "Course topics overview")
 
