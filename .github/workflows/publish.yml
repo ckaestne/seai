@@ -1,80 +1,35 @@
-# This is a basic workflow to help you get started with Actions
-
-name: PublishAll
-
-# Controls when the action will run. Triggers the workflow on push or pull request 
-# events but only for the master branch
+name: publish-gh-pages
 on:
   push:
-    branches: [ master, S2020, F2019, F2020 ]
+    branches: master
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  build-main:
-    # The type of runner that the job will run on
+  gh-pages:
     runs-on: ubuntu-latest
     
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
-      with:
-        ref: 'master'
       
-    - name: Setup Node
-      uses: actions/setup-node@v1
-      with: 
-        node-version: '10.x'
-
-    - name: Create main page
+    - name: Create site
       run: |
-        sh .assets/gen.sh
-    
-    - uses: actions/upload-artifact@v1
-      with:
-        name: site-main
-        path: _site
+        echo generate main html page in _site/
+        mkdir _site
+        npm install marked
+        cp .assets/template.html _site/index.html
+        node_modules/marked/bin/marked -i README.md >> _site/index.html
+        cat .assets/template_end.html >> _site/index.html
+        cp *.png _site/
+        cp *.jpg _site/        
+        echo done generating index.html
 
-    
-  build-F2019:
-    runs-on: ubuntu-latest
-    
-    steps:
-    - uses: actions/checkout@v2
-      with:
-        ref: 'F2019'
-
-    - name: Generating F2019
+    - name: Push to gh-pages
       run: |
-        sh .assets/gen.sh
-
-    - name: Setup Node
-      uses: actions/setup-node@v1
-      with: 
-        node-version: '10.x'
-
-    - uses: actions/upload-artifact@v1
-      with:
-        name: site-F2019
-        path: _site
-
-  publish:
-    runs-on: ubuntu-latest
-    needs: [build-main, build-F2019]
-    steps:
-      - name: Get pages
-        uses: actions/download-artifact@v1
-        with:
-          name: 'site-main'
-          path: '_site'
-      - name: Get pages F2019
-        uses: actions/download-artifact@v1
-        with:
-          name: 'site-F2019'
-          path: '_site/F2019'
-      - uses: actions/upload-artifact@v1
-        with:
-          name: site
-          path: _site          
+        git clone --quiet --branch gh-pages --depth 1 https://github.com/${{ github.repository }}.git .gh-pages
+        find .gh-pages -maxdepth 1 -type f -delete
+        cp _site/* .gh-pages
+        cd .gh-pages
+        git add *
+        git config --local user.email "ckaestne@nomail.cs.cmu.edu"
+        git config --local user.name "GitHub Action"
+        git commit --allow-empty -m "Update gh-pages for master/${{ github.sha }}"
+        git push https://$GITHUB_ACTOR:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:gh-pages --force --follow-tags -v
