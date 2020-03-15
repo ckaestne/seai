@@ -1,0 +1,47 @@
+name: publish-gh-pages
+on:
+  push:
+    branches: F2020
+
+jobs:
+  gh-pages:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v2
+      
+    - name: Prepare _site
+      run: |
+        echo generate main html page in _site/
+        mkdir _site
+        cd lectures
+        npm install --no-optional
+        cd ..
+
+    - name: Generate main page
+      run: |
+        cp .assets/template.html _site/index.html
+        sed -i -e '/^\[Schedule\]/r schedule.md' README.md
+        lectures/node_modules/marked/bin/marked -i README.md >> _site/index.html
+        cat .assets/template_end.html >> _site/index.html
+        cp *.png _site/
+        cp *.jpg _site/
+
+    - name: Generate slides
+      run: |
+        cd lectures
+        npm run generate
+        cp -r _static/ ../_site/slides
+        cd ..
+
+    - name: Push to gh-pages
+      run: |
+        git clone --quiet --branch gh-pages --depth 1 https://github.com/${{ github.repository }}.git .gh-pages
+        rm -rf .gh-pages/F2020
+        mv _site .gh-pages/F2020
+        cd .gh-pages
+        git add F2020
+        git config --local user.email "ckaestne@nomail.cs.cmu.edu"
+        git config --local user.name "GitHub Action"
+        git commit --allow-empty -m "Update gh-pages for F2020/${{ github.sha }}"
+        git push https://$GITHUB_ACTOR:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:gh-pages --force --follow-tags -v
