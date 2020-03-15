@@ -92,9 +92,9 @@ All instructors and teaching assistants have an open door policy: If our office 
 
 ## Course content
 
-Course content is still under development. A more detailed breakdown of topics and learning goals can be found under [Learning Goals](https://github.com/ckaestne/seai/blob/master/learning%20goals.md). Below is a table of the current schedule with links to select lectures. Of of this is subject to change and will be updated as the semester progresses, especially to help focus on requested topics or support learning.
+Course content is still under development. A more detailed breakdown of topics and learning goals can be found under [Learning Goals](https://github.com/ckaestne/seai/blob/F2019/learning_goals.md). Below is a table of the current schedule with links to select lectures. Of of this is subject to change and will be updated as the semester progresses, especially to help focus on requested topics or support learning.
 
-[Schedule](https://github.com/ckaestne/seai/blob/master/schedule.md)
+[Schedule](https://github.com/ckaestne/seai/blob/F2019/schedule.md)
 
 ![Course topics overview](overview.png "Course topics overview")
 
