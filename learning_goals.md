@@ -1,8 +1,6 @@
 # 17-445/645 Software Engineering for AI-Enabled Systems -- Learning Goals
 
-## Overview
 
- ![Lecture and homework dependencies](lecture_dependencies.svg)
 
 ## Lecture: Introduction and Motivation
 
@@ -23,12 +21,11 @@ Learning goals:
 
 Assignment:
 
-* Case study analysis of a troubled ML project, e.g., 
-  - 🗎 Sculley, D., Matthew Eric Otey, Michael Pohl, Bridget Spitznagel, John Hainsworth, and Yunkai Zhou. "Detecting adversarial advertisements in the wild." In Proceedings of the 17th ACM SIGKDD international conference on Knowledge discovery and data mining, pp. 274-282. ACM, 2011.
+* Case study analysis of a troubled ML project, e.g., 🗎 Sculley, D., Matthew Eric Otey, Michael Pohl, Bridget Spitznagel, John Hainsworth, and Yunkai Zhou. "Detecting adversarial advertisements in the wild." In Proceedings of the 17th ACM SIGKDD international conference on Knowledge discovery and data mining, pp. 274-282. ACM, 2011.
 
 
 
-## Lecture: Introduction to Machine Learning (2 Lectures)
+## Lecture: Introduction to Machine Learning (2 Lectures) ![Machine Learning](https://img.shields.io/badge/-Machine Learning-Purple.svg)
 
 Content:
 
@@ -61,7 +58,7 @@ Readings:
 
 
 
-## Lecture: Model Quality
+## Lecture: Model Quality ![Machine Learning](https://img.shields.io/badge/-Machine Learning-Purple.svg)![Architecture](https://img.shields.io/badge/-Quality Assurance-Orange.svg)
 
 Overview:
 
@@ -71,6 +68,7 @@ Overview:
 * Automated assessment, dashboards, continuous integration, continuous experimentation
 * Notions of test suits and coverage for models (e.g., test by population segment), black box test case design
 * Comparison against heuristics approaches
+* Fuzzing, adversarial learning, and test case generation; overview of current research
 
 Learning goals:
 
@@ -81,11 +79,11 @@ Learning goals:
 
 Readings:
 
-* 🕮 Hulten, Geoff. "Building Intelligent Systems: A Guide to Machine Learning Engineering." (2018), 19-20 (Evaluating Intelligence).
+* 🕮 Hulten, Geoff. "Building Intelligent Systems: A Guide to Machine Learning Engineering." (2018), 19-20 (Evaluating Intelligence, Machine Learning Intelligence).
 
   
 
-## Lecture: From Models to AI-Enabled Systems (Systems Thinking)
+## Lecture: From Models to AI-Enabled Systems (Systems Thinking) ![Architecture](https://img.shields.io/badge/-Requirements-Green.svg)![Architecture](https://img.shields.io/badge/-Architecture/Design-Blue.svg)![Architecture](https://img.shields.io/badge/-Quality Assurance-Orange.svg)![Architecture](https://img.shields.io/badge/-Process-Grey.svg)
 
 Overview:
 
@@ -104,12 +102,12 @@ Learning goals:
 
 Readings:
 
-* 🕮 Hulten, Geoff. "Building Intelligent Systems: A Guide to Machine Learning Engineering." (2018), Chapters 5.
+* 🕮 Hulten, Geoff. "Building Intelligent Systems: A Guide to Machine Learning Engineering." (2018), Chapters 5 (Components of Intelligent Systems).
 * 🗎 Sculley, David, Gary Holt, Daniel Golovin, Eugene Davydov, Todd Phillips, Dietmar Ebner, Vinay Chaudhary, Michael Young, Jean-Francois Crespo, and Dan Dennison. "[Hidden technical debt in machine learning systems](http://papers.nips.cc/paper/5656-hidden-technical-debt-in-machine-learning-systems.pdf)." In Advances in neural information processing systems, pp. 2503-2511. 2015.
 
 
 
-## Lecture: Goals and Success Measures for AI-Enabled Systems (Requirements)
+## Lecture: Goals and Success Measures for AI-Enabled Systems (Requirements) ![Architecture](https://img.shields.io/badge/-Requirements-Green.svg)![Architecture](https://img.shields.io/badge/-Architecture/Design-Blue.svg)
 
 Overview:
 
@@ -128,13 +126,13 @@ Learning goals:
 
 Readings:
 
-* 🕮 Hulten, Geoff. "Building Intelligent Systems: A Guide to Machine Learning Engineering." (2018), Chapters 2, 4 and 15 (Intelligent Telemetry)
+* 🕮 Hulten, Geoff. "Building Intelligent Systems: A Guide to Machine Learning Engineering." (2018), Chapters 2 (Knowing when to use IS), 4 (Defining the IS’s Goals) and 15 (Intelligent Telemetry)
 * 🗎 Zinkevich. Rules of Machine Learning: Best Practices for ML Engineering. https://developers.google.com/machine-learning/guides/rules-of-ml/
 * 🕮 Ajay Agrawal, Joshua Gans, Avi Goldfarb. “Prediction Machines: The Simple Economics of Artificial Intelligence” 2018 – ?
 
 
 
-## Lecture: Risk and Planning for Mistakes (Requirements)
+## Lecture: Risk and Planning for Mistakes (Requirements) ![Architecture](https://img.shields.io/badge/-Requirements-Green.svg)![Architecture](https://img.shields.io/badge/-Architecture/Design-Blue.svg)
 
 Overview:
 
@@ -160,7 +158,7 @@ Readings:
 
 
 
-## Lecture: Tradeoffs among Modeling Techniques
+## Lecture: Tradeoffs among Modeling Techniques ![Architecture](https://img.shields.io/badge/-Architecture/Design-Blue.svg)
 
 Overview:
 
@@ -184,7 +182,7 @@ Readings:
 
 
 
-## Lecture: Software Architecture of AI-enabled Systems
+## Lecture: Software Architecture of AI-enabled Systems ![Architecture](https://img.shields.io/badge/-Architecture/Design-Blue.svg)
 
 Overview:
 
@@ -208,23 +206,20 @@ Assignment:
 
 Readings:
 
-* 🕮 Hulten, Geoff. "Building Intelligent Systems: A Guide to Machine Learning Engineering." (2018), Chapter 13
+* 🕮 Hulten, Geoff. "Building Intelligent Systems: A Guide to Machine Learning Engineering." (2018), Chapter 13 (Where Intelligence Lives)
 
-* Daniel Smith. "[Exploring Development Patterns in Data Science](https://www.theorylane.com/2017/10/20/some-development-patterns-in-data-science/)." TheoryLane Blog Post. 2017.
-* Washizaki, Hironori, Hiromu Uchida, Foutse Khomh, and Yann-Gaël Guéhéneuc. "[Machine Learning Architecture and Design Patterns](http://www.washi.cs.waseda.ac.jp/wp-content/uploads/2019/12/IEEE_Software_19__ML_Patterns.pdf)." Paper draft under review, 2019
-
-
+* 📰 Daniel Smith. "[Exploring Development Patterns in Data Science](https://www.theorylane.com/2017/10/20/some-development-patterns-in-data-science/)." TheoryLane Blog Post. 2017.
+* 🗎 Washizaki, Hironori, Hiromu Uchida, Foutse Khomh, and Yann-Gaël Guéhéneuc. "[Machine Learning Architecture and Design Patterns](http://www.washi.cs.waseda.ac.jp/wp-content/uploads/2019/12/IEEE_Software_19__ML_Patterns.pdf)." Draft, 2019
 
 
-## Lecture: Quality Assessment in Production
+
+
+## Lecture: Quality Assessment in Production ![Implementation/Operations](https://img.shields.io/badge/-Implementation/Operations-Yellow.svg)![Architecture](https://img.shields.io/badge/-Quality Assurance-Orange.svg)
 
 Overview:
 
 * Introduction to the scientific method (experimental design, statistical tests, causality)
-* Offline experimentation
-  * Introduction to *sensitivity analysis*
-  * Use cases regarding robustness, bias, performance and hyperparameter tuning, ...
-  * Sampling in high-dimensional spaces
+* Design of telemetry (revisted)
 * Online experimentation
   * Testing in production, chaos engineering
   * *A/B testing*
@@ -242,15 +237,15 @@ Learning goals:
 
 Assignment:
 
-* Design an experimentation platform that 
-   (a) performs automated tests offline, (b) tracks experiments and their results, (c) compares model quality using suitable measures
+* Design an experimentation platform that (a) performs automated tests offline, (b) tracks experiments and their results, (c) compares model quality using suitable measures
 
 Readings:
 
 * Todo (on A/B testing and corresponding statistics)
 
 
-## Lecture: Data Quality
+
+## Lecture: Data Quality ![Architecture](https://img.shields.io/badge/-Quality Assurance-Orange.svg)
 
 Overview:
 
@@ -276,7 +271,32 @@ Readings:
 
 
 
-## Lecture: Test and Deployment Automation
+## Lecture: Managing and Processing Large Datasets ![Architecture](https://img.shields.io/badge/-Architecture-Blue.svg)![Architecture](https://img.shields.io/badge/-Implementation/Operation-Yellow.svg)
+
+Overview:
+
+* Infrastructure for large amounts of training data and large amounts of telemetry
+* Introduction to data storage strategies and their tradeoffs
+* Schema vs noschema storage (data lakes)
+* Overview of common technologies (relational databases, NoSQL storage, OLAP/OLTP, streaming systems, replication and partitioning)
+* Design considerations: mutable vs immutable data
+* Common design patterns (e.g., batch processing, stream processing, lambda architecture)
+* Distributed logging systems, distributed data cleaning and feature extraction, distributed learning – including open-source frameworks
+
+Learning goals:
+
+* 🗎 Organize different data management solutions and their tradeoffs
+* 🗎 Recommend and justify a design and corresponding technologies for a given system
+
+Readings:
+
+* 🕮 Martin Kleppmann. [Designing Data-Intensive Applications](https://cmu.primo.exlibrisgroup.com/discovery/fulldisplay?docid=alma991019578119704436&context=L&vid=01CMU_INST:01CMU&search_scope=MyInst_and_CI&tab=Everything&lang=en). O’Reilly, 2017, Ch. 1
+
+* tbd (on data lakes, lambda architecture, stream processing)
+
+  
+
+## Lecture: Deployment and Infrastructure Quality ![Architecture](https://img.shields.io/badge/-Implementation/Operation-Yellow.svg)![Architecture](https://img.shields.io/badge/-Quality Assurance-Orange.svg)
 
 Overview:
 
@@ -307,13 +327,15 @@ Reading:
 * 🗎 Eric Breck, Shanqing Cai, Eric Nielsen, Michael Salib, D. Sculley. The ML Test Score: A Rubric for ML Production Readiness and Technical Debt Reduction. Proceedings of IEEE Big Data (2017)
 
 
-## Lecture: Ethics + Fairness
+
+## Lecture: Ethics + Fairness (2 Lectures) ![Architecture](https://img.shields.io/badge/-Requirements-Green.svg)![Architecture](https://img.shields.io/badge/-Quality Assurance-Orange.svg)![Process](https://img.shields.io/badge/-Process-Grey.svg)![Machine Learning](https://img.shields.io/badge/-Machine Learning-Purple.svg)
 
 Overview:
 
 * Introductions to ethics
-* Overview of notions of *bias and fairness* and corresponding measures
-* Techniques for detecting bias, fairness testing
+* Overview of notions of *bias and fairness* and corresponding philosophies and measures
+* Identifying key concerns to drive requirements analysis and tradeoff decisions
+* Techniques for measuring bias; fairness testing
 * Overview of possible interventions to reduce or mitigate bias
 
 Learning goals:
@@ -330,21 +352,26 @@ Assignment:
 
 Readings:
 
-* todo (one case study of a problem, one paper formally discussion notions of bias/fairness)
+* 📰 Max Tegmark. [Benefits and Risks of Artificial Intelligence](https://futureoflife.org/background/benefits-risks-of-artificial-intelligence/?cn-reloaded=1). Future of Life Institute
+* 📰 Julia Angwin, Jeff Larson, Surya Mattu and Lauren Kirchner. [Machine Bias](https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing). Propublica 2016
+* 🗎 Corbett-Davies, Sam, and Sharad Goel. "[The measure and mismeasure of fairness: A critical review of fair machine learning](https://arxiv.org/abs/1808.00023)." arXiv preprint arXiv:1808.00023 (2018).
 
 
-## Lecture: Safety
+
+## Lecture: Safety and Robustness ![Architecture](https://img.shields.io/badge/-Requirements-Green.svg)![Architecture](https://img.shields.io/badge/-Architecture/Design-Blue.svg)![Architecture](https://img.shields.io/badge/-Quality Assurance-Orange.svg)![Machine Learning](https://img.shields.io/badge/-Machine Learning-Purple.svg)
 
 Overview:
 
 * Introduction to safety and ethics; safety vs reliability
 * Introduction to *hazard analysis* (requirements)
+* State of the art of robustness research in machine learning – approaches and guarantees
 * Safety concerns in everyday applications
 * Architectural safety tactics -- how to build safe systems from unreliable components
 * Introduction to assurance cases and software certification; evidence collection for safety claims
 
 Learning goals:
 
+* Summarize the state of the art robustness analysis strategies for machine-learned models
 * Perform a hazard analysis for a system to derive safety requirements
 * Diagnose potential safety issues in a given system
 * Collect evidence and sketch an argument for a safety case
@@ -357,9 +384,12 @@ Assignment: (?)
 
 Readings:
 
-* todo
+* 🗎 Borg, Markus, Cristofer Englund, Krzysztof Wnuk, Boris Duran, Christoffer Levandowski, Shenjian Gao, Yanwen Tan, Henrik Kaijser, Henrik Lönn, and Jonas Törnqvist. "[Safely entering the deep: A review of verification and validation for machine learning and a challenge elicitation in the automotive industry](https://www.atlantis-press.com/journals/jase/125905766)." Journal of Automotive Software Engineering. Volume 1, Issue 1, Pages 1 - 19. 2019
+* 🗎 Cohen, Jeremy M., Elan Rosenfeld, and J. Zico Kolter. "[Certified adversarial robustness via randomized smoothing](https://arxiv.org/abs/1902.02918)." In Proc. International Conference on Machine Learning, p. 1310--1320, 2019.
 
-## Lecture: Security, Adversarial Learning, and Feedback Loops
+
+
+## Lecture: Security, Adversarial Learning, and Feedback Loops ![Requirements](https://img.shields.io/badge/-Requirements-Green.svg)![Quality Assurance](https://img.shields.io/badge/-Quality Assurance-Orange.svg)![Process](https://img.shields.io/badge/-Process-Grey.svg)
 
 Overview:
 
@@ -370,8 +400,6 @@ Overview:
 * *Threat modeling*
 * Overview of common security patterns/tactics
 * Anomaly detection, intrusion detection
-* Fuzzing and test case generation; overview of formal techniques
-* Process and team considerations for security
 
 Learning goals:
 
@@ -383,50 +411,27 @@ Learning goals:
 Reading:
 
 * 🕮 Hulten, Geoff. "Building Intelligent Systems: A Guide to Machine Learning Engineering." (2018), Chapter 25
-* todo (case study)
+* 🗎 Shawn Hernan and Scott Lambert and Tomasz Ostwald and Adam Shostack. [Uncover Security Design Flaws Using The STRIDE Approach](https://github.com/ckaestne/seai/raw/F2019/other_material/readings/security/msnd_threatmodeling.pdf). MSDN 2007
+* todo (case study, adversarial learning)
 
-## Lecture: Scalability and Distributed Systems 
 
-Overview:
 
-* Survey of scalability challenges for learning and serving in AI-enabled systems
-* Introduction to distributed systems and corresponding challenges (faults, consistency, atomicity, ...)
-* Overview of common architectures and tactics for scalability (faster computers to clusters of commodity hardware)
-* Software architecture modeling and analysis for performance and scalability
-* Overview of common abstractions and designs, including reusable open-source infrastructure
-
-Learning goals:
-
-* Summarize the challenges of distributed systems
-* Outline strategies to scale systems and their tradeoffs
-* Diagnose bottlenecks with architectural modeling and identify which parts of a system can be parallelized
-* Recommend suitable abstractions for scaling a given system
-
-Readings:
-
-* todo
-
-## Lecture: Managing and Processing Large Datasets
+## Lecture: Explainability & Interpretability ![Requirements](https://img.shields.io/badge/-Requirements-Green.svg)![Machine Learning](https://img.shields.io/badge/-Machine Learning-Purple.svg)
 
 Overview:
 
-* Introduction to data storage strategies and their tradeoffs
-* Schema vs noschema storage (data lakes)
-* Overview of common technologies (relational databases, NoSQL storage, OLAP/OLTP, streaming systems, replication and partitioning)
-* Design considerations: mutable vs immutable data
-* Common design patterns (e.g., batch processing, stream processing, lambda architecture)
-* Distributed logging, feature extraction, and learning, including open-source frameworks
-
-Learning goals:
-
-* 🗎 Organize different data management solutions and their tradeoffs
-* 🗎 Recommend and justify a design and corresponding technologies for a given system
+* Introduction to use cases, concepts, and measures for interpretability
+* Strategies for model interpretability, including local explanations, invariants, counterfactuals, and model constraints
+* Introduction to sensitivity analysis
 
 Readings:
 
-* todo
+* 🗎 Rudin, Cynthia. "Stop explaining black box machine learning models for high stakes decisions and use interpretable models instead." Nature Machine Intelligence 1, no. 5 (2019): 206-215.
+* 🗎 Ribeiro, Marco Tulio, Sameer Singh, and Carlos Guestrin. "[Anchors: High-precision model-agnostic explanations](https://sameersingh.org/files/papers/anchors-aaai18.pdf)." In Thirty-Second AAAI Conference on Artificial Intelligence. 2018.
 
-## Lecture: Data Provenance, Reproducability, and Explainability
+
+
+## Lecture: Debugging, Data Provenance, and Reproducability (2 Lectures) ![Requirements](https://img.shields.io/badge/-Requirements-Green.svg)![Implementation/Operations](https://img.shields.io/badge/-Implementation/Operations-Yellow.svg)![Quality Assurance](https://img.shields.io/badge/-Quality Assurance-Orange.svg)
 
 Overview:
 
@@ -449,19 +454,44 @@ Readings:
 
 * 🗎 Halevy, Alon, Flip Korn, Natalya F. Noy, Christopher Olston, Neoklis Polyzotis, Sudip Roy, and Steven Euijong Whang. "Goods: Organizing google's datasets." In Proceedings of the 2016 International Conference on Management of Data, pp. 795-806. ACM, 2016.
 * 🗎 Gulzar, Muhammad Ali, Matteo Interlandi, Tyson Condie, and Miryung Kim. "Debugging big data analytics in spark with bigdebug." In Proceedings of the 2017 ACM International Conference on Management of Data, pp. 1627-1630. ACM, 2017.
-* 🕮 Hulten, Geoff. "Building Intelligent Systems: A Guide to Machine Learning Engineering." (2018), Chapter 21
+* 🕮 Hulten, Geoff. "Building Intelligent Systems: A Guide to Machine Learning Engineering." (2018), Chapter 21 (Organizing Intelligence) – 23 (Orchestration)
 
-## Lecture: Configuration Management and Operations at Scale
+
+
+## Lecture: Fostering Interdisciplinary Teams: MLOps, AI Engineering, DevOps ![Process](https://img.shields.io/badge/-Process-Grey.svg)
 
 Overview:
 
-* Managing computing resources, own and cloud resources
+* Different roles in developing AI-enabled systems and their respective goals and concerns
+* Communication strategies for cross-disciplinary teams
+  - Understand basic management, engineering, science, and operations mindsets
+  - Experimentation (notebooks) vs production
+  - Going beyond accuracy, pipelines not models
+  - Communicating the importance of process
+* Agile techniques in AI-enabled systems
+* Infrastructure and tools to foster collaboration, learning from DevOps
+
+Learning goals:
+
+* Plan development activities in an inclusive fashion for participants in different roles
+* Describe agile techniques and tools to address common process and communication issues
+
+Readings:
+
+* 🗎 todo (on data scientist role)
+
+
+
+## Lecture: Deployment and Operations at Scale ![Implementation/Operations](https://img.shields.io/badge/-Implementation/Operations-Yellow.svg)
+
+Overview:
+
+* Build vs buy, cloud infrastructure for learning and deployment
 * Automated configuration management challenges and tools (Kubernetis, puppet, ansible)
 * Overview of cloud infrastructure services (containers, serverless, app engines, ...) and relevant tradeoffs
-* Version control strategies, feature flags vs branches, dependency management
-* Introduction to logging and analysis at scale
+* Logging and analysis at scale
 * Debugging and monitoring tools for distributed systems and for AI components, including latency and resource consumption; deciding when to send alerts and how
-* Runtime adaptation and self-adaptive systems
+* AIOps, runtime adaptation, anomaly detection
 
 Learning goals:
 
@@ -473,35 +503,7 @@ Learning goals:
 
 Readings:
 
-* 🕮 Hulten, Geoff. "Building Intelligent Systems: A Guide to Machine Learning Engineering." (2018), Chapters 23, 24.
-* 🗎 The ML Test Score: A Rubric for ML Production Readiness and Technical Debt Reduction. Eric Breck, Shanqing Cai, Eric Nielsen, Michael Salib, D. Sculley  Proceedings of IEEE Big Data (2017)
-
-
-
-## Lecture: Process and Team Reflections
-
-Overview:
-
-* Different roles in developing AI-enabled systems and their respective goals and concerns
-* Communication strategies for cross-disciplinary teams
-	- Understand basic management, engineering, science, and operations mindsets
-  - Experimentation (notebooks) vs production
-	- Going beyond accuracy
-	- Communicating the importance of process
-* Agile techniques in AI-enabled systems
-* Setting goals and expectations: effort estimation, exploratory + iterative processes
-* Technical debt 
-
-Learning goals:
-
-* Plan development activities in an inclusive fashion for participants in different roles
-* Describe agile techniques to address common process and communication issues
-* Diagnose technical debt in a given system and propose a system to track, assess and remove technical debt
-
-Readings:
-
-* 🗎 todo (on data scientist role)
-* 🗎 Zinkevich. Rules of Machine Learning: Best Practices for ML Engineering. https://developers.google.co
+* tbd
 
 
 
