@@ -3,7 +3,7 @@
 ## Overview
 
  ![Lecture and homework dependencies](lecture_dependencies.svg)
- 
+
 ## Lecture: Introduction and Motivation
 
 Content:
@@ -13,7 +13,6 @@ Content:
 * Technical debt
 * Brief distinction AI vs ML and typical classes of AI components
 * Key distinction specifications vs learning from data, but also success in engineering systems from imprecise specifications and unreliable components
-* Common problems with notebook-style model development
 * Syllabus and class structure
 
 Learning goals:
@@ -29,86 +28,125 @@ Assignment:
 
 
 
-## Lecture: Components of an AI-Enabled System
+## Lecture: Introduction to Machine Learning (2 Lectures)
 
-Overview:
+Content:
 
-* Components and corresponding challenges (experience, intelligence, orchestration) within a larger system architecture
-* Overview of design options and automation degrees, e.g., forcefulness of the experience
-* Steps of the ML pipeline, including design options and automation -- using end to end scenario
+* Key concepts in machine learning 
+* A simple machine-learning algorithm: Decision trees
+* Steps of a machine learning pipeline
+* Overfitting, underfitting, hyperparameter tuning
+* Introduction to working with computational notebooks
+* Basic model accuracy measures and crossvalidation
+* Quick overview of AI beyond supervised learning (e.g., unsupervised learning, reinforcement learning, symbolic AI and logic reasoning, probabilistic programming, expert systems, planning)
 
 Learning goals:
 
-* Describe the components of a typical machine learning pipeline and their responsibilities and challenges
-* Describe the typical components relating to AI in an AI-enabled system and typical design decisions to be made
-* Illustrate the design space for AI-enabled systems for a given sample system
+* Understand how machine learning learns models from labeled data (basic mental model)
+* Explain the steps of a typical machine learning pipeline and their responsibilities and challenges
+* Apply steps of a machine-learning pipeline to build a simple model from static labeled data
+* Evaluate a machine-learned classifier using cross-validation
+* Proficiency to use notebooks
+* Demonstrate effective use of computational notebooks
 
-Assignment:
+Recitation:
 
-* Build a simple predictive ML model to gain experience with all involved steps; build a simple user frontend
+* Notebooks and scikit-learn basics
+
 
 Readings:
 
-* 🕮 Hulten, Geoff. "Building Intelligent Systems: A Guide to Machine Learning Engineering." (2018), Chapters 2, 5 and 20.
+* 🕮 Hulten, Geoff. "Building Intelligent Systems: A Guide to Machine Learning Engineering." (2018), Chapters 16–18.
+* tbd (e.g. text on decision trees or tutorial on scikit-learn)
 
 
-## Lecture: Software Engineering Bootcamp
 
-Overview:
-
-* Process
-* Good engineering practices
-  * Code, configuration, and data versioning
-  * Working with version control: good commit practices, branches vs feature flags, ...
-  * Documentation, naming
-  * Issue tracking, task planning
-* Crash course in planning, requirements, and design
-* Qualities of interest
-* Agile practices in a nutshell
-
-## Lecture: Engineering Challenges for AI-Enabled Systems
+## Lecture: Model Quality
 
 Overview:
 
-* Deductive vs inductive reasoning
-* Notions of correctness: Specifications, goals
-* Desired qualities beyond accuracy
-* Information hiding, modularity, and leaking abstractions
-* Interactions and the environment
-  - The world and the machine
-  - Data drift, feedback loops, and adversaries
-  - Compositionality challenges
-* Live data, continuous maintenance
-* Focus on data, but don't ignore the code
-  * Technical debt 
-  * Pipeline quality
-  * Robustness
-* Versioning, data provenance, and explainability
-* Introduction to measurement
-* Case study: AI-components in cars
+* Goals and measurement
+* Metrics and experimental designs to assess model quality, including measures beyond accuracy and RUC
+* Challenge of getting test data
+* Automated assessment, dashboards, continuous integration, continuous experimentation
+* Notions of test suits and coverage for models (e.g., test by population segment), black box test case design
+* Comparison against heuristics approaches
 
 Learning goals:
 
-* Illustrate the challenges of building AI-enabled systems
-* Identify system goals and design and validate measures to judge system success for a given system
+* Assess model quality with suitable measures and compare quality of multiple models
+* Design a test suite for assuring model quality
+* Automate model evaluation as part of a continuous integration pipeline
 
-Reading:
 
-* 🗎 Arpteg, Anders, Björn Brinne, Luka Crnkovic-Friis, and Jan Bosch. "Software Engineering Challenges of Deep Learning." In 2018 44th Euromicro Conference on Software Engineering and Advanced Applications (SEAA), pp. 50-59. IEEE, 2018. 
-* 🕮 Hulten, Geoff. "Building Intelligent Systems: A Guide to Machine Learning Engineering." (2018), Chapter 4.
+Readings:
 
-## Lecture: Requirements and Dealing with Mistakes
+* 🕮 Hulten, Geoff. "Building Intelligent Systems: A Guide to Machine Learning Engineering." (2018), 19-20 (Evaluating Intelligence).
+
+  
+
+## Lecture: From Models to AI-Enabled Systems (Systems Thinking)
+
+Overview:
+
+* Machine learning is typically a component of a larger system in production
+* Challenges of production-machine learning
+* Components of intelligent experiences and corresponding challenges (experience, intelligence, orchestration) within a larger system architecture
+* Overview of design options and automation degrees, e.g., forcefulness of the experience
+* Qualities of interest (beyond model accuracy)
+* Illustration how machine-learned components interact with other mechanisms of the system, e.g., guardrails and other safety mechanisms
+* View of machine-learning pipelines over models
+
+Learning goals:
+
+* Explain how machine learning fits into the larger picture of building and maintaining production systems
+* Describe the typical components relating to AI in an AI-enabled system and typical design decisions to be made
+
+Readings:
+
+* 🕮 Hulten, Geoff. "Building Intelligent Systems: A Guide to Machine Learning Engineering." (2018), Chapters 5.
+* 🗎 Sculley, David, Gary Holt, Daniel Golovin, Eugene Davydov, Todd Phillips, Dietmar Ebner, Vinay Chaudhary, Michael Young, Jean-Francois Crespo, and Dan Dennison. "[Hidden technical debt in machine learning systems](http://papers.nips.cc/paper/5656-hidden-technical-debt-in-machine-learning-systems.pdf)." In Advances in neural information processing systems, pp. 2503-2511. 2015.
+
+
+
+## Lecture: Goals and Success Measures for AI-Enabled Systems (Requirements)
+
+Overview:
+
+* Business consideration for using machine learning
+* When to use AI and when not to use AI
+* Overall cost of operating an ML-component (e.g., data, learning, updating, inference cost)
+* Brief intro into measurement
+* Defining and measuring a systems goals
+* Designing telemetry to assess system success
+
+Learning goals:
+
+* Judge when to apply AI for a problem in a system
+* Define system goals and map them to goals for the AI component
+* Design and implement suitable measures and corresponding telemetry
+
+Readings:
+
+* 🕮 Hulten, Geoff. "Building Intelligent Systems: A Guide to Machine Learning Engineering." (2018), Chapters 2, 4 and 15 (Intelligent Telemetry)
+* 🗎 Zinkevich. Rules of Machine Learning: Best Practices for ML Engineering. https://developers.google.com/machine-learning/guides/rules-of-ml/
+* 🕮 Ajay Agrawal, Joshua Gans, Avi Goldfarb. “Prediction Machines: The Simple Economics of Artificial Intelligence” 2018 – ?
+
+
+
+## Lecture: Risk and Planning for Mistakes (Requirements)
 
 Overview:
 
 * Specifications or lack thereof for ML-components, deductive reasoning, probabilistic specifications in certain AI components; inevitability 
-* Goals of AI-enabled systems and success measures (intro, more later in model quality)
 * Introduction to risk analysis and fault trees; writing of requirements
-* Overview of fault handling strategies (redundancies, voting, fallback, undo, forcefulness, where and when to ask for human judgment...)
+* The world and the machine in the context of AI: concept drift, feedback loops, adversaries
+* Overview of fault handling strategies (guardrails, redundancies, voting, fallback, undo, forcefulness, where and when to ask for human judgment...)
+* Viewpoint: Machine learning as requirements engineering/specification mining
 
 Learning goals:
 
-* Analyze the number of ways a mistake in an AI component can influence the behavior of a system
+* Analyze how mistake in an AI component can influence the behavior of a system
 * Evaluate risk of a mistake from the AI component using fault trees
 * Design and justify a mitigation strategy for a concrete system
 
@@ -119,14 +157,16 @@ Assignment:
 Readings:
 
 * 🕮 Hulten, Geoff. "Building Intelligent Systems: A Guide to Machine Learning Engineering." (2018), Chapters 6--8, and 24.
-* 🗎 Zinkevich. Rules of Machine Learning: Best Practices for ML Engineering. https://developers.google.com/machine-learning/guides/rules-of-ml/
 
-## Lecture: Tradeoffs among AI Techniques (2 lectures)
+
+
+## Lecture: Tradeoffs among Modeling Techniques
 
 Overview:
 
 * Survey quality attributes of interest (e.g., accuracy, model size, inference time, learning time, robustness)
 * Survey of ML and symbolic AI techniques and their tradeoffs
+* Brief intro to fairness, explainability, and robustness
 
 Learning goals:
 
@@ -137,6 +177,12 @@ Learning goals:
 Assignment:
 
 * Present tradeoff analysis among two techniques (prepare blog post + short presentation); for a given dataset evaluate which technique is more suitable after measuring various qualities; find an alternative task for which the other technique is more suitable
+
+Readings:
+
+* 🗎 Vogelsang, Andreas, and Markus Borg. "[Requirements Engineering for Machine Learning: Perspectives from Data Scientists](https://arxiv.org/pdf/1908.04674.pdf)." In Proc. of the 6th International Workshop on Artificial Intelligence for Requirements Engineering (AIRE), 2019.
+
+
 
 ## Lecture: Software Architecture of AI-enabled Systems
 
@@ -156,40 +202,21 @@ Learning goals:
 * Create an architectural model describing the relevant characteristics to reason about update frequency and costs
 * Critique the decision of where an AI model lives (e.g., cloud vs edge vs hybrid), considering the relevant tradeoffs 
 
+Assignment:
+
+* Design and justify a system architecture for a given scenario, considering computing and network resources
+
 Readings:
 
-* Rick Kazman, Paul Clements, and Len Bass. [Software architecture in practice.](https://www.oreilly.com/library/view/software-architecture-in/9780132942799/?ar) Addison-Wesley Professional, 2012, Chapter 1
 * 🕮 Hulten, Geoff. "Building Intelligent Systems: A Guide to Machine Learning Engineering." (2018), Chapter 13
 
-
-## Lecture: Model Quality
-
-Overview:
-
-* Goals and measurement
-* Metrics and experimental designs to assess model quality, including measures beyond accuracy and RUC; assessment on static datasets vs live data
-* Challenge of getting test data
-* *Telemetry* designs to assess model quality in production (and related design tradeoffs)
-* Data drift, stale models, and methods to detect 
-* Automated assessment, dashboards, continuous integration, continuous experimentation
-* Notions of test suits and coverage for models (e.g., test by population segment)
-* Comparison against heuristics approaches
-
-Learning goals:
-
-* Identify and describe the goals of an AI component and define outcome quality measures
-* Explain the limits of evaluating model quality on a static dataset and design telemetry for assessment in production
-* Assess model quality with suitable measures and compare quality of multiple models
-* Design a test suite for assuring model quality
-* Develop automated solutions to evaluate and monitor model quality
+* Daniel Smith. "[Exploring Development Patterns in Data Science](https://www.theorylane.com/2017/10/20/some-development-patterns-in-data-science/)." TheoryLane Blog Post. 2017.
+* Washizaki, Hironori, Hiromu Uchida, Foutse Khomh, and Yann-Gaël Guéhéneuc. "[Machine Learning Architecture and Design Patterns](http://www.washi.cs.waseda.ac.jp/wp-content/uploads/2019/12/IEEE_Software_19__ML_Patterns.pdf)." Paper draft under review, 2019
 
 
-Readings:
-
-* 🕮 Hulten, Geoff. "Building Intelligent Systems: A Guide to Machine Learning Engineering." (2018), Chapters 15 (Intelligent Telemetry) and 19-20 (Evaluating Intelligence).
 
 
-## Lecture: Experimentation
+## Lecture: Quality Assessment in Production
 
 Overview:
 
@@ -245,6 +272,7 @@ Readings:
 
 * 🗎 Schelter, S., Lange, D., Schmidt, P., Celikel, M., Biessmann, F. and Grafberger, A., 2018. Automating large-scale data quality verification. Proceedings of the VLDB Endowment, 11(12), pp.1781-1794.
 * 🗎 The Data Linter: Lightweight Automated Sanity Checking for ML Data Sets. Nick Hynes, D. Sculley, Michael Terry  NIPS Workshop on ML Systems (2017)
+* 🗎 Rahimi, Mona, Jin LC Guo, Sahar Kokaly, and Marsha Chechik. "[Toward Requirements Specification for Machine-Learned Components](https://ieeexplore.ieee.org/document/8933771)." In 2019 IEEE 27th International Requirements Engineering Conference Workshops (REW), pp. 241-244. IEEE, 2019.
 
 
 
@@ -261,7 +289,7 @@ Overview:
 * *Feature flags* and corresponding infrastructure
 * Code reviews
 * Unit vs system testing: local improvements may degrade overall system performance
- 
+
 
 Learning goals:
 
@@ -473,29 +501,7 @@ Learning goals:
 Readings:
 
 * 🗎 todo (on data scientist role)
-* 🗎 Zinkevich. Rules of Machine Learning: Best Practices for ML Engineering. https://developers.google.com/machine-learning/guides/rules-of-ml/ 
-
-## Lecture: Planning an AI-Enabled Product in a Startup
-
-todo (guest lecture Michael Hilton)
-
-## Lecture: Usability
-
-todo
-
-## Lecture: Symbolic AI in Systems
-
-todo
-
-* Machine learning vs symbolic AI
-* Guarantees and their limits
-* Probabilistic reasoning and probabilistic guarantees
-* Implications for system design
-  - Safety
-  - Security
+* 🗎 Zinkevich. Rules of Machine Learning: Best Practices for ML Engineering. https://developers.google.co
 
 
-## Lecture: AI Engineering for Self-Driving Cars
-
-todo
 
