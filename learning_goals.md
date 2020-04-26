@@ -246,7 +246,7 @@ Readings:
 
 
 
-## Lecture: Data Quality ![Quality Assurance](https://img.shields.io/badge/-Quality%20Assurance-Orange.svg)
+## Lecture: Data Quality and Data Engineering ![Quality Assurance](https://img.shields.io/badge/-Quality%20Assurance-Orange.svg)
 
 Overview:
 
@@ -255,6 +255,8 @@ Overview:
 * Comparing data distributions and detecting data drift
 * Quality assurance for the data processing pipelines
 * Measures of noise, accuracy, and precision, and consequences for AI components (robustness)
+* Integrating data from many sources, with different qualities
+* Weakly-supervised learning with Snorkel
 
 Learning goals:
 
@@ -262,6 +264,8 @@ Learning goals:
 * Devise thresholds for detecting data drift and schema violations
 * Describe common data cleaning steps and their purpose and risks
 * Evaluate the robustness of AI components with regard to noisy or incorrect data
+* Understanding the better models vs more data tradeoffs
+* Programatically collect, manage, and enhance training data
 
 
 Readings:
@@ -270,7 +274,7 @@ Readings:
 * 🗎 The Data Linter: Lightweight Automated Sanity Checking for ML Data Sets. Nick Hynes, D. Sculley, Michael Terry  NIPS Workshop on ML Systems (2017)
 * 🗎 Rahimi, Mona, Jin LC Guo, Sahar Kokaly, and Marsha Chechik. "[Toward Requirements Specification for Machine-Learned Components](https://ieeexplore.ieee.org/document/8933771)." In 2019 IEEE 27th International Requirements Engineering Conference Workshops (REW), pp. 241-244. IEEE, 2019.
 
-
+Assignments: Snorkel assignment?
 
 ## Lecture: Managing and Processing Large Datasets ![Architecture](https://img.shields.io/badge/-Architecture-Blue.svg) ![Implementation/Operations](https://img.shields.io/badge/-Implementation/Operations-Yellow.svg)
 
