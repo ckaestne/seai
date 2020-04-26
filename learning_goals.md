@@ -107,7 +107,7 @@ Readings:
 
 
 
-## Lecture: Goals and Success Measures for AI-Enabled Systems (Requirements) ![Requirements](https://img.shields.io/badge/-Requirements-Green.svg) ![Architecture](https://img.shields.io/badge/-Architecture/Design-Blue.svg)
+## Lecture: Goals and Success Measures for AI-Enabled Systems ![Requirements](https://img.shields.io/badge/-Requirements-Green.svg) ![Architecture](https://img.shields.io/badge/-Architecture/Design-Blue.svg)
 
 Overview:
 
@@ -192,6 +192,7 @@ Overview:
 * Architecture case study: Model updates
   * Importance of model updates; threats from stale data and data drift
   * Architectural discussions: when to learn, incremental vs from scratch, where the model lives, costs for updates vs costs from stale models, client-side vs server-side models vs hybrid approaches
+* Architectural patterns and design patterns for ML
 * AI as a service
 * Cost of data and feature extraction (deciding what data/features and how much)
 
@@ -421,6 +422,7 @@ Reading:
 Overview:
 
 * Introduction to use cases, concepts, and measures for interpretability
+* Explanatory power of different AI techniques, retrofitting explanations
 * Strategies for model interpretability, including local explanations, invariants, counterfactuals, and model constraints
 * Introduction to sensitivity analysis
 
@@ -440,8 +442,8 @@ Overview:
 * Documenting and tracking data provenance (modeling), "visibility debt", techniques for automated tracking
 * Versioning of code, data, and models
 * Logging and audit traces
-* Explanatory power of different AI techniques, retrofitting explanations
-* Strategies for debugging in big-data applications
+* Strategies for debugging and improving models
+* “Origin tracking” during learning – identifying influential training data
 
 Learning goals:
 
