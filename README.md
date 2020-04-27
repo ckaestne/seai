@@ -57,6 +57,8 @@ See the specific offering for details: [Fall 2019](https://ckaestne.github.io/se
 
 ## Course content
 
+For a description of topics covered and course structure, see [learning goals](https://github.com/ckaestne/seai/blob/S2020/learning_goals.md).
+
 The course content evolves from semester to semester. Below is the schedule from the initial Fall 2019 offering. See also [Summer 2020](https://ckaestne.github.io/seai/S2020) and [Fall 2020](https://ckaestne.github.io/seai/F2020).
 
 
