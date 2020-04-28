@@ -460,6 +460,12 @@ Source: https://www.trendhunter.com/trends/shoegazer
 Notes:
 Expect only sparse feedback and expect negative feedback over-proportionally
 
+
+----
+## Manually Label Production Samples
+
+![Amazon mechanical turk](mturk.jpg)
+
 ----
 ![Flight cost forcast](flightforcast.jpg)
 
@@ -468,11 +474,6 @@ Notes: Can just wait 7 days to see actual outcome for all predictions
 ![Temi Transcription Service Editor](temi.png)
 
 Notes: Clever UI design allows users to edit transcripts. UI already highlights low-confidence words, can observe changes in editor (UI design encourages use of editor). In addition 5 star rating for telemetry.
-
-----
-## Manually Label Production Samples
-
-![Amazon mechanical turk](mturk.jpg)
 
 ----
 ## Measuring Model Quality with Telemetry
