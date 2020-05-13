@@ -35,6 +35,7 @@ Content:
 * Overfitting, underfitting, hyperparameter tuning
 * Introduction to working with computational notebooks
 * Basic model accuracy measures and crossvalidation
+* Brief introduction to deep learning
 * Quick overview of AI beyond supervised learning (e.g., unsupervised learning, reinforcement learning, symbolic AI and logic reasoning, probabilistic programming, expert systems, planning)
 
 Learning goals:
@@ -53,8 +54,8 @@ Recitation:
 
 Readings:
 
-* 🕮 Hulten, Geoff. "Building Intelligent Systems: A Guide to Machine Learning Engineering." (2018), Chapters 16–18.
-* tbd (e.g. text on decision trees or tutorial on scikit-learn)
+* 🕮 Hulten, Geoff. “[Building Intelligent Systems: A Guide to Machine Learning Engineering](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436).” (2018), Chapters 16–18.
+* 🕮 Géron, Aurélien. ”[Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019662775504436)”, 2nd Edition (2019), Ch 1.
 
 
 
