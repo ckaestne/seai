@@ -1,16 +1,21 @@
 digraph G {
 
+    subgraph ml {
+        node [color=purple]
+        "Model Quality" -> "Introduction to ML"
+    }
+
+
     subgraph intro {
         node [color=goldenrod3]
 
         "Engineering Challenges" -> "Components of an AI-Enabled System" ->"Introduction and Motivation"    
-        "SE Bootcamp" -> "Introduction and Motivation"
     }
 
 
     subgraph requirements {    
         node [color=aquamarine4]
-        "Dealing with Mistakes" -> "Engineering Challenges"
+        "Risk and Planning for Mistakes" -> "Engineering Challenges"
     }
     
 
@@ -35,40 +40,33 @@ digraph G {
         
         "Ethics + Fairness" -> Experimentation
         
-        "Safety" -> "Dealing with Mistakes"
+        "Safety and Robustness" -> "Risk and Planning for Mistakes"
     
         "Security, Adversarial Learning, and Feedback Loops"   
         "Security, Adversarial Learning, and Feedback Loops" -> "Model Quality"
     }
     
 
-    "Process and Team Reflections"
-    
-    "Startup"
-    
-    "Usability"
-
-    "Symbolic AI" -> "Tradeoffs among AI Techniques"
     
     subgraph homeworks {
         node [color=chocolate1,style=filled]
-        "HW: Case Study" ->"Introduction and Motivation"   
-        "HW: Modeling Basics" -> "Components of an AI-Enabled System"
-        "HW: AI Tradeoffs" -> "Tradeoffs among AI Techniques"
-        "HW: AI Tradeoffs" -> "HW: Modeling Basics"
-        "HW: Architecture" -> "Software Architecture"
-        "HW: Requirements" -> "Dealing with Mistakes"
-        "HW: Quality"-> "Model Quality"
-        "HW: Quality" -> "Data Quality"
-        "HW: Quality" -> "HW: Modeling Basics"
-        "HW: Quality" -> "Experimentation"
-        "HW: Test Automation" -> "Test and Deployment Automation"
-        "HW: Test Automation" -> "Data Provenance, Reproducability, and Explainability" -> "Managing Large Datasets"
-        "HW: Test Automation" -> "Configuration Management and Operations at Scale" 
-        "HW: Test Automation" -> "HW: Quality"
-        "HW: Fairness" -> "Ethics + Fairness"
-        "HW: Fairness" -> "HW: Quality"
-        "HW: Feedback Loop" -> "Security, Adversarial Learning, and Feedback Loops"
-        "HW: Feedback Loop" -> "HW: Quality"
+        "I: Modeling Basics" -> "Model Quality"
+        "I: ML Algorithm" -> "Introduction to ML"
+        "I: Case Study" ->"Introduction and Motivation"   
+        "I: AI Tradeoffs" -> "Tradeoffs among AI Techniques"
+        "I: Architecture" -> "Software Architecture"
+        "I: Requirements" -> "Risk and Planning for Mistakes"
+        "I: Fairness" -> "Ethics + Fairness"
+        "I: Fairness" -> "G: Modeling Basics"
+        "I: Open-Source Infrastructure" -> "Fostering Interdisciplinary Teams"
+        "I: Open-Source Infrastructure" -> "Fostering Interdisciplinary Teams"
+        "G: Deployment and Infrastructure Quality" -> "I: Modeling Basics"
+        "G: Deployment and Infrastructure Quality" -> "Deployment and Infrastructure Quality"
+        "G: Testing in Production"-> "Model Quality"
+        "G: Testing in Production" -> "G: Deployment"
+        "G: Testing in Production" -> "Experimentation"
+        "G: System Monitoring" -> "Security, Adversarial Learning, and Feedback Loops"
+        "G: System Monitoring" -> "G: Testing in Production"
+        "G: Capstone Project"
     }
 }
