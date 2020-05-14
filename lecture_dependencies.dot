@@ -1,72 +1,63 @@
 digraph G {
 
-    subgraph ml {
-        node [color=purple]
-        "Model Quality" -> "Introduction to ML"
-    }
+    "Introduction and Motivation"
 
-
-    subgraph intro {
-        node [color=goldenrod3]
-
-        "Engineering Challenges" -> "Components of an AI-Enabled System" ->"Introduction and Motivation"    
-    }
-
-
-    subgraph requirements {    
-        node [color=aquamarine4]
-        "Risk and Planning for Mistakes" -> "Engineering Challenges"
-    }
+    "Introduction to ML"
     
+    "Model Quality" -> "Introduction to ML"
+    
+    "System Thinking" -> "Model Quality"
+    "Goals and Success Measures" -> "System Thinking"
+    "Risk and Planning for Mistakes"
+    
+    "Tradeoffs among Modeling Techniques" -> "Introduction to ML"
 
-    subgraph architectureAndOps {
-        node [color=purple]
-        "Tradeoffs among AI Techniques" -> "Components of an AI-Enabled System"
-        "Software Architecture" -> "Components of an AI-Enabled System"
-        "Data Provenance, Reproducability, and Explainability" -> "Managing Large Datasets" -> "Scalability and distributed systems"
-        "Configuration Management and Operations at Scale" -> "Scalability and distributed systems"
-    }
+
+    "Software Architecture"
     
-    subgraph qa {
-        node [color=blue]
-        "Model Quality" 
-        
-        "Data Quality" 
-        
-        "Test and Deployment Automation"-> "Components of an AI-Enabled System"
-        "Test and Deployment Automation" -> "Data Quality"
-        
-        "Experimentation" -> "Model Quality"
-        
-        "Ethics + Fairness" -> Experimentation
-        
-        "Safety and Robustness" -> "Risk and Planning for Mistakes"
+    "Quality Assessment in Production"
+    "Deployment and Infrastructure Quality"
     
-        "Security, Adversarial Learning, and Feedback Loops"   
-        "Security, Adversarial Learning, and Feedback Loops" -> "Model Quality"
-    }
+    "Ethics + Fairness"
     
+    "Data Quality" -> "Model Quality"
+    
+    "Managing and Processing Large Datasets"
+    
+    "Safety and Robustness"
+    "Security, Adversarial Learning, and Feedback Loops"
+    "Explainability & Interpretability"
+    "Debugging, Data Provenance, and Reproducability"
+    "Teams"
+    "Deployment and Operations at Scale"
+
 
     
     subgraph homeworks {
         node [color=chocolate1,style=filled]
         "I: Modeling Basics" -> "Model Quality"
-        "I: ML Algorithm" -> "Introduction to ML"
+        "I: Modeling Basics" -> "Introduction to ML"
+
+        "I: ML Algorithm (Bonus)" -> "Introduction to ML"
+
         "I: Case Study" ->"Introduction and Motivation"   
+
         "I: AI Tradeoffs" -> "Tradeoffs among AI Techniques"
-        "I: Architecture" -> "Software Architecture"
-        "I: Requirements" -> "Risk and Planning for Mistakes"
+        
+        "I: Design" -> "Risk and Planning for Mistakes"
+        "I: Design" -> "Software Architecture"
+        "I: Design" -> "Goals and Success Measures"
+        
         "I: Fairness" -> "Ethics + Fairness"
-        "I: Fairness" -> "G: Modeling Basics"
-        "I: Open-Source Infrastructure" -> "Fostering Interdisciplinary Teams"
-        "I: Open-Source Infrastructure" -> "Fostering Interdisciplinary Teams"
-        "G: Deployment and Infrastructure Quality" -> "I: Modeling Basics"
-        "G: Deployment and Infrastructure Quality" -> "Deployment and Infrastructure Quality"
-        "G: Testing in Production"-> "Model Quality"
-        "G: Testing in Production" -> "G: Deployment"
-        "G: Testing in Production" -> "Experimentation"
-        "G: System Monitoring" -> "Security, Adversarial Learning, and Feedback Loops"
-        "G: System Monitoring" -> "G: Testing in Production"
-        "G: Capstone Project"
+
+        "I: Tool Exploration"
+
+        "P: Deployment and Infrastructure Quality" -> "Deployment and Infrastructure Quality"
+        "P: Testing in Production" -> "P: Deployment and Infrastructure Quality"
+        "P: Testing in Production" -> "Quality Assessment in Production"
+        "P: Testing in Production" -> "Data Quality"
+        "P: System Monitoring" -> "Security, Adversarial Learning, and Feedback Loops"
+        "P: System Monitoring" -> "P: Testing in Production"
     }
 }
+
