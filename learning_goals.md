@@ -25,7 +25,7 @@ Assignment:
 
 
 
-## Lecture: Introduction to Machine Learning (2 Lectures) ![Machine Learning](https://img.shields.io/badge/-Machine%20Learning-Purple.svg)
+## Lecture: Introduction to Artificial Intelligence (2 Lectures) ![Machine Learning](https://img.shields.io/badge/-Machine%20Learning-Purple.svg)
 
 Content:
 
@@ -33,7 +33,7 @@ Content:
 * A simple machine-learning algorithm: Decision trees
 * Steps of a machine learning pipeline
 * Overfitting, underfitting, hyperparameter tuning
-* Introduction to working with computational notebooks
+* Introduction to working with computational notebooks, typical iterative workflow, benefits and limitations of notebooks
 * Basic model accuracy measures and crossvalidation
 * Brief introduction to deep learning
 * Quick overview of AI beyond supervised learning (e.g., unsupervised learning, reinforcement learning, symbolic AI and logic reasoning, probabilistic programming, expert systems, planning)
@@ -42,10 +42,14 @@ Learning goals:
 
 * Understand how machine learning learns models from labeled data (basic mental model)
 * Explain the steps of a typical machine learning pipeline and their responsibilities and challenges
+* Understand the role of hyper-parameters
+* Appropriately use vocabulary for machine learning concepts
 * Apply steps of a machine-learning pipeline to build a simple model from static labeled data
 * Evaluate a machine-learned classifier using cross-validation
-* Proficiency to use notebooks
+* Explain at high level how deep learning works and describe characteristics of symbolic AI techniques
+* Explain the benefits and drawbacks of notebooks
 * Demonstrate effective use of computational notebooks
+
 
 Recitation:
 
@@ -55,7 +59,7 @@ Recitation:
 Readings:
 
 * 🕮 Hulten, Geoff. “[Building Intelligent Systems: A Guide to Machine Learning Engineering](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436).” (2018), Chapters 16–18.
-* 🕮 Géron, Aurélien. ”[Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019662775504436)”, 2nd Edition (2019), Ch 1.
+* 🕮 Géron, Aurélien. ”[Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019665684604436)”, 2nd Edition (2019), Ch 1.
 
 
 
