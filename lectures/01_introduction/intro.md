@@ -64,6 +64,17 @@ Second offering, but significant redesign
         <text x=570 y=240 dominant-baseline="middle" text-anchor="middle">Engineers</text>
 </svg>
 
+---
+
+# Agenda
+
+```mermaid
+graph LR;
+    Preliminaries --> C["Case Study"];
+    C --> Syllabus;
+    Syllabus --> Introductions;
+    Introductions --> Specifications;
+```
 
 ---
 
@@ -222,6 +233,209 @@ Garvin, David A., [What Does Product Quality Really Mean](http://oqrm.org/Englis
 ![Screenshot of Temi transcription service](temi.png)
 
 Notes: Highlights challenging fragments. Can see what users fix inplace to correct. Star rating for feedback.
+
+
+
+---
+
+# Syllabus and Class Structure
+
+17-445/17-645, Summer 2020, 12 units
+
+Tuesday/Wednesday 3-4:20, here on zoom
+
+----
+
+## Instructors
+
+Christian Kaestner, Shreyans Sheth
+
+< brief introductions >
+
+----
+
+## Communication
+
+Email to us
+
+Announcements through canvas
+
+No fixed office hours, but will stick around after lecture and recitation. Email us for extra meetings.
+
+Welcome to ask questions publicly on Canvas.
+
+Materials on GitHub. Pull requests encouraged!
+
+----
+
+## Software engineering class
+
+* Focused on engineering judgment
+* Arguments, tradeoffs, and justification, rather than single correct answer
+* "it depends..."
+* Practical engagement, building systems, testing, automation
+* Strong teamwork component
+* Not focused on formal guarantees or machine learning fundamentals (modeling, statistics)
+
+----
+
+## Prerequisites
+
+<!-- colstart -->
+**Some software engineering experience required**
+
+* version control
+* gathering requirements
+* software design and modeling
+* testing and test automation
+* some larger software projects in teams
+* see background check quiz on Canvas
+
+<!-- col -->
+**No machine-learning knowledge required**
+
+* Will cover AI and ML basics this and next week
+* If you are familiar with ML/scikit-learn those might be mostly boring... sorry.
+
+<!-- colend -->
+
+In case this is a better fit: We will teach a different version of the class  in the Fall that requires some ML experience, but no software engineering experience.
+
+----
+
+## Active lecture
+
+* Case study driven
+* Discussion highly encouraged
+* Contribute own experience
+* Regular active in-class exercises
+* In-class presentation
+* Discussions over definitions
+
+----
+## Textbook
+
+Building Intelligent Systems: A Guide to Machine Learning Engineering
+
+by Geoff Hulten
+
+https://www.buildingintelligentsystems.com/
+
+Most chapters assigned at some point in the semester
+
+Supplemented with research articles, blog posts, videos, podcasts, ...
+
+[Electronic version](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436) in the library
+
+<!-- split -->
+
+![Building intelligent systems book](book.webp)
+
+----
+
+## Readings and Quizzes
+
+* Reading assignments for most lectures
+  * Preparing in-class discussions
+  * Background material, case descriptions, possibly also podcast, video, wikipedia
+  * Complement with own research
+* Short and easy online quizzes on readings, due before start of lecture
+
+----
+
+## Assignments
+
+* Series of small to medium-sized individual assignments (mostly in first half)
+    * engage with practical challenges
+    * design, implement, and automate
+    * reason about tradeoffs and justify your decisions
+    * written reports and some coding and modeling
+
+* Large team project with multiple milestones (mostly in second half)
+    - Build and deploy prediction service
+    - Testing in production
+    - Monitoring
+
+----
+
+## Grading
+
+* 35% individual assignment
+* 30% group project with final presentation
+* 20% midterm
+* 10% participation
+* 5% reading quizzes
+* no final exam
+
+----
+
+## Participation
+
+* Participation is important
+    - Participation in in-class discussions
+    - Active participation in recitations
+    - Both quality and quantity are important, quality more than quantity
+* Participation != Attendance
+
+----
+
+## Late day policy
+
+Late work in **individual assignments** will be accepted with a 10% penalty per day, for up to 3 days. 
+
+Late work in **group projects** will receive feedback but no credit. 
+
+Talk to us (early) for concerns and accommodations.
+
+----
+
+## Academic honesty
+
+See web page
+
+In a nutshell: do not copy, do not lie, do not share or publicly release your solutions
+
+In group work, be honest about contributions of team members, do not cover for others
+
+If you feel overwhelmed or stressed, please come and talk to us (see syllabus for other support opportunities)
+
+----
+
+![Class Overview](overview.png)
+
+----
+
+## Aside: AI vs ML
+
+* Artificial intelligence is an umbrella term covering symbolic AI (problem solving, reasoning) as well as machine learning (statistical learning from data)
+* This course focuses mostly on *statistical machine learning* and supervised learning (extrapolating from data, inductive reasoning)
+* We will cover *symbolic AI* (expert systems, probabilistic reasoning, ...) selectively, often for contrast
+
+----
+
+## Publishing Video Recordings?
+
+With your consent, I'd like to publish recordings publicly
+
+No webcam or chat footage, lightly edited for privacy
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/9_xeTHaTcCQ?start=30" frameborder="0" allow="accelerometer;  encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+**Thoughts?**
+
+---
+# Introductions
+
+Let's go around the "room" for introductions:
+
+* Your (preferred name)
+* In two sentences your software engineering background and goals
+* In two sentences your data science background, if any, and goals
+* One topic you are particularly interested in, if any?
+
+![Chairs](chairs.jpg)
+
+
 
 ---
 
@@ -444,193 +658,6 @@ Software engineers have long development methods to deal with uncertainty, missi
 
 **AI may raise the stakes, but the problem and solutions are not entirely new.**
 
----
-
-# Syllabus and Class Structure
-
-17-445/17-645, Summer 2020, 12 units
-
-Tuesday/Wednesday 3-4:20, here on zoom
-
-----
-
-## Instructors
-
-Christian Kaestner, Shreyans Sheth
-
-< brief introductions >
-
-----
-
-## Communication
-
-Email to us
-
-Announcements through canvas
-
-No fixed office hours, but will stick around after lecture and recitation. Email us for extra meetings.
-
-Welcome to ask questions publicly on Canvas.
-
-Materials on GitHub. Pull requests encouraged!
-
-----
-
-## Software engineering class
-
-* Focused on engineering judgment
-* Arguments, tradeoffs, and justification, rather than single correct answer
-* "it depends..."
-* Practical engagement, building systems, testing, automation
-* Strong teamwork component
-* Not focused on formal guarantees or machine learning fundamentals (modeling, statistics)
-
-----
-
-## Prerequisites
-
-<!-- colstart -->
-**Some software engineering experience required**
-
-* version control
-* gathering requirements
-* software design and modeling
-* testing and test automation
-* some larger software projects in teams
-* see background check quiz on Canvas
-
-<!-- col -->
-**No machine-learning knowledge required**
-
-* Will cover AI and ML basics this and next week
-* If you are familiar with ML/scikit-learn those might be mostly boring... sorry.
-
-<!-- colend -->
-
-In case this is a better fit: We will teach a different version of the class  in the Fall that requires some ML experience, but no software engineering experience.
-
-----
-
-## Active lecture
-
-* Case study driven
-* Discussion highly encouraged
-* Contribute own experience
-* Regular active in-class exercises
-* In-class presentation
-* Discussions over definitions
-
-----
-## Textbook
-
-Building Intelligent Systems: A Guide to Machine Learning Engineering
-
-by Geoff Hulten
-
-https://www.buildingintelligentsystems.com/
-
-Most chapters assigned at some point in the semester
-
-Supplemented with research articles, blog posts, videos, podcasts, ...
-
-[Electronic version](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436) in the library
-
-<!-- split -->
-
-![Building intelligent systems book](book.webp)
-
-----
-
-## Readings and Quizzes
-
-* Reading assignments for most lectures
-  * Preparing in-class discussions
-  * Background material, case descriptions, possibly also podcast, video, wikipedia
-  * Complement with own research
-* Short and easy online quizzes on readings, due before start of lecture
-
-----
-
-## Assignments
-
-* Series of small to medium-sized individual assignments (mostly in first half)
-    * engage with practical challenges
-    * design, implement, and automate
-    * reason about tradeoffs and justify your decisions
-    * written reports and some coding and modeling
-
-* Large team project with multiple milestones (mostly in second half)
-    - Build and deploy prediction service
-    - Testing in production
-    - Monitoring
-
-----
-
-## Grading
-
-* 35% individual assignment
-* 30% group project with final presentation
-* 20% midterm
-* 10% participation
-* 5% reading quizzes
-* no final exam
-
-----
-
-## Participation
-
-* Participation is important
-    - Participation in in-class discussions
-    - Active participation in recitations
-    - Both quality and quantity are important, quality more than quantity
-* Participation != Attendance
-
-----
-
-## Late day policy
-
-Late work in **individual assignments** will be accepted with a 10% penalty per day, for up to 3 days. 
-
-Late work in **group projects** will receive feedback but no credit. 
-
-Talk to us (early) for concerns and accommodations.
-
-----
-
-## Academic honesty
-
-See web page
-
-In a nutshell: do not copy, do not lie, do not share or publicly release your solutions
-
-In group work, be honest about contributions of team members, do not cover for others
-
-If you feel overwhelmed or stressed, please come and talk to us (see syllabus for other support opportunities)
-
-----
-
-![Class Overview](overview.png)
-
-----
-
-## Aside: AI vs ML
-
-* Artificial intelligence is an umbrella term covering symbolic AI (problem solving, reasoning) as well as machine learning (statistical learning from data)
-* This course focuses mostly on *statistical machine learning* and supervised learning (extrapolating from data, inductive reasoning)
-* We will cover *symbolic AI* (expert systems, probabilistic reasoning, ...) selectively, often for contrast
-
----
-# Introductions
-
-Let's go around the "room" for introductions:
-
-* Your (preferred name)
-* In two sentences your software engineering background and goals
-* In two sentences your data science background, if any, and goals
-* One topic you are particularly interested in, if any?
-
-![Chairs](chairs.jpg)
-
 
 ---
 
@@ -639,6 +666,8 @@ Let's go around the "room" for introductions:
 Survey helps us to tailor class and form teams (ungraded quiz on Canvas)
 
 ![survey](survey.jpg)
+
+
 
 ---
 
