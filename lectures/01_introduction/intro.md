@@ -118,6 +118,20 @@ Idea: Let's commercialize the software and sell to academics and conference orga
 Notes: Ask students to write at least 3 challenges each, collect answers on board
 
 ----
+
+<svg version="1.1" viewBox="0.0 0.0 800 400" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+        <style>
+    text { font: 60px sans-serif; }
+        </style>
+        <circle r="180" cx="250", cy="200" fill="#b9ff00" fill-opacity="0.514" />
+        <circle r="180" cx="550", cy="200" fill="#ff5500" fill-opacity="0.514" />
+        <text x=230 y=160 dominant-baseline="middle" text-anchor="middle">Data</text>
+        <text x=230 y=240 dominant-baseline="middle" text-anchor="middle">Scientists</text>
+        <text x=570 y=160 dominant-baseline="middle" text-anchor="middle">Software</text>
+        <text x=570 y=240 dominant-baseline="middle" text-anchor="middle">Engineers</text>
+</svg>
+
+----
 ## Data scientist
 
 * Often fixed dataset for training and evaluation (e.g., PBS interviews)
@@ -355,6 +369,15 @@ Supplemented with research articles, blog posts, videos, podcasts, ...
     - Build and deploy prediction service
     - Testing in production
     - Monitoring
+
+----
+## Recitations
+
+Typically hands on exercises, use tools, analyze cases
+
+Often designed to prepare for assignments
+
+First recitation tomorrow: Apache Kafka
 
 ----
 
