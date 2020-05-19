@@ -5,7 +5,7 @@
 | -     | -     | -       | -              |
 | Tue, May 19| [Introduction and Motivation](https://ckaestne.github.io/seai/S2020/slides/01_introduction/intro.html#/) |  |  |
 | Wed, May 20| ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) Apache Kafka |  |  |
-| Thu, May 21| [Introduction to Artificial Intelligence 1](https://ckaestne.github.io/seai/S2020/slides/02_aibasics1/introml.md) | [Building Intelligent Systems](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436), Ch. 16-18, 20 |  |
+| Thu, May 21| [Introduction to Artificial Intelligence 1](https://ckaestne.github.io/seai/S2020/slides/02_aibasics1/introml.html) | [Building Intelligent Systems](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436), Ch. 16-18, 20 |  |
 | Tue, May 26| Introduction to Artificial Intelligence 2 | [Hands-On Machine Learning](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019665684604436) Ch. 2 | [I1 Case Study](https://github.com/ckaestne/seai/blob/S2020/assignments/I1_case_study.md) |
 | Wed, May 27| ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) Computational notebooks and scikit-learn |  |  |
 | Thu, May 28| Model Quality | [Building Intelligent Systems](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436), Ch. 19-20 |  |
