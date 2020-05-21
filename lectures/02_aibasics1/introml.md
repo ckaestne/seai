@@ -566,9 +566,6 @@ Demo: Show how trees at different depth first improve accuracy on both sets and 
 
 (Graphic CC [MBanuelos22](https://en.wikipedia.org/wiki/Cross-validation_(statistics)#/media/File:KfoldCV.gif)  BY-SA 4.0)
 
-----
-
-
 
 ----
 ## Separate Training, Validation and Test Data
