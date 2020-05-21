@@ -38,229 +38,6 @@ Next lecture deep learning and symbolic AI.
 
 
 
----
-
-# Correctness and Specifications
-
-***
-
-# Deductive vs. Inductive Reasoning
-
-(left over from last lecture)
-
-----
-
-## Who is to blame?
-
-```java
-Algorithms.shortestDistance(g, "Tom", "Anne");
-
-> ArrayOutOfBoundsException
-```
-
-```java
-Algorithms.shortestDistance(g, "Tom", "Anne");
-
-> -1
-```
-
-----
-
-## Who is to blame?
-
-```java
-class Algorithms {
-    /**
-     * This method finds the shortest distance between to 
-     * verticies. It returns -1 if the two nodes are not 
-     * connected. 
-    */
-    int shortestDistance(…) {…}
-}
-```
-```java
-class Algorithms {
-    /**
-     * This method finds the shortest distance between to 
-     * verticies. Method is only supported 
-     * for connected verticies.
-    */
-    int shortestDistance(…) {…}
-}
-```
-
-----
-
-## System decomposition with interfaces
-
-```java
-/*@ requires amount >= 0;
-    ensures balance == \old(balance)-amount &&
-            \result == balance;
-@*/
-public int debit(int amount) {
-    ...
-}
-```
-(JML specification in Java, pre- and postconditions)
-
-```java
-/**
-  * Calls the <code>read(byte[], int, int)</code> overloaded [...]
-  * @param buf The buffer to read bytes into
-  * @return The value retured from <code>in.read(byte[], int, int)</code>
-  * @exception IOException If an error occurs
-  */
-public int read(byte[] buf) throws IOException
-{
-    return read(buf, 0, buf.length);
-}
-```
-(textual specification with JavaDoc)
-
-----
-
-## Contracts/Specifications
-
-* Contracts describe expected behavior for methods, while hiding the implementation behind
-* States method's and caller's responsibilities
-* Analogy: legal contract
-    * If you pay me this amount on this schedule...
-    * I will build the following...
-    * Some contracts have remedies for nonperformance
-* Invariants must hold before and after loop/method execution
-* Defines what it means for implementation to be correct, including exceptional behavior
-
-----
-
-## Who is to blame?
-
-```java
-Math.sqrt(-5);
-
-> 0
-```
-----
-
-## Benefits of Specifications
-
-* Exact specification of what should be implemented
-* Decompose a system into its parts, develop and test parts independently
-* Accurate blame assignments and identification of buggy behavior
-* Useful for test generation and as test oracle
-
-----
-
-## Specifications in Machine Learning?
-
-```java
-/**
-  ????
-*/
-String transcribe(File audioFile);
-```
-
-----
-## Specifications in Machine Learning?
-
-
-```java
-/**
-  ????
-*/
-List<Product> suggestedPurchases(List<Product> pastPurchases);
-```
-
-----
-## Specifications in Machine Learning?
-
-
-```java
-/**
-  ????
-*/
-Boolean predictRecidivism(int age, 
-                          List<Crime> priors, 
-                          Gender gender, 
-                          int timeServed,
-                          ...);
-```
-
-----
-
-## Specifications in Machine Learning?
-
-* Usually clear specifications do not exist -- we use machine learning exactly because we do not know the specifications
-* Can define correctness for some data, but not general rules; sometimes can only determine correctness after the fact
-* Learning for tasks for which we cannot write specifications
-    - Too complex
-    - Rules unknown
-* AI will learn rules/specifications, often not in a human-readable form, but are those the right ones?
-* 
-* Often *goals* used instead --> maximize a specific objective
-
-----
-
-[![](inductive.png)](https://danielmiessler.com/blog/the-difference-between-deductive-and-inductive-reasoning/)
-<!-- .element: class="stretch" -->
-
-
-(Daniel Miessler, CC SA 2.0)
-
-----
-
-## Deductive Reasoning
-
-* Combining logical statements following agreed upon rules to form new statements
-* Proving theorems from axioms
-* From general to the particular
-* *mathy reasoning, eg. proof that π is irrational*
-* 
-* Formal methods, classic rule-based AI systems, expert systems
-
-<!-- split -->
-
-## Inductive Reasoning
-
-* Constructing axioms from observations
-* Strong evidence suggests a rule
-* From particular to the general
-* *sciency reasoning, eg. finding laws of nature*
-* 
-* Most modern machine learning systems, statistical learning
-
-----
-
-## Resulting Shift in Design Thinking?
-
-From deductive reasoning to inductive reasoning...
-
-From clear specifications to goals...
-
-From guarantees to best effort...
-
-**What does this mean for software engineering?**
-
-**For decomposing software systems?** 
-
-**For correctness of AI-enabled systems?** 
-
-**For safety?**
-
-**For design, implementation, testing, deployment, operations?**
-
-----
-
-## A Touch of Realism
-
-While it is possible to formally specify programs and prove them correct, this is rarely ever done.
-
-In practice, specifications are often textual, local, weak, vague, or ambiguous, if they exist at all. Some informal requirements and some tests might be the only specifications available.
-
-Software engineers have long development methods to deal with uncertainty, missing specifications, and unreliable components.
-
-**AI may raise the stakes, but the problem and solutions are not entirely new.**
-
 
 
 ---
@@ -482,7 +259,7 @@ graph TD;
 
 <!-- col -->
 
-**demo time**
+**[demo time](https://github.com/ckaestne/seai/tree/S2020/lectures/02_aibasics1/extras/decisiontree)**
 
 <!-- colend -->
 
@@ -762,7 +539,7 @@ Change hyperparameter to detect training accuracy (blue)/validation accuracy (re
 
 (CC SA 3.0 by [Dake](https://commons.wikimedia.org/wiki/File:Overfitting.png))
 
-**demo time**
+**[demo time](https://github.com/ckaestne/seai/tree/S2020/lectures/02_aibasics1/extras/decisiontree)**
 
 
 Notes: Overfitting is recognizable when performance of the evaluation set decreases.
@@ -781,6 +558,8 @@ Demo: Show how trees at different depth first improve accuracy on both sets and 
   * k-fold: $k$ equal-sized partitions, evaluate on each training on others
   * repeated random sub-sampling (Monte Carlo)
 
+**[demo time](https://github.com/ckaestne/seai/tree/S2020/lectures/02_aibasics1/extras/decisiontree)**
+
 ![Visualization of K-Fold Crossvalidation](kfold.gif)
 <!-- .element: class="stretch" -->
 
@@ -789,7 +568,7 @@ Demo: Show how trees at different depth first improve accuracy on both sets and 
 
 ----
 
-**demo time**
+
 
 ----
 ## Separate Training, Validation and Test Data
