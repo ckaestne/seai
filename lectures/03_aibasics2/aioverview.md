@@ -316,7 +316,18 @@ model = keras.models.Sequential([
 ])
 ```
 
-Total of 266,610 parameters in this small example!
+Total of 266,610 parameters in this small example! (Assuming float types, that's 1 MB)
+
+----
+## Network Size
+
+* 50 Layer ResNet network -- classifying 224x224 images into 1000 categories
+  * 26 million weights, computes 16 million activations during inference, 168 MB to store weights as floats
+* OpenAI’s GPT-2 (2019) -- text generation
+  - 48 layers, 1.5 billion weights (~12 GB to store weights)
+  - released model reduced to 117 million weights
+  - trained on 7-8 GPUs for 1 month with 40GB of internet text from 8 million web pages
+
 
 ----
 ## Convolutional neural network (Intuition)
@@ -324,6 +335,18 @@ Total of 266,610 parameters in this small example!
 ![Typical CNN architecture](cnn.png)
 
 ([Aphex34](https://en.wikipedia.org/wiki/Convolutional_neural_network#/media/File:Typical_cnn.png) CC BY-SA 4.0)
+
+
+----
+## Reusing and Retraining Networks
+
+* Incremental learning process enables continued training, retraining, incremental updates
+* A model that captures key abstractions may be good starting point for adjustments (i.e., rather than starting with randomly initialized parameters)
+* Reused models may inherit bias from original model
+* Lineage important. Model cards promoted for documenting rationale, e.g., [Google Perspective Toxicity Model](https://github.com/conversationai/perspectiveapi/blob/master/2-api/model-cards/English/toxicity.md)
+
+
+
 ----
 ## Deep Learning Discussion
 
@@ -344,12 +367,354 @@ Total of 266,610 parameters in this small example!
 
 
 ---
-# Classic AI
+# Classic Symbolic AI
 
 (Good Old-Fashioned Artificial Intelligence)
 
 
+----
+## Boolean Satisfiability
+
+Given a propositional formula over boolean variables, is there an assignment such that the formula evaluates to true?
+
+$(a \vee b) \wedge (\neg a \vee c) \wedge \neg b$
+
+decidable, np complete, lots of search heuristics
+
+----
+## Encoding Problems
+
+![Toyota Car Configurator](toyotaconfig.png)
+<!-- .element: class="stretch" -->
+
+Configuration dialog. Some options are mutually exclusive. Some depend on other options. 
+
+
+----
+## Encoding Problems
+
+![KConfig Screenshot](kconfig.png)
+<!-- .element: class="stretch" -->
+
+
+----
+## Linux KConfig
+
+```python
+config HAVE_BOOTMEM_INFO_NODE
+  def_bool n
+
+# eventually, we can have this option just 'select SPARSEMEM'
+config MEMORY_HOTPLUG
+  bool "Allow for memory hot-add"
+  depends on SPARSEMEM || X86_64_ACPI_NUMA
+  depends on ARCH_ENABLE_MEMORY_HOTPLUG
+  select NUMA_KEEP_MEMINFO if NUMA
+
+config MEMORY_HOTPLUG_SPARSE
+  def_bool y
+  depends on SPARSEMEM && MEMORY_HOTPLUG
+
+config MEMORY_HOTPLUG_DEFAULT_ONLINE
+  bool "Online the newly added memory blocks by default"
+  depends on MEMORY_HOTPLUG
+  help
+    This option sets the default policy setting for memory hotplug
+    onlining policy (/sys/devices/system/memory/auto_online_blocks) which
+    determines what happens to newly added memory regions. Policy setting
+    can always be changed at runtime.
+    See Documentation/admin-guide/mm/memory-hotplug.rst for more information.
+
+    Say Y here if you want all hot-plugged memory blocks to appear in
+    'online' state by default.
+    Say N here if you want the default policy to keep all hot-plugged
+    memory blocks in 'offline' state.
+
+config MEMORY_HOTREMOVE
+  bool "Allow for memory hot remove"
+  select MEMORY_ISOLATION
+  select HAVE_BOOTMEM_INFO_NODE if (X86_64 || PPC64)
+  depends on MEMORY_HOTPLUG && ARCH_ENABLE_MEMORY_HOTREMOVE
+  depends on MIGRATION
+```
+
+----
+## SAT Encoding
+
+Describe configuration constraints:
+
+<!-- colstart -->
+```
+config MEMORY_HOTPLUG
+  bool "Allow for memory hot-add"
+  depends on SPARSEMEM || X86_64_ACPI_NUMA
+  depends on ARCH_ENABLE_MEMORY_HOTPLUG
+  select NUMA_KEEP_MEMINFO if NUMA
+```
+<!-- col -->
+<!-- small -->
+(MEMORY_HOTPLUG => SPARSEMEM || X86_64_ACPI_NUMA)
+
+&&
+
+(MEMORY_HOTPLUG => ARCH_ENABLE_MEMORY_HOTPLUG)
+
+&&
+
+(MEMORY_HOTPLUG && NUMA => NUMA_KEEP_MEMINFO)
+
+...
+<!-- colend -->
+
+----
+## Automated Configuration Analysis
+
+given configuration constraints $\phi$ :
+
+**Which option can never be selected?**
+
+`dead(o) = $\neg$SAT($\phi \wedge o$)`
+
+**Which option must always be selected?**
+
+`mandatory(o) = TAUT($\phi \Rightarrow o$)`
+
+`= $\neg$SAT($\neg(\phi \Rightarrow o)$)`
+
+`= $\neg$SAT($\phi \wedge \neg o$)`
+
+
+**Any options that can never be selected together?**
+
+`mutuallyExclusive(o, p) = ?`
+
+
+----
+## More Automated Configuration Analysis
+
+given configuration constraints $\phi$ and already made selections of $a$ and $b$
+
+
+**Which other options do need to be selected?**
+
+`mustSelect(o) = ?`
+
+----
+## Constraint Satisfaction Problems, SMT
+
+Generalization beyond boolean options, numbers, strings, additions, optimization
+
+**Example: Job Scheduling**
+
+Tasks for assembling a car: { t1, t2, t3, t4, t5, t6 }; values denoting start time
+
+max 30 min: $\forall_n t_n<30$ 
+
+t2 needs to be after t1, t1 takes 10 min: $t_1+10\le t_2$
+
+t3 and t4 needs to be after t2, take 2 min: $(t_2+2\le t_3) \wedge (t_2+2\le t_4)$
+
+t5 and t6 (5 min each) should not overlap: $(t_5+5\le t_6) \vee (t_6+5\le t_5)$
+
+Goal: find valid assignment for all start times, or find valid assignment minimizing the latest start time
+
+----
+## General Observations
+
+* Encoding of many problems
+* Deductive reasoning, specifications! (no learning)
+* Provides accurate answer (guarantees!), or timeout
+* Provides concrete solution that is easy to check, possibly easy to understand (depends on encoding)
+* np-complete, may take very long time to find answer
+* Modern solvers are very good for many problems
+* For optimization problems often good approximations exist (heuristic search)
+
+----
+## Modern Use Cases
+
+* Planning, scheduling, logistics 
+  * e.g., planning data center layout to minimize cable length
+  * e.g., optimizing big data queries
+  * e.g., scheduling shifts for employees based on preferences
+* Static analysis, verification, security analysis of software
+  - e.g., concolic testing, detecting buffer overflows
+* Version resolution and dependency management 
+  * e.g., Eclipse, Dart
+* Combinatorial design
+  * e.g., cryptography, crop rotation schedules, drug design
+* Chip design and verification
+  * e.g., equivalence checking
+* Protein folding and other bioinformatics applications
+* Electronic trading agents, e-auctions
+
+
+---
+# Probabilistic Programming
+
+(reasoning with probabilities)
+
+<!-- references -->
+
+🕮 Pfeffer, Avi. "[Practical Probabilistic Programming](https://livebook.manning.com/book/practical-probabilistic-programming/chapter-1/)." Manning (2016), Chapter 1
+
+----
+## Probabilistic Programming by Example
+
+```scala
+val burglary = Flip(0.01)
+val earthquake = Flip(0.0001)
+val alarm = CPD(burglary, earthquake,
+                  (false, false) -> Flip(0.001),
+                  (false, true) -> Flip(0.1),
+                  (true, false) -> Flip(0.9),
+                  (true, true) -> Flip(0.99))
+val johnCalls = CPD(alarm,
+                  false -> Flip(0.01),
+                  true -> Flip(0.7))
+
+...
+println("Probability of burglary: " + 
+        alg.probability(burglary, true))
+```
+
+Note: Source: https://github.com/p2t2/figaro/blob/master/FigaroExamples/src/main/scala/com/cra/figaro/example/Burglary.scala
+Discussed in tutorial: https://www.cra.com/sites/default/files/pdf/Figaro_Tutorial.pdf
+
+----
+## Probabilistic Programming by Example
+
+```scala
+class Person {
+  val smokes = Flip(0.6)
+}
+def smokingInfluence(pair: (Boolean, Boolean)) =
+  if (pair._1 == pair._2) 3.0; else 1.0
+
+val alice, bob, clara = new Person
+val friends = List((alice, bob), (bob, clara))
+clara.smokes.observe(true)
+for { (p1, p2) <- friends } 
+  ^^(p1.smokes, p2.smokes).setConstraint(smokingInfluence)
+
+...
+println("Probability of Alice smoking: " + 
+        alg.probability(alice.smokes, true))
+```
+
+Note: Discussed in tutorial: https://www.cra.com/sites/default/files/pdf/Figaro_Tutorial.pdf
+
+Source: https://github.com/p2t2/figaro/blob/master/FigaroExamples/src/main/scala/com/cra/figaro/example/Smokers.scala
+
+----
+## More Examples
+
+see [GitHub p2t2/figaro](https://github.com/p2t2/figaro/tree/master/FigaroExamples/src/main/scala/com/cra/figaro/example) and many other languages
+
+
+----
+## Why Probabilistic Programming?
+
+* Reasoning about uncertainly, at scale (simulations)
+* Planning with uncertainty, making decisions with partial information
+* Infer causes of events, likely explanations
+* Expressed in the familiar and expressive form of a programming language, often with different reasoning engines in background
+*
+* Based on knowledge and logic
+
+----
+## Probabilistic Inference
+
+Answering queries about probabilistic models
+
+```scala
+println("Probability of burglary: " + 
+        alg.probability(burglary, true))
+
+println("Probability of Alice smoking: " + 
+        alg.probability(alice.smokes, true))
+```
+
+<!-- vspace -->
+
+* Analytical probabilistic reasoning (e.g., variable elimination Bayes' rule) -- precise result, guarantees
+* Approximation (e.g., belief propagation)
+* Sampling (e.g., Markov chain Monte Carlo) -- probabilistic guarantees
+
+
+----
+## Example: Robot Path and Adaptation Planning
+
+![Robot Path Map](robotmap.png)
+<!-- .element: class="stretch" -->
+
+(CC-BY-SA-3.0 [Sevard](https://commons.wikimedia.org/wiki/File:Robot_Skeleton.png))
+
+----
+## Example: Robot Path and Adaptation Planning
+
+<!-- colstart -->
+![Learning Models for Adaptations](brassmars.png)
+<!-- col -->
+![MAPE-K](mapek.png)
+<!-- colend -->
+
+Notes:
+Examples from a recent research project to reason about adaptations in robots, e.g., change which hardware to use or which route to take. We learn energy models and other models from observations, from which we know multiple plausible configurations with different tradeoffs (and certainty). To chose an optimal configuration, a probabilistic planner is used to make decisions at runtime.
+
+
+----
+## General Observations
+
+* Manually created models
+* Representing uncertainty
+* Reasoning with probabilities, precise of with probabilistic bounds
+* Deductive reasoning, specifications! 
+* Inference is hard to scale
+* Recently, commonly combined with machine learning
+
 
 ---
 # Summary
+
+----
+
+## Artificial Intelligence
+
+<!-- colstart -->
+
+* Acting humanly: Turing test approach, requires natural language processing, knowledge representation, automated reasoning, machine learning, maybe vision and robotics
+* Thinking humanly: mirroring human thinking, cognitive science
+* Thinking rationally: law of thoughts, logic, patterns and structures
+* Acting rationally: rational agents interacting with environments
+
+
+
+<!-- col -->
+
+* problem solving (e.g., search, constraint satisfaction)
+* knowledge, reasoning, planning (e.g., logic, knowledge representation, probabilistic reasoning)
+* learning (learning from examples, knowledge in learning, reinforcement learning)
+* communication, perceiving, and acting (NLP, vision, robotics)
+
+<!-- colend -->
+
+<!-- references -->
+Russel and Norvig. "[Artificial Intelligence: A Modern Approach](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/1feg4j8/alma991019419529704436).", 2003
+
+----
+## Summary
+
+* Intuition behind deep learning (architecture, parameters, size, cost)
+* Symbolic and probabilistic reasoning may provide accurate answers (or time out)
+* Many different approaches, many combinations
+
+<!-- small -->
+
+Learn more:
+* 🎓 10-301/601 Introduction to Machine Learning (how machine learning techniques work)
+* 🎓 15-381/681 Artificial Intelligence: Representation and Problem Solving (how symbolic AI techniques work, solvers, reasoning, agents)
+* 🕮 Géron, Aurélien. ”[Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019662775504436)”, 2nd Edition (2019), Ch 10 ("Introduction to Artificial Neural Networks with Keras")
+* 🕮 Russel and Norvig. "[Artificial Intelligence: A Modern Approach](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/1feg4j8/alma991019419529704436).", 2003
+* 🕮 Flasiński, Mariusz. "[Introduction to Artificial Intelligence](https://doi.org/10.1007/978-3-319-40022-8)." Springer (2016), Chapter 1 ("History of Artificial Intelligence") and Chapter 2 ("Symbolic Artificial Intelligence")
+* 🕮 Pfeffer, Avi. "[Practical Probabilistic Programming](https://livebook.manning.com/book/practical-probabilistic-programming/chapter-1/)." Manning (2016)
 
