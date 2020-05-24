@@ -80,12 +80,16 @@ Overview:
 * Notions of test suits and coverage for models (e.g., test by population segment), black box test case design
 * Comparison against heuristics approaches
 * Fuzzing, adversarial learning, and test case generation; overview of current research
+* Metamorphic testing
 
 Learning goals:
 
-* Assess model quality with suitable measures and compare quality of multiple models
-* Design a test suite for assuring model quality
-* Automate model evaluation as part of a continuous integration pipeline
+* Select a suitable metric to evaluate prediction accuracy of a model and to compare multiple models
+* Select a suitable baseline when evaluating model accuracy
+* Explain how software testing differs from measuring prediction accuracy of a model
+* Curate validation datasets for assessing model quality, covering subpopulations as needed
+* Use invariants to check partial model properties with automated testing
+* Develop automated infrastructure to evaluate and monitor model quality
 
 
 Readings:

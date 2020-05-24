@@ -20,11 +20,12 @@ Required reading:
 
 # Learning Goals
 
-* Identify and describe the goals of an AI component and define outcome quality measures
-* Explain the limits of evaluating model quality on a static dataset and design telemetry for assessment in production
-* Assess model quality with suitable measures and compare quality of multiple models
-* Design a test suite for assuring model quality
-* Develop automated solutions to evaluate and monitor model quality
+* Select a suitable metric to evaluate prediction accuracy of a model and to compare multiple models
+* Select a suitable baseline when evaluating model accuracy
+* Explain how software testing differs from measuring prediction accuracy of a model
+* Curate validation datasets for assessing model quality, covering subpopulations as needed
+* Use invariants to check partial model properties with automated testing
+* Develop automated infrastructure to evaluate and monitor model quality
 
 ---
 # This lecture
