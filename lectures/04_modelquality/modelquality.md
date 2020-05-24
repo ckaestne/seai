@@ -59,16 +59,18 @@ correct answer were known” (Weyuker, 1982).
 For our discussion: any form of model, including machine learning models, symbolic AI components, hardcoded heuristics, composed models, ...
 
 ----
-## ML Algorithm Quality vs Model Quality vs System Quality
+## ML Algorithm Quality vs Model Quality vs Data Quality vs System Quality
 
-Todays focus is on the quality of the produced *model*, not the algorithm used to learn the model
+Todays focus is on the quality of the produced *model*, not the algorithm used to learn the model or the data used to train the model
 
 i.e. assuming *Decision Tree Algorithm* and feature extraction are correctly implemented (according to specification), is the model learned from data any good?
 
 The model is just one component of the entire system.
 
+Focus on measuring quality, not debugging the source of quality problems (e.g., in data, in feature extraction, in learning, in infrastructure)
+
 ----
-## Case Study 1: Cancer Detection
+## Case Study: Cancer Detection
 
 ![MRI](mri.jpg)
 
@@ -1006,6 +1008,12 @@ Further reading:
 * Ribeiro, Marco Tulio, Sameer Singh, and Carlos Guestrin. "[Anchors: High-precision model-agnostic explanations](https://sameersingh.org/files/papers/anchors-aaai18.pdf)." In Thirty-Second AAAI Conference on Artificial Intelligence. 2018.
 
 
+----
+## Invariant Checking aligns with Requirements Validation
+
+![Machine Learning Validation vs Verification](mlvalidation.png)
+
+
 
 
 ----
@@ -1037,12 +1045,20 @@ Singh, Gagandeep, Timon Gehr, Markus Püschel, and Martin Vechev. "[An abstract 
 ----
 ## One More Thing: Simulation-Based Testing
 
+<!-- colstart -->
 * Derive input-output pairs from simulation, esp. in vision systems
-* Render scene -> add noise -> recognize -> compare recognized result with simulator state
-* Quality depends on quality of the simulator and how well it can produce inputs: render picture/video, synthesize speech, ... 
-* Less suitable where input-output relationship unknown, e.g., cancer detection, housing price prediction, shopping recommendations
-
-
+* Example: Vision for self-driving cars:
+    * Render scene -> add noise -> recognize -> compare recognized result with simulator state
+* Quality depends on quality of the simulator and how well it can produce inputs from outputs: 
+    * examples: render picture/video, synthesize speech, ... 
+    * Less suitable where input-output relationship unknown, e.g., cancer detection, housing price prediction, shopping recommendations
+<!-- col -->
+```mermaid
+graph TD;
+    output -->|simulation| input
+    input -->|prediction| output
+```
+<!-- colend -->
 
 <!-- references -->
 
