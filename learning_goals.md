@@ -91,7 +91,7 @@ Learning goals:
 Readings:
 
 * 🕮 Hulten, Geoff. "Building Intelligent Systems: A Guide to Machine Learning Engineering." (2018), 19-20 (Evaluating Intelligence, Machine Learning Intelligence).
-
+* 🗎 Ribeiro, Marco Tulio, Sameer Singh, and Carlos Guestrin. "[Semantically equivalent adversarial rules for debugging NLP models](https://www.aclweb.org/anthology/P18-1079.pdf)." In Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers), pp. 856-865. 2018.
   
 
 ## Lecture: From Models to AI-Enabled Systems (Systems Thinking) ![Requirements](https://img.shields.io/badge/-Requirements-Green.svg) ![Architecture](https://img.shields.io/badge/-Architecture/Design-Blue.svg) ![QA](https://img.shields.io/badge/-Quality%20Assurance-Orange.svg) ![Process](https://img.shields.io/badge/-Process-Grey.svg)
