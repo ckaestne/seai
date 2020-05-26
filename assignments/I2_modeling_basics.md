@@ -69,8 +69,8 @@ We will use approximately the following rubric for a total of 150 points:
  - [ ] 20 points: Feature extraction performed and described
  - [ ] 20 points: Learning performed and described, learning technique and hyperparameters reasonably justified
  - [ ] 30 points: Evaluation of final model performed and described. The evaluation metric is clear and suitably chosen. Two reasonable baseline heuristics are described and implemented. The use of evaluation data is appropriate.
+ - [ ] 10 points: Predictive service that is independent from the learning infrastructure is provided and sufficiently documented
  - [ ] 10 points: Evaluation results reported show that the final model outperforms the baseline heuristics and the alternative/prior model.
  - [ ] 20 points: Report and code quality (structure, readability, documentation)
- - [ ] 10 points: Predictive service that is independent from the learning infrastructure is provided and sufficiently documented
  - [ ] optional: 50 bonus points for implementing and using own random forest learning technique
 
