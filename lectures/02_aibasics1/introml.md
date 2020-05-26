@@ -674,6 +674,7 @@ Suggested complementary reading: 🕮 Géron, Aurélien. ”[Hands-On Machine Le
 
 (Source: Guo. "[Data Science Workflow: Overview and Challenges](https://cacm.acm.org/blogs/blog-cacm/169199-data-science-workflow-overview-and-challenges/fulltext)." Blog@CACM, Oct 2013)
 
+
 ----
 ## Data Science is Iterative and Exploratory
 
@@ -681,6 +682,30 @@ Suggested complementary reading: 🕮 Géron, Aurélien. ”[Hands-On Machine Le
 <!-- .element: class="stretch" -->
 
 (Microsoft Azure Team, "[What is the Team Data Science Process?](https://docs.microsoft.com/en-us/azure/machine-learning/team-data-science-process/overview)" Microsoft Documentation, Jan 2020)
+
+
+----
+## Similar to Spiral Process Model or Agile? 
+
+<!-- colstart -->
+![Spiral Model](spiral_model.svg)
+<!-- col -->
+![Scrum Process](scrum.svg)
+(CC BY-SA 4.0, [Lakeworks](https://en.wikipedia.org/wiki/Scrum_(software_development)#/media/File:Scrum_process.svg))
+<!-- colend -->
+
+Note: There is similarity in that there is an iterative process, 
+but the idea is different and the process model seems mostly orthogonal
+to iteration in data science.
+The spiral model prioritizes risk, especially when it is not clear
+whether a model is feasible. One can do similar things in model development, seeing whether it is feasible with data at hand at all and build an early
+prototype, but it is not clear that an initial okay model can be improved
+incrementally into a great one later.
+Agile can work with vague and changing requirements, but that again seems
+to be a rather orthogonal concern. Requirements on the product are not so
+much unclear or changing (the goal is often clear), but it's not clear
+whether and how a model can solve it.
+
 
 ----
 ## Data Science is Iterative and Exploratory
@@ -693,6 +718,8 @@ Source: Patel, Kayur, James Fogarty, James A. Landay, and Beverly Harrison. "[In
 
 Notes:
 This figure shows the result from a controlled experiment in which participants had 2 sessions of 2h each to build a model. Whenever the participants evaluated a model in the process, the accuracy is recorded. These plots show the accuracy improvements over time, showing how data scientists make incremental improvements through frequent iteration.
+
+
 
 ----
 ## Data Science is Iterative and Exploratory
