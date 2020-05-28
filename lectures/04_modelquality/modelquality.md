@@ -74,6 +74,7 @@ Focus on measuring quality, not debugging the source of quality problems (e.g., 
 ## Case Study: Cancer Detection
 
 ![MRI](mri.jpg)
+<!-- .element: class="stretch" -->
 
 Notes: Application to be used in hospitals to screen for cancer, both as routine preventative measure and in cases of specific suspicions. Supposed to work together with physicians, not replace.
 
@@ -294,6 +295,7 @@ F1 score = $2 \frac{recall*precision}{recall+precision}$
 ----
 
 [![Recall/Precision visualization](recallprecision.png)](https://en.wikipedia.org/wiki/Precision_and_recall#/media/File:Precisionrecall.svg)
+<!-- .element: class="stretch" -->
 
 
 (CC BY-SA 4.0 by [Walber](https://en.wikipedia.org/wiki/Precision_and_recall#/media/File:Precisionrecall.svg))
@@ -591,7 +593,7 @@ Software testing can be applied to many qualities:
 
 <!-- colstart -->
 | Rooms | Crime Rate | ... | Actual Price |
-| - | - | - | - | - | 
+| - | - | - | - | 
 | 3 | .01 | ... | 250k |
 | 4 | .01 | ... |  498k |
 | 2 | .03 | ... |  211k |
