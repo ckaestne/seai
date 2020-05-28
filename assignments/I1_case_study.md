@@ -15,7 +15,7 @@ Learning goals:
 
 Read the paper below and if necessary familiarize yourself with terminology and additional context, using other web and research publications on the topic as needed.
 
-> Sculley, D., Matthew Eric Otey, Michael Pohl, Bridget Spitznagel, John Hainsworth, and Yunkai Zhou. [Detecting Adversarial Advertisements in the Wild](https://ai.google/research/pubs/pub37195.pdf). In Proceedings of the 17th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining, pp. 274-282. ACM, 2011.
+> Sculley, D., Matthew Eric Otey, Michael Pohl, Bridget Spitznagel, John Hainsworth, and Yunkai Zhou. [Detecting Adversarial Advertisements in the Wild](https://research.google/pubs/pub37195.pdf). In Proceedings of the 17th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining, pp. 274-282. ACM, 2011.
 
 Answer the questions below (<1 page per question). Wherever reasonable, provide evidence, for example by referring to specific parts of the source material. Your answers may contain opinions and speculations, but make sure that they are clearly recognizable as such and clearly separate opinions/speculations from facts. 
 
