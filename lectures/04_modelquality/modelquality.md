@@ -718,7 +718,7 @@ Note: see explanation at https://medium.com/@ckaestne/machine-learning-is-requir
 ----
 ## Example and Discussion
 
-```txt
+```
 IF age between 18–20 and sex is male THEN predict arrest
 ELSE IF age between 21–23 and 2–3 prior offenses THEN predict arrest
 ELSE IF more than three priors THEN predict arrest
@@ -784,6 +784,7 @@ Implementation is trivial/automatically generated
 * Specification coverage (e.g., use cases, boundary conditions):
     - No specification!
     - ~> Do we have data for all important use cases and subpopulations?
+    - ~> Do we have representatives data for all output classes?
 * White-box coverage (e.g., branch coverage)
     - All path of a decision tree? 
     - All neurons activated at least once in a DNN? (several papers "neuron coverage")
@@ -876,6 +877,10 @@ Curate Validation Data for Specific Problems and Subpopulations:
 Derive from requirements, experts, user feedback, expected problems etc. Think *blackbox testing*.
 
 
+----
+## Important Input Groups for Cancer Detection?
+
+<!-- discussion -->
 
 ----
 ## Black-Box Testing Techniques as Inspiration?
@@ -1031,7 +1036,7 @@ Further reading:
 
 
 ----
-## Test Case Generation in Machine Learning
+## Approaches for Checking in Variants
 
 * Generating test data (random, distributions) usually easy
 * For many techniques gradient-based techniques to search for invariant violations (see adversarial ML)
