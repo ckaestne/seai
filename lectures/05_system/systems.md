@@ -5,7 +5,7 @@ semester: Summer 2020
 footer: "17-445 Software Engineering for AI-Enabled Systems, Christian Kaestner"
 ---  
 
-# 17-445: From Models to AI-Enabled Systems
+# From Models to AI-Enabled Systems
 
 
 Christian Kaestner
