@@ -31,7 +31,7 @@ jobs:
       run: |
         cd lectures
         npm run generate
-        npm run pdf
+        npm run staticpdf
         cp -r _static/ ../_site/slides
         cd ..
 

@@ -5,7 +5,8 @@
     "presentation": "reveal-md .",
     "run": "reveal-md . -w",
     "generate": "reveal-md . --static",
-    "pdf": "find . | grep '^\\./[0-9].*\\.md$' | sed 's/\\.md$//' | xargs --max-args=1 --replace='{}' reveal-md '{}'.md --print '{}'.pdf"
+    "pdf": "find . | grep '^\\./[0-9].*\\.md$' | sed 's/\\.md$//' | xargs --max-args=1 --replace='{}' reveal-md '{}'.md --print _static/'{}'.pdf",
+    "staticpdf": "find . | grep '^\\./[0-9].*\\.md$' | sed 's/\\.md$//' | xargs --max-args=1 --replace='{}' reveal-md '{}'.md --print _static/'{}'.pdf"
   },
   "repository": {
     "type": "git",
