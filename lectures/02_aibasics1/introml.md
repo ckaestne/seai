@@ -1,11 +1,11 @@
 ---
 author: Christian Kaestner
-title: "17-445: Introduction to Artificial Intelligence for Software Engineers 1"
+title: "17-445: Artificial Intelligence for Software Engineers 1"
 semester: Summer 2020
 footer: "17-445 Software Engineering for AI-Enabled Systems, Christian Kaestner"
 ---  
 
-# Introduction to Artificial Intelligence for Software Engineers 
+# Artificial Intelligence for Software Engineers 
 
 (Part 1: Supervised Machine Learning and Notebooks)
 
