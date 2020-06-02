@@ -856,6 +856,9 @@ Many potential subtle and less subtle problems:
 > Technology from Amazon, Apple, Google, IBM and Microsoft misidentified 35 percent of words from people who were black. White people fared much better. -- [NYTimes March 2020](https://www.nytimes.com/2020/03/23/technology/speech-recognition-bias-apple-amazon-google.html)
 
 ----
+<div class="tweet" data-src="https://twitter.com/nke_ise/status/897756900753891328"></div>
+
+----
 ## Not All Inputs are Equal
 
 > some random mistakes vs rare but biased mistakes?
@@ -863,9 +866,9 @@ Many potential subtle and less subtle problems:
 * A system to detect when somebody is at the door that never works for people under 5ft (1.52m)
 * A spam filter that deletes alerts from banks
 
-Case Study: http://pic.twitter.com/ZJ1Je1C4NW
 
 **Consider separate evaluations for important subpopulations; monitor mistakes in production**
+
 
 
 ----
@@ -978,9 +981,9 @@ assertEquals(??, factorPrime(15485863));
 * Credit rating should not depend on gender:
     - $\forall x. f(x[\text{gender} \leftarrow \text{male}]) = f(x[\text{gender} \leftarrow \text{female}])$
 * Synonyms should not change the sentiment of text:
-    - $\forall x. f(x) = f(\texttt{replace}(\text{"is not", "isn't"}))$
+    - $\forall x. f(x) = f(\texttt{replace}(x, \text{"is not", "isn't"}))$
 * Negation should swap meaning:
-    - $\forall x \in \text{"X is Y"}. f(x) = 1-f(\texttt{replace}(\text{" is ", " is not "}))$
+    - $\forall x \in \text{"X is Y"}. f(x) = 1-f(\texttt{replace}(x, \text{" is ", " is not "}))$
 * Robustness around training data:
     - $\forall x \in \text{training data}. \forall y \in \text{mutate}(x, \delta). f(x) = f(y)$
 * Low credit scores should never get a loan (sufficient conditions for classification, "anchors"):
@@ -999,7 +1002,7 @@ $\forall x. f(g\_I(x)) = g\_O(f(x))$
 
 <!-- vspace -->
 
-e.g. $g\_I(x)= \texttt{replace}(\text{" is ", " is not "})$ and $g\_O(x)=\neg x$
+e.g. $g\_I(x)= \texttt{replace}(x, \text{" is ", " is not "})$ and $g\_O(x)=\neg x$
 
 ----
 ## On Testing with Invariants/Assertions
@@ -1054,6 +1057,7 @@ Singh, Gagandeep, Timon Gehr, Markus Püschel, and Martin Vechev. "[An abstract 
 ## One More Thing: Simulation-Based Testing
 
 <!-- colstart -->
+<!-- smallish -->
 * Derive input-output pairs from simulation, esp. in vision systems
 * Example: Vision for self-driving cars:
     * Render scene -> add noise -> recognize -> compare recognized result with simulator state
