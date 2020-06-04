@@ -107,7 +107,6 @@ see Hulten, Chapter 2
 
 
 
-
 ---
 # The Business View
 
@@ -119,11 +118,11 @@ see Hulten, Chapter 2
 <!-- colstart -->
 AI: Higher accuracy predictions at much much lower cost
 
-May use new, cheaper predictions for traditional tasks (e.g., inventory and demand forcast)
+May use new, cheaper predictions for traditional tasks (**examples?**)
 
-May now use predictions for new kinds of problems (e.g. navigation and translation)
+May now use predictions for new kinds of problems (**examples?**)
 
-May now use more predictions than before
+May now use more predictions than before 
 
 (Analogies: Reduced cost of light, reduced cost of search with the internet)
 
@@ -132,6 +131,8 @@ May now use more predictions than before
 ![Book: Prediction Machines](predictionmachinescover.png)
 
 <!-- colend -->
+
+Notes: May use new, cheaper predictions for traditional tasks -> inventory and demand forcast; May now use predictions for new kinds of problems -> navigation and translation
 
 ----
 ## The economic lense
@@ -157,15 +158,42 @@ At the same time, the value of human judgement increases. Making more decisions 
 Picture source: https://pixabay.com/photos/cab-oldtimer-taxi-car-city-london-203486/
 
 ----
+## Predictions vs Judgement
+
+<!-- colstart -->
+Predictions are an input to decision making under uncertainty
+
+Making the decision requires judgement (determining relative payoffs of decisions and outcomes)
+
+Judgement often left to humans ("value function engineering")
+
+ML may learn to predict human judgment if enough data
+<!-- col -->
+
+```mermaid
+graph LR;
+p["Predict cancer?"] -->|yes| o;
+p-->|no| o2;
+o["cancer?"] -->|yes| x1["+"]
+o -->|no| x2["-"]
+o2["cancer?"] -->|yes| x3["-"]
+o2-->|no| x4["+"]
+```
+
+*Determine value function from value of each outcome and probability of each outcome*
+<!-- colend -->
+
+----
 ## Automation with predictions
 
-* Automating prediction vs judgement; possibly predicting human judgement 
 * Automated predictions scale much better than human ones
+* Automating prediction vs predict judgement
 * Value from full and partial automation, even with humans still required
 * Highest return with full automation
     - Tasks already mostly automated, except predictions (e.g. mining)
     - Increased speed through automation (e.g., autonomous driving)
-    - Reduction in wait time (e.g., autonomous sports cameras)
+    - Reduction in wait time (e.g., space exploration)
+* Liability concerns may require human involvement
 
 ----
 ## Automation in Controlled Environments
@@ -301,6 +329,20 @@ LI --> OO(Organizational objectives)
 
 **AI may only very indirectly influence such organizational objectives, influence hard to quantify, lagging measures**
 
+
+----
+## Breaking Down Processes
+
+Break overall goals along processes
+
+* Break workflow into tasks
+* Identify decisions in tasks
+* Evaluate benefit of AI for prediction or automation
+* Evaluate the influence of improving some tasks on process
+
+Maintain mapping from task-specific goals to system goals
+
+
 ----
 ## Leading Indicators
 
@@ -339,8 +381,6 @@ LI --> OO(Organizational objectives)
 * Training cost
 
 **not directly linked to business goals**
-
-
 
 ----
 ## Layering of Success Measures
@@ -382,6 +422,28 @@ MP(Model properties) --> UO(User outcomes)
 UO --> LI(Leading indicators)
 LI --> OO(Organizational objectives)
 ```
+
+----
+## Exercise: Automating Admission Decisions to Master's Program
+<!-- smallish -->
+Discuss in groups, breakout rooms
+
+What are the *goals* behind automating admissions decisions?
+
+**Organizational objectives, leading indicators, user outcomes, model properties?**
+
+Report back in 10 min
+
+<!-- discussion -->
+
+
+
+
+
+
+
+
+
 
 
 
