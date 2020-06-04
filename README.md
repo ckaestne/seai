@@ -1,4 +1,4 @@
-**This is the site for the Summer 2020 offering of this course. For the initial Fall 2019 offering with all slides and assignments see [F2019 website](https://ckaestne.github.io/seai/F2019) and [F2019 GitHub branch](https://github.com/ckaestne/seai/tree/F2019). For the planned Fall 2020 offering see [F2020 website](https://ckaestne.github.io/seai/F2020) and [F2020 GitHub branch](https://github.com/ckaestne/seai/tree/F2020).** 
+**This is the site for the Summer 2020 offering of this course. For the initial Fall 2019 offering with all slides and assignments see [F2019 website](https://ckaestne.github.io/seai/F2019) and [F2019 GitHub branch](https://github.com/ckaestne/seai/tree/F2019). For the planned Fall 2020 offering see [F2020 website](https://ckaestne.github.io/seai/F2020) and [F2020 GitHub branch](https://github.com/ckaestne/seai/tree/F2020).**
 
 In 2020, the class will be offered both in the Summer term and in the Fall semester. The Summer offering will be more targeted towards students with software engineering experience (e.g., software engineering course, industrial experience, or internship experience), but will expect no data science background. The Fall offering will be targeted more at students with some data science experience (e.g., a machine learning course on campus or online), but will expect no software engineering background.
 
@@ -24,7 +24,7 @@ This course is aimed at **software engineers** who want to understand the specif
 
 * How can correctness or usefulness of a system with an AI component be specified or evaluated? How to collect *requirements* for AI-enabled systems?
 * How to analyze and mitigate wrong results and how to design robust systems? Is *modular design* still possible with AI components?
-* How and where to deploy models, how and when to update models, and what telemetry to collect? How to design learning and evaluation infrastructure that scales? 
+* How and where to deploy models, how and when to update models, and what telemetry to collect? How to design learning and evaluation infrastructure that scales?
 * How to compose multiple AI components within a system and detect feedback loops? What does *software architecture* for AI-enabled systems look like?
 * How to detect poor data quality, poor model quality, and data drift? What would *unit testing* for data look like?
 * How to assure quality of an AI-enabled system? How would *test automation* look like to test correctness of infrastructure or models?
@@ -65,7 +65,7 @@ Recitation: Wednesday 12:30-1:50pm, online via zoom
 
 Instructor: [Christian Kaestner](https://www.cs.cmu.edu/~ckaestne/)
 
-TA: Shreyans Sheth
+TA: [Shreyans Sheth](https://github.com/bholagabbar)
 
 Office Hours: after each lecture
 
@@ -101,7 +101,7 @@ You will need a stable internet connection, a working audio setup, and a webcam.
 * We ask students to keep their camera on during class, because it provides a less anonymous  and isolated experience and provides some feedback for the presenter.
 * We ask students to be able to participate in in-class discussions and in-class exercises through audio and through chat messages – see also participation grading below.
 * We will have an open-book midterm during a lecture timeslot and project/homework presentations over Zoom.
-* We promise to never use any proctoring or attention-checking tools. Live participation and turned on cameras are there to create a better and more inclusive learning experience, not to spy on you or force you to pay attention. 
+* We promise to never use any proctoring or attention-checking tools. Live participation and turned on cameras are there to create a better and more inclusive learning experience, not to spy on you or force you to pay attention.
 
 If you need accommodations, we try to be as flexible as we can in this difficult situations, please talk to us.
 
@@ -109,7 +109,7 @@ If you need accommodations, we try to be as flexible as we can in this difficult
 
 **Teamwork:** Teamwork is an essential part of this course. Several assignments and a final project are done in teams of 3-5 students. Teams will be assigned by the instructor and stay together for multiple assignments and a final project. A team policy posted on Canvas applies and describes roles and teams and how to deal with conflicts and imbalances. Peer rating will be performed for team assignments with regard to team citizenship (i.e., being active and cooperative members), following the procedure from [this article](https://www.cs.tufts.edu/~nr/cs257/archive/teaching/barbara-oakley/JSCL-collaboration.pdf).
 
-**Communication:** We make announcements through Canvas and use Canvas also for discussions, including clarifying homework assignments and other interactions. The instructors and TAs hold virtual office hours and are reachable by email; see above for information on how to contact us. Email them for additional appointments. 
+**Communication:** We make announcements through Canvas and use Canvas also for discussions, including clarifying homework assignments and other interactions. The instructors and TAs hold virtual office hours and are reachable by email; see above for information on how to contact us. Email them for additional appointments.
 
 **Textbook:** We will be using Goeff Hulten's *"Building Intelligent Systems: A Guide to Machine Learning Engineering"* (ISBN: 1484234316) throughout much of the course. The library provides an [electronic copy](https://link-springer-com.proxy.library.cmu.edu/book/10.1007%2F978-1-4842-3432-7). In addition, we will provide additional supplementary readings, including blog posts and academic papers, throughout the semester.
 
