@@ -109,6 +109,7 @@ functionality (usability, reliability, availability, security...)
 * **Project attributes:** Time-to-market, development & HR cost...
 * **Design attributes:** Type of AI method used, accuracy, training time, inference time, memory usage...
 
+
 ----
 ## Constraints
 
@@ -135,7 +136,6 @@ Constraints define the space of attributes for valid design solutions
 * Find method that:
   1. satisfies the given constraints and 
   2. is optimal with respect to the set of relevant attributes
-
 
 
 
@@ -193,11 +193,18 @@ Scenario: Component predicting defaulting on loan (credit rating)
 * How much data needed? Data quality important?
 * Incremental training possible?
 * Training time, memory need, model size -- depending on training data volume and feature size
-* Inference time, resources needed, scalability
+* Inference time, energy efficiency, resources needed, scalability
 * Interpretability/explainability
 * Robustness, reproducibility, stability
 * Security, privacy
 * Fairness
+
+----
+## On terminology
+
+* Data scientists seem to speak of *model properties* when referring to accuracy, inference time, fairness, etc
+  * ... but they also use this term for whether a *learning technique* can learn non-linear relationships or whether the learning algorithm is monotonic
+* Software engineering wording would usually be *quality attributes*, *non-functional requirements*, ...
 
 
 ----
