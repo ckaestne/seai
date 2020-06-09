@@ -28,6 +28,11 @@ Required reading: 🗎 Vogelsang, Andreas, and Markus Borg. "[Requirements Engin
 ## Today's Case Study: Lane Assist
 
 ![Street](lane.jpg)
+
+<!-- references -->
+
+Image CC BY-SA 4.0 by  [Ian Maddox](https://commons.wikimedia.org/wiki/User:Isnoop)
+
 ---
 ## Today's Case Study: Lane Assist
 
