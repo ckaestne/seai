@@ -8,9 +8,10 @@ footer: "17-445 Software Engineering for AI-Enabled Systems, Christian Kaestner"
 # Trade-offs among AI Techniques
 
 
+Christian Kaestner
 
 <!-- references -->
-Slides adopted from Eunsuk Kang
+With slides adopted from Eunsuk Kang
 
 Required reading: 🗎 Vogelsang, Andreas, and Markus Borg. "[Requirements Engineering for Machine Learning: Perspectives from Data Scientists](https://arxiv.org/pdf/1908.04674.pdf)." In Proc. of the 6th International Workshop on Artificial Intelligence for Requirements Engineering (AIRE), 2019.
 
