@@ -25,9 +25,9 @@ Before you build the dashboard, you want to involve the entire team in a discuss
 
 Discuss what qualities are important for a model underlying the planned dashboard. Consider real-world production concerns if you would use this technique actually for making business decisions, including providing the infrastructure to compute predictions, update models, debugging, pursuing business goals, and so forth.
 
-Consider relevance of at least accuracy, training cost, amount of data needed, amount of features available, effort for data cleaning and feature engineering, inference cost, cost of updating the model with new data, model size, robustness, interpretability, **TODO**. You may not consider all qualities equally relevant in this scenario.
+Consider relevance of at least (1) accuracy, (2) training cost, (3) amount of data needed, (4) scalability with the number of features considered, (5) effort for data cleaning and feature engineering, (6) inference cost, (7) cost of updating the model with new data, (8) model size, (9) robustness, and (10) interpretability. You may consider other qualities. You may decide that not all qualities are equally relevant in this scenario. You may group them as relevant and not relevant or rank them.
 
-For each relevant quality (at least 5), define a measure and operationalize it. Typically you want to chose operationalizations to measure the qualities automatically, but for some qualities, operationalization may involve human judgement or human-subject experiments. Many metrics and operationalizations will likely be obvious and simple, some may not be. In either case, the description should be precise enough that others can independently measure these qualities on other modeling techniques without knowing your exact implementation. 
+For each relevant quality (at least 5), define a measure and operationalize it. Typically you want to chose operationalizations to measure the qualities automatically, but for some qualities, operationalization may involve human judgement or human-subject experiments; measures may be on any kind of scales, including nominal scales. Many metrics and operationalizations will likely be obvious and simple and follow common standards, some may not be. In either case, the description should be precise enough that others can independently measure these qualities on other modeling techniques without knowing your exact implementation. 
 
 ## Task 2: Compare modeling techniques
 
@@ -48,7 +48,7 @@ Your report should cover the following points, each in a clear subsection, where
 * Relevant qualities (max 1 page): List the qualities considered and each indicate whether you consider the quality as relevant for the scenario and why. This should include at least the qualities listed under Task 1 above.
 * Measures and operationalization (max 2 pages): For at least 5 relevant qualities, each provide a concrete metric and describe how to operationalize it. Provide pointers to your implementation where you collect the measure (if applicable).
 * Results: Report your measurement results for all relevant qualities for all three learning techniques (table or text).
-* The memo (2–6 pages): Include the memo to the team. The memo should be self-contained without the other sections of the report and suitable for the target audience. The memo may repeat information from the other sections of the report. 
+* The memo (2–4 pages): Include the memo to the team. The memo should be self-contained without the other sections of the report and suitable for the target audience. The memo may repeat information from the other sections of the report. 
 
 
 ## Grading
@@ -60,7 +60,9 @@ We will use approximately the following rubric for a total of 100 points:
  - [ ] 10 points: Convincing justification for which qualities are considered relevant; the justification must be specific for the given scenario. All qualities listed under Task 1 are discussed.
  - [ ] 20 points: Description of metrics and operationalization for at least 5 relevant qualities; metrics are clearly defined and the descriptions are sufficient to independently measure these qualities. Pointers to implementation provided.
  - [ ] 10 points: Measurement results reported for at least 5 relevant qualities for each of the three learning techniques.
- - [ ] 40 points: A well written memo arguing convincingly for which technique to adopt that is suitable for the target audience (20 points for the technical content and arguments and 20 points for clarity and suitability for target audience). The memo should clearly recommend a single AI/ML technique for the scenario, make justifications based on measurements or other considerations, should make a judgement call when tradeoffs exist. The memo’s analysis must fit the scenario.
+ - [ ] 40 points: A well written memo arguing convincingly for which technique to adopt that is suitable for the target audience, composed of
+    - [ ] 20 points for the technical argument and tradeoff analysis:  The memo should clearly recommend a single AI/ML technique for the scenario, make justifications based on measurements or other considerations, should make a judgement call when tradeoffs exist. The memo’s analysis must fit the scenario.
+    - [ ] 20 points for clarity and suitability for target audience. 
 
 ## Groupwork option
 
