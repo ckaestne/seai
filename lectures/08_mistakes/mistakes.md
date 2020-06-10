@@ -614,10 +614,11 @@ Failure modes? Failure effects? Detection? Mitigation?
 ## Example: Lane Assist
 
 ![Lane Assist in Tesla](lane.jpg)
+<!-- .element: class="stretch" -->
 
-Requirement: Car should beep when exiting lane / adjust steering to stay in lane
-Environment assumptions: ??
-Specifications: ??
+* Requirement: Car should beep when exiting lane / adjust steering to stay in lane
+* Environment assumptions: ??
+* Specifications: ??
 
 Notes:
 ENV: Engine is working as intended; sensors are providing accurate information about the leading car (current speed, distance...)
@@ -661,6 +662,7 @@ Notes: For more details see https://en.wikipedia.org/wiki/Lufthansa_Flight_2904;
 ## Feedback Loops and Adversaries
 
 ![machine-world](machine-world.png)
+<!-- .element: class="stretch" -->
 
 * Feedback loops: Behavior of the machine affects the world, which affects inputs to the machine
 * Data drift: Behavior of the world changes over time, assumptions no longer valid
