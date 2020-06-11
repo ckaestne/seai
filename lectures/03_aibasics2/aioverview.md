@@ -3,6 +3,7 @@ author: Christian Kaestner
 title: "17-445: Artificial Intelligence for Software Engineers 2"
 semester: Summer 2020
 footer: "17-445 Software Engineering for AI-Enabled Systems, Christian Kaestner"
+license: Creative Commons Attribution 4.0 International (CC BY 4.0)
 ---  
 
 # Artificial Intelligence for Software Engineers
