@@ -3,6 +3,7 @@ author: Christian Kaestner
 title: "17-445: Risk and Planning for Mistakes"
 semester: Summer 2020
 footer: "17-445 Software Engineering for AI-Enabled Systems, Christian Kaestner"
+license: Creative Commons Attribution 4.0 International (CC BY 4.0)
 ---  
 
 # Risk and Planning for Mistakes
@@ -335,6 +336,30 @@ Note: Discussion on existential risk. Toby Ord, Oxford philosopher predicts
 [![Paperclips game](paperclips.png)](https://www.decisionproblem.com/paperclips/index2.html)
 
 ----
+## What's the worst that could happen?
+
+![Lane Assist in Tesla](lane.jpg)
+<!-- .element: class="stretch" -->
+
+
+----
+
+![Cancer detection](mri.jpg)
+<!-- .element: class="stretch" -->
+
+----
+![Uber crash](ubercrash.png)
+
+----
+
+![Tay Chat Bot deying Holocaust](tay.png)
+
+----
+![Amazon Hiring Tool Scraped due to Bias](amazonhiring.png)
+
+
+
+----
 ## What is Risk Analysis?
 
 *  What can possibly go wrong in my system, and what are potential 
@@ -440,6 +465,7 @@ obtained by removing a basic event.
 
 
 
+
 ----
 ## FTA Process
 
@@ -455,11 +481,11 @@ obtained by removing a basic event.
 6. Repeat
 
 ----
-## Exercise: Draw Fault Tree for Lane Assist
+## Exercise: Draw Fault Tree for Smart Toaster
 
 ```mermaid
 graph TD
-    left[TOP: Car leaves lane]
+    left[TOP: Smart toaster burning]
 ```
 
 
@@ -531,7 +557,9 @@ More general Autonomous Vehicle example
 
 
 ----
-## Exercise: FMEA Analysis for Cancer Detection
+## Exercise: FMEA Analysis for Smart Toaster
+
+(video sensor, temperature sensor, heat sensor, user setting, ML model, heuristic shutdown, thermal fuse)
 
 Failure modes? Failure effects? Detection? Mitigation?
 
