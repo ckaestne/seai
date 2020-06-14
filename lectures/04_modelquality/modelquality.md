@@ -821,6 +821,16 @@ Problems of random train--validation split?
 
 Note: The model will be evaluated on past stock prices knowing the future prices of the companies in the training set. Even if we split by companies, we could observe general future trends in the economy during training
 
+
+----
+## Independence of Data: Temporal
+
+![Temporal dependence](temporaldependence.svg)
+<!-- .element: class="stretch" -->
+
+Note: The curve is the real trend, red points are training data, green points are validation data. If validation data is randomly selected, it is much easier to predict, because the trends around it are known.
+
+
 ----
 ## Independence of Data: Related Datapoints
 
