@@ -17,7 +17,7 @@
 | Tue, Jun 16| [Software Architecture of AI-Enabled Systems ](https://ckaestne.github.io/seai/S2020/slides/09_architecture/architecture.html)([md](https://github.com/ckaestne/seai/blob/S2020/lectures/09_architecture/architecture.md), [pdf](https://ckaestne.github.io/seai/S2020/slides/09_architecture/architecture.pdf)) | [Building Intelligent Systems](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436), Ch. 13 and [Exploring Development Patterns in Data Science](https://www.theorylane.com/2017/10/20/some-development-patterns-in-data-science/) | [I3 Tradeoff](https://github.com/ckaestne/seai/blob/S2020/assignments/I3_tradeoffs.md) |
 | Wed, Jun 17| ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) tbd |  |  |
 | Thu, Jun 18| [Quality Assessment in Production](https://ckaestne.github.io/seai/S2020/slides/10_qainproduction/qainproduction.html) ([md](https://github.com/ckaestne/seai/blob/S2020/lectures/10_qainproduction/qainproduction.md), [pdf](https://ckaestne.github.io/seai/S2020/slides/10_qainproduction/qainproduction.pdf)) | [Canarying Releases](https://landing.google.com/sre/workbook/chapters/canarying-releases/) |  |
-| Tue, Jun 23| Data Quality and Data Engineering |  | I4 Requirements, Goals, Arch. |
+| Tue, Jun 23| Data Quality and Data Engineering |  | [I4 Requirements and Architecture](https://github.com/ckaestne/seai/blob/S2020/assignments/I4_requirements_architecture.md) |
 | Wed, Jun 24| ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) tbd |  |  |
 | Thu, Jun 25| Managing and Processing Large Datasets |  |  |
 | Tue, Jun 30| Fostering Interdisciplinary Teams: MLOps, AI Engineering, DevOps |  | QA Project Milestone 1 |
