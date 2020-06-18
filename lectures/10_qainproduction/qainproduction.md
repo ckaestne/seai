@@ -10,11 +10,16 @@ license: Creative Commons Attribution 4.0 International (CC BY 4.0)
 
 Christian Kaestner
 
+
 <!-- references -->
 
 Required Reading: Alec Warner and Štěpán Davidovič. "[Canary Releases](https://landing.google.com/sre/workbook/chapters/canarying-releases/)." in [The Site Reliability Workbook](https://landing.google.com/sre/books/), O'Reilly 2018
 
 Suggested Reading: Georgi Georgiev. “[Statistical Significance in A/B Testing – a Complete Guide](http://blog.analytics-toolkit.com/2017/statistical-significance-ab-testing-complete-guide/#noninf).” Blog 2018
+
+----
+
+<div class="tweet" data-src="https://twitter.com/changelog/status/1137359428632621060"></div>
 
 
 ---
@@ -525,7 +530,7 @@ Source: https://cognetik.com/why-you-should-build-an-ab-test-dashboard/
 
 
 ---
-## A/B testing automation
+# A/B testing automation
 
 * Experiment configuration through DSLs/scripts
 * Queue experiments
@@ -662,6 +667,7 @@ Note: Artifically reduce model quality, add delays, insert bias, etc to test mon
 ## Let's Learn from DevOps
 
 ![DevOps](devops.png)
+
 Distinct roles and expertise, but joint responsibilities, joint tooling
 
 ----
@@ -672,6 +678,17 @@ Distinct roles and expertise, but joint responsibilities, joint tooling
     - make it easy to deploy and test models
 * Provide access to telemetry data and dashboards
 * Encourage modeling infrastructure and versioning beyond notebooks
+
+
+
+----
+## Exercise: Infrastructure Design 
+
+*Scenario: Injury detection in smart home workout (laptop camera)*
+
+Discuss: Deployment and infrastructure decisions for A/B experiments -- how to divide users, how to implement A/B testing, what access to give to data scientists?
+
+![Home Workout](homeworkout.jpg)
 
 
 

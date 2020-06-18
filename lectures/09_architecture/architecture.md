@@ -293,6 +293,20 @@ Notes: Trigger initial discussion
 
 Notes: Identify at least OCR and Translation service as two AI components in a larger system. Discuss which system components are worth modeling (e.g., rendering, database, support forum). Discuss how to get good estimates for latency and bandwidth.
 
+Some data:
+200ms latency is noticable as speech pause; 
+20ms is perceivable as video delay, 10ms as haptic delay;
+5ms referenced as cybersickness threshold for virtual reality
+20ms latency might be acceptable
+
+bluetooth latency around 40ms to 200ms
+
+bluetooth bandwidth up to 3mbit, wifi 54mbit, video stream depending on quality 4 to 10mbit for low to medium quality
+
+google glasses had 5 megapixel camera, 640x360 pixel screen, 1 or 2gb ram, 16gb storage
+
+
+
 
 ----
 ## When would one use the following designs?
@@ -378,6 +392,9 @@ Estimate data volume and possible bottlenecks in system.
 ![](googletranslate.png)
 
 Notes: Discuss alternatives and their tradeoffs. Draw models as suitable.
+
+Some data for context:
+Full-screen png screenshot on Pixel 2 phone (1080x1920) is about 2mb (2 megapixel); Google glasses had a 5 megapixel camera and a 640x360 pixel screen, 16gb of storage, 2gb of RAM. Cellar cost are about $10/GB.
 
 
 ----
