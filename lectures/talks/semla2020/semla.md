@@ -14,7 +14,7 @@ Christian Kästner
 
 https://ckaestne.github.io/seai/
 
-SEAML'20
+<a href="https://semla.polymtl.ca/">SEMLA'20</a>
 
 ---
 
