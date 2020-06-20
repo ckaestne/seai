@@ -669,3 +669,16 @@ How to evaluate mistakes in production?
 ![](ubersurge.png)
 
 
+<!-- 
+
+TODO: Other discussions
+
+When and *where* to learn:
+
+Learn in cloud and release model regularly, or learn on device?
+e.g. Tesla only learns in cloud and releases models after some QA
+Apple learns face recognition in photos on devices from user labels, for privacy
+Tinder may learn on device or in cloud -- discuss whether it matters
+
+
+ -->

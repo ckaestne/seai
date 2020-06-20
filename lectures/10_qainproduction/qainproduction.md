@@ -702,3 +702,12 @@ Discuss: Deployment and infrastructure decisions for A/B experiments -- how to d
 * Many forms of experimentation and release (A/B testing, shadow releases, canary releases, chaos experiments, ...) to minimize "blast radius"
 * Gain confidence in results with statistical tests
 * DevOps-like infrastructure to support data scientists
+
+
+<!-- 
+
+TODO:
+
+general tradeoffs between testing with offline dataset (old or recent), testing with simulation, shadow execution, or testing in production.
+
+ -->
