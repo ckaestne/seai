@@ -18,7 +18,7 @@
 | Wed, Jun 17| ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) [Requirements decomposition](https://github.com/ckaestne/seai/blob/S2020/recitations/05_requirements.pdf) |  |  |
 | Thu, Jun 18| [Quality Assessment in Production](https://ckaestne.github.io/seai/S2020/slides/10_qainproduction/qainproduction.html) ([md](https://github.com/ckaestne/seai/blob/S2020/lectures/10_qainproduction/qainproduction.md), [pdf](https://ckaestne.github.io/seai/S2020/slides/10_qainproduction/qainproduction.pdf)) | [Canarying Releases](https://landing.google.com/sre/workbook/chapters/canarying-releases/) |  |
 | Tue, Jun 23| Data Quality and Data Engineering |  | [I4 Requirements and Architecture](https://github.com/ckaestne/seai/blob/S2020/assignments/I4_requirements_architecture.md) |
-| Wed, Jun 24| ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) tbd |  |  |
+| Wed, Jun 24| ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) Collaborative filtering |  |  |
 | Thu, Jun 25| Managing and Processing Large Datasets |  |  |
 | Tue, Jun 30| Fostering Interdisciplinary Teams: MLOps, AI Engineering, DevOps |  | QA Project Milestone 1 |
 | Wed, Jul 01| ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) Review session |  |  |
