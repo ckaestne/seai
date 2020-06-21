@@ -212,6 +212,7 @@ Overview:
 * Architectural patterns and design patterns for ML
 * AI as a service
 * Cost of data and feature extraction (deciding what data/features and how much)
+* TODO: Architectural decision: when and *where* to learn (e.g., privacy, testing)
 
 Learning goals:
 
@@ -259,7 +260,8 @@ Assignment:
 
 Readings:
 
-* Todo (on A/B testing and corresponding statistics)
+* Alec Warner and Štěpán Davidovič. “[Canary Releases](https://landing.google.com/sre/workbook/chapters/canarying-releases/).” in [The Site Reliability Workbook](https://landing.google.com/sre/books/), O'Reilly 2018
+* Georgi Georgiev. “[Statistical Significance in A/B Testing – a Complete Guide](http://blog.analytics-toolkit.com/2017/statistical-significance-ab-testing-complete-guide/#noninf).” Blog 2018
 
 
 
@@ -452,6 +454,7 @@ Readings:
 
 * 🗎 Rudin, Cynthia. "Stop explaining black box machine learning models for high stakes decisions and use interpretable models instead." Nature Machine Intelligence 1, no. 5 (2019): 206-215.
 * 🗎 Ribeiro, Marco Tulio, Sameer Singh, and Carlos Guestrin. "[Anchors: High-precision model-agnostic explanations](https://sameersingh.org/files/papers/anchors-aaai18.pdf)." In Thirty-Second AAAI Conference on Artificial Intelligence. 2018.
+* 🎧 Data Skeptic Podcast Episode “[Black Boxes are not Required](https://dataskeptic.com/blog/episodes/2020/black-boxes-are-not-required)” with Cynthia Rudin (32min): 
 
 
 
