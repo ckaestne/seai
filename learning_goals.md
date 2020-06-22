@@ -275,6 +275,7 @@ Overview:
 * Quality assurance for the data processing pipelines
 * Measures of noise, accuracy, and precision, and consequences for AI components (robustness)
 * Integrating data from many sources, with different qualities
+* Automated data cleaning with HoloClean
 * Weakly-supervised learning with Snorkel
 
 Learning goals:
@@ -292,6 +293,7 @@ Readings:
 * 🗎 Schelter, S., Lange, D., Schmidt, P., Celikel, M., Biessmann, F. and Grafberger, A., 2018. Automating large-scale data quality verification. Proceedings of the VLDB Endowment, 11(12), pp.1781-1794.
 * 🗎 The Data Linter: Lightweight Automated Sanity Checking for ML Data Sets. Nick Hynes, D. Sculley, Michael Terry  NIPS Workshop on ML Systems (2017)
 * 🗎 Rahimi, Mona, Jin LC Guo, Sahar Kokaly, and Marsha Chechik. "[Toward Requirements Specification for Machine-Learned Components](https://ieeexplore.ieee.org/document/8933771)." In 2019 IEEE 27th International Requirements Engineering Conference Workshops (REW), pp. 241-244. IEEE, 2019.
+* Snorkel and HoloClean papers
 
 Assignments: Snorkel assignment?
 
