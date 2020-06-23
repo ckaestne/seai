@@ -265,7 +265,7 @@ Readings:
 
 
 
-## Lecture: Data Quality and Data Engineering ![Quality Assurance](https://img.shields.io/badge/-Quality%20Assurance-Orange.svg)
+## Lecture: Data Quality and Data Programming ![Quality Assurance](https://img.shields.io/badge/-Quality%20Assurance-Orange.svg)
 
 Overview:
 
