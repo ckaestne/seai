@@ -246,7 +246,7 @@ Further readings: Rahm, Erhard, and Hong Hai Do. [Data cleaning: Problems and cu
 
 ![Dirty data](dirty-data-example.jpg)
 
-Q. Can you spot the problems with the data?
+*Problems with the data?*
 
 
 ----
@@ -648,7 +648,7 @@ if (detailedLogging) log.println("Log started");
     * Empty/missing data
 
 <!-- references -->
-Further readings: Hynes, Nick, D. Sculley, and Michael Terry. (The data linter: Lightweight, automated sanity checking for ML data sets](http://learningsys.org/nips17/assets/papers/paper_19.pdf). NIPS MLSys Workshop. 2017.
+Further readings: Hynes, Nick, D. Sculley, and Michael Terry. [The data linter: Lightweight, automated sanity checking for ML data sets](http://learningsys.org/nips17/assets/papers/paper_19.pdf). NIPS MLSys Workshop. 2017.
 
 
 
@@ -674,7 +674,7 @@ Further readings: Hynes, Nick, D. Sculley, and Michael Terry. (The data linter: 
   * over time: different expected outputs for same inputs
   * model has not learned the relevant concepts
 * Data drift 
-  * characteristics of input data changes (e.g., seasons)
+  * characteristics of input data changes (e.g., customers with face masks)
   * input data differs from training data 
   * over time: predictions less confident, further from training data
 * Upstream data changes 
@@ -695,6 +695,7 @@ Notes:
 * Concept and data drift are separate concepts
 * In practice and literature not always clearly distinguished
 * Colloquially encompasses all forms of model degradations and environment changes
+* Define term for target audience
 
 
 
