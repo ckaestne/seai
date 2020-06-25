@@ -28,11 +28,28 @@ Required reading: Martin Kleppmann. [Designing Data-Intensive Applications](http
 ![Google Photos Screenshot](gphotos.png)
 
 Notes:
-Discuss possible architecture and when to predict (and update)
+* Discuss possible architecture and when to predict (and update)
+* in may 2017: 500M users, uploading 1.2billion photos per day (14k/sec)
+* in Jun 2019 1 billion users
 
 
 ---
+
 # Data Management and Processing in ML-Enabled Systems
+
+----
+# Kinds of Data
+
+* Training data
+* Input data
+* Telemetry data
+* (Models)
+
+*all potentially with huge total volumes and high throughput*
+
+*need strategies for storage and processing*
+
+
 
 ----
 ## Data Management and Processing in ML-Enabled Systems
@@ -47,7 +64,7 @@ Discuss possible architecture and when to predict (and update)
 
 
 ---
-## Data Storage Basics
+# Data Storage Basics
 
 * Relational vs document storage
 * 1:n and n:m relations
@@ -94,6 +111,21 @@ select d.name from user u, dpt d where u.dpt=d.dpt_id
 ```js
 db.getCollection('users').find({"name": "Christian"})
 ```
+
+----
+## Log files, unstructured data
+
+```
+2020-06-25T13:44:14,601844,GET /data/m/goyas+ghosts+2006/17.mpg
+2020-06-25T13:44:14,935791,GET /data/m/the+big+circus+1959/68.mpg
+2020-06-25T13:44:14,557605,GET /data/m/elvis+meets+nixon+1997/17.mpg
+2020-06-25T13:44:14,140291,GET /data/m/the+house+of+the+spirits+1993/53.mpg
+2020-06-25T13:44:14,425781,GET /data/m/the+theory+of+everything+2014/29.mpg
+2020-06-25T13:44:14,773178,GET /data/m/toy+story+2+1999/59.mpg
+2020-06-25T13:44:14,901758,GET /data/m/ignition+2002/14.mpg
+2020-06-25T13:44:14,911008,GET /data/m/toy+story+3+2010/46.mpg
+```
+
 
 ----
 ## Tradeoffs
