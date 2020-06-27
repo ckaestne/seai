@@ -17,25 +17,25 @@
 | Tue, Jun 16| [Software Architecture of AI-Enabled Systems](https://ckaestne.github.io/seai/S2020/slides/09_architecture/architecture.html) ([md](https://github.com/ckaestne/seai/blob/S2020/lectures/09_architecture/architecture.md), [pdf](https://ckaestne.github.io/seai/S2020/slides/09_architecture/architecture.pdf), [video](https://www.youtube.com/watch?v=KIC-sFz5OT8)) | [Building Intelligent Systems](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436), Ch. 13 and [Exploring Development Patterns in Data Science](https://www.theorylane.com/2017/10/20/some-development-patterns-in-data-science/) | [I3 Tradeoff](https://github.com/ckaestne/seai/blob/S2020/assignments/I3_tradeoffs.md) |
 | Wed, Jun 17| ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) [Requirements decomposition](https://github.com/ckaestne/seai/blob/S2020/recitations/05_requirements.pdf) |  |  |
 | Thu, Jun 18| [Quality Assessment in Production](https://ckaestne.github.io/seai/S2020/slides/10_qainproduction/qainproduction.html) ([md](https://github.com/ckaestne/seai/blob/S2020/lectures/10_qainproduction/qainproduction.md), [pdf](https://ckaestne.github.io/seai/S2020/slides/10_qainproduction/qainproduction.pdf), [video](https://youtu.be/RaaNSXKFDGk)) | [Canarying Releases](https://landing.google.com/sre/workbook/chapters/canarying-releases/) |  |
-| Tue, Jun 23| [Data Quality and Data Programming](https://ckaestne.github.io/seai/S2020/slides/11_dataquality/dataquality.html) ([md](https://github.com/ckaestne/seai/blob/S2020/lectures/11_dataquality/dataquality.md), [pdf](https://ckaestne.github.io/seai/S2020/slides/11_dataquality/dataquality.pdf)) | [Automating large-scale data quality verification](http://www.vldb.org/pvldb/vol11/p1781-schelter.pdf) and [The Data Linter](http://learningsys.org/nips17/assets/papers/paper_19.pdf) | [I4 Requirements and Architecture](https://github.com/ckaestne/seai/blob/S2020/assignments/I4_requirements_architecture.md) |
+| Tue, Jun 23| [Data Quality and Data Programming](https://ckaestne.github.io/seai/S2020/slides/11_dataquality/dataquality.html) ([md](https://github.com/ckaestne/seai/blob/S2020/lectures/11_dataquality/dataquality.md), [pdf](https://ckaestne.github.io/seai/S2020/slides/11_dataquality/dataquality.pdf), [video](https://www.youtube.com/watch?v=60lBFv9tyWk), [video2](https://www.youtube.com/watch?v=6e6aI4yjAxc)) | [Automating large-scale data quality verification](http://www.vldb.org/pvldb/vol11/p1781-schelter.pdf) and [The Data Linter](http://learningsys.org/nips17/assets/papers/paper_19.pdf) | [I4 Requirements and Architecture](https://github.com/ckaestne/seai/blob/S2020/assignments/I4_requirements_architecture.md) |
 | Wed, Jun 24| ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) [Collaborative filtering](https://github.com/ckaestne/seai/blob/S2020/recitations/06_Collaborative_Filtering.ipynb) |  |  |
-| Thu, Jun 25| [Managing and Processing Large Datasets](https://ckaestne.github.io/seai/S2020/slides/12_dataatscale/dataatscale.html) ([md](https://github.com/ckaestne/seai/blob/S2020/lectures/12_dataatscale/dataatscale.md), [pdf](https://ckaestne.github.io/seai/S2020/slides/12_dataatscale/dataatscale.pdf)) | [Designing Data-Intensive Applications](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019578119704436), Ch. 1 |  |
-| Tue, Jun 30| Fostering Interdisciplinary Teams: MLOps, AI Engineering, DevOps |  | [QA Project Milestone 1](https://github.com/ckaestne/seai/blob/S2020/assignments/project.md) |
+| Thu, Jun 25| Invited talk “Business Systems with Machine Learning” by Invited Talk Molham Aref ([video](https://www.youtube.com/watch?v=_bvrzYOA8dY)) | [Designing Data-Intensive Applications](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019578119704436), Ch. 1 |  |
+| Tue, Jun 30| [Managing and Processing Large Datasets](https://ckaestne.github.io/seai/S2020/slides/12_dataatscale/dataatscale.html) ([md](https://github.com/ckaestne/seai/blob/S2020/lectures/12_dataatscale/dataatscale.md), [pdf](https://ckaestne.github.io/seai/S2020/slides/12_dataatscale/dataatscale.pdf)) & Deployment and Infrastructure Quality |  | [QA Project Milestone 1](https://github.com/ckaestne/seai/blob/S2020/assignments/project.md) |
 | Wed, Jul 01| ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) Review session |  |  |
 | Thu, Jul 02| **Midterm** |  |  |
-| Tue, Jul 07| Deployment and Infrastructure Quality |  | I5 Open Source Tools |
+| Tue, Jul 07| Fostering Interdisciplinary Teams: MLOps, AI Engineering, DevOps |  |  |
 | Wed, Jul 08| ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) Monitoring |  |  |
 | Thu, Jul 09| Ethics + Fairness 1 |  |  |
-| Tue, Jul 14| Ethics + Fairness 2 |  | [QA Project Milestone 2](https://github.com/ckaestne/seai/blob/S2020/assignments/project.md) |
+| Tue, Jul 14| Ethics + Fairness 2 |  | I5 Open Source Tools |
 | Wed, Jul 15| ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) tbd |  |  |
 | Thu, Jul 16| Explainability & Interpretability |  |  |
-| Tue, Jul 21| Debugging, Data Provenance, and Reproducability 1 |  | I6 Fairness |
+| Tue, Jul 21| Debugging, Data Provenance, and Reproducability 1 |  | [QA Project Milestone 2](https://github.com/ckaestne/seai/blob/S2020/assignments/project.md) |
 | Wed, Jul 22| ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) tbd |  |  |
 | Thu, Jul 23| Debugging, Data Provenance, and Reproducability 2 |  |  |
-| Tue, Jul 28| Security, Adversarial Learning, and Feedback Loops |  | [QA Project Milestone 3](https://github.com/ckaestne/seai/blob/S2020/assignments/project.md) |
+| Tue, Jul 28| Security, Adversarial Learning, and Feedback Loops |  | I6 Fairness |
 | Wed, Jul 29| ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) tbd |  |  |
 | Thu, Jul 30| Safety and Robustness |  |  |
-| Tue, Aug 04| Deployment and Operations at Scale |  |  |
+| Tue, Aug 04| Deployment and Operations at Scale |  | [QA Project Milestone 3](https://github.com/ckaestne/seai/blob/S2020/assignments/project.md) |
 | Wed, Aug 05| ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) tbd |  |  |
 | Thu, Aug 06| Summary and Review |  |  |
 | Fri, Aug 07| **Final Project Presentation** |  | [QA Project Due](https://github.com/ckaestne/seai/blob/S2020/assignments/project.md) |
