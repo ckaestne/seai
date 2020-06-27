@@ -61,6 +61,15 @@ Notes:
 * 
 * Often both learning and inference data heavy, high volume tasks
 
+----
+## Distributed X
+
+* Distributed data cleaning
+* Distributed feature extraction
+* Distributed learning
+* Distributed large prediction tasks
+* Incremental predictions
+* Distributed logging and telemetry
 
 
 ---
