@@ -33,6 +33,12 @@ Notes:
 * in Jun 2019 1 billion users
 
 
+----
+
+## "Zoom adding capacity"
+
+<iframe src="https://giphy.com/embed/3oz8xtBx06mcZWoNJm" width="480" height="362" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+
 ---
 
 # Data Management and Processing in ML-Enabled Systems
@@ -526,6 +532,12 @@ How do you get the right data to the right place in the right format?
 ----
 ![](deletedissues.svg)
 
+----
+
+[![Lots of data storage systems](etleverywhere.png)](https://youtu.be/_bvrzYOA8dY?t=1452)
+
+<!-- reference -->
+Molham Aref "[Business Systems with Machine Learning](https://www.youtube.com/watch?v=_bvrzYOA8dY)"
 
 
 ---
@@ -823,10 +835,14 @@ Source: https://blog.appdynamics.com/tag/fiserv/
 
 # Summary
 
-* Data storage strategies and their tradeoffs
-* Partitioning and replication for scalability
-* Design considerations: mutable vs immutable data
+* Large amounts of data (training, inference, telemetry, models)
+* Distributed storage and computation for scalability
 * Common design patterns (e.g., batch processing, stream processing, lambda architecture)
+* Design considerations: mutable vs immutable data
+* Distributed computing also in machine learning
+* Lots of tooling for data extraction, transformation, processing
+* Many challenges through distribution: failures, debugging, performance, ...
+
 
 Recommended reading: Martin Kleppmann. [Designing Data-Intensive Applications](https://dataintensive.net/). OReilly. 2017.
 
