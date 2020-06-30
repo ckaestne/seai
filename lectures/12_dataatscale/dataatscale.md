@@ -71,6 +71,39 @@ Notes:
 * Incremental predictions
 * Distributed logging and telemetry
 
+----
+## Scaling Computations
+
+<!-- colstart -->
+Efficent Algorithms
+<!-- col -->
+Faster Machines
+<!-- col -->
+More Machines
+<!-- colend -->
+
+
+----
+## Reliability and Scalability Challenges in AI-Enabled Systems?
+
+<!-- discussion -->
+
+
+
+----
+## Distributed Systems and AI-Enabled Systems
+
+* Learning tasks can take substantial resources
+* Datasets too large to fit on single machine
+* Nontrivial inference time, many many users
+* Large amounts of telemetry
+* Experimentation at scale
+* Models in safety critical parts
+* Mobile computing, edge computing, cyber-physical systems
+
+
+
+
 
 ---
 # Data Storage Basics
@@ -144,9 +177,10 @@ db.getCollection('users').find({"name": "Christian"})
 ----
 ## Data Encoding
 
+* Plain text (csv, logs)
 * Semi-structured, schema-free (JSON, XML)
-* Schema-based encoding (CSV, binary)
-* Compact encodings
+* Schema-based encoding (relational, Avro, ...)
+* Compact encodings (protobuffer, ...)
 
 ---
 # Distributed Data Storage
@@ -323,6 +357,20 @@ Notes: Useful for big learning jobs, but also for feature extraction
 * Often in-memory data
 * Pluming and distribution logic separated
 
+----
+## Key Design Principle: Data Locality
+
+> Moving Computation is Cheaper than Moving Data -- [Hadoop Documentation](https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/HdfsDesign.html#aMoving_Computation_is_Cheaper_than_Moving_Data)
+
+* Data often large and distributed, code small
+* Avoid transfering large amounts of data
+* Perform computation where data is stored (distributed)
+* Transfer only results as needed
+* 
+* "The map reduce way"
+
+
+
 ---
 # Stream Processing
 
@@ -477,6 +525,299 @@ How do you get the right data to the right place in the right format?
 
 ----
 ![](deletedissues.svg)
+
+
+
+---
+# Excursion: ETL Tools
+
+Extract, tranform, load
+
+----
+## Data Warehousing (OLAP)
+
+* Large denormalized databases with materialized views for large scale reporting queries
+* e.g. sales database, queries for sales trends by region
+* 
+* Read-only except for batch updates: Data from OLTP systems loaded periodically, e.g. over night
+
+
+![Data warehouse](datawarehouse.jpg)
+
+Note: Image source: https://commons.wikimedia.org/wiki/File:Data_Warehouse_Feeding_Data_Mart.jpg
+
+----
+## ETL: Extract, Transform, Load
+
+* Transfer data between data sources, often OLTP -> OLAP system
+* Many tools and pipelines
+    - Extract data from multiple sources (logs, JSON, databases), snapshotting
+    - Transform: cleaning, (de)normalization, transcoding, sorting, joining
+    - Loading in batches into database, staging
+* Automation, parallelization, reporting, data quality checking, monitoring, profiling, recovery
+* Often large batch processes
+* Many commercial tools
+
+<!-- references -->
+Examples of tools in [several](https://www.softwaretestinghelp.com/best-etl-tools/) [lists](https://www.scrapehero.com/best-data-management-etl-tools/)
+
+----
+[![XPlenty Web Page Screenshot](xplenty.png)](https://www.xplenty.com/)
+
+
+----
+
+[![ETL everywhere](etleverywhere.png)](https://youtu.be/_bvrzYOA8dY?t=1452)
+
+<!-- reference -->
+Molham Aref "[Business Systems with Machine Learning](https://www.youtube.com/watch?v=_bvrzYOA8dY)"
+
+
+
+---
+# Excursion: Parameter Server Architecture
+
+<!-- references -->
+Li, Mu, et al. "[Scaling distributed machine learning with the parameter server](https://www.usenix.org/system/files/conference/osdi14/osdi14-paper-li_mu.pdf)." OSDI, 2014.
+
+
+----
+## Recall: Backpropagation
+
+![Multi Layer Perceptron](mlperceptron.svg)
+<!-- .element: class="stretch" -->
+
+----
+## Training at Scale is Challenging
+
+* 2012 at Google: 1TB-1PB of training data, $10^9-10^{12}$ parameters
+* Need distributed training; learning is often a sequential problem
+* Just exchanging model parameters requires substantial network bandwidth
+* Fault tolerance essential (like batch processing), add/remove nodes
+* Tradeoff between convergence rate and system efficiency
+
+<!-- references -->
+Li, Mu, et al. "[Scaling distributed machine learning with the parameter server](https://www.usenix.org/system/files/conference/osdi14/osdi14-paper-li_mu.pdf)." OSDI, 2014.
+
+----
+## Distributed Gradient Descent
+
+[![Parameter Server](parameterserver.png)](https://www.usenix.org/system/files/conference/osdi14/osdi14-paper-li_mu.pdf)
+<!-- .element: class="stretch" -->
+
+
+----
+## Parameter Server Architecture
+
+[![Parameter Server](parameterserver2.png)](https://www.usenix.org/system/files/conference/osdi14/osdi14-paper-li_mu.pdf)
+<!-- .element: class="stretch" -->
+
+Note:
+Multiple parameter servers that each only contain a subset of the parameters, and multiple workers that each require only a subset of each
+
+Ship only relevant subsets of mathematical vectors and matrices, batch communication
+
+Resolve conflicts when multiple updates need to be integrated (sequential, eventually, bounded delay)
+
+Run more than one learning algorithm simulaneously
+
+
+----
+## SysML Conference
+
+
+Increasing interest in the systems aspects of machine learning
+
+e.g., building large scale and robust learning infrastructure
+
+https://mlsys.org/
+
+
+
+---
+# Complexity of Distributed Systems
+
+----
+![Stop Fail](bluescreen.png)
+
+----
+## Common Distributed System Issues
+
+* Systems may crash
+* Messages take time
+* Messages may get lost
+* Messages may arrive out of order
+* Messages may arrive multiple times
+* Messages may get manipulated along the way
+* Bandwidth limits
+* Coordination overhead
+* Network partition
+* ...
+
+----
+## Types of failure behaviors
+
+* Fail-stop
+* Other halting failures
+* Communication failures
+    * Send/receive omissions
+    * Network partitions
+    * Message corruption
+* Data corruption
+* Performance failures
+    * High packet loss rate
+    * Low throughput
+    * High latency
+* Byzantine failures
+
+----
+## Common Assumptions about Failures
+
+* Behavior of others is fail-stop 
+* Network is reliable 
+* Network is semi-reliable but asynchronous
+* Network is lossy but messages are not corrupt
+* Network failures are transitive
+* Failures are independent
+* Local data is not corrupt
+* Failures are reliably detectable
+* Failures are unreliably detectable
+
+----
+## Strategies to Handle Failures
+
+* Timeouts, retry, backup services
+* Detect crashed machines (ping/echo, heartbeat)
+* Redundant + first/voting
+* Transactions
+*
+* Do lost messages matter?
+* Effect of resending message?
+
+----
+## Test Error Handling
+
+* Recall: Testing with stubs
+* Recall: Chaos experiments
+
+
+
+
+
+
+
+
+---
+# Performance Planning and Analysis
+
+
+----
+## Performance Planning and Analysis
+
+* Ideally architectural planning upfront
+  * Identify key components and their interactions
+  * Estimate performance parameters
+  * Simulate system behavior (e.g., queuing theory)
+
+* Existing system: Analyze performance bottlenecks
+  * Profiling of individual components
+  * Performance testing (stress testing, load testing, etc)
+  * Performance monitoring of distributed systems
+
+----
+## Performance Analysis
+
+* What is the average waiting?
+* How many customers are waiting on average? 
+* How long is the average service time?
+* What are the chances of one or more servers being idle? 
+* What is the average utilization of the servers?
+*
+* Early analysis of different designs for bottlenecks
+* Capacity planning
+
+----
+## Queuing Theory
+
+* Queuing theory deals with the analysis of lines where customers wait to receive a service
+    * Waiting at Quiznos
+    * Waiting to check-in at an airport
+    * Kept on hold at a call center
+    * Streaming video over the net
+    * Requesting a web service
+* A queue is formed when request for services outpace the ability of the server(s) to service them immediately
+    * Requests arrive faster than they can be processed (unstable queue)
+    * Requests do not arrive faster than they can be processed but their processing is delayed by some time (stable queue)
+* Queues exist because infinite capacity is infinitely expensive and excessive capacity is excessively expensive
+
+----
+## Queuing Theory
+
+![Simple Queues](queuingth.png)
+
+----
+## Analysis Steps (roughly)
+
+* Identify system abstraction to analyze (typically architectural level, e.g. services, but also protocols, datastructures and components, parallel processes, networks)
+* Model connections and dependencies
+* Estimate latency and capacity per component (measurement and testing, prior systems, estimates, …)
+* Run simulation/analysis to gather performance curves
+* Evaluate sensitivity of simulation/analysis to various parameters (‘what-if questions’)
+
+
+----
+## Simulation (e.g., JMT)
+
+![JMT screenshot](jmt1.png)
+
+<!-- references -->
+
+G.Serazzi Ed. Performance Evaluation Modelling with JMT: learning by examples. Politecnico di Milano - DEI, TR 2008.09, 366 pp., June 2008 
+
+
+----
+## Profiling 
+
+Mostly used during development phase in single components
+
+![VisualVM profiler](profiler.jpg)
+
+----
+## Performance Testing
+
+* Load testing: Assure handling of maximum expected load
+* Scalability testing: Test with increasing load
+* Soak/spike testing: Overload application for some time, observe stability
+* Stress testing: Overwhelm system resources, test graceful failure + recovery
+*
+* Observe (1) latency, (2) throughput, (3) resource use
+* All automateable; tools like JMeter
+
+----
+## Performance Monitoring of Distributed Systems
+
+[![](distprofiler.png)](distprofiler.png)
+
+<!-- references -->
+Source: https://blog.appdynamics.com/tag/fiserv/
+
+
+----
+## Performance Monitoring of Distributed Systems
+
+* Instrumentation of (Service) APIs
+* Load of various servers
+* Typically measures: latency, traffic, errors, saturation
+* 
+* Monitoring long-term trends
+* Alerting
+* Automated releases/rollbacks
+* Canary testing and A/B testing
+
+
+
+
+
 
 ---
 
