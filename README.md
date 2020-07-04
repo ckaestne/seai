@@ -85,7 +85,7 @@ The course content evolves from semester to semester. See the course content of 
 
 ## Course Syllabus and Policies
 
-The course uses Canvas for posting slides, readings, and videos, for discussions, for quizzes, announcements, and supplementary documents; Gradescope (liked from Canvas) is used for homework submissions and grading; GitHub is used to coordinate group work.
+The course uses Canvas for posting slides, readings, and videos, for discussions, for quizzes, announcements, and supplementary documents; Gradescope (linked from Canvas) is used for homework submissions and grading; GitHub is used to coordinate group work.
 
 **Prerequisites:** Offerings in different semesters may be targeted at students with different backgrounds. The course does not have formal prerequesites, but we describe background knowledge that will help you be successful in the course. Also note that the course always has a substantial programming component, so solid programming skills will be benefitial (we do not prescribe a programming language, but most student teams decide to work primarily in Python).
 
