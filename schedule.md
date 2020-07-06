@@ -25,8 +25,8 @@
 | Thu, Jul 02| [**Midterm**](https://github.com/ckaestne/seai/blob/S2020/exams/midterm.pdf) |  |  |
 | Tue, Jul 07| [Infrastructure Quality, Deployment, and Operations](https://ckaestne.github.io/seai/S2020/slides/13_infrastructurequality/infrastructurequality.html) ([md](https://github.com/ckaestne/seai/blob/S2020/lectures/13_infrastructurequality/infrastructurequality.md), [pdf](https://ckaestne.github.io/seai/S2020/slides/13_infrastructurequality/infrastructurequality.pdf)) | [The ML Test Score](https://research.google.com/pubs/archive/46555.pdf) |  |
 | Wed, Jul 08| ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) Monitoring |  |  |
-| Thu, Jul 09| Ethics + Fairness 1 |  |  |
-| Tue, Jul 14| Ethics + Fairness 2 |  | I5 Open Source Tools |
+| Thu, Jul 09| [Ethics + Fairness 1](https://ckaestne.github.io/seai/S2020/slides/14_fairness1/fairness1.html) ([md](https://github.com/ckaestne/seai/blob/S2020/lectures/14_fairness1/fairness1.md), [pdf](https://ckaestne.github.io/seai/S2020/slides/14_fairness1/fairness1.pdf)) |  |  |
+| Tue, Jul 14| Ethics + Fairness 2 |  | [I5 Open Source Tools](https://github.com/ckaestne/seai/blob/S2020/assignments/I5_se4ai_tools.md) |
 | Wed, Jul 15| ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) tbd |  |  |
 | Thu, Jul 16| Explainability & Interpretability |  |  |
 | Tue, Jul 21| Debugging, Data Provenance, and Reproducability 1 |  | [QA Project Milestone 2](https://github.com/ckaestne/seai/blob/S2020/assignments/project.md) |
