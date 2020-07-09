@@ -15,7 +15,7 @@ Christian Kaestner
 <!-- references -->
 
 Required reading: R. Caplan, J. Donovan, L. Hanson, J.
-Matthews. "Algorithmic Accountability: A Primer", Data & Society
+Matthews. "[Algorithmic Accountability: A Primer](https://datasociety.net/wp-content/uploads/2019/09/DandS_Algorithmic_Accountability.pdf)", Data & Society
 (2018).
 
 ---
@@ -358,6 +358,24 @@ Swati Gupta, Henriette Cramer, Kenneth Holstein, Jennifer Wortman Vaughan, Hal D
 
 **Other examples?**
 
+
+----
+## On Terminology
+
+* Bias and discrimination are technical terms in machine learning
+  - [selection bias](https://en.wikipedia.org/wiki/Selection_bias), [reporting bias](https://en.wikipedia.org/wiki/Reporting_bias), [bias of an estimator](https://en.wikipedia.org/wiki/Bias_of_an_estimator), [inductive/learning bias](https://en.wikipedia.org/wiki/Inductive_bias)
+  - discrimination   refers to distinguishing outcomes (classification)
+* The problem is *unjustified* differentiation, ethical issues
+  - practical irrelevance
+  - moral irrelevance
+
+
+
+
+
+
+
+
 ---
 # Sources of Bias
 
@@ -371,22 +389,13 @@ Swati Gupta, Henriette Cramer, Kenneth Holstein, Jennifer Wortman Vaughan, Hal D
 Caliskan et al., _[Semantics derived automatically from language corpora contain
 human-like biases](http://cs.bath.ac.uk/~jjb/ftp/CaliskanEtAl-authors-full.pdf)_, Science (2017).
 
-----
-## On Terminology
-
-* Bias and discrimination are technical terms in machine learning
-  - [selection bias](https://en.wikipedia.org/wiki/Selection_bias), [reporting bias](https://en.wikipedia.org/wiki/Reporting_bias), [bias of an estimator](https://en.wikipedia.org/wiki/Bias_of_an_estimator), [inductive/learning bias](https://en.wikipedia.org/wiki/Inductive_bias)
-  - discrimination   refers to distinguishing outcomes (classification)
-* The problem is *unjustified* differentiation, ethical issues
-  - practical irrelevance
-  - moral irrelevance
 
 
 ----
 ## Sources of Bias
 
-* Skewed sample
 * Tainted examples / historical bias
+* Skewed sample
 * Limited features
 * Sample size disparity
 * Proxies
@@ -472,6 +481,11 @@ Note:
     * Poor color quality for other skin tones
 
 ----
+
+<div class="tweet" data-src="https://twitter.com/nke_ise/status/897756900753891328"></div>
+
+
+----
 ## Proxies
 
 *Features correlate with protected attributes*
@@ -549,7 +563,7 @@ O'Neil, Cathy. [Weapons of math destruction: How big data increases inequality a
 ## "Weapons of Math Destruction"
 
 * Algorithm evaluates people
-  - e.g., c redit, hiring, admissions, recidivism, advertisement, insurance, healthcare
+  - e.g., credit, hiring, admissions, recidivism, advertisement, insurance, healthcare
 * Widely used for life-affecting decisions
 * Opaque and not accountable, no path to complain
 * Feedback loop 

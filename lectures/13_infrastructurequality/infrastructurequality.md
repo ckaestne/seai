@@ -144,7 +144,7 @@ public class AdjacencyListTest {
 ```
 
 ----
-## Anatomy of a Unit Test
+## Ingredients to a Test
 
 * Specification
 * 
