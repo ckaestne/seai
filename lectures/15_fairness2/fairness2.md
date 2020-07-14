@@ -121,10 +121,10 @@ necessary for job success, the resulting disparities would be legal."
 ----
 ## Definitions of Algorithmic Fairness
 
-* Anti-classifcation (Fairness through Blindness)
-* Group fairness
-* Equalized odds
-* Predictive rate parity
+* Anti-classification (Fairness through Blindness)
+* Independence (group fairness)
+* Separation (equalized odds)
+* ...
 
 
 
@@ -192,6 +192,9 @@ Test with random input data (see prior lecture on [Automated Random Testing](htt
 
 Any single inconsistency shows that the protected attribute was used. Can also report percentage of inconsistencies.
 
+<!-- references -->
+See for example: Galhotra, Sainyam, Yuriy Brun, and Alexandra Meliou. "[Fairness testing: testing software for discrimination](http://people.cs.umass.edu/brun/pubs/pubs/Galhotra17fse.pdf)." In Proceedings of the 2017 11th Joint Meeting on Foundations of Software Engineering, pp. 498-510. 2017.
+
 ----
 ## Correlated Features
 
@@ -248,6 +251,16 @@ $P[R = 1 | A = 0]  = P[R = 1 | A = 1]$ or $R \perp A$
 
 
 ----
+## Exercise: Cancer Diagnosis
+
+![](cancer-stats.jpg)
+
+* 1000 data samples (500 male & 500 female patients)
+* What's the overall recall & precision?
+* Does the model achieve *independence*
+
+
+----
 ## Independence vs. Anti-Discrimination
 
 <!-- discussion -->
@@ -262,15 +275,6 @@ Notes: Independence is to be observed on actual input data, needs representative
 * Separately measure rate of positive predictions
 * Report issue if rate differs beyond $\epsilon$ across groups
 
-
-----
-## Exercise: Cancer Diagnosis
-
-![](cancer-stats.jpg)
-
-* 1000 data samples (500 male & 500 female patients)
-* What's the overall recall & precision?
-* Does the model achieve *independence*
 
 ----
 ## Limitations of Independence?
