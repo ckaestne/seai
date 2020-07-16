@@ -29,6 +29,15 @@ Recommended supplementary reading: 🕮 Christoph Molnar. "[Interpretable Machin
 # Motivating Examples
 
 ----
+## Detecting Anomalous Commits
+
+[![Reported commit](nodejs-unusual-commit.png)](nodejs-unusual-commit.png)
+<!-- .element: class="stretch" -->
+
+
+Goyal, Raman, Gabriel Ferreira, Christian Kästner, and James Herbsleb. "[Identifying unusual commits on GitHub](https://www.cs.cmu.edu/~ckaestne/pdf/jsep17.pdf)." Journal of Software: Evolution and Process 30, no. 1 (2018): e1893.
+
+----
 ## Is this recidivism model fair?
 
 ```
