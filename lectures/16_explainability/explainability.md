@@ -1078,6 +1078,92 @@ Christoph Molnar. "[Interpretable Machine Learning: A Guide for Making Black Box
 
 
 
+---
+## Exercise: Debugging a Model
+
+Consider the following debugging challenges. In groups discuss which explainability tools may help and why. In 10 min report back to the group.
+
+<!-- colstart -->
+*Algorithm bad at recognizing some signs in some conditions:*
+![Stop Sign with Bounding Box](stopsign.jpg)
+<!-- col -->
+*Graduate application system seems to rank applicants HBCUs lowly:*
+![Cheyney University founded in 1837 is the oldest HBCU](cheyneylibrary.jpeg)
+<!-- colend -->
+
+<!-- smallish -->
+<!-- references -->
+Left Image: CC BY-SA 4.0, Adrian Rosebrock 
+
+
+
+
+
+
+
+
+
+
+
+---
+# Explanations and User Interaction Design
+
+
+<!-- references -->
+[People + AI Guidebook](https://pair.withgoogle.com/research/), Google
+
+----
+![Positive example](https://pair.withgoogle.com/assets/ET1_aim-for.png)
+
+<!-- split -->
+![Negative example](https://pair.withgoogle.com/assets/ET1_avoid.png)
+<!-- split -->
+
+
+
+Tell the user when a lack of data might mean they’ll need to use their own judgment. Don’t be afraid to admit when a lack of data could affect the quality of the AI recommendations.
+
+<!-- references -->
+Source:
+[People + AI Guidebook](https://pair.withgoogle.com/research/), Google
+
+
+----
+
+![Positive example](https://pair.withgoogle.com/assets/ET3_aim-for.png)
+<!-- split -->
+![Negative example](https://pair.withgoogle.com/assets/ET3_avoid.png)
+<!-- split -->
+Give the user details about why a prediction was made in a high stakes scenario. Here, the user is exercising after an injury and needs confidence in the app’s recommendation. Don’t say “what” without saying “why” in a high stakes scenario.
+<!-- references -->
+Source:
+[People + AI Guidebook](https://pair.withgoogle.com/research/), Google
+
+
+
+----
+
+![Explanations wrt Confidence](expl_confidence.png)
+<!-- .element: class="stretch" -->
+
+**Example each?**
+
+
+Source: [People + AI Guidebook](https://pair.withgoogle.com/research/), Google
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ---
@@ -1205,9 +1291,61 @@ when there exists an interpretable model with the same level of performance"
 Rudin, Cynthia. "Stop explaining black box machine learning models for high stakes decisions and use interpretable models instead." Nature Machine Intelligence 1.5 (2019): 206-215. ([Preprint](https://arxiv.org/abs/1811.10154))
 
 
+---
+# (Self-)Regulation and Policy
 
 
+----
+![Responsible AI website from Microsoft](responsibleai.png)
 
+----
+## Policy Discussion and Frameing
+
+* Corporate pitch: "Responsible AI" ([Microsoft](https://www.microsoft.com/en-us/ai/responsible-ai), [Google](https://ai.google/responsibilities/responsible-ai-practices/), [Accenture](https://www.accenture.com/_acnmedia/pdf-92/accenture-afs-responsible-ai.pdf))
+* Counterpoint: Ochigame ["The Invention of 'Ethical AI': How Big Tech Manipulates Academia to Avoid Regulation"](https://theintercept.com/2019/12/20/mit-ethical-ai-artificial-intelligence/), The Intercept 2019
+  - *"The discourse of “ethical AI” was aligned strategically with a Silicon Valley effort seeking to avoid legally enforceable restrictions of controversial technologies."*
+* Self-regulation vs government regulation? Assuring safety vs fostering innovation?
+
+<!-- discussion -->
+
+----
+[![Forbes Article: This Is The Year Of AI Regulations](airegulation.png)](https://www.forbes.com/sites/cognitiveworld/2020/03/01/this-is-the-year-of-ai-regulations/#1ea2a84d7a81)
+
+
+----
+## “Accelerating America’s Leadership in Artificial Intelligence”
+
+> “the policy of the United States Government [is] to sustain and enhance the scientific, technological, and economic leadership position of the United States in AI.” -- [White House Executive Order Feb. 2019](https://www.whitehouse.gov/articles/accelerating-americas-leadership-in-artificial-intelligence/)
+
+Tone: "When in doubt, the government should not regulate AI."
+
+* 3. Setting AI Governance Standards: *"foster public trust in AI systems by establishing guidance for AI development. [...] help Federal regulatory agencies develop and maintain approaches for the safe and trustworthy creation and adoption of new AI technologies. [...] NIST to lead the development of appropriate technical standards for reliable, robust, trustworthy, secure, portable, and interoperable AI systems."*
+
+----
+## Jan 13 2020 Draft Rules for Private Sector AI
+
+* *Public Trust in AI*: Overarching theme: reliable, robust, trustworthy AI
+* *Public participation:* public oversight in AI regulation
+* *Scientific Integrity and Information Quality:* science-backed regulation
+* *Risk Assessment and Management:* risk-based regulation
+* *Benefits and Costs:* regulation costs may not outweigh benefits
+* *Flexibility:* accommodate rapid growth and change
+* *Disclosure and Transparency:* context-based transparency regulation 
+* *Safety and Security:* private sector resilience
+* 
+
+
+[Draft: Guidance for Regulation of Artificial Intelligence Applications](https://www.whitehouse.gov/wp-content/uploads/2020/01/Draft-OMB-Memo-on-Regulation-of-AI-1-7-19.pdf)
+
+----
+## Other Regulations
+
+* *China:* policy ensures state control of Chinese companies and over valuable data, including storage of data on Chinese users within the country and mandatory national standards for AI
+* *EU:* Ethics Guidelines for Trustworthy Artificial Intelligence; Policy and investment recommendations for trustworthy Artificial Intelligence; draft regulatory framework for high-risk AI applications, including procedures for testing, record-keeping, certification, ...
+* *UK:* Guidance on responsible design and implementation of AI systems and data ethics
+
+
+Source: https://en.wikipedia.org/wiki/Regulation_of_artificial_intelligence
 
 ---
 ## Summary
@@ -1221,4 +1359,6 @@ Rudin, Cynthia. "Stop explaining black box machine learning models for high stak
   - invariants (anchors)
   - counter-factual explanations
 * Data debugging with prototypes, criticisms, and influential instances
+* Consider implications on user interface design
 * Considerations for high-stakes decisions
+* Regulations may be coming
