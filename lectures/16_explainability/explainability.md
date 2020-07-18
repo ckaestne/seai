@@ -82,7 +82,10 @@ Rudin, Cynthia, and Berk Ustun. "[Optimized scoring systems: Toward trust in mac
 
 <div class="tweet" data-src="https://twitter.com/dhh/status/1192540900393705474"></div>
 
-*Nothing to be done. It's just the algorithm...*
+----
+
+<div class="tweet" data-src="https://twitter.com/dhh/status/1192945019230945280"></div>
+
 
 ----
 ## Explaining Decisions
@@ -1160,6 +1163,68 @@ Source: [People + AI Guidebook](https://pair.withgoogle.com/research/), Google
 
 
 
+---
+# Transparency
+
+----
+
+![Booking.com rating](booking.png)
+
+<!-- references -->
+
+Source: [Motahhare Eslami](http://eslamim2.web.engr.illinois.edu/)
+
+
+----
+## Case Study: Facebook's Feed Curation
+
+![Facebook with and without filtering](facebook.png)
+
+<!-- references -->
+
+Eslami, Motahhare, Aimee Rickman, Kristen Vaccaro, Amirhossein Aleyasen, Andy Vuong, Karrie Karahalios, Kevin Hamilton, and Christian Sandvig. [I always assumed that I wasn't really that close to [her]: Reasoning about Invisible Algorithms in News Feeds](http://eslamim2.web.engr.illinois.edu/publications/Eslami_Algorithms_CHI15.pdf). In Proceedings of the 33rd annual ACM conference on human factors in computing systems, pp. 153-162. ACM, 2015.
+
+
+
+----
+## Case Study: Facebook's Feed Curation
+<!-- smallish -->
+
+* 62% of interviewees were not aware of curation algorithm
+* Surprise and anger when learning about curation
+
+> "Participants were most upset when close friends and
+family were not shown in their feeds [...] participants often attributed missing stories to their friends’ decisions to exclude them rather than to Facebook News Feed algorithm."
+
+* Learning about algorithm did not change satisfaction level
+* More active engagement, more feeling of control
+
+
+<!-- references -->
+
+Eslami, Motahhare, Aimee Rickman, Kristen Vaccaro, Amirhossein Aleyasen, Andy Vuong, Karrie Karahalios, Kevin Hamilton, and Christian Sandvig. [I always assumed that I wasn't really that close to [her]: Reasoning about Invisible Algorithms in News Feeds](http://eslamim2.web.engr.illinois.edu/publications/Eslami_Algorithms_CHI15.pdf). In Proceedings of the 33rd annual ACM conference on human factors in computing systems, pp. 153-162. ACM, 2015.
+
+----
+## Case Study: HR Application Screening
+
+
+<div class="tweet" data-src="https://twitter.com/TheWrongNoel/status/1194842728862892033"></div>
+
+
+----
+## Appropriate Level of Algorithmic Transparency
+
+IP/Trade Secrets/Fairness/Perceptions/Ethics?
+
+How to design? How much control to give?
+
+<!-- discussion -->
+
+---
+
+
+
+
 
 
 
@@ -1360,5 +1425,6 @@ Source: https://en.wikipedia.org/wiki/Regulation_of_artificial_intelligence
   - counter-factual explanations
 * Data debugging with prototypes, criticisms, and influential instances
 * Consider implications on user interface design
+* Algorithmic transparency can impact users and usability
 * Considerations for high-stakes decisions
 * Regulations may be coming
