@@ -14,7 +14,7 @@ Christian Kaestner
 
 <!-- references -->
 
-Required reading: R. Caplan, J. Donovan, L. Hanson, J.
+Required reading: 🗎 R. Caplan, J. Donovan, L. Hanson, J.
 Matthews. "[Algorithmic Accountability: A Primer](https://datasociety.net/wp-content/uploads/2019/09/DandS_Algorithmic_Accountability.pdf)", Data & Society
 (2018).
 
