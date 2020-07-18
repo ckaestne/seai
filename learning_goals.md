@@ -472,8 +472,8 @@ Overview:
 * Versioning of code, data, and models
 * Logging and audit traces
 * Strategies for debugging and improving models
-* Explainable machine learning and robustness techniques for debugging
-* “Origin tracking” during learning – identifying influential training data
+* (Explainable machine learning and robustness techniques for debugging)
+* (“Origin tracking” during learning – identifying influential training data)
 
 Learning goals:
 
