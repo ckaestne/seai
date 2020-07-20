@@ -1,4 +1,4 @@
-# Individual Assignment 5: Fairness
+# Individual Assignment 6: Fairness
 
 (17-445/645 Software Engineering for AI-Enabled Systems)
 
