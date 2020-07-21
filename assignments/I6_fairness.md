@@ -28,7 +28,7 @@ A sample dataset from Schufa is available for download (https://archive.ics.uci.
 
 *You may reuse existing code you find online for this task if you understand it and provide a reference.*
 
-**Task 2: Measuring fairness:** Consider gender and age as protected attributes. For each protected attribute evaluate the fairness *of your model* using (a) anti-classification, (b) independence, and (c) separation as the fairness criteria. If you need to make assumptions (e.g., select thresholds) state your assumptions.
+**Task 2: Measuring fairness:** Consider gender and age as protected attributes and assume that the labels in the validation data are an accurate reflection of that person’s risk of defaulting on a loan. For each protected attribute evaluate the fairness *of your model* using (a) anti-classification, (b) independence, and (c) separation as the fairness criteria. If you need to make assumptions (e.g., select thresholds) state your assumptions.
 
 *You may use existing tools like IBM’s [AI Fairness 360](https://www.ibm.com/blogs/research/2018/09/ai-fairness-360/) toolkit, but it might be easier to implement this yourself and derive measures directly from tests and the confusion matrix.* 
 
