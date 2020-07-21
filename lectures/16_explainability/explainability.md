@@ -723,33 +723,47 @@ Ernst, Michael D., Jake Cockrell, William G. Griswold, and David Notkin. "[Dynam
 
 ----
 ## Daikon Example
+<!-- smallish -->
 <!-- colstart -->
-```c
-int ABS(int x) {
-    if (x>0) return x;
-    else return (x*(-1));
-}
-int main () {
-    int i=0;
-    int abs_i;
-    for (i=-5000;i<5000;i++)
-        abs_i=ABS(i);
-}
+```java
+public class Stack {
+    private Object[] theArray;
+    private int topOfStack;
+    public StackAr(int c) {
+        theArray = new Object[c];
+        topOfStack = -1;
+    }    
+    public Object top( ) {
+        if(isEmpty()) return null;
+        return theArray[topOfStack];
+    }
+    public boolean isEmpty( ) {
+        return topOfStack == -1;
+    }
+    ...
+}    
 ```
 
 
 <!-- col -->
 Invariants found
 ```text
-std.ABS(int;):::EXIT1
-x == return
+StackAr:::OBJECT
+this.theArray != null
+this.theArray.getClass().getName() == 
+    java.lang.Object[].class
+this.topOfStack >= -1
+this.topOfStack <= size(this.theArray[])-1
 
-std.ABS(int;):::EXIT2
-return == - x
-
-std.ABS(int;):::EXIT
-x == orig(x)
-x <= return
+StackAr.top():::EXIT75
+return == 
+  this.theArray[this.topOfStack]
+return == 
+  this.theArray[orig(this.topOfStack)]
+return == 
+  orig(this.theArray[this.topOfStack])
+this.topOfStack >= 0
+return != null
 ```
 <!-- colend -->
 
@@ -952,6 +966,12 @@ ELSE predict no arrest
 > A criticism is a data instance that is not well represented by the set of prototypes.
 
 **How would you use this?** (e.g., credit rating, cancer detection)
+
+----
+## Example: Prototypes and Criticisms?
+
+![Example](prototypes_without.png)
+
 
 ----
 ## Example: Prototypes and Criticisms
@@ -1167,6 +1187,7 @@ Source: [People + AI Guidebook](https://pair.withgoogle.com/research/), Google
 # Transparency
 
 ----
+## Dark Patterns
 
 ![Booking.com rating](booking.png)
 
@@ -1174,6 +1195,9 @@ Source: [People + AI Guidebook](https://pair.withgoogle.com/research/), Google
 
 Source: [Motahhare Eslami](http://eslamim2.web.engr.illinois.edu/)
 
+Notes: Futher discussion https://ro-che.info/articles/2017-09-17-booking-com-manipulation
+Ratings are generated as averages from 6 smilies (each 2.5, 5, 7.5, 10) -- minimum rating is 2.5.
+Rating system has since been revised.
 
 ----
 ## Case Study: Facebook's Feed Curation
@@ -1219,9 +1243,7 @@ IP/Trade Secrets/Fairness/Perceptions/Ethics?
 How to design? How much control to give?
 
 <!-- discussion -->
-
----
-
+ 
 
 
 
@@ -1368,7 +1390,7 @@ Rudin, Cynthia. "Stop explaining black box machine learning models for high stak
 
 * Corporate pitch: "Responsible AI" ([Microsoft](https://www.microsoft.com/en-us/ai/responsible-ai), [Google](https://ai.google/responsibilities/responsible-ai-practices/), [Accenture](https://www.accenture.com/_acnmedia/pdf-92/accenture-afs-responsible-ai.pdf))
 * Counterpoint: Ochigame ["The Invention of 'Ethical AI': How Big Tech Manipulates Academia to Avoid Regulation"](https://theintercept.com/2019/12/20/mit-ethical-ai-artificial-intelligence/), The Intercept 2019
-  - *"The discourse of “ethical AI” was aligned strategically with a Silicon Valley effort seeking to avoid legally enforceable restrictions of controversial technologies."*
+  - "*The discourse of “ethical AI” was aligned strategically with a Silicon Valley effort seeking to avoid legally enforceable restrictions of controversial technologies.*"
 * Self-regulation vs government regulation? Assuring safety vs fostering innovation?
 
 <!-- discussion -->
@@ -1384,7 +1406,7 @@ Rudin, Cynthia. "Stop explaining black box machine learning models for high stak
 
 Tone: "When in doubt, the government should not regulate AI."
 
-* 3. Setting AI Governance Standards: *"foster public trust in AI systems by establishing guidance for AI development. [...] help Federal regulatory agencies develop and maintain approaches for the safe and trustworthy creation and adoption of new AI technologies. [...] NIST to lead the development of appropriate technical standards for reliable, robust, trustworthy, secure, portable, and interoperable AI systems."*
+* 3. Setting AI Governance Standards: "*foster public trust in AI systems by establishing guidance for AI development. [...] help Federal regulatory agencies develop and maintain approaches for the safe and trustworthy creation and adoption of new AI technologies. [...] NIST to lead the development of appropriate technical standards for reliable, robust, trustworthy, secure, portable, and interoperable AI systems.*"
 
 ----
 ## Jan 13 2020 Draft Rules for Private Sector AI
@@ -1413,7 +1435,7 @@ Tone: "When in doubt, the government should not regulate AI."
 Source: https://en.wikipedia.org/wiki/Regulation_of_artificial_intelligence
 
 ---
-## Summary
+# Summary
 
 * Interpretability useful for many scenarios: user feedback, debugging, fairness audits, science, ...
 * Defining and measuring interpretability
