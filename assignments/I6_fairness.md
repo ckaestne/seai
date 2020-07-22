@@ -24,7 +24,7 @@ A sample dataset from Schufa is available for download (https://archive.ics.uci.
 
 ## Tasks and Questions
 
-**Task 1: Train Credit Scoring Model:** Train a credit scoring model based on part of the labeled sample data (this can be considered as a *global surrogate* model) – pretty much any supervised classification model that comes with customizable thresholds will do. Evaluate the quality of your model with the remaining data and plot an ROC curve. Typical solutions will achieve an ROC_AUC of around 0.7. 
+**Task 1: Train Credit Scoring Model:** Train a credit scoring model based on part of the labeled sample data (technically, this would be a *global surrogate* model, but for the purpose of this assignment we are assuming that the labels correspond to people actually defaulting on the loan) – pretty much any supervised classification model that comes with customizable thresholds will do. Evaluate the quality of your model with the remaining data and plot an ROC curve. Typical solutions will achieve an ROC_AUC of around 0.7. 
 
 *You may reuse existing code you find online for this task if you understand it and provide a reference.*
 
