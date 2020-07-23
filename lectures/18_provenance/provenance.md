@@ -35,6 +35,21 @@ Required reading: 🗎 Halevy, Alon, Flip Korn, Natalya F. Noy, Christopher Olst
 
 <div class="tweet" data-src="https://twitter.com/dhh/status/1192945019230945280"></div>
 
+----
+```mermaid
+graph TD
+  i(Customer Data) --> s[Scoring Model]
+  h(Historic Data) ==> s
+  i --> p[Purchase Analysis]
+  p --> s
+  s --> l[Credit Limit Model]
+  c(Cost and Risk Function) --> l
+  m(Market Conditions) --> l
+  l --> o(Offer)
+  i --> l
+```
+
+
 
 ----
 
@@ -46,7 +61,7 @@ What went wrong? Where? How to fix?
 
 ----
 
-## Debugging Questions
+## Debugging Questions beyond Interpretability
 
 * Can we reproduce the problem?
 * What were the inputs to the model?
@@ -101,6 +116,20 @@ Historical record of data and its origin
 * What data? What library? What hyperparameter? What code?
 * Ensemble of multiple models?
 
+----
+```mermaid
+graph TD
+  i(Customer Data) --> s[Scoring Model]
+  h(Historic Data) ==> s
+  i --> p[Purchase Analysis]
+  p --> s
+  s --> l[Credit Limit Model]
+  c(Cost and Risk Function) --> l
+  m(Market Conditions) --> l
+  l --> o(Offer)
+  i --> l
+```
+
 
 ----
 ## Recall: Model Chaining
@@ -142,6 +171,14 @@ graph LR
 
 <!-- references -->
 Example: Zong, W., Zhang, C., Wang, Z., Zhu, J., & Chen, Q. (2018). [Architecture design and implementation of an autonomous vehicle](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8340798). IEEE access, 6, 21956-21970.
+
+
+----
+## Summary: Provenance
+
+* Data provenance
+* Feature provenance
+* Model provenance
 
 
 
