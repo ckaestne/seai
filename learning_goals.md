@@ -415,6 +415,7 @@ Readings:
 
 * 🗎 Borg, Markus, Cristofer Englund, Krzysztof Wnuk, Boris Duran, Christoffer Levandowski, Shenjian Gao, Yanwen Tan, Henrik Kaijser, Henrik Lönn, and Jonas Törnqvist. "[Safely entering the deep: A review of verification and validation for machine learning and a challenge elicitation in the automotive industry](https://www.atlantis-press.com/journals/jase/125905766)." Journal of Automotive Software Engineering. Volume 1, Issue 1, Pages 1 - 19. 2019
 * 🗎 Cohen, Jeremy M., Elan Rosenfeld, and J. Zico Kolter. "[Certified adversarial robustness via randomized smoothing](https://arxiv.org/abs/1902.02918)." In Proc. International Conference on Machine Learning, p. 1310--1320, 2019.
+* 🗎 Salay, Rick, Rodrigo Queiroz, and Krzysztof Czarnecki. "[An analysis of ISO 26262: Using machine learning safely in automotive software (Links to an external site.)](https://arxiv.org/pdf/1709.02435)." *arXiv preprint arXiv:1709.02435* (2017).
 
 
 
@@ -439,11 +440,11 @@ Learning goals:
 
 Reading:
 
-* 🕮 Hulten, Geoff. "Building Intelligent Systems: A Guide to Machine Learning Engineering." (2018), Chapter 25
+* 🕮 Hulten, Geoff. "Building Intelligent Systems: A Guide to Machine Learning Engineering." (2018), Chapter 25 (Adversaries and Abuse)
 * 🗎 Shawn Hernan and Scott Lambert and Tomasz Ostwald and Adam Shostack. [Uncover Security Design Flaws Using The STRIDE Approach](https://github.com/ckaestne/seai/raw/F2019/other_material/readings/security/msnd_threatmodeling.pdf). MSDN 2007
-* todo (case study, adversarial learning)
-
-
+* 🕮 Agrawal, A., Gans, J., & Goldfarb, A. (2018). [*Prediction machines: the simple economics of artificial intelligence* (Links to an external site.)](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019698987304436). Harvard Business Press. Chapter 19 (Managing AI Risk)
+* 🗎 Goodfellow, I., McDaniel, P., & Papernot, N. (2018). [Making machine learning robust against adversarial inputs](https://par.nsf.gov/servlets/purl/10111674). *Communications of the ACM*, *61*(7), 56-66. 
+* 🗎 Huang, L., Joseph, A. D., Nelson, B., Rubinstein, B. I., & Tygar, J. D. (2011, October). [Adversarial machine learning](http://www.blaine-nelson.com/research/pubs/Huang-Joseph-AISec-2011.pdf). In *Proceedings of the 4th ACM workshop on Security and artificial intelligence* (pp. 43-58). 
 
 ## Lecture: Explainability & Interpretability ![Requirements](https://img.shields.io/badge/-Requirements-Green.svg) ![Machine Learning](https://img.shields.io/badge/-Machine%20Learning-Purple.svg)
 
@@ -510,7 +511,7 @@ Learning goals:
 
 Readings:
 
-* 🗎 todo (on data scientist role)
+* 🗎 Kim, M., Zimmermann, T., DeLine, R., & Begel, A. (2017). [Data scientists in software teams: State of the art and challenges (Links to an external site.)](https://andrewbegel.com/papers/data-scientists.pdf ). *IEEE Transactions on Software Engineering*, *44*(11), 1024-1038.
 
 
 
