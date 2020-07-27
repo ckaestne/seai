@@ -4,7 +4,7 @@
 
 ## Overview
 
-In this assignment, you will get practice on how to systematically identify fairness issues in AI-enable systems and think through potential fairness problems in a credit scoring scenario and in the movie streaming scenario. In particular, you will learn to (1) think about potential harms that can be caused by an unfair AI system, (2) identify potential sources of bias, (3) analyze and improve fairness of a classifier, and (4) discuss possible fairness practices throughout the system’s life cycle.
+In this assignment, you will get practice on how to systematically identify fairness issues in AI-enabled systems and think through potential fairness problems in a credit scoring scenario and in the movie streaming scenario. In particular, you will learn to (1) think about potential harms that can be caused by an unfair AI system, (2) identify potential sources of bias, (3) analyze and improve fairness of a classifier, and (4) discuss possible fairness practices throughout the system’s life cycle.
 
 Learning goals:
 * Understand the potential negative impact of a biased AI-driven system on society
