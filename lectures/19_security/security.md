@@ -76,6 +76,9 @@ Recommended reading:
 * __Integrity__: Sensitive data must be modifiable by authorized users only
 * __Availability__: Critical services must be available when needed by clients
 
+----
+![Garmin Hack](garmin.jpg)
+
 
 ----
 # Other Security Properties 
@@ -155,7 +158,7 @@ Availability attack: Misclassify many data points to make a model essentially us
 * What is the attacker trying to achieve? Undermine one or more security requirements
 * Why does the attacker want to do this?
 
-*Example goals and incentives in college admission scenario?*
+*Example goals and incentives in Garmin/college admission scenario?*
 	
 <!-- discussion -->
 
@@ -456,7 +459,7 @@ Rudin, Cynthia. "[Stop explaining black box machine learning models for high sta
 ----
 ## Decision Boundaries in Practice
 
-* With many models (especially deep neural networks), we do not understand decision boundaries
+* With many models (especially deep neural networks), we do not understand the model's decision boundaries
 * We are not confident that model decision boundaries align with task decision boundaries
   - The model's perception does not align well with human perception
 * Models may pick up on parts of the input in surprising ways
@@ -477,6 +480,14 @@ Rudin, Cynthia. "[Stop explaining black box machine learning models for high sta
   - Sample within distance, compare prediction to majority prediction
   - Probabilistic guarantees possible (with many queries, e.g., 100k)
   - Example: 🗎 Cohen, Jeremy M., Elan Rosenfeld, and J. Zico Kolter. "[Certified adversarial robustness via randomized smoothing](https://arxiv.org/abs/1902.02918)." In Proc. International Conference on Machine Learning, p. 1310--1320, 2019.
+
+----
+## Practical Use of Robustness?
+
+
+<!-- discussion -->
+
+*Current abilities: Detect for a given input whether neighboring inputs predict same result*
 
 ----
 ## Practical Use of Robustness
@@ -661,6 +672,7 @@ Note: See reputation system
 
 ----
 ![Too many attempts warning on Android](android_login.png)
+<!-- .element: class="stretch" -->
 
 Note: Block system after login attempts with FaceID or fingerprint 
 
@@ -674,6 +686,7 @@ Note: Block system after login attempts with FaceID or fingerprint
 * Reliance on ML to combat abuse?
 * Incidence response plan?
 
+**Examples for web shop/college admissions AI?**
 
 
 ---
@@ -703,7 +716,7 @@ Note: Block system after login attempts with FaceID or fingerprint
 
 * Capabilities depends on system boundary & its exposed interfaces
 * Use an architecture diagram to identify attack surface & actions
-* Example: College admission
+* Example: Garmin/College admission
     * Physical: Break into building & access server
     * Cyber: Send malicious HTTP requests for SQL injection,
   DoS attack
