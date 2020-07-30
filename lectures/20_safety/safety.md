@@ -180,6 +180,16 @@ distance to the leading vehicle.
 
 
 ----
+## Recall: World vs Machine
+
+![World vs Machine](machine-world.png)
+
+
+Software is not unsafe; the control signals it generates may be
+
+Root of unsafety usually in wrong requirements
+
+----
 ## Forward vs Backward Search
 
 ![](search-types.png)
