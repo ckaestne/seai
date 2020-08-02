@@ -57,7 +57,7 @@ Required Reading 🗎 Salay, Rick, Rodrigo Queiroz, and Krzysztof Czarnecki. "[A
 ----
 ## Safety
 
-<div class="tweet" data-src="https://twitter.com/EmilyEAckerman/status/1065700195776847872"></div>
+<div class="tweet" data-src="https://twitter.com/skoops/status/1065700195776847872"></div>
 
 
 ----
