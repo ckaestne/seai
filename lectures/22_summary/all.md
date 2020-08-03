@@ -204,7 +204,10 @@ From guarantees to best effort...
 **For design, implementation, testing, deployment, operations?**
 
 
+----
+# Homework 1: Case Study
 
+Engineering issues in detecting malicous apps
 
 ---
 
@@ -734,6 +737,13 @@ println("Probability of Alice smoking: " +
 * Analytical probabilistic reasoning (e.g., variable elimination Bayes' rule) -- precise result, guarantees
 * Approximation (e.g., belief propagation)
 * Sampling (e.g., Markov chain Monte Carlo) -- probabilistic guarantees
+
+
+----
+# Homework 2: Modeling Basics
+
+Predicting Movie Popularity (2 weeks)
+
 
 ---
 
@@ -1923,6 +1933,18 @@ Bloom & Brink. [Overcoming the Barriers to Production-Ready Machine Learning
 Workflows](https://conferences.oreilly.com/strata/strata2014/public/schedule/detail/32314), Presentation at O'Reilly Strata Conference (2014).
 
 
+----
+# Homework 3: Tradeoff Analysis
+
+Compare 3 learning techniques
+
+(10 qualities, metrics, measurement, memo)
+
+
+
+
+
+
 ---
 
 
@@ -2361,6 +2383,13 @@ Estimate data volume and possible bottlenecks in system.
 
 
 
+----
+# Homework 4: Requirements and Architecture
+
+Smart dashcam to detect missing children
+
+(Goals, risks, deployment alternatives, telemetry)
+
 
 ---
 
@@ -2529,6 +2558,12 @@ if (features.enabled(userId, "one_click_checkout") {
 Distinct roles and expertise, but joint responsibilities, joint tooling
 
 
+
+----
+# Project M1: Recommendation Deployment
+
+
+(recommendation service, web API, team reflection)
 
 
 
@@ -3449,6 +3484,18 @@ https://ml-ops.org/
 Linux Foundation AI Initiative
 
 
+
+----
+# Homework 5: Open Source Tools
+
+----
+
+# Project M2: Model and Infrastructure Quality
+
+(online and offline evaluation, data quality, pipeline quality, CI)
+
+
+
 ---
 
 # Ethics & Fairness in AI-Enabled Systems
@@ -4009,6 +4056,10 @@ Mitchell, Margaret, et al. "[Model cards for model reporting](https://www.seas.u
 
 
 
+----
+# Homework 6: Fairness
+
+(credit scoring + recommendation, model + system)
 
 
 
@@ -4399,8 +4450,6 @@ Cynthia Rudin (32min) or 🗎 Rudin, Cynthia. "[Stop explaining black box machin
 ----
 [![Forbes Article: This Is The Year Of AI Regulations](airegulation.png)](https://www.forbes.com/sites/cognitiveworld/2020/03/01/this-is-the-year-of-ai-regulations/#1ea2a84d7a81)
 
-
-
 ---
 
 # Versioning, Provenance, and Reproducability
@@ -4546,7 +4595,11 @@ Juristo, Natalia, and Omar S. Gómez. "[Replication of software engineering expe
 * Different library versions installed on the machine may affect results
 * (Inference for a given model is usually deterministic)
 
+----
 
+# Project M3: Monitoring and Continuous Deployment
+
+(containization, monitoring, canary releases, provenance)
 
 
 ---
