@@ -21,7 +21,9 @@ Required reading: Kim, Miryung, Thomas Zimmermann, Robert DeLine, and Andrew Beg
 
 # Learning Goals
 
+* Understand different roles in projects for AI-enabled systems
 * Plan development activities in an inclusive fashion for participants in different roles
+* Diagnose and address common teamwork issues
 * Describe agile techniques to address common process and communication issues
 
 

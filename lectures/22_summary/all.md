@@ -90,7 +90,6 @@ If you can hear me, open the participant panel in Zoom and check "yes"
 
 ![Screenshot of Temi transcription service](temi.png)
 
-Notes: Highlights challenging fragments. Can see what users fix inplace to correct. Star rating for feedback.
 
 
 
@@ -429,9 +428,6 @@ Change hyperparameter to detect training accuracy (blue)/validation accuracy (re
 **[demo time](https://github.com/ckaestne/seai/tree/S2020/lectures/02_aibasics1/extras/decisiontree)**
 
 
-Notes: Overfitting is recognizable when performance of the evaluation set decreases.
-
-Demo: Show how trees at different depth first improve accuracy on both sets and at some point reduce validation accuracy with small improvements in training accuracy
 
 ----
 ## Academic Escalation: Overfitting on Benchmarks
@@ -469,18 +465,6 @@ Graphic: Amershi, Saleema, Andrew Begel, Christian Bird, Robert DeLine, Harald G
 (CC BY-SA 4.0, [Lakeworks](https://en.wikipedia.org/wiki/Scrum_(software_development)#/media/File:Scrum_process.svg))
 <!-- colend -->
 
-Note: There is similarity in that there is an iterative process, 
-but the idea is different and the process model seems mostly orthogonal
-to iteration in data science.
-The spiral model prioritizes risk, especially when it is not clear
-whether a model is feasible. One can do similar things in model development, seeing whether it is feasible with data at hand at all and build an early
-prototype, but it is not clear that an initial okay model can be improved
-incrementally into a great one later.
-Agile can work with vague and changing requirements, but that again seems
-to be a rather orthogonal concern. Requirements on the product are not so
-much unclear or changing (the goal is often clear), but it's not clear
-whether and how a model can solve it.
-
 
 ----
 ## Data Science is Iterative and Exploratory
@@ -491,8 +475,6 @@ whether and how a model can solve it.
 
 Source: Patel, Kayur, James Fogarty, James A. Landay, and Beverly Harrison. "[Investigating statistical machine learning as a tool for software development](http://www.kayur.org/papers/chi2008.pdf)." In Proc. CHI, 2008.
 
-Notes:
-This figure shows the result from a controlled experiment in which participants had 2 sessions of 2h each to build a model. Whenever the participants evaluated a model in the process, the accuracy is recorded. These plots show the accuracy improvements over time, showing how data scientists make incremental improvements through frequent iteration.
 
 
  
@@ -517,9 +499,6 @@ This figure shows the result from a controlled experiment in which participants 
 
 <!-- colend -->
 
-Notes:
-* See also https://en.wikipedia.org/wiki/Literate_programming
-* Demo with public notebook, e.g., https://colab.research.google.com/notebooks/mlcc/intro_to_pandas.ipynb
 
 
 ---
@@ -577,7 +556,6 @@ Deep Learning:
 > specific learning technique based on neural networks
 
 
-Note: Precise definitions are difficult to capture. Some simply describe AI as "everything that's hard in computer science".
 
 ----
 ## Artificial Intelligence
@@ -630,9 +608,6 @@ Russel and Norvig. "[Artificial Intelligence: A Modern Approach](https://cmu.pri
 <!-- .element: class="stretch" -->
 
 
-Note: Artificial neural networks are inspired by how biological neural networks work ("groups of chemically connected or functionally associated neurons" with synapses forming connections)
-
-From "Texture of the Nervous System of Man and the Vertebrates" by Santiago Ramón y Cajal, via https://en.wikipedia.org/wiki/Neural_circuit#/media/File:Cajal_actx_inter.jpg
 
 ----
 ## Threshold Logic Unit / Perceptron
@@ -740,9 +715,6 @@ println("Probability of Alice smoking: " +
         alg.probability(alice.smokes, true))
 ```
 
-Note: Discussed in tutorial: https://www.cra.com/sites/default/files/pdf/Figaro_Tutorial.pdf
-
-Source: https://github.com/p2t2/figaro/blob/master/FigaroExamples/src/main/scala/com/cra/figaro/example/Smokers.scala
 
 ----
 ## Probabilistic Inference
@@ -812,7 +784,6 @@ correct answer were known” (Weyuker, 1982).
 ![MRI](mri.jpg)
 <!-- .element: class="stretch" -->
 
-Notes: Application to be used in hospitals to screen for cancer, both as routine preventative measure and in cases of specific suspicions. Supposed to work together with physicians, not replace.
 
 ----
 ## The Systems Perspective
@@ -922,8 +893,6 @@ False positives: wrong prediction, false alarm, Type I error
 
 <!-- colend -->
 
-Notes: Individual false positive/negative classifications can be derived
-by focusing on a single value in a confusion matrix. False positives/recall/etc are always considered with regard to a single specific outcome.
 
 
 ----
@@ -954,7 +923,6 @@ No answer vs wrong answer?
 
 (CC BY-SA 3.0 by [BOR](https://en.wikipedia.org/wiki/Receiver_operating_characteristic#/media/File:Roccurves.png))
 
-Notes: Same concept, but plotting TPR (recall) against FPR rather than precision. Graphs closer to the top-left corner are better. Again, the area under the (ROC) curve can be measured to get a single number for comparison.
 
 
 ----
@@ -1133,8 +1101,6 @@ see also https://medium.com/@ckaestne/machine-learning-is-requirements-engineeri
 ![Machine Learning Validation vs Verification](mlvalidation.png)
 
 
-Note: see explanation at https://medium.com/@ckaestne/machine-learning-is-requirements-engineering-8957aee55ef4
-
 ----
 ## Example and Discussion
 
@@ -1177,7 +1143,6 @@ Implementation is trivial/automatically generated
 ![Temporal dependence](temporaldependence.svg)
 <!-- .element: class="stretch" -->
 
-Note: The curve is the real trend, red points are training data, green points are validation data. If validation data is randomly selected, it is much easier to predict, because the trends around it are known.
 
 
 ----
@@ -1353,9 +1318,6 @@ Christian Kaestner
 
 https://www.temi.com/
 
-Note: A model is very central to this service. Product built around
-a model. Still, lots of nonmodel code for UI, storage of customer data,
-credit card processing, ...
 
 ----
 ## Microsoft Powerpoint
@@ -1366,8 +1328,6 @@ credit card processing, ...
 Read more: [How Azure Machine Learning enables PowerPoint Designer](https://azure.microsoft.com/en-us/blog/how-azure-machine-learning-enables-powerpoint-designer/), Azure Blog, March 2020
 
 
-Note: Traditional application that uses machine learning in a few smaller
-places (more and more these days).
 
 
 ----
@@ -1380,7 +1340,6 @@ places (more and more these days).
 
 Read more: [How fall detection is moving beyond the pendant](https://www.mobihealthnews.com/content/how-fall-detection-moving-beyond-pendant), MobiHealthNews, 2019
 
-Note: Devices for older adults to detect falls and alert caretaker or emergency responders automatically or after interaction. Uses various inputs to detect falls.
 
 
 ----
@@ -1391,7 +1350,6 @@ Note: Devices for older adults to detect falls and alert caretaker or emergency 
 
 From: Sculley, D., M. Otey, M. Pohl, B. Spitznagel, J. Hainsworth, and Y. Zhou. Detecting Adversarial Advertisements in the Wild. In Proc. KDD, 2011.
 
-Note: See first homework assignment. System largely build around a model for a specific purpose but integrated into larger infrastructure.
 
 
 
@@ -1505,8 +1463,6 @@ This was 2015; many of those boxes are getting increasingly standardized these d
 Graphic from Sculley, et al. "[Hidden technical debt in machine learning systems](http://papers.nips.cc/paper/5656-hidden-technical-debt-in-machine-learning-systems.pdf)." In Proc NIPS, 2015.
 
 
-Note: Even for a single ML component and it's pipeline, there is a lot of
-infrastructure to build and serve the model.
 
 ----
 ## Thinking in Pipelines over Models
@@ -1566,7 +1522,6 @@ Suggested complementary reading: 🕮 Ajay Agrawal, Joshua Gans, Avi Goldfarb. �
 
 **Examples?**
 
-Notes: Accounting systems, inventory tracking, physics simulations, safety railguards, fly-by-wire
 
 ----
 ## Discussion: Spotify
@@ -1600,7 +1555,6 @@ May now use more predictions than before
 
 <!-- colend -->
 
-Notes: May use new, cheaper predictions for traditional tasks -> inventory and demand forcast; May now use predictions for new kinds of problems -> navigation and translation
 
 ----
 ## Predicting the Best Route
@@ -1608,11 +1562,6 @@ Notes: May use new, cheaper predictions for traditional tasks -> inventory and d
 ![Taxi in London](taxi.jpg)
 <!-- .element: class="stretch" -->
 
-Note: Cab drivers in London invested 3 years to learn streets to predict the fasted route. Navigation tools get close or better at low cost per prediction. While drivers' skills don't degrade, they now compete with many others that use AI to enhance skills; human prediction no longer scarce commodity.
-
-At the same time, the value of human judgement increases. Making more decisions with better inputs, specifying the objective.
-
-Picture source: https://pixabay.com/photos/cab-oldtimer-taxi-car-city-london-203486/
 
 ----
 ## Automation in Controlled Environments
@@ -1620,7 +1569,6 @@ Picture source: https://pixabay.com/photos/cab-oldtimer-taxi-car-city-london-203
 ![Trucks in a Mine](mine.jpg)
 
 
-Note: Source https://pixabay.com/photos/truck-giant-weight-mine-minerals-5095088/
 
 ----
 ## The Cost and Value of Data
@@ -1831,7 +1779,6 @@ Beyond prediction accuracy, what qualities may be relevant for an AI component?
 
 <!-- discussion -->
 
-Note: Collect qualities on whiteboard
 
 ----
 ## Examples of Qualities to Consider
@@ -2049,7 +1996,6 @@ CV -->|causal| IV
 
 ![CT Scan Image](ctscan.jpg)
 
-Note: ML algorithms may pick up on things that do not relate to the task but correlate with the outcome or hidden human inputs. For example, in cancer prediction, ML models have picked up on the kind of scanner used, learning that mobile scanners were used for particularly sick patients who could not be moved to the large installed scanners in a different part of the hospital.
 
 
 ----
@@ -2057,7 +2003,6 @@ Note: ML algorithms may pick up on things that do not relate to the task but cor
 
 ![Chess](chess.jpg)
 
-Note: (from Prediction Machines, Chapter 6) Early 1980s chess  program learned from Grandmaster games, learned that sacrificing queen would be a winning move, because it was occuring frequently in winning games. Program then started to sacrifice queen early.
 
 
 
@@ -2142,7 +2087,6 @@ Alternative paths: symbolic reasoning, interpretable models, and restricting pre
 
 **Examples?**
 
-Notes: Cancer prediction, sentencing + recidivism, Tesla autopilot, military "kill" decisions, powerpoint design suggestions
 
 ----
 ## Undoable Actions
@@ -2151,7 +2095,6 @@ Notes: Cancer prediction, sentencing + recidivism, Tesla autopilot, military "ki
 
 **Examples?**
 
-Notes: Smart home devices, credit card applications, Powerpoint design suggestions
 
 ----
 ## Review Interpretable Models
@@ -2296,17 +2239,13 @@ m --> Implementation
 
 ![twitter](twitter.png)
 
-Note: Source and additional reading: Raffi. [New Tweets per second record, and how!](https://blog.twitter.com/engineering/en_us/a/2013/new-tweets-per-second-record-and-how.html) Twitter Blog, 2013
 
 ----
 ![](pgh.png)
-Notes: Map of Pittsburgh. Abstraction for navigation with cars.
 ----
 ![](pgh-cycling.png)
-Notes: Cycling map of Pittsburgh. Abstraction for navigation with bikes and walking.
 ----
 ![](pgh-firezones.png)
-Notes: Fire zones of Pittsburgh. Various use cases, e.g., for city planners.
 
 ----
 
@@ -2317,7 +2256,6 @@ Notes: Fire zones of Pittsburgh. Various use cases, e.g., for city planners.
 <!-- references -->
 Ghemawat, Sanjay, Howard Gobioff, and Shun-Tak Leung. "[The Google file system.](https://ai.google/research/pubs/pub51.pdf)" ACM SIGOPS operating systems review. Vol. 37. No. 5. ACM, 2003.
 
-Notes: Scalability through redundancy and replication; reliability wrt to single points of failure; performance on edges; cost
 
 
 
@@ -2330,7 +2268,6 @@ Notes: Scalability through redundancy and replication; reliability wrt to single
 <!-- .element: class="stretch" -->
 
 
-Notes: Image: https://pixabay.com/photos/nightlife-republic-of-korea-jongno-2162772/
 
 ----
 ## Where Should the Model Live?
@@ -2344,7 +2281,6 @@ What qualities are relevant for the decision?
 <!-- split -->
 ![](googletranslate.png)
 
-Notes: Trigger initial discussion
 
 
 ----
@@ -2357,29 +2293,6 @@ Notes: Trigger initial discussion
 * Hybrid models
 
 
-Notes:
-From the reading:
-* Static intelligence in the product
-    - difficult to update
-    - good execution latency
-    - cheap operation
-    - offline operation
-    - no telemetry to evaluate and improve
-* Client-side intelligence
-    - updates costly/slow, out of sync problems
-    - complexity in clients
-    - offline operation, low execution latency
-* Server-centric intelligence
-    - latency in model execution (remote calls)
-    - easy to update and experiment
-    - operation cost
-    - no offline operation
-* Back-end cached intelligence
-    - precomputed common results
-    - fast execution, partial offline 
-    - saves bandwidth, complicated updates
-* Hybrid models
-
 
 ----
 ## Telemetry Tradeoffs
@@ -2390,10 +2303,6 @@ Estimate data volume and possible bottlenecks in system.
 
 ![](googletranslate.png)
 
-Notes: Discuss alternatives and their tradeoffs. Draw models as suitable.
-
-Some data for context:
-Full-screen png screenshot on Pixel 2 phone (1080x1920) is about 2mb (2 megapixel); Google glasses had a 5 megapixel camera and a 640x360 pixel screen, 16gb of storage, 2gb of RAM. Cellar cost are about $10/GB.
 
 
 
@@ -2498,17 +2407,13 @@ Suggested Reading: Georgi Georgiev. “[Statistical Significance in A/B Testing 
 <!-- split -->
 ![Skype report problem button](skype2.jpg)
 
-Notes:
-Expect only sparse feedback and expect negative feedback over-proportionally
 
 ----
 ![Flight cost forcast](flightforcast.jpg)
 
-Notes: Can just wait 7 days to see actual outcome for all predictions
 ----
 ![Temi Transcription Service Editor](temi.png)
 
-Notes: Clever UI design allows users to edit transcripts. UI already highlights low-confidence words, can 
 
 ----
 ![Grafana Dashboard](grafanadashboard.png)
@@ -2536,7 +2441,6 @@ Discuss: Quality measure, telemetry, operationalization, false positives/negativ
 
 ![A/B test example](ab-groove.jpg)
 
-Notes: Picture source: https://www.designforfounders.com/ab-testing-examples/
 
 
 ----
@@ -2850,11 +2754,6 @@ Further readings: Hynes, Nick, D. Sculley, and Michael Terry. [The data linter: 
 
 **how to fix?**
 
-Notes:
-  * fix1: retrain with new training data or relabeled old training data
-  * fix2: retrain with new data
-  * fix3: fix pipeline, retrain entirely
-
 
 ----
 ## Watch for Degradation in Prediction Accuracy
@@ -2899,10 +2798,6 @@ Generative model used to provide *probabilistic* training labels. *Discriminativ
 https://www.snorkel.org/, https://www.snorkel.org/blog/snorkel-programming; 
 Ratner, Alexander, et al. "[Snorkel: rapid training data creation with weak supervision](https://link.springer.com/article/10.1007/s00778-019-00552-1)." The VLDB Journal 29.2 (2020): 709-730.
 
-Note:
-Emphasize the two different models. One could just let all labelers vote, but generative model identifies common correlations and disagreements and judges which labelers to trust when (also provides feedback to label function authors), resulting in better labels.
-
-The generative model could already make predictions, but it is coupled tightly to the labeling functions. The discriminative model is a traditional model learned on labeled training data and thus (hopefully) generalizes beyond the labeling functions. It may actually pick up on very different signals. Typically this is more general and robust for unseen data.
 
 
 ----
@@ -3135,7 +3030,6 @@ Molham Aref "[Business Systems with Machine Learning](https://www.youtube.com/wa
 
 ![Data warehouse](datawarehouse.jpg)
 
-Note: Image source: https://commons.wikimedia.org/wiki/File:Data_Warehouse_Feeding_Data_Mart.jpg
 
 ----
 ## Distributed Gradient Descent
@@ -3150,14 +3044,6 @@ Note: Image source: https://commons.wikimedia.org/wiki/File:Data_Warehouse_Feedi
 [![Parameter Server](parameterserver2.png)](https://www.usenix.org/system/files/conference/osdi14/osdi14-paper-li_mu.pdf)
 <!-- .element: class="stretch" -->
 
-Note:
-Multiple parameter servers that each only contain a subset of the parameters, and multiple workers that each require only a subset of each
-
-Ship only relevant subsets of mathematical vectors and matrices, batch communication
-
-Resolve conflicts when multiple updates need to be integrated (sequential, eventually, bounded delay)
-
-Run more than one learning algorithm simulaneously
 
 ----
 ## Queuing Theory
@@ -3308,7 +3194,6 @@ Source: https://blog.octo.com/en/jenkins-quality-dashboard-ios-development/
 
 http://principlesofchaos.org
 
-Notes: Chaos Engineering is the discipline of experimenting on a distributed system in order to build confidence in the system’s capability to withstand turbulent conditions in production. Pioneered at Netflix
 
 
 ----
@@ -3386,7 +3271,6 @@ Eric Breck, Shanqing Cai, Eric Nielsen, Michael Salib, D. Sculley. [The ML Test 
 
 ![Flood and Fire Control](interactionflood.png)
 
-Notes: Flood control and fire control work independently, but interact on the same resource (water supply), where flood control may deactivate the water supply to the sprinkler system in case of a fire
 
 
 ----
@@ -3602,7 +3486,6 @@ Matthews. "[Algorithmic Accountability: A Primer](https://datasociety.net/wp-con
 "*I could have raised it higher and made more profits for our shareholders. Which is my primary duty.*" -- Martin Shkreli
 
 
-Note: Image source: https://en.wikipedia.org/wiki/Martin_Shkreli#/media/File:Martin_Shkreli_2016.jpg
 
 
 ----
@@ -3642,11 +3525,6 @@ Note: Image source: https://en.wikipedia.org/wiki/Martin_Shkreli#/media/File:Mar
 
 ![Automated food ordering system](automation.jpg)
 
-Notes: The dangers and risks of automating jobs.
-
-Discuss issues around automated truck driving and the role of jobs.
-
-See for example: Andrew Yang. The War on Normal People. 2019
 
 
 ----
@@ -3656,9 +3534,6 @@ See for example: Andrew Yang. The War on Normal People. 2019
 <!-- .element: class="stretch" -->
 
 
-Notes: Recommendations for further readings: https://www.nytimes.com/column/kara-swisher, https://podcasts.apple.com/us/podcast/recode-decode/id1011668648
-
-Also isolation, Cambridge Analytica, collaboration with ICE, ...
 
 ----
 ## Weapons, Surveillance, Suppression
@@ -3765,12 +3640,6 @@ human-like biases](http://cs.bath.ac.uk/~jjb/ftp/CaliskanEtAl-authors-full.pdf)_
 
 ![Image search for "CEO"](ceo.png)
 
-Note: "An example of this type of bias can be found in a 2018 image search
-result where searching for women CEOs ultimately resulted in fewer female CEO images due
-to the fact that only 5% of Fortune 500 CEOs were woman—which would cause the search
-results to be biased towards male CEOs. These search results were of course reflecting
-the reality, but whether or not the search algorithms should reflect this reality is an issue worth
-considering."
 
 
 ----
@@ -3780,10 +3649,6 @@ considering."
 
 ![](amazon-hiring.png)
 
-Note:
-* Bias in the dataset caused by humans
-* Some labels created manually by employers
-* Dataset "tainted" by biased human judgement
 
 
 ----
@@ -3792,11 +3657,6 @@ Note:
 *Crime prediction for policing strategy*
 
 ![](crime-map.jpg)
-
-Note: Initial bias in the data set, amplified 
-through feedback loop
-
-Other example: Street Bump app in Boston (2012) to detect potholes while driving favors areas with higher smartphone adoption
 
 
 ----
@@ -3808,12 +3668,6 @@ Other example: Street Bump app in Boston (2012) to detect potholes while driving
 
 Example: "Shirley Card" used for color calibration
 
-Note:
-* Less data available for certain parts of the population
-* Example: "Shirley Card"
-    * Used by Kodak for color calibration in photo films
-    * Most "Shirley Cards" used Caucasian models
-    * Poor color quality for other skin tones
 
 
 ----
@@ -4344,10 +4198,6 @@ Can measure how well $g$ fits $f$ with common model quality measures, typically 
 
 **Advantages? Disadvantages?**
 
-Notes:
-Flexible, intuitive, easy approach, easy to compare quality of surrogate model with validation data ($R^2$).
-But: Insights not based on real model; unclear how well a good surrogate model needs to fit the original model; surrogate may not be equally good for all subsets of the data; illusion of interpretability.
-Why not use surrogate model to begin with?
 
 
 ----
@@ -4360,7 +4210,6 @@ Why not use surrogate model to begin with?
 Source: 
 Christoph Molnar. "[Interpretable Machine Learning: A Guide for Making Black Box Models Explainable](https://christophm.github.io/interpretable-ml-book/)." 2019
 
-Note: Model distinguishes blue from gray area. Surrogate model learns only a while line for the nearest decision boundary, which may be good enough for local explanations.
 
 
 ----
@@ -4501,9 +4350,6 @@ Compute influence of every data point and create new model to explain influence 
 Source: 
 Christoph Molnar. "[Interpretable Machine Learning](https://christophm.github.io/interpretable-ml-book/)." 2019
 
-Note: Example from cancer prediction. The influence analysis tells us that the model becomes increasingly unstable when
-predicting cancer for higher ages. This means
-that errors in these instances can have a strong effect on the model.
 
 ----
 ![Positive example](https://pair.withgoogle.com/assets/ET1_aim-for.png)
@@ -4786,10 +4632,6 @@ quality
     * models trained on public data set (e.g., ImageNet)
     * retrained automatically on telemetry
 
-Notes:
-* Example: Anti-virus (AV) scanner
-    * Online platform for submission of potentially malicious code
-  * Some AV company (allegedly) poisoned competitor's model
   
 
 ----
@@ -4912,7 +4754,6 @@ From Goodfellow et al (2018). [Making machine learning robust against adversaria
 ----
 [![Article: NetFlix Cancels Recommendation Contest After Privacy Lawsuit](wired_netflix.png)](https://www.wired.com/2010/03/netflix-cancels-contest/)
 
-Note: "an in-the-closet lesbian mother sued Netflix for privacy invasion, alleging the movie-rental company made it possible for her to be outed when it disclosed insufficiently anonymous information about nearly half-a-million customers as part of its $1 million contest."
 
 ----
 ![Image recovered from a DNN](image_recovery.png)
@@ -4943,11 +4784,6 @@ graph LR
 [![Generated image of a woman](gan_women.jpg)](https://commons.wikimedia.org/wiki/File:Woman_2.jpg)
 <!-- .element: class="stretch" -->
 
-Notes:
-* Generative adversarial networks: 2 models, one producing samples and one discriminating real from generated samples
-  - Learn data distribution of training data
-  - Produce prototypical images, e.g. private jets
-  - Deep fakes
 
 
 
@@ -4962,18 +4798,15 @@ Notes:
 ----
 ![Amazon verified reviews](verifiedreviews.png)
 
-Note: Raise the price of wrong inputs
 
 ----
 ![Youtube Spam](youtube_spam.png)
 
-Note: Reporting function helps to crowdsource detection of malicious content and potentially train a future classifier (which again can be attacked)
 
 ----
 ![Too many attempts warning on Android](android_login.png)
 <!-- .element: class="stretch" -->
 
-Note: Block system after login attempts with FaceID or fingerprint 
 
 ----
 ## Architecture Diagram for Threat Modeling
@@ -5143,18 +4976,6 @@ too close to other cars by exploiting certain sensor vulnerabilities so that it 
 
 ![Uber crash](ubercrash.png)
 
-Note:
- > investigators instead highlighted the many human errors that culminated in the death of 49-year-old Elaine Herzberg. Driver was reportedly streaming an episode of The Voice on her phone, which is in violation of Uber’s policy banning phone use. In fact, investigators determined that she had been glancing down at her phone and away from the road for over a third of the total time she had been in the car up until the moment of the crash.
-
- > woefully inadequate safety culture
-
-
- > federal government also bore its share of responsibility for failing to better regulate autonomous car operations
- 
- > The company also lacked a safety division and did not have a dedicated safety manager responsible for risk assessment and mitigation. In the weeks before the crash, Uber made the fateful decision to reduce the number of safety drivers in each vehicle from two to one. That decision removed important redundancy that could have helped prevent Herzberg’s death.
-
- (from https://www.theverge.com/2019/11/20/20973971/uber-self-driving-car-crash-investigation-human-error-results)
-
 ----
 ![SAE Levels](j3016-levels-of-driving-automation-12-10.jpg)
 
@@ -5207,9 +5028,6 @@ Borg, Markus, et al. "[Safely entering the deep: A review of verification and va
 <!-- .element: class="stretch" -->
 
 
-Notes: Recommendations for further readings: https://www.nytimes.com/column/kara-swisher, https://podcasts.apple.com/us/podcast/recode-decode/id1011668648
-
-Also isolation, Cambridge Analytica, collaboration with ICE, ...
 
 ----
 ## Environmental: Energy Consumption
