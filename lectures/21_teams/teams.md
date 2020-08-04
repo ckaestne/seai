@@ -28,6 +28,21 @@ Required reading: Kim, Miryung, Thomas Zimmermann, Robert DeLine, and Andrew Beg
 
 
 ---
+# Case Study: Depression Detection on Social Media
+
+![TikTok logo](tiktok.jpg)
+
+
+----
+## The Project
+
+* Social media company of about 1400 employees in the US, 300 developers and data scientists
+* Use sentiment analysis on video data (and transcripts) to detect depression
+* Planned interventions through recommending different content and showing ads for getting support, design for small group features
+* Collaboration with mental health professionals and ML researches at top university
+
+
+---
 <svg version="1.1" viewBox="0.0 0.0 800 400" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
         <style>
     text { font: 60px sans-serif; }
@@ -156,6 +171,13 @@ e.g.  Yorgos Askalidis
 *More or less engineering focus? More or less statistics focus? ...*
 
 ----
+## Software Engineering Specializations
+
+<!-- discussion -->
+
+Note: Architectures, requirements engineers, testers, site reliability engineers, devops, safety, security, UIX, distributed systems, ...
+
+----
 ## AI-Enabled Systems
 
 ![Temi](temi.png)
@@ -164,7 +186,11 @@ e.g.  Yorgos Askalidis
 ----
 ## Other Roles in AI Systems Projects?
 
-<!-- discussion -->
+<!-- colstart -->
+![TikTok logo](tiktok.jpg)
+<!-- col -->
+![Temi screenshot](temi.png)
+<!-- colend -->
 
 ----
 ## Other Roles in AI Systems Projects?
@@ -174,6 +200,8 @@ e.g.  Yorgos Askalidis
 * Project management
 * Designers, UI experts
 * Operations 
+* Safety, security specialist
+* Big data specialist 
 * Lawyers
 * Social scientists, ethics
 * ...
@@ -264,9 +292,14 @@ Banking app; 15 developers and data analysts
 
 <!-- colstart -->
 ![Small team](team15.jpg)
+
+*(Instagram had 13 employees when they were bought for 1B in 2012)*
 <!-- col -->
 ![PNC app](pnc.jpg)
 <!-- colend -->
+
+
+
 
 ----
 ## How to structure teams?
@@ -411,6 +444,12 @@ Task congruence,
 IRC communication congruence
 
 ----
+## Team Structure for Social Media/Depression Project?
+
+![TikTok logo](tiktok.jpg)
+
+
+----
 ## Engineering Recommendations in AI-Enabled Systems?
 
 <!-- discussion -->
@@ -471,6 +510,12 @@ IRC communication congruence
         <text x=570 y=160 dominant-baseline="middle" text-anchor="middle">Compliance</text>
         <text x=570 y=240 dominant-baseline="middle" text-anchor="middle">Lawyers</text>
 </svg> 
+
+
+----
+## Conflicting Goals?
+
+![TikTok logo](tiktok.jpg)
 
 
 ----
@@ -551,7 +596,8 @@ Mantle, Mickey W., and Ron Lichty. [Managing the unmanageable: rules, tools, and
 ----
 ## Allocation of Data Science/Software Engineering Expertise?
 
-<!-- discussion -->
+![TikTok logo](tiktok.jpg)
+
 
 ----
 ## Commitment & Accountability
@@ -658,7 +704,8 @@ Sangeeta Badal. [The Business Benefits of Gender Diversity](http://www.gallup.co
 ----
 ## Groupthink and AI-Enabled System Projects?
 
-<!-- discussion -->
+![TikTok logo](tiktok.jpg)
+
 
 ----
 ## Groupthink and AI
