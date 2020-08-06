@@ -8,7 +8,7 @@ license: Creative Commons Attribution 4.0 International (CC BY 4.0)
 
 # Summary & Reflection
 
-(424 slides in 40 min)
+(the last one)
 
 Christian Kaestner
 
@@ -18,6 +18,8 @@ Christian Kaestner
 
 <!-- colstart -->
 **Looking back at the semester**
+
+(424 slides in 40 min)
 
 <!-- col -->
 
