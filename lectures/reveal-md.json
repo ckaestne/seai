@@ -3,6 +3,6 @@
   "theme": "white",
   "css": "_assets/cmu.css",
   "scripts": "_assets/mermaid.min.js,_assets/loadmymarkdown.js",
-  "staticDirs": "_assets/plugin,_assets/img",
+  "staticDirs": "_assets",
   "listingTemplate": "_assets/listing.html"
 }

@@ -1,74 +1,63 @@
 digraph G {
 
-    subgraph intro {
-        node [color=goldenrod3]
+    "Introduction and Motivation"
 
-        "Engineering Challenges" -> "Components of an AI-Enabled System" ->"Introduction and Motivation"    
-        "SE Bootcamp" -> "Introduction and Motivation"
-    }
+    "Introduction to ML"
+    
+    "Model Quality" -> "Introduction to ML"
+    
+    "System Thinking" -> "Model Quality"
+    "Goals and Success Measures" -> "System Thinking"
+    "Risk and Planning for Mistakes"
+    
+    "Tradeoffs among Modeling Techniques" -> "Introduction to ML"
 
 
-    subgraph requirements {    
-        node [color=aquamarine4]
-        "Dealing with Mistakes" -> "Engineering Challenges"
-    }
+    "Software Architecture"
     
+    "Quality Assessment in Production"
+    "Deployment and Infrastructure Quality"
+    
+    "Ethics + Fairness"
+    
+    "Data Quality" -> "Model Quality"
+    
+    "Managing and Processing Large Datasets"
+    
+    "Safety and Robustness"
+    "Security, Adversarial Learning, and Feedback Loops"
+    "Explainability & Interpretability"
+    "Debugging, Data Provenance, and Reproducability"
+    "Teams"
+    "Deployment and Operations at Scale"
 
-    subgraph architectureAndOps {
-        node [color=purple]
-        "Tradeoffs among AI Techniques" -> "Components of an AI-Enabled System"
-        "Software Architecture" -> "Components of an AI-Enabled System"
-        "Data Provenance, Reproducability, and Explainability" -> "Managing Large Datasets" -> "Scalability and distributed systems"
-        "Configuration Management and Operations at Scale" -> "Scalability and distributed systems"
-    }
-    
-    subgraph qa {
-        node [color=blue]
-        "Model Quality" 
-        
-        "Data Quality" 
-        
-        "Test and Deployment Automation"-> "Components of an AI-Enabled System"
-        "Test and Deployment Automation" -> "Data Quality"
-        
-        "Experimentation" -> "Model Quality"
-        
-        "Ethics + Fairness" -> Experimentation
-        
-        "Safety" -> "Dealing with Mistakes"
-    
-        "Security, Adversarial Learning, and Feedback Loops"   
-        "Security, Adversarial Learning, and Feedback Loops" -> "Model Quality"
-    }
-    
 
-    "Process and Team Reflections"
-    
-    "Startup"
-    
-    "Usability"
-
-    "Symbolic AI" -> "Tradeoffs among AI Techniques"
     
     subgraph homeworks {
         node [color=chocolate1,style=filled]
-        "HW: Case Study" ->"Introduction and Motivation"   
-        "HW: Modeling Basics" -> "Components of an AI-Enabled System"
-        "HW: AI Tradeoffs" -> "Tradeoffs among AI Techniques"
-        "HW: AI Tradeoffs" -> "HW: Modeling Basics"
-        "HW: Architecture" -> "Software Architecture"
-        "HW: Requirements" -> "Dealing with Mistakes"
-        "HW: Quality"-> "Model Quality"
-        "HW: Quality" -> "Data Quality"
-        "HW: Quality" -> "HW: Modeling Basics"
-        "HW: Quality" -> "Experimentation"
-        "HW: Test Automation" -> "Test and Deployment Automation"
-        "HW: Test Automation" -> "Data Provenance, Reproducability, and Explainability" -> "Managing Large Datasets"
-        "HW: Test Automation" -> "Configuration Management and Operations at Scale" 
-        "HW: Test Automation" -> "HW: Quality"
-        "HW: Fairness" -> "Ethics + Fairness"
-        "HW: Fairness" -> "HW: Quality"
-        "HW: Feedback Loop" -> "Security, Adversarial Learning, and Feedback Loops"
-        "HW: Feedback Loop" -> "HW: Quality"
+        "I: Modeling Basics" -> "Model Quality"
+        "I: Modeling Basics" -> "Introduction to ML"
+
+        "I: ML Algorithm (Bonus)" -> "Introduction to ML"
+
+        "I: Case Study" ->"Introduction and Motivation"   
+
+        "I: AI Tradeoffs" -> "Tradeoffs among AI Techniques"
+        
+        "I: Design" -> "Risk and Planning for Mistakes"
+        "I: Design" -> "Software Architecture"
+        "I: Design" -> "Goals and Success Measures"
+        
+        "I: Fairness" -> "Ethics + Fairness"
+
+        "I: Tool Exploration"
+
+        "P: Deployment and Infrastructure Quality" -> "Deployment and Infrastructure Quality"
+        "P: Testing in Production" -> "P: Deployment and Infrastructure Quality"
+        "P: Testing in Production" -> "Quality Assessment in Production"
+        "P: Testing in Production" -> "Data Quality"
+        "P: System Monitoring" -> "Security, Adversarial Learning, and Feedback Loops"
+        "P: System Monitoring" -> "P: Testing in Production"
     }
 }
+
