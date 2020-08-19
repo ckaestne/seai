@@ -1,13 +1,16 @@
-AKA **Production ML**, **Responsible AI**, **MLOps**, **ML Engineering**, **Full-Stack ML**, **AI Systems Engineering**, covering deployment, testing, monitoring, debugging, fairness, robustness, safety, business decisions…
+# Software Engineering for AI-Enabled Systems (SE4AI)
 
+### CMU 17-445/645, Fall 2020
+
+(a.k.a. **Production ML**, **Responsible AI**, **MLOps**, **ML Engineering**, **Full-Stack ML**, or **AI Systems Engineering**)
+
+***
 
 
 <span style="color:red">**This is the site for the Fall 2020 offering of this course.
 For earlier offerings see websites for [Fall 2019](https://ckaestne.github.io/seai/F2019) or [Summer 2020](https://ckaestne.github.io/seai/S2020).** </span> This Fall 2020 offering is designed for students with some data science experience (e.g., has taken a machine learning course, has used sklearn), but will not expect a software engineering background.
 
 For researchers, educators, or others interested in this topic, we share all course material, including slides and assignments, under a creative commons license on GitHub (https://github.com/ckaestne/seai/) and have recently published an article describing the rationale and the design of this course: [Teaching Software Engineering for AI-Enabled Systems](https://arxiv.org/abs/2001.06691). Video recordings of the Summer 2020 offering are online on the [course page](https://ckaestne.github.io/seai/S2020/#course-content). We would be happy to see this course or a similar version taught somewhere else. See also an [annotated bibliography](https://github.com/ckaestne/seaibib) on the topic.
-
-
 
 ## Course Description
 
