@@ -11,7 +11,7 @@
 | Mon, Sep 9  | Challenges and Measurements   | Hidden Technical Debt in Machine Learning Systems & Building Intelligent Systems, Ch. 4    |   |
 | Wed, Sep 11 | Requirements and Risks  | Building Intelligent Systems, Ch. 6+7+24  | G1: Modeling Basics |
 | Mon, Sep 16 | Tradeoffs among AI Techniques   |  Building Intelligent Systems, Ch. 16-18 |   |
-| Wed, Sep 18 |  Software Architecture of AI-enabled Systems |  Software architecture in practice, Ch. 1 & Building Intelligent Systems, Ch. 13 |  I2: Requirements/Riskhttps://github.com/ckaestne/seai/blob/master/assignments/I2_requirements_risks/assignment03.md |
+| Wed, Sep 18 |  Software Architecture of AI-enabled Systems |  Software architecture in practice, Ch. 1 & Building Intelligent Systems, Ch. 13 |  I2: Requirements/Risk|
 | Wed, Sep 23 | Model Quality   |  Building Intelligent Systems, Ch. 15+19 |   |
 | Mon, Sep 25 | Tradeoffs among AI Techniques: Presentations    |   | G2: Technique Tradeoff Analysis |
 | Mon, Sep 30 | Experimentation | Statistical Significance in A/B Testing  |   |
