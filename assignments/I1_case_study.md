@@ -41,8 +41,8 @@ Submit your answers as a single PDF document to Gradescope by [see Canvas]. Make
 ## Grading
 
 The assignment is worth 100 points. We will assign credit as follows:
-* 10p: The document is clearly structured, such that it is clear which text belongs to which question.
-* 20p: A discussion of the problem's difficulty that explains (a) why the problem is hard and (b) why machine learning is a suitable solution.
+* 10p: The document is clearly structured, such that it is clear which text belongs to which question and when uploading the solution to Gradescope, questions are mapped to the relevant pages (see “Assign” in the [Gradescope documentation](https://gradescope-static-assets.s3.amazonaws.com/help/submitting_hw_guide.pdf)).
+* 20p: A discussion of the problem's difficulty that explains (a) why the problem is hard and (b) why machine learning rather than a rule-based implementation is a suitable solution.
 * 20p: Identification of at least 3 important qualities for the system (other than accuracy measures of the used model) with a justification explaining why the quality is important. All qualities must be grounded in the report of the case study.
 * 10p: For each important quality, a description of how the team has measured (if described in the case study) or could measure (if not described in the report) whether the quality is sufficiently achieved.
 * 20p: Identification of at least 3 engineering challenges in engineering, deploying, and operating the system, that the team faced in the case study. The challenges must be grounded in reporting of the case study. All challenges must relate to engineering aspects, not data-science aspects in building the original model.
