@@ -4,7 +4,7 @@
 
 ## Overview
 
-Building a system with an AI component requires more than building and tuning a model. Understanding challenges in a specific project may help deriving insights for other projects. In this assignment, you will analyze the report for on of two projects to identify software engineering concerns in building a production ML system.
+Building a system with an AI component requires more than building and tuning a model. Understanding challenges in a specific project may help deriving insights for other projects. In this assignment, you will analyze the report for one of two projects to identify software engineering concerns in building a production ML system.
 
 Learning goals:
 * Understand the scope of software engineering challenges when building an AI-enabled system
@@ -18,10 +18,10 @@ Pick one of the following two articles about developing and deploying a producti
 * Sendak, M., et al. [Real-World Integration of a Sepsis Deep Learning Technology Into Routine Clinical Care: Implementation Study](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7391165/). *JMIR Medical Informatics* 8.7 (2020): e15182.
 * Sculley, D., Matthew Eric Otey, Michael Pohl, Bridget Spitznagel, John Hainsworth, and Yunkai Zhou. [Detecting Adversarial Advertisements in the Wild](https://research.google/pubs/pub37195.pdf). In *Proceedings of the 17th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining*, pp. 274-282. ACM, 2011.
 
-The first article focuses on a recent medical system with a deep learning component deployed at a hospital, the second on detecting malicious ads at Google about a decade ago. Both describe the system and efforts and challenges in deploying the system in production.
+The first article focuses on a recent medical system with a deep learning component deployed at a hospital, the second on detecting malicious ads at Google about a decade ago. Both describe the design of the system as well as efforts and challenges in deploying it in production.
 
 
-Read one of the papers and if necessary familiarize yourself with terminology and additional context, using other web and research publications on the topic as needed.
+Read one of the papers and if necessary, familiarize yourself with terminology and additional context, using other web and research publications on the topic as needed.
 
 
 Answer the questions below (<1 page per question). Wherever reasonable, provide evidence, for example by referring to specific parts of the source material. Your answers may contain opinions and speculations, but make sure that they are clearly recognizable as such and clearly separate opinions/speculations from facts. 
@@ -31,7 +31,7 @@ Concise and precise answers with a clear argument and structure are preferred ov
 Questions:
 
 1. **Question 1:** What makes the problem (sepsis detection/detecting adversarial advertisement) hard? Specifically, why is a machine-learning solution used rather than a some well-specified rules implemented in traditional code?
-2. **Question 2:** What qualities were important to the team in building the system, beyond prediction accuracy? Identify relevant qualities, each briefly explain why they are important for the project, and give a brief description of how the team has checked or could check whether those qualities are sufficiently achieved in the project (e.g., with specific way to measure the quality).
+2. **Question 2:** What qualities were important to the team in building the system, beyond prediction accuracy? Identify relevant qualities, briefly explain why they are important for the project, and give a brief description of how the team has checked or could check whether those qualities are sufficiently achieved in the project (e.g., with specific way to measure the quality).
 3. **Question 3:** What are *engineering* challenges, outside of the initial model development, that emerged when turning the initial idea into a production system and how were those addressed? Note, this question specifically does not ask about data-science difficulties in building the initial model (getting data, data cleaning, feature engineering, selecting a learning technique), but about challenges that occur when building a production system, e.g., around deployment, maintenance and evolution, human-user interactions, safety. Identify at least three engineering challenges for which the team had to make decisions. Justify why these were important challenges, what potential options the team had to address them, and summarize how the team actually addressed them.
 4. **Question 4:** What lessons can be learned for future software projects with machine-learning components of similar scale or importance? Identify and briefly describe at least two *engineering* lessons that are worth sharing with other teams building AI-enabled systems, especially teams that are new to using ML techniques. Again, lessons should relate to the engineering, deployment, or operation of a production system, not the initial model development.
 
