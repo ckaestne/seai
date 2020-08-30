@@ -136,13 +136,13 @@ We will assign readings for most classes and post a corresponding quiz on Canvas
 Every student receives 7 tokens that they can spend throughout the semester in the following ways:
 
 * For each token a student can submit a homework assignment 1 day late (with 7 tokens a student can submit multiple homeworks one day late each or a single homework up to 7 days late)
-* For two tokens a student can redo an individual homework assignment and resubmit. The earlier submission is discarded and the regraded assignment counts toward the final grade. Each homework can be resubmitted only once.
+* For three tokens a student can redo an individual homework assignment and resubmit. The earlier submission is discarded and the regraded assignment counts toward the final grade. Each homework can be resubmitted only once.
 * For one token a student can submit a reading quiz late (any time before the final presentation) or resubmit a graded reading quiz.
 * Remaining tokens at the end of the semester are counted as one participation day each.
 
 If a student runs out of tokens, individual assignments receive a penalty of 15% per day.
 
-Every team independently receives 7 tokens that they can spend for extensions of any deadline (1 token each, except final presentation deadline) or to resubmit any milestone (2 tokens each, only once per milestone). If a team runs of of tokens, late submissions in group assignments will receive feedback but no credit.
+Every team independently receives 7 tokens that they can spend for extensions of any deadline (1 token each, except final presentation deadline) or to resubmit any milestone (3 tokens each, only once per milestone). If a team runs of of tokens, late submissions in group assignments will receive feedback but no credit.
 
 Exceptions to this policy will be made at discretion of the instructor in important circumstances, almost always involving a family or medical emergency — you can ask your academic advisor or the Dean of Student Affairs requesting the exception on your behalf. For accommodations related to remote teaching, we try to be flexible: please contact the instructors. Please communicate also with your team about potential timing issues.
 
