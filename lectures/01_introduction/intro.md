@@ -155,10 +155,19 @@ Idea: Let's commercialize the software and sell to academics and conference orga
 
 <!-- discussion -->
 
+----
+## Qualities of Interest ("ilities")
+
+* Quality is about more than the absence of defects
+* Quality in use (effectiveness, efficiency, satisfaction, freedom of risk, ...)
+* Product quality (functional correctness and completeness, performance efficiency, compatibility, usability, dependability, scalability, security, maintainability, portability, ...)
+* Process quality (manageability, evolvability, predictability, ...)
+* 
+* "Quality is never an accident; it is always the result of high intention, sincere effort, intelligent direction and skillful execution; it represents the wise choice of many alternatives." (many attributions)
 
 ----
 
-## What qualities are important for a good commercial product?
+## What qualities are important for a good commercial transcription product?
 
 <!-- discussion -->
 
