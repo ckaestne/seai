@@ -5,7 +5,7 @@
 | Date  | Topic | Reading | Assignment due |
 | -     | -     | -       | -              |
 | Mon, Aug 31 | Introduction and Motivation  | |  |
-| Wed, Sep 02 | From Models to AI-Enabled Systems (Systems Thinking)  | [Building Intelligent Systems](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436), Ch. 5 and [Hidden Technical Debt in Machine Learning Systems](http://papers.nips.cc/paper/5656-hidden-technical-debt-in-machine-learning-systems.pdf) |  |
+| Wed, Sep 02 | From Models to AI-Enabled Systems (Systems Thinking)  | [Building Intelligent Systems](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436), Ch. 5 |  |
 | Fri, Sep 04 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) Remote work and collaboration, Git | |  |
 | Mon, Sep 07 | **Labor day, no class** | |  |
 | Wed, Sep 09 | Model Quality and Software Testing | [Building Intelligent Systems](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436), Ch. 19-20 and [Semantically equivalent adversarial rules for debugging NLP models](https://www.aclweb.org/anthology/P18-1079.pdf) | I1: Case Study |
