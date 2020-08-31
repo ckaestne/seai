@@ -102,6 +102,8 @@ We are software engineers.
         <text x=570 y=240 dominant-baseline="middle" text-anchor="middle">Engineers</text>
 </svg>
 
+and Domain specialists + Operators + Business team + Project managers + Designers, UI Experts + Safety, security specialists + Lawyers + Social scientists + ...
+
 ---
 
 # Agenda
@@ -397,7 +399,7 @@ Supplemented with research articles, blog posts, videos, podcasts, ...
     - Monitoring
     - Final presentation
 
-* Due Wednesday night, see schedule.
+* Usually due Wednesday night, see schedule.
 
 ----
 ## Recitations
@@ -430,7 +432,7 @@ First recitation on Friday: remote work and collaboration + Git
 * Assignments broken down into expectations with point values, each graded pass/fail
 * You should be able to tell what grade you will get for an assignment when you submit it, depending on what work you chose to do
 
-[Example]
+[[Example]](https://github.com/ckaestne/seai/blob/F2020/assignments/I1_case_study.md#grading)
 
 
 
@@ -472,7 +474,7 @@ First recitation on Friday: remote work and collaboration + Git
 ----
 ## Teamwork
 
-* Teams stay together for project throughout semester, starting in next week
+* Teams stay together for project throughout semester, starting next week
 * Please fill out survey after class
 * Some advice in lecture + we'll help with debugging team issues
 * Peer grading on all milestones (based on citizenship on team)
