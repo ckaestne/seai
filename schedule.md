@@ -4,11 +4,11 @@
 
 | Date  | Topic | Reading | Assignment due |
 | -     | -     | -       | -              |
-| Mon, Aug 31 | Introduction and Motivation  | |  |
+| Mon, Aug 31 | [Introduction and Motivation](https://ckaestne.github.io/seai/F2020/slides/01_introduction/intro.html#/) ([md](https://github.com/ckaestne/seai/blob/F2020/lectures/01_introduction/intro.md), [pdf](https://ckaestne.github.io/seai/F2020/slides/01_introduction/intro.pdf)) | |  |
 | Wed, Sep 02 | From Models to AI-Enabled Systems (Systems Thinking)  | [Building Intelligent Systems](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436), Ch. 5 and [Hidden Technical Debt in Machine Learning Systems](http://papers.nips.cc/paper/5656-hidden-technical-debt-in-machine-learning-systems.pdf) |  |
 | Fri, Sep 04 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) Remote work and collaboration, Git | |  |
 | Mon, Sep 07 | **Labor day, no class** | |  |
-| Wed, Sep 09 | Model Quality and Software Testing | [Building Intelligent Systems](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436), Ch. 19-20 and [Semantically equivalent adversarial rules for debugging NLP models](https://www.aclweb.org/anthology/P18-1079.pdf) | I1: Case Study |
+| Wed, Sep 09 | Model Quality and Software Testing | [Building Intelligent Systems](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436), Ch. 19-20 and [Semantically equivalent adversarial rules for debugging NLP models](https://www.aclweb.org/anthology/P18-1079.pdf) | [I1: Case Study](https://github.com/ckaestne/seai/blob/F2020/assignments/I1_case_study.md) |
 | Fri, Sep 11 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) Apache Kafka | |  |
 | Mon, Sep 14 | Quality Assessment in Production | [Building Intelligent Systems](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436), Ch. 15 |  |
 | Wed, Sep 16 | Process & Technical Debt  | |  |
