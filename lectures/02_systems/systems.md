@@ -60,6 +60,7 @@ class Algorithms {
 ## Contracts in ML?
 
 ![Vision contract](vision.jpg)
+<!-- .element: class="stretch" -->
 
 **Q. Is this the same kind of contract as in software?**
 
