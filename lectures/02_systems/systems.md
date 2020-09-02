@@ -13,7 +13,7 @@ Eunsuk Kang
 <!-- references -->
 (With slides adopted from Christian Kaestner)
 
-* 🕮 Hulten, Geoff. "Building Intelligent Systems: A Guide to Machine Learning Engineering." (2018), Chapters 5 (Components of Intelligent Systems).
+* Hulten, Geoff. "Building Intelligent Systems: A Guide to Machine Learning Engineering." (2018), Chapters 5 (Components of Intelligent Systems).
 
 ---
 
@@ -59,7 +59,7 @@ class Algorithms {
 ----
 ## Contracts in ML?
 
-![Vision contract](vision.png)
+![Vision contract](vision.jpg)
 <!-- .element: class="stretch" -->
 
 **Q. Is this the same kind of contract as in software?**
@@ -293,7 +293,7 @@ Leyla Acaroglu. "[Tools for Systems Thinkers: The 6 Fundamental Concepts of Syst
 (Using Hulten's Terminology)
 
 <!-- references -->
-* 🕮 Hulten, Geoff. "Building Intelligent Systems: A Guide to Machine Learning Engineering." (2018).
+* Hulten, Geoff. "Building Intelligent Systems: A Guide to Machine Learning Engineering." (2018).
 
 ----
 ## Elements of an Intelligent System
