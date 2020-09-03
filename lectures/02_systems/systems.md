@@ -351,6 +351,7 @@ predictions to user; eliciting & collecting feedback (telemetry)
 ## Defining Meaningful Objectives
 
 * What is the system trying to achieve?
+* **System** objective, not model qualities
 * Properties of meaningful objectives
   <!-- .element: class="fragment" -->
   * Measurable: Enables tracking & objective comparison
