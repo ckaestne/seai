@@ -5,8 +5,8 @@
 | Date  | Topic | Reading | Assignment due |
 | -     | -     | -       | -              |
 | Mon, Aug 31 | [Introduction and Motivation](https://ckaestne.github.io/seai/F2020/slides/01_introduction/intro.html#/) ([md](https://github.com/ckaestne/seai/blob/F2020/lectures/01_introduction/intro.md), [pdf](https://ckaestne.github.io/seai/F2020/slides/01_introduction/intro.pdf)) | |  |
-| Wed, Sep 02 | [From Models to AI-Enabled Systems (Systems Thinking)](https://ckaestne.github.io/seai/F2020/slides/02_systems/systems.html#/) | [Building Intelligent Systems](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436), Ch. 5 |  |
-| Fri, Sep 04 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) Remote work and collaboration, Git | |  |
+| Wed, Sep 02 | [From Models to AI-Enabled Systems (Systems Thinking)](https://ckaestne.github.io/seai/F2020/slides/02_systems/systems.html#/) ([md](https://github.com/ckaestne/seai/blob/F2020/lectures/02_systems/systems.md), [pdf](https://ckaestne.github.io/seai/F2020/slides/02_systems/systems.pdf)) | [Building Intelligent Systems](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436), Ch. 5 |  |
+| Fri, Sep 04 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) [Remote work and collaboration, Git](https://github.com/ckaestne/seai/blob/F2020/recitations/Recitation_1_Git.pdf) | |  |
 | Mon, Sep 07 | **Labor day, no class** | |  |
 | Wed, Sep 09 | Model Quality and Software Testing | [Building Intelligent Systems](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436), Ch. 19-20 and [Semantically equivalent adversarial rules for debugging NLP models](https://www.aclweb.org/anthology/P18-1079.pdf) | [I1: Case Study](https://github.com/ckaestne/seai/blob/F2020/assignments/I1_case_study.md) |
 | Fri, Sep 11 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) Apache Kafka | |  |
@@ -14,7 +14,7 @@
 | Wed, Sep 16 | Process & Technical Debt  | |  |
 | Fri, Sep 18 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) tbd | |  |
 | Mon, Sep 21 | Goals and Success Measures for AI-Enabled Systems | |  |
-| Wed, Sep 23 | Tradeoffs among Modeling Techniques | | M1: Modeling and First Deployment |
+| Wed, Sep 23 | Tradeoffs among Modeling Techniques | | [M1: Modeling and First Deployment](https://github.com/ckaestne/seai/blob/F2020/assignments/project.md) |
 | Fri, Sep 25 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) tbd | |  |
 | Mon, Sep 28 | Business, Risk, and Planning for Mistakes 1 | |  |
 | Wed, Sep 30 | Business, Risk, and Planning for Mistakes 2 | | I2: Tradeoffs |
@@ -35,7 +35,7 @@
 | Wed, Nov 04 | Building Fairer AI-Enabled System 2 | |  |
 | Fri, Nov 06 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) tbd | |  |
 | Mon, Nov 09 | Explainability & Interpretability 1  | |  |
-| Wed, Nov 11 | Explainability & Interpretability 2 | | M2: Infrastructure Quality |
+| Wed, Nov 11 | Explainability & Interpretability 2 | | [M2: Infrastructure Quality](https://github.com/ckaestne/seai/blob/F2020/assignments/project.md) |
 | Fri, Nov 13 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) tbd | |  |
 | Mon, Nov 16 | Versioning, Provenance, and Reproducability | |  |
 | Wed, Nov 18 | Security, Adversarial Learning, and Privacy | | I6: Fairness |
@@ -44,11 +44,11 @@
 | Wed, Nov 25 | **Thanksgiving, no class** | |  |
 | Fri, Nov 27 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) **Thanksgiving, no class** | |  |
 | Mon, Nov 30 | Safety 1 | |  |
-| Wed, Dec 02 | Safety 2 (Guest Lecture) | | M3: Monitoring and CD |
+| Wed, Dec 02 | Safety 2 (Guest Lecture) | | [M3: Monitoring and CD](https://github.com/ckaestne/seai/blob/F2020/assignments/project.md) |
 | Fri, Dec 04 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) tbd | |  |
 | Mon, Dec 07 | Fostering Interdisciplinary Teams | |  |
-| Wed, Dec 09 | Summary and Review | | M4: Security and Feedback Loops |
-| tbd | **Final Project Presentations** | | Final report |
+| Wed, Dec 09 | Summary and Review | | [M4: Security and Feedback Loops](https://github.com/ckaestne/seai/blob/F2020/assignments/project.md) |
+| tbd | **Final Project Presentations** | | [Final report](https://github.com/ckaestne/seai/blob/F2020/assignments/project.md) |
 
 
 
