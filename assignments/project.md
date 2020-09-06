@@ -34,6 +34,8 @@ The addresses and credentials for the provided event stream and the API can be f
 
 **Languages, tools, and frameworks:** Your team is free to chose any technology stack for any part of this project. You have root access to your virtual machine and are free to install any software you deem suitable. You also may use external data and services (e.g. cloud services) as long as you can make them also available to the course staff. For example, you can use the provided Amazon AWS credits for this project. Whenever you set up tools or services, pay some attention to configuring them with reasonable security measures; past student solutions have been actively exploited in past projects.
 
+**Documentation and reports:** For all milestones, we ask for supports that document your design decision and implementation. It may be a good idea to write general documentation that is useful for the team in a place that is shared and accessible to the team (e.g., README.md or wiki pages on GitHub). Conversely it may be a good idea to include text or figures you write for reports as part of the project documentation. Feel free to link to more detailed documentation from your report or simply copy material from existing documentation into the report.
+
 
 
 ## Milestone 1: Recommendation Model and First Deployment
@@ -57,9 +59,9 @@ For this milestone, we do not care about specifics of how you learn or deploy yo
 
 **Deliverables:** Submit your code to Github and tag it with `M1_done` and submit a short report to Gradescope that describes the following:
 
-* Learning (1 page max): Briefly describe what data and what kind of machine learning technique you use and why. Provide a pointer to your implementation where you train the model (e.g. to GitHub or other services). 
-* Prediction service (1 page max): Briefly describe how you implemented the recommendation service and how you derive a ranking from your model. Provide a pointer to your implementation (e.g. to GitHub or other services).
-* Team process and meeting notes (1 page max): Briefly describe how your team organizes itself. What communication channels do you use? How do you divide the work? How do you assign responsibilities? Provide pointers to notes taken at team meetings; the notes should describe how work was divided. 
+* *Learning* (1 page max): Briefly describe what data and what kind of machine learning technique you use and why. Provide a pointer to your implementation where you train the model (e.g. to GitHub or other services). 
+* *Prediction service* (1 page max): Briefly describe how you implemented the recommendation service and how you derive a ranking from your model. Provide a pointer to your implementation (e.g. to GitHub or other services).
+* *Team process and meeting notes* (1 page max): Briefly describe how your team organizes itself. What communication channels do you use? How do you divide the work? How do you assign responsibilities? Provide pointers to notes taken at team meetings; the notes should describe how work was divided. 
 
 **Grading:** This milestone is worth 100 points:
 
@@ -107,11 +109,11 @@ If you hit resource limits of your virtual machine, contact the course staff.
 
 **Deliverables:** Submit your code to Github and tag it with `M2_done` and submit a short report to Gradescope that describes the following:
 
-* Offline evaluation (1 page max): Briefly explain how you conduct your offline evaluation. This just include a description of the validation/test data and how it was derived (including a discussion of data dependence and important subpopulation if appropriate) and a brief description and justification of the used metric. Include or link to evaluation results in your report. Provide a pointer to the corresponding implementation in your code (preferably a direct GitHub link).
-* Online evaluation (1 page max): Briefly describe the metric used for evaluating model quality in production, the telemetry data collected, and the operationalization of the metric. Include or link to evaluation results in your report. Provide a pointer to the corresponding implementation in your code (preferably a direct GitHub link).
-* Data quality (0.5 pages max): Briefly describe the steps you have taken with regard to data quality and provide a pointer to the corresponding implementation in your code (preferably a direct GitHub link).
-* Pipeline implementation and testing (1 page max): Briefly describe how you structured the implementation of your pipeline and how you conducted testing. Include or link to a coverage report. Briefly argue why you think the testing is adequate. Provide a pointer to the corresponding implementation and test suite in your code (preferably a direct GitHub link).
-* Continuous integration (0.5 pages max): Describe your continuous integration setup both for infrastructure testing and for automatically training and evaluating models. Provide a pointer to the service (and credentials if needed to access the platform).
+* *Offline evaluation* (1 page max): Briefly explain how you conduct your offline evaluation. This just include a description of the validation/test data and how it was derived (including a discussion of data dependence and important subpopulation if appropriate) and a brief description and justification of the used metric. Include or link to evaluation results in your report. Provide a pointer to the corresponding implementation in your code (preferably a direct GitHub link).
+* *Online evaluation* (1 page max): Briefly describe the metric used for evaluating model quality in production, the telemetry data collected, and the operationalization of the metric. Include or link to evaluation results in your report. Provide a pointer to the corresponding implementation in your code (preferably a direct GitHub link).
+* *Data quality* (0.5 pages max): Briefly describe the steps you have taken with regard to data quality and provide a pointer to the corresponding implementation in your code (preferably a direct GitHub link).
+* *Pipeline implementation and testing* (1 page max): Briefly describe how you structured the implementation of your pipeline and how you conducted testing. Include or link to a coverage report. Briefly argue why you think the testing is adequate. Provide a pointer to the corresponding implementation and test suite in your code (preferably a direct GitHub link).
+* *Continuous integration* (0.5 pages max): Describe your continuous integration setup both for infrastructure testing and for automatically training and evaluating models. Provide a pointer to the service (and credentials if needed to access the platform).
 
 **Grading:** This milestone is worth 100 points: 
 
@@ -163,11 +165,11 @@ If you hit resource limits of your virtual machine, contact the course staff.
 
 **Deliverables:** Submit your code to Github and tag it with `M3_done` and submit a short report to Gradescope that describes the following:
 
-* Containerization (0.5 pages max): Briefly describe how you containerized and deployed your inference service and if/where/how you automatically create containers as part of the continuous integration process.  Provide a pointer to the Dockerfile(s) and other relevant implementations (preferably a direct GitHub link).
-* Automated model updates (0.5 pages max): Briefly describe how you automatically retrain and deploy updated models. Provide a pointer to the relevant implementation (preferably a direct GitHub link).
-* Monitoring (0.5 pages text max): Briefly describe how you set up your monitoring infrastructure and what you monitor and whether and why you set alerts. Include a screenshot of your dashboard showing at least availability and model quality measures. Provide pointers to the corresponding code/infrastructure (preferably a direct GitHub link) and explain how we can access your dashboard (include credentials if needed).
-* Experimentation (1.5 pages max): Briefly describe the design of your experimentation infrastructure. Describe how you split users between models, how you track the quality of each model, and how you report differences among models. Explain the statistical tests you use and justify why they are appropriate for this task. Include results of at least one experiment (screenshot or link). Provide pointers to your implementation/infrastructure.
-* Provenance (1 pages max): Describe how you version and track provenance of predictions and models. Explain how you can, for any past recommendation, identify the model version, the used pipeline version, and the used training data. Give a concrete example with one past recommendation. Provide sufficient pointers such that the course staff could also identify the corresponding information for a given recommendation and find the corresponding implementation.
+* *Containerization* (0.5 pages max): Briefly describe how you containerized and deployed your inference service and if/where/how you automatically create containers as part of the continuous integration process.  Provide a pointer to the Dockerfile(s) and other relevant implementations (preferably a direct GitHub link).
+* *Automated model updates* (0.5 pages max): Briefly describe how you automatically retrain and deploy updated models. Provide a pointer to the relevant implementation (preferably a direct GitHub link).
+* *Monitoring* (0.5 pages text max): Briefly describe how you set up your monitoring infrastructure and what you monitor and whether and why you set alerts. Include a screenshot of your dashboard showing at least availability and model quality measures. Provide pointers to the corresponding code/infrastructure (preferably a direct GitHub link) and explain how we can access your dashboard (include credentials if needed).
+* *Experimentation* (1.5 pages max): Briefly describe the design of your experimentation infrastructure. Describe how you split users between models, how you track the quality of each model, and how you report differences among models. Explain the statistical tests you use and justify why they are appropriate for this task. Include results of at least one experiment (screenshot or link). Provide pointers to your implementation/infrastructure.
+* *Provenance* (1 pages max): Describe how you version and track provenance of predictions and models. Explain how you can, for any past recommendation, identify the model version, the used pipeline version, and the used training data. Give a concrete example with one past recommendation. Provide sufficient pointers such that the course staff could also identify the corresponding information for a given recommendation and find the corresponding implementation.
 
 **Grading:** This milestone is worth 100 points: 
 
@@ -198,9 +200,9 @@ We have introduced mechanisms for specific feedback loops in our infrastructure 
 
 **Deliverables:** Submit your analysis code and results to GitHub and submit a short report to Gradescope:
 
-* **Conceptual Analysis of Potential Problems (process)** (2 pages max): Describe the process you used to analyze possible feedback loops, fairness, and attacks. Include some evidence that you followed this process in your analysis (copies or pointers). Evidence may take many forms, depending on your process, but might include mindmaps, requirements documents, or threat models.  
-* **Conceptual Analysis of Potential Problems (results)** (2 pages max): Identify at least 2 potential issues each. For each feedback loop, explain what might happen and what the positive or negative consequences are, and how it could be detected. For each fairness issue, describe the potential problem, the used notion of fairness, how it could be detected, and how it can be reduced. For each potential attack, describe the attack scenario, how it could be detected, how it could be mitigated or made harder to exploit, and what could be done once detected.
-* **Analysis of Problems in Log Data** (2 pages max): Briefly describe how you analyzed two potential issues (either feedback loop, fairness, or attack) in the telemetry data of your system. Summarize your key findings, including negative results. Provide pointers to the artifacts behind your analysis for details (ideally links to notebook files on Github).
+* *Conceptual Analysis of Potential Problems (process)* (2 pages max): Describe the process you used to analyze possible feedback loops, fairness, and attacks. Include some evidence that you followed this process in your analysis (copies or pointers). Evidence may take many forms, depending on your process, but might include mindmaps, requirements documents, or threat models.  
+* *Conceptual Analysis of Potential Problems (results)* (2 pages max): Identify at least 2 potential issues each. For each feedback loop, explain what might happen and what the positive or negative consequences are, and how it could be detected. For each fairness issue, describe the potential problem, the used notion of fairness, how it could be detected, and how it can be reduced. For each potential attack, describe the attack scenario, how it could be detected, how it could be mitigated or made harder to exploit, and what could be done once detected.
+* *Analysis of Problems in Log Data* (2 pages max): Briefly describe how you analyzed two potential issues (either feedback loop, fairness, or attack) in the telemetry data of your system. Summarize your key findings, including negative results. Provide pointers to the artifacts behind your analysis for details (ideally links to notebook files on Github).
 
 **Grading:** The assignment is worth 60 points:
 
@@ -230,8 +232,8 @@ For the presentation, we recommend that you prepare slides and practice timing. 
 
 **Deliverables:** Upload your slides to GitHub and submit the reflection to Gradescope with two sections:
 
-* **Reflection on Recommendation Service** (2 page max): Looking back at the entire project in which you have designed, implemented, deployed, and monitored the recommendation service. What parts were the most challenging? Which aspects are still unstable and would require additional investment if you had to deploy the recommendation service at scale in production? How would you address these issues if you had more time and more resources?
-* **Reflection on teamwork** (1 page max): Think back on your team's teamwork throughout this project. What went well or less well in the team assignments? What were some of the main challenges you faced in teamwork?  What could have been done better in your future collaboration in other teams? 
+* *Reflection on Recommendation Service* (2 page max): Looking back at the entire project in which you have designed, implemented, deployed, and monitored the recommendation service. What parts were the most challenging? Which aspects are still unstable and would require additional investment if you had to deploy the recommendation service at scale in production? How would you address these issues if you had more time and more resources?
+* *Reflection on teamwork* (1 page max): Think back on your team's teamwork throughout this project. What went well or less well in the team assignments? What were some of the main challenges you faced in teamwork?  What could have been done better in your future collaboration in other teams? 
 
 **Grading:** This final step is worth 40 points:
 
