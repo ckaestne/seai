@@ -82,7 +82,7 @@ Note that the grading specifications focuses on completing the work. For this mi
 **Learning goals:**
 
 * Test all components of the learning infrastructure
-* Build infrastructure to assess model and data quality
+* Build an infrastructure to assess model and data quality
 * Build an infrastructure to evaluate a model in production
 * Use continuous integration to test infrastructure and models
 
