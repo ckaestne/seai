@@ -4,7 +4,7 @@
 
 ## Overview
 
-In this project, you will implement, evaluate, operate, monitor, and evolve a recommendation service for a scenario of a movie streaming service. As in previous individual assignments, you work with a scenario of a streaming service with about 1 million customers and 27k movies (for comparison, Netflix has about 180 million subscribers and over 300 million estimated users worldwide and about 4000 movies or 13k titles worldwide).
+In this project, you will implement, evaluate, operate, monitor, and evolve a recommendation service for a scenario of a movie streaming service. You work with a scenario of a streaming service with about 1 million customers and 27k movies (for comparison, Netflix has about 180 million subscribers and over 300 million estimated users worldwide and about 4000 movies or 13k titles worldwide). Consider you are in the early days of video streaming and are building a Netflix-like streaming business with a massive catalog of (not very recent) movies.
 
 The focus of this assignment is to operate a recommendation service in production, which entails many concerns, including deployment, scaling, reliability, drift and feedback loops.
 
@@ -196,7 +196,7 @@ If you hit resource limits of your virtual machine, contact the course staff.
 
 For analyzing feedback loops, fairness, and attacks, you will analyze past recommendations and user behavior, for example, changes in user behavior over time, recommendation quality differences for different populations, drift in recommendation requests or user behavior. We have no requirements for how to conduct this analysis but recommend to explore the data and share the results with a notebook.
 
-We have introduced mechanisms for specific feedback loops in our infrastructure and may try to simulate an attack on your recommendation system during the assignments duration. It is okay if you look for feedback loops or attacks that are not actually occurring or detect issues that we did not plan for: We do not require that you detect the specific feedback loop or attack that we encoded. 
+We have introduced mechanisms for specific feedback loops in our infrastructure and may try to simulate an attack on your recommendation system during the assignments duration. It is okay if you look for feedback loops or attacks that are not actually occurring or detect issues that we did not plan for. You can receive full credit with a rigorous analysis even if you do not detect the issues that we artificially encoded. 
 
 **Deliverables:** Submit your analysis code and results to GitHub and submit a short report to Gradescope:
 
