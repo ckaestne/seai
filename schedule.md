@@ -9,7 +9,7 @@
 | Fri, Sep 04 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) [Remote work and collaboration, Git](https://github.com/ckaestne/seai/blob/F2020/recitations/Recitation_1_Git.pdf) | |  |
 | Mon, Sep 07 | **Labor day, no class** | |  |
 | Wed, Sep 09 | [Model Quality and Software Testing](https://ckaestne.github.io/seai/F2020/slides/03_modelquality/modelquality.html#/) ([md](https://github.com/ckaestne/seai/blob/F2020/lectures/03_modelquality/modelquality.md), [pdf](https://ckaestne.github.io/seai/F2020/slides/03_modelquality/modelquality.pdf), [blog post](https://medium.com/@ckaestne/a-software-testing-view-on-machine-learning-model-quality-d508cb9e20a6)) and [Teamwork Primer](https://ckaestne.github.io/seai/F2020/slides/03_modelquality/teams.html#/) | [Building Intelligent Systems](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436), Ch. 19 and [Semantically equivalent adversarial rules for debugging NLP models](https://www.aclweb.org/anthology/P18-1079.pdf) | [I1: Case Study](https://github.com/ckaestne/seai/blob/F2020/assignments/I1_case_study.md) |
-| Fri, Sep 11 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) Apache Kafka | |  |
+| Fri, Sep 11 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) [Apache Kafka](https://github.com/ckaestne/seai/blob/F2020/recitations/Recitation_2_Kafka.pdf) | |  |
 | Mon, Sep 14 | Quality Assessment in Production | [Building Intelligent Systems](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436), Ch. 15 |  |
 | Wed, Sep 16 | Process & Technical Debt  | |  |
 | Fri, Sep 18 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) tbd | |  |
