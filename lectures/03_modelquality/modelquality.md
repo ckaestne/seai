@@ -695,47 +695,6 @@ accuracy_test = accuracy(model, test_xs, test_ys)
 
 
 
-----
-## Independence of Data: Temporal
-
-> Attempt to predict the stock price development for different companies based on twitter posts
-
-Data: stock prices of 1000 companies over 4 years and twitter mentions of those companies
-
-Problems of random train--validation split?
-
-<!-- discussion -->
-
-Note: The model will be evaluated on past stock prices knowing the future prices of the companies in the training set. Even if we split by companies, we could observe general future trends in the economy during training
-
-
-----
-## Independence of Data: Temporal
-
-![Temporal dependence](temporaldependence.svg)
-<!-- .element: class="stretch" -->
-
-Note: The curve is the real trend, red points are training data, green points are validation data. If validation data is randomly selected, it is much easier to predict, because the trends around it are known.
-
-
-----
-## Independence of Data: Related Datapoints
-
-> Kaggle competition on detecting distracted drivers
-
-![Driver Picture 1](driver_phone.png) ![Driver Picture 2](driver_phone2.png)
-
-Relation of datapoints may not be in the data (e.g., driver)
-
-<!-- references -->
-
-https://www.fast.ai/2017/11/13/validation-sets/
-
-Note: 
-Many potential subtle and less subtle problems:
-* Sales from same user
-* Pictures taken on same day
-
 
 ----
 ## On Terminology
@@ -1085,6 +1044,26 @@ Long version: https://medium.com/@ckaestne/machine-learning-is-requirements-engi
 * Pick 1 value from each group, combine groups from all variables
 
 ----
+## Exercise
+
+```scala
+/**
+ * Compute the price of a bus ride:
+ *  * Children under 2 ride for free, children under 18 and 
+ *    senior citizen over 65 pay half, all others pay the 
+ *    full fare of $3.
+ *  * On weekdays, between 7am and 9am and between 4pm and 
+*     7pm a peak surcharge of $1.5 is added.
+ *  * Short trips under 5min during off-peak time are free.
+ */
+def busTicketPrice(age: Int, 
+                   datetime: LocalDateTime, 
+                   rideTime: Int)
+```
+
+*suggest test cases based on boundary value analysis and equivalence class testing*
+
+----
 ## Example: White-box testing
 
 ```java
@@ -1097,7 +1076,7 @@ int divide(int A, int B) {
 } 
 ```
 
-Minimum set of test cases to cover all lines? All decisions?
+*minimum set of test cases to cover all lines? all decisions? all path?*
 
 
 ![](coverage.png)
@@ -1148,20 +1127,6 @@ assert(-1, divide(1,0));
 
 
 <!-- discussion -->
-
-----
-## How much validation data?
-
-* Problem dependent
-* Statistics can give confidence interval for results
-    - e.g. [Sample Size Calculator](https://www.surveysystem.com/sscalc.htm): 384 samples needed for ±5% confidence interval (95% conf. level; 1M population)
-* Experience and heuristics. Example: Hulten's heuristics for stable problems: 
-    - 10s is too small
-    - 100s sanity check
-    - 1000s usually good
-    - 10000s probably overkill
-    - Reserve 1000s recent data points for evaluation (or 10%, whichever is more)
-    - Reserve 100s for important subpopulations
 
 ----
 ## Test Adequacy Analogy?
@@ -1243,6 +1208,22 @@ Derive from requirements, experts, user feedback, expected problems etc. Think *
 
 <!-- discussion -->
 
+
+----
+## How much validation data?
+
+* Problem dependent
+* Statistics can give confidence interval for results
+    - e.g. [Sample Size Calculator](https://www.surveysystem.com/sscalc.htm): 384 samples needed for ±5% confidence interval (95% conf. level; 1M population)
+* Experience and heuristics. Example: Hulten's heuristics for stable problems: 
+    - 10s is too small
+    - 100s sanity check
+    - 1000s usually good
+    - 10000s probably overkill
+    - Reserve 1000s recent data points for evaluation (or 10%, whichever is more)
+    - Reserve 100s for important subpopulations
+
+
 ----
 ## Black-Box Testing Techniques as Inspiration?
 
@@ -1253,7 +1234,6 @@ Derive from requirements, experts, user feedback, expected problems etc. Think *
 
 Use to identify subpopulations (validation datasets), not individual tests.
 
-<!-- discussion -->
 
 
 
@@ -1526,6 +1506,76 @@ Matei Zaharia. [Introducing MLflow: an Open Source Machine Learning Platform](ht
 
 
 
+
+
+---
+# Common Pitfalls of Evaluating Model Quality
+
+----
+<!-- discussion -->
+
+----
+## Evaluating on Training Data
+
+* surprisingly common in practice
+* by accident, incorrect split -- or intentional using all data for training
+* tuning on validation data (e.g., crossvalidation) without separate testing data
+* 
+* Results in overfitting and misleading accuracy measures
+
+
+----
+## Using Misleading Quality Measures
+
+* using accuracy, when false positives are more harmful than false negatives
+* comparing area under the curve, rather than relevant thresholds
+* averaging over all populations, ignoring different results for subpopulations or different risks for certain predictions
+* accuracy results on old static test data, when production data has shifted
+* results on tiny validation sets
+* reporting results without baseline
+* ...
+
+
+----
+## Independence of Data: Temporal
+
+> Attempt to predict the stock price development for different companies based on twitter posts
+
+Data: stock prices of 1000 companies over 4 years and twitter mentions of those companies
+
+Problems of random train--validation split?
+
+<!-- discussion -->
+
+Note: The model will be evaluated on past stock prices knowing the future prices of the companies in the training set. Even if we split by companies, we could observe general future trends in the economy during training
+
+
+----
+## Independence of Data: Temporal
+
+![Temporal dependence](temporaldependence.svg)
+<!-- .element: class="stretch" -->
+
+Note: The curve is the real trend, red points are training data, green points are validation data. If validation data is randomly selected, it is much easier to predict, because the trends around it are known.
+
+
+----
+## Independence of Data: Related Datapoints
+
+> Kaggle competition on detecting distracted drivers
+
+![Driver Picture 1](driver_phone.png) ![Driver Picture 2](driver_phone2.png)
+
+Relation of datapoints may not be in the data (e.g., driver)
+
+<!-- references -->
+
+https://www.fast.ai/2017/11/13/validation-sets/
+
+Note: 
+Many potential subtle and less subtle problems:
+* Sales from same user
+* Pictures taken on same day
 
 
 
