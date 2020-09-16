@@ -224,13 +224,16 @@ Many pointers: Ori Cohen "[Monitor! Stop Being A Blind Data-Scientist.](https://
 ----
 ## Exercise: Design Telemetry in Production
 
-*Scenario: Injury detection in smart home workout (laptop camera)*
-
 Discuss: Quality measure, telemetry, operationalization, false positives/negatives, cost, privacy, rare events
 
-![Home Workout](homeworkout.jpg)
+Scenarios:
+* Group 1: Amazon: Shopping app feature that detects the shoe brand from photos
+* Group 2: Google: Tagging uploaded photos with friends' names
+* Group 3: Spotify: Recommended personalized playlists
+* Group 4: Wordpress: Profanity filter to moderate blog posts
 
 
+Summarize results on a slide
 
 
 ---
