@@ -30,7 +30,6 @@ Guide to Machine Learning Engineering." (2018), Chapters 17 and 18
 ## Today's Case Study: Lane Assist
 
 ![Street](lane.jpg)
-<!-- .element: class="stretch" -->
 
 <!-- references -->
 
@@ -278,7 +277,6 @@ Important consideration during requirements solicitation!
 * Identify protected characteristics and possible fairness concerns
 * Identify security and privacy requirements (ethical and legal), e.g., possible use of data
 * Understand data availability and need (quality, quantity, diversity, formats, provenance)
-
 * Involve data scientists and legal experts
 * **Map system goals to AI components**
 * **Establish constraints, set goals**
