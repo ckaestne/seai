@@ -545,6 +545,17 @@ Image CC BY-SA 3.0 by [Nojhan](https://en.wikipedia.org/wiki/Multi-objective_opt
 	* Which attribute(s) do I care the most about? Utility function? Judgement!
 
 ----
+## Example: Cardiovascular Risk Prediction
+
+![Medical diagnosis](medical-diagnosis.jpg)
+
+* Features: Age, gender,  blood pressure, cholestoral level, max.
+  heart rate, ... 
+* Constraints: Accuracy must be higher than baseline
+* Invalid solutions: ??
+* Priority among attributes: ??
+
+----
 ## Example: Lane Detection
 
 ![Lane detection internals](lane-detect.jpg)
@@ -557,7 +568,7 @@ Notes:
 * Constraints: ML task (classification), inference time (fast,
  real-time), model size (moderate, for on-vehicle storage)
 * Invalid solutions: Linear regression, k-NN
-* Priority among attributes: What if accuracy > interpretability = cost?
+* Priority among attributes: What if accuracy vs cost?
 
 ---
 # Summary
