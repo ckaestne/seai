@@ -30,6 +30,7 @@ Guide to Machine Learning Engineering." (2018), Chapters 17 and 18
 ## Today's Case Study: Lane Assist
 
 ![Street](lane.jpg)
+<!-- .element: class="stretch" -->
 
 <!-- references -->
 
@@ -84,16 +85,19 @@ See https://en.wikipedia.org/wiki/Lane_departure_warning_system
 ### Criteria: Quality Attributes & Constraints
 
 ----
-## Quality Attributes: Examples
+## Quality Attributes
 
-* Performance
-* Features
-* Reliability
-* Conformance
-* Durability
-* Serviceability
-* Aesthetics
-* Perceived Quality
+* Meaurable or testable properties of a system used to indicate how well it satisfies its goals
+* Examples
+  * Performance
+  * Features
+  * Reliability
+  * Conformance
+  * Durability
+  * Serviceability
+  * Aesthetics
+  * Perceived Quality
+  * ...
 
 <!-- references -->
 
@@ -105,7 +109,7 @@ Garvin, David A., [What Does Product Quality Really Mean](http://oqrm.org/Englis
 
 ![Lane detection internals](lane-detect.jpg)
 
-* **Quality attributes:** How well the product (system) delivers its
+* **(Product) Quality attributes:** How well the product (system) delivers its
 functionality (usability, reliability, availability, security...)
 * **Project attributes:** Time-to-market, development & HR cost...
 * **Design attributes:** Type of AI method used, accuracy, training time, inference time, memory usage...
@@ -281,14 +285,6 @@ Important consideration during requirements solicitation!
 <!-- references -->
 
 Further reading: Vogelsang, Andreas, and Markus Borg. "[Requirements Engineering for Machine Learning: Perspectives from Data Scientists](https://arxiv.org/pdf/1908.04674.pdf)." In Proc. of the 6th International Workshop on Artificial Intelligence for Requirements Engineering (AIRE), 2019.
-
-
-
-
-
-
-
-
 
 
 
