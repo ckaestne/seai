@@ -39,7 +39,7 @@ For at least 4 relevant qualities, define a measure and operationalize it. Typic
 
 Select and compare *three* different ML techniques to predict whether an app is malicious. We suggest to use some form of *neural networks* as one of the techniques. 
 
-We provide data and a notebook with an initial SVM implementation, which you may reuse and adopt. You can use the provided implementation as one of your three techniques. We do not expect you to invest additional effort in data cleaning or feature engineering, but you may. You may use any frameworks or implementations you like, including cloud services.
+We provide data and a notebook with an initial Naive Bayes implementation, which you may reuse and adopt. You can use the provided implementation as one of your three techniques. We do not expect you to invest additional effort in data cleaning or feature engineering, but you may. You may use any frameworks or implementations you like, including cloud services.
 
 ## Task 3: Summarize Findings in Memo to the Team
 
@@ -69,8 +69,7 @@ We will use approximately the following rubric for a total of 100 points:
  - [ ] 10 points each (up to 40p) for describing and metrics and operationalization a relevant quality in the report. The metric is clearly defined and the description is sufficient to independently measure the quality. A pointer to implementation of each measurement is provided.
  - [ ] 20 points: Measurement results (concrete numbers) are reported for at least 4 relevant qualities for each of the three learning techniques. The results correspond to the learned models and the metrics described in the report.
  - [ ] 10 points:  The memo clearly recommends a single ML technique for the scenario. It justifies why this technique is preferably based on measurements or other considerations. The memo explains the recommendation when tradeoffs exist. The memo’s analysis is consistent with the scenario and the qualities identified as relevant.
-
-    10 points: The memo is written clearly and avoids jargon. It is self-contained. It is suitable for target audience. 
+ - [ ] 10 points: The memo is written clearly and avoids jargon. It is self-contained. It is suitable for target audience. 
 
 ## Groupwork option
 
