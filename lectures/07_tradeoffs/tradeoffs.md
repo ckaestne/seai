@@ -278,9 +278,10 @@ Important consideration during requirements solicitation!
 * Identify protected characteristics and possible fairness concerns
 * Identify security and privacy requirements (ethical and legal), e.g., possible use of data
 * Understand data availability and need (quality, quantity, diversity, formats, provenance)
+
 * Involve data scientists and legal experts
-* Map system goals to AI components
-* Establish constraints, set goals
+* **Map system goals to AI components**
+* **Establish constraints, set goals**
 
 <!-- references -->
 
