@@ -122,7 +122,7 @@ Only 3% of fatal software accidents due to coding errors; rest due to
   environment (i.e., system-level goals)
 * Assumptions (ENV): What’s assumed about the behavior/properties of
   the environment (based on domain knowledge)
-* Specification (SPEC): What machine must do in order to satisfy REQ
+* Specification (SPEC): What machine must do in order to satisfy REQ **in conjunction** with ENV
 
 ----
 ## Shared Phenomena
