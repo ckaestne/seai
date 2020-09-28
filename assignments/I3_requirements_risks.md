@@ -22,7 +22,7 @@ Assume that you are contracting out the AI component that recognizes persons in 
 In designing such system, there are many considerations, such as:
 * Your dashcams do not have direct internet access, but they can communicate over USB, Bluetooth or Wifi with phones, cars, and wifi-hotspots.
 * The dashcams may run on battery but are usually connected to the car's power supply. Their processing power differs from model to model.
-* Searches are coordinated with the authorities and the non-profit organization. You suspect less strict requirements as for Amber alerts, but the legal details are not worked out yet. Searches are likely not very frequent in any given area. For Amber alerts, [official statistics](https://amberalert.gov/statistics.htm) report nearly 1 alert per day nationwide.
+* Searches are coordinated with the authorities and the non-profit organization. You suspect less strict requirements as for Amber alerts, but the legal details are not worked out yet. Searches are likely not very frequent in any given area. For Amber alerts, [official statistics](https://amberalert.gov/statistics.htm) report about 1 alert per day *nationwide*.
 * Faster reports of sightings are more useful to the authorities.
 * You suspect users may be worried about privacy and charges for data.
 * You recently hear everywhere, including press and consultants, how exciting the future of [Edge computing](https://en.wikipedia.org/wiki/Edge_computing) rather than Cloud computing is going to be and wonder whether you should explore that. You wouldn't be opposed to thinking about partnering with other organizations to, say, install hardware in gas stations or drive throughs.
@@ -44,7 +44,7 @@ Think about requirements for such a system and how would you decompose them into
 
 First, identify the goals for the new feature in the dashcam. Break down goals into *organizational objectives*, *leading indicators*, *user outcomes*, and *model properties* and provide corresponding measures you could use to assess how well you achieve the goals. Provide a brief description how goals relate to each other (e.g., “better model accuracy should help with higher user satisfaction”). Organizational objectives and leading indicators should be stated from the perspective of the company (not the partnering non-profits or authorities).  For user outcomes and model properties make clear to which users or models the goal refer; you may state different goals for different users. Your list of goals should be reasonably comprehensive and may include multiple goals at each level.
 
-Second, think about what could go wrong by performing a fault tree analysis. Start with a top event being a violation of a system requirement (i.e., the system failing to achieve a desired organizational objective) and break it into intermediate and basic events (which may correspond to a violation of an environmental assumption or an AI component failing to satisfy its specification). List possible casues of the system-level failure by identifying minimal cut sets and suggest strategies for mitigating them. Mitigation strategies will typically be at the system level, outside of the AI component itself. Briefly explain how each suggested mitigation strategy can (partially for fully) address the risk.
+Second, think about what could go wrong by performing a fault tree analysis. Start with a top event being a violation of a system requirement (i.e., the system failing to achieve a desired organizational objective) and break it into intermediate and basic events (which may correspond to a violation of an environmental assumption or an AI component failing to satisfy its specification). List possible causes of the system-level failure by identifying minimal cut sets and suggest strategies for mitigating them. Mitigation strategies will typically be at the system level, outside of the AI component itself. Briefly explain how each suggested mitigation strategy can (partially for fully) address the risk.
 
 ## Deliverable
 
@@ -59,7 +59,7 @@ Submit a report as a single PDF file to Gradescope that covers the following top
 ## Grading
 
 The assignment is worth 100 points. For full credit, we expect:
-* [ ] 20 points: Goals are listed and correctly grouped. The goals relate to the scenario and are reasonably complete.
+* [ ] 20 points: Goals are listed and appropriately grouped. The goals relate to the scenario and are reasonably complete.
 * [ ] 10 points: Environment entities and machine components relevant to the scenario are listed. The machine components include at least one AI component that performs image recognition.
 * [ ] 20 points: A selected requirement (REQ) is clearly stated. Environmental assumptions (ENV) and machine specifications (SPEC) needed to establish this requirement are included.
 * [ ] 30 points: A fault tree that shows possible causes behind the violation of the requirement selected in Q3 is included. At least three minimal cut sets are identified. The included fault tree is syntactically valid.
@@ -67,9 +67,11 @@ The assignment is worth 100 points. For full credit, we expect:
 
 ## Groupwork option
 
-In the current remote learning setting, we want to encourage collaboration and interaction among students. We therefore allow the options for this assignment to work together with *one* other student in the class, under the following condition: *You may not work with anybody who you know well or who was on your team in a previous course or previous assignment (including I2).* To facilitate the search for team members, we post a link to a shared Google spreadsheet on Canvas.
+In the current remote learning setting, we want to encourage collaboration and interaction among students. We therefore allow the options for this assignment to work together with *one* other student in the class. We recommend a pairing on Canvas. If you deviate from the recommended pairing, you may *not* work together with a student with whom you have worked together on a previous individual assignment.
 
 If you work together as a team, you can either submit a joint solution or separate solutions on Gradescope. If you submit a joint solution, both team members will receive the same grade. If you submit separate solutions, those solutions may share text or code, but we will grade them separately. Always make sure that you indicate with whom you worked together, even if just for part of the assignment. 
 
 Groupwork is optional. You may decide to work alone.
+
+You will receive 3 bonus points if your submission includes a screenshot from a Zoom session with your potential partner. You can receive these bonus points for just discussing the option of working together with your partner, even if you decide to work alone.
 
