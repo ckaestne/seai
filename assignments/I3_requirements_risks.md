@@ -1,4 +1,4 @@
-# Individual Assignment 4: Requirements and Risks
+# Individual Assignment 3: Requirements and Risks
 
 (17-445/645 Software Engineering for AI-Enabled Systems)
 
@@ -67,7 +67,7 @@ The assignment is worth 100 points. For full credit, we expect:
 
 ## Groupwork option
 
-In the current remote learning setting, we want to encourage collaboration and interaction among students. We therefore allow the options for this assignment to work together with *one* other student in the class, under the following condition: *You may not work with anybody who you know well or who was on your team in a previous course or previous assignment (including I3).* To facilitate the search for team members, we post a link to a shared Google spreadsheet on Canvas.
+In the current remote learning setting, we want to encourage collaboration and interaction among students. We therefore allow the options for this assignment to work together with *one* other student in the class, under the following condition: *You may not work with anybody who you know well or who was on your team in a previous course or previous assignment (including I2).* To facilitate the search for team members, we post a link to a shared Google spreadsheet on Canvas.
 
 If you work together as a team, you can either submit a joint solution or separate solutions on Gradescope. If you submit a joint solution, both team members will receive the same grade. If you submit separate solutions, those solutions may share text or code, but we will grade them separately. Always make sure that you indicate with whom you worked together, even if just for part of the assignment. 
 
