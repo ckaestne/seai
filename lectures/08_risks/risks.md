@@ -21,7 +21,8 @@ creating IE is hard, balancing IE) and 24 (Dealing with mistakes)
 
 * Analyze how mistake in an AI component can influence the behavior of a system
 * Analyze system requirements at the boundary between the machine and world
-* Evaluate risk of a mistake from the AI component using fault trees
+* Evaluate the risks of mistakes from AI components using the fault tree
+  analysis (FTA)
 
 ---
 # Mistakes in AI-Based Systems
@@ -35,7 +36,7 @@ creating IE is hard, balancing IE) and 24 (Dealing with mistakes)
 ----
 ## Autonomous Vehicles
 
-![Uber crash](ubercrash.png)
+![Uber crash](uber-crash.png)
 
 
 ----
@@ -62,10 +63,10 @@ https://www.snopes.com/fact-check/alexa-orders-dollhouse-and-cookies/
 
 
 ---
-# System Requirements
+# Requirements and Risks
 
 ----
-## Requirements Engineering
+## Software Requirements
 
 * Describe what the system will do (and not how it will do them)
 * Essential for understanding risks and mistake mitigation
@@ -117,7 +118,8 @@ Only 3% of fatal software accidents due to coding errors; rest due to
 
 ![requirement-vs-spec](env-spec.png)
 
-* Requirement (REQ): What customer needs, as desired effects on the environment
+* Requirement (REQ): What your product provides, as desired effects on the
+  environment (i.e., system-level goals)
 * Assumptions (ENV): What’s assumed about the behavior/properties of
   the environment (based on domain knowledge)
 * Specification (SPEC): What machine must do in order to satisfy REQ
@@ -132,6 +134,15 @@ Only 3% of fatal software accidents due to coding errors; rest due to
 * Requirements (REQ) are expressed only in terms of world phenomena 
 * Assumptions (ENV) are expressed in terms of world & shared phenomena
 * Specifications (SPEC) are expressed in terms of machine & shared phenomena
+
+----
+## Example: Lane Assist
+
+![lane-assist](lane.jpg)
+
+* Requirement (REQ): The vehicle must be prevented from veering off the lane.
+* What are the entities in the environment?
+* What about components in the machine?
 
 ----
 ## Example: Lane Assist
@@ -161,7 +172,7 @@ Only 3% of fatal software accidents due to coding errors; rest due to
 
 * Missing/incorrect environmental assumptions (ENV)
 <!-- .element: class="fragment" -->
-* Wrong specification (SPEC)
+* Wrong/violated specification (SPEC)
 <!-- .element: class="fragment" -->
 * Inconsistency in assumptions & spec (ENV ∧ SPEC = False)
 <!-- .element: class="fragment" -->
@@ -212,28 +223,42 @@ data, but not usually understandable
 * But still important to articulate the responsibllities of AI
   components (SPEC) in establishing the system-level goals (REQ)
 
+----
+## Example: Lane Assist
+
+![lane-assist](lane.jpg)
+
+* REQ: The vehicle must be prevented from veering off the lane.
+* ENV: Sensors are providing accurate information about the lane;
+  driver responses when given warning; steering wheel is functional
+* SPEC: Lane detection accurately identifies the lane markings; the
+  controller generates correct steering commands to keep the vehicle
+  within lane
+
+----
+## What could go wrong in lane assist?
+
+![lane-assist](lane.jpg)
+
+* Missing/incorrect environmental assumptions (ENV)?
+* Wrong/violated specification (SPEC)?
+* Inconsistency in assumptions & spec (ENV ∧ SPEC = False)?
+* Inconsistency in requirements (REQ = False)?
 
 ----
 ## Deriving SPEC from REQ
 
 1. Identify environmental entities and machine components
-<!-- .element: class="fragment" -->
 2. State a desired requirement (REQ) over the environment
-<!-- .element: class="fragment" -->
 3. Identify the interface between the environment & machines
-<!-- .element: class="fragment" -->
 4. Identify the environmental assumptions (ENV)
-<!-- .element: class="fragment" -->
 5. Develop software specifications
 (SPEC) that are sufficient to establish REQ
-<!-- .element: class="fragment" -->
 6. Check whether ENV ∧ SPEC ⊧ REQ
-<!-- .element: class="fragment" -->
 7. If NO, strengthen SPEC & repeat Step 6
-<!-- .element: class="fragment" -->
 
-
-
+**Can't be auomated! Domain knowledge is critical for coming up with
+  REQ, ENV, and SPEC!**
 
 
 
