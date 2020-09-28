@@ -257,7 +257,7 @@ data, but not usually understandable
 6. Check whether ENV ∧ SPEC ⊧ REQ
 7. If NO, strengthen SPEC & repeat Step 6
 
-**Can't be auomated! Domain knowledge is critical for coming up with
+**Can't be automated! Domain knowledge is critical for coming up with
   REQ, ENV, and SPEC!**
 
 
