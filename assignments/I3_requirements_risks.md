@@ -44,7 +44,9 @@ Think about requirements for such a system and how would you decompose them into
 
 First, identify the goals for the new feature in the dashcam. Break down goals into *organizational objectives*, *leading indicators*, *user outcomes*, and *model properties* and provide corresponding measures you could use to assess how well you achieve the goals. Provide a brief description how goals relate to each other (e.g., “better model accuracy should help with higher user satisfaction”). Organizational objectives and leading indicators should be stated from the perspective of the company (not the partnering non-profits or authorities).  For user outcomes and model properties make clear to which users or models the goal refer; you may state different goals for different users. Your list of goals should be reasonably comprehensive and may include multiple goals at each level.
 
-Second, think about what could go wrong by performing a fault tree analysis. Start with a top event being a violation of a system requirement (i.e., the system failing to achieve a desired organizational objective) and break it into intermediate and basic events (which may correspond to a violation of an environmental assumption or an AI component failing to satisfy its specification). List possible causes of the system-level failure by identifying minimal cut sets and suggest strategies for mitigating them. Mitigation strategies will typically be at the system level, outside of the AI component itself. Briefly explain how each suggested mitigation strategy can (partially for fully) address the risk.
+Second, think back to the world vs machine discussion in class. Consider one of the critical requirements of the system (REQ), based on the system-level goals that you derived earlier. What assumptions about the environment (ENV) do you need to rely on to achieve this requirement? What are the responsibilities (SPEC) of the machine components (both AI and non-AI) that are needed to establish REQ in conjunction with ENV?
+
+Third, think about what could go wrong by performing a fault tree analysis. Start with a top event being a violation of a requirement and break it into intermediate and basic events (which may correspond to a violation of an environmental assumption or an AI component failing to satisfy its specification). List possible causes of the system-level failure by identifying minimal cut sets. Design strategies for mitigating the risks of potential failures. Mitigation strategies will typically be at the system level, outside of the AI component itself. Briefly explain how each suggested mitigation strategy can (partially for fully) address the risk.
 
 ## Deliverable
 
@@ -61,9 +63,12 @@ Submit a report as a single PDF file to Gradescope that covers the following top
 The assignment is worth 100 points. For full credit, we expect:
 * [ ] 20 points: Goals are listed and appropriately grouped. The goals relate to the scenario and are reasonably complete.
 * [ ] 10 points: Environment entities and machine components relevant to the scenario are listed. The machine components include at least one AI component that performs image recognition.
-* [ ] 20 points: A selected requirement (REQ) is clearly stated. Environmental assumptions (ENV) and machine specifications (SPEC) needed to establish this requirement are included.
-* [ ] 30 points: A fault tree that shows possible causes behind the violation of the requirement selected in Q3 is included. At least three minimal cut sets are identified. The included fault tree is syntactically valid.
-* [ ] 20 points: Three mitigation strategies for the cut sets identified in Q4 are included.
+* [ ] 5 points: A selected requirement (REQ) is clearly stated. The requirement should mention only those phenomena in the world.
+* [ ] 7 points: Environmental assumptions (ENV) are clearly stated. These assumptions should mention only those phenomena in the world.
+* [ ] 7 points: Machine specifications (SPEC) are clearly stated. These specifications should mention only those phenoman in the interface between the world and the machine.
+* [ ] 15 points: A fault tree that shows possible causes behind the violation of the requirement selected in Q3 is included. The included fault tree is syntactically valid.
+* [ ] 15 points: Three minimal cut sets are identified from the fault tree (5 points per each min cut set).
+* [ ] 21 points: Three mitigation strategies for the cut sets identified in Q4 are included (7 points per each mitigation).
 
 ## Groupwork option
 
