@@ -11,6 +11,7 @@ In this assignment, you will get practice on how to systematically identify syst
 Learning goals:
 * Understand the role of the environment in establishing system requirements.
 * Learn to systematically identify risks and design mitigation strategies.
+* Apply FTA to understand risks and plan mitigations in an AI-enabled system
 * Understand the strengths and limitations of FTA.
 
 ## Scenario
@@ -46,7 +47,7 @@ First, identify the goals for the new feature in the dashcam. Break down goals i
 
 Second, think back to the world vs machine discussion in class. Consider one of the critical requirements of the system (REQ), based on the system-level goals that you derived earlier. What assumptions about the environment (ENV) do you need to rely on to achieve this requirement? What are the responsibilities (SPEC) of the machine components (both AI and non-AI) that are needed to establish REQ in conjunction with ENV?
 
-Third, think about what could go wrong by performing a fault tree analysis. Start with a top event being a violation of a requirement and break it into intermediate and basic events (which may correspond to a violation of an environmental assumption or an AI component failing to satisfy its specification). List possible causes of the system-level failure by identifying minimal cut sets. Design strategies for mitigating the risks of potential failures. Mitigation strategies will typically be at the system level, outside of the AI component itself. Briefly explain how each suggested mitigation strategy can (partially for fully) address the risk.
+Third, think about what could go wrong and analyze one possible risk with fault tree analysis. First identify a requirement violation (risk) to analyze – this might come from brainstorming or more systematically analyzing the requirements and environment assumptions above. Start with the top event being a violation of a requirement and break it into intermediate and basic events (which may correspond to a violation of an environmental assumption or an AI component failing to satisfy its specification). List possible causes of the system-level failure by identifying minimal cut sets. Design strategies for mitigating the risks of potential failures and incorporate them into the fault tree. Mitigation strategies will typically be at the system level, outside of the AI component itself, and will reduce the risk of the requirement violation. Briefly explain how each suggested mitigation strategy can (partially for fully) address the risk.
 
 ## Deliverable
 
@@ -54,21 +55,24 @@ Submit a report as a single PDF file to Gradescope that covers the following top
 
 1. **Goals** (1 page max): Provide a list of organizational objectives, leading indicators, user outcomes, and model properties.
 2. **Environment and Machine** (0.5 page max): Identify environmental entities and machine components (AI and non-AI) in this scenario. The machine components must include at least one AI component that performs image recognition.
-3. **Requirement Decomposition** (1 page max): Select **one** of the organization objectives as a requirement to analyze. Specify a list of environment assumptions (ENV) and specifications (SPEC) that are needed to establish this requirement (REQ).
-4. **Risk analysis** (1.5 page max) Perform a fault tree analysis to identify potential root causes for the violation of the requirement selected in Q2. Identify at least **three** minimal cut sets in your fault tree. (For this question, you may use any tool of your choice to construct the fault tree. A scan of a hand-drawn diagram is also acceptable, as long as it is clearly legible. There are also several free FTA tools you may wish to use; e.g., Fault Tree Analyzer (https://www.fault-tree-analysis-software.com) or Open Reliability Editor (https://github.com/troeger/fuzzed)).
-5. **Mitigations** (1 page max): For each one of the three causes (minimal cut sets) identified in Q3, suggest a mitigation strategy to reduce the risk of the failure.
+3. **Requirement Decomposition** (1 page max): Select **one** of requirement to analyze based on the goals identified above. Specify a list of environment assumptions (ENV) and specifications (SPEC) that are needed to establish this requirement (REQ).
+4. **Risk analysis** (1.5 page max) Perform a fault tree analysis to identify potential root causes for the violation of the requirement selected in Q2. Identify at least **three** minimal cut sets in your fault tree. 
+5. **Mitigations** (1 page max): For each one of the three causes (minimal cut sets) identified in Q3, suggest a mitigation strategy to reduce the risk of the failure. Provide a second updated fault tree that includes those mitigations.
+
+For drawing fault trees, you may use any tool of your choice. A scan of a hand-drawn diagram is acceptable, as long as it is clearly legible. There are also several free FTA tools you may wish to use; e.g., Fault Tree Analyzer (https://www.fault-tree-analysis-software.com) or Open Reliability Editor (https://github.com/troeger/fuzzed)
 
 ## Grading
 
 The assignment is worth 100 points. For full credit, we expect:
 * [ ] 20 points: Goals are listed and appropriately grouped. The goals relate to the scenario and are reasonably complete.
 * [ ] 10 points: Environment entities and machine components relevant to the scenario are listed. The machine components include at least one AI component that performs image recognition.
-* [ ] 5 points: A selected requirement (REQ) is clearly stated. The requirement should mention only those phenomena in the world.
-* [ ] 7 points: Environmental assumptions (ENV) are clearly stated. These assumptions should mention only those phenomena in the world.
-* [ ] 7 points: Machine specifications (SPEC) are clearly stated. These specifications should mention only those phenoman in the interface between the world and the machine.
+* [ ] 10 points: A selected requirement (REQ) is clearly stated. The requirement mention only phenomena in the world.
+* [ ] 10 points: Environmental assumptions (ENV) are clearly stated. These assumptions relate to phenomena in the world or map those to shared phenomena accessibly by the machine.
+* [ ] 10 points: Machine specifications (SPEC) are clearly stated. These specifications mention only those phenomena in the interface between the world and the machine.
+* [ ] 5 points: The requirement, environmental assumption, and machine specifications fit reasonably together and correspond to the scenario.
 * [ ] 15 points: A fault tree that shows possible causes behind the violation of the requirement selected in Q3 is included. The included fault tree is syntactically valid.
-* [ ] 15 points: Three minimal cut sets are identified from the fault tree (5 points per each min cut set).
-* [ ] 21 points: Three mitigation strategies for the cut sets identified in Q4 are included (7 points per each mitigation).
+* [ ] 10 points: Three minimal cut sets are identified from the fault tree (5 points per each min cut set).
+* [ ] 10 points: Three mitigation strategies, corresponding to the requirement and the cut sets identified in Q4, are described and shown in an updated fault tree.
 
 ## Groupwork option
 
