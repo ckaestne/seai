@@ -210,8 +210,9 @@ obtained by removing a basic event.
 ![](doer-checker.jpg)
 
 * __Goal__: Detect when a component failure occurs
-* __Heartbeat__ pattern
-  * Periodically sends diagnostic message to monitor
+* __Monitor__: Periodically checks the output of a component for errors
+  * Challenge: Need a way to recognize errors 
+  * e.g., corrupt sensor data, slow or missing response
 * __Doer-Checker__ pattern
   * Doer: Perform primary function; untrusted and potentially faulty
   * Checker: If doer output faulty, perform corrective action
