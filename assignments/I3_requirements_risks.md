@@ -56,8 +56,8 @@ Submit a report as a single PDF file to Gradescope that covers the following top
 1. **Goals** (1 page max): Provide a list of organizational objectives, leading indicators, user outcomes, and model properties.
 2. **Environment and Machine** (0.5 page max): Identify environmental entities and machine components (AI and non-AI) in this scenario. The machine components must include at least one AI component that performs image recognition.
 3. **Requirement Decomposition** (1 page max): Select **one** of requirement to analyze based on the goals identified above. Specify a list of environment assumptions (ENV) and specifications (SPEC) that are needed to establish this requirement (REQ).
-4. **Risk analysis** (1.5 page max) Perform a fault tree analysis to identify potential root causes for the violation of the requirement selected in Q2. Identify the minimal cut sets in your fault tree. 
-5. **Mitigations** (1 page max): Suggest at least two mitigation strategy to reduce the risk of the failure studied in the fault tree. Briefly explain how the mitigations reduce the risk. Provide a second updated fault tree that includes those mitigations.
+4. **Risk analysis** (1.5 page max) Perform a fault tree analysis to identify potential root causes for the violation of the requirement selected in the previous step. Identify all minimal cut sets in your fault tree. 
+5. **Mitigations** (1 page max): Suggest at least two mitigation strategy to reduce the risk of the failure studied in the fault tree. Both mitigations should be at the system level, outside of the ML component (i.e., not just "collect more training data"). Briefly explain how the mitigations reduce the risk. Provide a second updated fault tree that includes those mitigations.
 
 For drawing fault trees, you may use any tool of your choice. A scan of a hand-drawn diagram is acceptable, as long as it is clearly legible. There are also several free FTA tools you may wish to use; e.g., Fault Tree Analyzer (https://www.fault-tree-analysis-software.com) or Open Reliability Editor (https://github.com/troeger/fuzzed)
 
@@ -72,7 +72,7 @@ The assignment is worth 100 points. For full credit, we expect:
 * [ ] 5 points: The requirement, environmental assumption, and machine specifications fit reasonably together and correspond to the scenario.
 * [ ] 15 points: A fault tree that shows possible causes behind the violation of the requirement selected in Q3 is included. The included fault tree is syntactically valid.
 * [ ] 10 points: Minimal cut sets are identified from the fault tree.
-* [ ] 10 points: At least two mitigation strategies, corresponding to the requirement and the cut sets identified, are described, and shown in an updated fault tree.
+* [ ] 10 points: At least two mitigation strategies, corresponding to the requirement and the cut sets identified, are described. The description explains how the risk is reduced. The mitigations are at the system level outside the component. The mitigations are shown in an updated fault tree.
 
 ## Groupwork option
 
