@@ -185,8 +185,9 @@ obtained by removing a basic event.
 ----
 ## Example: FTA for Lane Assist
 
+<!---
 ![lane-assist-fta](lane-assist-fta.png)
-
+--->
 ---
 # Mitigation Strategies
 
