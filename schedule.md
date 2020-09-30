@@ -17,7 +17,7 @@
 | Wed, Sep 23 | [Tradeoffs among Modeling Techniques](https://ckaestne.github.io/seai/F2020/slides/07_tradeoffs/tradeoffs.html) | [Building Intelligent Systems](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436), Ch. 17 and 18 | [M1: Modeling and First Deployment](https://github.com/ckaestne/seai/blob/F2020/assignments/project.md) |
 | Fri, Sep 25 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) Measurement | |  |
 | Mon, Sep 28 | [Risks and Planning for Mistakes 1](https://ckaestne.github.io/seai/F2020/slides/08_risks/risks.html) | [Building Intelligent Systems](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436), Ch. 6, 7 and 24 |  |
-| Wed, Sep 30 | [Risks and Planning for Mistakes 2](https://github.com/ckaestne/seai/blob/F2020/lectures/09_risks_ii/risks_ii.html) | | I2: Tradeoffs |
+| Wed, Sep 30 | [Risks and Planning for Mistakes 2](https://ckaestne.github.io/seai/F2020/slides/09_risks_ii/risks_ii.html) | | I2: Tradeoffs |
 | Fri, Oct 02 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) Requirements/Risk analysis | |  |
 | Mon, Oct 05 | Software Architecture of AI-Enabled Systems | |  |
 | Wed, Oct 07 | Data Quality and Data Programming  | | I3: Requirements and Risks |
