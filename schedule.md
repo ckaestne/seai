@@ -23,7 +23,7 @@
 | Wed, Oct 07 | Data Quality  | | [I3: Requirements and Risks](https://github.com/ckaestne/seai/blob/F2020/assignments/I3_requirements_risks.md) |
 | Fri, Oct 09 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) Architecture | |  |
 | Mon, Oct 12 | Infrastructure Quality, Deployment, and Operations           | [The ML Test Score](https://research.google.com/pubs/archive/46555.pdf) |  |
-| Wed, Oct 14 | [Process & Technical Debt](https://ckaestne.github.io/seai/F2020/slides/05_process/process.html#/) ([md](https://github.com/ckaestne/seai/blob/F2020/lectures/05_process/process.md), [pdf](https://ckaestne.github.io/seai/F2020/slides/05_process/process.pdf)) | [Hidden Technical Debt in Machine Learning Systems](http://papers.nips.cc/paper/5656-hidden-technical-debt-in-machine-learning-systems.pdf) | I4: Architecture |
+| Wed, Oct 14 | [Process & Technical Debt](https://ckaestne.github.io/seai/F2020/slides/05_process/process.html#/) ([md](https://github.com/ckaestne/seai/blob/F2020/lectures/05_process/process.md), [pdf](https://ckaestne.github.io/seai/F2020/slides/05_process/process.pdf)) | [Hidden Technical Debt in Machine Learning Systems](http://papers.nips.cc/paper/5656-hidden-technical-debt-in-machine-learning-systems.pdf) | [I4: Architecture](https://github.com/ckaestne/seai/blob/F2020/assignments/I4_architecture.md) |
 | Fri, Oct 16 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) **CMU Day for Community Engagement, no class** | |  |
 | Mon, Oct 19 | **Midterm** | |  |
 | Wed, Oct 21 | Managing and Processing Large Datasets 1 | | - |
