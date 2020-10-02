@@ -209,8 +209,9 @@ obtained by removing a basic event.
 ![](doer-checker.jpg)
 
 * __Goal__: Detect when a component failure occurs
-* __Heartbeat__ pattern
-  * Periodically sends diagnostic message to monitor
+* __Monitor__: Periodically checks the output of a component for errors
+  * Challenge: Need a way to recognize errors 
+  * e.g., corrupt sensor data, slow or missing response
 * __Doer-Checker__ pattern
   * Doer: Perform primary function; untrusted and potentially faulty
   * Checker: If doer output faulty, perform corrective action
@@ -226,6 +227,20 @@ obtained by removing a basic event.
 * Safe controller (__checker__): Checks commands from ML controller; overrides it
   with a safe default command if maneuver deemed risky
   * Simpler, based on verifiable, transparent logic; conservative control
+
+----
+## Doer-Checker Example: Autonomous Vehicle
+
+![](safety-controller-scenario.png)
+
+* Yellow region: Slippery road, causes loss of traction
+* ML-based controller (__doer__): Model ignores traction loss; generates
+ unsafe maneuvering commands  (a)
+* Safe controller (__checker__): Overrides with safe steering commands
+  (b)
+
+<!-- references -->
+_Runtime-Safety-Guided Policy Repair_, Intl. Conference on Runtime Verification (2020)
 
 ----
 ## Response: Graceful Degradation (Fail-safe)
@@ -298,6 +313,12 @@ Notes: Cancer prediction, sentencing + recidivism, Tesla autopilot, military "ki
 
 Notes: Smart home devices, credit card applications, Powerpoint design suggestions
 
+----
+## Example: Lane Assist
+
+**Q. Possible mitigation strategies?**
+
+![lane-assist-fta](lane-assist-fta.png)
 
 ----
 ## Containment: Decoupling & Isolation
@@ -329,51 +350,14 @@ Notes: Smart home devices, credit card applications, Powerpoint design suggestio
 * Goal: Faults in a low-critical (LC) components should not impact
   high-critical (HC) components
 * Apply the principle of least privilege
-  * LC components should be allowed to access min. necessary data 
+  * LC components should be allowed to access min. necessary functions
 * Limit interactions across criticality boundaries
   * Deploy LC & HC components on different networks
   * Add monitors/checks at interfaces
-* Identify and eliminate implicit interactions
-  * Memory: Shared memory, global variables
-  * CPU resources: LC tasks running at high-priority, starving HC tasks
 * Is AI in my system performing an LC or HC task?
   * If HC, can we "demote" it into LC?
-
-----
-## Example: Radiation Therapy
-
-![](mgh.png)
-
-* __Safety requirement__: If door opens during treatment, insert beam block.
-
-----
-## Existing Design
-
-* Which components are responsible for establishing this safety requirement
-(e.g., high critical)?
-* Existing design includes:
-  * Pub/sub event handler: 3rd-party library; missing source code;
-    company went bankrupt
-  * Event logging: May throw an error if disk full
-  * Event handler/logging used by all tasks, including LC ones
-* Is it possible to achieve high confidence that these HC components don't fail?
-
-<!-- split -->
-
-![](mgh-original.png)
-
-----
-## Alternative Design
-
-* Build in an emergency unit
-  * Bypass event handler for HC tasks
-* Still needs to rely on door & beam controllers
-  * Can't eliminate the risk of failure, but significantly reduce it
-  * Emergency unit simpler, can be verified & tested
-  
-<!-- split -->
-
-![](mgh-redesign.png)
+  * Alternatively, replace HC AI components with non-AI ones
+  * **Q. Examples?**
 
 ---
 # Summary
