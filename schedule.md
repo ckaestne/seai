@@ -26,7 +26,7 @@
 | Wed, Oct 14 | [Process & Technical Debt](https://ckaestne.github.io/seai/F2020/slides/05_process/process.html#/) ([md](https://github.com/ckaestne/seai/blob/F2020/lectures/05_process/process.md), [pdf](https://ckaestne.github.io/seai/F2020/slides/05_process/process.pdf)) | [Hidden Technical Debt in Machine Learning Systems](http://papers.nips.cc/paper/5656-hidden-technical-debt-in-machine-learning-systems.pdf) | [I4: Architecture](https://github.com/ckaestne/seai/blob/F2020/assignments/I4_architecture.md) |
 | Fri, Oct 16 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) **CMU Day for Community Engagement, no class** | |  |
 | Mon, Oct 19 | [**Midterm**](https://github.com/ckaestne/seai/tree/F2020/exams) | |  |
-| Wed, Oct 21 | Managing and Processing Large Datasets 1 | | - |
+| Wed, Oct 21 | [Managing and Processing Large Datasets](https://ckaestne.github.io/seai/F2020/slides/13_dataatscale/dataatscale.html) ([md](https://github.com/ckaestne/seai/blob/F2020/lectures/13_dataatscale/dataatscale.md), [pdf](https://ckaestne.github.io/seai/F2020/slides/13_dataatscale/dataatscale.pdf)) | [Business Systems with Machine Learning](https://www.youtube.com/watch?v=_bvrzYOA8dY) | - |
 | Fri, Oct 23 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) **CMU Mid-Semester Break, no class** | |  |
 | Mon, Oct 26 | Managing and Processing Large Datasets 2 | |  |
 | Wed, Oct 28 | Intro to Ethics + Fairness | | [I5: Open Source Tools](https://github.com/ckaestne/seai/blob/F2020/assignments/I5_se4ai_tools.md) |
