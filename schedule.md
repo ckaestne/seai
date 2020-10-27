@@ -29,7 +29,7 @@
 | Wed, Oct 21 | [Managing and Processing Large Datasets](https://ckaestne.github.io/seai/F2020/slides/13_dataatscale/dataatscale.html) ([md](https://github.com/ckaestne/seai/blob/F2020/lectures/13_dataatscale/dataatscale.md), [pdf](https://ckaestne.github.io/seai/F2020/slides/13_dataatscale/dataatscale.pdf)) | [Business Systems with Machine Learning](https://www.youtube.com/watch?v=_bvrzYOA8dY) | - |
 | Fri, Oct 23 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) **CMU Mid-Semester Break, no class** | |  |
 | Mon, Oct 26 | Managing and Processing Large Datasets 2 | |  |
-| Wed, Oct 28 | Intro to Ethics + Fairness | | [I5: Open Source Tools](https://github.com/ckaestne/seai/blob/F2020/assignments/I5_se4ai_tools.md) |
+| Wed, Oct 28 | [Intro to Ethics + Fairness](https://ckaestne.github.io/seai/F2020/slides/14_intro_ethics_fairness/intro-ethics-fairness.html) | | [I5: Open Source Tools](https://github.com/ckaestne/seai/blob/F2020/assignments/I5_se4ai_tools.md) |
 | Fri, Oct 30 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) tbd | |  |
 | Mon, Nov 02 | Building Fairer AI-Enabled System 1 | |  |
 | Wed, Nov 04 | Building Fairer AI-Enabled System 2 | |  |
