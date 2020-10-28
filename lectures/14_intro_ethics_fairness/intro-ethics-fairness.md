@@ -264,7 +264,7 @@ _Challenges of incorporating algorithmic fairness into practice_, FAT* Tutorial 
 * Discrimination is a __domain-specific__ concept, and must be
   understood in the context of the problem domain (i.e., world vs machine)
 
-* __Q. Other examples__?
+__Q. Other examples__?
 
 ----
 ## Role of Requirements Engineering
