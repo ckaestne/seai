@@ -90,7 +90,6 @@ Q. What is the (real) organizational objective of the company?
 ## Addiction
 
 ![social-media-driving](Social-media-driving.png)
-<!-- .element: class="stretch" -->
 
 * 210M people worldwide addicted to social media
 * 71% of Americans sleep next to a mobile device
