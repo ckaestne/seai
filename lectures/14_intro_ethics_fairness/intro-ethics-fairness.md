@@ -301,6 +301,21 @@ __Q. Other examples__?
 # Sources of Bias
 
 ----
+##  Where does the bias come from?
+
+![](google-translate-bias.png)
+
+<!-- references -->
+
+_Semantics derived automatically from language corpora contain
+human-like biases_, Caliskan et al., Science (2017).
+
+----
+## Where does the bias come from?
+
+![](bing-translate-bias.png)
+
+----
 ## Sources of Bias
 
 * Skewed sample
@@ -389,7 +404,7 @@ for a minority group
 
 ![](college-admission.jpg)
 
-* Objective: Evaluate applications & identify those who are most
+* Objective: Evaluate applications & identify students who are most
 likely to suceed
 * Features: GPA, SAT, gender, race, undergrad institute, alumni
   connections, household income, hometown, etc., 
