@@ -406,7 +406,7 @@ for a minority group
 ![](college-admission.jpg)
 
 * Objective: Evaluate applications & identify students who are most
-likely to suceed
+likely to succeed
 * Features: GPA, GRE/SAT, gender, race, undergrad institute, alumni
   connections, household income, hometown, etc., 
 
@@ -417,7 +417,7 @@ likely to suceed
 
 * Possible harms: Allocation of resources? Quality of service?
   Stereotyping? Denigration? Over-/Under-representation?
-* Sources of bias: Skewed sample? Tainted examples? Historial bias? Limited features?
+* Sources of bias: Skewed sample? Tainted examples? Historical bias? Limited features?
 	Sample size disparity? Proxies?
 
 ---
