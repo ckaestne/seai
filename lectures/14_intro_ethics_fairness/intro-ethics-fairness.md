@@ -318,8 +318,9 @@ human-like biases_, Caliskan et al., Science (2017).
 ----
 ## Sources of Bias
 
+* Historial bias
+* Tainted examples
 * Skewed sample
-* Tainted examples/historical bias
 * Limited features
 * Sample size disparity
 * Proxies
@@ -327,15 +328,6 @@ human-like biases_, Caliskan et al., Science (2017).
 <!-- references -->
 
 _Big Data's Disparate Impact_, Barocas & Selbst California Law Review (2016).
-
-----
-## Skewed Sample
-
-*Initial bias in the data set, amplified through feedback loop*
-
-![](examples/crime-map.jpg)
-
-* Example: Crime prediction for policing strategy
 
 ----
 ## Historical Bias
@@ -362,6 +354,15 @@ considering."
 * Example: Hiring decision dataset
   * Some labels created manually by employers
   * Dataset "tainted" by biased human judgement
+
+----
+## Skewed Sample
+
+*Initial bias in the data set skews sampling towards certain parts of population *
+
+![](examples/crime-map.jpg)
+
+* Example: Crime prediction for policing strategy
 
 ----
 ## Limited Features
