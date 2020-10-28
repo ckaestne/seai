@@ -407,7 +407,7 @@ for a minority group
 
 * Objective: Evaluate applications & identify students who are most
 likely to suceed
-* Features: GPA, SAT, gender, race, undergrad institute, alumni
+* Features: GPA, GRE/SAT, gender, race, undergrad institute, alumni
   connections, household income, hometown, etc., 
 
 ----
