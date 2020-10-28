@@ -260,7 +260,7 @@ _Challenges of incorporating algorithmic fairness into practice_, FAT* Tutorial 
 
 * Loan lending: Gender discrimination is illegal.
 * Medical diagnosis: Gender-specific diagnosis may be desirable.
-* The problem is _unjustified_ differentiation!
+* The problem is _unjustified_ differentiation; i.e., discriminating on factors that should not matter
 * Discrimination is a __domain-specific__ concept, and must be
   understood in the context of the problem domain (i.e., world vs machine)
 
