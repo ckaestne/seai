@@ -140,8 +140,8 @@ https://twitter.com/bascule/status/1307440596668182528
 
 * Misalignment between organizational goals & societal values
   * Financial incentives often dominate other goals ("grow or die")
-* Lack of regulations
-  * Little legal consequences for causing negative impact on society
+* Insufficient amount of regulations
+  * Little legal consequences for causing negative impact (with some exceptions)
   * Poor understanding of socio-technical systems by policy makers 
 * Engineering challenges, both at system- & ML-level
   * Difficult to clearly define or measure ethical values
