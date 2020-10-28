@@ -358,7 +358,7 @@ considering."
 ----
 ## Skewed Sample
 
-*Initial bias in the data set skews sampling towards certain parts of population*
+*Initial bias compounds over time & skews sampling towards certain parts of population*
 
 ![](examples/crime-map.jpg)
 
