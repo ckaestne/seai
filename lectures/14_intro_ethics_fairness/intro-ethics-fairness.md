@@ -326,6 +326,7 @@ _Big Data's Disparate Impact_, Barocas & Selbst California Law Review (2016).
 *Data reflects past biases, not intended outcomes*
 
 ![Image search for "CEO"](ceo.png)
+<!-- .element: class="stretch" -->
 
 Note: "An example of this type of bias can be found in a 2018 image search
 result where searching for women CEOs ultimately resulted in fewer female CEO images due
@@ -487,12 +488,12 @@ _Fairness-aware Machine Learning_, Bennett et al., WSDM Tutorial (2019).
 _Datasheets for Dataset_, Gebru et al., (2019). https://arxiv.org/abs/1803.09010
 
 ----
-## Exercise: Crime Map
+## Discussion: College Admission
 
-![](examples/crime-map.jpg)
+![](college-admission.jpg)
 
 Q. How can we modify an existing dataset or change the data collection
-process to reduce the effects the feedback loop?
+process to reduce bias?
 
 ---
 # Summary
