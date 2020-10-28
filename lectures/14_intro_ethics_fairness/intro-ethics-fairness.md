@@ -105,7 +105,6 @@ https://www.cdc.gov/motorvehiclesafety/Distracted_Driving/index.html
 ## Mental Health
 
 ![teen-suicide-rate](teen-suicide-rate.png)
-<!-- .element: class="stretch" -->
 
 * 35% of US teenagers with low social-emotional well-being have been bullied on social media.
 * 70% of teens feel excluded when using social media.
@@ -123,7 +122,6 @@ https://leftronic.com/social-media-addiction-statistics
 ## Discrimination
 
 ![twitter-cropping](twitter-cropping.png)
-<!-- .element: class="stretch" -->
 
 <!-- references -->
 https://twitter.com/bascule/status/1307440596668182528
@@ -220,7 +218,6 @@ Barocas, Solon and Moritz Hardt. "[Fairness in machine learning](https://mrtz.or
 * Poor quality of service, degraded user experience for certain groups
 
 ![](examples/gender-detection.png)
-<!-- .element: class="stretch" -->
 
 __Q. Other examples?__
 
@@ -235,7 +232,6 @@ Commercial Gender Classification_, Buolamwini & Gebru, ACM FAT* (2018).
 * Over/under-representation, reinforcement of stereotypes
 
 ![](examples/online-ad.png)
-<!-- .element: class="stretch" -->
 
 __Q. Other examples?__
 
