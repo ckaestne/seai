@@ -198,7 +198,9 @@ Extends to marketing and advertising; not limited to final decision
 Barocas, Solon and Moritz Hardt. "[Fairness in machine learning](https://mrtz.org/nips17/#/)." NIPS Tutorial 1 (2017).
 
 ----
-![Contrasting equality, equity, and justice](eej.jpg)
+## Equality vs Equity vs Justice
+
+![Contrasting equality, equity, and justice](eej2.png)
 
 ----
 ## Types of Harm on Society
