@@ -71,6 +71,7 @@ Note: Image source: https://en.wikipedia.org/wiki/Martin_Shkreli#/media/File:Mar
 ## Anoter Example: Social Media
 
 ![zuckerberg](mark-zuckerberg.png)
+<!-- .element: class="stretch" -->
 
 Q. What is the (real) organizational objective of the company?
 
