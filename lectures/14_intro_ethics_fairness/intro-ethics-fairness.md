@@ -6,7 +6,7 @@ footer: "17-445 Software Engineering for AI-Enabled Systems, Christian
 Kaestner  & Eunsuk Kang"
 ---  
 
-# Intro to Ethic and Fairness
+# Intro to Ethics and Fairness
 
 Eunsuk Kang
 
