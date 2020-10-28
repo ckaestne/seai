@@ -254,6 +254,19 @@ _Discrimination in Online Ad Delivery_, Latanya Sweeney, SSRN (2013).
 _Challenges of incorporating algorithmic fairness into practice_, FAT* Tutorial (2019).
 
 ----
+## Not all discrimination is harmful
+
+![](gender-bias.png)
+
+* Loan lending: Gender discrimination is illegal.
+* Medical diagnosis: Gender-specific diagnosis may be desirable.
+* The problem is _unjustified_ differentiation!
+* Discrimination is a __domain-specific__ concept, and must be
+  understood in the context of the problem domain (i.e., world vs machine)
+
+* __Q. Other examples__?
+
+----
 ## Role of Requirements Engineering
 
 * Identify system goals
@@ -267,25 +280,16 @@ _Challenges of incorporating algorithmic fairness into practice_, FAT* Tutorial 
 * Design incident response plan
 * Set expectations for offline and online assurance and monitoring
 
-----
-## Not all discrimination is harmful
 
-![](gender-bias.png)
+<!-- ---- -->
+<!-- ## On Terminology -->
 
-* Loan lending: Gender discrimination is illegal.
-* Medical diagnosis: Gender-specific diagnosis may be desirable.
-* Discrimination is a __domain-specific__ concept!
-* __Q. Other examples__?
-
-----
-## On Terminology
-
-* Bias and discrimination are technical terms in machine learning
-  - [selection bias](https://en.wikipedia.org/wiki/Selection_bias), [reporting bias](https://en.wikipedia.org/wiki/Reporting_bias), [bias of an estimator](https://en.wikipedia.org/wiki/Bias_of_an_estimator), [inductive/learning bias](https://en.wikipedia.org/wiki/Inductive_bias)
-  - discrimination   refers to distinguishing outcomes (classification)
-* The problem is *unjustified* differentiation, ethical issues
-  - practical irrelevance
-  - moral irrelevance
+<!-- * Bias and discrimination are technical terms in machine learning -->
+<!--   - [selection bias](https://en.wikipedia.org/wiki/Selection_bias), [reporting bias](https://en.wikipedia.org/wiki/Reporting_bias), [bias of an estimator](https://en.wikipedia.org/wiki/Bias_of_an_estimator), [inductive/learning bias](https://en.wikipedia.org/wiki/Inductive_bias) -->
+<!--   - discrimination   refers to distinguishing outcomes (classification) -->
+<!-- * The problem is *unjustified* differentiation, ethical issues -->
+<!--   - practical irrelevance -->
+<!--   - moral irrelevance -->
 
 
 
@@ -379,6 +383,16 @@ for a minority group
 
 * Example: Neighborhood as a proxy for race
 * Even when sensitive attributes (e.g., race) are erased, bias may still occur
+
+----
+## Case Study: College Admission
+
+![](college-admission.jpg)
+
+* Objective: Evaluate applications & identify those who are most
+likely to suceed
+* Features: GPA, SAT, gender, race, undergrad institute, alumni
+  connections, household income, hometown, etc., 
 
 ----
 ## Case Study: College Admission
