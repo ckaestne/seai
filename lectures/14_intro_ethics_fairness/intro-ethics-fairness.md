@@ -433,103 +433,12 @@ likely to succeed
 _Fairness-aware Machine Learning_, Bennett et al., WSDM Tutorial (2019).
 
 ---
-# Dataset Construction for Fairness
-
-----
-## Data Bias
-
-![](data-bias-stage.png)
-
-* A __systematic distortion__ in data that compromises its use for a task
-* Bias can be introduced at any stage of the data pipeline!
-
-----
-## Types of Data Bias
-
-* __Population bias__
-* __Behavioral bias__
-* Content production bias
-* Linking bias
-* Temporal bias
-
-<!-- references -->
-
-_Social Data: Biases, Methodological Pitfalls, and Ethical
-Boundaries_, Olteanu et al., Frontiers in Big Data (2016).
-
-----
-## Population Bias
-
-![](examples/gender-detection.png)
-
-* Differences in demographics between a dataset vs a target population
-* Example: Does the Twitter demographics represent the general population?
-* In many tasks, datasets should match the target population
-* But some tasks require equal representation for fairness (Q. example?)
-
-----
-## Behavioral Bias
-
-![](examples/freelancing.png)
-
-* Differences in user behavior across platforms or social contexts
-* Example: Freelancing platforms (Fiverr vs TaskRabbit)
-  * Bias against certain minority groups on different platforms
-
-<!-- references -->
-
-_Bias in Online Freelance Marketplaces_, Hannak et al., CSCW (2017).
-
-----
-## Faireness-Aware Data Collection
-
-* Address population bias
-  * Does the dataset reflect the demographics in the target population?
-* Address under- & over-representation issues
-   * Ensure sufficient amount of data for all groups to avoid being
-   treated as "outliers" by ML
-   * But also avoid over-representation of certain groups (e.g.,
-     remove historical data)
-* Data augmentation: Synthesize data for minority groups
-  * Observed: "He is a doctor" -> synthesize "She is a doctor"
-* Fairness-aware active learning
-  * Collect more data for groups with highest error rates 
-
-<!-- references -->
-
-_Fairness-aware Machine Learning_, Bennett et al., WSDM Tutorial (2019).
-
-----
-## Data Sheets
-
-![](datasheet.png)
-
-* A process for documenting datasets
-* Common practice in the electronics industry, medicine
-* Purpose, provenance, creation, __composition__, distribution
-  * "Does the dataset relate to people?"
-  * "Does the dataset identify any subpopulations (e.g., by age,
-  gender)?"
-
-<!-- references -->
-
-_Datasheets for Dataset_, Gebru et al., (2019). https://arxiv.org/abs/1803.09010
-
-----
-## Discussion: College Admission
-
-![](college-admission.jpg)
-
-Q. How can we modify an existing dataset or change the data collection
-process to reduce bias?
-
----
 # Summary
 
 
 * Many interrelated issues: ethics, fairness, justice, safety, security, ...
 * Both legal & ethical dimensions
-* Challenges with developing ethical systems
+* Challenges with developing ethical systnems
 * Large potential for damage: Harm of allocation & harm of representation
 * Sources of bias in ML
   * Skewed sample, tainted examples, limited
