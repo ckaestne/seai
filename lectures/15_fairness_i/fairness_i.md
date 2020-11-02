@@ -144,6 +144,13 @@ $P[Y' = 1 | A = a]  = P[Y' = 1 | A = b]$
 	* e.g., Randomly promote people (regardless of their
       job performance) to match the rate across all groups
 
+
+----
+## Recall: Equality vs Equity
+
+![Contrasting equality, equity, and justice](eej2.png)
+
+
 ----
 ## Calibration to Achieve Independence
 
