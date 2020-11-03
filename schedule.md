@@ -32,7 +32,7 @@
 | Wed, Oct 28 | [Intro to Ethics + Fairness](https://ckaestne.github.io/seai/F2020/slides/14_intro_ethics_fairness/intro-ethics-fairness.html)   ([md](https://github.com/ckaestne/seai/blob/F2020/lectures/14_intro_ethics_fairness/intro-ethics-fairness.md), [pdf](https://ckaestne.github.io/seai/F2020/slides/14_intro_ethics_fairness/intro-ethics-fairness.pdf)) | | [I5: Open Source Tools](https://github.com/ckaestne/seai/blob/F2020/assignments/I5_se4ai_tools.md) |
 | Fri, Oct 30 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) [Continuous Integration](https://github.com/ckaestne/seai/blob/F2020/recitations/Recitation_7_CI.pdf) | |  |
 | Mon, Nov 02 | [Building Fairer AI-Enabled System 1](https://ckaestne.github.io/seai/F2020/slides/15_fairness_i/fairness_i.html)  ([md](https://github.com/ckaestne/seai/blob/F2020/lectures/15_fairness_i/fairness_i.md), [pdf](https://ckaestne.github.io/seai/F2020/slides/15_fairness_i/fairness_i.pdf)) | |  |
-| Wed, Nov 04 | Building Fairer AI-Enabled System 2 | |  |
+| Wed, Nov 04 | [Building Fairer AI-Enabled System 2](https://ckaestne.github.io/seai/F2020/slides/16_fairness_ii/fairness_ii.html)  | |  |
 | Fri, Nov 06 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) Fairness | |  |
 | Mon, Nov 09 | Explainability & Interpretability 1  | |  |
 | Wed, Nov 11 | Explainability & Interpretability 2 | | [M2: Infrastructure Quality](https://github.com/ckaestne/seai/blob/F2020/assignments/project.md) |
