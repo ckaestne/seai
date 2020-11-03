@@ -23,9 +23,6 @@ Computing Systems, pp. 1-16. 2019.
 
 * Understand different definitions of fairness
 * Discuss methods for measuring fairness
-* Consider achieving fairness as an activity throughout the entire
-  development cycle
-* Understand the process of constructing datasets for fairness
 
 ---
 # Fairness: Definitions
@@ -255,65 +252,6 @@ $P[Y'=0∣Y=1,A=a] = P[Y'=0∣Y=1,A=b]$ (FNR parity)
 * Separation: Among defendants who would not have gone on to commit a
 violent crime if released, detention rates are equal across gender and race groups
 
-----
-## Choosing Fairness Definitions
-
-* Which ML fairness definition to choose?
-* Depends on system requirements! Consider:
-  * What types of harm can be caused by biased decisions?
-  * Who are the stakeholders? Which population groups can be harmed?
-  * What are legal requirements to consider?
-  * Are we trying to achieve equality or equity? Does equality makes sense?
-
-----
-## Equality vs Equity
-
-![Contrasting equality, equity, and justice](eej2.png)
-
-__Q. Anti-classification, independence, or separation?__
-
-----
-## Type of Decision & Possible Harm
-
-* If decision is _punitive_ in nature:
-  * e.g. decide whom to deny bail based on risk of recidivism
-  * Harm is caused when a protected group is given an unwarranted penalty
-  * Heuristic: Use a fairness metric (separation) based on __false positive rate__
-* If decision is _assistive_ in nature:
-  * e.g., decide who should receive a loan or a food subsidy
-  * Harm is caused when a group in need is incorrectly denied assistance
-  * Heuristic: Use a fairness metric based on __false negative rate__
-
-----
-## Which fairness criteria?
-
-![Courtroom](courtroom.jpg)
-
-* Decision: Classify whether a defendant should be detained
-
-----
-## Which fairness criteria?
-
-![](college-admission.jpg)
-
-* Decision: Classify whether an applicant should be admitted 
-
-----
-## Which fairness criteria?
-
-![](mri.jpg)
-
-* Decision: Classify whether a patient has a high risk of cancer
-
-----
-## Fairness Tree
-
-![fairness-tree](fairness_tree.png)
-
-For details on other types of fairness metrics, see:
-https://textbook.coleridgeinitiative.org/chap-bias.html
-
-
 ---
 # Achieving Fairness Criteria
 
@@ -330,8 +268,7 @@ https://textbook.coleridgeinitiative.org/chap-bias.html
   * Impose additional parity constraint into ML optimization process
     (as part of the loss function)
 * Post-processing
-  * Adjust the learned model to be uncorrelated with sensitive
-  attributes
+  * Adjust thresholds to achieve a desired fairness metric
 * (Still active area of research! Many new techniques published each year)
 
 <!-- references -->
@@ -353,117 +290,14 @@ Other Data-Dependent Constraints_, Cotter et al., (2018).
 
 _Fairness Constraints: Mechanisms for Fair Classification_, Zafar et
 al., AISTATS (2017).
-  
----
-# Building Fair ML Systems
 
-----
-## Fairness must be considered throughout the ML lifecycle!
 
-![](fairness-lifecycle.jpg)
-
-<!-- references -->
-
-_Fairness-aware Machine Learning_, Bennett et al., WSDM Tutorial (2019).
-
----
-# Dataset Construction for Fairness
-
-----
-## Data Bias
-
-![](data-bias-stage.png)
-
-* A __systematic distortion__ in data that compromises its use for a task
-* Bias can be introduced at any stage of the data pipeline!
-
-----
-## Types of Data Bias
-
-* __Population bias__
-* __Behavioral bias__
-* Content production bias
-* Linking bias
-* Temporal bias
-
-<!-- references -->
-
-_Social Data: Biases, Methodological Pitfalls, and Ethical
-Boundaries_, Olteanu et al., Frontiers in Big Data (2016).
-
-----
-## Population Bias
-
-![](gender-detection.png)
-
-* Differences in demographics between a dataset vs a target population
-* Example: Does the Twitter demographics represent the general population?
-* In many tasks, datasets should match the target population
-* But some tasks require equal representation for fairness (Q. example?)
-
-----
-## Behavioral Bias
-
-![](freelancing.png)
-
-* Differences in user behavior across platforms or social contexts
-* Example: Freelancing platforms (Fiverr vs TaskRabbit)
-  * Bias against certain minority groups on different platforms
-
-<!-- references -->
-
-_Bias in Online Freelance Marketplaces_, Hannak et al., CSCW (2017).
-
-----
-## Fairness-Aware Data Collection
-
-* Address population bias
-  * Does the dataset reflect the demographics in the target population?
-* Address under- & over-representation issues
-   * Ensure sufficient amount of data for all groups to avoid being
-   treated as "outliers" by ML
-   * But also avoid over-representation of certain groups (e.g.,
-     remove historical data)
-* Data augmentation: Synthesize data for minority groups
-  * Observed: "He is a doctor" -> synthesize "She is a doctor"
-* Fairness-aware active learning
-  * Collect more data for groups with highest error rates 
-
-<!-- references -->
-
-_Fairness-aware Machine Learning_, Bennett et al., WSDM Tutorial (2019).
-
-----
-## Data Sheets
-
-![](datasheet.png)
-
-* A process for documenting datasets
-* Common practice in the electronics industry, medicine
-* Purpose, provenance, creation, __composition__, distribution
-  * "Does the dataset relate to people?"
-  * "Does the dataset identify any subpopulations (e.g., by age,
-  gender)?"
-
-<!-- references -->
-
-_Datasheets for Dataset_, Gebru et al., (2019). https://arxiv.org/abs/1803.09010
-
-----
-## Discussion: College Admission
-
-![](college-admission.jpg)
-
-Q. How can we modify an existing dataset or change the data collection
-process to reduce bias?
 
 ---
 # Summary
 
 * Definitions of fairness
-  * Group fairness, equalized odds, predictive parity
+  * Anti-classification, independence, separation
 * Achieving fairness
   * Trade-offs between accuracy & fairness
-* Fairness as an activity throughout the entire development cycle!
-* Dataset construction for fairness
 
