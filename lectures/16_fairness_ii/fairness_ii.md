@@ -173,8 +173,8 @@ impact"
 	* Who are stakeholders? Which population groups can be harmed?
 	* Are we trying to achieve equality vs. equity? 
 	* What are legal requirements to consider?
-* Devise the interface between the environment & machine (ML)
-	* What types of data will be sensed/measured by AI?
+* Define the interface between the environment & machine (ML)
+	* What data will be sensed/measured by AI? Potential biases?
 	* What types of decisions will the system make? Punitive or assistive?
 * Identify the environmental assumptions (ENV)
 	* Adversarial? Misuse? Unfair (dis-)advantages?
@@ -186,7 +186,7 @@ impact"
 ![](loans.jpg)
 
 * Do certain groups of stakeholders have unfair (dis-)advantages? 
-* What types of data should the system measure?
+* What are potential biases in the data measured by the system?
   
 ----
 ## Requirements for Fair ML Systems
@@ -196,8 +196,8 @@ impact"
 	* Who are stakeholders? Which population groups can be harmed?
 	* Are we trying to achieve equality vs. equity? 
 	* What are legal requirements to consider?
-* Devise the interface between the environment & machine (ML)
-	* What types of data will be sensed/measured by AI?
+* Define the interface between the environment & machine (ML)
+	* What data will be sensed/measured by AI? Potential biases?
 	* What types of decisions will the system make? Punitive or assistive?
 * Identify the environmental assumptions (ENV)
   * Adversarial? Misuse? Unfair (dis-)advantages?
