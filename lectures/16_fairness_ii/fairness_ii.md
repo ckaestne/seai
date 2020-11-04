@@ -178,6 +178,7 @@ impact"
 	* What types of decisions will the system make? Punitive or assistive?
 * Identify the environmental assumptions (ENV)
 	* Adversarial? Misuse? Unfair (dis-)advantages?
+	* Population distributions?
 
 ----
 ## Example: Loan Application
@@ -199,7 +200,8 @@ impact"
 	* What types of data will be sensed/measured by AI?
 	* What types of decisions will the system make? Punitive or assistive?
 * Identify the environmental assumptions (ENV)
-	* Adversarial? Misuse? Unfair (dis-)advantages?
+  * Adversarial? Misuse? Unfair (dis-)advantages?
+  * Population distributions?
 * Devise machine specifications (SPEC) that are sufficient to establish REQ
 	* What type of fairness definition is appropriate?
 
@@ -224,6 +226,8 @@ impact"
 ## Which fairness criteria?
 
 ![Courtroom](courtroom.jpg)
+
+<!-- split -->
 
 * Decision: Classify whether a defendant should be detained
 * Criteria: Anti-classification, independence, or seperation w/ FPR or FNR?
@@ -392,21 +396,6 @@ graph LR
 
 O'Neil, Cathy. [Weapons of math destruction: How big data increases inequality and threatens democracy](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991016462699704436). Broadway Books, 2016.
 
-
-----
-## "Weapons of Math Destruction"
-
-* Algorithm evaluates people
-  - e.g., credit, hiring, admissions, recidivism, advertisement, insurance, healthcare
-* Widely used for life-affecting decisions
-* Opaque and not accountable, no path to complain
-* Feedback loop 
-
-<!-- references -->
-
-O'Neil, Cathy. [Weapons of math destruction: How big data increases inequality and threatens democracy](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991016462699704436). Broadway Books, 2016.
-
-
 ----
 ## Monitoring Faireness-Aware Model
 
@@ -437,7 +426,7 @@ et al., (2018)
 * Deploy escalation plans: How do you respond when harm occurs due to
 system?
 	* Shutdown system? Temporary replacement?
-	* Maintain communication to stakeholders
+	* Maintain communication lines to stakeholders
 * Invite diverse stakeholders to audit system for biases
 
 ----
@@ -480,8 +469,8 @@ Challenges and Opportunities around Fairness in AI_](http://www.jennwv.com/paper
 * Aspects to consider:
   * Requirements & fairness criteria selection
   * Data collection & pre-processing
-  * Testing for fairness
-  * Possible feedback loops and monitoring
+  * Impact of feedback loops
+  * Monitoring & auditing
 
 ---
 # Summary
