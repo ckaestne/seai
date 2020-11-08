@@ -28,6 +28,20 @@ Recommended supplementary reading: 🕮 Christoph Molnar. "[Interpretable Machin
 ---
 # Motivating Examples
 
+
+----
+
+![Turtle recognized as gun](gun.png)
+
+
+----
+
+![Adversarial examples](adversarialexample.png)
+
+<!-- references -->
+
+Image: Gong, Yuan, and Christian Poellabauer. "[An overview of vulnerabilities of voice controlled systems](https://arxiv.org/pdf/1803.09156.pdf)." arXiv preprint arXiv:1803.09156 (2018).
+
 ----
 ## Detecting Anomalous Commits
 
@@ -902,6 +916,9 @@ be changed to increase or decrease the risk score of diabetes to 0.5?
 ## Discussion: Counterfactuals
 
 <!-- discussion -->
+
+----
+![Adversarial examples](adversarialexample.png)
 
 
 ----
