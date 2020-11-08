@@ -1,7 +1,7 @@
 ---
 author: Christian Kaestner
 title: "17-445: Versioning, Provenance, and Reproducability"
-semester: Summer 2020
+semester: Fall 2020
 footer: "17-445 Software Engineering for AI-Enabled Systems, Christian Kaestner"
 license: Creative Commons Attribution 4.0 International (CC BY 4.0)
 ---
@@ -342,6 +342,12 @@ Kery, M. B., John, B. E., O'Flaherty, P., Horvath, A., & Myers, B. A. (2019, May
 
 **Key goal: If a customer complains about an interaction, can we reproduce the prediction with the right model? Can we debug the model's pipeline and data? Can we reproduce the model?**
 
+```
+<date>,<model>,<model version>,<feature inputs>,<output>
+<date>,<model>,<model version>,<feature inputs>,<output>
+<date>,<model>,<model version>,<feature inputs>,<output>
+```
+
 
 ----
 ## Logging for Composed Models
@@ -475,8 +481,6 @@ guardrail --> yes
 guardrail --> no
 ```
  
-
-
 
 
 
