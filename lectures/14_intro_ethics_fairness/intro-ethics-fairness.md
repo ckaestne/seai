@@ -219,7 +219,7 @@ Barocas, Solon and Moritz Hardt. "[Fairness in machine learning](https://mrtz.or
 * Withhold opportunities or resources
 * Poor quality of service, degraded user experience for certain groups
 
-![](examples/gender-detection.png)
+![](gender-detection.png)
 
 __Q. Other examples?__
 
@@ -233,7 +233,7 @@ Commercial Gender Classification_, Buolamwini & Gebru, ACM FAT* (2018).
 
 * Over/under-representation, reinforcement of stereotypes
 
-![](examples/online-ad.png)
+![](online-ad.png)
 
 __Q. Other examples?__
 
@@ -349,7 +349,7 @@ considering."
 
 *Bias in the dataset caused by humans*
 
-![](examples/amazon-hiring.png)
+![](amazon-hiring.png)
 
 * Example: Hiring decision dataset
   * Some labels created manually by employers
@@ -360,7 +360,7 @@ considering."
 
 *Initial bias compounds over time & skews sampling towards certain parts of population*
 
-![](examples/crime-map.jpg)
+![](crime-map.jpg)
 
 * Example: Crime prediction for policing strategy
 
@@ -383,7 +383,7 @@ for a minority group
 
 *Less data available for certain parts of the population*
 
-![](examples/shirley-card.jpg)
+![](shirley-card.jpg)
 
 * Example: "Shirley Card"
 	* Used by Kodak for color calibration in photo films
