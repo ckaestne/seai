@@ -117,7 +117,7 @@ Rules
 * Milk -> {Diaper, Beer} (40% support, 50% confidence)
 * {Diaper, Beer} -> Bread (40% support, 66% confidence)
 
-(see [association rule mining](https://ckaestne.github.io/seai/S2020/slides/11_dataquality/dataquality.html#/6) in earlier lecture)
+(see [association rule learning](https://en.wikipedia.org/wiki/Association_rule_learning))
 
 
 ----
@@ -127,35 +127,13 @@ Rules
 <!-- .element: class="stretch" -->
 
 ----
-## Explaining Decisions
-
-```prolog
-> parent(john, douglas).
-> parent(bob, john).
-> parent(ebbon, bob).
-
-> parent(john, B)?
-parent(john, douglas).
-
-> parent(A, A)?
-
-> ancestor(A, B) :- parent(A, B).
-> ancestor(A, B) :- parent(A, C), ancestor(C, B).
-
-> ancestor(A,B)?
-ancestor(john, douglas).
-ancestor(ebbon, bob).
-```
-
-----
-## Explainability in AI
+## Explainability in ML
 
 * Explain how the model made a decision
     - Rules, cutoffs, reasoning?
     - What are the relevant factors? 
     - Why those rules/cutoffs?
-* Challenging in symbolic AI with complicated rules
-* Challenging with ML because models too complex and based on data
+* Challenging because models too complex and based on data
     - Can we understand the rules?
     - Can we understand why these rules?
 
@@ -190,12 +168,22 @@ See also https://en.wikipedia.org/wiki/Right_to_explanation
 ----
 ## Debugging
 
+<!-- colstart -->
+
 * Why did the system make a wrong prediction in this case?
 * What does it actually learn?
 * What kind of data would make it better?
 * How reliable/robust is it?
 * How much does the second model rely on the outputs of the first?
 * Understanding edge cases
+
+<!-- col -->
+
+![Turtle recognized as gun](gun.png)
+
+<!-- colend -->
+
+Most common use case in practice according to recent study (Bhatt et al. "Explainable machine learning in deployment." In Proceedings of the 2020 Conference on Fairness, Accountability, and Transparency, pp. 648-657. 2020.)
 
 ----
 ## Auditing
@@ -206,14 +194,28 @@ See also https://en.wikipedia.org/wiki/Right_to_explanation
 * Reason about biases and feedback loops
 * ML as Requirements Engineering view: Validate "mined" requirements with stakeholders
 
+```
+IF age between 18–20 and sex is male THEN predict arrest
+ELSE 
+IF age between 21–23 and 2–3 prior offenses THEN predict arrest
+ELSE 
+IF more than three priors THEN predict arrest
+ELSE predict no arrest
+```
+
+
 ----
 ## Curiosity, learning, discovery, science
+
+<!-- colstart -->
 
 * What drove our past hiring decisions? Who gets promoted around here?
 * What factors influence cancer risk? Recidivism?
 * What influences demand for bike rentals?
 * Which organizations are successful at raising donations and why?
-
+<!-- col -->
+![Statistical modeling from Badges Paper](badges.png)
+<!-- colend -->
 
 ----
 ## Settings where Interpretability is *not* Important?
@@ -395,31 +397,29 @@ ELSE IF more than three priors THEN predict arrest
 ELSE predict no arrest
 ```
 
-
 ----
-## Example: California Housing Data
+## Not all Linear Models and Decision Trees are Interpretable
 
-```mermaid
-graph TD
-t[MedInc<6] ==> a1[AveOccup<2.4]
-t --> a2[MedInc<7.2]
-a2 ==> b3[AveOccup<2.9]
-b3 ==> h1[high]
-b3 --> l1[low]
-a2 --> b4[Population<56]
-b4 ==> l2[low]
-b4 --> h2[high]
-a1 --> l3[low]
-a1 ==> b1[MedInc>3.7]
-b1 ==> l4[low]
-b1 --> c1[HouseAge<19]
-c1 ==> l5[low]
-c1 --> h4[high]
+* Models can be very big, many parameters (factors, decisions)
+* Nonlinear interactions possibly hard to grasp
+* Tool support can help (views)
+* Random forests, ensembles no longer understandable ("average over multiple interpretations"?)
+
+```
+173554,681081086 * root + 318523,818532818 * heuristicUnit + 
+-103411,870761673 * eq + -24600,5000000002 * heuristicVsids +
+-11816,7857142856 * heuristicVmtf + -33557,8961038976 * 
+heuristic + -95375,3513513509 * heuristicUnit * satPreproYes + 
+3990,79729729646 * transExt * satPreproYes + -136928,416666666 
+* eq * heuristicUnit + 12309,4990990994 * eq * satPreproYes + 
+33925,0833333346 * eq * heuristic + -643,428571428088 * 
+backprop * heuristicVsids + -11876,2857142853 * backprop * 
+heuristicUnit + 1620,24242424222 * eq * backprop + 
+-7205,2500000002 * eq * heuristicBerkmin + -2 * Num1 * Num2 + 
+10 * Num3 * Num4
 ```
 
-Note: Ask questions about specific outcomes, about common patterns, about counterfactual explanations
-
-
+Notes: Example of a performance influence model from http://www.fosd.de/SPLConqueror/ -- not the worst in terms of interpretability, but certainly not small or well formated or easy to approach.
 
 
 ----
@@ -509,6 +509,8 @@ No access to model internals or training data
 
 Possibly many queries of $f$
 
+
+
 ----
 ## Global Surrogates
 
@@ -594,7 +596,7 @@ Source: Ribeiro, Marco Tulio, Sameer Singh, and Carlos Guestrin. "["Why should I
 * explanations may be unstable
 
 ----
-## Sharpley Values
+## Shapley Values
 
 * Game-theoretic foundation for local explanations (1953)
 * Explains contribution of each feature, over predictions with different subsets of features
@@ -604,7 +606,14 @@ Source: Ribeiro, Marco Tulio, Sameer Singh, and Carlos Guestrin. "["Why should I
 * Requires heavy computation, usually only approximations feasible
 * Explanations contain all features (ie. not sparse)
 * Influence, not counterfactuals
+*
+* Currently, most common local method used in practice
 
+<!-- references -->
+
+Lundberg, Scott M., and Su-In Lee. "[A unified approach to interpreting model predictions](https://proceedings.neurips.cc/paper/2017/file/8a20a8621978632d76c43dfd28b67767-Paper.pdf)." In Advances in neural information processing systems, pp. 4765-4774. 2017.
+
+Bhatt et al. "Explainable machine learning in deployment." In Proceedings of the 2020 Conference on Fairness, Accountability, and Transparency, pp. 648-657
 
 ----
 ## Attention Maps
@@ -670,7 +679,7 @@ Christoph Molnar. "[Interpretable Machine Learning](https://christophm.github.io
 * Measure influence on accuracy
 * i.e. evaluate feature effect without retraining the model
 *
-* Highly compressed, global insights
+* Highly compressed, *global* insights
 * Effect for feature + interactions
 * Can only be computed on labeled data, depends on model accuracy, randomness from permutation
 * May produce unrealistic inputs when correlations exist
@@ -1183,69 +1192,6 @@ Source: [People + AI Guidebook](https://pair.withgoogle.com/research/), Google
 
 
 
----
-# Transparency
-
-----
-## Dark Patterns
-
-![Booking.com rating](booking.png)
-
-<!-- references -->
-
-Source: [Motahhare Eslami](http://eslamim2.web.engr.illinois.edu/)
-
-Notes: Futher discussion https://ro-che.info/articles/2017-09-17-booking-com-manipulation
-Ratings are generated as averages from 6 smilies (each 2.5, 5, 7.5, 10) -- minimum rating is 2.5.
-Rating system has since been revised.
-
-----
-## Case Study: Facebook's Feed Curation
-
-![Facebook with and without filtering](facebook.png)
-
-<!-- references -->
-
-Eslami, Motahhare, Aimee Rickman, Kristen Vaccaro, Amirhossein Aleyasen, Andy Vuong, Karrie Karahalios, Kevin Hamilton, and Christian Sandvig. [I always assumed that I wasn't really that close to [her]: Reasoning about Invisible Algorithms in News Feeds](http://eslamim2.web.engr.illinois.edu/publications/Eslami_Algorithms_CHI15.pdf). In Proceedings of the 33rd annual ACM conference on human factors in computing systems, pp. 153-162. ACM, 2015.
-
-
-
-----
-## Case Study: Facebook's Feed Curation
-<!-- smallish -->
-
-* 62% of interviewees were not aware of curation algorithm
-* Surprise and anger when learning about curation
-
-> "Participants were most upset when close friends and
-family were not shown in their feeds [...] participants often attributed missing stories to their friends’ decisions to exclude them rather than to Facebook News Feed algorithm."
-
-* Learning about algorithm did not change satisfaction level
-* More active engagement, more feeling of control
-
-
-<!-- references -->
-
-Eslami, Motahhare, Aimee Rickman, Kristen Vaccaro, Amirhossein Aleyasen, Andy Vuong, Karrie Karahalios, Kevin Hamilton, and Christian Sandvig. [I always assumed that I wasn't really that close to [her]: Reasoning about Invisible Algorithms in News Feeds](http://eslamim2.web.engr.illinois.edu/publications/Eslami_Algorithms_CHI15.pdf). In Proceedings of the 33rd annual ACM conference on human factors in computing systems, pp. 153-162. ACM, 2015.
-
-----
-## Case Study: HR Application Screening
-
-
-<div class="tweet" data-src="https://twitter.com/TheWrongNoel/status/1194842728862892033"></div>
-
-
-----
-## Appropriate Level of Algorithmic Transparency
-
-IP/Trade Secrets/Fairness/Perceptions/Ethics?
-
-How to design? How much control to give?
-
-<!-- discussion -->
- 
-
-
 
 
 
@@ -1439,7 +1385,7 @@ Source: https://en.wikipedia.org/wiki/Regulation_of_artificial_intelligence
 
 * Interpretability useful for many scenarios: user feedback, debugging, fairness audits, science, ...
 * Defining and measuring interpretability
-* Inherently interpretable models: sparse regressions, shallow decision trees, ...
+* Inherently interpretable models: sparse regressions, shallow decision trees
 * Providing ex-post explanations of blackbox models
   - global and local surrogates
   - dependence plots and feature importance
@@ -1447,6 +1393,5 @@ Source: https://en.wikipedia.org/wiki/Regulation_of_artificial_intelligence
   - counter-factual explanations
 * Data debugging with prototypes, criticisms, and influential instances
 * Consider implications on user interface design
-* Algorithmic transparency can impact users and usability
 * Considerations for high-stakes decisions
 * Regulations may be coming
