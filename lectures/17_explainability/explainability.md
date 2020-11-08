@@ -1,7 +1,7 @@
 ---
 author: Christian Kaestner
 title: "17-445: Interpretability and Explainability"
-semester: Summer 2020
+semester: Fall 2020
 footer: "17-445 Software Engineering for AI-Enabled Systems, Christian
 Kaestner"
 ---
