@@ -32,7 +32,7 @@ A sample dataset from Schufa is available for download (https://archive.ics.uci.
 
 *You may use existing tools like IBM’s [AI Fairness 360](https://www.ibm.com/blogs/research/2018/09/ai-fairness-360/) toolkit, but it might be easier to implement this yourself and derive measures directly from tests and the confusion matrix.* 
 
-**Task 3: Improve model fairness:** For one protected attribute of your choice, try to improve the fairness of your classifier and evaluate the impact on model accuracy: For anti-classification eliminate the protected attribute, for independence and separation try picking separate thresholds for both groups. Optional: You can also explore other mechanisms to change training data, preprocessing, or learning techniques if you like, possibly with existing tools like IBM’s [AI Fairness 360](https://www.ibm.com/blogs/research/2018/09/ai-fairness-360/) toolkit,.
+**Task 3: Improve model fairness:** For one protected attribute of your choice, try to improve the fairness of your classifier and evaluate the impact on model accuracy: For anti-classification eliminate the protected attribute, for independence and separation try picking separate thresholds for both groups. Optional: You can also explore other mechanisms to change training data, preprocessing, or learning techniques if you like, possibly with existing tools like IBM’s [AI Fairness 360](https://www.ibm.com/blogs/research/2018/09/ai-fairness-360/) toolkit.
 
 **Task 4: Fairness properties:** Discuss which fairness property may be suitable in the credit rating setting and why. If you could only enforce one fairness property, which one would it be?
 
@@ -61,7 +61,7 @@ The assignment is worth 100 points. For full credit, we expect:
 * [] 15 points: Credit scoring model learned and evaluated, ROC curve reported, corresponding code provided or referenced.
 * [] 25 points: Reasonable operationalization of the three fairness criteria, clear description of the measure, and provided 6 measurement results (for the three fairness criteria and two protected attributes)
 * [] 20 points: Improvements attempted separately for all three fairness criteria, with sufficient description to understand what was attempted. Fairness and accuracy reported before and after for each.
-* [] 10 points: Plausible tradeoff discussion between the three fairness measures and their corresponding goals. Well argued recommendation for which measure to adopt that is grounded in the credit scoring scenario.
+* [] 10 points: Plausible tradeoff discussion between the three fairness measures and their corresponding goals. Well-argued recommendation for which measure to adopt that is grounded in the credit scoring scenario.
 * [] 30 points: Plausible discussion of fairness issues in the movie recommendation scenario that includes (1) a discussion of harms of representation and harms of allocation and corresponding groups/protected attributes (10 points), (2) a discussion of the five sources of bias  (10 points), and (3) a recommendation of engineering practices for fairness to adopt in this project that is grounded in the realism of the movie recommendation scenario (10 points).
 
 ## Groupwork option
