@@ -26,7 +26,7 @@ A sample dataset from Schufa is available for download (https://archive.ics.uci.
 
 **Task 1: Train Credit Scoring Model:** Train a credit scoring model based on part of the labeled sample data (technically, this would be a *global surrogate* model, but for the purpose of this assignment we are assuming that the labels correspond to people actually defaulting on the loan) – pretty much any supervised classification model that comes with customizable thresholds will do. Evaluate the quality of your model with the remaining data and plot an ROC curve. Typical solutions will achieve an ROC_AUC of around 0.7. 
 
-*You may reuse existing code you find online for this task. For example, we recommend the following Kaggle [notebook](https://www.kaggle.com/kabure/predicting-credit-risk-model-pipeline/notebook), although you are free to use any other code, as long as you have the permission to reuse it and can provide a working reference to it.*
+*You may reuse existing code you find online for this task. For example, we recommend the following Kaggle [notebook](https://www.kaggle.com/kabure/predicting-credit-risk-model-pipeline/notebook), although you are free to use any other code, as long as you have the permission to reuse it and can provide a working, public reference to it.*
 
 **Task 2: Measuring fairness:** Consider gender and age as protected attributes and assume that the labels in the validation data are an accurate reflection of that person’s risk of defaulting on a loan. For each protected attribute evaluate the fairness *of your model* using (a) anti-classification, (b) independence, and (c) separation as the fairness criteria. If you need to make assumptions (e.g., select thresholds) state your assumptions.
 
