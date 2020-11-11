@@ -63,9 +63,9 @@ The assignment is worth 100 points. For full credit, we expect:
 * [] 20 points: Improvements attempted separately for all three fairness criteria, with sufficient description to understand what was attempted. Fairness and accuracy reported before and after for each.
 * [] 10 points: Plausible tradeoff discussion between the three fairness measures and their corresponding goals. Well-argued recommendation for which measure to adopt that is grounded in the credit scoring scenario.
 * [] Plausible discussion of fairness issues in the movie recommendation scenario that includes:
-  * [] 10 points: a discussion of harms of representation and harms of allocation and corresponding groups/protected attributes
-  * [] 10 points: a discussion of the five sources of bias
-  * [] 10 points: a recommendation of engineering practices for fairness to adopt in this project that is grounded in the realism of the movie recommendation scenario.
+  * [] 10 points: A discussion of harms of representation and harms of allocation and corresponding groups/protected attributes
+  * [] 10 points: A discussion of the five sources of bias
+  * [] 10 points: A recommendation of engineering practices (one of (1) data collection & pre-processing (2) fairness criteria selection and (3) monitoring & escalation plan) that is grounded in the realism of the movie recommendation scenario.
 
 ## Groupwork option
 
