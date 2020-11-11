@@ -65,7 +65,7 @@ The assignment is worth 100 points. For full credit, we expect:
 * [] Plausible discussion of fairness issues in the movie recommendation scenario that includes:
   * [] 10 points: A discussion of harms of representation and harms of allocation and corresponding groups/protected attributes
   * [] 10 points: A discussion of the five sources of bias
-  * [] 10 points: A recommendation of engineering practices (which can be **one** of (1) data collection & pre-processing, (2) fairness criteria selection and (3) monitoring & escalation plan) that is grounded in the realism of the movie recommendation scenario.
+  * [] 10 points: A recommendation of engineering practices (which can be **one** of (1) data collection & pre-processing, (2) fairness criteria selection and (3) monitoring & escalation) that is grounded in the realism of the movie recommendation scenario.
 
 ## Groupwork option
 
