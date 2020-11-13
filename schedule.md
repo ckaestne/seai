@@ -36,19 +36,19 @@
 | Fri, Nov 06 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) [Fairness](https://github.com/ckaestne/seai/blob/F2020/recitations/Recitation_8_Fairness.pdf) | |  |
 | Mon, Nov 09 | [Explainability & Interpretability](https://ckaestne.github.io/seai/F2020/slides/17_explainability/explainability.html) ([md](https://github.com/ckaestne/seai/blob/F2020/lectures/17_explainability/explainability.md), [pdf](https://ckaestne.github.io/seai/F2020/slides/17_explainability/explainability.pdf)) | [Black boxes not required](https://dataskeptic.com/blog/episodes/2020/black-boxes-are-not-required) or [Stop Explaining Black Box ML Models…](https://arxiv.org/abs/1811.10154) |  |
 | Wed, Nov 11 | [Explainability & Interpretability (continued)](https://ckaestne.github.io/seai/F2020/slides/17_explainability/explainability.html) ([md](https://github.com/ckaestne/seai/blob/F2020/lectures/17_explainability/explainability.md), [pdf](https://ckaestne.github.io/seai/F2020/slides/17_explainability/explainability.pdf)) | [People + AI, Ch. “Explainability and Trust”](https://pair.withgoogle.com/chapter/explainability-trust/) | [M2: Infrastructure Quality](https://github.com/ckaestne/seai/blob/F2020/assignments/project.md) |
-| Fri, Nov 13 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) Monitoring | |  |
+| Fri, Nov 13 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) Containers | |  |
 | Mon, Nov 16 | Algorithmic Transparency (guest lecture) and [Versioning, Provenance, and Reproducability](https://ckaestne.github.io/seai/F2020/slides/18_provenance/provenance.html)  ([md](https://github.com/ckaestne/seai/blob/F2020/lectures/18_provenance/provenance.md), [pdf](https://ckaestne.github.io/seai/F2020/slides/18_provenance/provenance.pdf)) | [Building Intelligent Systems](https://www.buildingintelligentsystems.com/), Ch. 21 & [Goods: Organizing Google's Datasets](http://research.google.com/pubs/archive/45390.pdf) |  |
 | Wed, Nov 18 | Security, Adversarial Learning, and Privacy | | I6: Fairness |
-| Fri, Nov 20 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) Threat modeling | |  |
+| Fri, Nov 20 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) Monitoring | |  |
 | Mon, Nov 23 | Human AI Interaction (guest lecture) | |  |
 | Wed, Nov 25 | **Thanksgiving, no class** | |  |
 | Fri, Nov 27 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) **Thanksgiving, no class** | |  |
 | Mon, Nov 30 | Safety 1 | |  |
 | Wed, Dec 02 | Safety 2 (Guest Lecture) | | [M3: Monitoring and CD](https://github.com/ckaestne/seai/blob/F2020/assignments/project.md) |
-| Fri, Dec 04 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) tbd | |  |
+| Fri, Dec 04 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) Threat modeling | |  |
 | Mon, Dec 07 | Fostering Interdisciplinary Teams | |  |
 | Wed, Dec 09 | Summary and Review | | [M4: Security and Feedback Loops](https://github.com/ckaestne/seai/blob/F2020/assignments/project.md) |
-| tbd | **Final Project Presentations** | | [Final report](https://github.com/ckaestne/seai/blob/F2020/assignments/project.md) |
+| Thu, Dec 17 | **Final Project Presentations** (1-4pm) | | [Final report](https://github.com/ckaestne/seai/blob/F2020/assignments/project.md) |
 
 
 
