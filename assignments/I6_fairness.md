@@ -58,14 +58,14 @@ The focus of this assignment is on understanding fairness measures and consideri
 
 The assignment is worth 100 points. For full credit, we expect:
 
-* [] 15 points: Credit scoring model learned and evaluated, ROC curve reported, corresponding code provided or referenced.
-* [] 25 points: Reasonable operationalization of the three fairness criteria, clear description of the measure, and provided 6 measurement results (for the three fairness criteria and two protected attributes)
-* [] 20 points: Improvements attempted separately for all three fairness criteria, with sufficient description to understand what was attempted. Fairness and accuracy reported before and after for each.
-* [] 10 points: Plausible tradeoff discussion between the three fairness measures and their corresponding goals. Well-argued recommendation for which measure to adopt that is grounded in the credit scoring scenario.
-* [] Plausible discussion of fairness issues in the movie recommendation scenario that includes:
-  * [] 10 points: A discussion of harms of representation and harms of allocation and corresponding groups/protected attributes
-  * [] 10 points: A discussion of the five sources of bias
-  * [] 10 points: A recommendation of engineering practices (which can be **one** of (1) data collection & pre-processing, (2) fairness criteria selection and (3) monitoring & escalation) that is grounded in the realism of the movie recommendation scenario.
+* [ ] 15 points: Credit scoring model learned and evaluated, ROC curve reported, corresponding code provided or referenced.
+* [ ] 25 points: Reasonable operationalization of the three fairness criteria, clear description of the measure, and provided 6 measurement results (for the three fairness criteria and two protected attributes)
+* [ ] 20 points: Improvements attempted separately for all three fairness criteria, with sufficient description to understand what was attempted. Fairness and accuracy reported before and after for each.
+* [ ] 10 points: Plausible tradeoff discussion between the three fairness measures and their corresponding goals. Well-argued recommendation for which measure to adopt that is grounded in the credit scoring scenario.
+* [ ] Plausible discussion of fairness issues in the movie recommendation scenario that includes:
+  * [ ] 10 points: A discussion of harms of representation and harms of allocation and corresponding groups/protected attributes
+  * [ ] 10 points: A discussion of the five sources of bias
+  * [ ] 10 points: A recommendation of engineering practices (which can be **one** of (1) data collection & pre-processing, (2) fairness criteria selection and (3) monitoring & escalation) that is grounded in the realism of the movie recommendation scenario.
 
 ## Groupwork option
 
