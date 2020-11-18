@@ -126,7 +126,7 @@ server failure.
 
 * What are the attacker’s actions?
   * Depends on system boundary & its exposed interfaces
-  * Use am architecture diagram to identify attack surface & actions
+  * Use an architecture diagram to identify attack surface & actions
 * Example: College admission
   <!-- .element: class="fragment" -->
   * Physical: Break into building & access server
