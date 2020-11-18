@@ -240,7 +240,16 @@ Networks_, Shafahi et al. (2018)
 
 ![](home-assistant-robot.png)
 
-* What's the security (integrity) requirement?
+* Dialogue system to interact with family members
+* Use perception & speech to identify the person
+* Log & upload interactions; re-train & update models for all robots
+
+----
+## Example: Home Assistant Robot
+
+![](home-robot-architecture.png)
+
+* What are the security requirements?
 * What are possible poisoning attacks?
 * What does the attacker need to know/access?
 
@@ -292,12 +301,15 @@ _Robust Physical-World Attacks on Deep Learning Visual
 Classification_,
 Eykholt et al., in CVPR (2018).
 
-
 ----
 ## Task Decision Boundary vs Model Boundary
 
 [![Decision boundary vs model boundary](decisionboundary.png)](decisionboundary.png)
 <!-- .element: class="stretch" -->
+
+* Decision boundary: Ground truth; often unknown and not specifiable
+* Model boundary: What the model learns; an approximation of
+  decision boundary
 
 From Goodfellow et al (2018). [Making machine learning robust against adversarial inputs](https://par.nsf.gov/servlets/purl/10111674). *Communications of the ACM*, *61*(7), 56-66. 
 
@@ -308,7 +320,6 @@ From Goodfellow et al (2018). [Making machine learning robust against adversaria
 
 * What are possible evasion attacks? Possible consequences? 
 * What does the attacker need to know/access?
-* Other examples?
 
 ----
 ## Defense against Evasion Attacks
@@ -507,21 +518,22 @@ _Comprehensive Experimental Analyses of Automotive Attack Surfaces_, Checkoway e
 ## Secure Design Principles for ML
 
 * Principle of least privilege
+<!-- .element: class="fragment" -->
   * Who has access to training data, model internal, system input &
   output, etc.,?
   * Does any component/stakeholder have more access than necessary?
+	* If so, limit access by using authentication mechanisms
 * Isolation & compartmentalization
-  * Can a security attack on one ML component (e.g., misclassification)
-    adversely affect other parts of the system? If so, how do we
-    minimize its impact?
+<!-- .element: class="fragment" -->
+	* Can a security attack on one ML component (e.g., misclassification)
+  adversely affect other parts of the system?
+	  * If so, compartmentalize or build in mechanisms to limit
+        impact (see [risk mitigation strategies](https://ckaestne.github.io/seai/F2020/slides/09_risks_ii/risks_ii.html#/3))
 * Monitoring & detection:
-  * Look for odd shifts in the dataset (for poisoning attacks)
+<!-- .element: class="fragment" -->
+  * Look for odd shifts in the dataset and clean the data if needed (for poisoning attacks)
   * Assume all system input as potentially malicious & sanitize
     (evasion attacks)
-
-<!-- split -->
-
-![ml-components](ml-components.png)
 
 ---
 # AI for Security
