@@ -260,7 +260,7 @@ Networks_, Shafahi et al. (2018)
 
 * Anomaly detection & data sanitization
 <!-- .element: class="fragment" -->
-  * Identify and remove outliers in training set
+  * Identify and remove outliers in training set (see [data quality lecture](https://ckaestne.github.io/seai/F2020/slides/11_dataquality/dataquality.html#/3))
   * Identify and understand drift from telemetry
 * Quality control over your training data
   <!-- .element: class="fragment" -->
