@@ -467,7 +467,7 @@ Flaw in one component =>  Limited impact on the rest of the system!
 
 ![](can-bus.png)
 
-* Remotely taking over vehicle control 
+* Research project@UCSD: Remotely taking over vehicle control
   * Create MP3 with malicious code & burn onto CD
   * Play CD => send malicious commands to brakes, engine, locks...
 * Problem: Over-privilege & lack of isolation!
@@ -514,14 +514,26 @@ _Comprehensive Experimental Analyses of Automotive Attack Surfaces_, Checkoway e
 
 ![](qmail3.png)
 
+* Component running as root much smaller than in sendmail; much easier to test & verify that it's free of vulnerabilities
+
 ----
 ## Secure Design Principles for ML
 
 * Principle of least privilege
-<!-- .element: class="fragment" -->
   * Who has access to training data, model internal, system input &
   output, etc.,?
-  * Does any component/stakeholder have more access than necessary?
+  * Does any user/stakeholder have more access than necessary?
+	* If so, limit access by using authentication mechanisms
+
+![](ml-components.png)
+
+----
+## Secure Design Principles for ML
+
+* Principle of least privilege
+  * Who has access to training data, model internal, system input &
+  output, etc.,?
+  * Does any user/stakeholder have more access than necessary?
 	* If so, limit access by using authentication mechanisms
 * Isolation & compartmentalization
 <!-- .element: class="fragment" -->
@@ -534,6 +546,7 @@ _Comprehensive Experimental Analyses of Automotive Attack Surfaces_, Checkoway e
   * Look for odd shifts in the dataset and clean the data if needed (for poisoning attacks)
   * Assume all system input as potentially malicious & sanitize
     (evasion attacks)
+
 
 ---
 # AI for Security
@@ -589,10 +602,11 @@ Note: One contributing factor to the Equifax attack was an expired certificate f
 * Threat modeling to identify security requirements & attacker capabilities
 * ML-specific attacks on training data, telemetry, or the model
   - Poisoning attack on training data to influence predictions
-  - Evasion attacks to shape input data to achieve intended predictions (adversarial learning)
-  - Leaks of model IP (surrogates) and training data
+  - Evasion attacks to shape input data to achieve intended
+  predictions (adversarial learning)
+  - Model inversion attacks for privacy violations
 * Security design at the system level
-  - Influence costs and gains
-  - Security mechanisms beyond the model
+  - Principle of least privilege
+  - Isolation & compartmentalization 
 * AI can be used for defense (e.g. anomaly detection)
 * __Key takeaway__: Adopt a security mindset! Assume all components may be vulnerable in one way or another. Design your system to explicitly reduce the impact of potential attacks
