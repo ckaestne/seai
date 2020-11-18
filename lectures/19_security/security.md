@@ -147,25 +147,25 @@ server failure.
 <!--   * it clearly shows potentially malicious/untrusted agent(s) & interactions -->
 <!--     with the system -->
 
-<!-- ---- -->
-<!-- ## STRIDE Threat Modeling -->
+----
+## STRIDE Threat Modeling
 
-<!-- ![](stride.png) -->
+![](stride.png)
 
-<!-- * A systematic approach to identifying threats & attacker actions -->
-<!--   * For each component, enumerate & identify potential threats  -->
-<!--   * e.g., Admission Server & DoS: Applicant may flood it with requests -->
-<!-- * Tool available (Microsoft Threat Modeling Tool) -->
-<!-- * Limitations: -->
-<!--   * May end up with a long list of threats, not all of them relevant -->
-<!--   * False sense of security: STRIDE does not imply completeness! -->
+* A systematic approach to identifying threats & attacker actions
+  * For each component, enumerate & identify potential threats
+  * e.g., Admission Server & DoS: Applicant may flood it with requests
+* Tool available (Microsoft Threat Modeling Tool)
+* Limitations:
+  * May end up with a long list of threats, not all of them relevant
+  * False sense of security: STRIDE does not imply completeness!
 
-<!-- ---- -->
-<!-- ## Open Web Application Security Project -->
+----
+## Open Web Application Security Project
 
-<!-- ![](owasp.png) -->
+![](owasp.png)
 
-<!-- * OWASP: Community-driven source of knowledge & tools for web security -->
+* OWASP: Community-driven source of knowledge & tools for web security
 
 ---
 # Threat Modeling for ML 
