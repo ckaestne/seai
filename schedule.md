@@ -40,7 +40,7 @@
 | Mon, Nov 16 | Algorithmic Transparency (guest lecture by [Motahhare Eslami](http://motahhare.com/)) and [Versioning, Provenance, and Reproducability](https://ckaestne.github.io/seai/F2020/slides/18_provenance/provenance.html)  ([md](https://github.com/ckaestne/seai/blob/F2020/lectures/18_provenance/provenance.md), [pdf](https://ckaestne.github.io/seai/F2020/slides/18_provenance/provenance.pdf)) | [Building Intelligent Systems](https://www.buildingintelligentsystems.com/), Ch. 21 & [Goods: Organizing Google's Datasets](http://research.google.com/pubs/archive/45390.pdf) |  |
 | Wed, Nov 18 | [Security](https://ckaestne.github.io/seai/F2020/slides/19_security/security.html) | [Building Intelligent Systems](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436), Ch. 25 & [The Top 10 Risks of Machine Learning Security](https://ieeexplore.ieee.org/document/9107290)  | [I6: Fairness](https://github.com/ckaestne/seai/blob/F2020/assignments/I6_fairness.md)  |
 | Fri, Nov 20 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) Monitoring | |  |
-| Mon, Nov 23 | Human AI Interaction (guest lecture) | |  |
+| Mon, Nov 23 | [Human AI Interaction](https://github.com/ckaestne/seai/blob/F2020/lectures/20_hci/haiyi-guest-lecture.pdf) (guest lecture by [Haiyi Zhu](https://haiyizhu.com/)) | |  |
 | Wed, Nov 25 | **Thanksgiving, no class** | |  |
 | Fri, Nov 27 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) **Thanksgiving, no class** | |  |
 | Mon, Nov 30 | Safety 1 | |  |
