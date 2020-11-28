@@ -1,7 +1,7 @@
 ---
 author: Eunsuk Kang
 title: "17-445: Security"
-semester: Fall 2019
+semester: Fall 2020
 footer: "17-445 Software Engineering for AI-Enabled Systems, Christian
 Kaestner & Eunsuk Kang"
 ---
@@ -69,9 +69,6 @@ in the department.
 day of the application deadline.
 <!-- .element: class="fragment" -->
 * Application decisions are recorded only by the faculty and staff.
-<!-- .element: class="fragment" -->
-* The application site should backup all applications in case of a
-server failure.
 <!-- .element: class="fragment" -->
 * The acceptance notices can only be sent out by the program director.
 <!-- .element: class="fragment" -->
