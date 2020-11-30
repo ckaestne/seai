@@ -43,7 +43,7 @@
 | Mon, Nov 23 | [Human AI Interaction](https://github.com/ckaestne/seai/blob/F2020/lectures/20_hci/haiyi-guest-lecture.pdf) (guest lecture by [Haiyi Zhu](https://haiyizhu.com/)) | |  |
 | Wed, Nov 25 | **Thanksgiving, no class** | |  |
 | Fri, Nov 27 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) **Thanksgiving, no class** | |  |
-| Mon, Nov 30 | Safety 1 | |  |
+| Mon, Nov 30 | [Safety 1](https://ckaestne.github.io/seai/F2020/slides/21_safety/safety.html) | |  |
 | Wed, Dec 02 | Safety 2 (Guest Lecture) | | [M3: Monitoring and CD](https://github.com/ckaestne/seai/blob/F2020/assignments/project.md) |
 | Fri, Dec 04 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) Threat modeling | |  |
 | Mon, Dec 07 | Fostering Interdisciplinary Teams | |  |
