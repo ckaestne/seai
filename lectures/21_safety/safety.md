@@ -39,7 +39,7 @@ S. Mohseni et al., SafeAI Workshop@AAAI (2020).
   * Harm to the environment or society
 * Safety is a system concept
    <!-- .element: class="fragment" -->
-   * Can't talk about software being "safe"/"unsafe" on its own
+  * Can't talk about software being "safe"/"unsafe" on its own
   * Safety is defined in terms of its effect on the **environment**
 + Safety != Reliability
    <!-- .element: class="fragment" -->
