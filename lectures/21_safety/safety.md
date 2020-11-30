@@ -191,6 +191,7 @@ distance to the leading vehicle.
 ## Failure Mode and Effects Analysis
 
 ![](fmea-radiation.png)
+<!-- .element: class="stretch" -->
 
 * A __forward search__ technique to identify potential hazards
 * For each function, (1) enumerate possible _failure modes_ (2) possible safety impact (_effects_) and (3) mitigation strategies.
