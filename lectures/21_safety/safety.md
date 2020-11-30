@@ -210,6 +210,17 @@ distance to the leading vehicle.
 
 | Component | Failure Mode | Failure Effects | Detection | Mitigation |
 |---|---|---|---|---|
+| Perception | ? | ? | ? | ? |
+| Perception | ? | ? | ? | ? |
+| Lidar Sensor | Mechanical failure | Inability to detect objects | Monitor | Switch to manual control mode |
+| ... | ... | ... | ... |  ... | 
+
+
+----
+## FMEA Example: Autonomous Vehicles
+
+| Component | Failure Mode | Failure Effects | Detection | Mitigation |
+|---|---|---|---|---|
 | Perception | Failure to detect an object | Risk of collision | Human operator (if present) | Deploy secondary classifier |
 | Perception | Detected but misclassified | " | " | " |
 | Lidar Sensor | Mechanical failure | Inability to detect objects | Monitor | Switch to manual control mode |
