@@ -423,6 +423,7 @@ From Goodfellow et al (2018). [Making machine learning robust against adversaria
   - Downside: Significantly raises cost of prediction; may not be suitable
     for time-sensitive applications (e.g., self-driving cars)
 * Design mechanisms
+<!-- .element: class="fragment" -->
   - Deploy redundant components for critical tasks
   - Ensemble learning: Combine models with different biases
   - Multiple, independent sensors (e.g., lidar + radar + cameras)
@@ -439,6 +440,7 @@ From Goodfellow et al (2018). [Making machine learning robust against adversaria
   - Augment training data with transformed versions
     (but same label)
 * Testing and debugging
+<!-- .element: class="fragment" -->
   - Identify training data near model's decision boundary (i.e., is
     the model robust around all training data?)
   - Check robustness on test data
