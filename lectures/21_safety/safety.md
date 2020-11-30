@@ -432,7 +432,6 @@ From Goodfellow et al (2018). [Making machine learning robust against adversaria
 ## Improving Robustness for Safety
 
 ![](weather-conditions.png)
-<!-- .element: class="stretch" -->
 
 * Learning more robust models
   - Curate data for abnormal scenarios
