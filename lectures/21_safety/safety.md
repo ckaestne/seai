@@ -150,6 +150,15 @@ __More miles tested => safer?__
 * __Hazard analysis__: Methods for identifying hazards & potential root causes 
 
 ----
+## Recall: World vs Machine
+
+![World vs Machine](machine-world.png)
+
+Software is not unsafe on its own; the control signals it generates may be
+
+Root of unsafety usually in wrong requirements & environmental assumptions
+
+----
 ## Recall: Requirement vs Specification
 
 ![requirement-vs-spec](acc.png)
@@ -161,16 +170,6 @@ distance to the leading vehicle.
 * __SPEC__: Depending on the sensor readings, the controller must
   issue an actuator command to accelerate/decelerate the vehicle as needed.
 
-
-----
-## Recall: World vs Machine
-
-![World vs Machine](machine-world.png)
-
-
-Software is not unsafe; the control signals it generates may be
-
-Root of unsafety usually in wrong requirements & environmental assumptions
 
 ----
 ## Review: Fault Tree Analysis (FTA)
