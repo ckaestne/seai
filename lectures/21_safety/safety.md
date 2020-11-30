@@ -376,6 +376,8 @@ Image: David Silver. [Adversarial Traffic Signs](https://medium.com/self-driving
 * Model boundary: What the model learns; an approximation of decision boundary
 * Often, learned & actual decision boundaries do not match!
 
+<!-- references -->
+
 From Goodfellow et al (2018). [Making machine learning robust against adversarial inputs](https://par.nsf.gov/servlets/purl/10111674). *Communications of the ACM*, *61*(7), 56-66. 
 
 
