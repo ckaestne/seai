@@ -233,7 +233,7 @@ possible deviations from expected behavior
 
 * Specification: EB must apply a maximum braking
 command to the engine.
-  * __NONE__: EB does not generate any braking command.
+  * __NO OR NOT__: EB does not generate any braking command.
   * __LESS__: EB applies less than max. braking.
   * __LATE__: EB applies max. braking but after a delay of 2
   seconds.
