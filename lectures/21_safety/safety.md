@@ -325,8 +325,9 @@ events in FTA)
 ![Handwritten number transformation](handwriting-transformation.png)
 
 <!-- references -->
-Image: Singh, Gagandeep, Timon Gehr, Markus Püschel, and Martin Vechev. "[An abstract domain for certifying neural networks](https://dl.acm.org/doi/pdf/10.1145/3290354)." Proceedings of the ACM on Programming Languages 3, no. POPL (2019): 1-30. 
-
+Image: [_An abstract domain for certifying neural networks_](https://dl.acm.org/doi/pdf/10.1145/3290354).
+    Gagandeep et al., POPL (2019).
+    
 ----
 ## Robustness in a Safety Setting
 
