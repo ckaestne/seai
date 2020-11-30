@@ -193,7 +193,7 @@ distance to the leading vehicle.
 ![](fmea-radiation.png)
 
 * A __forward search__ technique to identify potential hazards
-* For each function, (1) enumerate possible failure modes (2) possible safety impact (effects) and (3) mitigation strategies.
+* For each function, (1) enumerate possible _failure modes_ (2) possible safety impact (_effects_) and (3) mitigation strategies.
 * Widely used in aeronautics, automotive, healthcare, food services,
   semiconductor processing, and (to some extent) software
 
