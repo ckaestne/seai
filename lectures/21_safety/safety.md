@@ -188,7 +188,7 @@ distance to the leading vehicle.
 ![](search-types.png)
 
 ----
-## Failure Mode and Effects Analysis
+## Failure Mode and Effects Analysis (FMEA)
 
 ![](fmea-radiation.png)
 <!-- .element: class="stretch" -->
