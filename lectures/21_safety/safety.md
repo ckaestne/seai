@@ -440,7 +440,6 @@ From Goodfellow et al (2018). [Making machine learning robust against adversaria
   - Augment training data with transformed versions
     (but same label)
 * Testing and debugging
-<!-- .element: class="fragment" -->
   - Identify training data near model's decision boundary (i.e., is
     the model robust around all training data?)
   - Check robustness on test data
