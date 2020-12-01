@@ -145,7 +145,7 @@ Second, setup an automated process to periodically train a new version of your m
 
 Third, set up a monitoring infrastructure that monitors the health of your recommendation service (including availability) and the quality of its predictions. You might want to set up automated alerts if problems are detected.
 
-Fourth, build or setup an experimentation environment, in which you can compare two models in production (e.g., for an A/B test or a canary release). This requires that you can route requests from different users to different models and collect and report results per model. Report confidence in differences between models using appropriate statistical tests.
+Fourth, build or setup an experimentation environment, in which you can compare two models in production (e.g., for an A/B test or a canary release). This requires that you can route requests from different users to different models and collect and report results per model. Report confidence in differences between models using appropriate statistical tests. Demonstrate the experimentation infrastructure with a simple experiment (e.g., comparing models learned on different data or with different hyperparameters).
 
 Finally, track provenance of your predictions and models such that for every prediction your recommendation service makes you can answer: (1) which version of the model has made the prediction, (2) which version of the pipeline code and ML frameworks has been used to train that model, and (3) what data has been used for training that model.
 
