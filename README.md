@@ -1,4 +1,4 @@
-# Machine Learning in Production / AI Engineering (17-445/17-645/11-695)
+# Machine Learning in Production / AI Engineering (17-445/17-645/17-745/11-695)
 
 *Formerly **Software Engineering for AI-Enabled Systems (SE4AI) **, CMU course that covers how to build, deploy, assure, and maintain applications with machine-learned models. Covers **responsible AI** (safety, security, fairness, explainability) and **MLOps**.*
 
@@ -118,7 +118,6 @@ The course content evolves from semester to semester. Below is the schedule from
 ## Course Syllabus and Policies
 
 see [Fall 2019](https://ckaestne.github.io/seai/F2019), [Summer 2020](https://ckaestne.github.io/seai/S2020), [Fall 2020](https://ckaestne.github.io/seai/F2020), or  [Spring 2021](https://ckaestne.github.io/seai/S2021) for details.
-
 
 
 ## Related Courses
