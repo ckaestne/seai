@@ -47,7 +47,7 @@
 | Wed, Dec 02 | [Safety 2: Safe Self-Driving](https://github.com/ckaestne/seai/blob/F2020/lectures/22_safety_guest_lecture/safeselfdriving.pdf) (Guest Lecture by Owen Cheng, Uber ATG) | | [M3: Monitoring and CD](https://github.com/ckaestne/seai/blob/F2020/assignments/project.md) |
 | Fri, Dec 04 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) Threat modeling | |  |
 | Mon, Dec 07 | [Fostering Interdisciplinary Teams](https://ckaestne.github.io/seai/F2020/slides/23_teams/teams.html) ([md](https://github.com/ckaestne/seai/blob/F2020/lectures/23_teams/teams.md), [pdf](https://ckaestne.github.io/seai/F2020/slides/23_teams/teams.pdf)) | |  |
-| Wed, Dec 09 | Summary and Review | | [M4: Security and Feedback Loops](https://github.com/ckaestne/seai/blob/F2020/assignments/project.md) |
+| Wed, Dec 09 | [Summary](https://ckaestne.github.io/seai/F2020/slides/24_summary/all.html) & [Closing Discussion](https://ckaestne.github.io/seai/F2020/slides/24_summary/future.html) ([md](https://github.com/ckaestne/seai/blob/F2020/lectures/24_summary/future.md), [pdf](https://ckaestne.github.io/seai/F2020/slides/24_summary/future.pdf)) | | [M4: Security and Feedback Loops](https://github.com/ckaestne/seai/blob/F2020/assignments/project.md) |
 | Thu, Dec 17 | **Final Project Presentations** (1-4pm) | | [Final report](https://github.com/ckaestne/seai/blob/F2020/assignments/project.md) |
 
 
