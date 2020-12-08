@@ -21,7 +21,7 @@ Christian Kaestner
 
 **Looking back at the semester**
 
-(424 slides in 40 min)
+(375 slides in 40 min)
 
 <!-- col -->
 (2)
