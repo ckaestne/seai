@@ -4,51 +4,46 @@
 
 | Date  | Topic | Reading | Assignment due |
 | -     | -     | -       | -              |
-| Mon, Aug 31 | [Introduction and Motivation](https://ckaestne.github.io/seai/F2020/slides/01_introduction/intro.html#/) ([md](https://github.com/ckaestne/seai/blob/F2020/lectures/01_introduction/intro.md), [pdf](https://ckaestne.github.io/seai/F2020/slides/01_introduction/intro.pdf)) | |  |
-| Wed, Sep 02 | [From Models to AI-Enabled Systems (Systems Thinking)](https://ckaestne.github.io/seai/F2020/slides/02_systems/systems.html#/) ([md](https://github.com/ckaestne/seai/blob/F2020/lectures/02_systems/systems.md), [pdf](https://ckaestne.github.io/seai/F2020/slides/02_systems/systems.pdf)) | [Building Intelligent Systems](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436), Ch. 5 |  |
-| Fri, Sep 04 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) [Remote work and collaboration, Git](https://github.com/ckaestne/seai/blob/F2020/recitations/Recitation_1_Git.pdf) | |  |
-| Mon, Sep 07 | **Labor day, no class** | |  |
-| Wed, Sep 09 | [Model Quality and Software Testing](https://ckaestne.github.io/seai/F2020/slides/03_modelquality/modelquality.html#/) ([md](https://github.com/ckaestne/seai/blob/F2020/lectures/03_modelquality/modelquality.md), [pdf](https://ckaestne.github.io/seai/F2020/slides/03_modelquality/modelquality.pdf), [blog post](https://medium.com/@ckaestne/a-software-testing-view-on-machine-learning-model-quality-d508cb9e20a6)) and [Teamwork Primer](https://ckaestne.github.io/seai/F2020/slides/03_modelquality/teams.html#/) | [Building Intelligent Systems](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436), Ch. 19 and [Semantically equivalent adversarial rules for debugging NLP models](https://www.aclweb.org/anthology/P18-1079.pdf) | [I1: Case Study](https://github.com/ckaestne/seai/blob/F2020/assignments/I1_case_study.md) |
-| Fri, Sep 11 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) [Apache Kafka](https://github.com/ckaestne/seai/blob/F2020/recitations/Recitation_2_Kafka.pdf) | |  |
-| Mon, Sep 14 | [Model Quality and Software Testing](https://ckaestne.github.io/seai/F2020/slides/03_modelquality/modelquality.html#/) (continued) |  |  |
-| Wed, Sep 16 | [Quality Assessment in Production](https://ckaestne.github.io/seai/F2020/slides/04_qainproduction/qainproduction.html#/) ([md](https://github.com/ckaestne/seai/blob/F2020/lectures/04_qainproduction/qainproduction.md), [pdf](https://ckaestne.github.io/seai/F2020/slides/04_qainproduction/qainproduction.pdf)) | [Building Intelligent Systems](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436), Ch. 15 |  |
-| Fri, Sep 18 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) [Testing](https://github.com/ckaestne/seai/blob/F2020/recitations/Recitation_3_Testing.pdf) | |  |
-| Mon, Sep 21 | [Goals and Success Measures for AI-Enabled Systems](https://ckaestne.github.io/seai/F2020/slides/06_goals/goals.html) ([md](https://github.com/ckaestne/seai/blob/F2020/lectures/06_goals/goals.md), [pdf](https://ckaestne.github.io/seai/F2020/slides/06_goals/goals.pdf)) | [Building Intelligent Systems](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436), Ch. 2 and 4 |  |
-| Wed, Sep 23 | [Tradeoffs among Modeling Techniques](https://ckaestne.github.io/seai/F2020/slides/07_tradeoffs/tradeoffs.html) ([md](https://github.com/ckaestne/seai/blob/F2020/lectures/07_tradeoffs/tradeoffs.md), [pdf](https://ckaestne.github.io/seai/F2020/slides/07_tradeoffs/tradeoffs.pdf)) | [Building Intelligent Systems](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436), Ch. 17 and 18 | [M1: Modeling and First Deployment](https://github.com/ckaestne/seai/blob/F2020/assignments/project.md) |
-| Fri, Sep 25 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) [Measurement](https://github.com/ckaestne/seai/blob/F2020/recitations/Recitation_4_Measurement.pdf) | |  |
-| Mon, Sep 28 | [Risks and Planning for Mistakes 1](https://ckaestne.github.io/seai/F2020/slides/08_risks/risks.html) ([md](https://github.com/ckaestne/seai/blob/F2020/lectures/08_risks/risks.md), [pdf](https://ckaestne.github.io/seai/F2020/slides/08_risks/risks.pdf), [blog post](https://medium.com/@ckaestne/the-world-and-the-machine-and-responsible-machine-learning-1ae72353c5ae)) | [Building Intelligent Systems](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436), Ch. 6, 7 and 24 |  |
-| Wed, Sep 30 | [Risks and Planning for Mistakes 2](https://ckaestne.github.io/seai/F2020/slides/09_risks_ii/risks_ii.html) ([md](https://github.com/ckaestne/seai/blob/F2020/lectures/09_risks_ii/risks_ii.md), [pdf](https://ckaestne.github.io/seai/F2020/slides/09_risks_ii/risks_ii.pdf)) | [How Big Data Transformed Applying to College](https://slate.com/business/2016/09/how-big-data-made-applying-to-college-tougher-crueler-and-more-expensive.html) | [I2: Tradeoffs](https://github.com/ckaestne/seai/blob/F2020/assignments/I2_tradeoffs.md) |
-| Fri, Oct 02 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) [Requirements/Risk analysis](https://github.com/ckaestne/seai/blob/F2020/recitations/Recitation_5_Requirements.pdf) | |  |
-| Mon, Oct 05 | [Software Architecture of AI-Enabled Systems](https://ckaestne.github.io/seai/F2020/slides/10_architecture/architecture.html) ([md](https://github.com/ckaestne/seai/blob/F2020/lectures/10_architecture/architecture.md), [pdf](https://ckaestne.github.io/seai/F2020/slides/10_architecture/architecture.pdf)) | [Building Intelligent Systems](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436), Ch. 13 and [Exploring Development Patterns in Data Science](https://www.theorylane.com/2017/10/20/some-development-patterns-in-data-science/) |  |
-| Wed, Oct 07 | [Data Quality](https://ckaestne.github.io/seai/F2020/slides/11_dataquality/dataquality.html) ([md](https://github.com/ckaestne/seai/blob/F2020/lectures/11_dataquality/dataquality.md), [pdf](https://ckaestne.github.io/seai/F2020/slides/11_dataquality/dataquality.pdf)) | [Automating large-scale data quality verification](http://www.vldb.org/pvldb/vol11/p1781-schelter.pdf) and [The Data Linter](http://learningsys.org/nips17/assets/papers/paper_19.pdf) | [I3: Requirements and Risks](https://github.com/ckaestne/seai/blob/F2020/assignments/I3_requirements_risks.md) |
-| Fri, Oct 09 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) [Architecture](https://github.com/ckaestne/seai/blob/F2020/recitations/Recitation_6_Architecture.pdf) | |  |
-| Mon, Oct 12 | [Infrastructure Quality, Deployment, and Operations](https://ckaestne.github.io/seai/F2020/slides/12_infrastructurequality/infrastructurequality.html) ([md](https://github.com/ckaestne/seai/blob/F2020/lectures/12_infrastructurequality/infrastructurequality.md), [pdf](https://ckaestne.github.io/seai/F2020/slides/12_infrastructurequality/infrastructurequality.pdf)) | [The ML Test Score](https://research.google.com/pubs/archive/46555.pdf) |  |
-| Wed, Oct 14 | [Process & Technical Debt](https://ckaestne.github.io/seai/F2020/slides/05_process/process.html#/) ([md](https://github.com/ckaestne/seai/blob/F2020/lectures/05_process/process.md), [pdf](https://ckaestne.github.io/seai/F2020/slides/05_process/process.pdf)) | [Hidden Technical Debt in Machine Learning Systems](http://papers.nips.cc/paper/5656-hidden-technical-debt-in-machine-learning-systems.pdf) | [I4: Architecture](https://github.com/ckaestne/seai/blob/F2020/assignments/I4_architecture.md) |
-| Fri, Oct 16 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) **CMU Day for Community Engagement, no class** | |  |
-| Mon, Oct 19 | [**Midterm**](https://github.com/ckaestne/seai/tree/F2020/exams) | |  |
-| Wed, Oct 21 | [Managing and Processing Large Datasets](https://ckaestne.github.io/seai/F2020/slides/13_dataatscale/dataatscale.html) ([md](https://github.com/ckaestne/seai/blob/F2020/lectures/13_dataatscale/dataatscale.md), [pdf](https://ckaestne.github.io/seai/F2020/slides/13_dataatscale/dataatscale.pdf)) | [Business Systems with Machine Learning](https://www.youtube.com/watch?v=_bvrzYOA8dY) | - |
-| Fri, Oct 23 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) **CMU Mid-Semester Break, no class** | |  |
-| Mon, Oct 26 | [Managing and Processing Large Datasets (continued)](https://ckaestne.github.io/seai/F2020/slides/13_dataatscale/dataatscale.html) ([md](https://github.com/ckaestne/seai/blob/F2020/lectures/13_dataatscale/dataatscale.md), [pdf](https://ckaestne.github.io/seai/F2020/slides/13_dataatscale/dataatscale.pdf)) | |  |
-| Wed, Oct 28 | [Intro to Ethics + Fairness](https://ckaestne.github.io/seai/F2020/slides/14_intro_ethics_fairness/intro-ethics-fairness.html)  ([md](https://github.com/ckaestne/seai/blob/F2020/lectures/14_intro_ethics_fairness/intro-ethics-fairness.md), [pdf](https://ckaestne.github.io/seai/F2020/slides/14_intro_ethics_fairness/intro-ethics-fairness.pdf)) | [Algorithmic Accountability: A Primer](https://datasociety.net/wp-content/uploads/2018/04/Data_Society_Algorithmic_Accountability_Primer_FINAL-4.pdf) | [I5: Open Source Tools](https://github.com/ckaestne/seai/blob/F2020/assignments/I5_se4ai_tools.md) |
-| Fri, Oct 30 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) [Continuous Integration](https://github.com/ckaestne/seai/blob/F2020/recitations/Recitation_7_CI.pdf) | |  |
-| Mon, Nov 02 | [Building Fairer AI-Enabled System 1](https://ckaestne.github.io/seai/F2020/slides/15_fairness_i/fairness_i.html) ([md](https://github.com/ckaestne/seai/blob/F2020/lectures/15_fairness_i/fairness_i.md), [pdf](https://ckaestne.github.io/seai/F2020/slides/15_fairness_i/fairness_i.pdf)) | [Improving Fairness in Machine Learning Systems](http://users.umiacs.umd.edu/~hal/docs/daume19fairness.pdf) |  |
-| Wed, Nov 04 | [Building Fairer AI-Enabled System 2](https://ckaestne.github.io/seai/F2020/slides/16_fairness_ii/fairness_ii.html)  | [A Mulching Proposal](https://dl.acm.org/doi/pdf/10.1145/3290607.3310433?casa_token=xg_kkiUWskIAAAAA:BPhrPLhkHNgAeggGjWw0NBmCi93Rp3TaOX2ZCb54v7m3WfLmf-O5K5F1ogrBmTHFWUH3SfvJdhoMkg) |  |
-| Fri, Nov 06 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) [Fairness](https://github.com/ckaestne/seai/blob/F2020/recitations/Recitation_8_Fairness.pdf) | |  |
-| Mon, Nov 09 | [Explainability & Interpretability](https://ckaestne.github.io/seai/F2020/slides/17_explainability/explainability.html) ([md](https://github.com/ckaestne/seai/blob/F2020/lectures/17_explainability/explainability.md), [pdf](https://ckaestne.github.io/seai/F2020/slides/17_explainability/explainability.pdf)) | [Black boxes not required](https://dataskeptic.com/blog/episodes/2020/black-boxes-are-not-required) or [Stop Explaining Black Box ML Models…](https://arxiv.org/abs/1811.10154) |  |
-| Wed, Nov 11 | [Explainability & Interpretability (continued)](https://ckaestne.github.io/seai/F2020/slides/17_explainability/explainability.html) ([md](https://github.com/ckaestne/seai/blob/F2020/lectures/17_explainability/explainability.md), [pdf](https://ckaestne.github.io/seai/F2020/slides/17_explainability/explainability.pdf)) | [People + AI, Ch. “Explainability and Trust”](https://pair.withgoogle.com/chapter/explainability-trust/) | [M2: Infrastructure Quality](https://github.com/ckaestne/seai/blob/F2020/assignments/project.md) |
-| Fri, Nov 13 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) [Containers](https://github.com/ckaestne/seai/blob/F2020/recitations/Recitation_9_Docker.pdf) | |  |
-| Mon, Nov 16 | Algorithmic Transparency (guest lecture by [Motahhare Eslami](http://motahhare.com/)) and [Versioning, Provenance, and Reproducability](https://ckaestne.github.io/seai/F2020/slides/18_provenance/provenance.html) ([md](https://github.com/ckaestne/seai/blob/F2020/lectures/18_provenance/provenance.md), [pdf](https://ckaestne.github.io/seai/F2020/slides/18_provenance/provenance.pdf)) | [Building Intelligent Systems](https://www.buildingintelligentsystems.com/), Ch. 21 & [Goods: Organizing Google's Datasets](http://research.google.com/pubs/archive/45390.pdf) |  |
-| Wed, Nov 18 | [Security](https://ckaestne.github.io/seai/F2020/slides/19_security/security.html) ([md](https://github.com/ckaestne/seai/blob/F2020/lectures/19_security/security.md), [pdf](https://ckaestne.github.io/seai/F2020/slides/19_security/security.pdf)) | [Building Intelligent Systems](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436), Ch. 25 & [The Top 10 Risks of Machine Learning Security](https://ieeexplore.ieee.org/document/9107290)  | [I6: Fairness](https://github.com/ckaestne/seai/blob/F2020/assignments/I6_fairness.md)  |
-| Fri, Nov 20 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) Monitoring | |  |
-| Mon, Nov 23 | [Human AI Interaction](https://github.com/ckaestne/seai/blob/F2020/lectures/20_hci/haiyi-guest-lecture.pdf) (guest lecture by [Haiyi Zhu](https://haiyizhu.com/)) | |  |
-| Wed, Nov 25 | **Thanksgiving, no class** | |  |
-| Fri, Nov 27 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) **Thanksgiving, no class** | |  |
-| Mon, Nov 30 | [Safety 1](https://ckaestne.github.io/seai/F2020/slides/21_safety/safety.html) ([md](https://github.com/ckaestne/seai/blob/F2020/lectures/21_safety/safety.md), [pdf](https://ckaestne.github.io/seai/F2020/slides/21_safety/safety.pdf)) | |  |
-| Wed, Dec 02 | [Safety 2: Safe Self-Driving](https://github.com/ckaestne/seai/blob/F2020/lectures/22_safety_guest_lecture/safeselfdriving.pdf) (Guest Lecture by Owen Cheng, Uber ATG) | | [M3: Monitoring and CD](https://github.com/ckaestne/seai/blob/F2020/assignments/project.md) |
-| Fri, Dec 04 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) Threat modeling | |  |
-| Mon, Dec 07 | [Fostering Interdisciplinary Teams](https://ckaestne.github.io/seai/F2020/slides/23_teams/teams.html) ([md](https://github.com/ckaestne/seai/blob/F2020/lectures/23_teams/teams.md), [pdf](https://ckaestne.github.io/seai/F2020/slides/23_teams/teams.pdf)) | |  |
-| Wed, Dec 09 | [Summary](https://ckaestne.github.io/seai/F2020/slides/24_summary/all.html) & [Closing Discussion](https://ckaestne.github.io/seai/F2020/slides/24_summary/future.html) ([md](https://github.com/ckaestne/seai/blob/F2020/lectures/24_summary/future.md), [pdf](https://ckaestne.github.io/seai/F2020/slides/24_summary/future.pdf)) | | [M4: Security and Feedback Loops](https://github.com/ckaestne/seai/blob/F2020/assignments/project.md) |
-| Thu, Dec 17 | **Final Project Presentations** (1-4pm) | | [Final report](https://github.com/ckaestne/seai/blob/F2020/assignments/project.md) |
-
-
+| Mon, Feb 01 | Introduction and Motivation  | |  |
+| Wed, Feb 03 | From Models to AI-Enabled Systems (Systems Thinking)  | |  |
+| Fri, Feb 05 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) Remote work and collaboration: Slack, Git, issue trackers | |  |
+| Mon, Feb 08 | Model Quality and Software Testing 1 | |  |
+| Wed, Feb 10 | Model Quality and Software Testing 2 | | I1: Case Study |
+| Fri, Feb 12 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) Stream processing: Apache Kafka | |  |
+| Mon, Feb 15 | Quality Assessment in Production | |  |
+| Wed, Feb 17 | Goals and Success Measures for AI-Enabled Systems | |  |
+| Fri, Feb 19 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) Unit testing | |  |
+| Mon, Feb 22 | Business, Risk, and Planning for Mistakes 1 | |  |
+| Wed, Feb 24 | Business, Risk, and Planning for Mistakes 2 | | M1: Modeling and First Deployment |
+| Fri, Feb 26 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) Requirements/Risk analysis | |  |
+| Mon, Mar 01 | Tradeoffs among Modeling Techniques | |  |
+| Wed, Mar 03 | Software Architecture of AI-Enabled Systems  | | I2: Requirements and Risks |
+| Fri, Mar 05 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) Architecture | |  |
+| Mon, Mar 08 | Data Quality | |  |
+| Wed, Mar 10 | Infrastructure Quality, Deployment, and Operations | | I3: Architecture |
+| Fri, Mar 12 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) Measurement | |  |
+| Mon, Mar 15 | Managing and Processing Large Datasets | |  |
+| Wed, Mar 17 | **Midterm** | |  |
+| Fri, Mar 19 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) **Midsemester break, no recitation** | |  |
+| Mon, Mar 22 | Process & Technical Debt | |  |
+| Wed, Mar 24 | Human AI Interaction | | I4: Open Source Tools |
+| Fri, Mar 26 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) Continuous Integration: Jenkins | |  |
+| Mon, Mar 29 | Intro to Ethics + Fairness | |  |
+| Wed, Mar 31 | Building Fairer AI-Enabled System 1 | |  |
+| Fri, Apr 02 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) Containers: Docker | |  |
+| Mon, Apr 05 | **CMU Break day, no class** | |  |
+| Wed, Apr 07 | Building Fairer AI-Enabled System 2 | | M2: Infrastructure Quality |
+| Fri, Apr 09 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) Monitoring: Prometheus, Grafana | |  |
+| Mon, Apr 12 | Explainability & Interpretability 1  | |  |
+| Wed, Apr 14 | Explainability & Interpretability 2 | |  |
+| Fri, Apr 16 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) Fairness | |  |
+| Mon, Apr 19 | Versioning, Provenance, and Reproducability | |  |
+| Wed, Apr 21 | Security and Privacy | | M3: Monitoring and CD |
+| Fri, Apr 23 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) Threat modeling | |  |
+| Mon, Apr 26 | Safety 1 | |  |
+| Wed, Apr 28 | Safety 2 | | I5: Fairness |
+| Fri, Apr 30 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) tbd | |  |
+| Mon, May 03 | Fostering Interdisciplinary Teams | |  |
+| Wed, May 05 | Summary and Review | | M4: Security and Feedback Loops |
+| tbd | **Final Project Presentations** | | Final report |
 
