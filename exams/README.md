@@ -16,3 +16,5 @@ Midterms from previous semesters are available as practice. We expect the midter
 * [Midterm from Fall 2019](https://github.com/ckaestne/seai/blob/F2019/other_material/midterm.pdf) (we did not cover version control yet)
 * [Final from Fall 2019](https://github.com/ckaestne/seai/blob/F2019/other_material/final_exam.pdf) (covers different topics, but provides yet another scenario)
 * [Midterm from Summer 2020](https://github.com/ckaestne/seai/blob/S2020/exams/midterm.pdf) (slightly fewer topics covered than this semester)
+* [Midterm from Fall 2020](https://github.com/ckaestne/seai/blob/F2020/exams/midterm_f20.pdf) (similar coverage)
+
