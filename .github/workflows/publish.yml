@@ -1,7 +1,7 @@
 name: publish-gh-pages
 on:
   push:
-    branches: F2020
+    branches: S2021
 
 jobs:
   gh-pages:
@@ -38,11 +38,11 @@ jobs:
     - name: Push to gh-pages
       run: |
         git clone --quiet --branch gh-pages --depth 1 https://github.com/${{ github.repository }}.git .gh-pages
-        rm -rf .gh-pages/F2020
-        mv _site .gh-pages/F2020
+        rm -rf .gh-pages/S2021
+        mv _site .gh-pages/S2021
         cd .gh-pages
-        git add F2020
+        git add S2021
         git config --local user.email "ckaestne@nomail.cs.cmu.edu"
         git config --local user.name "GitHub Action"
-        git commit --allow-empty -m "Update gh-pages for F2020/${{ github.sha }}"
+        git commit --allow-empty -m "Update gh-pages for S2021/${{ github.sha }}"
         git push https://$GITHUB_ACTOR:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:gh-pages --force --follow-tags -v
