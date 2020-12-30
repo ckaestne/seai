@@ -1,6 +1,6 @@
 # Machine Learning in Production / AI Engineering (17-445/17-645/17-745/11-695)
 
-*Formerly **Software Engineering for AI-Enabled Systems (SE4AI) **, CMU course that covers how to build, deploy, assure, and maintain applications with machine-learned models. Covers **responsible AI** (safety, security, fairness, explainability) and **MLOps**.*
+*Formerly **Software Engineering for AI-Enabled Systems (SE4AI)**, CMU course that covers how to build, deploy, assure, and maintain applications with machine-learned models. Covers **responsible AI** (safety, security, fairness, explainability) and **MLOps**.*
 
 ***
 
@@ -61,14 +61,14 @@ In addition, students will gain familiarity with production-quality infrastructu
 
 ## Logistics and People
 
-See the specific offering for details: [Fall 2019](https://ckaestne.github.io/seai/F2019), [Summer 2020](https://ckaestne.github.io/seai/S2020)  or [Fall 2020](https://ckaestne.github.io/seai/F2020)
+See the specific offering for details: [Fall 2019](https://ckaestne.github.io/seai/F2019), [Summer 2020](https://ckaestne.github.io/seai/S2020), [Fall 2020](https://ckaestne.github.io/seai/F2020) or [Spring 2021](https://ckaestne.github.io/seai/S2021)
 
 
 ## Course content
 
 For a description of topics covered and course structure, see [learning goals](https://github.com/ckaestne/seai/blob/S2020/learning_goals.md).
 
-The course content evolves from semester to semester. Below is the schedule from the Summer 2020 offering. See also [Fall 2019](https://ckaestne.github.io/seai/F2019) and [Fall 2020](https://ckaestne.github.io/seai/F2020).
+The course content evolves from semester to semester. Below is the schedule from the Summer 2020 offering. See also [Fall 2019](https://ckaestne.github.io/seai/F2019), [Fall 2020](https://ckaestne.github.io/seai/F2020) and [Spring 2021](https://ckaestne.github.io/seai/S2021).
 
 
 | Date  | Topic | Reading | Assignment due |
@@ -117,7 +117,7 @@ The course content evolves from semester to semester. Below is the schedule from
 
 ## Course Syllabus and Policies
 
-see [Fall 2019](https://ckaestne.github.io/seai/F2019), [Summer 2020](https://ckaestne.github.io/seai/S2020), [Fall 2020](https://ckaestne.github.io/seai/F2020), or  [Spring 2021](https://ckaestne.github.io/seai/S2021) for details.
+see [Fall 2019](https://ckaestne.github.io/seai/F2019), [Summer 2020](https://ckaestne.github.io/seai/S2020), [Fall 2020](https://ckaestne.github.io/seai/F2020), or [Spring 2021](https://ckaestne.github.io/seai/S2021) for details.
 
 
 Students taking the PhD version of this class (17-745) will replace two individual assignments with a research project instead, resulting in a draft of a paper of at least workshop quality.
