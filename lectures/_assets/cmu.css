@@ -28,3 +28,5 @@
 #footer { font-size: 16px; color:gray; position: absolute;
         bottom: 0%;
         left: 0%}
+
+.mermaidgraph { border: 0px !important; }       
