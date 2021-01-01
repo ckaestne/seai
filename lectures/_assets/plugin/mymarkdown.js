@@ -9,8 +9,23 @@ renderer.rcode = renderer.code;
 renderer.code=function( code,  infostring,  escaped) { 
 	// console.log("code("+code+","+infostring+","+escaped+")"); 
 	if (infostring==="mermaid") {
-		mermaidCounter++
-		return mermaid.render('mermaid'+mermaidCounter,code)
+		const b64 = btoa(code)
+		const imgURL = "https://mermaid.ink/svg/"+b64
+
+		//mermaidCounter++
+		//return mermaid.render('mermaid'+mermaidCounter,code)
+		return '<img src="'+imgURL+'" class="mermaidgraph" />'
+	}
+	if (infostring==="dot") {
+		var r = ""
+		try {
+			const svg = Viz(code)
+			const offset = svg.indexOf("<svg ")		
+			r=svg.substr(offset)
+		} catch (error) {
+			r= "<div class='error'>failed rendering dot graph: "+error+"</div>"
+		}
+		return r
 	}
 	return renderer.rcode(code,infostring,escaped)
 };

@@ -2,7 +2,7 @@
   "footer": "17-445 Software Engineering for AI-Enabled Systems",
   "theme": "white",
   "css": "_assets/cmu.css",
-  "scripts": "_assets/mermaid.min.js,_assets/loadmymarkdown.js",
+  "scripts": "_assets/viz.js,_assets/loadmymarkdown.js",
   "staticDirs": "_assets",
   "listingTemplate": "_assets/listing.html"
 }
