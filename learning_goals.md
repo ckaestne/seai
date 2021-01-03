@@ -41,8 +41,10 @@ Learning goals:
 References:
 
 * 🕮 Hulten, Geoff. "Building Intelligent Systems: A Guide to Machine Learning Engineering." (2018), Chapters 5 (Components of Intelligent Systems).
+* 🗎 Wagstaff, Kiri. "[Machine learning that matters](https://arxiv.org/abs/1206.4656)." In Proceedings of the 29 th International Conference on Machine Learning, (2012).
 * 🗎 Sculley, David, Gary Holt, Daniel Golovin, Eugene Davydov, Todd Phillips, Dietmar Ebner, Vinay Chaudhary, Michael Young, Jean-Francois Crespo, and Dan Dennison. "[Hidden technical debt in machine learning systems](http://papers.nips.cc/paper/5656-hidden-technical-debt-in-machine-learning-systems.pdf)." In Advances in neural information processing systems, pp. 2503-2511. 2015.
 * 🗎 Nushi, Besmira, Ece Kamar, Eric Horvitz, and Donald Kossmann. "[On human intellect and machine failures: troubleshooting integrative machine learning systems](http://erichorvitz.com/human_repair_AI_pipeline.pdf)." In *Proceedings of the Thirty-First AAAI Conference on Artificial Intelligence*, pp. 1017-1025. 2017.
+* 🗎 O'Leary, Katie, and Makoto Uchida. "[Common problems with Creating Machine Learning Pipelines from Existing Code](https://research.google/pubs/pub48984.pdf)." Proc. Third Conference on Machine Learning and Systems (MLSys) (2020).
 
 Blog post/lecture notes:
 
@@ -223,6 +225,8 @@ Assignment:
 References:
 
 * 🗎 Vogelsang, Andreas, and Markus Borg. "[Requirements Engineering for Machine Learning: Perspectives from Data Scientists](https://arxiv.org/pdf/1908.04674.pdf)." In Proc. of the 6th International Workshop on Artificial Intelligence for Requirements Engineering (AIRE), 2019.
+* 🗎 Siebert, Julien, Lisa Joeckel, Jens Heidrich, Koji Nakamichi, Kyoko Ohashi, Isao Namba, Rieko Yamamoto, and Mikio Aoyama. "[Towards Guidelines for Assessing Qualities of Machine Learning Systems](https://arxiv.org/pdf/2008.11007)." In International Conference on the Quality of Information and Communications Technology, pp. 17-31. Springer, Cham, 2020.
+* 🗎 Strubell, Emma, Ananya Ganesh, and Andrew McCallum. "[Energy and Policy Considerations for Deep Learning in NLP](https://arxiv.org/pdf/1906.02243.pdf)." In *Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics*, pp. 3645-3650. 2019.
 
 
 
@@ -339,6 +343,7 @@ Reading:
 * 🗎 Eric Breck, Shanqing Cai, Eric Nielsen, Michael Salib, D. Sculley. The ML Test Score: A Rubric for ML Production Readiness and Technical Debt Reduction. Proceedings of IEEE Big Data (2017)
 * 📰 Zinkevich, Martin. [Rules of Machine Learning: Best Practices for ML Engineering](https://developers.google.com/machine-learning/guides/rules-of-ml/). Google Blog Post, 2017
 * 🗎 Serban, Alex, Koen van der Blom, Holger Hoos, and Joost Visser. "[Adoption and Effects of Software Engineering Best Practices in Machine Learning](https://arxiv.org/pdf/2007.14130)." In Proc. ACM/IEEE International Symposium on Empirical Software Engineering and Measurement (2020).
+* 🗎 O'Leary, Katie, and Makoto Uchida. "[Common problems with Creating Machine Learning Pipelines from Existing Code](https://research.google/pubs/pub48984.pdf)." Proc. Third Conference on Machine Learning and Systems (MLSys) (2020).
 * 📰 Larysa Visengeriyeva. [Machine Learning Operations - A Reading List](https://ml-ops.org/content/references.html), InnoQ 2020
 
 (could be two lectures if going deeper into DevOps and MLOps)
@@ -516,7 +521,7 @@ References:
 * 🗎 Stumpf, Simone, Adrian Bussone, and Dympna O’sullivan. "[Explanations considered harmful? user interactions with machine learning systems](http://www.doc.gold.ac.uk/~mas02mg/HCML2016/HCML2016_paper_2.pdf)." In *Proceedings of the ACM SIGCHI Conference on Human Factors in Computing Systems (CHI)*. 2016.
 * 🗎 Kulesza, Todd, Margaret Burnett, Weng-Keen Wong, and Simone Stumpf. "Principles of explanatory debugging to personalize interactive machine learning." In *Proceedings of the 20th international conference on intelligent user interfaces*, pp. 126-137. 2015.
 
-
+(possibly go further in debugging here or next lecture, independent of explainability)
 
 ## Lecture: Versioning, Provenance, and Reproducibility ![Requirements](https://img.shields.io/badge/-Requirements-green.svg) ![Implementation/Operations](https://img.shields.io/badge/-Implementation/Operations-yellow.svg) ![Quality Assurance](https://img.shields.io/badge/-Quality%20Assurance-orange.svg)
 
@@ -631,6 +636,7 @@ References:
 * 🗎 Borg, Markus, Cristofer Englund, Krzysztof Wnuk, Boris Duran, Christoffer Levandowski, Shenjian Gao, Yanwen Tan, Henrik Kaijser, Henrik Lönn, and Jonas Törnqvist. "[Safely entering the deep: A review of verification and validation for machine learning and a challenge elicitation in the automotive industry](https://www.atlantis-press.com/journals/jase/125905766)." Journal of Automotive Software Engineering. Volume 1, Issue 1, Pages 1 - 19. 2019
 * 🗎 Cohen, Jeremy M., Elan Rosenfeld, and J. Zico Kolter. "[Certified adversarial robustness via randomized smoothing](https://arxiv.org/abs/1902.02918)." In Proc. International Conference on Machine Learning, p. 1310--1320, 2019.
 * 🗎 Salay, Rick, Rodrigo Queiroz, and Krzysztof Czarnecki. "[An analysis of ISO 26262: Using machine learning safely in automotive software (Links to an external site.)](https://arxiv.org/pdf/1709.02435)." *arXiv preprint arXiv:1709.02435* (2017).
+* 🗎 Wiens, Jenna, Suchi Saria, Mark Sendak, Marzyeh Ghassemi, Vincent X. Liu, Finale Doshi-Velez, Kenneth Jung et al. "[Do no harm: a roadmap for responsible machine learning for health care](http://www.regenhealthsolutions.info/wp-content/uploads/2019/08/Do-no-harm-a-roadmap-for-responsible-machine.pdf)." *Nature medicine* 25, no. 9 (2019): 1337-1340.
 * 🗎 Shneiderman, Ben. "Bridging the gap between ethics and practice: Guidelines for reliable, safe, and trustworthy Human-Centered AI systems." *ACM Transactions on Interactive Intelligent Systems (TiiS)* 10, no. 4 (2020): 1-31.
 
 
