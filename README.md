@@ -64,7 +64,7 @@ Unless you have questions to specific instructors, we prefer that you email us a
 
 The course content is evolving from semester to semester, though topics and assignments will be similar. See the [Fall 2019](https://ckaestne.github.io/seai/F2019), [Summer 2020](https://ckaestne.github.io/seai/S2020), and [Fall 2020](https://ckaestne.github.io/seai/F2020/#course-content) offerings for what we covered in the past or look at the list of topics and learning goals under [Learning Goals](https://github.com/ckaestne/seai/blob/S2021/learning_goals.md). Assignments this semester will likely be very similar to those the [Fall 2020 assignments](https://github.com/ckaestne/seai/blob/F2020/assignments/). Below is a table of a preliminary  schedule. This is subject to change and will be updated as the semester progresses, especially to help focus on requested topics or support learning.
 
-[Schedule](https://github.com/ckaestne/seai/blob/F2020/schedule.md)
+[Schedule](https://github.com/ckaestne/seai/blob/S2021/schedule.md)
 
 ![Course topics overview](overview.png "Course topics overview")
 
