@@ -488,6 +488,7 @@ References:
 * 🗎 Madaio, Michael A., Luke Stark, Jennifer Wortman Vaughan, and Hanna Wallach. "[Co-Designing Checklists to Understand Organizational Challenges and Opportunities around Fairness in AI](http://www.jennwv.com/papers/checklists.pdf)." In Proceedings of the 2020 CHI Conference on Human Factors in Computing Systems, pp. 1-14. 2020.
 * 🗎 Bietti, Elettra. "[From ethics washing to ethics bashing: a view on tech ethics from within moral philosophy](https://dl.acm.org/doi/pdf/10.1145/3351095.3372860)." In *Proceedings of the 2020 Conference on Fairness, Accountability, and Transparency*, pp. 210-219. 2020.
 * 🗎 Binns, Reuben. "[Fairness in machine learning: Lessons from political philosophy](http://proceedings.mlr.press/v81/binns18a/binns18a.pdf)." In *Conference on Fairness, Accountability and Transparency*, pp. 149-159. PMLR, 2018.
+* 🗎 Keyes, O., Hutson, J., & Durbin, M. (2019, May). [A mulching proposal: Analysing and improving an algorithmic system for turning the elderly into high-nutrient slurry](https://arxiv.org/pdf/1908.06166). In *Extended Abstracts of the 2019 CHI Conference on Human Factors in Computing Systems* (pp. 1-11).
 
 
 
