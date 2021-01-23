@@ -31,11 +31,11 @@ An extended group project focuses on building, deploying, evaluating, and mainta
 
 After taking this course, among others, students should be able to
 * analyze tradeoffs for designing production systems with AI-components, analyzing various qualities beyond accuracy such as operation cost, latency, updateability, and explainability
-* implement production-quality systems that are robust to mistakes of AI components
+* plan for mistakes in AI compoentns and implement production-quality systems that are robust to those mistakes
 * design fault-tolerant and scalable data infrastructure for learning models, serving models, versioning, and experimentation
 * ensure quality of the entire machine learning pipeline with test automation and other quality assurance techniques, including automated checks for data quality, data drift, feedback loops, and model quality
 * build systems that can be tested in production and build deployment pipelines that allow careful rollouts and canary testing
-* consider privacy, fairness, and security when building complex AI-enabled systems
+* consider system-level requirements such as safety, security, privacy, fairness, and usability when building complex AI-enabled systems
 * communicate effectively in interdisciplinary teams
 
 In addition, students will gain familiarity with production-quality infrastructure tools, including stream processing with Apache Kafka, test automation with Jenkins, monitoring with Prometheus and Grafana, and deployment with Docker and various MLOps tools.
