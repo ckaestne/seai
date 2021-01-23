@@ -53,7 +53,7 @@ Designed for students with a data science background (see prerequisites below)
 
 Lectures Monday/Wednesday 2:20-3:40pm, Eastern Time, on Zoom
 
-Recitation Friday 9:50-11:10am, Eastern Time, on Zoom
+Recitation Friday 10:20-11:20am, Eastern Time, on Zoom
 
 Instructors: [Christian Kaestner](https://www.cs.cmu.edu/~ckaestne/) and [Eunsuk Kang](https://eskang.github.io/)
 
