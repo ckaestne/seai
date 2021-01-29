@@ -24,6 +24,7 @@ jobs:
         sed -i -e '/^\[Schedule\]/r schedule.md' README.md
         lectures/node_modules/marked/bin/marked -i README.md >> _site/index.html
         cat .assets/template_end.html >> _site/index.html
+        cp *.svg _site/
         cp *.png _site/
         cp *.jpg _site/
 

@@ -84,7 +84,7 @@ Software engineering: Many students will have some software engineering experien
 
 Email us (se-ai@lists.andrew.cmu.edu) if you would like to further talk to us about prerequisites.
 
-**Remote teaching:** As per CMU decision, the Spring 2020 offering of this course will be taught remotely. While the instructors have experience teaching this course remotely in both summer and fall of 2020, we like to emphasize that *this is not a normal setting and we will try to be as accommodating as we can to different and difficult circumstances.* We will make an effort to be as inclusive and interactive as we can be and will support you in remote teamwork.
+**Remote teaching:** As per CMU decision, the Spring 2021 offering of this course will be taught remotely. While the instructors have experience teaching this course remotely in both summer and fall of 2020, we like to emphasize that *this is not a normal setting and we will try to be as accommodating as we can to different and difficult circumstances.* We will make an effort to be as inclusive and interactive as we can be and will support you in remote teamwork.
 
 As other software engineering courses, in-class discussions (e.g., about tradeoffs, case studies, and policies) are an important part of the learning experience.  Therefore, we would like that all students make an effort to attend class “live” regularly, rather than relying on recordings. Students who cannot attend live, for example due to time zone challenges, should reach out to the course staff. We plan to schedule a weekly discussion and office hour meeting with those students, where we discuss course content in small groups.
 
@@ -121,7 +121,7 @@ We assign participation grades as follows:
 
 For students who cannot attend live lectures or recitations, we will provide alternative ways of participating. 
 
-**Textbook and reading assignments:** We will be using Goeff Hulten's *"Building Intelligent Systems: A Guide to Machine Learning Engineering"* (ISBN: 1484234316) throughout much of the course. The library provides an [electronic copy](https://link-springer-com.proxy.library.cmu.edu/book/10.1007%2F978-1-4842-3432-7). In addition, we will provide additional supplementary readings, including blog posts and academic papers, throughout the semester.
+**Textbook and reading assignments:** We will be using Goeff Hulten's "*Building Intelligent Systems: A Guide to Machine Learning Engineering*" (ISBN: 1484234316) throughout much of the course. The library provides an [electronic copy](https://link-springer-com.proxy.library.cmu.edu/book/10.1007%2F978-1-4842-3432-7). In addition, we will provide additional supplementary readings, including blog posts and academic papers, throughout the semester.
 
 We will assign readings for most classes and post a corresponding quiz on Canvas that is due before class. Each quiz contains an open ended question that relates to the reading. We encourage to discuss answers to reading quizzes in small groups and submit a joint answer. Reading quizzes are graded pass/fail for a good-faith effort to engage with the question. 
 
