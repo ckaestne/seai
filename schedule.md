@@ -6,10 +6,10 @@
 | -     | -     | -       | -              |
 | Mon, Feb 01 | [Motivation, Syllabus, and Introductions](https://ckaestne.github.io/seai/S2021/slides/01_introduction/intro.html) | |  |
 | Wed, Feb 03 | From Models to AI-Enabled Systems (Systems Thinking)  | |  |
-| Fri, Feb 05 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) Remote work and collaboration: Slack, Git, issue trackers | |  |
+| Fri, Feb 05 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) Stream processing: Apache Kafka | |  |
 | Mon, Feb 08 | Model Quality and Software Testing 1 | |  |
 | Wed, Feb 10 | Model Quality and Software Testing 2 | | [I1: Case Study](https://github.com/ckaestne/seai/blob/S2021/assignments/I1_case_study.md) |
-| Fri, Feb 12 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) Stream processing: Apache Kafka | |  |
+| Fri, Feb 12 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) Remote work and collaboration: Slack, Git, issue trackers | |  |
 | Mon, Feb 15 | Quality Assessment in Production | |  |
 | Wed, Feb 17 | Goals and Success Measures for AI-Enabled Systems | |  |
 | Fri, Feb 19 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) Unit testing | |  |
