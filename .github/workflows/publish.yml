@@ -21,7 +21,8 @@ jobs:
     - name: Generate main page
       run: |
         cp .assets/template.html _site/index.html
-        sed -i -e '/^\[Schedule\]/r schedule.md' README.md
+        sed 's/\](\(.*\)\.html) *|/\](\1.html) ([md](\1.md), [pdf](\1.pdf)) |/' < schedule.md > schedule_.md
+        sed -i -e '/^\[Schedule\]/r schedule_.md' README.md
         lectures/node_modules/marked/bin/marked -i README.md >> _site/index.html
         cat .assets/template_end.html >> _site/index.html
         cp *.svg _site/
