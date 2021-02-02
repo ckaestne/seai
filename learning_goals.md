@@ -34,6 +34,7 @@ Overview:
 
 Learning goals:
 
+* Explain the consequences of the shift from deductive to inductive reasoning for abstraction and composition
 * Explain how machine learning fits into the larger picture of building and maintaining production systems
 * Explain the modularity implications of having machine-learning components without specifications
 * Describe the typical components relating to AI in an AI-enabled system and typical design decisions to be made

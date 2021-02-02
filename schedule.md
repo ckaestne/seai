@@ -5,7 +5,7 @@
 | Date  | Topic | Reading | Assignment due |
 | -     | -     | -       | -              |
 | Mon, Feb 01 | [Motivation, Syllabus, and Introductions](https://ckaestne.github.io/seai/S2021/slides/01_introduction/intro.html) | |  |
-| Wed, Feb 03 | From Models to AI-Enabled Systems (Systems Thinking)  | |  |
+| Wed, Feb 03 | [From Models to AI-Enabled Systems (Systems Thinking)](https://ckaestne.github.io/seai/S2021/slides/02_systems/systems.html) | |  |
 | Fri, Feb 05 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) Stream processing: Apache Kafka | |  |
 | Mon, Feb 08 | Model Quality and Software Testing 1 | |  |
 | Wed, Feb 10 | Model Quality and Software Testing 2 | | [I1: Case Study](https://github.com/ckaestne/seai/blob/S2021/assignments/I1_case_study.md) |
