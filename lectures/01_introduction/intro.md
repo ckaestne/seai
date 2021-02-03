@@ -572,4 +572,3 @@ Let's go around the "room" for introductions:
 * *Data scientists* and *software engineers* have different goals and focuses
   * Building systems requires both
   * Various qualities are relevant, beyond just accuracy
-* Inductive reasoning and lack of specifications
