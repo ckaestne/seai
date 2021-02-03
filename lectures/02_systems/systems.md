@@ -27,256 +27,24 @@ Christian Kaestner
 
 
 
----
-# Traditional vs AI-based Software Systems
-
-
-----
-## Complexity in Engineered Systems
-
-![Airplane](airplane.jpg)
-
-* Automobile: ~30,000 parts; Airplane: ~3,000,000 parts
-* MS Office: ~ 40,000,000 LOCs; Debian: ~ 400,000,000 LOCs
-* How do we build such complex systems?
-
-----
-## Managing Complexity in Software
-
-* **Abstraction**: Hide details & focus on high-level behaviors
-* **Reuse**: Package into reusable libraries & APIs with well-defined _contracts_
-* **Composition**: Build large components out of smaller ones
-
-```java
-/**
- * compute deductions based on provided adjusted 
- * gross income and expenses in customer data.
- *
- * see tax code 26 U.S. Code A.1.B, PART VI
- *
- * Adjusted gross income must be positive; 
- * returned deductions are not negative.
- */
-float computeDeductions(float agi, Expenses expenses) {
-  ...
-}
-```
-
-
-----
-## Divide and Conquer
-
-* Human cognitive ability is limited
-* Decomposition of software necessary to handle complexity
-* Allows division of labor
-* Deductive reasoning, using logic
-
-![Tax computation system with three components](tax-decomposition.png)
-<!-- .element: class="stretch" -->
-
-
-----
-## Debugging and Assigning Blame
-
-* Each component has own specification
-* For each input, specification indicates whether output correct
-
-```java
-/**
- * compute deductions based on provided adjusted 
- * gross income and expenses in customer data.
- *
- * see tax code 26 U.S. Code A.1.B, PART VI
- */
-float computeDeductions(float agi, Expenses expenses);
-```
-
-![Tax computation system with three components](tax-decomposition.png)
-<!-- .element: class="stretch" -->
-
-----
-## Strict Correctness Assumption
-
-* Specification determines which outputs are correct/wrong
-* Not "pretty good", "95% accurate", or "correct for 98% of all users"
-* A single wrong result indicates a bug in the system
-
-![Tax computation system with three components](tax-decomposition.png)
-<!-- .element: class="stretch" -->
-
-Note: A single wrong tax prediction would be a bug. No tolerance of occasional wrong predictions, approximations, nondeterminism.
-
-----
-## Image Captioning Algorithm
-
-
-![Image captioning one step](imgcaptioning.png)
-
-```java
-/**
-  ????
-*/
-String getCaption(Image img);
-```
-
-Note: We do not know how to program this or specify this.
-No way of saying whether caption is "correct" for input, but defer to human judgement.
-
-----
-## Learning Image Captioning Algorithm
-
-![Image captioning with ML](imgcaptioningml.png)
-
-
-*Learning rules by fitting to examples, no specification, inductive reasoning*
-
-Note: "Rules"/algorithm learned from data. Still no specification. Best fit to given training data.
-
-----
-## Correctness of Model?
-
-<!-- colstart -->
-![Example of wrong caption](imgcaptioning-cake.png)
-<!-- col -->
-> All models are wrong. Some are useful.
-<!-- colend -->
-
-<!-- references -->
-Image from: Nushi, Besmira, Ece Kamar, Eric Horvitz, and Donald Kossmann. "[On human intellect and machine failures: troubleshooting integrative machine learning systems](http://erichorvitz.com/human_repair_AI_pipeline.pdf)." In Proc. AAAI. 2017.
-
-Note: Human judgment needed. Furthermore, a single bad example is not a problem.
-
-----
-## Weak Correctness Assumptions
-
-* Often no reliable ground truth (e.g. human judgment)
-* Accepting that mistakes will happen, hopefully not to frequently; "95% accuracy" may be pretty good
-* More confident for data similar to training data
-
-![Example of wrong caption](imgcaptioning-cake.png)
-<!-- .element: class="stretch" -->
-
-
-----
-## Specifications in Machine Learning?
-
-* Usually clear specifications do not exist -- we use machine learning exactly because we do not know the specifications
-* Can define correctness for some data, but not general rules; sometimes can only determine correctness after the fact
-* Learning for tasks for which we cannot write specifications
-  * Too complex
-  * Rules unknown
-* ML will learn rules/specifications (inductive reasoning), often not in a human-readable form, but are those the right ones?
-* 
-* Usually goals used instead --> maximize a specific objective
-
-
-----
-
-[![Contrasting inductive and deductive reasoning](inductive.png)](https://danielmiessler.com/blog/the-difference-between-deductive-and-inductive-reasoning/)
-<!-- .element: class="stretch" -->
-
-
-(Daniel Miessler, CC SA 2.0)
-
-----
-
-## Deductive Reasoning
-
-* Combining logical statements following agreed upon rules to form new statements
-* Proving theorems from axioms
-* From general to the particular
-* *mathy reasoning, eg. proof that π is irrational*
-* 
-* Formal methods, classic rule-based AI systems, expert systems
-
-<!-- split -->
-
-## Inductive Reasoning
-
-* Constructing axioms from observations
-* Strong evidence suggests a rule
-* From particular to the general
-* *sciency reasoning, eg. finding laws of nature*
-* 
-* Most modern machine learning systems, statistical learning
-
-
-----
-## Consequences from Lack of Specifications
-
-<!-- discussion -->
-
-
-Note: Breaks many traditional assumptions and foundations for compositional reasoning and divide and conquer
-
-Poorly understood interactions between models:
-Ideally, develop models separately & compose together.
-In general, must train & tune together.
-
-----
-## Decomposing the Image Captioning Problem?
-
-![Image of a snowboarder](snowboarder.png)
-
-Note: Using insights of how humans reason: Captions contain important objects in the image and their relations. Captions follow typical language/grammatical structure
-
-----
-## State of the Art Decomposition (in 2015)
-
-![Captioning example](imgcaptioningml-decomposed.png)
-
-<!-- references -->
-Example and image from: Nushi, Besmira, Ece Kamar, Eric Horvitz, and Donald Kossmann. "[On human intellect and machine failures: troubleshooting integrative machine learning systems](http://erichorvitz.com/human_repair_AI_pipeline.pdf)." In Proc. AAAI. 2017.
-
-
-----
-## Blame assignment?
-
-![blame assignment problem](imgcaptioningml-blame.png)
-
-<!-- references -->
-Example and image from: Nushi, Besmira, Ece Kamar, Eric Horvitz, and Donald Kossmann. "[On human intellect and machine failures: troubleshooting integrative machine learning systems](http://erichorvitz.com/human_repair_AI_pipeline.pdf)." In Proc. AAAI. 2017.
-
-----
-## Nonmonotonic errors
-
-![example of nonmonotonic error](imgcaptioningml-nonmonotonic.png)
-
-<!-- references -->
-Example and image from: Nushi, Besmira, Ece Kamar, Eric Horvitz, and Donald Kossmann. "[On human intellect and machine failures: troubleshooting integrative machine learning systems](http://erichorvitz.com/human_repair_AI_pipeline.pdf)." In Proc. AAAI. 2017.
-
-
-----
-## Takeaway: Shift in Design Thinking?
-
-Breaking traditional decomposition and reasoning strategies... 
-
-From deductive reasoning to inductive reasoning...
-
-From clear specifications to goals...
-
-From guarantees to best effort...
-
-**What does this mean for software engineering?**
-
-**For decomposing software systems?** 
-
-**For correctness of AI-enabled systems?** 
-
-**For safety?**
-
-**For design, implementation, testing, deployment, operations?**
-
-
-*These problems are not new, but are exacerbated by the increasing use of ML!*
-
-
 
 
 
 
 ---
 # ML Models as Part of a System
+
+
+----
+## Example: Image Captioning Problem
+
+![Image captioning one step](imgcaptioning.png)
+
+----
+## Example: Image Captioning Problem
+
+![Image captioning with ML](imgcaptioningml.png)
+
 
 ----
 ## Why do we care about image captioning?
@@ -559,8 +327,8 @@ Leyla Acaroglu. "[Tools for Systems Thinkers: The 6 Fundamental Concepts of Syst
 
 (Human-AI Interaction)
 
-----#
-# AI predictions should influence the world
+----
+## AI predictions should influence the world
 
 * Smart toaster
 * Automated slide design
@@ -765,6 +533,282 @@ Across interviews with enterprise ML teams:
 <!-- references -->
 
 O'Leary, Katie, and Makoto Uchida. "[Common problems with Creating Machine Learning Pipelines from Existing Code](https://research.google/pubs/pub48984.pdf)." Proc. Third Conference on Machine Learning and Systems (MLSys) (2020).
+
+
+
+
+
+
+
+
+
+---
+# Traditional vs AI-based Software Systems
+
+(deductive vs inductive reasoning)
+
+----
+## Complexity in Engineered Systems
+
+![Airplane](airplane.jpg)
+
+* Automobile: ~30,000 parts; Airplane: ~3,000,000 parts
+* MS Office: ~ 40,000,000 LOCs; Debian: ~ 400,000,000 LOCs
+* How do we build such complex systems?
+
+----
+## Managing Complexity in Software
+
+* **Abstraction**: Hide details & focus on high-level behaviors
+* **Reuse**: Package into reusable libraries & APIs with well-defined _contracts_
+* **Composition**: Build large components out of smaller ones
+
+```java
+/**
+ * compute deductions based on provided adjusted 
+ * gross income and expenses in customer data.
+ *
+ * see tax code 26 U.S. Code A.1.B, PART VI
+ *
+ * Adjusted gross income must be positive; 
+ * returned deductions are not negative.
+ */
+float computeDeductions(float agi, Expenses expenses) {
+  ...
+}
+```
+
+
+----
+## Divide and Conquer
+
+* Human cognitive ability is limited
+* Decomposition of software necessary to handle complexity
+* Allows division of labor
+* Deductive reasoning, using logic
+
+![Tax computation system with three components](tax-decomposition.png)
+<!-- .element: class="stretch" -->
+
+
+----
+## Debugging and Assigning Blame
+
+* Each component has own specification
+* For each input, specification indicates whether output correct
+
+```java
+/**
+ * compute deductions based on provided adjusted 
+ * gross income and expenses in customer data.
+ *
+ * see tax code 26 U.S. Code A.1.B, PART VI
+ */
+float computeDeductions(float agi, Expenses expenses);
+```
+
+![Tax computation system with three components](tax-decomposition.png)
+<!-- .element: class="stretch" -->
+
+----
+## Strict Correctness Assumption
+
+* Specification determines which outputs are correct/wrong
+* Not "pretty good", "95% accurate", or "correct for 98% of all users"
+* A single wrong result indicates a bug in the system
+
+![Tax computation system with three components](tax-decomposition.png)
+<!-- .element: class="stretch" -->
+
+Note: A single wrong tax prediction would be a bug. No tolerance of occasional wrong predictions, approximations, nondeterminism.
+
+----
+## Image Captioning Algorithm
+
+
+![Image captioning one step](imgcaptioning.png)
+
+```java
+/**
+  ????
+*/
+String getCaption(Image img);
+```
+
+Note: We do not know how to program this or specify this.
+No way of saying whether caption is "correct" for input, but defer to human judgement.
+
+----
+## Learning Image Captioning Algorithm
+
+![Image captioning with ML](imgcaptioningml.png)
+
+
+*Learning rules by fitting to examples, no specification, inductive reasoning*
+
+Note: "Rules"/algorithm learned from data. Still no specification. Best fit to given training data.
+
+----
+## Correctness of Model?
+
+<!-- colstart -->
+![Example of wrong caption](imgcaptioning-cake.png)
+<!-- col -->
+> All models are wrong. Some are useful.
+<!-- colend -->
+
+<!-- references -->
+Image from: Nushi, Besmira, Ece Kamar, Eric Horvitz, and Donald Kossmann. "[On human intellect and machine failures: troubleshooting integrative machine learning systems](http://erichorvitz.com/human_repair_AI_pipeline.pdf)." In Proc. AAAI. 2017.
+
+Note: Human judgment needed. Furthermore, a single bad example is not a problem.
+
+----
+## Weak Correctness Assumptions
+
+* Often no reliable ground truth (e.g. human judgment)
+* Accepting that mistakes will happen, hopefully not to frequently; "95% accuracy" may be pretty good
+* More confident for data similar to training data
+
+![Example of wrong caption](imgcaptioning-cake.png)
+<!-- .element: class="stretch" -->
+
+
+----
+## Specifications in Machine Learning?
+
+* Usually clear specifications do not exist -- we use machine learning exactly because we do not know the specifications
+* Can define correctness for some data, but not general rules; sometimes can only determine correctness after the fact
+* Learning for tasks for which we cannot write specifications
+  * Too complex
+  * Rules unknown
+* ML will learn rules/specifications (inductive reasoning), often not in a human-readable form, but are those the right ones?
+* 
+* Usually goals used instead --> maximize a specific objective
+
+
+----
+
+[![Contrasting inductive and deductive reasoning](inductive.png)](https://danielmiessler.com/blog/the-difference-between-deductive-and-inductive-reasoning/)
+<!-- .element: class="stretch" -->
+
+
+(Daniel Miessler, CC SA 2.0)
+
+----
+
+## Deductive Reasoning
+
+* Combining logical statements following agreed upon rules to form new statements
+* Proving theorems from axioms
+* From general to the particular
+* *mathy reasoning, eg. proof that π is irrational*
+* 
+* Formal methods, classic rule-based AI systems, expert systems
+
+<!-- split -->
+
+## Inductive Reasoning
+
+* Constructing axioms from observations
+* Strong evidence suggests a rule
+* From particular to the general
+* *sciency reasoning, eg. finding laws of nature*
+* 
+* Most modern machine learning systems, statistical learning
+
+
+----
+## Consequences from Lack of Specifications
+
+<!-- discussion -->
+
+
+Note: Breaks many traditional assumptions and foundations for compositional reasoning and divide and conquer
+
+Poorly understood interactions between models:
+Ideally, develop models separately & compose together.
+In general, must train & tune together.
+
+----
+## Decomposing the Image Captioning Problem?
+
+![Image of a snowboarder](snowboarder.png)
+
+Note: Using insights of how humans reason: Captions contain important objects in the image and their relations. Captions follow typical language/grammatical structure
+
+----
+## State of the Art Decomposition (in 2015)
+
+![Captioning example](imgcaptioningml-decomposed.png)
+
+<!-- references -->
+Example and image from: Nushi, Besmira, Ece Kamar, Eric Horvitz, and Donald Kossmann. "[On human intellect and machine failures: troubleshooting integrative machine learning systems](http://erichorvitz.com/human_repair_AI_pipeline.pdf)." In Proc. AAAI. 2017.
+
+
+----
+## Blame assignment?
+
+![blame assignment problem](imgcaptioningml-blame.png)
+
+<!-- references -->
+Example and image from: Nushi, Besmira, Ece Kamar, Eric Horvitz, and Donald Kossmann. "[On human intellect and machine failures: troubleshooting integrative machine learning systems](http://erichorvitz.com/human_repair_AI_pipeline.pdf)." In Proc. AAAI. 2017.
+
+----
+## Nonmonotonic errors
+
+![example of nonmonotonic error](imgcaptioningml-nonmonotonic.png)
+
+<!-- references -->
+Example and image from: Nushi, Besmira, Ece Kamar, Eric Horvitz, and Donald Kossmann. "[On human intellect and machine failures: troubleshooting integrative machine learning systems](http://erichorvitz.com/human_repair_AI_pipeline.pdf)." In Proc. AAAI. 2017.
+
+
+----
+## Takeaway: Shift in Design Thinking?
+
+Breaking traditional decomposition and reasoning strategies... 
+
+From deductive reasoning to inductive reasoning...
+
+From clear specifications to goals...
+
+From guarantees to best effort...
+
+**What does this mean for software engineering?**
+
+**For decomposing software systems?** 
+
+**For correctness of AI-enabled systems?** 
+
+**For safety?**
+
+**For design, implementation, testing, deployment, operations?**
+
+
+*These problems are not new, but are exacerbated by the increasing use of ML!*
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ---
 # Summary
