@@ -553,7 +553,7 @@ If you feel overwhelmed or stressed, please come and talk to us (see syllabus fo
 
 Let's go around the "room" for introductions:
 
-* Your (preferred name)
+* Your (preferred) name
 * In two sentences, your data science background and goals
 * In two sentences, your software engineering background, if any, and goals
 * One topic you are particularly interested in, if any?

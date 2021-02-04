@@ -1,8 +1,8 @@
 ---
 author: Christian Kaestner
 title: "17-445: From Models to AI-Enabled Systems"
-semester: Summer 2020
-footer: "17-445 Software Engineering for AI-Enabled Systems, Christian Kaestner"
+semester: Spring 2021
+footer: "17-445 Machine Learning in Production / AI Engineering, Eunsuk Kang & Christian Kaestner"
 license: Creative Commons Attribution 4.0 International (CC BY 4.0)
 ---  
 
@@ -654,7 +654,7 @@ Note: "Rules"/algorithm learned from data. Still no specification. Best fit to g
 <!-- colstart -->
 ![Example of wrong caption](imgcaptioning-cake.png)
 <!-- col -->
-> All models are wrong. Some are useful.
+> All models are wrong, but some are useful. -- George Box
 <!-- colend -->
 
 <!-- references -->
