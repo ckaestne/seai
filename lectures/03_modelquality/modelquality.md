@@ -161,11 +161,13 @@ Be aware of ambiguity across communities (see also: performance in arts, job per
 ----
 ## Confusion/Error Matrix
 
-| | **Actually A** | **Actually B** | **Actually C** |
+<!-- smallish -->
+| | **Actually Grade 5 Cancer** | **Actually Grade 3 Cancer** | **Actually Benign** |
 | :--- | --- | --- | --- |
-|**AI predicts A** | **10** | 6 | 2 |
-|**AI predicts B** | 3 | **24**  | 10 |
-|**AI predicts C** | 5 | 22 | **82** |
+|**Model predicts Grade 5 Cancer** | **10** | 6 | 2 |
+|**Model predicts Grade 3 Cancer** | 3 | **24**  | 10 |
+|**Model predicts Benign** | 5 | 22 | **82** |
+
 
 $\textit{accuracy} = \frac{\textit{correct predictions}}{\textit{all predictions}}$
 
@@ -238,11 +240,12 @@ False positives: wrong prediction, false alarm, Type I error
 ----
 ## Multi-Class problems vs Two-Class Problem
 
-| | **Actually A** | **Actually B** | **Actually C** |
+| | **Actually Grade 5 Cancer** | **Actually Grade 3 Cancer** | **Actually Benign** |
 | :--- | --- | --- | --- |
-|**AI predicts A** | **10** | 6 | 2 |
-|**AI predicts B** | 3 | **24**  | 10 |
-|**AI predicts C** | 5 | 22 | **82** |
+|**Model predicts Grade 5 Cancer** | **10** | 6 | 2 |
+|**Model predicts Grade 3 Cancer** | 3 | **24**  | 10 |
+|**Model predicts Benign** | 5 | 22 | **82** |
+
 
 
 
@@ -250,29 +253,21 @@ False positives: wrong prediction, false alarm, Type I error
 ----
 ## Multi-Class problems vs Two-Class Problem
 
-| | **Actually A** | **Actually B** | **Actually C** |
+| | **Actually Grade 5 Cancer** | **Actually Grade 3 Cancer** | **Actually Benign** |
 | :--- | --- | --- | --- |
-|**AI predicts A** | **10** | 6 | 2 |
-|**AI predicts B** | 3 | **24**  | 10 |
-|**AI predicts C** | 5 | 22 | **82** |
+|**Model predicts Grade 5 Cancer** | **10** | 6 | 2 |
+|**Model predicts Grade 3 Cancer** | 3 | **24**  | 10 |
+|**Model predicts Benign** | 5 | 22 | **82** |
+
 
 ****
 
-<!-- colstart -->
 
-| | **Act. A** | **Act. not A** |
+| | **Act. Grade 5 Cancer** | **Act. not Grade 5 Cancer** |
 | --- | --- | --- |
-|**AI predicts A** | 10 | 8 |
-|**AI predicts not A** | 8 | 138 |
+|**Model predicts Grade 5 Cancer** | 10 | 8 |
+|**Model predicts not Grade 5 Cancer** | 8 | 138 |
 
-<!-- col -->
-
-| | **Act. B** | **Act. not B** |
-| --- | --- | --- |
-|**AI predicts B** | 24 | 13 |
-|**AI predicts not B** | 28 | 99 |
-
-<!-- colend -->
 
 Notes: Individual false positive/negative classifications can be derived
 by focusing on a single value in a confusion matrix. False positives/recall/etc are always considered with regard to a single specific outcome.
@@ -753,6 +748,7 @@ def f(outlook, temperature, humidity, windy) =
 <!-- discussion -->
 
 
+
 ----
 ## Academic Escalation: Overfitting on Benchmarks
 
@@ -789,10 +785,32 @@ Recommended reading: Renggli, Cedric, Bojan Karlaš, Bolin Ding, Feng Liu, Kevin
 
 * surprisingly common in practice
 * by accident, incorrect split -- or intentional using all data for training
+* overlap between multiple datasets used
 * tuning on validation data (e.g., crossvalidation) without separate testing data
 * 
 * Results in overfitting and misleading accuracy measures
 
+----
+## Label Leakage
+
+Label or close correlates included in inputs 
+
+
+Examples: 
+* Input "interview conducted" in turnover prediction encodes human judgement
+* Input "has bank account" associates with predicting whether somebody will open one
+
+**Is this a problem or a good thing?**
+
+
+
+
+----
+## Evaluation Data Representative?
+
+Assumption: Independently, randomly drawn from same distribution as training data
+
+Does this distribution correspond to distribution in practice?
 
 ----
 ## Using Misleading Quality Measures
@@ -847,10 +865,24 @@ Many potential subtle and less subtle problems:
 * Sales from same user
 * Pictures taken on same day
 
+----
+## Data Dependence and Label Leakage in Cancer Case Study?
+
+<!-- discussion -->
 
 
 
+----
+## Summary: Common Pitfalls
 
+* Test data not representative
+* Misleading accuracy metrics
+* Evaluating on training or validation data
+* Dependence between training and test data
+* Label leakage
+* Overfitting on test data through repeated evaluations
+
+**How to avoid? Ensure as part of process?**
 
 
 
@@ -1326,6 +1358,23 @@ public void testCompute() {
 (Learning from Software Testing)
 
 
+----
+## Breakout Discussion
+
+Write a few tests for the following program:
+
+```scala
+def nextDate(year: Int, month: Int, day: Int) = ...
+```
+
+for example 
+```java
+assert nextDate(2021, 2, 8) == (2021, 2, 9);
+```
+
+
+**Discuss how you select tests. Discuss how many tests you need to feel confident.**
+
 
 ----
 ## Defining Software Testing
@@ -1344,6 +1393,7 @@ assertEquals(??, factorPrime(15485863));
 Testing is complete but unsound: 
 Cannot guarantee the absence of bugs
 
+
 ----
 ## How to Create Test Cases?
 
@@ -1356,6 +1406,8 @@ def nextDate(year: Int, month: Int, day: Int) = ...
 
 Note: Can focus on specification (and concepts in the domain, such as
 leap days and month lengths) or can focus on implementation
+
+Will not randomly sample from distribution of all days
 
 ----
 ## Software Test Case Design
@@ -1729,7 +1781,6 @@ void testAddition() {
 ```java
 @Test
 void testCancerPrediction() {
-  cancerModel.predict(generateRandomImage())
   cancerModel.predict(generateRandomImage())
   cancerModel.predict(generateRandomImage())
   cancerModel.predict(generateRandomImage())
