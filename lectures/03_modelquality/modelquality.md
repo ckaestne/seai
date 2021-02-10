@@ -1537,7 +1537,7 @@ Derive from requirements, experts, user feedback, expected problems etc. Think *
 
 * Guide testing by identifying groups and analyzing accuracy of subgroups
   * Often for fairness: gender, country, age groups, ...
-  * Possibly based on business requirements
+  * Possibly based on business requirements or cost of mistakes
 * Slice test data by population criteria, also evaluate interactions
 * Identifies problems and plan mitigations, e.g., enhance with more data for subgroup or reduce confidence
 
@@ -1645,11 +1645,29 @@ From: Ribeiro, Marco Tulio, Tongshuang Wu, Carlos Guestrin, and Sameer Singh. "[
 ----
 ## Example of Capabilities
 
+**What could be capabilities of the cancer detector?**
+
+![MRI](mri.jpg)
+<!-- .element: class="stretch" -->
+
+----
+## Example of Capabilities
+
 **What could be capabilities of image captioning system?**
 
 ![Image captioning task](imgcaptioning.png)
 
+
+----
+## Is it fair to expect generalization beyond training distribution?
+
+
 <!-- discussion -->
+
+*For example, shall a cancer detector generalize to other hospitals? Shall image captioning generalize to describing pictures of star formations?*
+
+Note: We wouldn't test a first year elementary school student on high-school math. This would be "out of the training distribution"
+
 
 ----
 ## Generalization beyond Training Distribution?
@@ -1669,17 +1687,6 @@ From: Ribeiro, Marco Tulio, Tongshuang Wu, Carlos Guestrin, and Sameer Singh. "[
 See discussion in D'Amour, Alexander, Katherine Heller, Dan Moldovan, Ben Adlam, Babak Alipanahi, Alex Beutel, Christina Chen et al. "[Underspecification presents challenges for credibility in modern machine learning](https://arxiv.org/abs/2011.03395)." arXiv preprint arXiv:2011.03395 (2020).
 
 ----
-## Generalization beyond Training Distribution?
-
-**Is it fair to expect generalization beyond training distribution?**
-
-**Detect and reject out-of-distribution data?**
-
-<!-- discussion -->
-
-Note: We wouldn't test a first year elementary school student on high-school math. This would be "out of the training distribution"
-
-----
 ## Testing Capabilities may help with Generalization
 
 * Capabilities are "partial specifications", given beyond training data
@@ -1693,6 +1700,7 @@ Note: We wouldn't test a first year elementary school student on high-school mat
 
 See discussion in D'Amour, Alexander, Katherine Heller, Dan Moldovan, Ben Adlam, Babak Alipanahi, Alex Beutel, Christina Chen et al. "[Underspecification presents challenges for credibility in modern machine learning](https://arxiv.org/abs/2011.03395)." arXiv preprint arXiv:2011.03395 (2020).
 
+<!-- 
 ----
 ## How much validation data?
 
@@ -1706,7 +1714,7 @@ See discussion in D'Amour, Alexander, Katherine Heller, Dan Moldovan, Ben Adlam,
     - 10000s probably overkill
     - Reserve 1000s recent data points for evaluation (or 10%, whichever is more)
     - Reserve 100s for important subpopulations
-
+ -->
 
 ----
 ## Summary: Black-Box Testing Techniques as Inspiration
@@ -1756,18 +1764,33 @@ Use to identify datasets for **subpopulations** and **capabilities**, not indivi
 
 ```java
 @Test
-void testAddition() {
-  add(2, 2);
-  add(1, 2);
-  add(4, 82);
-  add(56, 62);
-  add(212, 52);
-  add(35, 1);
-  add(22, 1);
-  add(12, 542);
-  add(1, 1);
-  add(0, 2);
-  add(-1, 2);
+void testNextDate() {
+  nextDate(488867101, 1448338253, -997372169)
+  nextDate(2105943235, 1952752454, 302127018)
+  nextDate(1710531330, -127789508, 1325394033)
+  nextDate(-1512900479, -439066240, 889256112)
+  nextDate(1853057333, 1794684858, 1709074700)
+  nextDate(-1421091610, 151976321, 1490975862)
+  nextDate(-2002947810, 680830113, -1482415172)
+  nextDate(-1907427993, 1003016151, -2120265967)
+}
+```
+
+**But is it useful?**
+
+----
+## Randomly Generating "Realistic" Inputs is Possible
+
+
+```java
+@Test
+void testNextDate() {
+  nextDate(2010, 8, 20)
+  nextDate(2024, 7, 15)
+  nextDate(2011, 10, 27)
+  nextDate(2024, 5, 4)
+  nextDate(2013, 8, 27)
+  nextDate(2010, 2, 30)
 }
 ```
 
@@ -1787,11 +1810,7 @@ void testCancerPrediction() {
 }
 ```
 
-* Completely random data generation (uniform sampling from each feature's domain)
-* Using knowledge about feature distributions (sample from each feature's distribution)
-* Knowledge about dependencies among features and whole population distribution (e.g., model with probabilistic programming language)
-* Mutate from existing inputs (e.g., small random modifications to select features)
-*
+* **Realistic inputs?**
 * **But how do we get labels?**
 
 
@@ -1817,27 +1836,33 @@ assertEquals(??, factorPrime(15485863));
 
 ![Solving the Oracle Problem with Gold Standard or Assertions](oracle.svg)
 
-----
-## Checking global specifications
 
-**Ensure, no computation crashes**
+----
+## Manually constructing outputs
+
 
 ```java
 @Test
-void testAddition() {
-  add(2, 2);
-  add(1, 2);
-  add(4, 82);
-  add(56, 62);
-  add(212, 52);
-  add(35, 1);
-  add(22, 1);
-  add(12, 542);
-  add(1, 1);
-  add(0, 2);
-  add(-1, 2);
+void testNextDate() {
+  assert nextDate(2010, 8, 20) == (2010, 8, 21);
+  assert nextDate(2024, 7, 15) == (2024, 7, 16);
+  assert nextDate(2011, 10, 27) == (2011, 10, 28);
+  assert nextDate(2024, 5, 4) == (2024, 5, 5);
+  assert nextDate(2013, 8, 27) == (2013, 8, 28);
+  assert nextDate(2010, 2, 30) throws InvalidInputException;
 }
 ```
+
+```java
+@Test
+void testCancerPrediction() {
+  assert cancerModel.predict(loadImage("random1.jpg")) == true;
+  assert cancerModel.predict(loadImage("random2.jpg")) == true;
+  assert cancerModel.predict(loadImage("random3.jpg")) == false;
+}
+```
+
+*(tedious, labor intensive; possibly crowd sourced)*
 
 ----
 ## Compare against reference implementation
@@ -1846,13 +1871,54 @@ void testAddition() {
 
 ```java
 @Test
-void testAddition() {
-  assertEquals(add(2, 2), library.add(2, 2));
-  assertEquals(add(1, 2), library.add(1, 2));
-  assertEquals(add(4, 82), library.add(41, 82));
-  ...
+void testNextDate() {
+  assert nextDate(2010, 8, 20) == referenceLib.nextDate(2010, 8, 20);
+  assert nextDate(2024, 7, 15) == referenceLib.nextDate(2024, 7, 15);
+  assert nextDate(2011, 10, 27) == referenceLib.nextDate(2011, 10, 27);
+  assert nextDate(2024, 5, 4) == referenceLib.nextDate(2024, 5, 4);
+  assert nextDate(2013, 8, 27) == referenceLib.nextDate(2013, 8, 27);
+  assert nextDate(2010, 2, 30) == referenceLib.nextDate(2010, 2, 30)
 }
 ```
+
+```java
+@Test
+void testCancerPrediction() {
+  assert cancerModel.predict(loadImage("random1.jpg")) == ???;
+}
+```
+
+*(usually no reference implementation for ML problems)*
+
+
+----
+## Checking global specifications
+
+**Ensure, no computation crashes**
+
+```java
+@Test
+void testNextDate() {
+  nextDate(2010, 8, 20)
+  nextDate(2024, 7, 15)
+  nextDate(2011, 10, 27)
+  nextDate(2024, 5, 4)
+  nextDate(2013, 8, 27)
+  nextDate(2010, 2, 30)
+}
+```
+
+
+```java
+@Test
+void testCancerPrediction() {
+  cancerModel.predict(generateRandomImage())
+  cancerModel.predict(generateRandomImage())
+  cancerModel.predict(generateRandomImage())
+}
+```
+
+*(we usually do fear crashing bugs in ML models)*
 
 ----
 ## Invariants as partial specification
@@ -1934,6 +2000,15 @@ Paths:
 
 
 Note: example source: http://web.cs.iastate.edu/~weile/cs641/9.SymbolicExecution.pdf
+
+----
+## Generating Inputs for ML Problems
+
+* Completely random data generation (uniform sampling from each feature's domain)
+* Using knowledge about feature distributions (sample from each feature's distribution)
+* Knowledge about dependencies among features and whole population distribution (e.g., model with probabilistic programming language)
+* Mutate from existing inputs (e.g., small random modifications to select features)
+
 
 ----
 ## Machine Learned Models = Untestable Software?
@@ -2050,7 +2125,7 @@ Further reading:
 
 * Generating test data (random, distributions) usually easy
 * Transformations of existing test data
-* For many techniques gradient-based techniques to search for invariant violations (see adversarial ML) -- that's roughly analogous to symbolic execution in SE
+* Adversarial learning: For many techniques gradient-based techniques to search for invariant violations -- that's roughly analogous to symbolic execution in SE
 * Early work on formally verifying invariants for certain models (e.g., small deep neural networks)
 
 
