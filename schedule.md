@@ -9,7 +9,7 @@
 | Fri, Feb 05 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) [Stream processing: Apache Kafka](https://github.com/ckaestne/seai/tree/S2021/recitations/01_apache_kafka)| |  |
 | Mon, Feb 08 | [Model Quality](https://ckaestne.github.io/seai/S2021/slides/03_modelquality/modelquality.html) | [Building Intelligent Systems](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436), Ch. 19 |  |
 | Wed, Feb 10 | Model Quality (continued) and [Teamwork](https://ckaestne.github.io/seai/S2021/slides/03_modelquality/teams.html) | [Behavioral Testing of NLP Models with CheckList](https://homes.cs.washington.edu/~wtshuang/static/papers/2020-acl-checklist.pdf) | [I1: Case Study](https://github.com/ckaestne/seai/blob/S2021/assignments/I1_case_study.md) |
-| Fri, Feb 12 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) Remote work and collaboration: Slack, Git, issue trackers | |  |
+| Fri, Feb 12 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) [Remote work and collaboration: Slack, Git, issue trackers](https://github.com/ckaestne/seai/tree/S2021/recitations/02_git_and_collaboration) | |  |
 | Mon, Feb 15 | Quality Assessment in Production | |  |
 | Wed, Feb 17 | Goals and Success Measures for AI-Enabled Systems | |  |
 | Fri, Feb 19 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) Unit testing | |  |
