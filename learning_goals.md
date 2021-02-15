@@ -160,8 +160,7 @@ References:
 * 🕮 Alec Warner and Štěpán Davidovič. “[Canary Releases](https://landing.google.com/sre/workbook/chapters/canarying-releases/).” in [The Site Reliability Workbook](https://landing.google.com/sre/books/), O'Reilly 2018
 * 📰 Georgi Georgiev. “[Statistical Significance in A/B Testing – a Complete Guide](http://blog.analytics-toolkit.com/2017/statistical-significance-ab-testing-complete-guide/#noninf).” Blog 2018
 * 🗎 Nushi, Besmira, Ece Kamar, Eric Horvitz, and Donald Kossmann. "[On human intellect and machine failures: troubleshooting integrative machine learning systems](http://erichorvitz.com/human_repair_AI_pipeline.pdf)." In *Proceedings of the Thirty-First AAAI Conference on Artificial Intelligence*, pp. 1017-1025. 2017.
-
-
+* Kang, Daniel, Deepti Raghavan, Peter Bailis, and Matei Zaharia. "[Model Assertions for Monitoring and Improving ML Model](https://arxiv.org/abs/2003.01668)." In Proceedings of MLSys 2020.
 
 
 
