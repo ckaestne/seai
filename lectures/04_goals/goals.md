@@ -22,9 +22,9 @@ Suggested complementary reading: Ajay Agrawal, Joshua Gans, Avi Goldfarb. “[Pr
 
 # Learning goals
 
-* Judge when to apply AI for a problem in a system
-* Define system goals and map them to goals for the AI component
-* Design and implement suitable measures and corresponding telemetry
+* Judge when to apply ML for a problem in a system
+* Define system goals and map them to goals for ML components
+* Understand the key concepts and risks of measurement
 
 
 ---
@@ -39,6 +39,12 @@ Suggested complementary reading: Ajay Agrawal, Joshua Gans, Avi Goldfarb. “[Pr
 
 ---
 # When to use Machine Learning?
+
+----
+# When to use Machine Learning?
+
+![ML-overkill](ML-overkill.png)
+<!-- .element: class="stretch" -->
 
 ----
 ## When not to use Machine Learning?
