@@ -12,7 +12,7 @@
 | Fri, Feb 12 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) [Remote work and collaboration: Slack, Git, issue trackers](https://github.com/ckaestne/seai/tree/S2021/recitations/02_git_and_collaboration) | |  |
 | Mon, Feb 15 | [Goals and Success Measures for AI-Enabled Systems](https://ckaestne.github.io/seai/S2021/slides/04_goals/goals.html)  | [Building Intelligent Systems](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436), Ch. 2, 4 |  |
 | Wed, Feb 17 | [Quality Assessment in Production](https://ckaestne.github.io/seai/S2021/slides/05_qainproduction/qainproduction.html) ([lecture notes](https://ckaestne.medium.com/quality-assurance-in-production-for-ml-enabled-systems-4d1b3442316f)) | |  |
-| Fri, Feb 19 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) Unit testing | |  |
+| Fri, Feb 19 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) [Measurement](https://github.com/ckaestne/seai/tree/S2021/recitations/03_measurement) | |  |
 | Mon, Feb 22 | Business, Risk, and Planning for Mistakes 1 | |  |
 | Wed, Feb 24 | Business, Risk, and Planning for Mistakes 2 | | [M1: Modeling and First Deployment](https://github.com/ckaestne/seai/blob/S2021/assignments/project.md) |
 | Fri, Feb 26 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) Requirements/Risk analysis | |  |
@@ -21,7 +21,7 @@
 | Fri, Mar 05 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) Architecture | |  |
 | Mon, Mar 08 | Data Quality | |  |
 | Wed, Mar 10 | Infrastructure Quality, Deployment, and Operations | | [I2: Requirements and Architecture](https://github.com/ckaestne/seai/blob/S2021/assignments/I2_requirements_architecture.md) |
-| Fri, Mar 12 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) Measurement | |  |
+| Fri, Mar 12 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) Unit Testing | |  |
 | Mon, Mar 15 | Managing and Processing Large Datasets | |  |
 | Wed, Mar 17 | **Midterm** | |  |
 | Fri, Mar 19 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) **Midsemester break, no recitation** | |  |
