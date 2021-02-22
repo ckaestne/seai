@@ -11,9 +11,9 @@
 | Wed, Feb 10 | Model Quality (continued) and [Teamwork](https://ckaestne.github.io/seai/S2021/slides/03_modelquality/teams.html) | [Behavioral Testing of NLP Models with CheckList](https://homes.cs.washington.edu/~wtshuang/static/papers/2020-acl-checklist.pdf) | [I1: Case Study](https://github.com/ckaestne/seai/blob/S2021/assignments/I1_case_study.md) |
 | Fri, Feb 12 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) [Remote work and collaboration: Slack, Git, issue trackers](https://github.com/ckaestne/seai/tree/S2021/recitations/02_git_and_collaboration) | |  |
 | Mon, Feb 15 | [Goals and Success Measures for AI-Enabled Systems](https://ckaestne.github.io/seai/S2021/slides/04_goals/goals.html)  | [Building Intelligent Systems](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436), Ch. 2, 4 |  |
-| Wed, Feb 17 | [Quality Assessment in Production](https://ckaestne.github.io/seai/S2021/slides/05_qainproduction/qainproduction.html) ([lecture notes](https://ckaestne.medium.com/quality-assurance-in-production-for-ml-enabled-systems-4d1b3442316f)) | |  |
+| Wed, Feb 17 | [Quality Assessment in Production](https://ckaestne.github.io/seai/S2021/slides/05_qainproduction/qainproduction.html) ([lecture notes](https://ckaestne.medium.com/quality-assurance-in-production-for-ml-enabled-systems-4d1b3442316f)) | [Building Intelligent Systems](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436), Ch. 14, 15 |  |
 | Fri, Feb 19 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) [Measurement](https://github.com/ckaestne/seai/tree/S2021/recitations/03_measurement) | |  |
-| Mon, Feb 22 | Business, Risk, and Planning for Mistakes 1 | |  |
+| Mon, Feb 22 | [Business, Risk, and Planning for Mistakes 1](https://ckaestne.github.io/seai/S2021/slides/06_risks/risks.html) | [The World and the Machine](http://mcs.open.ac.uk/mj665/icse17kn.pdf)|  |
 | Wed, Feb 24 | Business, Risk, and Planning for Mistakes 2 | | [M1: Modeling and First Deployment](https://github.com/ckaestne/seai/blob/S2021/assignments/project.md) |
 | Fri, Feb 26 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) Requirements/Risk analysis | |  |
 | Mon, Mar 01 | Tradeoffs among Modeling Techniques | |  |
