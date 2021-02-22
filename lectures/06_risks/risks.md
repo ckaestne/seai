@@ -12,9 +12,7 @@ Eunsuk Kang
 
 <!-- references -->
 
-Required reading: Hulten, Geoff. "Building Intelligent Systems: A
-Guide to Machine Learning Engineering." (2018), Chapters 6–7 (Why
-creating IE is hard, balancing IE) and 24 (Dealing with mistakes)
+Required reading: "The World and the Machine" M. Jackson (1995).
 
 ---
 ## Learning goals:
@@ -156,8 +154,8 @@ Only 3% of fatal software accidents due to coding errors; rest due to
 <!-- .element: class="stretch" -->
 
 * Requirements (REQ) are expressed only in terms of world phenomena 
-* Assumptions (ENV) are expressed In terms of world & shared phenomena
-* Specifications (SPEC) are expressed In terms of shared phenomena
+* Assumptions (ENV) are expressed in terms of world & shared phenomena
+* Specifications (SPEC) are expressed in terms of shared phenomena
 
 **Software cannot directly satisfy REQ on its own**
 
@@ -180,6 +178,17 @@ Only 3% of fatal software accidents due to coding errors; rest due to
 * Requirement (REQ): The vehicle must be prevented from veering off the lane.
 * Assumptions (ENV): ?
 * Specification (SPEC): ?
+
+----
+## Example: Lane Assist
+
+![lane-assist](lane.jpg)
+<!-- .element: class="stretch" -->
+
+* REQ: The vehicle must be prevented from veering off the lane.
+* ENV: Sensors are providing accurate information about the lane;
+  driver responses when given warning; steering wheel is functional
+* SPEC: ?
 
 ----
 ## Example: Lane Assist
@@ -263,7 +272,7 @@ ground
   * (More on security lecture)
 * Feedback loops
 <!-- .element: class="fragment" -->
-  * System acts on the world that it senses; impact amplified over time
+  * System acts on the world that it senses; changes ENV over time
   * e.g., predictive policing
 
 **High-quality model alone (SPEC) does not guarantee system goals (REQ)**
@@ -291,7 +300,7 @@ ground
 ![lane-assist](lane.jpg)
 <!-- .element: class="stretch" -->
 
-* Wrong or inconsistency in requirements (REQ)?
+* Wrong or inconsistent requirements (REQ)?
 * Missing or incorrect environmental assumptions (ENV)?
 * Wrong or violated specification (SPEC)?
 * Inconsistency in assumptions & spec (ENV ∧ SPEC = False)?
