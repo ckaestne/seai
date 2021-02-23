@@ -1,8 +1,8 @@
 ---
-author: Christian Kaestner
+author: Christian Kaestner and Eunsuk Kang
 title: "17-445: Risk and Planning for Mistakes"
 semester: Summer 2020
-footer: "17-445 Software Engineering for AI-Enabled Systems, Christian Kaestner"
+footer: "17-445 Software Engineering for AI-Enabled Systems, Christian Kaestner & Eunsuk Kang"
 license: Creative Commons Attribution 4.0 International (CC BY 4.0)
 ---  
 
