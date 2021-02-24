@@ -183,8 +183,8 @@ obtained by removing a basic event.
 * REQ: The vehicle must be prevented from veering off the lane.
 * ENV: Sensors are providing accurate information about the lane;
   driver responses when given warning; steering wheel is functional
-* SPEC: Lane detection accurately identifies the lane markings; the
-  controller generates correct steering commands to keep the vehicle
+* SPEC: Lane detection accurately identifies lane markings in image; the
+  controller generates steering commands to keep the vehicle
   within lane
 
 ----
@@ -194,10 +194,10 @@ obtained by removing a basic event.
 
 Draw a fault tree for the lane assist system with the top event as “Vehicle fails to stay within lane”
 
-----
-## Example: FTA for Lane Assist
+<!-- ---- -->
+<!-- ## Example: FTA for Lane Assist -->
 
-![lane-assist-fta](lane-assist-fta.png)
+<!-- ![lane-assist-fta](lane-assist-fta.png) -->
 
 ---
 # Mitigation Strategies
