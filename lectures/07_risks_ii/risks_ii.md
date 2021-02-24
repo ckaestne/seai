@@ -336,6 +336,14 @@ Notes: Smart home devices, credit card applications, Powerpoint design suggestio
 
 **Q. Possible mitigation strategies?**
 
+![lane-assist](lane.jpg)
+
+
+----
+## Example: Lane Assist
+
+**Q. Possible mitigation strategies?**
+
 ![lane-assist-fta](lane-assist-fta.png)
 <!-- .element: class="stretch" -->
 
@@ -380,7 +388,8 @@ _Experimental Security Analysis of a Modern Automobile_, Koscher et al., (2010)
   * Add monitors/checks at interfaces
 * Is AI in my system performing an LC or HC task?
   * If HC, can we "demote" it into LC?
-  * Alternatively, replace HC AI components with non-AI ones
+  * Alternatively, replace HC AI components with non-AI ones with
+    stronger guarantees
   * **Q. Examples?**
 
 ---
