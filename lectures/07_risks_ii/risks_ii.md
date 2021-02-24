@@ -209,6 +209,7 @@ Draw a fault tree for the lane assist system with the top event as “Vehicle fa
 * __Goal__: Minimize the impact of failures
 * __Detection__
   * Monitoring
+  * Redundancy
 * __Response__
   * Graceful degradation (fail-safe)
   * Redundancy (fail over)
@@ -272,11 +273,13 @@ _Runtime-Safety-Guided Policy Repair_, Intl. Conference on Runtime Verification 
   * __But what about other types of ML failures? (e.g., misclassification)__
 
 ----
-## Response: Redundancy (Failover)
+## Detection & Response: Redundancy 
 
 ![](redundancy.jpg)
+<!-- .element: class="stretch" -->
 
-* __Goal__: When a component fails, continue to provide the same
+* __Detection__: Compare output from redundant components 
+* __Reseponse__: When a component fails, continue to provide the same
   functionality 
 * __Hot Standby__: Standby watches & takes over when primary fails
 * __Voting__: Select the majority decision
@@ -285,12 +288,13 @@ _Runtime-Safety-Guided Policy Repair_, Intl. Conference on Runtime Verification 
   * __Q. What about software?__
 
 ----
-## Response: Redundancy (Failover)
+## Detection & Response: Redundancy
 
 ![](redundancy.jpg)
+<!-- .element: class="stretch" -->
 
-* __Goal__: When a component fails, continue to provide the same
-  functionality 
+* __Detection__: Compare output from redundant components 
+* __Reseponse__: When a component fails, continue to provide the same
 * __Hot Standby__: Standby watches & takes over when primary fails
 * __Voting__: Select the majority decision
 * Caution: Do components fail independently?
@@ -345,6 +349,7 @@ Notes: Smart home devices, credit card applications, Powerpoint design suggestio
 ## Poor Decoupling: USS Yorktown (1997)
 
 ![](yorktown.png)
+<!-- .element: class="stretch" -->
 
 * Invalid data entered into DB; divide-by-zero crashes entire network
 * Required rebooting the whole system; ship dead in water for 3 hours 
@@ -354,10 +359,14 @@ Notes: Smart home devices, credit card applications, Powerpoint design suggestio
 ## Poor Decoupling: Automotive Security
 
 ![](invehicle.png)
+<!-- .element: class="stretch" -->
 
 * Main components connected through a common CAN bus
   * Broadcast; no access control (anyone can read/write)
-* Can control brake/engine by playing a malicious MP3 (Stefan Savage, UCSD)
+* Can control brake/engine by playing a malicious MP3
+
+<!---references--->
+_Experimental Security Analysis of a Modern Automobile_, Koscher et al., (2010)
 
 ----
 ## Containment: Decoupling & Isolation
