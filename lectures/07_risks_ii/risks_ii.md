@@ -79,7 +79,7 @@ other types of requirement (e.g., poor performance, security attacks...)
 ----
 ## Fault Tree Analysis & AI
 
-* Increaseingly used in automotive, aeronautics, industrial control systems, etc.,
+* AI is increaseingly used in safety-critical domains such as automotive, aeronautics, industrial control systems, etc.,
 * AI is just one part of the system
 <!-- .element: class="fragment" -->
 * AI will EVENTUALLY make mistakes
@@ -194,10 +194,10 @@ obtained by removing a basic event.
 
 Draw a fault tree for the lane assist system with the top event as “Vehicle fails to stay within lane”
 
-<!-- ---- -->
-<!-- ## Example: FTA for Lane Assist -->
+----
+## Example: FTA for Lane Assist
 
-<!-- ![lane-assist-fta](lane-assist-fta.png) -->
+![lane-assist-fta](lane-assist-fta.png)
 
 ---
 # Mitigation Strategies
@@ -213,6 +213,8 @@ Draw a fault tree for the lane assist system with the top event as “Vehicle fa
 * __Response__
   * Graceful degradation (fail-safe)
   * Redundancy (fail over)
+  * Human in the loop
+  * Undoable actions
 * __Containment__
   * Decoupling & isolation
 
