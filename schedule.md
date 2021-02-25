@@ -16,8 +16,8 @@
 | Mon, Feb 22 | [Risk and Planning for Mistakes 1](https://ckaestne.github.io/seai/S2021/slides/06_risks/risks.html) ([blog post](https://medium.com/@ckaestne/the-world-and-the-machine-and-responsible-machine-learning-1ae72353c5ae)) | [The World and the Machine](http://mcs.open.ac.uk/mj665/icse17kn.pdf)|  |
 | Wed, Feb 24 | [Risk and Planning for Mistakes 2](https://ckaestne.github.io/seai/S2021/slides/07_risks_ii/risks_ii.html) | [Building Intelligent Systems](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436), Ch. 6, 7, 24 | [M1: Modeling and First Deployment](https://github.com/ckaestne/seai/blob/S2021/assignments/project.md) |
 | Fri, Feb 26 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) Requirements/Risk analysis | |  |
-| Mon, Mar 01 | Tradeoffs among Modeling Techniques | |  |
-| Wed, Mar 03 | Software Architecture of AI-Enabled Systems  | |  |
+| Mon, Mar 01 | [Tradeoffs among Modeling Techniques](https://ckaestne.github.io/seai/S2021/slides/08_tradeoffs/tradeoffs.html) | [Building Intelligent Systems](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436), Ch. 17 and 18 |  |
+| Wed, Mar 03 | [Software Architecture of AI-Enabled Systems](https://ckaestne.github.io/seai/S2021/slides/09_architecture/architecture.html) | [Building Intelligent Systems](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436), Ch. 13 and [Exploring Development Patterns in Data Science](https://www.theorylane.com/2017/10/20/some-development-patterns-in-data-science/) |  |
 | Fri, Mar 05 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) Architecture | |  |
 | Mon, Mar 08 | Data Quality | |  |
 | Wed, Mar 10 | Infrastructure Quality, Deployment, and Operations | | [I2: Requirements and Architecture](https://github.com/ckaestne/seai/blob/S2021/assignments/I2_requirements_architecture.md) |
