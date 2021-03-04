@@ -23,7 +23,7 @@
 | Wed, Mar 10 | Infrastructure Quality, Deployment, and Operations | | [I2: Requirements and Architecture](https://github.com/ckaestne/seai/blob/S2021/assignments/I2_requirements_architecture.md) |
 | Fri, Mar 12 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) Unit Testing | |  |
 | Mon, Mar 15 | Managing and Processing Large Datasets | |  |
-| Wed, Mar 17 | **Midterm** | |  |
+| Wed, Mar 17 | [**Midterm**](https://github.com/ckaestne/seai/tree/S2021/exams) | |  |
 | Fri, Mar 19 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) **Midsemester break, no recitation** | |  |
 | Mon, Mar 22 | Process & Technical Debt | |  |
 | Wed, Mar 24 | Human AI Interaction | | [I3: Open Source Tools](https://github.com/ckaestne/seai/blob/S2021/assignments/I3_se4ai_tools.md) |

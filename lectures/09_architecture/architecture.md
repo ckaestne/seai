@@ -628,8 +628,9 @@ Stream + Batch Processing
 ## Separating Concerns
 
 ![Proposed ML Architecture Pattern](mlarchpattern.png)
+<!-- .element: class="stretch" -->
 
-<!-- references -->
+
 
 Image source: Yokoyama, Haruki. "Machine learning system architectural pattern for improving operational stability." In 2019 IEEE International Conference on Software Architecture Companion (ICSA-C), pp. 267-274. IEEE, 2019.
 
