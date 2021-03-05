@@ -18,7 +18,7 @@
 | Fri, Feb 26 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) [Requirements/Risk analysis](https://github.com/ckaestne/seai/tree/S2021/recitations/04_requirements_and_risk_analysis) | |  |
 | Mon, Mar 01 | [Tradeoffs among Modeling Techniques](https://ckaestne.github.io/seai/S2021/slides/08_tradeoffs/tradeoffs.html) | [Building Intelligent Systems](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436), Ch. 17 and 18 |  |
 | Wed, Mar 03 | [Software Architecture of AI-Enabled Systems](https://ckaestne.github.io/seai/S2021/slides/09_architecture/architecture.html) | [Building Intelligent Systems](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436), Ch. 13 and [Exploring Development Patterns in Data Science](https://www.theorylane.com/2017/10/20/some-development-patterns-in-data-science/) |  |
-| Fri, Mar 05 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) Architecture | |  |
+| Fri, Mar 05 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) [Architecture](https://github.com/ckaestne/seai/tree/S2021/recitations/05_architecture) | |  |
 | Mon, Mar 08 | Data Quality | |  |
 | Wed, Mar 10 | Infrastructure Quality, Deployment, and Operations | | [I2: Requirements and Architecture](https://github.com/ckaestne/seai/blob/S2021/assignments/I2_requirements_architecture.md) |
 | Fri, Mar 12 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) Unit Testing | |  |
