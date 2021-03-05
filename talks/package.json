@@ -1,0 +1,21 @@
+{
+  "name": "17445-seai",
+  "version": "1.0.0",
+  "scripts": {
+    "presentation": "reveal-md .",
+    "run": "reveal-md . -w",
+    "generate": "reveal-md . --static",
+    "pdf": "find . | grep '^\\./[0-9].*\\.md$' | sed 's/\\.md$//' | xargs --max-args=1 --replace='{}' timeout 2m reveal-md '{}'.md --print _static/'{}'.pdf",
+    "staticpdf": "find . | grep '^\\./[0-9].*\\.md$' | grep -v '/all.md' | sed 's/\\.md$//' | xargs --max-args=1 --replace='{}' timeout 2m reveal-md '{}'.md --print _static/'{}'.pdf"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ckaestne/slide-test.git"
+  },
+  "author": "Christian Kaestner",
+  "devDependencies": {
+    "gh-pages": "^2.1.1",
+    "marked": "^0.7.0",
+    "reveal-md": "github:ckaestne/reveal-md#master"
+  }
+}
