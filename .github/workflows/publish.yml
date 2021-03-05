@@ -32,8 +32,8 @@ jobs:
     - name: Generate slides
       run: |
         cd lectures
-        npm run generate
-        npm run staticpdf
+        timeout 5m npm run generate
+        timeout 5m npm run staticpdf
         cp -r _static/ ../_site/slides
         cd ..
 
