@@ -1,0 +1,40 @@
+name: publish-gh-pages
+on:
+  push:
+    branches: talks 
+
+jobs:
+  gh-pages:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v2
+      
+    - name: Prepare _site
+      run: |
+        echo generate main html page in _site/
+        mkdir _site
+        cd talks
+        npm install --no-optional
+        cd ..
+
+
+    - name: Generate slides
+      run: |
+        cd talks
+        timeout 5m npm run generate
+        timeout 5m npm run staticpdf
+        cp -r _static/ ../_site/slides
+        cd ..
+
+    - name: Push to gh-pages
+      run: |
+        git clone --quiet --branch gh-pages --depth 1 https://github.com/${{ github.repository }}.git .gh-pages
+        rm -rf .gh-pages/talks
+        mv _site .gh-pages/talks
+        cd .gh-pages
+        git add talks
+        git config --local user.email "ckaestne@nomail.cs.cmu.edu"
+        git config --local user.name "GitHub Action"
+        git commit --allow-empty -m "Update gh-pages for talks/${{ github.sha }}"
+        git push https://$GITHUB_ACTOR:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:gh-pages --force --follow-tags -v
