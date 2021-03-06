@@ -2,7 +2,7 @@
 author: Christian Kaestner
 title: "17-445: Risk and Planning for Mistakes"
 semester: Summer 2020
-footer: "17-445 Software Engineering for AI-Enabled Systems, Christian Kaestner"
+footer: "17-445 Machine Learning in Production"
 license: Creative Commons Attribution 4.0 International (CC BY 4.0)
 ---  
 

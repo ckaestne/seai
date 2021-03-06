@@ -1,5 +1,5 @@
 {
-  "footer": "17-445 Software Engineering for AI-Enabled Systems",
+  "footer": "17-445 Machine Learning in Production",
   "theme": "white",
   "css": "_assets/cmu.css",
   "scripts": "_assets/viz.js,_assets/loadmymarkdown.js",

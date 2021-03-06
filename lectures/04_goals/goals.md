@@ -2,7 +2,7 @@
 author: Christian Kaestner and Eunsuk Kang
 title: "17-445: Goals and Success Measures for AI-Enabled Systems"
 semester: Fall 2020
-footer: "17-445 Software Engineering for AI-Enabled Systems"
+footer: "17-445 Machine Learning in Production"
 license: Creative Commons Attribution 4.0 International (CC BY 4.0)
 ---  
 

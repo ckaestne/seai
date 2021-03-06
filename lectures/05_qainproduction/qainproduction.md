@@ -2,7 +2,7 @@
 author: Christian Kaestner
 title: "17-445: Quality Assessment in Production"
 semester: Spring 2021
-footer: "17-445 Software Engineering for AI-Enabled Systems, Christian Kaestner"
+footer: "17-445 Machine Learning in Production, Christian Kaestner"
 license: Creative Commons Attribution 4.0 International (CC BY 4.0)
 ---
 
