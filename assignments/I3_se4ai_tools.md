@@ -67,7 +67,7 @@ Post the blog post, update the Google Spreadsheet with links, and submit a short
 ## Grading
 
 The assignment is worth 100 points. We will assign credit as follows:
-* [ ] 10 points: The spreadsheet is filled out correctly and we can find your blog post and comments without asking. 
+* [ ] 10 points: The spreadsheet is filled out correctly and we can find your blog post and comments without asking. The tool was not previously claimed by a different student and is not among the tools from previous semesters listed above.
 * [ ] 40 points: A blog post about the selected tool is posted that explains the problem that the tool addresses.
 * [ ] 10 points: The blog post illustrates how the tool is useful in a production machine learning system with examples from the movie streaming scenario.
 * [ ] 10 points: The blog post discusses the strength and limitations of the tool. 
