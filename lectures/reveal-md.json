@@ -4,5 +4,6 @@
   "css": "_assets/cmu.css",
   "scripts": "_assets/viz.js,_assets/loadmymarkdown.js",
   "staticDirs": "_assets",
-  "listingTemplate": "_assets/listing.html"
+  "listingTemplate": "_assets/listing.html",
+  "puppeteerLaunchArgs": "--no-sandbox --disable-setuid-sandbox --disable-dev-shm-usage --disable-gpu"
 }
