@@ -10,28 +10,21 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       
-    - name: Prepare _site
+    - name: npm install
       run: |
-        echo generate main html page in _site/
-        mkdir _site
-        cd talks
         npm install --no-optional
-        cd ..
 
 
     - name: Generate slides
       run: |
-        cd talks
         timeout 5m npm run generate
         timeout 5m npm run staticpdf
-        cp -r _static/ ../_site/slides
-        cd ..
 
     - name: Push to gh-pages
       run: |
         git clone --quiet --branch gh-pages --depth 1 https://github.com/${{ github.repository }}.git .gh-pages
         rm -rf .gh-pages/talks
-        mv _site .gh-pages/talks
+        mv _static .gh-pages/talks
         cd .gh-pages
         git add talks
         git config --local user.email "ckaestne@nomail.cs.cmu.edu"
