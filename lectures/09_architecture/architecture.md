@@ -155,10 +155,10 @@ Raffi. [New Tweets per second record, and how!](https://blog.twitter.com/enginee
 
 # Architectural Modeling and Reasoning
 ----
-![](pgh.png)
+![](pgh.jpg)
 Notes: Map of Pittsburgh. Abstraction for navigation with cars.
 ----
-![](pgh-cycling.png)
+![](pgh-cycling.jpg)
 Notes: Cycling map of Pittsburgh. Abstraction for navigation with bikes and walking.
 ----
 ![](pgh-firezones.png)
