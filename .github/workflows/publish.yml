@@ -33,7 +33,7 @@ jobs:
       run: |
         cd lectures
         timeout 5m npm run generate
-        timeout 5m npm run staticpdf
+        timeout 15m npm run staticpdf
         cp -r _static/ ../_site/slides
         cd ..
 
