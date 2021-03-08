@@ -143,11 +143,11 @@ PastSales --> Prediction((Inventory ML))
 
 (CC-BY-4.0 by [Arbeck](https://commons.wikimedia.org/wiki/File:Accuracy_and_Precision.svg))
 
-----
-## Accuracy and Precision in Training Data?
+<!-- ---- -->
+<!-- ## Accuracy and Precision in Training Data? -->
 
-![Shelves in a warehouse](warehouse.jpg)
-<!-- .element: class="stretch" -->
+<!-- ![Shelves in a warehouse](warehouse.jpg) -->
+<!-- <\!-- .element: class="stretch" -\-> -->
 
 
 ----
@@ -167,33 +167,33 @@ PastSales --> Prediction((Inventory ML))
 
 
 
----
-# Exploratory Data Analysis
+<!-- --- -->
+<!-- # Exploratory Data Analysis -->
 
-----
-## Exploratory Data Analysis in Data Science
+<!-- ---- -->
+<!-- ## Exploratory Data Analysis in Data Science -->
 
-* Before learning, understand the data
-* Understand types, ranges, distributions
-* Important for understanding data and assessing quality
-* Plot data distributions for features
-  - Visualizations in a notebook
-  - Boxplots, histograms, density plots, scatter plots, ...
-* Explore outliers
-* Look for correlations and dependencies
-  - Association rule mining
-  - Principal component analysis
+<!-- * Before learning, understand the data -->
+<!-- * Understand types, ranges, distributions -->
+<!-- * Important for understanding data and assessing quality -->
+<!-- * Plot data distributions for features -->
+<!--   - Visualizations in a notebook -->
+<!--   - Boxplots, histograms, density plots, scatter plots, ... -->
+<!-- * Explore outliers -->
+<!-- * Look for correlations and dependencies -->
+<!--   - Association rule mining -->
+<!--   - Principal component analysis -->
 
-Examples: https://rpubs.com/ablythe/520912 and https://towardsdatascience.com/exploratory-data-analysis-8fc1cb20fd15
+<!-- Examples: https://rpubs.com/ablythe/520912 and https://towardsdatascience.com/exploratory-data-analysis-8fc1cb20fd15 -->
 
-----
-## SE Perspective: Understanding Data for Quality Assurance
+<!-- ---- -->
+<!-- ## SE Perspective: Understanding Data for Quality Assurance -->
 
-* Understand input and output data
-* Understand expected distributions
-* Understand assumptions made on data for modeling
-  - ideally document those
-* Check assumptions at runtime
+<!-- * Understand input and output data -->
+<!-- * Understand expected distributions -->
+<!-- * Understand assumptions made on data for modeling -->
+<!--   - ideally document those -->
+<!-- * Check assumptions at runtime -->
 
 
 
@@ -284,7 +284,7 @@ Further readings: Rahm, Erhard, and Hong Hai Do. [Data cleaning: Problems and cu
 Q. Can we (automatically) detect errors? Which errors are problem-dependent?
 
 ----
-## Common Strategies
+## Common Strategies for Cleaning
 
 * Enforce schema constraints
   * e.g., delete rows with missing data or use defaults
@@ -470,6 +470,16 @@ Image source: Theo Rekatsinas, Ihab Ilyas, and Chris Ré, “[HoloClean - Weakly
   - For two people in the same state, the person with the lower income should not have the higher tax rate
 * Classic integrity constraints in databases or conditional constraints
 * Rules can be used to reject data or repair it
+
+----
+## Exmaple: HoloClean
+
+![HoloClean](holoclean.jpg)
+
+* User provides rules as integrity constraints (e.g., "two entries with the same
+name can't have different city")
+* Detect violations of the rules in the data; also detect statistical outliers
+* Automatically generate repair candidates (with probabilities)
 
 ----
 ## Discovery of Data Quality Rules
@@ -670,19 +680,23 @@ Further readings: Hynes, Nick, D. Sculley, and Michael Terry. [The data linter: 
 *in all cases, models are less effective over time*
 
 * Concept drift
+<!-- .element: class="fragment" -->
   * properties to predict change over time (e.g., what is credit card fraud)
   * over time: different expected outputs for same inputs
   * model has not learned the relevant concepts
-* Data drift 
+* Data drift
+<!-- .element: class="fragment" -->
   * characteristics of input data changes (e.g., customers with face masks)
   * input data differs from training data 
   * over time: predictions less confident, further from training data
 * Upstream data changes 
+<!-- .element: class="fragment" -->
   * external changes in data pipeline (e.g., format changes in weather service)
   * model interprets input data incorrectly
   * over time: abrupt changes due to faulty inputs
 
-**how to fix?**
+**How do we fix these drifts?**
+<!-- .element: class="fragment" -->
 
 Notes:
   * fix1: retrain with new training data or relabeled old training data
@@ -741,6 +755,7 @@ Image source: Joel Thomas and Clemens Mewald. [Productionizing Machine Learning:
 ----
 ## Different forms of Data Drift
 
+
 * Structural drift
   * Data schema changes, sometimes by infrastructure changes
   * e.g., `4124784115` -> `412-478-4115`
@@ -750,8 +765,9 @@ Image source: Joel Thomas and Clemens Mewald. [Productionizing Machine Learning:
 * Distribution changes
   * e.g., credit card fraud differs to evade detection
   * e.g., marketing affects sales of certain items
-*
-* **Other examples?**
+
+![data drift](data-drift.png)
+<!-- .element: class="stretch" -->
 
 
 
@@ -773,7 +789,7 @@ Image source: Joel Thomas and Clemens Mewald. [Productionizing Machine Learning:
 ## Data Distribution Analysis
 
 * Plot distributions of features (histograms, density plots, kernel density estimation)
-  - identify which features drift
+  - Identify which features drift
 * Define distance function between inputs and identify distance to closest training data (eg., wasserstein and energy distance, see also kNN)
 * Formal models for *data drift contribution* etc exist
 * Anomaly detection and "out of distribution" detection
@@ -791,7 +807,7 @@ https://rpubs.com/ablythe/520912
 ![Dashboard](drift-ui-expanded.png)
 
 <!-- references -->
-Image source and further readings: [Detect data drift (preview) on models deployed to Azure Kubernetes Service (AKS)](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-monitor-data-drift)
+Image source and further readings: [Detect data drift (preview) on models deployed to Azure Kubernetes Service (AKS)](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-monitor-datasets?tabs=python)
 
 ----
 ## Discussion: Inventory System
