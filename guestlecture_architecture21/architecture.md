@@ -412,3 +412,13 @@ Discuss: Quality measure, telemetry, operationalization, cost, privacy, rare eve
 * Telemetry design is key for ML systems in production
 * Many qualities and tradeoffs to consider
 
+
+----
+## Further pointers
+
+* Full lecture (with videos, readings, assignments): https://ckaestne.github.io/seai/
+* Annotated bibliography: https://github.com/ckaestne/seaibib
+* Hulten, Geoff. Building Intelligent Systems: A Guide to Machine Learning Engineering. Apress. 2018
+* Yokoyama, Haruki. "Machine learning system architectural pattern for improving operational stability." In 2019 IEEE International Conference on Software Architecture Companion (ICSA-C), pp. 267-274. IEEE, 2019.
+* Hazelwood, Kim, Sarah Bird, David Brooks, Soumith Chintala, Utku Diril, Dmytro Dzhulgakov, Mohamed Fawzy et al. "Applied machine learning at facebook: A datacenter infrastructure perspective." In 2018 IEEE International Symposium on High Performance Computer Architecture (HPCA), pp. 620-629. IEEE, 2018.
+
