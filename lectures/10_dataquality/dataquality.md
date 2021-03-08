@@ -481,6 +481,9 @@ name can't have different city")
 * Detect violations of the rules in the data; also detect statistical outliers
 * Automatically generate repair candidates (with probabilities)
 
+<!-- references -->
+Image source: Theo Rekatsinas, Ihab Ilyas, and Chris Ré, “[HoloClean - Weakly Supervised Data Repairing](https://dawn.cs.stanford.edu/2017/05/12/holoclean/).” Blog, 2017.
+
 ----
 ## Discovery of Data Quality Rules
 
