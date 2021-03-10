@@ -652,6 +652,62 @@ Note: Fault injection in production for testing in production. Requires monitori
 
 
 
+---
+# Code Review and Static Analysis
+
+----
+## Code Review
+
+* Manual inspection of code
+    - Looking for problems and possible improvements
+    - Possibly following checklists
+    - Individually or as group
+* Modern code review: Incremental review at checking
+    - Review individual changes before merging
+    - Pull requests on GitHub
+    - Not very effective at finding bugs, but many other benefits: knowledge transfer, code imporvement, shared code ownership, improving testing
+
+----
+![Code Review on GitHub](review_github.png)
+
+----
+## Static Analysis, Code Linting
+
+Automatic detection of problematic patterns based on code structure
+
+```java
+if (user.jobTitle = "manager") {
+   ...
+}
+```
+
+```javascript
+function fn() {
+    x = 1;
+    return x;
+    x = 3; 
+}
+```
+
+```java
+PrintWriter log = null;
+if (anyLogging) log = new PrintWriter(...);
+if (detailedLogging) log.println("Log started");
+```
+
+----
+## Process Integration: Static Analysis Warnings during Code Review
+
+![Static analysis warnings during code review](staticanalysis_codereview.png)
+
+
+<!-- references -->
+
+Sadowski, Caitlin, Edward Aftandilian, Alex Eagle, Liam Miller-Cushon, and Ciera Jaspan. "Lessons from building static analysis tools at google." Communications of the ACM 61, no. 4 (2018): 58-66.
+
+Note: Social engineering to force developers to pay attention. Also possible with integration in pull requests on GitHub.
+
+
 
 
 
