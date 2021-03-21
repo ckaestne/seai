@@ -21,8 +21,8 @@
 | Fri, Mar 05 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) [Architecture](https://github.com/ckaestne/seai/tree/S2021/recitations/05_architecture) | |  |
 | Mon, Mar 08 | [Data Quality](https://ckaestne.github.io/seai/S2021/slides/10_dataquality/dataquality.html) ([lecture notes](https://ckaestne.medium.com/data-quality-for-building-production-ml-systems-2e0cc7e6113f)) | [Automating large-scale data quality verification](http://www.vldb.org/pvldb/vol11/p1781-schelter.pdf) and [The Data Linter](http://learningsys.org/nips17/assets/papers/paper_19.pdf) |  |
 | Wed, Mar 10 | [Infrastructure Quality, Deployment, and Operations](https://ckaestne.github.io/seai/S2021/slides/11_infrastructurequality/infrastructurequality.html) | [The ML Test Score](https://research.google.com/pubs/archive/46555.pdf) | [I2: Requirements and Architecture](https://github.com/ckaestne/seai/blob/S2021/assignments/I2_requirements_architecture.md) |
-| Fri, Mar 12 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) Unit Testing | |  |
-| Mon, Mar 15 | Managing and Processing Large Datasets | [Business Systems with Machine Learning](https://www.youtube.com/watch?v=_bvrzYOA8dY) |  |
+| Fri, Mar 12 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) Midterm Review Session | |  |
+| Mon, Mar 15 | [Managing and Processing Large Datasets](https://ckaestne.github.io/seai/S2021/slides/12_dataatscale/dataatscale.html) | [Business Systems with Machine Learning](https://www.youtube.com/watch?v=_bvrzYOA8dY) |  |
 | Wed, Mar 17 | [**Midterm**](https://github.com/ckaestne/seai/tree/S2021/exams) | |  |
 | Fri, Mar 19 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) **Midsemester break, no recitation** | |  |
 | Mon, Mar 22 | Process & Technical Debt | [Hidden Technical Debt in Machine Learning Systems](http://papers.nips.cc/paper/5656-hidden-technical-debt-in-machine-learning-systems.pdf) |  |
@@ -45,5 +45,5 @@
 | Fri, Apr 30 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) tbd | |  |
 | Mon, May 03 | Fostering Interdisciplinary Teams | |  |
 | Wed, May 05 | Summary and Review | | [M4: Security and Feedback Loops](https://github.com/ckaestne/seai/blob/S2021/assignments/project.md) |
-| tbd | **Final Project Presentations** | | [Final report](https://github.com/ckaestne/seai/blob/S2021/assignments/project.md) |
+| Thu, May 13, 5:30-8:30 PM | **Final Project Presentations** | | [Final report](https://github.com/ckaestne/seai/blob/S2021/assignments/project.md) |
 
