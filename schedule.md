@@ -25,7 +25,7 @@
 | Mon, Mar 15 | [Managing and Processing Large Datasets](https://ckaestne.github.io/seai/S2021/slides/12_dataatscale/dataatscale.html) | [Business Systems with Machine Learning](https://www.youtube.com/watch?v=_bvrzYOA8dY) |  |
 | Wed, Mar 17 | [**Midterm**](https://github.com/ckaestne/seai/tree/S2021/exams) | |  |
 | Fri, Mar 19 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) **Midsemester break, no recitation** | |  |
-| Mon, Mar 22 | Process & Technical Debt | [Hidden Technical Debt in Machine Learning Systems](http://papers.nips.cc/paper/5656-hidden-technical-debt-in-machine-learning-systems.pdf) |  |
+| Mon, Mar 22 | [Process & Technical Debt](https://ckaestne.github.io/seai/S2021/slides/13_process/process.html) | [Hidden Technical Debt in Machine Learning Systems](http://papers.nips.cc/paper/5656-hidden-technical-debt-in-machine-learning-systems.pdf) |  |
 | Wed, Mar 24 | Human AI Interaction | | [I3: Open Source Tools](https://github.com/ckaestne/seai/blob/S2021/assignments/I3_se4ai_tools.md) |
 | Fri, Mar 26 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) Continuous Integration: Jenkins | |  |
 | Mon, Mar 29 | Intro to Ethics + Fairness | |  |
