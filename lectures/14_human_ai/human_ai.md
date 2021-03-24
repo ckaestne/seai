@@ -11,10 +11,18 @@ Eunsuk Kang
 
 <!-- references -->
 
-Required reading: Building Intelligent Systems by Geoff Hulten (2018),
+Required reading:
+
+Building Intelligent Systems by Geoff Hulten (2018),
 Chapter 8.
 
-_Guidelines for Human-AI Interaction_. Saleema Amershi, et al. in CHI 2019.
+_Guidelines for Human-AI Interaction_. Saleema Amershi, et al., in CHI 2019.
+
+Optional reading:
+
+_Will You Accept an Imperfect AI? Exploring Designs for Adjusting
+End-user Expectations of AI Systems_. Kocielnik, et al., in CHI 2019
+
 
 ---
 # Learning Goals
@@ -33,7 +41,7 @@ _Guidelines for Human-AI Interaction_. Saleema Amershi, et al. in CHI 2019.
 
 
 ----
-## Poor Interaction Design Annoys Users
+## Poor Interaction Design Confuses Users
 
 ![](error-messages.png)
 <!-- .element: class="stretch" -->
@@ -45,7 +53,7 @@ _Guidelines for Human-AI Interaction_. Saleema Amershi, et al. in CHI 2019.
 <!-- .element: class="stretch" -->
 
 ----
-## Poor Interaction Design Annoys Users
+## Poor Interaction Design Hinders Users
 
 ![](apple-mouse.png)
 <!-- .element: class="stretch" -->
@@ -90,7 +98,7 @@ _Guidelines for Human-AI Interaction_. Saleema Amershi, et al. in CHI 2019.
   * Cause confusion or misunderstanding
   * Prevent the user from effectively performing their task
   * Increase mental and physical burden
-  * Drive users away from the system
+  * Drive users away from the product
   * Contribute to security or privacy issues
   * Cause physical (injuries, deaths) and societal harms (bias, misrepresentation)
 
@@ -128,7 +136,7 @@ https://www.nngroup.com/articles/usability-101-introduction-to-usability/
 * Mental and physical effort needed to perform a desired task
   * Task memorization & recall, context switch, track system state
   * Reading, scrolling, clicking, typing, waiting for UI changes
-* __Goal of usability design__: Minimize interaction cost while
+* __Goal of usable design__: Minimize interaction cost while
   allowing users to perform their tasks
 
 ----
@@ -184,6 +192,8 @@ https://www.nngroup.com/articles/usability-101-introduction-to-usability/
   * User lacks knowledge/ability to perform the task (e.g., prediction)
     <!-- .element: class="fragment" -->
   * Boring, repetitive, dangerous tasks
+    <!-- .element: class="fragment" -->
+  * The effect of action can be reversed
     <!-- .element: class="fragment" -->
 * Augment when:
 <!-- .element: class="fragment" -->
@@ -251,15 +261,14 @@ __Q. Forcefulness, frequency, cost?__
 ## Mental Model
 
 ![](mental-model.jpg)
-<!-- .element: class="stretch" -->
 
-* What the user belives about the system 
+* What the user believes about the system 
 <!-- .element: class="fragment" -->
   * "How does the system work? How does it respond to my actions?"
-  * Users plan actions and react to system output based on their mental model
+  * User plans actions and reacts to system based on this mental model
 * Challenge: Aligning system with the user's mental model
 <!-- .element: class="fragment" -->
-  * Mismatch between user's & designer's models
+  * Inherent mismatch between user's & designer's models
   * User's model may be preconceived based on prior experience
   * User's model and/or system evolves over time
 
@@ -319,9 +328,11 @@ https://www.nngroup.com/articles/machine-learning-ux/
 
 ![](echo.jpg)
 
-* What can it do? What are its limitations?
-* How do I get it to do/say  X?
-* Why did it do/say Y instead of X? 
+__Q. Can you describe what it does? What it can't do?__
+
+<!-- * What can it do? What are its limitations? -->
+<!-- * How do I get it to do/say  X? -->
+<!-- * Why did it do/say Y instead of X?  -->
 
 ----
 ##  Mental Model for Voice Assistants?
@@ -357,7 +368,7 @@ https://www.nngroup.com/articles/mental-model-ai-assistants/
 >“So, this week, I realized that I don't use my IA nearly as much as I thought I did. I do use it often. However it's very much normally the same like five things over and over again."
 
 * User settles on a suboptimal mental model & fails to benefit from
-  the full capabilities of AI.
+  the full capabilities of AI
 
 <!-- references -->
 
@@ -382,15 +393,26 @@ https://www.nngroup.com/articles/mental-model-ai-assistants/
 	* Allow user to adjust system behavior to match their expectations
 
 ----
-## Onboarding: Setting User's Expectations
+## Onboarding: Set User Expectations
 
 ![](grammar.png)
+<!-- .element: class="stretch" -->
 
-* Be explicit about what AI can(not) do
 * Provide examples of how it works
 
 ----
-## Explaining Decisions
+## Onboarding: Set User Expectations
+
+![](limitations.png)
+
+* Be clear about what system can(not) do
+
+<!-- references -->
+
+https://pair.withgoogle.com/chapter/mental-models/
+
+----
+## Transparency: Explain How Decisions Are Made
 
 ![](why-am-i-seeing-this-post-v1.png)
 <!-- .element: class="stretch" -->
@@ -413,7 +435,7 @@ https://www.nngroup.com/articles/mental-model-ai-assistants/
 * User errors: Mistakes made by users (e.g., click on a wrong button)
   * Lots of work in cognitive science & human factors 
   * Error taxonomies, human performance modeling, task analysis,
-  ergonomic analsyis, etc.,
+  ergonomic analysis, etc.,
 * System errors: Failure to provide an outcome expected by the user
 	* We will focus on this
 
@@ -424,12 +446,12 @@ https://www.nngroup.com/articles/mental-model-ai-assistants/
 <!-- .element: class="stretch" -->
 
 * Analyze e-mail content for possible meeting scheduling
-* Suggest to create a new meeting based on extracted information
+* Suggest creating a new meeting based on inferred information
 
 <!--references -->
 
 _Will You Accept an Imperfect AI? Exploring Designs for Adjusting
-End-user Expectations of AI Systems_. Kocielnik, et. al. (CHI 2019)
+End-user Expectations of AI Systems_. Kocielnik, et al. (CHI 2019)
 
 ----
 ## Dealing with Errors in ML
@@ -437,6 +459,7 @@ End-user Expectations of AI Systems_. Kocielnik, et. al. (CHI 2019)
 * Define types of errors & their costs
 <!-- .element: class="fragment" -->
 	* False positives vs. false negatives
+	* Optimize for one with lower costs
 	* Q. For meeting scheduling, which are more acceptable?
 * Detect & record occurrences of errors
 <!-- .element: class="fragment" -->
@@ -460,7 +483,7 @@ End-user Expectations of AI Systems_. Kocielnik, et. al. (CHI 2019)
 <!-- .element: class="stretch" -->
 
 * Be upfront about how well the system performs (e.g., model accuracy)
-* Tamper the user's expectations and avoid surprises
+* Temper the user's expectations and avoid surprises
 
 <!--references -->
 
@@ -472,6 +495,7 @@ End-user Expectations of AI Systems_. Kocielnik, et. al. (CHI 2019)
 
 ![](run-ai-example.png)
 
+* Tell the user what the AI needs in order to behave as intended
 * Guide the user towards ways to recover from/prevent further errors
 
 <!--references -->
@@ -481,10 +505,16 @@ https://pair.withgoogle.com/chapter/errors-failing/
 ----
 ## Errors in Voice Assistants
 
-> “...sometimes it says it does — like the reminders and the sending messages. It says it will do it. But then at the end we found that it didn’t really send the message.”
+<!-- colstart -->
 
-* How do we detect an error?
-* How can we notify/guide the user when an error occurs?
+![](echo.jpg)
+<!-- col -->
+
+> “...sometimes it says it does — like the reminders and the sending messages. It says it will do it. But then at the end we found that it didn’t really send the message.”
+<!-- colend -->
+
+* __Q. How do we detect an error__?
+* __Q. How can we notify/guide the user when an error occurs__?
 
 <!-- references -->
 
@@ -520,7 +550,7 @@ https://www.nngroup.com/articles/mental-model-ai-assistants/
 <!-- .element: class="fragment" -->
 
 ----
-## Responding to Feedback 
+## Responding to Feedback
 
 ![](run-feedback-example.jpg)
 
@@ -547,20 +577,17 @@ https://pair.withgoogle.com/chapter/feedback-controls/
   between precision vs recall
 
 ----
-## Feedback & Control in Voice Assistants
-
-![](echo.jpg)
-
-* How do we collect user feedback? Implicit? Explicit?
-* What kind of control do we provide to the user?
-
-----
-##  User Feedback in Voice Assistants
+## User Feedback in Voice Assistants
 
 > "All of the things that even Siri herself said she could do — for example ‘I can send money via Venmo, just try and say this.’ I tried and it didn’t work, and maybe there are settings that I need to fix. But when those types of things happened, there was no button that said ‘Hey, in order to make this work in the future, click this and we’ll take you to the permissions or whatever’."
 
+* __Q. How do we collect user feedback? Implicit? Explicit?__
+* __Q. What kind of control do we provide to the user?__
+
 <!-- references -->
+
 https://www.nngroup.com/articles/mental-model-ai-assistants/
+
 
 ---
 # Guidelines for Human-AI Interactions
@@ -578,8 +605,8 @@ __Human-AI interactions must be considered throughout the entire ML
 lifecycle!__
 
 * Requirements & design
-  * Understand users & mental models
-  * Explicitly design system to match user mental model
+  * Understand user needs & their mental models
+  * Explicitly design system to match the mental model
 * During interaction
   * Consider factors for interaction (automate vs augment,
     forcefulness, frequency)
