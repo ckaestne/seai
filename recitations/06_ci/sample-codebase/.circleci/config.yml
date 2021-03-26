@@ -1,0 +1,23 @@
+# version: 2.1
+
+# jobs:
+#   run-tests:
+#     docker:
+#       - image: cimg/python:3.6.9
+#     steps:
+#       - run:
+#           name: Upgrade pip
+#           command: |
+#             pip install --upgrade pip
+#       - checkout
+#       - run:
+#           name: Run unit tests
+#           command: |
+#             pwd
+#             pip install -e .
+#             python -m unittest
+# workflows:
+#   version: 2
+#   main:
+#     jobs:
+#       - run-tests
