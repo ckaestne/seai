@@ -40,12 +40,13 @@ Interests:
 > Building, operating, and maintaining software systems with machine-learned components
 
 > with interdisciplinary collaborative teams of 
-**data scientists** and **software engineers** 
+**data scientists**, **software engineers**, **operators**, ... 
 
 ----
 
 
-## SE for ML-Enabled Systems != coding ML frameworks
+## SE for ML-Enabled Systems != 
+## Developing ML frameworks
 
 ![Parameter server architecture](parameterserver.png)
 <!-- .element: class="stretch" -->
@@ -67,7 +68,7 @@ Interests:
 ## System = ML + Non-ML Components
 
 ![Transcription service architecture](transcriptionarchitecture.png)
-<!-- .element: class="stretch" -->
+<!-- .element: class="stretch plain" -->
 
 
 
@@ -85,9 +86,17 @@ Using notebooks, static datasets, evaluating accuracy
 
 
 ----
+## SE for ML-Enabled Systems
+
+![Screenshot of Temi](temi.png)
+[temi.com](https://www.temi.com/)
+
+
+----
 ## The Flywheel
 
 ![Flywheel](flywheel.png)
+<!-- .element: class="stretch plain" -->
 
 ----
 ## Telemetry Design
@@ -100,20 +109,29 @@ Using notebooks, static datasets, evaluating accuracy
 ## ML is a Component in a System
 
 ![Transcription service architecture](transcriptionarchitecture.png)
-<!-- .element: class="stretch" -->
+<!-- .element: class="stretch plain" -->
 
 
 ----
 ## System Design to Support ML
 
 ![Transcription service architecture](transcriptionarchitecture2.png)
-<!-- .element: class="stretch" -->
+<!-- .element: class="stretch plain" -->
+
+
+
+
+
 
 
 
 
 ---
 # Everything is a Tradeoff
+
+----
+
+![It depends](it-depends.png)
 
 
 ----
@@ -236,16 +254,6 @@ Bernardi, Lucas, Themistoklis Mavridis, and Pablo Estevez. "150 successful machi
 
 ![Deployment architecture choices](artransl.png)
 
-
-----
-## Tradeoff: Model improvement vs System safeguards
-
-<!-- colstart -->
-![Toaster](toaster.jpg)
-<!-- col -->
-![Thermal fuse](thermalfuse.png)
-<!-- colend -->
-
 ----
 
 ![It depends](it-depends.png)
@@ -256,6 +264,11 @@ Bernardi, Lucas, Themistoklis Mavridis, and Pablo Estevez. "150 successful machi
 ---
 # Think like a 
 # software architect
+
+----
+![Waterfall](waterfall.png)
+<!-- .element: class="stretch plain" -->
+
 
 ----
 
@@ -271,7 +284,7 @@ Raffi. [New Tweets per second record, and how!](https://blog.twitter.com/enginee
 ## Twitter - Caching Architecture
 
 ![twitter](twitter-caching.png)
-<!-- .element: class="stretch" -->
+<!-- .element: class="stretch plain" -->
 
 Notes:
 
@@ -393,6 +406,7 @@ Raffi. [New Tweets per second record, and how!](https://blog.twitter.com/enginee
 CMU 17-445 Class Project
 
 ![Simulator](sim.png)
+<!-- .element: class="plain" -->
 
 
 
@@ -422,7 +436,7 @@ Yang, Qian, Jina Suh, Nan-Chen Chen, and Gonzalo Ramos. "[Grounding interactive 
 ----
 
 ![Roles Venn Diagram](roles_venn.svg)
-<!-- .element: class="stretch" -->
+<!-- .element: class="stretch plain" -->
 
 By Steven Geringer, via Ryan Orban. [Bridging the Gap Between Data Science & Engineer: Building High-Performance Teams](https://www.slideshare.net/ryanorban/bridging-the-gap-between-data-science-engineer-building-highperformance-teams/3-Software_Engineer_Data_Engineer_Data). 2016
 
@@ -434,8 +448,8 @@ By Steven Geringer, via Ryan Orban. [Bridging the Gap Between Data Science & Eng
 *Broad-range generalist + Deep expertise*
 
 ![T-Shaped](tshaped.png)
+<!-- .element: class="stretch plain" -->
 
-<!-- reference -->
 Figure: Jason Yip. [Why T-shaped people?](https://medium.com/@jchyip/why-t-shaped-people-e8706198e437). 2018
 
 
@@ -443,6 +457,7 @@ Figure: Jason Yip. [Why T-shaped people?](https://medium.com/@jchyip/why-t-shape
 ## DevOps as Inspiration
 
 ![DevOps](devops.png)
+<!-- .element: class="stretch plain" -->
 
 Distinct roles and expertise, but joint responsibilities, joint tooling
 
@@ -459,13 +474,14 @@ Foster system thinking
 ## Process models
 
 ![Data science pipeline](pipeline.png)
+<!-- .element: class="stretch plain" -->
 
 
 ----
 ## Process models
 
 ![CRISP-DM](crispdm.png)
-<!-- .element: class="stretch" -->
+<!-- .element: class="stretch plain" -->
 
 (CRISP-DM)
 
@@ -474,20 +490,23 @@ Foster system thinking
 
 <!-- colstart -->
 ![Waterfall](waterfall.png)
+<!-- .element: class="plain" -->
 <!-- col -->
 ![Scrum](scrum.svg)
-<!-- colend -->
+<!-- .element: class="plain" -->
+ <!-- colend -->
 
 
 ----
 ## Integrated ML/Non-ML Process
 ![Combined process](combinedprocess4.png)
+<!-- .element: class="plain" -->
 
 ----
 ## Development Trajectories
 
 ![Combined process](combinedprocess4.png)
-<!-- .element: class="stretch" -->
+<!-- .element: class="stretch plain" -->
 
 
 Upfront design? ML first? Non-ML system first? Incremental refinement?
@@ -496,12 +515,24 @@ Upfront design? ML first? Non-ML system first? Incremental refinement?
 # Summary
 
 * Adopt a whole-system perspective on ML in production
+* Design for quality, don't patch it in later
 * Understand qualities and tradeoffs, including performance
 * Consider implications of qualities on non-ML components
-* Build interdisciplinary teams, include architects
+* Build interdisciplinary teams, integrative process
+
+<!-- references -->
+
+Interested in talking about your experiences in interdisciplinary ML teams? Contact us.
 
 
+---
+## Tradeoff: Model improvement vs System safeguards
 
+<!-- colstart -->
+![Toaster](toaster.jpg)
+<!-- col -->
+![Thermal fuse](thermalfuse.png)
+<!-- colend -->
 
 
 
