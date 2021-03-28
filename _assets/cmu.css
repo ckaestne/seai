@@ -31,4 +31,4 @@
 
 .mermaidgraph { border: 0px !important; }       
 
-.plain img { border: 0px !important; }       
+.plain img { box-shadow: none !important; border: 0px !important; }       
