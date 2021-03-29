@@ -23,7 +23,6 @@ Optional reading:
 _Will You Accept an Imperfect AI? Exploring Designs for Adjusting
 End-user Expectations of AI Systems_. Kocielnik, et al., in CHI 2019
 
-
 ---
 # Learning Goals
 
