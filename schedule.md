@@ -29,7 +29,7 @@
 | Wed, Mar 24 | [Human AI Interaction](https://ckaestne.github.io/seai/S2021/slides/14_human_ai/human_ai.html) | [Building Intelligent Systems](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436), Ch. 8 and [Guidelines for Human-AI Interaction](https://dl.acm.org/doi/pdf/10.1145/3290605.3300233?casa_token=LozLAS6xY1YAAAAA:969CqbfAMIhDC1AIjF7L1DZgGMg71ECwjjXa_mzdj6RLvlL8LYSaSpglBSK3xhRuBnzGp-V4ebVKVw)| [I3: Open Source Tools](https://github.com/ckaestne/seai/blob/S2021/assignments/I3_se4ai_tools.md) |
 | Fri, Mar 26 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) [Continuous Integration](https://github.com/ckaestne/seai/tree/S2021/recitations/06_ci) | |  |
 | Mon, Mar 29 | [Intro to Ethics & Fairness](https://ckaestne.github.io/seai/S2021/slides/15_intro_ethics_fairness/intro-ethics-fairness.html) | [Algorithmic Accountability: A Primer](https://datasociety.net/wp-content/uploads/2018/04/Data_Society_Algorithmic_Accountability_Primer_FINAL-4.pdf) |  |
-| Wed, Mar 31 | Building Fairer AI-Enabled System 1 | |  |
+| Wed, Mar 31 | [Building Fairer AI-Enabled System 1](https://ckaestne.github.io/seai/S2021/slides/16_fairness_i/fairness_i.html) | [Improving Fairness in Machine Learning Systems](http://users.umiacs.umd.edu/~hal/docs/daume19fairness.pdf) |  |
 | Fri, Apr 02 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) Containers: Docker | |  |
 | Mon, Apr 05 | **CMU Break day, no class** | |  |
 | Wed, Apr 07 | Building Fairer AI-Enabled System 2 | | [M2: Infrastructure Quality](https://github.com/ckaestne/seai/blob/S2021/assignments/project.md) |
