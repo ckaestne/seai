@@ -23,7 +23,7 @@ Computing Systems, pp. 1-16. 2019.
 
 * Understand different definitions of fairness
 * Discuss methods for measuring fairness
-* Understand the role of requirements engineering in fair ML systems
+* Consider fairness throughout an ML lifecycle
 
 ---
 # Fairness: Definitions
@@ -114,6 +114,8 @@ See for example: Galhotra, Sainyam, Yuriy Brun, and Alexandra Meliou. "[Fairness
   * e.g., Deny the loan ($Y' = 1$) if the likelihood of default > 30% 
 * $Y$: Target variable being predicted ($Y = 1$ if the person actually
   defaults on loan)
+
+[Setting classification thresholds: Loan lending example](https://research.google.com/bigpicture/attacking-discrimination-in-ml)
 
 ----
 ## Independence
