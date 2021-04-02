@@ -30,7 +30,7 @@
 | Fri, Mar 26 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) [Continuous Integration](https://github.com/ckaestne/seai/tree/S2021/recitations/06_ci) | |  |
 | Mon, Mar 29 | [Intro to Ethics & Fairness](https://ckaestne.github.io/seai/S2021/slides/15_intro_ethics_fairness/intro-ethics-fairness.html) | [Algorithmic Accountability: A Primer](https://datasociety.net/wp-content/uploads/2018/04/Data_Society_Algorithmic_Accountability_Primer_FINAL-4.pdf) |  |
 | Wed, Mar 31 | [Building Fairer AI-Enabled System 1](https://ckaestne.github.io/seai/S2021/slides/16_fairness_i/fairness_i.html) | [Improving Fairness in Machine Learning Systems](http://users.umiacs.umd.edu/~hal/docs/daume19fairness.pdf) |  |
-| Fri, Apr 02 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) Containers: Docker | |  |
+| Fri, Apr 02 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) [Containers: Docker](https://github.com/ckaestne/seai/tree/S2021/recitations/07_docker) | |  |
 | Mon, Apr 05 | **CMU Break day, no class** | |  |
 | Wed, Apr 07 | Building Fairer AI-Enabled System 2 | | [M2: Infrastructure Quality](https://github.com/ckaestne/seai/blob/S2021/assignments/project.md) |
 | Fri, Apr 09 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) Monitoring: Prometheus, Grafana | |  |

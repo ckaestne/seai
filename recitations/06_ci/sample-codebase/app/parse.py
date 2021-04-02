@@ -11,12 +11,20 @@ class Person:
 def parse(csv_input):
     values = csv_input.split(',')
 
+    if len(values) != 7:
+        return None
+
     p = Person()
     p.id = parse_id(values)
     p.name = parse_name(values)
     p.city = parse_city(values)
     p.state = parse_state(values)
-    p.zip_code = parse_zip_code(values)
+
+    try:
+        p.zip_code = parse_zip_code(values)
+    except:
+        return None
+
     p.age = parse_age(values)
 
     return p
@@ -39,8 +47,10 @@ def parse_state(values):
 
 
 def parse_zip_code(values):
-    return int(values[4])
+    if '-' in values[4]:
+        raise Exception()
 
+    return int(values[4])
 
 def parse_age(values):
     return int(values[5])

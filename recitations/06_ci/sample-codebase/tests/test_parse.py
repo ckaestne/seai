@@ -17,6 +17,18 @@ class TestParse(unittest.TestCase):
         self.assertEqual(15224, p.zip_code)
         self.assertEqual(42, p.age)
 
+    def test_invalid_number_of_cols(self):
+        csv_input = '1,extra_col,John Smith,Pittsburgh,PA,15224,42'
+
+        p = parse(csv_input)
+        self.assertIsNone(p)
+
+    def test_invalid_zip_code(self):
+        csv_input = '1,John Smith,Pittsburgh,PA,15224-15232,42'
+
+        p = parse(csv_input)
+        self.assertIsNone(p, 'Zip code range should be rejected')
+
 
 if __name__ == '__main__':
     unittest.main()
