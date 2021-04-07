@@ -417,9 +417,10 @@ http://aequitas.dssg.io/
 
 
 ---
-## Fairness: Final Thoughts
+# Building Fair ML-Based Systems: Best Practices
 
-__START EARLY!__
+----
+## START EARLY!
 
 * Think about system goals and relevant fairness concerns
 * Analyze risks & harms to affected groups
@@ -429,6 +430,99 @@ __START EARLY!__
   - separate test sets, automatic fairness measurement, testing in production
   - telemetry design and feedback mechanisms
   - incidence response plan
+
+
+----
+## Best Practices: Task Definition
+
+* Clearly define the task & model’s intended effects
+* Try to identify and document unintended effects & biases
+* Clearly define any fairness requirements
+* *Involve diverse stakeholders & multiple perspectives*
+* Refine the task definition & be willing to abort
+
+<!-- references -->
+
+Swati Gupta, Henriette Cramer, Kenneth Holstein, Jennifer Wortman Vaughan, Hal Daumé III, Miroslav Dudík, Hanna Wallach, Sravana Reddy, Jean GarciaGathright. [Challenges of incorporating algorithmic fairness into practice](https://www.youtube.com/watch?v=UicKZv93SOY), FAT* Tutorial, 2019. ([slides](https://bit.ly/2UaOmTG))
+
+
+
+
+----
+## Best Practices: Choosing a Data Source
+
+* Think critically before collecting any data
+* Check for biases in data source selection process
+* Try to identify societal biases present in data source
+* Check for biases in cultural context of data source
+* Check that data source matches deployment context
+* Check for biases in
+  * technology used to collect the data
+  * humans involved in collecting data
+  * sampling strategy
+* *Ensure sufficient representation of subpopulations*
+* Check that collection process itself is fair & ethical
+
+*How can we achieve fairness without putting a tax on already disadvantaged populations?*
+
+<!-- references -->
+
+Swati Gupta, Henriette Cramer, Kenneth Holstein, Jennifer Wortman Vaughan, Hal Daumé III, Miroslav Dudík, Hanna Wallach, Sravana Reddy, Jean GarciaGathright. [Challenges of incorporating algorithmic fairness into practice](https://www.youtube.com/watch?v=UicKZv93SOY), FAT* Tutorial, 2019. ([slides](https://bit.ly/2UaOmTG))
+
+
+----
+## Best Practices: Labeling and Preprocessing
+
+* Check for biases introduced by
+  - discarding data
+  - bucketing values
+  - preprocessing software
+  - labeling/annotation software
+  - human labelers
+* Data/concept drift?
+
+*Auditing? Measuring bias?*
+
+<!-- references -->
+
+Swati Gupta, Henriette Cramer, Kenneth Holstein, Jennifer Wortman Vaughan, Hal Daumé III, Miroslav Dudík, Hanna Wallach, Sravana Reddy, Jean GarciaGathright. [Challenges of incorporating algorithmic fairness into practice](https://www.youtube.com/watch?v=UicKZv93SOY), FAT* Tutorial, 2019. ([slides](https://bit.ly/2UaOmTG))
+
+
+----
+## Best Practices: Model Definition and Training
+
+* Clearly define all assumptions about model
+* Try to identify biases present in assumptions
+* Check whether model structure introduces biases
+* Check objective function for unintended effects
+* Consider including “fairness” in objective function
+
+
+<!-- references -->
+
+Swati Gupta, Henriette Cramer, Kenneth Holstein, Jennifer Wortman Vaughan, Hal Daumé III, Miroslav Dudík, Hanna Wallach, Sravana Reddy, Jean GarciaGathright. [Challenges of incorporating algorithmic fairness into practice](https://www.youtube.com/watch?v=UicKZv93SOY), FAT* Tutorial, 2019. ([slides](https://bit.ly/2UaOmTG))
+
+
+----
+## Best Practices: Testing & Deployment
+
+* Check that test data matches deployment context
+* Ensure test data has sufficient representation
+* Continue to involve diverse stakeholders
+* Revisit all fairness requirements
+* Use metrics to check that requirements are met
+*
+* Continually monitor
+  - match between training data, test data, and instances you
+encounter in deployment
+  - fairness metrics
+  - population shifts
+  - user reports & user complaints
+* Invite diverse stakeholders to audit system for biases
+
+<!-- references -->
+
+Swati Gupta, Henriette Cramer, Kenneth Holstein, Jennifer Wortman Vaughan, Hal Daumé III, Miroslav Dudík, Hanna Wallach, Sravana Reddy, Jean GarciaGathright. [Challenges of incorporating algorithmic fairness into practice](https://www.youtube.com/watch?v=UicKZv93SOY), FAT* Tutorial, 2019. ([slides](https://bit.ly/2UaOmTG))
 
 ----
 ## Fairness Checklist
