@@ -405,6 +405,16 @@ system?
 * Invite diverse stakeholders to audit system for biases
 
 ----
+## Monitoring & Auditing
+
+![](model_drift.jpg)
+
+* Continously monitor the fairness metric (e.g., error rates for
+  different groups)
+* Re-train model with new data or adjust classification thresholds if needed
+* Recall: Data drifts in the Data Quality lecture
+
+----
 ## Monitoring Tools: Example
 
 ![](aequitas.png)
