@@ -89,6 +89,9 @@ violent crime if released, detention rates are equal across gender and race grou
 ----
 ## Fairness Definitions: Pitfalls 
 
+![](fairness-accuracy.jpeg)
+<!-- .element: class="stretch" -->
+
 * Easy to pick some definition & claim that the model is fair
   * But is the __overall system__ actually fair?
 * In general, impossible to satisfy multiple fairness definitions at
@@ -96,15 +99,25 @@ once
 	* Fairness is a __context-dependent__ notion
 	* Select the criteria that minimize harm for the given context
 	* Also consider trade-offs against accuracy
+
+----
+## Requirements & Fairness
+
+![](machine-world.png)
+<!-- .element: class="stretch" -->
+
+* Fairness is a __context-dependent__ notion
 * __Again, think about requirements!__
   * Who are the stakeholders of the system?
 	* Which of these groups could be harmed?
-  * Are there any legal constraints or policy goals?
-	* e.g., 80% rule, affirmative actions 
   * What potential harms can be caused by biased decisions?
 	* e.g., unfair punishments, denial to resources
+  * Are there any legal constraints or policy goals?
+	* e.g., 80% rule, affirmative actions 
   * How are these decisions related to the ML model? Errors?
 	* e.g., false positives, false negatives
+  * Which fairness metric minimizes the harm?
+
 
 ----
 ## Recall: Fairness Tree
@@ -120,10 +133,11 @@ once
 ![](hiring.png)
 <!-- .element: class="stretch" -->
 
-* Who are affected groups?
+* Who are the groups possibly harm by biased decisions?
 * What kind of harm can be caused?
 * Which fairness metric to use?
   * Independence, separation w/ FPR vs. FNR?
+
 
 ---
 # Building Fair ML Systems
@@ -355,10 +369,9 @@ static!
 ## Long-term Impact & Fairness
 
 ![](fairness-longterm.png)
-
 * Deploying an ML model with a fairness criterion does NOT guarantee
   improvement in equality over time
-* __Delayed impact__: Even if a model appears to promote fairness in
+* Even if a model appears to promote fairness in
 short term, it may result harm over a long-term period
 
 <!-- references -->
