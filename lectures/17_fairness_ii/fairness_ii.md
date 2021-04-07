@@ -96,9 +96,9 @@ violent crime if released, detention rates are equal across gender and race grou
   * But is the __overall system__ actually fair?
 * In general, impossible to satisfy multiple fairness definitions at
 once
-	* Fairness is a __context-dependent__ notion
+	* Also consider trade-offs against accuracy & other system goals
+* Fairness is a __context-dependent__ notion!
 	* Select the criteria that minimize harm for the given context
-	* Also consider trade-offs against accuracy
 
 ----
 ## Requirements & Fairness
@@ -134,8 +134,13 @@ once
 <!-- .element: class="stretch" -->
 
 * Who are the groups possibly harm by biased decisions?
+<!-- .element: class="fragment" -->
 * What kind of harm can be caused?
+<!-- .element: class="fragment" -->
+* Any legal constraints?
+<!-- .element: class="fragment" -->
 * Which fairness metric to use?
+<!-- .element: class="fragment" -->
   * Independence, separation w/ FPR vs. FNR?
 
 
@@ -226,6 +231,11 @@ Boundaries_, Olteanu et al., Frontiers in Big Data (2016).
 * Differences in demographics between a dataset vs a target population
 * May result in degraded services for certain groups (e.g., poor
   image recognition for females & darker skin types)
+* Another example: Demographics on social media
+
+<!-- references -->
+
+Merler, Ratha, Feris, and Smith. [Diversity in Faces](https://arxiv.org/abs/1901.10436)
 
 ----
 ## Historical Bias
@@ -316,6 +326,7 @@ Mitchell, Margaret, et al. "[Model cards for model reporting](https://www.seas.u
 
 
 * For each system, discuss:
+  * What harms can be caused by this system?
   * What are possible types of bias in the data?
 	* Population bias? Under- or over-representation?
   * How would you modify the dataset reduce bias?
