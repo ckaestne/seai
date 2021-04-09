@@ -32,7 +32,7 @@
 | Wed, Mar 31 | [Building Fairer AI-Enabled System 1](https://ckaestne.github.io/seai/S2021/slides/16_fairness_i/fairness_i.html) | [Improving Fairness in Machine Learning Systems](http://users.umiacs.umd.edu/~hal/docs/daume19fairness.pdf) |  |
 | Fri, Apr 02 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) [Containers: Docker](https://github.com/ckaestne/seai/tree/S2021/recitations/07_docker) | |  |
 | Mon, Apr 05 | **CMU Break day, no class** | |  |
-| Wed, Apr 07 | [Building Fairer AI-Enabled System 2](https://ckaestne.github.io/seai/S2021/slides/17_fairness_ii/fairness_ii.html)  | | [M2: Infrastructure Quality](https://github.com/ckaestne/seai/blob/S2021/assignments/project.md) |
+| Wed, Apr 07 | [Building Fairer AI-Enabled System 2](https://ckaestne.github.io/seai/S2021/slides/17_fairness_ii/fairness_ii.html) | [A Mulching Proposal](https://dl.acm.org/doi/pdf/10.1145/3290607.3310433?casa_token=xg_kkiUWskIAAAAA:BPhrPLhkHNgAeggGjWw0NBmCi93Rp3TaOX2ZCb54v7m3WfLmf-O5K5F1ogrBmTHFWUH3SfvJdhoMkg) | [M2: Infrastructure Quality](https://github.com/ckaestne/seai/blob/S2021/assignments/project.md) |
 | Fri, Apr 09 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) [Monitoring: Prometheus, Grafana](https://github.com/ckaestne/seai/tree/S2021/recitations/08_monitoring) | |  |
 | Mon, Apr 12 | Explainability & Interpretability 1  | |  |
 | Wed, Apr 14 | Explainability & Interpretability 2 | |  |
