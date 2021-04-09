@@ -1,0 +1,32 @@
+# Typically, the easiest way to learn a command line tool, is to find a cheat sheet. Sometimes, the official documentation can be a little hard to begin with.
+# For Docker, I find the official documentation to be really good. But there are a lot of cheat sheets that you can explore too.
+
+# Note: All commands need to have root access. The 'sudo' before every command is omitted.
+# Also, these are some of the bare minimum options that I find are good to specify. These are in no way exhaustive.
+
+
+# List Images in Container Registry
+$ docker ls
+
+# Check for running containers
+$ docker ps
+
+# Building an Image (Note that -t can be specified multiple times to have different tags)
+# Also, tagging the image with 'latest' to indicate the most up to date image is one of the best practices.
+
+$ docker build -t <image_name:tag1> -t <image_name:tag2> -t <image_name:latest> <Path to Dockerfile>
+
+$ docker build -t kartikri/demo-flask-server:1.0.0 -t kartikri/demo-flask-server:latest .
+
+
+# Running a container
+$ docker container run --name <name_of_container> -d -p <host_port:container_port> <image_name:tag>
+
+$ docker container run --name demo-flask-server -d -p 7875:8082 kartikri/demo-flask-server:latest
+
+# --name - Name to be given to the container after it spawns
+# -d - Detached mode, container runs as a background process
+# -p - port mapping (in our example, the traffic at port 7875 of VM will be forwarded to port 8082 of container)
+
+# Tailing logs
+$ docker logs demo-flask-server -f
