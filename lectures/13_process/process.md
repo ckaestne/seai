@@ -148,7 +148,7 @@ Notes:
 
 <!-- colstart -->
 
-* Origins in "literal programming", interleaving text and code, treating programs as literature (Knuth'84)
+* Origins in "literate programming", interleaving text and code, treating programs as literature (Knuth'84)
 * First notebook in Wolfram Mathematica 1.0 in 1988
 * Document with text and code cells, showing execution results under cells
 * Code of cells is executed, per cell, in a kernel
