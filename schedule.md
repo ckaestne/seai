@@ -26,14 +26,14 @@
 | Wed, Mar 17 | [**Midterm**](https://github.com/ckaestne/seai/tree/S2021/exams) | |  |
 | Fri, Mar 19 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) **Midsemester break, no recitation** | |  |
 | Mon, Mar 22 | [Process & Technical Debt](https://ckaestne.github.io/seai/S2021/slides/13_process/process.html) ([blog post](https://ckaestne.medium.com/on-the-process-for-building-software-with-ml-components-c54bdb86db24)) | [Hidden Technical Debt in Machine Learning Systems](http://papers.nips.cc/paper/5656-hidden-technical-debt-in-machine-learning-systems.pdf) |  |
-| Wed, Mar 24 | Human AI Interaction | | [I3: Open Source Tools](https://github.com/ckaestne/seai/blob/S2021/assignments/I3_se4ai_tools.md) |
-| Fri, Mar 26 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) Continuous Integration: Jenkins | |  |
-| Mon, Mar 29 | Intro to Ethics + Fairness | |  |
-| Wed, Mar 31 | Building Fairer AI-Enabled System 1 | |  |
-| Fri, Apr 02 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) Containers: Docker | |  |
+| Wed, Mar 24 | [Human AI Interaction](https://ckaestne.github.io/seai/S2021/slides/14_human_ai/human_ai.html) | [Building Intelligent Systems](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436), Ch. 8 and [Guidelines for Human-AI Interaction](https://dl.acm.org/doi/pdf/10.1145/3290605.3300233?casa_token=LozLAS6xY1YAAAAA:969CqbfAMIhDC1AIjF7L1DZgGMg71ECwjjXa_mzdj6RLvlL8LYSaSpglBSK3xhRuBnzGp-V4ebVKVw)| [I3: Open Source Tools](https://github.com/ckaestne/seai/blob/S2021/assignments/I3_se4ai_tools.md) |
+| Fri, Mar 26 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) [Continuous Integration](https://github.com/ckaestne/seai/tree/S2021/recitations/06_ci) | |  |
+| Mon, Mar 29 | [Intro to Ethics & Fairness](https://ckaestne.github.io/seai/S2021/slides/15_intro_ethics_fairness/intro-ethics-fairness.html) | [Algorithmic Accountability: A Primer](https://datasociety.net/wp-content/uploads/2018/04/Data_Society_Algorithmic_Accountability_Primer_FINAL-4.pdf) |  |
+| Wed, Mar 31 | [Building Fairer AI-Enabled System 1](https://ckaestne.github.io/seai/S2021/slides/16_fairness_i/fairness_i.html) | [Improving Fairness in Machine Learning Systems](http://users.umiacs.umd.edu/~hal/docs/daume19fairness.pdf) |  |
+| Fri, Apr 02 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) [Containers: Docker](https://github.com/ckaestne/seai/tree/S2021/recitations/07_docker) | |  |
 | Mon, Apr 05 | **CMU Break day, no class** | |  |
-| Wed, Apr 07 | Building Fairer AI-Enabled System 2 | | [M2: Infrastructure Quality](https://github.com/ckaestne/seai/blob/S2021/assignments/project.md) |
-| Fri, Apr 09 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) Monitoring: Prometheus, Grafana | |  |
+| Wed, Apr 07 | [Building Fairer AI-Enabled System 2](https://ckaestne.github.io/seai/S2021/slides/17_fairness_ii/fairness_ii.html)  | | [M2: Infrastructure Quality](https://github.com/ckaestne/seai/blob/S2021/assignments/project.md) |
+| Fri, Apr 09 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) [Monitoring: Prometheus, Grafana](https://github.com/ckaestne/seai/tree/S2021/recitations/08_monitoring) | |  |
 | Mon, Apr 12 | Explainability & Interpretability 1  | |  |
 | Wed, Apr 14 | Explainability & Interpretability 2 | |  |
 | Fri, Apr 16 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) Fairness | |  |
