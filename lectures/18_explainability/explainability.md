@@ -1570,6 +1570,13 @@ Tone: "When in doubt, the government should not regulate AI."
 
 Source: https://en.wikipedia.org/wiki/Regulation_of_artificial_intelligence
 
+----
+## Criticism: Ethics Washing, Ethics Bashing, Regulatory Capture
+
+
+<!-- discussion -->
+
+
 ---
 # Summary
 
