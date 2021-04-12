@@ -7,7 +7,7 @@
 | Mon, Feb 01 | [Motivation, Syllabus, and Introductions](https://ckaestne.github.io/seai/S2021/slides/01_introduction/intro.html) | |  |
 | Wed, Feb 03 | [From Models to AI-Enabled Systems (Systems Thinking)](https://ckaestne.github.io/seai/S2021/slides/02_systems/systems.html) | [Building Intelligent Systems](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436), Ch. 5, 7, 8 |  |
 | Fri, Feb 05 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) [Stream processing: Apache Kafka](https://github.com/ckaestne/seai/tree/S2021/recitations/01_apache_kafka)| |  |
-| Mon, Feb 08 | [Model Quality](https://ckaestne.github.io/seai/S2021/slides/03_modelquality/modelquality.html) ([blog post](https://ckaestne.medium.com/a-software-testing-view-on-machine-learning-model-quality-d508cb9e20a6)) | [Building Intelligent Systems](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436), Ch. 19 |  |
+| Mon, Feb 08 | [Model Quality](https://ckaestne.github.io/seai/S2021/slides/03_modelquality/modelquality.html) ([blog post](https://ckaestne.medium.com/a-software-testing-view-on-machine-learning-model-quality-d508cb9e20a6), [lecture notes](https://ckaestne.medium.com/model-quality-defining-correctness-and-fit-a8361b857df)) | [Building Intelligent Systems](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436), Ch. 19 |  |
 | Wed, Feb 10 | Model Quality (continued) and [Teamwork](https://ckaestne.github.io/seai/S2021/slides/03_modelquality/teams.html) | [Behavioral Testing of NLP Models with CheckList](https://homes.cs.washington.edu/~wtshuang/static/papers/2020-acl-checklist.pdf) | [I1: Case Study](https://github.com/ckaestne/seai/blob/S2021/assignments/I1_case_study.md) |
 | Fri, Feb 12 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) [Remote work and collaboration: Slack, Git, issue trackers](https://github.com/ckaestne/seai/tree/S2021/recitations/02_git_and_collaboration) | |  |
 | Mon, Feb 15 | [Goals and Success Measures for AI-Enabled Systems](https://ckaestne.github.io/seai/S2021/slides/04_goals/goals.html)  | [Building Intelligent Systems](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436), Ch. 2, 4 |  |
@@ -32,18 +32,18 @@
 | Wed, Mar 31 | [Building Fairer AI-Enabled System 1](https://ckaestne.github.io/seai/S2021/slides/16_fairness_i/fairness_i.html) | [Improving Fairness in Machine Learning Systems](http://users.umiacs.umd.edu/~hal/docs/daume19fairness.pdf) |  |
 | Fri, Apr 02 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) [Containers: Docker](https://github.com/ckaestne/seai/tree/S2021/recitations/07_docker) | |  |
 | Mon, Apr 05 | **CMU Break day, no class** | |  |
-| Wed, Apr 07 | [Building Fairer AI-Enabled System 2](https://ckaestne.github.io/seai/S2021/slides/17_fairness_ii/fairness_ii.html)  | | [M2: Infrastructure Quality](https://github.com/ckaestne/seai/blob/S2021/assignments/project.md) |
+| Wed, Apr 07 | [Building Fairer AI-Enabled System 2](https://ckaestne.github.io/seai/S2021/slides/17_fairness_ii/fairness_ii.html)  | [A Mulching Proposal](https://dl.acm.org/doi/pdf/10.1145/3290607.3310433) | [M2: Infrastructure Quality](https://github.com/ckaestne/seai/blob/S2021/assignments/project.md) |
 | Fri, Apr 09 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) [Monitoring: Prometheus, Grafana](https://github.com/ckaestne/seai/tree/S2021/recitations/08_monitoring) | |  |
-| Mon, Apr 12 | Explainability & Interpretability 1  | |  |
-| Wed, Apr 14 | Explainability & Interpretability 2 | |  |
-| Fri, Apr 16 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) Fairness | |  |
-| Mon, Apr 19 | Versioning, Provenance, and Reproducability | |  |
+| Mon, Apr 12 | [Explainability & Interpretability](https://ckaestne.github.io/seai/S2021/slides/18_explainability/explainability.html) | [Black boxes not required](https://dataskeptic.com/blog/episodes/2020/black-boxes-are-not-required) or [Stop Explaining Black Box ML Models…](https://arxiv.org/abs/1811.10154) |  |
+| Wed, Apr 14 | Explainability & Interpretability (continued) | [People + AI, Ch. “Explainability and Trust”](https://pair.withgoogle.com/chapter/explainability-trust/) |  |
+| Fri, Apr 16 | No recitation (spring carnival) | |  |
+| Mon, Apr 19 | Versioning, Provenance, and Reproducability ([lecture notes](https://ckaestne.medium.com/versioning-provenance-and-reproducibility-in-production-machine-learning-355c48665005)) | [Building Intelligent Systems](https://www.buildingintelligentsystems.com/), Ch. 21 & [Goods: Organizing Google's Datasets](http://research.google.com/pubs/archive/45390.pdf) |  |
 | Wed, Apr 21 | Security and Privacy | | [M3: Monitoring and CD](https://github.com/ckaestne/seai/blob/S2021/assignments/project.md) |
 | Fri, Apr 23 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) Threat modeling | |  |
 | Mon, Apr 26 | Safety 1 | |  |
 | Wed, Apr 28 | Safety 2 | | [I4: Fairness](https://github.com/ckaestne/seai/blob/S2021/assignments/I4_fairness.md) |
 | Fri, Apr 30 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) tbd | |  |
-| Mon, May 03 | Fostering Interdisciplinary Teams | |  |
+| Mon, May 03 | Fostering Interdisciplinary Teams | [Data scientists in software teams](https://andrewbegel.com/papers/data-scientists.pdf) |  |
 | Wed, May 05 | Summary and Review | | [M4: Security and Feedback Loops](https://github.com/ckaestne/seai/blob/S2021/assignments/project.md) |
 | Thu, May 13, 5:30-8:30 PM | **Final Project Presentations** | | [Final report](https://github.com/ckaestne/seai/blob/S2021/assignments/project.md) |
 
