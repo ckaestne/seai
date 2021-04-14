@@ -1256,6 +1256,139 @@ Source: [People + AI Guidebook](https://pair.withgoogle.com/research/), Google
 
 
 
+---
+# Beyond "Just" Explaining the Model
+
+<!-- references -->
+
+Cai, Carrie J., Samantha Winter, David Steiner, Lauren Wilcox, and Michael Terry. ""Hello AI": Uncovering the Onboarding Needs of Medical Practitioners for Human-AI Collaborative Decision-Making." Proceedings of the ACM on Human-computer Interaction 3, no. CSCW (2019): 1-24.
+
+----
+## Setting Cancer Imaging -- What explanations do radiologists want?
+
+![](cancerpred.png)
+
+* *Past attempts often not successful at bringing tools into production. Radiologists do not trust them. Why?*
+* [Wizard of oz study](https://en.wikipedia.org/wiki/Wizard_of_Oz_experiment) to elicit requirements
+
+----
+
+![Wizard of oz](wizardofoz.jpg)
+
+----
+![Shown predictions in prostate cancer study](cancerdialog.png)
+
+----
+## Radiologists' questions
+
+* How does it perform compared to human experts?
+* "What is difficult for the AI to know? Where is it too sensitive? What criteria is it good at recognizing or not good at recognizing?"
+* What data (volume, types, diversity) was the model trained on?
+* "Does the AI assistant have access to information that I don’t have? Does it have access to any ancillary studies?" Is all used data shown in the user interface?
+* What kind of things is the AI looking for? What is it capable of learning? ("Maybe light and dark? Maybe colors? Maybe shapes, lines?", "Does it take into consideration the relationship between gland and stroma? Nuclear relationship?")
+* "Does it have a bias a certain way?" (compared to colleagues)
+
+----
+## Radiologists' questions
+
+* Capabilities and limitations: performance, strength, limitations; e.g. how does it handle well-known edge cases
+* Functionality: What data used for predictions, how much context, how data is used
+* Medical point-of-view: calibration, how liberal/conservative when grading cancer severity
+* Design objectives: Designed for few false positives or false negatives? Tuned to compensate for human error?
+* Other considerations: legal liability, impact on workflow, cost of use
+
+[Paper, Tab 1](https://dl.acm.org/doi/pdf/10.1145/3359206)
+
+
+----
+## Insights
+
+* AI literacy important for trust
+* Be transparent about data used
+* Describe training data and capabilities
+* Give mental model, examples, human-relatable test cases 
+* Communicate the AI’s point-of-view and design goal
+
+
+<!-- references -->
+
+Cai, Carrie J., Samantha Winter, David Steiner, Lauren Wilcox, and Michael Terry. ""Hello AI": Uncovering the Onboarding Needs of Medical Practitioners for Human-AI Collaborative Decision-Making." Proceedings of the ACM on Human-computer Interaction 3, no. CSCW (2019): 1-24.
+
+
+---
+# Transparency
+
+
+----
+## Case Study: Facebook's Feed Curation
+
+![Facebook with and without filtering](facebook.png)
+
+<!-- references -->
+
+Eslami, Motahhare, Aimee Rickman, Kristen Vaccaro, Amirhossein Aleyasen, Andy Vuong, Karrie Karahalios, Kevin Hamilton, and Christian Sandvig. [I always assumed that I wasn't really that close to [her]: Reasoning about Invisible Algorithms in News Feeds](http://eslamim2.web.engr.illinois.edu/publications/Eslami_Algorithms_CHI15.pdf). In Proceedings of the 33rd annual ACM conference on human factors in computing systems, pp. 153-162. ACM, 2015.
+
+
+
+----
+## Case Study: Facebook's Feed Curation
+<!-- smallish -->
+
+* 62% of interviewees were not aware of curation algorithm
+* Surprise and anger when learning about curation
+
+> "Participants were most upset when close friends and
+family were not shown in their feeds [...] participants often attributed missing stories to their friends’ decisions to exclude them rather than to Facebook News Feed algorithm."
+
+* Learning about algorithm did not change satisfaction level
+* More active engagement, more feeling of control
+
+
+<!-- references -->
+
+Eslami, Motahhare, Aimee Rickman, Kristen Vaccaro, Amirhossein Aleyasen, Andy Vuong, Karrie Karahalios, Kevin Hamilton, and Christian Sandvig. [I always assumed that I wasn't really that close to [her]: Reasoning about Invisible Algorithms in News Feeds](http://eslamim2.web.engr.illinois.edu/publications/Eslami_Algorithms_CHI15.pdf). In Proceedings of the 33rd annual ACM conference on human factors in computing systems, pp. 153-162. ACM, 2015.
+
+----
+## Case Study: HR Application Screening
+
+
+<div class="tweet" data-src="https://twitter.com/TheWrongNoel/status/1194842728862892033"></div>
+
+
+----
+## The Dark Side of Explanations
+
+* Explanations can induce overconfidence in the model; people do not trust their own intuitions
+* Users may feel influence and control, even with placebo controls
+* Companies give vague generic explanations to appease regulators
+
+![Sensemaking in study on how humans interpret machine filters and controls they have over it](illusionofcontrol.png)
+
+<!-- references -->
+
+* Stumpf, Simone, Adrian Bussone, and Dympna O’sullivan. "Explanations considered harmful? user interactions with machine learning systems." In Proc. CHI. 2016.
+* Vaccaro, Kristen, Dylan Huang, Motahhare Eslami, Christian Sandvig, Kevin Hamilton, and Karrie Karahalios. "The illusion of control: Placebo effects of control settings." In Proc CHI, 2018.
+
+
+
+----
+## Appropriate Level of Algorithmic Transparency
+
+IP/Trade Secrets/Fairness/Perceptions/Ethics?
+
+How to design? How much control to give?
+
+<!-- discussion -->
+ 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1385,130 +1518,6 @@ when there exists an interpretable model with the same level of performance"
 <!-- references -->
 
 Rudin, Cynthia. "Stop explaining black box machine learning models for high stakes decisions and use interpretable models instead." Nature Machine Intelligence 1.5 (2019): 206-215. ([Preprint](https://arxiv.org/abs/1811.10154))
-
-
-
----
-# Beyond "Just" Explaining the Model
-
-<!-- references -->
-
-Cai, Carrie J., Samantha Winter, David Steiner, Lauren Wilcox, and Michael Terry. ""Hello AI": Uncovering the Onboarding Needs of Medical Practitioners for Human-AI Collaborative Decision-Making." Proceedings of the ACM on Human-computer Interaction 3, no. CSCW (2019): 1-24.
-
-----
-## Setting Cancer Imaging -- What explanations do radiologists want?
-
-![](cancerpred.png)
-
-* *Past attempts often not successful at bringing tools into production. Radiologists do not trust them. Why?*
-* [Wizard of oz study](https://en.wikipedia.org/wiki/Wizard_of_Oz_experiment) to elicit requirements
-
-----
-
-![Wizard of oz](wizardofoz.jpg)
-
-----
-## Radiologists' questions
-
-* How does it perform compared to human experts?
-* "What is difficult for the AI to know? Where is it too sensitive? What criteria is it good at recognizing or not good at recognizing?"
-* What data (volume, types, diversity) was the model trained on?
-* "Does the AI assistant have access to information that I don’t have? Does it have access to any ancillary studies?" Is all used data shown in the user interface?
-* What kind of things is the AI looking for? What is it capable of learning? ("Maybe light and dark? Maybe colors? Maybe shapes, lines?", "Does it take into consideration the relationship between gland and stroma? Nuclear relationship?")
-* "Does it have a bias a certain way?" (compared to colleagues)
-
-----
-## Radiologists' questions
-
-* Capabilities and limitations: performance, strength, limitations; e.g. how does it handle well-known edge cases
-* Functionality: What data used for predictions, how much context, how data is used
-* Medical point-of-view: calibration, how liberal/conservative when grading cancer severity
-* Design objectives: Designed for few false positives or false negatives? Tuned to compensate for human error?
-* Other considerations: legal liability, impact on workflow, cost of use
-
-[Paper, Tab 1](https://dl.acm.org/doi/pdf/10.1145/3359206)
-
-
-----
-## Insights
-
-* AI literacy important for trust
-* Be transparent about data used
-* Describe training data and capabilities
-* Give mental model, examples, human-relatable test cases 
-* Communicate the AI’s point-of-view and design goal
-
-
-<!-- references -->
-
-Cai, Carrie J., Samantha Winter, David Steiner, Lauren Wilcox, and Michael Terry. ""Hello AI": Uncovering the Onboarding Needs of Medical Practitioners for Human-AI Collaborative Decision-Making." Proceedings of the ACM on Human-computer Interaction 3, no. CSCW (2019): 1-24.
-
-
----
-# Transparency
-
-
-----
-## Case Study: Facebook's Feed Curation
-
-![Facebook with and without filtering](facebook.png)
-
-<!-- references -->
-
-Eslami, Motahhare, Aimee Rickman, Kristen Vaccaro, Amirhossein Aleyasen, Andy Vuong, Karrie Karahalios, Kevin Hamilton, and Christian Sandvig. [I always assumed that I wasn't really that close to [her]: Reasoning about Invisible Algorithms in News Feeds](http://eslamim2.web.engr.illinois.edu/publications/Eslami_Algorithms_CHI15.pdf). In Proceedings of the 33rd annual ACM conference on human factors in computing systems, pp. 153-162. ACM, 2015.
-
-
-
-----
-## Case Study: Facebook's Feed Curation
-<!-- smallish -->
-
-* 62% of interviewees were not aware of curation algorithm
-* Surprise and anger when learning about curation
-
-> "Participants were most upset when close friends and
-family were not shown in their feeds [...] participants often attributed missing stories to their friends’ decisions to exclude them rather than to Facebook News Feed algorithm."
-
-* Learning about algorithm did not change satisfaction level
-* More active engagement, more feeling of control
-
-
-<!-- references -->
-
-Eslami, Motahhare, Aimee Rickman, Kristen Vaccaro, Amirhossein Aleyasen, Andy Vuong, Karrie Karahalios, Kevin Hamilton, and Christian Sandvig. [I always assumed that I wasn't really that close to [her]: Reasoning about Invisible Algorithms in News Feeds](http://eslamim2.web.engr.illinois.edu/publications/Eslami_Algorithms_CHI15.pdf). In Proceedings of the 33rd annual ACM conference on human factors in computing systems, pp. 153-162. ACM, 2015.
-
-----
-## Case Study: HR Application Screening
-
-
-<div class="tweet" data-src="https://twitter.com/TheWrongNoel/status/1194842728862892033"></div>
-
-
-----
-## The Dark Side of Explanations
-
-* Explanations can induce overconfidence in the model; people do not trust their own intuitions
-* Users may feel influence and control, even with placebo explanations
-* Companies give vague generic explanations to appease regulators
-
-![Sensemaking in study on how humans interpret machine filters and controls they have over it](illusionofcontrol.png)
-
-<!-- references -->
-
-* Stumpf, Simone, Adrian Bussone, and Dympna O’sullivan. "Explanations considered harmful? user interactions with machine learning systems." In Proc. CHI. 2016.
-* Vaccaro, Kristen, Dylan Huang, Motahhare Eslami, Christian Sandvig, Kevin Hamilton, and Karrie Karahalios. "The illusion of control: Placebo effects of control settings." In Proc CHI, 2018.
-
-
-
-----
-## Appropriate Level of Algorithmic Transparency
-
-IP/Trade Secrets/Fairness/Perceptions/Ethics?
-
-How to design? How much control to give?
-
-<!-- discussion -->
- 
 
 
 
