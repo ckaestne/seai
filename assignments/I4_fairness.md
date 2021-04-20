@@ -16,8 +16,6 @@ Learning goals:
 
 ## Dataset
 
-**Preliminary release. We will possibly consider a different dataset before the official start of the assignment on April 21.**
-
 For the first tasks of this assignment, you will work with a dataset from a credit card scoring system used by Schufa, a German private credit bureau. Schufa scores are similar to FICO scores in the US; most German citizens have a Schufa score, and these scores are used to inform financial decisions in various contexts, from banking and insurance to real estate rentals.
 
 Despite its significant impact on the lives of German citizens, the algorithm used by the Schufa scoring system has been kept opaque from the public (not surprisingly, since Schufa is a private company). This lack of transparency also means that it is difficult to determine whether the system may be (inadvertently) making unfair decisions against certain groups of people. In response to this concern, there have been attempts to unearth the inner workings of the system and identify potential bias (most notable one being the [OpenSCHUFA project](https://openschufa.de/english)).
