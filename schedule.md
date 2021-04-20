@@ -38,7 +38,7 @@
 | Wed, Apr 14 | Explainability & Interpretability (continued) | [People + AI, Ch. “Explainability and Trust”](https://pair.withgoogle.com/chapter/explainability-trust/) |  |
 | Fri, Apr 16 | No recitation (spring carnival) | |  |
 | Mon, Apr 19 | [Versioning, Provenance, and Reproducability](https://ckaestne.github.io/seai/S2021/slides/19_provenance/provenance.html) ([lecture notes](https://ckaestne.medium.com/versioning-provenance-and-reproducibility-in-production-machine-learning-355c48665005)) | [Building Intelligent Systems](https://www.buildingintelligentsystems.com/), Ch. 21 & [Goods: Organizing Google's Datasets](http://research.google.com/pubs/archive/45390.pdf) |  |
-| Wed, Apr 21 | Security and Privacy | | [M3: Monitoring and CD](https://github.com/ckaestne/seai/blob/S2021/assignments/project.md) |
+| Wed, Apr 21 | [Security and Privacy](https://ckaestne.github.io/seai/S2021/slides/20_security/security.html) | [Building Intelligent Systems](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436), Ch. 25 & [The Top 10 Risks of Machine Learning Security](https://ieeexplore.ieee.org/document/9107290) | [M3: Monitoring and CD](https://github.com/ckaestne/seai/blob/S2021/assignments/project.md) |
 | Fri, Apr 23 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) Threat modeling | |  |
 | Mon, Apr 26 | Safety 1 | |  |
 | Wed, Apr 28 | Safety 2 | | [I4: Fairness](https://github.com/ckaestne/seai/blob/S2021/assignments/I4_fairness.md) |
