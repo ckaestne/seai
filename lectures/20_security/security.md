@@ -310,7 +310,6 @@ Koh, Steinhardt, and Liang (2018).
 ## Evasion Attacks (Adversarial Examples)
 
 ![](evasion-attack.png)
-<!-- .element: class="stretch" -->
 
 * Add noise to an existing sample & cause misclassification
 * Attack at inference time
@@ -351,7 +350,6 @@ From Goodfellow et al (2018). [Making machine learning robust against adversaria
 ## Defense against Evasion Attacks
 
 ![](stop-sign.png)
-<!-- .element: class="stretch" -->
 
 * Adversarial training
   <!-- .element: class="fragment" -->
@@ -387,7 +385,6 @@ _Reliable Smart Road Signs_, Sayin et al. (2019).
 ## Model Inversion: Confidentiality
 
 ![](model-inversion-image.png)
-<!-- .element: class="stretch" -->
 
 * Given a model output (e.g., name of a person), infer the
 corresponding, potentially sensitive input (facial image of the
@@ -406,7 +403,6 @@ Countermeasures_, M. Fredrikson et al. in CCS (2015).
 ## Defense against Model Inversion Attacks
 
 ![](differential-privacy-example.png)
-<!-- .element: class="stretch" -->
 
 * Limit attacker access to confidence scores
   * e.g., reduce the precision of the scores by rounding them off
