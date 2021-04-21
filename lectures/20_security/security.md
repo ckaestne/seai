@@ -157,7 +157,7 @@ day of the application deadline.
 * Example: Application Front End
   * Spoofing: ?
   * Tampering: ? 
-  * Repudiation: ?
+  * Information disclosure: ?
   * Denial of service: ?
 
 ----
@@ -310,7 +310,9 @@ Koh, Steinhardt, and Liang (2018).
 ![](evasion-attack.png)
 
 * Add noise to an existing sample & cause misclassification
+<!-- .element: class="fragment" -->
 * Attack at inference time
+<!-- .element: class="fragment" -->
   * Typically assumes knowledge of the model (algorithm, parameters)
   * Recently, shown to be possible even when the attacker only has access to
     model output ("blackbox" attack)
@@ -366,6 +368,11 @@ From Goodfellow et al (2018). [Making machine learning robust against adversaria
 
 _Reliable Smart Road Signs_, Sayin et al. (2019).
 
+----
+## Generating Adversarial Examples
+
+* Q. How do we generate adversarial examples?
+  
 ----
 ## Generating Adversarial Examples
 
