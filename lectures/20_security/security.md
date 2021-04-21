@@ -31,16 +31,16 @@ Required reading:
 ----
 ## Elements of Security
 
-* Security requirements (policies)
+* Security requirements (also called policies)
 <!-- .element: class="fragment" -->
   * What does it mean for my system to be secure?
 * Threat model
   <!-- .element: class="fragment" -->
-  * What are the attacker's goal, capability, and incentive?
+  * What are the attacker's goals, capabilities, and incentives?
 * Attack surface
 <!-- .element: class="fragment" -->
 	* Which parts of the system are exposed to the attacker?
-* Defense mechanisms
+* Defense mechanisms (mitigiations)
 <!-- .element: class="fragment" -->
 	* How do we prevent the attacker from compromising a security requirement?
 
@@ -142,9 +142,9 @@ day of the application deadline.
 ![](stride.png)
 
 * A systematic approach to identifying threats (i.e., attacker actions)
-  * Construct an architectural diagram with system boundaries 
+  * Construct an architectural diagram with components & connections 
   * For each component, enumerate & identify potential threats
-  * For each potential threat, devise potential mitigation strategies
+  * For each potential threat, devise a mitigation strategy
 
 [More info: STRIDE approach](https://docs.microsoft.com/en-us/archive/msdn-magazine/2006/november/uncover-security-design-flaws-using-the-stride-approach)
 
@@ -158,9 +158,7 @@ day of the application deadline.
   * Spoofing: ?
   * Tampering: ? 
   * Repudiation: ?
-  * Information disclosure: ?
   * Denial of service: ?
-  * Elevation of privilege: ?
 
 ----
 ## STRIDE: College Admission
@@ -170,7 +168,7 @@ day of the application deadline.
 
 * Example: Application Front End
   * Spoofing: Attacker pretends to be another applicant by logging in
-  * Tampering: Attacker modifies applicant's info through browser attack
+  * Tampering: Attacker modifies applicant info using browser exploits
   * Information disclosure: Attacker intercepts HTTP requests from/to
     server to read applicant info
   * Denial of service: Attacker creates a large number of bogus
@@ -185,8 +183,8 @@ day of the application deadline.
 * Example: Application Front End
   * Spoofing: Attacker pretends to be another applicant by logging in
     -> __Require stronger passwords__
-  * Tampering: Attacker modifies applicant's info through browser
-  attack
+  * Tampering: Attacker modifies applicant info using browser
+  exploits
 	  -> __Add server-side security tokens__
   * Information disclosure: Attacker intercepts HTTP requests from/to
   server to read applicant info
@@ -427,6 +425,7 @@ Learning_, M. Shayan et al., arXiv:1811.09904 (2018).
 
 * Dialogue system to interact with family members
 * Use perception & speech to identify the person
+* Notify owner if stranger detected in the house
 * Log & upload interactions; re-train & update models for all robots
 
 ----
@@ -524,43 +523,43 @@ Flaw in one component =>  Limited impact on the rest of the system!
 
 _Comprehensive Experimental Analyses of Automotive Attack Surfaces_, Checkoway et al., in USENIX Security (2011).
 
-----
-## Example: Mail Client
+<!-- ---- -->
+<!-- ## Example: Mail Client -->
 
-* Requirements
-<!-- .element: class="fragment" -->
-  * Receive & send email over external network
-  * Place incoming email into local user inbox files
-* Sendmail
-  <!-- .element: class="fragment" -->
-  * Monolithic design; entire program runs as UNIX root
-  * Historical source of many vulnerabilities
-* Qmail: “Security-aware” mail agent
-  <!-- .element: class="fragment" -->
-  * Compartmentalized design
-  * Isolation based on OS process isolation
-	* Separate modules run as separate “users” (UID)
-	* Mutually distrusting processes
-  * Least privilege 
-	* Minimal privileges for each UID; access to specific resources (files, network sockets, …)
-	* Only one “root” user (with all privileges)
+<!-- * Requirements -->
+<!-- <\!-- .element: class="fragment" -\-> -->
+<!--   * Receive & send email over external network -->
+<!--   * Place incoming email into local user inbox files -->
+<!-- * Sendmail -->
+<!--   <\!-- .element: class="fragment" -\-> -->
+<!--   * Monolithic design; entire program runs as UNIX root -->
+<!--   * Historical source of many vulnerabilities -->
+<!-- * Qmail: “Security-aware” mail agent -->
+<!--   <\!-- .element: class="fragment" -\-> -->
+<!--   * Compartmentalized design -->
+<!--   * Isolation based on OS process isolation -->
+<!-- 	* Separate modules run as separate “users” (UID) -->
+<!-- 	* Mutually distrusting processes -->
+<!--   * Least privilege  -->
+<!-- 	* Minimal privileges for each UID; access to specific resources (files, network sockets, …) -->
+<!-- 	* Only one “root” user (with all privileges) -->
 
-----
-## Qmail Architecture
+<!-- ---- -->
+<!-- ## Qmail Architecture -->
 
-![](qmail1.png)
+<!-- ![](qmail1.png) -->
 
-----
-## Qmail Architecture
+<!-- ---- -->
+<!-- ## Qmail Architecture -->
 
-![](qmail2.png)
+<!-- ![](qmail2.png) -->
 
-----
-## Qmail Architecture
+<!-- ---- -->
+<!-- ## Qmail Architecture -->
 
-![](qmail3.png)
+<!-- ![](qmail3.png) -->
 
-* Component running as root much smaller than in sendmail; much easier to test & verify that it's free of vulnerabilities
+<!-- * Component running as root much smaller than in sendmail; much easier to test & verify that it's free of vulnerabilities -->
 
 ----
 ## Secure Design Principles for ML
