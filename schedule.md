@@ -42,7 +42,7 @@
 | Fri, Apr 23 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) [Threat modeling](https://github.com/ckaestne/seai/tree/S2021/recitations/09_threat_modeling) | |  |
 | Mon, Apr 26 | Safety 1 | |  |
 | Wed, Apr 28 | Safety 2 | | [I4: Fairness](https://github.com/ckaestne/seai/blob/S2021/assignments/I4_fairness.md) |
-| Fri, Apr 30 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) tbd | |  |
+| Fri, Apr 30 | No recitation | |  |
 | Mon, May 03 | Fostering Interdisciplinary Teams | [Data scientists in software teams](https://andrewbegel.com/papers/data-scientists.pdf) |  |
 | Wed, May 05 | Summary and Review | | [M4: Security and Feedback Loops](https://github.com/ckaestne/seai/blob/S2021/assignments/project.md) |
 | Thu, May 13, 5:30-8:30 PM | **Final Project Presentations** | | [Final report](https://github.com/ckaestne/seai/blob/S2021/assignments/project.md) |
