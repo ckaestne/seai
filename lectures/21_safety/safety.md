@@ -494,18 +494,6 @@ Image: David Silver. [Adversarial Traffic Signs](https://medium.com/self-driving
 
 <!-- Rudin, Cynthia. "[Stop explaining black box machine learning models for high stakes decisions and use interpretable models instead](https://arxiv.org/abs/1811.10154)." Nature Machine Intelligence 1, no. 5 (2019): 206-215.   -->
 
-----
-## Task Decision Boundary vs Model Boundary
-
-[![Decision boundary vs model boundary](decisionboundary.png)](decisionboundary.png)
-
-* Decision boundary: Ground truth; often unknown and not specifiable
-* Model boundary: An approximation of decision boundary
-* Often, learned & actual decision boundaries do not match!
-
-<!-- references -->
-
-From Goodfellow et al (2018). [Making machine learning robust against adversarial inputs](https://par.nsf.gov/servlets/purl/10111674). *Communications of the ACM*, *61*(7), 56-66. 
 
 ----
 ## Evaluating Robustness
