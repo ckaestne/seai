@@ -498,32 +498,14 @@ Image: David Silver. [Adversarial Traffic Signs](https://medium.com/self-driving
 ## Task Decision Boundary vs Model Boundary
 
 [![Decision boundary vs model boundary](decisionboundary.png)](decisionboundary.png)
-<!-- .element: class="stretch" -->
 
 * Decision boundary: Ground truth; often unknown and not specifiable
-* Model boundary: What the model learns; an approximation of decision boundary
+* Model boundary: An approximation of decision boundary
 * Often, learned & actual decision boundaries do not match!
 
 <!-- references -->
 
 From Goodfellow et al (2018). [Making machine learning robust against adversarial inputs](https://par.nsf.gov/servlets/purl/10111674). *Communications of the ACM*, *61*(7), 56-66. 
-
-
-<!-- ---- -->
-<!-- ## Robustness and Distance -->
-
-<!-- * For text: -->
-<!--   - insert words -->
-<!--   - replace words with synonyms -->
-<!--   - reorder text -->
-<!-- * For tabular data: -->
-<!--   - change values -->
-<!--   - depending on feature extraction, small changes may have large effects -->
-<!-- * ... -->
-  
-<!-- *note, not all changes may be feasible or realistic; some changes are obvious to humans* -->
-
-<!-- *realistically, a defender will not anticipate all attacks and corresponding distances* -->
 
 ----
 ## Evaluating Robustness
