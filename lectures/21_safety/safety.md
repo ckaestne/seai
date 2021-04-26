@@ -230,6 +230,13 @@ etc.,
   * __Can ML achieve safe design solely through lots of data?__
 
 ----
+## Demonstrating Safety
+
+![](av-miles.jpg)
+
+__More miles tested => safer?__
+
+----
 ## Challenge: Edge/Unknown Cases
 
 ![](av-weird-cases.jpg)
