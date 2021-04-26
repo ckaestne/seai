@@ -254,10 +254,12 @@ __More miles tested => safer?__
 ----
 ## Approach for Demonstrating Safety
 
-* Identify relevant hazards & safety requirements
-* Identify potential root causes for hazards
-* For each hazard, develop a mitigation strategy
-* Provide evidence that mitigations are properly implemented
+* Safety Engineering: An engineering discipline which assures that engineered systems provide acceptable levels of safety.
+* Typical safety engineering process:
+  * Identify relevant hazards & safety requirements
+  * Identify potential root causes for hazards
+  * For each hazard, develop a mitigation strategy
+  * Provide evidence that mitigations are properly implemented
 
 
 
