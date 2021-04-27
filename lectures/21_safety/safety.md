@@ -245,13 +245,6 @@ __More miles tested => safer?__
 * __Why is this a unique problem for AI__? What about humans?
 
 ----
-## Demonstrating Safety
-
-![](av-miles.jpg)
-
-__More miles tested => safer?__
-
-----
 ## Approach for Demonstrating Safety
 
 * Safety Engineering: An engineering discipline which assures that engineered systems provide acceptable levels of safety.
@@ -583,6 +576,118 @@ conditions._ Yoneda et al., IATSS Research (2019).
 
 
 
+---
+# Safety Cases
+
+
+----
+## Demonstrating Safety
+
+![](av-miles.jpg)
+
+__More miles tested => safer?__
+
+----
+## Safety & Certification Standards
+
+* Guidelines & recommendations for achieving an acceptable level of
+safety
+* Examples: DO-178C (airborne systems), ISO  26262 (automotive), IEC 62304 (medical
+software), Common Criteria (security)
+* Typically, __prescriptive__ & __process-oriented__
+  * Recommends use of certain development processes
+  * Requirements specification, design, hazard analysis, testing,
+    verification, configuration management, etc., 
+* Limitations
+	* Most not designed to handle ML systems (exception: UL 4600)
+	* Costly to satisfy & certify, but effectiveness unclear (e.g., many
+    FDA-certified products recalled due to safety incidents)
+* Good processes are important, but not sufficient; provides only
+  _indirect_ evidence for system safety
+
+
+
+----
+## Safety Cases
+
+![](safety-case.png)
+<!-- .element: class="stretch" -->
+
+
+* An explicit argument that a system achieves a desired safety
+requirement, along with supporting evidence
+* Structure:
+  * Argument: A top-level claim decomposed into multiple sub-claims
+  * Evidence: Testing, software analysis, formal verification,
+  inspection, expert opinions, design mechanisms
+
+----
+## Safety Cases: Example
+
+![](safety-case-example.png)
+
+----
+## Safety Cases: Benefits & Limitations
+
+* Provides an explicit structure to the safety argument
+  * Easier to navigate, inspect, and refute for third-party auditors
+  * Provides traceability between system-level claims &
+    low-level evidence
+  * Can also be used for other types of system quality (security,
+    reliabiility, etc.,)
+* Challnges and pitfalls
+  * Informal links between claims & evidence
+	* e.g., Does the sub-claims actually imply the top-level claim? 
+  * Effort in constructing the case & evidence
+	* How much evidence is enough?
+  * System evolution
+	* If system changes, must reproduce the case & evidence
+
+
+
+
+
+---
+# Designing for Safety
+
+----
+## Review: Elements of Safe Design
+
+(See
+[Mitigation Strategies](https://ckaestne.github.io/seai/F2020/slides/09_risks_ii/risks_ii.html#/3)
+from the Lecture on Risks)
+
+* __Assume__: Components will fail at some point
+* __Goal__: Minimize the impact of failures
+* __Detection__
+  * Monitoring
+* __Response__
+  * Graceful degradation (fail-safe)
+  * Redundancy (fail over)
+* __Containment__
+  * Decoupling & isolation
+
+----
+## Safety Assurance with ML Components
+
+* Consider ML components as unreliable, at most probabilistic guarantees
+* Testing, testing, testing (+ simulation)
+  - Focus on data quality & robustness
+* *Adopt a system-level perspective!*
+* Consider safe system design with unreliable components
+  - Traditional systems and safety engineering
+  - Assurance cases
+* Understand the problem and the hazards
+  - System level, goals, hazard analysis, world vs machine
+  - Specify *end-to-end system behavior* if feasible
+* Recent research on adversarial learning and safety in reinforcement learning 
+
+
+
+
+
+
+
 
 ---
 # Other AI Safety Concerns
@@ -674,48 +779,6 @@ Amodei, Dario, Chris Olah, Jacob Steinhardt, Paul Christiano, John Schulman, and
 
 
 
-
-
-
-
-
-
-
-
----
-# Designing for Safety
-
-----
-## Review: Elements of Safe Design
-
-(See
-[Mitigation Strategies](https://ckaestne.github.io/seai/F2020/slides/09_risks_ii/risks_ii.html#/3)
-from the Lecture on Risks)
-
-* __Assume__: Components will fail at some point
-* __Goal__: Minimize the impact of failures
-* __Detection__
-  * Monitoring
-* __Response__
-  * Graceful degradation (fail-safe)
-  * Redundancy (fail over)
-* __Containment__
-  * Decoupling & isolation
-
-----
-## Safety Assurance with ML Components
-
-* Consider ML components as unreliable, at most probabilistic guarantees
-* Testing, testing, testing (+ simulation)
-  - Focus on data quality & robustness
-* *Adopt a system-level perspective!*
-* Consider safe system design with unreliable components
-  - Traditional systems and safety engineering
-  - Assurance cases
-* Understand the problem and the hazards
-  - System level, goals, hazard analysis, world vs machine
-  - Specify *end-to-end system behavior* if feasible
-* Recent research on adversarial learning and safety in reinforcement learning 
 
 
 
