@@ -585,7 +585,7 @@ conditions._ Yoneda et al., IATSS Research (2019).
 
 ![](av-miles.jpg)
 
-__More miles tested => safer?__
+__How do we demonstrate to a third-party that our system is safe?__
 
 ----
 ## Safety & Certification Standards
@@ -594,16 +594,19 @@ __More miles tested => safer?__
 safety
 * Examples: DO-178C (airborne systems), ISO  26262 (automotive), IEC 62304 (medical
 software), Common Criteria (security)
-* Typically, __prescriptive__ & __process-oriented__
+<!-- .element: class="fragment" -->
+* Typically, prescriptive & process-oriented
+<!-- .element: class="fragment" -->
   * Recommends use of certain development processes
   * Requirements specification, design, hazard analysis, testing,
     verification, configuration management, etc., 
 * Limitations
+<!-- .element: class="fragment" -->
 	* Most not designed to handle ML systems (exception: UL 4600)
 	* Costly to satisfy & certify, but effectiveness unclear (e.g., many
     FDA-certified products recalled due to safety incidents)
-* Good processes are important, but not sufficient; provides only
-  _indirect_ evidence for system safety
+* Good processes are important, but not sufficient; provides only indirect evidence for system safety
+<!-- .element: class="fragment" -->
 
 
 
@@ -612,7 +615,6 @@ software), Common Criteria (security)
 
 ![](safety-case.png)
 <!-- .element: class="stretch" -->
-
 
 * An explicit argument that a system achieves a desired safety
 requirement, along with supporting evidence
@@ -627,25 +629,33 @@ requirement, along with supporting evidence
 ![](safety-case-example.png)
 
 ----
+## Safety Cases: Example
+
+![](uber-safety-case.png)
+
+[Uber Safety Case](https://uberatgresources.com/safetycase/gsn)
+
+----
 ## Safety Cases: Benefits & Limitations
 
 * Provides an explicit structure to the safety argument
+<!-- .element: class="fragment" -->
   * Easier to navigate, inspect, and refute for third-party auditors
   * Provides traceability between system-level claims &
     low-level evidence
   * Can also be used for other types of system quality (security,
     reliabiility, etc.,)
 * Challnges and pitfalls
+<!-- .element: class="fragment" -->
   * Informal links between claims & evidence
+  <!-- .element: class="fragment" -->
 	* e.g., Does the sub-claims actually imply the top-level claim? 
   * Effort in constructing the case & evidence
+  <!-- .element: class="fragment" -->
 	* How much evidence is enough?
   * System evolution
+  <!-- .element: class="fragment" -->
 	* If system changes, must reproduce the case & evidence
-
-
-
-
 
 ---
 # Designing for Safety
