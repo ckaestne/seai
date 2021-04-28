@@ -42,8 +42,8 @@
 | Fri, Apr 23 | ![Recitation](https://img.shields.io/badge/-rec-Yellow.svg) [Threat modeling](https://github.com/ckaestne/seai/tree/S2021/recitations/09_threat_modeling) | |  |
 | Mon, Apr 26 | [Safety](https://ckaestne.github.io/seai/S2021/slides/21_safety/safety.html) | [Practical Solutions for Machine Learning Safety in Autonomous Vehicles](http://ceur-ws.org/Vol-2560/paper40.pdf) |  |
 | Wed, Apr 28 | Safety (continued) | [The need for a system view to regulate artificial intelligence/machine learning-based software as medical device](https://www.nature.com/articles/s41746-020-0262-2) | [I4: Fairness](https://github.com/ckaestne/seai/blob/S2021/assignments/I4_fairness.md) |
-| Fri, Apr 30 | No recitation | |  |
-| Mon, May 03 | Fostering Interdisciplinary Teams | [Data scientists in software teams](https://andrewbegel.com/papers/data-scientists.pdf) |  |
+| Fri, Apr 30 | **No recitation** | |  |
+| Mon, May 03 | [Fostering Interdisciplinary Teams](https://ckaestne.github.io/seai/S2021/slides/22_teams/teams.html) | [Data scientists in software teams](https://andrewbegel.com/papers/data-scientists.pdf) |  |
 | Wed, May 05 | Summary and Review | | [M4: Security and Feedback Loops](https://github.com/ckaestne/seai/blob/S2021/assignments/project.md) |
 | Thu, May 13, 5:30-8:30 PM | **Final Project Presentations** | | [Final report](https://github.com/ckaestne/seai/blob/S2021/assignments/project.md) |
 
