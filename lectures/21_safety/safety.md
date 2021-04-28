@@ -669,10 +669,10 @@ argument.
   * System evolution
   <!-- .element: class="fragment" -->
 	* If system changes, must reproduce the case & evidence
-
-
-
-
+* Tools for building & analyzing safety cases available
+<!-- .element: class="fragment" -->
+	* e.g., [ASCE/GSN](https://www.adelard.com/gsn.html) from Adelard
+	* But ultimately, can't replace domain knowledge & critical thinking
 
 
 
