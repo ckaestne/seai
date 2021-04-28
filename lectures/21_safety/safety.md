@@ -625,6 +625,7 @@ requirement, along with supporting evidence
 ## Safety Cases: Example
 
 ![](safety-case-example.png)
+<!-- .element: class="stretch" -->
 
 * Questions to think about:
   * Do sub-claims imply the parent claim?
@@ -635,6 +636,7 @@ requirement, along with supporting evidence
 ## Safety Cases: Example
 
 ![](uber-safety-case.png)
+<!-- .element: class="stretch" -->
 
 [Uber Safety Case](https://uberatgresources.com/safetycase/gsn)
 
