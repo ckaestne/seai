@@ -608,8 +608,6 @@ software), Common Criteria (security)
 * Good processes are important, but not sufficient; provides only indirect evidence for system safety
 <!-- .element: class="fragment" -->
 
-
-
 ----
 ## Safety Cases
 
@@ -621,12 +619,17 @@ requirement, along with supporting evidence
 * Structure:
   * Argument: A top-level claim decomposed into multiple sub-claims
   * Evidence: Testing, software analysis, formal verification,
-  inspection, expert opinions, design mechanisms
+  inspection, expert opinions, design mechanisms...
 
 ----
 ## Safety Cases: Example
 
 ![](safety-case-example.png)
+
+* Questions to think about:
+  * Do sub-claims imply the parent claim?
+  * Am I missing any sub-claims?
+  * Is the evidence strong enough to discharge a leaf claim?
 
 ----
 ## Safety Cases: Example
@@ -634,6 +637,16 @@ requirement, along with supporting evidence
 ![](uber-safety-case.png)
 
 [Uber Safety Case](https://uberatgresources.com/safetycase/gsn)
+
+
+----
+## Safety Cases: Breakout
+
+![](movie-recommendation.png)
+
+Build a safety case to argue that your movie recommendation system
+provides at least 80% availability. Include evidence to support your
+argument. 
 
 ----
 ## Safety Cases: Benefits & Limitations
@@ -656,6 +669,15 @@ requirement, along with supporting evidence
   * System evolution
   <!-- .element: class="fragment" -->
 	* If system changes, must reproduce the case & evidence
+
+
+
+
+
+
+
+
+
 
 ---
 # Designing for Safety
