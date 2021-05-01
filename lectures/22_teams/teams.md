@@ -97,7 +97,7 @@ Talk: Ryan Orban. [Bridging the Gap Between Data Science & Engineer: Building Hi
 ----
 
 ![Roles Venn Diagram](roles_venn.svg)
-<!-- .element: class="stretch" -->
+<!-- .element: class="stretch plain" -->
 
 By Steven Geringer, via Ryan Orban. [Bridging the Gap Between Data Science & Engineer: Building High-Performance Teams](https://www.slideshare.net/ryanorban/bridging-the-gap-between-data-science-engineer-building-highperformance-teams/3-Software_Engineer_Data_Engineer_Data). 2016
 
@@ -172,18 +172,20 @@ e.g.  Yorgos Askalidis
 ----
 ## Software Engineering Specializations
 
-<!-- discussion -->
+* Architectures
+* Requirements engineers
+* Testers
+* Site reliability engineers
+* Devops
+* Safety
+* Security
+* UIX
+* Distributed systems, cloud
+* ...
 
-Note: Architectures, requirements engineers, testers, site reliability engineers, devops, safety, security, UIX, distributed systems, ...
 
 ----
-## AI-Enabled Systems
-
-![Temi](temi.png)
-
-
-----
-## Other Roles in AI Systems Projects?
+## Needed Roles in AI Systems Projects?
 
 ![TikTok logo](tiktok.jpg)
 
@@ -200,19 +202,6 @@ Note: Architectures, requirements engineers, testers, site reliability engineers
 * Lawyers
 * Social scientists, ethics
 * ...
-
-----
-## The Systems Perspective
-
-* The business case
-* Requirements analysis, incl. safety, security, fairness, ethics
-* Data acquisition and engineering
-* Process focus
-* Quality assurance
-* Operations and maintenance
-
-
-
 
 
 
@@ -432,6 +421,7 @@ frequent merges, daily builds
 ## Congurence
 
 ![](congruence.png)
+<!-- .element: class="plain" -->
 
 Structural congruence,
 Geographical congruence,
@@ -439,15 +429,17 @@ Task congruence,
 IRC communication congruence
 
 ----
-## Team Structure for Social Media/Depression Project?
+## Team Structure for Transcription Service?
 
-![TikTok logo](tiktok.jpg)
+![Temi screenshot](temi.png)
 
 
 ----
 ## Engineering Recommendations for Structuring AI-Enabled Systems?
 
 <!-- discussion -->
+
+*How to design the AI-enabled system to enable better collaboration?*
 
 ----
 ## Engineering Recommendations for Structuring AI-Enabled Systems
@@ -470,6 +462,14 @@ IRC communication congruence
     - Team D waits for improvement/feature from model A
 
 <!-- discussion -->
+
+----
+![Team collaboration within a large tech company](team-collaboration1.png)
+<!-- .element: class="stretch plain" -->
+
+----
+![Team collaboration within a large tech company](team-collaboration2.png)
+<!-- .element: class="stretch plain" -->
 
 ----
 ## Common Challenge: Establishing Interfaces
@@ -498,8 +498,12 @@ IRC communication congruence
  10. From prototype to production (pipelines, versioning, operations, user interactions, ...)
 
 
+----
+## Breakout: Team Structure for Social Media/Depression Project?
 
+![TikTok logo](tiktok.jpg)
 
+*What teams? What roles? What are important interfaces between teams?*
 
 
 
