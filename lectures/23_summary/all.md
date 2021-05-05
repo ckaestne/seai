@@ -460,13 +460,6 @@ testing in production (next week)
 
 
 ----
-
-> "Programs which were written in order to determine the
-answer in the first place. There would be no need to write such programs, if the
-correct answer were known” (Weyuker, 1982).
-
-
-----
 ## Case Study: Cancer Detection
 
 ![MRI](mri.jpg)
