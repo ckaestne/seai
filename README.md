@@ -6,7 +6,7 @@
 
 ![Course topics overview](overview.svg "Course topics overview")
 
-In 2021, the class will be offered in the Spring semester. The Spring 2021 offering, like Fall 2020, does not have formal prerequisites, but expects some familiarity with machine learning concepts and basic programming skills. 
+In 2021, the class was offered in the Spring semester. Next we will offer the course in Spring 2022. The Spring 2022 offering will not have formal prerequisites, but expects some familiarity with machine learning concepts and basic programming skills. 
 
 See the specific offering of the course you are interested in:
 
