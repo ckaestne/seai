@@ -893,16 +893,6 @@ Figure: Jason Yip. [Why T-shaped people?](https://medium.com/@jchyip/why-t-shape
  
 
 ----
-## Model first or system first?
-
-![Integrated process](process.svg)
-<!-- .element: class="plain" -->
-
-<!-- references -->
-
-More details: Christian Kaestner. [On the process for building software with ML components](https://ckaestne.medium.com/on-the-process-for-building-software-with-ml-components-c54bdb86db24). Medium 2020
-
-----
 ## Siloing is Bad
 
 * *We do not have clean interfaces between ML and non-ML components*
@@ -911,6 +901,16 @@ More details: Christian Kaestner. [On the process for building software with ML 
 
 ![Team structure](teamx.svg)
 <!-- .element: class="stretch plain" -->
+
+----
+## Model first or system first?
+
+![Integrated process](process.svg)
+<!-- .element: class="plain" -->
+
+<!-- references -->
+
+More details: Christian Kaestner. [On the process for building software with ML components](https://ckaestne.medium.com/on-the-process-for-building-software-with-ml-components-c54bdb86db24). Medium 2020
 
 
 ----
