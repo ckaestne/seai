@@ -1,10 +1,8 @@
 # Midterm
 
-This semester, the course will have a midterm, but no final exam. We will release the midterm as a Word document that you can edit during the class period and upload afterward to Gradescope.
+This semester, the course will have a midterm, but no final exam. 
 
-We assume for most it's convenient to just edit the Word document, but you could also print and scan the exam, or use another text editor. When uploading the solution, please map solutions to pages in Gradescope as in homework assignments.
-
-The midterm is open book, you can use all resources, including internet search, just do not talk/chat with each other or other humans. We will make no attempts to proctor remotely beyond just asking you to please not cheat. If you have questions during the exam, email us or join the regular Zoom channel for the lecture.
+Logistics will be announced later.
 
 Topic-wise, everything covered in class, in the readings, and in recitation is fair game, though the exam will focus most points on topics where you had some chance to practice (e.g., in assignments, recitation or in-class discussions) not on random recall questions.
 
@@ -17,4 +15,5 @@ Midterms from previous semesters are available as practice. We expect the midter
 * [Final from Fall 2019](https://github.com/ckaestne/seai/blob/F2019/other_material/final_exam.pdf) (covers different topics, but provides yet another scenario)
 * [Midterm from Summer 2020](https://github.com/ckaestne/seai/blob/S2020/exams/midterm.pdf) (slightly fewer topics covered than this semester)
 * [Midterm from Fall 2020](https://github.com/ckaestne/seai/blob/F2020/exams/midterm_f20.pdf) (similar coverage)
+* [Midterm from Spring 2021](https://github.com/ckaestne/seai/blob/S2021/exams/) (similar coverage)
 

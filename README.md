@@ -1,12 +1,10 @@
 # Machine Learning in Production / AI Engineering (17-445/17-645/17-745/11-695)
 
-### Spring 2021
+### Spring 2022
 
-Spring 2021 has wrapped up. We will next offer the course again in Spring 2022.
+*Formerly **Software Engineering for AI-Enabled Systems (SE4AI)**, CMU course that covers how to build, deploy, assure, and maintain applications with machine-learned models. Covers also **responsible AI** (safety, security, fairness, explainability) and **MLOps**. The course is crosslisted both as **Machine Learning in Production** and **AI Engineering**. For earlier offerings see websites for [Fall 2019](https://ckaestne.github.io/seai/F2019), [Summer 2020](https://ckaestne.github.io/seai/S2020), [Fall 2020](https://ckaestne.github.io/seai/F2020/), and [Spring 2021](https://ckaestne.github.io/seai/S2021/). This Spring 2022 offering is designed for students with some data science experience (e.g., has taken a machine learning course, has used sklearn) and basic programming skills, but will not expect a software engineering background. Going forward we expect to offer this course every spring semester (not fall, not summer).*
 
-*Formerly **Software Engineering for AI-Enabled Systems (SE4AI)**, CMU course that covers how to build, deploy, assure, and maintain applications with machine-learned models. Covers also **responsible AI** (safety, security, fairness, explainability) and **MLOps**. The course is crosslisted both as **Machine Learning in Production** and **AI Engineering**. For earlier offerings see websites for [Fall 2019](https://ckaestne.github.io/seai/F2019), [Summer 2020](https://ckaestne.github.io/seai/S2020), and [Fall 2020](https://ckaestne.github.io/seai/F2020/). This Spring 2021 offering is designed for students with some data science experience (e.g., has taken a machine learning course, has used sklearn) and basic programming skills, but will not expect a software engineering background.*
-
-For researchers, educators, or others interested in this topic, we share all course material, including slides and assignments, under a creative commons license on GitHub (https://github.com/ckaestne/seai/) and have recently published an article describing the rationale and the design of this course: [Teaching Software Engineering for AI-Enabled Systems](https://arxiv.org/abs/2001.06691). Video recordings of the Summer 2020 offering are online on the [course page](https://ckaestne.github.io/seai/S2020/#course-content). We would be happy to see this course or a similar version taught somewhere else. See also an [annotated bibliography](https://github.com/ckaestne/seaibib) on the topic.
+For researchers, educators, or others interested in this topic, we share all course material, including slides and assignments, under a creative commons license on GitHub (https://github.com/ckaestne/seai/) and have also published an article describing the rationale and the initial design of this course: [Teaching Software Engineering for AI-Enabled Systems](https://arxiv.org/abs/2001.06691). Video recordings of the Summer 2020 offering are online on the [course page](https://ckaestne.github.io/seai/S2020/#course-content). We would be happy to see this course or a similar version taught somewhere else. See also an [annotated bibliography](https://github.com/ckaestne/seaibib) on research in this field.
 
 ## Course Description
 
@@ -27,7 +25,7 @@ It covers topics such as:
 
 **Examples and case studies** of ML-driven products we discuss include automated audio transcription; distributed detection of missing children on webcams and instant translation in augmented reality; cancer detection, fall detection, COVID diagnosis, and other smart medical and health services; automated slide layout in Powerpoint; semi-automated college admissions; inventory management; smart playlists and movie recommendations; ad fraud detection; delivery robots and smart driving features; and many others.
 
-An extended group project focuses on building, deploying, evaluating, and maintaining a robust and scalable *movie recommendation service* under realistic  “production” conditions.
+An extended group project focuses on building, deploying, evaluating, and maintaining a robust and scalable *movie recommendation service* under somewhat realistic  “production” conditions.
 
 ### Learning Outcomes
 
@@ -44,29 +42,31 @@ In addition, students will gain familiarity with production-quality infrastructu
 
 ## Logistics and People
 
-17-445/17-645/17-645/11-695, 12 Units
+17-445/17-645/17-745/11-695, 12 Units
+
+The course is the same under all course numbers, with the exception of the PhD-level 17-745 which replaces two homework assignments with a research component.
 
 Open to undergraduate and graduate students meeting the prerequisites.
 
 
-### Spring 2021
+### Spring 2022
 
 Designed for students with a data science background (see prerequisites below)
 
-Lectures Monday/Wednesday 2:20-3:40pm, Eastern Time, on Zoom
+Lectures Monday/Wednesday 1:25-2:45pm, in person, TEP 1101A
 
-Recitation Friday 10:20-11:20am, Eastern Time, on Zoom
+Recitations Friday 10:10-11:00am and 11:15-12:05
 
 Instructors: [Christian Kaestner](https://www.cs.cmu.edu/~ckaestne/) and [Eunsuk Kang](https://eskang.github.io/)
 
 ### Coordination
 
-Unless you have questions to specific instructors, we prefer that you email us at se-ai@lists.andrew.cmu.edu, where you will reach the entire teaching staff of the course. We are happy to answer questions by email, over Slack, over Canvas, and will jump on a quick Zoom call if you ask us. We also always arrive 5 to 10 min early to class and stay longer for discussions and questions.
+Unless you have questions to specific instructors, we prefer that you email us at se-ai@lists.andrew.cmu.edu, where you will reach the entire teaching staff of the course. We are happy to answer questions by email, over Slack, over Canvas, meet in person, and will jump on a quick Zoom call if you ask us. We also always arrive 5 to 10 min early to class and stay longer for discussions and questions.
 
 
 ## Course content
 
-The course content is evolving from semester to semester, though topics and assignments will be similar. See the [Fall 2019](https://ckaestne.github.io/seai/F2019), [Summer 2020](https://ckaestne.github.io/seai/S2020), and [Fall 2020](https://ckaestne.github.io/seai/F2020/#course-content) offerings for what we covered in the past or look at the list of topics and learning goals under [Learning Goals](https://github.com/ckaestne/seai/blob/S2021/learning_goals.md). Assignments this semester will likely be very similar to those the [Fall 2020 assignments](https://github.com/ckaestne/seai/blob/F2020/assignments/). Below is a table of a preliminary  schedule. This is subject to change and will be updated as the semester progresses, especially to help focus on requested topics or support learning.
+The course content is evolving from semester to semester, though topics and assignments will be similar. We expect this semester to be similar in terms of coverage and assignments to [Spring 2021](https://ckaestne.github.io/seai/S2020)  (see also [Fall 2019](https://ckaestne.github.io/seai/F2019), [Summer 2020](https://ckaestne.github.io/seai/S2020), and [Fall 2020](https://ckaestne.github.io/seai/F2020/#course-content)). Our list of learning goals under [Learning Goals](https://github.com/ckaestne/seai/blob/S2022/learning_goals.md) describes what we aim to cover. Below is a table of a preliminary  schedule. This is subject to change and will be updated as the semester progresses, especially to help focus on requested topics or support learning.
 
 [Schedule](https://github.com/ckaestne/seai/blob/S2021/schedule.md)
 
@@ -74,7 +74,7 @@ The course content is evolving from semester to semester, though topics and assi
 
 ## Course Syllabus and Policies
 
-The course uses Canvas and Gradescope for homework submission, grading, discussion, questions, announcements, and supplementary documents; slides will be posted here; Slack is used for communication around homeworks and projects; Github is used to coordinate group work. All public course material (assignments, slides, syllabus) can be found in the course’s [GitHub repository](https://github.com/ckaestne/seai/tree/S2021); all private material (announcements, grades, passwords) will be shared through Canvas.
+The course uses Canvas and Gradescope for homework submission, grading, discussion, questions, announcements, and supplementary documents; slides will be posted here; Slack is used for communication around homeworks and projects; Github is used to coordinate group work. All public course material (assignments, slides, syllabus) can be found in the course’s [GitHub repository](https://github.com/ckaestne/seai/tree/S2022); all private material (announcements, grades, passwords) will be shared through Canvas.
 
 **Prerequisites:** The course does not have formal prerequesites, but we describe background knowledge that will help you be successful in the course. Overall, we expect basic exposure to machine learning and basic programming skills, but do not require software engineering experience. 
 
@@ -86,77 +86,57 @@ Software engineering: Many students will have some software engineering experien
 
 Email us (se-ai@lists.andrew.cmu.edu) if you would like to further talk to us about prerequisites.
 
-**Remote teaching:** As per CMU decision, the Spring 2021 offering of this course will be taught remotely. While the instructors have experience teaching this course remotely in both summer and fall of 2020, we like to emphasize that *this is not a normal setting and we will try to be as accommodating as we can to different and difficult circumstances.* We will make an effort to be as inclusive and interactive as we can be and will support you in remote teamwork.
-
-As other software engineering courses, in-class discussions (e.g., about tradeoffs, case studies, and policies) are an important part of the learning experience.  Therefore, we would like that all students make an effort to attend class “live” regularly, rather than relying on recordings. Students who cannot attend live, for example due to time zone challenges, should reach out to the course staff. We plan to schedule a weekly discussion and office hour meeting with those students, where we discuss course content in small groups.
-
-For attending the lecture “live”, you will need a stable internet connection, a working audio setup, and a webcam. An external monitor is likely useful. The following format has worked well in the previous remote offerings:
-
-- We ask students to attend class via Zoom “live” rather than relying on recordings where possible.
-- We ask students to keep their camera on during class, because it provides a less anonymous and isolated experience and provides some feedback for the presenter. It is much easier and more natural to interact when the presenter can recognize nonverbal feedback, such as students nodding, looking confused, or raising their hand. You may use a virtual background for privacy if you wish.
-- We ask students to be able to participate in in-class discussions and in-class exercises through audio and through chat messages – see also participation grading below. We suggest that you remain muted by default unless you are sharing with the class or your breakout group. Feel free to unmute yourself to speak or raise your hand (physically on camera or using the zoom feature) to coordinate among multiple speakers.
-- We will have an open-book midterm during a lecture timeslot and project/homework presentations over Zoom.
-- We promise to never use any proctoring or attention-checking tools. Live participation and turned-on cameras are there to create a better and more inclusive learning experience, not to spy on you or force you to pay attention.
-
-We understand that this situation will not work equally for everybody. Not everybody will have a stable enough connection or a private setting to comfortably share their video. Not everybody will be able to attend every class session live. We understand these challenges and ask you to reach out to us if you need accommodations. We try to be as flexible as we can in this difficult situations, but would like to know about them.
-
-All synchronous classes will be recorded via Zoom so that students in this course (and only students in this course) who cannot attend the lectures can watch the class sessions. Breakout rooms will not be recorded. We will make the recordings available on request to accommodate difficult situations. Please note that you are not allowed to share these recordings. This is to protect your FERPA rights and those of your fellow students. 
-
 **Grading:** Evaluation will be based on the following distribution: 40% individual assignments, 30% group project, 10% midterm, 10% participation, 10% reading quizzes. No final exam.
 
 We strive for providing clear specifications and clear point breakdowns for all homework to set clear expectations and taking the guessing out of homework. We often give you choices to self-direct your learning, deciding what to work on and how to address a problem (e.g., we never prescribe a programming language and often give choices to answer a subset of possible questions). Clear specifications and point breakdowns allow you to intentionally decide to skip parts of assignments with clear upfront consequences. All parts will be graded pass/fail, no partial credit. For opportunities to redo work, see *resubmissions* below.
 
 For grading participation see below. Individual quizzes will be graded pass/fail for a good faith attempt at engaging with the material, see below.
 
-We expect the grade boundaries between C+ and B- at 81% and between B+ and A- at 91%.
+We expect the grade boundaries between C+ and B- to be at 81% and between B+ and A- at 91%.
 
-**Participation:** Design and engineering content requires active engagement with the material and discussions of judgment decisions on specific scenarios and cases. We strongly believe in in-class discussions and in-class exercises and want all students to participate, e.g., answering or asking questions in class through chat or audio, sharing own experiences, presenting results, or participating in in-class votes and surveys. We will give many opportunities for participation in every lecture and recitation. We take notes on participation throughout the semester and grade participation. Note that we do not consider mere passive attendance as participation, but only active engagement. We will provide feedback at mid-semester so you can check in on how you’re doing. Again, please talk to us if you need accommodations.
+**Participation:** Design and engineering content requires active engagement with the material and discussions of judgment decisions on specific scenarios and cases. We strongly believe in in-class discussions and in-class exercises and want all students to participate, e.g., answering or asking questions in class, sharing own experiences, presenting results, or participating in in-class votes and surveys. We will give many opportunities for participation in every lecture and recitation. We take notes on participation throughout the semester and grade participation. Note that we do not consider mere passive attendance as participation, but only active engagement. We will provide feedback at mid-semester so you can check in on how you’re doing. Again, please talk to us if you need accommodations.
 
 We assign participation grades as follows:
 
-* 100%: Participates actively at least once in most lectures through chat or audio
+* 100%: Participates actively at least once in most lectures
 * 100%: Participates actively in 25% of lectures and actively contributes to discussions in most recitations
 * 90%: Participates actively at least once in over half of the lectures
 * 70%: Participates actively at least once in 25% of the lectures
 * 40%: Participates actively at least once in at least 3 lectures or recitations.
 * 0%: No participation in the entire semester.
 
-For students who cannot attend live lectures or recitations, we will provide alternative ways of participating. 
-
 **Textbook and reading assignments:** We will be using Goeff Hulten's "*Building Intelligent Systems: A Guide to Machine Learning Engineering*" (ISBN: 1484234316) throughout much of the course. The library provides an [electronic copy](https://link-springer-com.proxy.library.cmu.edu/book/10.1007%2F978-1-4842-3432-7). In addition, we will provide additional supplementary readings, including blog posts and academic papers, throughout the semester.
 
-We will assign readings for most classes and post a corresponding quiz on Canvas that is due before class. Each quiz contains an open ended question that relates to the reading. We encourage to discuss answers to reading quizzes in small groups and submit a joint answer. Reading quizzes are graded pass/fail for a good-faith effort to engage with the question. 
+We are currently also working on a textbook of our own, which is available freely [online](https://ckaestne.medium.com/machine-learning-in-production-book-overview-63be62393581). We will not usually assign chapters from our own textbook, but offer those as optional supplementary reading.
 
-**Teamwork:** Teamwork is an essential part of this course and we will provide many additional opportunities to work with others to encourage interaction during the current pandemic. 
+We will assign readings for most classes and post a corresponding quiz on Canvas that is due before class. Each quiz contains an open ended question that relates to the reading. Reading quizzes are graded pass/fail for a good-faith effort to engage with the question. 
 
-The course contains a multi-milestone group project  to be done in teams of 3-5 students. Teams will be assigned by the instructor. We will help teams throughout the semester and cover some specific content on teamwork as part of the course. Peer rating will be performed for team assignments with regard to team citizenship (i.e., being active and cooperative members), following the procedure from [this article](https://www.cs.tufts.edu/~nr/cs257/archive/teaching/barbara-oakley/JSCL-collaboration.pdf).
+**Teamwork:** Teamwork is an essential part of this course. The course contains a multi-milestone group project  to be done in teams of 3-5 students. Teams will be assigned by the instructor. We will help teams throughout the semester and cover some specific content on teamwork as part of the course. Peer rating will be performed for team assignments with regard to team citizenship (i.e., being active and cooperative members), following the procedure from [this article](https://www.cs.tufts.edu/~nr/cs257/archive/teaching/barbara-oakley/JSCL-collaboration.pdf).
 
-In addition, we will provide the option to work together with one other student on individual assignments and reading quizzes. Pairing will be announced by the instructors and shuffled regularly throughout the semester. This is optional, you may decide to work alone on individual assignments and reading quizzes.
-
-**Late work policy and resubmissions:** We understand that studying during a pandemic is challenging and that some students have conflicting deadlines or are distracted by interviewing for jobs. We therefore build flexibility and a safety net directly into the rubric. If you need additional accommodations, please contact us.
+**Late work policy and resubmissions:** We understand that students will always have competing deadlines, unusual events, interviews for job searches, and other activities that compete with coursework. We therefore build flexibility and a safety net directly into the rubric. If you need additional accommodations, please contact us.
 
 In addition, we expect that the past/fail grading scheme without partial credit, may lead to harsh point deductions for missing parts of the requirements, so we provide a mechanism to resubmit work to regain lost points.
 
-Every student receives *7 tokens* that they can spend throughout the semester in the following ways:
+Every student receives *7 individual tokens* that they can spend throughout the semester in the following ways:
 
 * For each token a student can submit a homework assignment 1 day late (with 7 tokens a student can submit multiple homeworks one day late each or a single homework up to 7 days late).
-* For *three* tokens a student can improve or redo an individual homework assignment and resubmit. The earlier submission is discarded and the regraded assignment counts toward the final grade. Each homework can be resubmitted only once. Resubmissions can be made at any time in the semester up to the final project presentation (see schedule).
+* For *three* tokens a student can improve or redo an individual homework assignment and resubmit. The earlier submission is discarded and the regraded assignment counts toward the final grade. Resubmissions can be made at any time in the semester up to the final project presentation (see schedule). – Note that this technically allows to blow the original deadline and submit a homework arbitrarily late for three tokens.
 * For one token a student can submit a reading quiz late (any time before the final presentation) or resubmit a graded reading quiz.
 * Remaining tokens at the end of the semester are counted as one participation day each.
 
 If a student runs out of tokens, late individual assignments receive a penalty of 15% per day.
 
-Every team independently receives 7 tokens that they can spend for extensions of any milestone deadline (1 token each, except final presentation deadline) or to resubmit any milestone (3 tokens each, only once per milestone, resubmitted any time before the final presentation). If a team runs of of tokens, late submissions in group assignments will receive feedback but no credit.
+Every team independently receives *7 team tokens* that they can spend for extensions of any milestone deadline (1 token each, except final presentation deadline) or to resubmit any milestone (3 tokens each, resubmitted any time before the final presentation). If a team runs of of tokens, late submissions in group assignments will receive feedback but no credit.
 
-Exceptions to this policy will be made at discretion of the instructor in important circumstances, almost always involving a family or medical emergency — you can ask your academic advisor or the Dean of Student Affairs requesting the exception on your behalf. For accommodations related to remote teaching, we try to be flexible: please contact the instructors. Please communicate also with your team about potential timing issues.
+Exceptions to this policy will be made at discretion of the instructor in important circumstances, almost always involving a family or medical emergency and an email from your advisor — you can ask your academic advisor or the Dean of Student Affairs requesting the exception on your behalf. Please communicate also with your team about potential timing issues.
 
-**Communication:** We make announcements through Canvas. We answer email, Canvas messages and discussion posts, and monitor Slack, which may all be used for clarifying homework assignments and other interactions. We suggest to monitor slack for interactions with your teams. Email us for appointments.
+**Communication:** We make announcements through Canvas. We answer email, Canvas messages, and monitor Slack, which may all be used for clarifying homework assignments and other interactions. We suggest to monitor slack for interactions with your teams. Email us for appointments.
 
 **Time management:** This is a 12-unit course, and it is our intention to manage it so that you spend close to 12 hours a week on the course, on average. In general, 4 hours/week will be spent in class and 1-2 hours on readings and reading quizzes, and 6-7 hours on assignments. Notice that much homework is done in groups, so please account for the overhead and decreased time flexibility that comes with groupwork. Please give the course staff feedback if the time the course is taking for you differs significantly from our intention.
 
 **Writing:** Describing tradeoffs among decisions and communication with stakeholders from other backgrounds are key aspects of this class. Many homework assignments have a component that requires discussing issues in written form or reflecting about experiences. To practice writing skills, the Global Communications Center (GCC) offers one-on-one help for students, along with workshops. The instructors are also happy to provide additional guidance if requested.
 
-**Academic honesty and collaboration:** The usual policies apply, especially the University Policy on Academic Integrity. Many assignments will be done in groups or may be done in pairs. We expect that group members collaborate with one another, but that groups work independently from other groups, not exchanging results with other groups. Within groups and pairs, we expect that you are honest about your contribution to the group's work. This implies not taking credit for others' work and not covering for team members that have not contributed to the team. Otherwise, our expectations regarding academic honestly and collaboration for group and pair work are the same as for individual work, substituting elevated to the level of "group."
+**Academic honesty and collaboration:** The usual policies apply, especially the University Policy on Academic Integrity. Many parts of the work will be done in groups. We expect that group members collaborate with one another, but that groups work independently from other groups, not exchanging results with other groups. Within groups and pairs, we expect that you are honest about your contribution to the group's work. This implies not taking credit for others' work and not covering for team members that have not contributed to the team. Otherwise, our expectations regarding academic honestly and collaboration for group and pair work are the same as for individual work, substituting elevated to the level of "group."
 The rest of this academic honesty and collaboration content is taken from the policy used in 15-214, which we reuse almost directly (with minor modifications, and attribution).
 "You may not copy any part of a solution to a problem that was written by another student, or was developed together with another student, or was copied from another unauthorized source such as the Internet. You may not look at another student's solution, even if you have completed your own, nor may you knowingly give your solution to another student or leave your solution where another student can see it.
 Here are some examples of behavior that are inappropriate:
