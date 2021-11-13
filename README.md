@@ -6,14 +6,15 @@
 
 [![Course Poster](poster_small.jpg "Course Poster")](poster.jpg)
 
-In 2021, the class will be offered in the Spring semester. The Spring 2021 offering, like Fall 2020, does not have formal prerequisites, but expects some familiarity with machine learning concepts and basic programming skills. 
+In 2022, the class will be offered in the Spring semester. The Spring 2022 offering, like Spring 2021, does not have formal prerequisites, but expects some familiarity with machine learning concepts and basic programming skills. Going forward, we plan to offer the course every spring semester.
 
 See the specific offering of the course you are interested in:
 
-* Fall 2019 (initial offering, complete slides and assignments): [F2019 website](https://ckaestne.github.io/seai/F2019) and [F2019 GitHub branch](https://github.com/ckaestne/seai/tree/F2019).
-* Summer 2020 (next offering):  [S2020 website](https://ckaestne.github.io/seai/S2020) and [S2020 GitHub branch](https://github.com/ckaestne/seai/tree/S2020)
+* Fall 2019: [F2019 website](https://ckaestne.github.io/seai/F2019) and [F2019 GitHub branch](https://github.com/ckaestne/seai/tree/F2019).
+* Summer 2020 (with video recordings):  [S2020 website](https://ckaestne.github.io/seai/S2020) and [S2020 GitHub branch](https://github.com/ckaestne/seai/tree/S2020)
 * Fall 2020: [F2020 website](https://ckaestne.github.io/seai/F2020) and [F2020 GitHub branch](https://github.com/ckaestne/seai/tree/F2020)
-* Spring 2021: tdb
+* Spring 2021: [S2021 website](https://ckaestne.github.io/seai/S2021) and [S2021 GitHub branch](https://github.com/ckaestne/seai/tree/S2021)
+* Spring 2022: [S2022 website](https://ckaestne.github.io/seai/S2022) and [S2022 GitHub branch](https://github.com/ckaestne/seai/tree/S2022)
 
 For researchers, educators, or others interested in this topic, we share all course material, including slides and assignments, under a creative commons license on GitHub (https://github.com/ckaestne/seai/) and have recently published an article describing the rationale and the design of this course: [Teaching Software Engineering for AI-Enabled Systems](https://arxiv.org/abs/2001.06691). Video recordings of the Summer 2020 offering are online on the [course page](https://ckaestne.github.io/seai/S2020/#course-content). We would be happy to see this course or a similar version taught somewhere else. See also an [annotated bibliography](https://github.com/ckaestne/seaibib) on the topic.
 
@@ -61,14 +62,14 @@ In addition, students will gain familiarity with production-quality infrastructu
 
 ## Logistics and People
 
-See the specific offering for details: [Fall 2019](https://ckaestne.github.io/seai/F2019), [Summer 2020](https://ckaestne.github.io/seai/S2020)  or [Fall 2020](https://ckaestne.github.io/seai/F2020)
+See the specific offering for details: [Fall 2019](https://ckaestne.github.io/seai/F2019), [Summer 2020](https://ckaestne.github.io/seai/S2020), [Fall 2020](https://ckaestne.github.io/seai/F2020), [Spring 2021](https://ckaestne.github.io/seai/S2021) or [Spring 2022](https://ckaestne.github.io/seai/S2022)
 
 
 ## Course content
 
-For a description of topics covered and course structure, see [learning goals](https://github.com/ckaestne/seai/blob/S2020/learning_goals.md).
+For a description of topics covered and course structure, see [learning goals](https://github.com/ckaestne/seai/blob/S2022/learning_goals.md).
 
-The course content evolves from semester to semester. Below is the schedule from the Summer 2020 offering. See also [Fall 2019](https://ckaestne.github.io/seai/F2019) and [Fall 2020](https://ckaestne.github.io/seai/F2020).
+The course content evolves from semester to semester. Below is the schedule from the Summer 2020 offering. See the webpages for specific semesters above.
 
 
 | Date  | Topic | Reading | Assignment due |
@@ -117,7 +118,7 @@ The course content evolves from semester to semester. Below is the schedule from
 
 ## Course Syllabus and Policies
 
-see [Fall 2019](https://ckaestne.github.io/seai/F2019), [Summer 2020](https://ckaestne.github.io/seai/S2020), [Fall 2020](https://ckaestne.github.io/seai/F2020), or  [Spring 2021](https://ckaestne.github.io/seai/S2021) for details.
+See the web pages for the specific semester for details.
 
 
 
