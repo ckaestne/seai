@@ -1,10 +1,10 @@
-# Machine Learning in Production / AI Engineering (17-445/17-645/11-695)
+# Machine Learning in Production / AI Engineering (17-445/17-645/17-745/11-695)
 
-*Formerly **Software Engineering for AI-Enabled Systems (SE4AI) **, CMU course that covers how to build, deploy, assure, and maintain applications with machine-learned models. Covers **responsible AI** (safety, security, fairness, explainability) and **MLOps**.*
+*Formerly **Software Engineering for AI-Enabled Systems (SE4AI)**, CMU course that covers how to build, deploy, assure, and maintain applications with machine-learned models. Covers **responsible AI** (safety, security, fairness, explainability, …) and **MLOps**.*
 
 ***
 
-[![Course Poster](poster_small.jpg "Course Poster")](poster.jpg)
+![Course topics overview](overview.svg "Course topics overview")
 
 In 2022, the class will be offered in the Spring semester. The Spring 2022 offering, like Spring 2021, does not have formal prerequisites, but expects some familiarity with machine learning concepts and basic programming skills. Going forward, we plan to offer the course every spring semester.
 
@@ -113,14 +113,12 @@ The course content evolves from semester to semester. Below is the schedule from
 
 
 
-
-![Course topics overview](overview.png "Course topics overview")
-
 ## Course Syllabus and Policies
 
 See the web pages for the specific semester for details.
 
 
+Students taking the PhD version of this class (17-745) will replace two individual assignments with a research project instead, resulting in a draft of a paper of at least workshop quality.
 
 ## Related Courses
 
