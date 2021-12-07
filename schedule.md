@@ -4,5 +4,44 @@
 
 | Date  | Topic | Reading | Assignment due |
 | -     | -     | -       | -              |
-| tbd  |       |         |                |
-
+| Wed, Jan 19 | Introduction and Motivation  | |  |
+| Fri, Jan 21 | ![Recitation](https://img.shields.io/badge/-rec-yellow.svg) Collaboration: Slack, Git, issue trackers | |  |
+| Mon, Jan 24 | From Models to AI-Enabled Systems (Systems Thinking)  | |  |
+| Wed, Jan 26 | Model Quality and Unit Testing 1 | | I1: Case Study |
+| Fri, Jan 28 | ![Recitation](https://img.shields.io/badge/-rec-yellow.svg) Stream processing: Apache Kafka | |  |
+| Mon, Jan 31 | Model Quality and Unit Testing 2 | |  |
+| Wed, Feb 02 | Goals and Success Measures for AI-Enabled Systems | |  |
+| Fri, Feb 04 | ![Recitation](https://img.shields.io/badge/-rec-yellow.svg) Unit testing / Measurement | |  |
+| Mon, Feb 07 | Business, Risk, and Planning for Mistakes 1 | |  |
+| Wed, Feb 09 | Business, Risk, and Planning for Mistakes 2 | | M1: Modeling and First Deployment |
+| Fri, Feb 11 | ![Recitation](https://img.shields.io/badge/-rec-yellow.svg) Requirements/Risk analysis | |  |
+| Mon, Feb 14 | Tradeoffs among Modeling Techniques | |  |
+| Wed, Feb 16 | Architectural Design for AI-enabled Systems | |  |
+| Fri, Feb 18 | ![Recitation](https://img.shields.io/badge/-rec-yellow.svg) Architecture | |  |
+| Mon, Feb 21 | Quality Assessment in Production | |  |
+| Wed, Feb 23 | Data Quality | | I2: Requirements and Architecture |
+| Fri, Feb 25 | ![Recitation](https://img.shields.io/badge/-rec-yellow.svg) Continuous Integration: Jenkins | |  |
+| Mon, Feb 28 | Infrastructure Quality, Deployment, and Operations | |  |
+| Wed, Mar 02 | **Midterm** | |  |
+| Fri, Mar 04 | ![Break](https://img.shields.io/badge/-break-red.svg) Midsemester break & spring break | |  |
+| Mon, Mar 14 | Managing and Processing Large Datasets | |  |
+| Wed, Mar 16 | Process & Technical Debt | | I3: Open Source Tools |
+| Fri, Mar 18 | ![Recitation](https://img.shields.io/badge/-rec-yellow.svg) Containers: Docker | |  |
+| Mon, Mar 21 | Human AI Interaction | |  |
+| Wed, Mar 23 | Intro to Ethics + Fairness | |  |
+| Fri, Mar 25 | ![Recitation](https://img.shields.io/badge/-rec-yellow.svg) Monitoring: Prometheus, Grafana | |  |
+| Mon, Mar 28 | Building Fairer AI-Enabled System 1 | |  |
+| Wed, Mar 30 | Building Fairer AI-Enabled System 2 | | M2: Infrastructure Quality |
+| Fri, Apr 01 | ![Recitation](https://img.shields.io/badge/-rec-yellow.svg) Fairness | |  |
+| Mon, Apr 04 | Explainability & Interpretability 1  | |  |
+| Wed, Apr 06 | Explainability & Interpretability 2 | |  |
+| Fri, Apr 08 | ![Break](https://img.shields.io/badge/-break-red.svg) Spring carnival, no classes | |  |
+| Mon, Apr 11 | Versioning, Provenance, and Reproducability | |  |
+| Wed, Apr 13 | Security and Privacy | | M3: Monitoring and CD |
+| Fri, Apr 15 | ![Recitation](https://img.shields.io/badge/-rec-yellow.svg) Threat modeling | |  |
+| Mon, Apr 18 | Safety 1 | |  |
+| Wed, Apr 20 | Safety 2 | | I4: Fairness |
+| Fri, Apr 22 | ![Recitation](https://img.shields.io/badge/-rec-yellow.svg) tbd. | |  |
+| Mon, Apr 25 | Fostering Interdisciplinary Teams | |  |
+| Wed, Apr 27 | Summary and Review | | M4: Security and Feedback Loops |
+| tbd | **Final Project Presentations** | | Final report |
