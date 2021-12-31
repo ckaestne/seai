@@ -51,8 +51,6 @@ Open to undergraduate and graduate students meeting the prerequisites.
 
 ### Spring 2022
 
-Designed for students with a data science background (see prerequisites below)
-
 Lectures Monday/Wednesday 1:25-2:45pm, in person, TEP 1101A
 
 Recitations Friday 10:10-11:00am and 11:15-12:05
