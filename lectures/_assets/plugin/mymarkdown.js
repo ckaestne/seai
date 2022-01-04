@@ -6,7 +6,7 @@ var mermaidCounter = 0
 
 /** rendering mermaid code */
 renderer.rcode = renderer.code;
-renderer.code=function( code,  infostring,  escaped) { 
+/* renderer.code=function( code,  infostring,  escaped) { 
 	// console.log("code("+code+","+infostring+","+escaped+")"); 
 	if (infostring==="mermaid") {
 		const b64 = btoa(code)
@@ -26,6 +26,15 @@ renderer.code=function( code,  infostring,  escaped) {
 			r= "<div class='error'>failed rendering dot graph: "+error+"</div>"
 		}
 		return r
+	}
+	return renderer.rcode(code,infostring,escaped)
+}; */
+
+renderer.code=function( code,  infostring,  escaped) { 
+	// console.log("code("+code+","+infostring+","+escaped+")"); 
+	if (infostring==="mermaid") {
+		mermaidCounter++
+		return mermaid.render('mermaid'+mermaidCounter,code)
 	}
 	return renderer.rcode(code,infostring,escaped)
 };
