@@ -438,6 +438,7 @@ Learning goals:
 References:
 
 * 🕮 Hulten, Geoff. "Building Intelligent Systems: A Guide to Machine Learning Engineering." (2018), Chapters 5 (Components of Intelligent Systems) and Chapter 7.
+* 🗎 Yang, Qian. "[The role of design in creating machine-learning-enhanced user experience](https://www.aaai.org/ocs/index.php/SSS/SSS17/paper/viewPaper/15363)." In *2017 AAAI Spring Symposium Series*. 2017.
 * 🗎 Amershi, Saleema, Dan Weld, Mihaela Vorvoreanu, Adam Fourney, Besmira Nushi, Penny Collisson, Jina Suh et al. "[Guidelines for Human-AI Interaction](https://www.microsoft.com/en-us/research/uploads/prod/2019/01/Guidelines-for-Human-AI-Interaction-camera-ready.pdf)." In *Proceedings of the 2019 CHI conference on human factors in computing systems*, pp. 1-13. 2019.
 * 🗎 Kocielnik, Rafal, Saleema Amershi, and Paul N. Bennett. "[Will you accept an imperfect AI? Exploring designs for adjusting end-user expectations of AI systems](http://library.usc.edu.ph/ACM/CHI2019/1proc/paper411.pdf)." In *Proceedings of the 2019 CHI Conference on Human Factors in Computing Systems*, pp. 1-14. 2019.
 * 🗎 Kulesza, Todd, Margaret Burnett, Weng-Keen Wong, and Simone Stumpf. "Principles of explanatory debugging to personalize interactive machine learning." In *Proceedings of the 20th international conference on intelligent user interfaces*, pp. 126-137. 2015.
