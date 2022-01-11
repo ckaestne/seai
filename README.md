@@ -82,7 +82,20 @@ Programming: The course has a substantial programming component, especially in t
 
 Software engineering: Many students will have some software engineering experience beyond basic programming skills from working in larger software teams or on larger software projects, for example experience with requirements engineering, software design, software testing, distributed systems, continuous deployment, or managing teams. No such experience is expected as a prerequisite; we will cover these topics in the course.
 
-Email us (se-ai@lists.andrew.cmu.edu) if you would like to further talk to us about prerequisites.
+Email the instructors if you would like to further talk to us about prerequisites.
+
+**Remote teaching and lecture recordings:** We hope to teach most of the semester in person, but as per CMU policy the first two weeks of the semester will be remote, which also includes the early phases of the team project. We acknowledge that this teaching modality and the switch of modalities may cause additional challenges and are happy to explore accommodation if requested.
+
+We expect students to attend remote lectures synchronously and participate in in-class interactions and activities through zoom. We will record all  lectures (but not breakout sessions), but only release them on a case-by-case basis as accommodation. The lecture recordings may not be of high quality or even incomplete -- they are only intended as a last resort backup. Typical reasons for sharing individual lecture recordings include medical issues (physical and mental health, including quarantining while teaching in-person) and job/internship interviews that cannot be scheduled otherwise. Please email/slack the instructors with requests for lecture recordings. When we selectively share recordings you are not allowed to further distribute these recordings. This is to protect your FERPA rights and those of your fellow students.
+
+As other software engineering courses, in-class discussions (e.g., about tradeoffs, case studies, and policies) are an important part of the learning experience.  During remote lectures we strongly recommend the following format that has worked well in the past:
+
+- We expect students to attend class via Zoom synchronously ("live") rather than relying on recordings, unless granted an accommodation.
+- We ask students to keep their camera on during class, because it provides a less anonymous and isolated experience and provides some feedback for the presenter. It is much easier and more natural to interact when the presenter can recognize nonverbal feedback, such as students nodding, looking confused, or raising their hand. You may use a virtual background for privacy if you wish.
+- We ask students to be able to participate in in-class discussions and in-class exercises through chat messages and sometimes through audio. We suggest that you remain muted by default unless you are sharing with the class or your breakout group. Feel free to unmute yourself to speak or raise your hand (physically on camera or using the zoom feature) to coordinate among multiple speakers.
+- We promise to never use any proctoring or attention-checking tools. Live participation and turned-on cameras are there to create a better and more inclusive learning experience, not to spy on you or force you to pay attention.
+
+We understand that this situation will not work equally for everybody. Not everybody will have a stable enough connection or a private setting to comfortably share their video. We understand these challenges and ask you to reach out to us if you need accommodations. We try to be as flexible as we can in this difficult situations, but would like to know about them.
 
 **Grading:** Evaluation will be based on the following distribution: 40% individual assignments, 30% group project, 10% midterm, 10% participation, 10% reading quizzes. No final exam.
 
