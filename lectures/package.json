@@ -18,5 +18,8 @@
     "marked": "^0.7.0",
     "reveal-md": "github:ckaestne/reveal-md#master"
   },
-  "license": "CC-BY-SA-4.0"
+  "license": "CC-BY-SA-4.0",
+  "dependencies": {
+    "puppeteer": "^13.0.1"
+  }
 }
