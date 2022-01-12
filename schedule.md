@@ -4,44 +4,44 @@
 
 | Date  | Topic | Reading | Assignment due |
 | -     | -     | -       | -              |
-| Wed, Jan 19 | Introduction and Motivation  | |  |
+| Wed, Jan 19 | Introduction and Motivation ([book chapter](https://ckaestne.medium.com/introduction-to-machine-learning-in-production-eef7427426f1)) | |  |
 | Fri, Jan 21 | ![Recitation](https://img.shields.io/badge/-rec-yellow.svg) Collaboration: Slack, Git, issue trackers | |  |
-| Mon, Jan 24 | From Models to AI-Enabled Systems (Systems Thinking)  | |  |
-| Wed, Jan 26 | Model Quality and Unit Testing 1 | | I1: Case Study |
+| Mon, Jan 24 | From Models to AI-Enabled Systems (Systems Thinking) ([book chapter](https://ckaestne.medium.com/machine-learning-in-production-from-models-to-systems-e1422ec7cd65)) | |  |
+| Wed, Jan 26 | Model Quality and Unit Testing 1 ([book chapter 1](https://ckaestne.medium.com/model-quality-defining-correctness-and-fit-a8361b857df), [book chapter 2](https://ckaestne.medium.com/model-quality-measuring-prediction-accuracy-38826216ebcb)) | | [I1: Case Study](https://github.com/ckaestne/seai/blob/S2022/assignments/I1_case_study.md) |
 | Fri, Jan 28 | ![Recitation](https://img.shields.io/badge/-rec-yellow.svg) Stream processing: Apache Kafka | |  |
-| Mon, Jan 31 | Model Quality and Unit Testing 2 | |  |
+| Mon, Jan 31 | Model Quality and Unit Testing 2 ([book chapter](https://ckaestne.medium.com/model-quality-slicing-capabilities-invariants-and-other-testing-strategies-27e456027bd)) | |  |
 | Wed, Feb 02 | Goals and Success Measures for AI-Enabled Systems | |  |
 | Fri, Feb 04 | ![Recitation](https://img.shields.io/badge/-rec-yellow.svg) Unit testing / Measurement | |  |
 | Mon, Feb 07 | Business, Risk, and Planning for Mistakes 1 | |  |
-| Wed, Feb 09 | Business, Risk, and Planning for Mistakes 2 | | M1: Modeling and First Deployment |
+| Wed, Feb 09 | Business, Risk, and Planning for Mistakes 2 | | [M1: Modeling and First Deployment](https://github.com/ckaestne/seai/blob/S2022/assignments/project.md#milestone-1-recommendation-model-and-first-deployment) |
 | Fri, Feb 11 | ![Recitation](https://img.shields.io/badge/-rec-yellow.svg) Requirements/Risk analysis | |  |
 | Mon, Feb 14 | Tradeoffs among Modeling Techniques | |  |
 | Wed, Feb 16 | Architectural Design for AI-enabled Systems | |  |
 | Fri, Feb 18 | ![Recitation](https://img.shields.io/badge/-rec-yellow.svg) Architecture | |  |
-| Mon, Feb 21 | Quality Assessment in Production | |  |
-| Wed, Feb 23 | Data Quality | | I2: Requirements and Architecture |
+| Mon, Feb 21 | Quality Assessment in Production ([book chapter](https://ckaestne.medium.com/quality-assurance-in-production-for-ml-enabled-systems-4d1b3442316f)) | |  |
+| Wed, Feb 23 | Data Quality ([book chapter](https://ckaestne.medium.com/quality-assurance-in-production-for-ml-enabled-systems-4d1b3442316f)) | | [I2: Requirements and Architecture](https://github.com/ckaestne/seai/blob/S2022/assignments/I2_requirements_architecture.md) |
 | Fri, Feb 25 | ![Recitation](https://img.shields.io/badge/-rec-yellow.svg) Continuous Integration: Jenkins | |  |
 | Mon, Feb 28 | Infrastructure Quality, Deployment, and Operations | |  |
 | Wed, Mar 02 | **Midterm** | |  |
 | Fri, Mar 04 | ![Break](https://img.shields.io/badge/-break-red.svg) Midsemester break & spring break | |  |
 | Mon, Mar 14 | Managing and Processing Large Datasets | |  |
-| Wed, Mar 16 | Process & Technical Debt | | I3: Open Source Tools |
+| Wed, Mar 16 | Process & Technical Debt (book chapter 1, [book chapter 2](https://ckaestne.medium.com/technical-debt-in-machine-learning-systems-62035b82b6de)) | | [I3: Open Source Tools](https://github.com/ckaestne/seai/blob/S2022/assignments/I3_se4ai_tools.md) |
 | Fri, Mar 18 | ![Recitation](https://img.shields.io/badge/-rec-yellow.svg) Containers: Docker | |  |
 | Mon, Mar 21 | Human AI Interaction | |  |
-| Wed, Mar 23 | Intro to Ethics + Fairness | |  |
+| Wed, Mar 23 | Intro to Ethics + Fairness ([book chapter](https://ckaestne.medium.com/responsible-ai-engineering-c97e44e6c57a)) | |  |
 | Fri, Mar 25 | ![Recitation](https://img.shields.io/badge/-rec-yellow.svg) Monitoring: Prometheus, Grafana | |  |
 | Mon, Mar 28 | Building Fairer AI-Enabled System 1 | |  |
-| Wed, Mar 30 | Building Fairer AI-Enabled System 2 | | M2: Infrastructure Quality |
+| Wed, Mar 30 | Building Fairer AI-Enabled System 2 | | [M2: Infrastructure Quality](https://github.com/ckaestne/seai/blob/S2022/assignments/project.md#milestone-2-model-and-infrastructure-quality) |
 | Fri, Apr 01 | ![Recitation](https://img.shields.io/badge/-rec-yellow.svg) Fairness | |  |
-| Mon, Apr 04 | Explainability & Interpretability 1  | |  |
-| Wed, Apr 06 | Explainability & Interpretability 2 | |  |
+| Mon, Apr 04 | Explainability & Interpretability ([book chapter](https://ckaestne.medium.com/interpretability-and-explainability-a80131467856)) | |  |
+| Wed, Apr 06 | Transparency and Accountability ([book chapter](https://ckaestne.medium.com/transparency-and-accountability-in-ml-enabled-systems-f8ed0b6fd183)) | |  |
 | Fri, Apr 08 | ![Break](https://img.shields.io/badge/-break-red.svg) Spring carnival, no classes | |  |
-| Mon, Apr 11 | Versioning, Provenance, and Reproducability | |  |
-| Wed, Apr 13 | Security and Privacy | | M3: Monitoring and CD |
+| Mon, Apr 11 | Versioning, Provenance, and Reproducability ([book chapter](https://ckaestne.medium.com/versioning-provenance-and-reproducibility-in-production-machine-learning-355c48665005)) | |  |
+| Wed, Apr 13 | Security and Privacy | | [M3: Monitoring and CD](https://github.com/ckaestne/seai/blob/S2022/assignments/project.md#milestone-3-monitoring-and-continuous-deployment) |
 | Fri, Apr 15 | ![Recitation](https://img.shields.io/badge/-rec-yellow.svg) Threat modeling | |  |
 | Mon, Apr 18 | Safety 1 | |  |
-| Wed, Apr 20 | Safety 2 | | I4: Fairness |
+| Wed, Apr 20 | Safety 2 | | [I4: Fairness](https://github.com/ckaestne/seai/blob/S2022/assignments/I4_fairness.md) |
 | Fri, Apr 22 | ![Recitation](https://img.shields.io/badge/-rec-yellow.svg) tbd. | |  |
 | Mon, Apr 25 | Fostering Interdisciplinary Teams | |  |
-| Wed, Apr 27 | Summary and Review | | M4: Security and Feedback Loops |
-| tbd | **Final Project Presentations** | | Final report |
+| Wed, Apr 27 | Summary and Review | | [M4: Security and Feedback Loops](https://github.com/ckaestne/seai/blob/S2022/assignments/project.md#milestone-4-drift-and-feedback-loops) |
+| tbd | **Final Project Presentations** | | [Final report](https://github.com/ckaestne/seai/blob/S2022/assignments/project.md#final-report-and-presentation) |
