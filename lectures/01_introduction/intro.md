@@ -1,7 +1,7 @@
 ---
 author: Eunsuk Kang & Christian Kaestner
 title: "17-445: Motivation, Syllabus, and Introductions"
-semester: Spring 2021
+semester: Spring 2022
 footer: "17-445 Machine Learning in Production / AI Engineering, Eunsuk Kang & Christian Kaestner"
 license: Creative Commons Attribution 4.0 International (CC BY 4.0)
 ---  
@@ -11,19 +11,19 @@ license: Creative Commons Attribution 4.0 International (CC BY 4.0)
 
 ## Motivation, Syllabus, and Introductions
 
-Spring 2021, Eunsuk Kang & Christian Kaestner
+Spring 2022, Eunsuk Kang & Christian Kaestner
 
 
 ---
 
-# Lecture Logistics during a Pandemic 
+# We are back online :(
 
 If you can hear me, open the participant panel in Zoom and check "yes"
 
 ![Zoom interface](zoomvote.png)
 
 ----
-## First of: This is not normal. We understand.
+## This is not normal. We understand.
 
 ![Fire](https://www.abc27.com/wp-content/uploads/sites/55/2020/08/AP20232111894684.jpg)
 <!-- .element: class="stretch" -->
@@ -32,14 +32,14 @@ If you can hear me, open the participant panel in Zoom and check "yes"
 Note: Picture AP Photo/Noah Berger, https://www.abc27.com/news/thats-2020-photographers-california-wildfire-image-a-sign-of-the-times/
 
 ----
-## First of: This is not normal. We understand.
+## This is not normal. We understand.
 
 Expect:
 * Internet and bandwidth issues
-* Timezone issues
+* Timezone issues?
 * Distractions -- parents, siblings, pets
 * Feeling isolated, feeling overwhelmed
-* Many additional sources of stress
+* Additional sources of stress
 * Hard time dealing with -gestures widely- *everything*...
 
 *Talk to us about accommodations of any kind*
@@ -54,10 +54,17 @@ Expect:
 * Use chat, "raise hand" feature, or just speak
 * If possible, keep camera on, muted by default
 * Set preferred name in Zoom
-* If possible, attend lecture and recitation live (recordings and early-morning office hours as backup)
+* Synchronous "live" attendance only
 * 
 * Suggestion: Have chat and participant list open, maybe separate window for gallery view for faces, second monitor highly recommended
 * **Contact us for accommodations!**
+
+
+----
+## Catastrophic Success
+
+![Crowd](crowd.jpg)
+
 
 ----
 ## Personal Connection
@@ -76,8 +83,8 @@ Expect:
 
 ## Learning Goals
 
-* Understand how AI components are parts of larger systems
-* Illustrate the challenges in engineering an AI-enabled system beyond accuracy
+* Understand how ML components are parts of larger systems
+* Illustrate the challenges in engineering an ML-enabled system beyond accuracy
 * Explain the role of specifications and their lack in machine learning and the relationship to deductive and inductive reasoning
 * Summarize the respective goals and challenges of software engineers vs data scientists
 * Explain the concept and relevance of "T-shaped people"
@@ -88,7 +95,7 @@ Expect:
 
 This class captures a rapidly evolving field. 
 
-Many experiments for online teaching.
+We are scaling from 30 to 150 students. Expect some friction.
 
 We are software engineers.
 
@@ -136,13 +143,19 @@ Idea: Let's commercialize the software and sell to academics and conference orga
 
 ----
 
-## Likely challenges in building commercial product?
+## Short Breakout
 
-* Think about 2 challenges that the team will likely focus when turning their research into *a product* (business, development, deployment, operation)
-* At least one challenge should not be about learning a good ML model, but about *building a product*
-* Everybody, **type 2 likely challenges in the chat but *do not send them yet*. Vote "yes" when done.**
+**Likely challenges in building commercial product?**
 
-<!-- discussion -->
+* Think about challenges that the team will likely focus when turning their research into *a product*:
+  * One machine-learning challenge
+  * One engineering challenge in building the product
+  * One challenge from operating and updating the product
+  * One team or management challenge
+  * One business challenge
+  * One safety or ethics challenge
+
+* Fill out one form per team and meet back here in 8 minutes to share suggestions
 
 ----
 
@@ -155,14 +168,16 @@ Idea: Let's commercialize the software and sell to academics and conference orga
 ## ML in a Production System
 
 
-![Architecture diagram of transcription service; many components, not just ML](transcriptionarchitecture.png)
+![Architecture diagram of transcription service; many components, not just ML](transcriptionarchitecture.svg)
+<!-- .element: class="plain" -->
 
 
 ----
 ## ML in a Production System
 
 
-![Architecture diagram of transcription service; many components, not just ML](transcriptionarchitecture2.png)
+![Architecture diagram of transcription service; many components, not just ML](transcriptionarchitecture2.svg)
+<!-- .element: class="plain" -->
 
 
 ----
@@ -170,6 +185,7 @@ Idea: Let's commercialize the software and sell to academics and conference orga
 ![Screenshot of Temi transcription service](temi.png)
 
 Notes: Highlights challenging fragments. Can see what users fix inplace to correct. Star rating for feedback.
+
 
 ----
 
@@ -185,7 +201,7 @@ Notes: Highlights challenging fragments. Can see what users fix inplace to corre
         <text x=570 y=240 dominant-baseline="middle" text-anchor="middle">Engineers</text>
 </svg>
 
-and Domain specialists + Operators + Business team + Project managers + Designers, UI Experts + Safety, security specialists + Lawyers + Social scientists + ...
+and Data engineers + Domain specialists + Operators + Business team + Project managers + Designers, UI Experts + Safety, security specialists + Lawyers + Social scientists + ...
 
 ----
 ## Data scientist
@@ -212,6 +228,8 @@ and Domain specialists + Operators + Business team + Project managers + Designer
 
 ## Likely collaboration challenges?
 
+* Everybody, **type one or two likely collaboration challenges in the chat but *do not send them yet*. Vote "yes" when done.**
+
 <!-- discussion -->
 
 
@@ -227,6 +245,8 @@ and Domain specialists + Operators + Business team + Project managers + Designer
 ----
 
 ![Unicorns](roles_venn.svg)
+<!-- .element: class="plain" -->
+
 
 <!-- references -->
 By Steven Geringer, via Ryan Orban. [Bridging the Gap Between Data Science & Engineer: Building High-Performance Teams](https://www.slideshare.net/ryanorban/bridging-the-gap-between-data-science-engineer-building-highperformance-teams/3-Software_Engineer_Data_Engineer_Data). 2016
@@ -238,6 +258,8 @@ By Steven Geringer, via Ryan Orban. [Bridging the Gap Between Data Science & Eng
 *Broad-range generalist + Deep expertise*
 
 ![T-Shaped](tshaped.png)
+<!-- .element: class="plain" -->
+
 
 <!-- reference -->
 Figure: Jason Yip. [Why T-shaped people?](https://medium.com/@jchyip/why-t-shaped-people-e8706198e437). 2018
@@ -250,8 +272,6 @@ Figure: Jason Yip. [Why T-shaped people?](https://medium.com/@jchyip/why-t-shape
 Example:
 * Basic skills of software engineering, business, distributed computing, and communication
 * Deep skills in deep neural networks (technique) and medical systems (domain)
-
-
 
 
 ----
@@ -309,17 +329,19 @@ Example:
 
 # Syllabus and Class Structure
 
-11-695/17-445/17-645/17-745, Spring 2021, 12 units
+11-695/17-445/17-645/17-745, Spring 2022, 12 units
 
-Monday/Wednesdays 2:20-3:40pm Eastern Time, here on Zoom
+Monday/Wednesdays 1:25-2:45pm
 
-Recitation Fridays 10:20-11:20am Eastern Time, on Zoom
+Recitation Fridays 10:10 / 11:15am
 
 ----
 
 ## Instructors
 
-Eunsuk Kang, Christian Kaestner, Kartik Ramesh Iyer
+Christian Kaestner, Eunsuk Kang
+
+Luke Dramko, Nadia Nahar, Sreenidhi Sundaram, Tasheena Narraidoo, Xuchen Zhang
 
 < brief introductions >
 
@@ -331,7 +353,7 @@ Email to us or ping us on slack (invite link on Canvas)
 
 Announcements through canvas
 
-No fixed office hours (other than for time-zone accommodations), but will always stick around after lecture and recitation and we will always try to be available for extra meetings within 24h weekdays.
+No fixed office hours, but will always stick around after lecture and recitation and we will always try to be available for extra meetings within 24h on weekdays.
 
 Welcome to ask questions publicly on Canvas or Slack.
 
@@ -390,6 +412,7 @@ Materials on GitHub. Pull requests encouraged!
 ----
 
 ![Class Overview](overview.svg)
+<!-- .element: class="plain" -->
 
 
 ----
@@ -411,6 +434,21 @@ Supplemented with research articles, blog posts, videos, podcasts, ...
 
 ![Building intelligent systems book](book.webp)
 
+----
+## We are writting a book
+
+> "Machine Learning in Production: 
+> From Models to Products"
+
+Mostly similar coverage to lecture.
+
+Not required, use as supplementary reading.
+
+Not all chapters finished yet.
+
+Feedback appreciated.
+
+Published [online](https://ckaestne.medium.com/machine-learning-in-production-book-overview-63be62393581)
 
 ----
 
@@ -420,7 +458,7 @@ Supplemented with research articles, blog posts, videos, podcasts, ...
   * Preparing in-class discussions
   * Background material, case descriptions, possibly also podcast, video, wikipedia
   * Complement with own research
-* Short essay questions on readings, with partner, due before start of lecture (Canvas quiz)
+* Short essay questions on readings, due before start of lecture (Canvas quiz)
 * Planned for: about 30-45 min for reading, 15 min for discussing and answering quiz
 
 ----
@@ -433,7 +471,7 @@ Supplemented with research articles, blog posts, videos, podcasts, ...
     * analyze risks, fairness
     * reason about tradeoffs and justify your decisions
     * mostly written reports, a little modeling, limited coding
-    * Pandemic option: may be done with partner
+    * While teaching online: may be done with partner
 
 * Large team project with 4 milestones (mostly in second half)
     - Build and deploy prediction service
@@ -441,6 +479,15 @@ Supplemented with research articles, blog posts, videos, podcasts, ...
     - Final presentation
 
 * Usually due Wednesday night, see schedule.
+
+----
+
+## 17-745 PhD Research Project
+
+* Research project instead of homework I3 and I4
+* Choose own project
+* See course repository and talk to us
+
 
 ----
 ## Recitations
@@ -469,12 +516,12 @@ First recitation on Friday: remote work and collaboration + Git
 
 * Specification grading, based in adult learning theory
 * Giving you choices in what to work on or how to prioritize your work
-* We are making every effort to be clear about expectations (specifications)
+* We are making every effort to be clear about expectations (specifications), will clarify if you have questions
 * Assignments broken down into expectations with point values, each graded **pass/fail**
 * You should be able to tell what grade you will get for an assignment when you submit it, depending on what work you chose to do
 * Opportunities to resubmit work until last day of class
 
-[[Example]](https://github.com/ckaestne/seai/blob/S2021/assignments/I1_case_study.md#grading)
+[[Example]](https://github.com/ckaestne/seai/blob/S2022/assignments/I1_case_study.md#grading)
 
 
 
@@ -548,19 +595,60 @@ In group work, be honest about contributions of team members, do not cover for o
 If you feel overwhelmed or stressed, please come and talk to us (see syllabus for other support opportunities)
 
 
+
 ---
-# Introductions
-
-Let's go around the "room" for introductions:
-
-* Your (preferred) name
-* In two sentences, your data science background and goals
-* In two sentences, your software engineering background, if any, and goals
-* One topic you are particularly interested in, if any?
-
-![Chairs](chairs.jpg)
+# What makes software with ML challenging?
 
 
+----
+## ML Models Make Mistakes
+
+![ML image captioning mistakes](mistakes.jpg)
+<!-- .element: class="stretch" -->
+
+
+Note: Source: https://www.aiweirdness.com/do-neural-nets-dream-of-electric-18-03-02/
+
+----
+## Lack of Specifications
+
+```java
+/**
+  Return the text spoken within the audio file
+  ????
+*/
+String transcribe(File audioFile);
+```
+
+----
+## Data Focused and Scalable
+
+![The ML Flywheel](flywheel.png)
+<!-- .element: class="plain" -->
+
+----
+## Interaction with the environment
+
+
+
+![Architecture diagram of transcription service; many components, not just ML](transcriptionarchitecture.svg)
+<!-- .element: class="plain" -->
+
+----
+## It's not all new
+
+* Safe software with unreliable components
+* Cyberphysical systems
+* Non-ML big data systems, cloud systems
+* "Good enough" and "fit for purpose" not "correct"
+*
+* We routinely build such systems
+* ML intensifies our challenges
+
+----
+## Complexity
+![Complexity prediction](complexity.svg)
+<!-- .element: class="plain" -->
 
 
 
@@ -572,3 +660,4 @@ Let's go around the "room" for introductions:
 * *Data scientists* and *software engineers* have different goals and focuses
   * Building systems requires both
   * Various qualities are relevant, beyond just accuracy
+* Machine learning brings new challenges and intensifies old ones
