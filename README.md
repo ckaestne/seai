@@ -51,7 +51,7 @@ Open to undergraduate and graduate students meeting the prerequisites.
 
 ### Spring 2022
 
-Lectures Monday/Wednesday 1:25-2:45pm, in person, TEP 1101A
+Lectures Monday/Wednesday 1:25-2:45pm, in person (after Jan 30), Mellon Institute Auditorium
 
 Recitations Friday 10:10-11:00am and 11:15-12:05
 
@@ -143,12 +143,14 @@ Exceptions to this policy will be made at discretion of the instructor in import
 
 **Communication:** We make announcements through Canvas. We answer email, Canvas messages, and monitor Slack, which may all be used for clarifying homework assignments and other interactions. We suggest to monitor slack for interactions with your teams. Email us for appointments.
 
+**Auditing:** We welcome students to audit the course as long as the room capacities allow it. Auditing students will have access to all course materials (which is online anyway) and can attend lectures. Unfortunately we won't be able to grade homework submissions of auditing students or assign them to teams in the group project. To have auditing be on your transcript, approach us with the necessary paperwork. To assign an auditing grade at the end of the semester, we expect the student to get at least a 90% participation grade (see above) and a 70% score on reading quizzes.
+
 **Time management:** This is a 12-unit course, and it is our intention to manage it so that you spend close to 12 hours a week on the course, on average. In general, 4 hours/week will be spent in class and 1-2 hours on readings and reading quizzes, and 6-7 hours on assignments. Notice that much homework is done in groups, so please account for the overhead and decreased time flexibility that comes with groupwork. Please give the course staff feedback if the time the course is taking for you differs significantly from our intention.
 
 **Writing:** Describing tradeoffs among decisions and communication with stakeholders from other backgrounds are key aspects of this class. Many homework assignments have a component that requires discussing issues in written form or reflecting about experiences. To practice writing skills, the Global Communications Center (GCC) offers one-on-one help for students, along with workshops. The instructors are also happy to provide additional guidance if requested.
 
 **Academic honesty and collaboration:** The usual policies apply, especially the University Policy on Academic Integrity. Many parts of the work will be done in groups. We expect that group members collaborate with one another, but that groups work independently from other groups, not exchanging results with other groups. Within groups and pairs, we expect that you are honest about your contribution to the group's work. This implies not taking credit for others' work and not covering for team members that have not contributed to the team. Otherwise, our expectations regarding academic honestly and collaboration for group and pair work are the same as for individual work, substituting elevated to the level of "group."
-The rest of this academic honesty and collaboration content is taken from the policy used in 15-214, which we reuse almost directly (with minor modifications, and attribution).
+The rest of this academic honesty and collaboration content is taken from the policy used in 17-214, which we reuse almost directly (with minor modifications, and attribution).
 "You may not copy any part of a solution to a problem that was written by another student, or was developed together with another student, or was copied from another unauthorized source such as the Internet. You may not look at another student's solution, even if you have completed your own, nor may you knowingly give your solution to another student or leave your solution where another student can see it.
 Here are some examples of behavior that are inappropriate:
 
