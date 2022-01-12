@@ -135,9 +135,11 @@ Every student receives *7 individual tokens* that they can spend throughout the 
 * For one token a student can submit a reading quiz late (any time before the final presentation) or resubmit a graded reading quiz.
 * Remaining tokens at the end of the semester are counted as one participation day each.
 
-If a student runs out of tokens, late individual assignments receive a penalty of 15% per day.
+If a student runs out of tokens, late individual assignments receive a penalty of 15% per started day.
 
 Every team independently receives *7 team tokens* that they can spend for extensions of any milestone deadline (1 token each, except final presentation deadline) or to resubmit any milestone (3 tokens each, resubmitted any time before the final presentation). If a team runs of of tokens, late submissions in group assignments will receive feedback but no credit.
+
+In general, late submissions and resubmissions can be done at any point in the semester before the final presentations. If submitting any work more than 7 days late, submit it by email to the instructors rather than to Gradescope. Send resubmissions to the TA who graded the initial submission. 
 
 Exceptions to this policy will be made at discretion of the instructor in important circumstances, almost always involving a family or medical emergency and an email from your advisor — you can ask your academic advisor or the Dean of Student Affairs requesting the exception on your behalf. Please communicate also with your team about potential timing issues.
 
