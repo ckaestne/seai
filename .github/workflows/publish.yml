@@ -21,7 +21,7 @@ jobs:
     - name: Generate main page
       run: |
         cp .assets/template.html _site/index.html
-        sed 's/\](https:\/\/ckaestne.github.io\/seai\/S2022\/slides\/\([^\(]*?\)\.html) (\[/\](https:\/\/ckaestne.github.io\/seai\/S2022\/slides\/\1.html) ([md](https:\/\/github.com\/ckaestne\/seai\/blob\/S2022\/lectures\/\1.md), [pdf](https:\/\/ckaestne.github.io\/seai\/S2022\/slides\/\1.pdf), \[/' < schedule.md |         sed 's/\](https:\/\/ckaestne.github.io\/seai\/S2022\/slides\/\([^\(]*\)\.html) *|/\](https:\/\/ckaestne.github.io\/seai\/S2022\/slides\/\1.html) ([md](https:\/\/github.com\/ckaestne\/seai\/blob\/S2022\/lectures\/\1.md), [pdf](https:\/\/ckaestne.github.io\/seai\/S2022\/slides\/\1.pdf)) |/'  > schedule_.md
+        sed 's/\](https:\/\/ckaestne.github.io\/seai\/S2022\/slides\/\([^\(]*\)\.html) (\[/\](https:\/\/ckaestne.github.io\/seai\/S2022\/slides\/\1.html) ([md](https:\/\/github.com\/ckaestne\/seai\/blob\/S2022\/lectures\/\1.md), [pdf](https:\/\/ckaestne.github.io\/seai\/S2022\/slides\/\1.pdf), \[/' < schedule.md |         sed 's/\](https:\/\/ckaestne.github.io\/seai\/S2022\/slides\/\([^\(]*\)\.html) *|/\](https:\/\/ckaestne.github.io\/seai\/S2022\/slides\/\1.html) ([md](https:\/\/github.com\/ckaestne\/seai\/blob\/S2022\/lectures\/\1.md), [pdf](https:\/\/ckaestne.github.io\/seai\/S2022\/slides\/\1.pdf)) |/'  > schedule_.md
         sed -i -e '/^\[Schedule\]/r schedule_.md' README.md
         lectures/node_modules/marked/bin/marked -i README.md >> _site/index.html
         cat .assets/template_end.html >> _site/index.html
