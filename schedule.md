@@ -4,12 +4,12 @@
 
 | Date  | Topic | Reading | Assignment due |
 | -     | -     | -       | -              |
-| Wed, Jan 19 | Introduction and Motivation ([book chapter](https://ckaestne.medium.com/introduction-to-machine-learning-in-production-eef7427426f1)) | |  |
+| Wed, Jan 19 | [Introduction and Motivation](https://ckaestne.github.io/seai/S2022/slides/01_introduction/intro.html) ([book chapter](https://ckaestne.medium.com/introduction-to-machine-learning-in-production-eef7427426f1)) | |  |
 | Fri, Jan 21 | ![Recitation](https://img.shields.io/badge/-rec-yellow.svg) Collaboration: Slack, Git, issue trackers | |  |
-| Mon, Jan 24 | From Models to AI-Enabled Systems (Systems Thinking) ([book chapter](https://ckaestne.medium.com/machine-learning-in-production-from-models-to-systems-e1422ec7cd65)) | |  |
-| Wed, Jan 26 | Model Quality and Unit Testing 1 ([book chapter 1](https://ckaestne.medium.com/model-quality-defining-correctness-and-fit-a8361b857df), [book chapter 2](https://ckaestne.medium.com/model-quality-measuring-prediction-accuracy-38826216ebcb)) | | [I1: Case Study](https://github.com/ckaestne/seai/blob/S2022/assignments/I1_case_study.md) |
+| Mon, Jan 24 | From Models to AI-Enabled Systems (Systems Thinking) ([book chapter](https://ckaestne.medium.com/machine-learning-in-production-from-models-to-systems-e1422ec7cd65)) | [Building Intelligent Systems](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436), Ch. 5, 7, 8 |  |
+| Wed, Jan 26 | Model Quality and Unit Testing 1 ([book chapter 1](https://ckaestne.medium.com/model-quality-defining-correctness-and-fit-a8361b857df), [book chapter 2](https://ckaestne.medium.com/model-quality-measuring-prediction-accuracy-38826216ebcb)) | [Building Intelligent Systems](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436), Ch. 19 | [I1: Case Study](https://github.com/ckaestne/seai/blob/S2022/assignments/I1_case_study.md) |
 | Fri, Jan 28 | ![Recitation](https://img.shields.io/badge/-rec-yellow.svg) Stream processing: Apache Kafka | |  |
-| Mon, Jan 31 | Model Quality and Unit Testing 2 ([book chapter](https://ckaestne.medium.com/model-quality-slicing-capabilities-invariants-and-other-testing-strategies-27e456027bd)) | |  |
+| Mon, Jan 31 | Model Quality and Unit Testing 2 ([book chapter](https://ckaestne.medium.com/model-quality-slicing-capabilities-invariants-and-other-testing-strategies-27e456027bd)) | [Behavioral Testing of NLP Models with CheckList](https://homes.cs.washington.edu/~wtshuang/static/papers/2020-acl-checklist.pdf) |  |
 | Wed, Feb 02 | Goals and Success Measures for AI-Enabled Systems | |  |
 | Fri, Feb 04 | ![Recitation](https://img.shields.io/badge/-rec-yellow.svg) Unit testing / Measurement | |  |
 | Mon, Feb 07 | Business, Risk, and Planning for Mistakes 1 | |  |
@@ -25,7 +25,7 @@
 | Wed, Mar 02 | **Midterm** | |  |
 | Fri, Mar 04 | ![Break](https://img.shields.io/badge/-break-red.svg) Midsemester break & spring break | |  |
 | Mon, Mar 14 | Managing and Processing Large Datasets | |  |
-| Wed, Mar 16 | Process & Technical Debt (book chapter 1, [book chapter 2](https://ckaestne.medium.com/technical-debt-in-machine-learning-systems-62035b82b6de)) | | [I3: Open Source Tools](https://github.com/ckaestne/seai/blob/S2022/assignments/I3_se4ai_tools.md) |
+| Wed, Mar 16 | Process & Technical Debt (book chapter 1, [book chapter 2](https://ckaestne.medium.com/technical-debt-in-machine-learning-systems-62035b82b6de)) | | [I3: Open Source Tools](https://github.com/ckaestne/seai/blob/S2022/assignments/I3_se4ai_tools.md) or [PhD Project](https://github.com/ckaestne/seai/blob/S2022/assignments/research_project.md) |
 | Fri, Mar 18 | ![Recitation](https://img.shields.io/badge/-rec-yellow.svg) Containers: Docker | |  |
 | Mon, Mar 21 | Human AI Interaction | |  |
 | Wed, Mar 23 | Intro to Ethics + Fairness ([book chapter](https://ckaestne.medium.com/responsible-ai-engineering-c97e44e6c57a)) | |  |
