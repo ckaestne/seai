@@ -349,7 +349,7 @@ Luke Dramko, Nadia Nahar, Sreenidhi Sundaram, Tasheena Narraidoo, Xuchen Zhang
 
 ## Communication
 
-* Email to us or ping us on slack (invite link on Canvas)
+* Email us or ping us on Slack (invite link on Canvas)
 * Class announcements made through Canvas
 * Weekly office hours (see Canvas for schedule)
   * Online for the first two weeks
@@ -656,7 +656,7 @@ By the end of today, enter into Slack channel #intro:
 * Your (preferred) name
 * In 1~2 sentences, your data science background and goals (e.g., coursework, internships, work experience)
 * In 1~2 sentences, your software engineering background, if any, and goals  (e.g., coursework, internships, work experience)
-* One topic you are particularly interested in to learn during this course?
+* One topic you are particularly interested in learning during this course?
 * A hobby or a favorite activity outside school
 
 ---
