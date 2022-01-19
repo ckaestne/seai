@@ -349,15 +349,13 @@ Luke Dramko, Nadia Nahar, Sreenidhi Sundaram, Tasheena Narraidoo, Xuchen Zhang
 
 ## Communication
 
-Email to us or ping us on slack (invite link on Canvas)
-
-Announcements through canvas
-
-No fixed office hours, but will always stick around after lecture and recitation and we will always try to be available for extra meetings within 24h on weekdays.
-
-Welcome to ask questions publicly on Canvas or Slack.
-
-Materials on GitHub. Pull requests encouraged!
+* Email to us or ping us on slack (invite link on Canvas)
+* Class announcements made through Canvas
+* Weekly office hours (see Canvas for schedule)
+  * Online for the first two weeks
+* Post questions on Slack
+  * Please use #general and post publicly if possible; your classmates will benefit from your Q&A!
+* All course materials (lectures, assignments, etc.,) available on GitHub. Pull requests encouraged!
 
 ----
 
@@ -383,7 +381,7 @@ Materials on GitHub. Pull requests encouraged!
     - supervised learning
     - regression, decision trees, neural networks
     - accuracy, recall, precision, ROC curve
-* Ideally some experience with notebooks and sklearn or other frameworks
+* Ideally, some experience with notebooks,  Sklearn or other frameworks
 
 <!-- col -->
 **No software-engineering knowledge required**
@@ -391,7 +389,7 @@ Materials on GitHub. Pull requests encouraged!
 * Basic programming and command-line skills will be needed
 * Teamwork experience in product team is useful but not required
 * No required exposure to requirements, software testing, software design, continuous integration, containers, process management, etc 
-    * if you are familiar with these, there will be some redundancy -- sorry
+    * If you are familiar with these, there will be some redundancy -- sorry!
 
 <!-- colend -->
 
@@ -402,12 +400,11 @@ Materials on GitHub. Pull requests encouraged!
 ## Active lecture
 
 * Case study driven
-* Discussion highly encouraged
-* Contribute own experience
+* Discussions highly encouraged
+* Contribute your own experience!
 * Regular active in-class exercises
-* In-class presentation
+* In-class presentations 
 * Discussions over definitions
-
 
 ----
 
@@ -465,28 +462,29 @@ Published [online](https://ckaestne.medium.com/machine-learning-in-production-bo
 
 ## Assignments
 
-* All assignments on GitHub
+* All [assignments](https://github.com/ckaestne/seai/tree/S2022/assignments) available on GitHub
 * Series of 4 small to medium-sized individual assignments 
-    * engage with practical challenges
-    * analyze risks, fairness
-    * reason about tradeoffs and justify your decisions
-    * mostly written reports, a little modeling, limited coding
-    * While teaching online: may be done with partner
+    * Engage with practical challenges
+    * Analyze risks, fairness
+    * Reason about tradeoffs and justify your decisions
+    * Mostly written reports, a little modeling, limited coding
+    * May be done with a partner (more on this later)
 
-* Large team project with 4 milestones (mostly in second half)
-    - Build and deploy prediction service
+* Large [team project](https://github.com/ckaestne/seai/blob/S2022/assignments/project.md) with 4 milestones (mostly in second half)
+    - Build and deploy a prediction (movie recommendation) service
     - Testing in production, monitoring
     - Final presentation
 
-* Usually due Wednesday night, see schedule.
+* Usually due Wednesday night; see schedule
 
 ----
 
 ## 17-745 PhD Research Project
 
-* Research project instead of homework I3 and I4
-* Choose own project
-* See course repository and talk to us
+* Research project instead of individual assignments I3 and I4
+* Design your own research project and write a report
+  * A case study, empiricial study, literature survey, etc., 
+* See the [project description](https://github.com/ckaestne/seai/blob/S2022/assignments/research_project.md) and talk to us
 
 
 ----
@@ -496,7 +494,7 @@ Typically hands on exercises, use tools, analyze cases
 
 Designed to introduce tools and discuss material relevant for assignments
 
-First recitation on Friday: remote work and collaboration + Git
+First recitation on **this Friday, Jan 21**! Remote work and collaboration with Git
 
 ----
 
@@ -507,7 +505,7 @@ First recitation on Friday: remote work and collaboration + Git
 * 10% midterm
 * 10% participation
 * 10% reading quizzes
-* no final exam
+* No final exam (final presentations will take place instead)
 *
 * expected grade cutoffs: 81-90% B, 91-100% A
 
@@ -536,7 +534,8 @@ First recitation on Friday: remote work and collaboration + Git
 * Participation != Attendance
 
 * Grading:
-  * 100%: Participates at least once in most lectures through chat or audio, or
+  * 100%: Participates at least once in most lectures by
+    (1) asking or responding to questions or (2) contributing to breakout discussions
   * 100%: Participates in 25% of lectures and actively contributes to discussions in most recitations
   * 90%: Participates at least once in over half of the lectures
   * 70%: Participates at least once in 25% of the lectures
@@ -565,20 +564,19 @@ First recitation on Friday: remote work and collaboration + Git
 
 * Instructor-assigned teams
 * Teams stay together for project throughout semester, starting next week
-* Please fill out survey after class
-* Some advice in lecture + we'll help with debugging team issues
+* Please fill out survey after class on **Monday, Jan 24**
+* Some advice in lectures; we'll help with debugging team issues
 * Peer grading on all milestones (based on citizenship on team)
 
 ----
 ## Additional groupwork options
 
-* Encouraging interactions during remote learning
+* Encouraging interactions 
 * Can complete all individual assignments and quizzes as pairs 
-* Need to switch partner every 2 weeks; we post recommended pairings on Canvas
-* Bonus points for considering collaboration on individual assignments
+* Can't work with the same partner again on a different assignment/quiz
 * 
 * Bonus points for social interaction in project teams
-
+  * See "Social Activities Bonus" on the [project description](https://github.com/ckaestne/seai/blob/S2022/assignments/project.md)
 
 
 
@@ -650,7 +648,15 @@ String transcribe(File audioFile);
 ![Complexity prediction](complexity.svg)
 <!-- .element: class="plain" -->
 
+---
+# INTRODUCTIONS
 
+By the end of today, enter into Slack channel #intro:
+
+* Your (preferred) name
+* In 1~2 sentences, your data science background and goals (e.g., coursework, internships, work experience)
+* In 1~2 sentences, your software engineering background, if any, and goals  (e.g., coursework, internships, work experience)
+* One topic you are particularly interested in to learn during this course?
 
 ---
 
