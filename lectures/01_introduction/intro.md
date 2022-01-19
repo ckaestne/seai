@@ -657,6 +657,7 @@ By the end of today, enter into Slack channel #intro:
 * In 1~2 sentences, your data science background and goals (e.g., coursework, internships, work experience)
 * In 1~2 sentences, your software engineering background, if any, and goals  (e.g., coursework, internships, work experience)
 * One topic you are particularly interested in to learn during this course?
+* A hobby or a favorite activity outside school
 
 ---
 
