@@ -116,7 +116,7 @@ We assign participation grades as follows:
 * 40%: Participates actively at least once in at least 3 lectures or recitations.
 * 0%: No participation in the entire semester.
 
-**Textbook and reading assignments:** We will be using Goeff Hulten's "*Building Intelligent Systems: A Guide to Machine Learning Engineering*" (ISBN: 1484234316) throughout much of the course. The library provides an [electronic copy](https://link-springer-com.proxy.library.cmu.edu/book/10.1007%2F978-1-4842-3432-7). In addition, we will provide additional supplementary readings, including blog posts and academic papers, throughout the semester.
+**Textbook and reading assignments:** We will be using Goeff Hulten's "*Building Intelligent Systems: A Guide to Machine Learning Engineering*" (ISBN: 1484234316) throughout much of the course. The library provides an [electronic copy](https://cmu.primo.exlibrisgroup.com/view/action/uresolver.do?operation=resolveService&package_service_id=6045749490004436&institutionId=4436&customerId=4435). In addition, we will provide additional supplementary readings, including blog posts and academic papers, throughout the semester.
 
 We are currently also working on a textbook of our own, which is available freely [online](https://ckaestne.medium.com/machine-learning-in-production-book-overview-63be62393581). We will not usually assign chapters from our own textbook, but offer those as optional supplementary reading.
 
