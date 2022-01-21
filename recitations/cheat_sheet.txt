@@ -1,0 +1,84 @@
+# Clone a project 
+
+$ git clone git@github.com:ckaestne/seai.git
+
+###
+
+# Setting up credentials 
+
+$ git config user.name "Name"
+$ git config user.email "Email"
+
+###
+
+# Check the current branch that you are working on. 
+
+$ git branch 
+
+###
+
+# Check the status of your repository regularly
+# Keep track of which files have been modified/added/removed from the repository
+# Also shows staged and unstaged files 
+
+$ git status
+
+### 
+
+# Create a local branch 
+# Typically, a new branch is created per feature. 
+# Always make sure to check which branch you are working on, as this command forks from it. 
+
+$ git switch master
+$ git checkout -b recitation2
+
+# This ensures forking 'recitation2' from 'master'.
+# Using -b also handles creation of remote branch at the time of push. 
+
+###
+
+# .gitignore is your friend. DO NOT forget about it. 
+
+### 
+
+# When ready to commit files, always follow this sequence: 
+
+# Check repo status
+$ git status 
+
+# Go over changes made to every file using git diff
+
+$ git diff filename.py
+
+# In case of accidental change, revert the file using git checkout
+# Checkout discards all changes made, and reverts the file back to the state at the previous commit
+$ git checkout filename.py 
+
+# Stage all remaining files 
+$ git add -A 
+
+OR 
+
+# Stage files one by one
+$ git add filename.py
+
+# Commit with a message 
+$ git commit -m "This is a message" -m "This is another message"
+
+
+### 
+
+# Pushing commits to remote 
+# After a commit, always pull from remote to sync branch with target
+
+$ git pull origin master 
+
+# Same idea for the push
+$ git push origin recitation2
+
+### 
+
+# Once pushed, use the GUI to raise pull request, and also cross-validate the delta on it before raising it. 
+# Once the pull request is merged, delete the branch if not necessary anymore. 
+
+### 
