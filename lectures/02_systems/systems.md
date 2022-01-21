@@ -559,14 +559,14 @@ Leyla Acaroglu. "[Tools for Systems Thinkers: The 6 Fundamental Concepts of Syst
 
 <!-- colstart -->
 
-Fall detection for elderly people (**odd room number**):
+Fall detection for elderly people:
 
 ![Smart watch](smartwatch.jpg)
 
 
 <!-- col -->
 
-Safe browsing: Blocking malicious web pages (**even room number**)
+Safe browsing: Blocking malicious web pages
 
 ![Safe browsing warning](warning.png)
 
@@ -610,7 +610,7 @@ Read more: [How fall detection is moving beyond the pendant](https://www.mobihea
   - More domains supported
   - Better recognition of dialects
 * Model training due to drift
-  - New terms (jargon) emerge in domain
+  - New terms (new products, new people) emerge in domain
   - Increased adoption in region with dialect
 * Online experimentation
 
@@ -1047,11 +1047,11 @@ From guarantees to best effort...
 ---
 # Summary
 
-* ML changes many engineering assumptions; from deductive to inductive reasoning; consequences for composition and abstraction
-* Production AI-enabled systems require a *whole system perspective*, beyond just the model
-* Engineering pipelines not models
-* Large design space for user interface (intelligent experience): forcefulness, frequency, telemetry
+* Production AI-enabled systems require a *whole system perspective*, beyond just the model or the pipeline
+* Distinguish system goals from model goals
 * Quality at a *system* level: safety beyond the model, beyond accuracy
+* Plan for operations (telemetry, updates)
+* Large design space for user interface (intelligent experience): forcefulness, frequency, telemetry
 
 
 ---
