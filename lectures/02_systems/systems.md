@@ -1,7 +1,7 @@
 ---
 author: Christian Kaestner
 title: "17-445: From Models to AI-Enabled Systems"
-semester: Spring 2021
+semester: Spring 2022
 footer: "17-445 Machine Learning in Production / AI Engineering, Eunsuk Kang & Christian Kaestner"
 license: Creative Commons Attribution 4.0 International (CC BY 4.0)
 ---  
@@ -18,8 +18,8 @@ Christian Kaestner
 
 # Learning goals
 
-* Explain the consequences of the shift from deductive to inductive reasoning for abstraction and composition
 * Explain how machine learning fits into the larger picture of building and maintaining production systems
+* Explain the consequences of the shift from deductive to inductive reasoning for abstraction and composition
 * Explain the modularity implications of having machine-learning components without specifications
 * Describe the typical components relating to AI in an AI-enabled system and typical design decisions to be made
 
@@ -54,24 +54,30 @@ Christian Kaestner
 ----
 ## Machine learning as (small) component in a system
 
-<!-- colstart -->
-![Tax system architecture with an ML component](tax-with-ml.png)
-<!-- col -->
 [![Audit risk meter](audit-risk-meter.png)](https://ttlc.intuit.com/community/choosing-a-product/help/about-the-audit-risk-meter/00/25924)
-<!-- colend -->
 
 Note: Traditional non-ML tax software, with an added ML component for audit risk estimation
 
 ----
+## Machine learning as (small) component in a system
+
+![Tax system architecture with an ML component](tax-with-ml.svg)
+<!-- .element: class="plain" -->
+
+
+----
 ## Machine learning as (core) component in a system
 
-<!-- colstart -->
-![Transcription system architecture](transcriptionarchitecture.png)
-<!-- col -->
 ![Screenshot of Temi transcription service](temi.png)
-<!-- colend -->
 
 Note: Transcription service, where interface is all built around an ML component
+
+----
+## Machine learning as (core) component in a system
+
+
+![Transcription system architecture](transcriptionarchitecture.svg)
+<!-- .element: class="plain" -->
 
 
 ----
@@ -94,6 +100,163 @@ Note: Transcription service, where interface is all built around an ML component
 * Big and small components of a larger system
 
 
+
+---
+# Model-Centric vs System-Wide Focus
+
+----
+## Traditional Model Focus (Data Science)
+
+![](pipeline.svg)
+<!-- .element: class="plain" -->
+
+Focus: building models from given data, evaluating accuracy
+
+
+----
+## Automating Pipelines and MLOps (ML Engineering)
+
+![](pipeline2.svg)
+<!-- .element: class="plain" -->
+
+Focus: experimenting, deploying, scaling training and serving, model monitoring and updating
+
+----
+## MLOps Infrastructure
+
+![](mlopsboxes.png)
+<!-- .element: class="plain" -->
+
+<!-- references -->
+From: Sculley, David, Gary Holt, Daniel Golovin, Eugene Davydov, Todd Phillips, Dietmar Ebner, Vinay Chaudhary, Michael Young, Jean-Francois Crespo, and Dan Dennison. "Hidden technical debt in machine learning systems." Advances in neural information processing systems 28 (2015): 2503-2511.
+
+Note: Figure from Google’s 2015 technical debt paper, indicating that the amount of code for actual model training is comparably small compared to lots of infrastructure code needed to automate model training, serving, and monitoring. These days, much of this infrastructure is readily available through competing MLOps tools (e.g., serving infrastructure, feature stores, cloud resource management, monitoring).
+
+----
+## ML-Enabled Systems (ML in Production)
+
+![](pipeline-in-system.svg)
+<!-- .element: class="plain" -->
+
+Focus: Interaction of ML and non-ML components, system requirements, user interactions, safety, collaboration, delivering products
+
+
+
+---
+# Model vs System Goals
+
+----
+## Case Study: Self-help legal chatbot
+
+![Website](lawchat.png)
+<!-- .element: class="stretch" -->
+
+
+
+
+Based on the excellent paper: Passi, S., & Sengers, P. (2020). [Making data science systems work](https://journals.sagepub.com/doi/full/10.1177/2053951720939605). Big Data & Society, 7(2).
+
+Note: Screenshots for illustration purposes, not the actual system studied
+
+----
+## Case Study: Self-help legal chatbot
+
+![Website](lawchat2.png)
+<!-- .element: class="stretch" -->
+
+
+
+----
+## Previous System: Guided Chat
+
+![Baseline: Guided chat](guidedchat.png)
+
+<!-- references -->
+Image source: https://www.streamcreative.com/chatbot-scripts-examples-templates
+
+----
+## Problems with Guided Chats
+
+<!-- colstart -->
+Non-AI guided chat was too limited
+* Cannot enumerate problems
+* Hard to match against open entries ("I want to file for bankruptcy" vs "I have no money")
+
+Involving human operators very expensive 
+
+Old-fashioned
+<!-- col -->
+![Baseline: Guided chat](guidedchat.png)
+
+<!-- colend -->
+
+----
+## Initial Goal: Better Chatbot
+
+* Help users with simple task
+* Connect them with lawyers when needed
+* Modernize appearence; "future of digital marketing"
+
+----
+## Buy or Build?
+
+[![Botsify website](botsify.png)](https://botsify.com/)
+
+Note: One of many commercial frameworks for building AI chatbots
+
+----
+## Data science challenges
+
+* **Infrastructure:** Understand chat bot infrastructure and its capabilities
+* **Knowing topics:** Identify what users talk about, train/test concepts with past chat logs
+  * "*We fed VocabX a line deliberately trying to confuse it. We wrote, ‘I am thinking about chapter 13 in Boston divorce filing.’ VocabX figured out the two topics: (1) business and industrial/company/bankruptcy (2) society/social institution/divorce.*"
+
+* **Guiding conversations:** Supporting open-ended conversations requires detecting what's on topic and finding a good response; intent-topic modeling
+  * *Is talk about parents and children on topic when discussing divorce?*
+  * Data gathering/labeling very challenging -- too many corner cases
+
+----
+## Stepping Back: System Goals
+
+What are the goals of the system?
+
+<!-- discussion -->
+
+----
+## Status meeting with (inhouse) Customer
+
+<!-- smallish -->
+The chatbot performed better than before but was far from ready for deployment. There were “too many edge cases” in which conversations did not go as planned. 
+
+**Customer:** "Maybe we need to think about it like an 80/20 rule. In some cases, it works well, but for some, it is harder. 80% everything is fine, and in the remaining 20%, we try to do our best."
+
+**Data science lead:** The trouble is how to automatically recognize what is 80 and what is 20.
+
+**Customer:** I agree. Let us focus on that. We just want value. Tech is secondary.
+
+**Data scientist:** It is harder than it sounds. One of the models is a matching model trained on pairs of legal questions and answers. 60,000 of them. It seems large but is small for ML.
+
+**Customer:** That’s a lot. Can it answer a question about say visa renewal?
+
+**Data scientist:** If there exists a question like that in training data, then yes. But with just 60,000, the model can easily overfit, and then for anything outside, it would just fail.
+
+**Customer:** I see what you are saying. Edge cases are interesting from an academic perspective, but for a business the first and foremost thing is value. You are trying to solve an interesting problem. I get it. But I feel that you may have already solved it enough to gain business value.
+
+Note: Adapted from Passi, S., & Sengers, P. (2020). [Making data science systems work](https://journals.sagepub.com/doi/full/10.1177/2053951720939605). Big Data & Society, 7(2).
+
+----
+## System Goal for Chatbot
+
+* Collect user data to sell to lawyers
+* Signal technical competency to lawyers
+* Acceptable to fail: Too complicated for self-help, connect with lawyer
+* Solving edge cases not important
+
+> "Edge cases are important, but the end goal is user information, monetizing user data. We are building a legal self-help chatbot, but a major business use case is to tell people: ‘here, talk to this lawyer.’ We do want to connect them with a lawyer. Even for 20%, when our bot fails, we tell users that the problem cannot be done through self-help. Let us get you a lawyer, right? That is what we wanted in the first place."
+
+<!-- references --> 
+Passi, S., & Sengers, P. (2020). [Making data science systems work](https://journals.sagepub.com/doi/full/10.1177/2053951720939605). Big Data & Society, 7(2). 
+
 ----
 ## Model vs System Goal?
 
@@ -102,7 +265,8 @@ Note: Transcription service, where interface is all built around an ML component
 ----
 ## Model vs System Goal?
 
-![Transcription system architecture](transcriptionarchitecture.png)
+![Transcription system architecture](transcriptionarchitecture.svg)
+<!-- .element: class="plain" -->
 
 
 ----
@@ -118,11 +282,6 @@ Note: Transcription service, where interface is all built around an ML component
 * Use only high-confidence predictions?
 
 
-----
-
-## Beyond Software: Impact on Our Society
-
-![Predictive policing](predictive-policing.png)
 
 
 
@@ -147,14 +306,16 @@ Wagstaff, Kiri. "Machine learning that matters." In Proceedings of the 29 th Int
 
 
 
-----
-## On Terminology
+---
+# On Terminology
 
 * There is no standard term for referring to building systems with AI components
-* "Production ML Systems", "AI-Enabled Systems", "ML-Enabled Systems" or "ML-Infused Systems"; SE4AI, SE4ML
-* sometimes "AI Engineering" (but often used with a data-science focus)
-* sometimes "ML Systems Engineering" (but often this refers to building distributed and scalable ML learning and data storage platforms)
-* "AIOps" ~ using AI to make automated decisions in operations; "DataOps" ~ use of agile methods and automation in business data analytics; "MLOps" ~ technical infrastructure for operating AI-based products and on deploying updates
+* **ML-Enabled Systems**, *Production ML Systems*, *AI-Enabled Systems*,  or *ML-Infused Systems*; *SE4AI*, *SE4ML*
+* sometimes **AI Engineering** -- but usually used with a ML-pipeline focus
+* **MLOps** ~ technical infrastructure automating ML pipelines
+* sometimes **ML Systems Engineering** -- but often this refers to building distributed and scalable ML and data storage platforms
+* "AIOps" ~ using AI to make automated decisions in operations; "DataOps" ~ use of agile methods and automation in business data analytics
+* My preference: **Production Systems with Machine-Learning Components**
 
 
 
@@ -183,12 +344,16 @@ Wagstaff, Kiri. "Machine learning that matters." In Proceedings of the 29 th Int
 ---
 # Systems Thinking
 
+![](system.svg)
+<!-- .element: class="plain" -->
 
 
 ----
 ## Repeat: Machine learning as component in a system
 
-![Transcription system architecture](transcriptionarchitecture.png)
+![Transcription system architecture](transcriptionarchitecture.svg)
+<!-- .element: class="plain" -->
+
 
 
 ----
@@ -215,7 +380,6 @@ Note: Audit risk meter from Turbo-Tax
 ----
 ## System <-> World = Feedback Loops?
 
-![Crime Map](crime-map.jpg)
 
 
 ```mermaid
@@ -226,6 +390,7 @@ Model --> Predictions
 Predictions -->|influence| Data
 ```
 
+![Predictive policing](predictive-policing.png)
 
 ----
 ## ML Predictions have Consequences
@@ -233,7 +398,8 @@ Predictions -->|influence| Data
 * Assistance, productivity, creativity
 * Manipulation, polarization, discrimination
 * Feedback loops
-
+*
+* Need for **responsible engineering**
 
 ----
 ## Safety is a System Property
@@ -393,14 +559,14 @@ Leyla Acaroglu. "[Tools for Systems Thinkers: The 6 Fundamental Concepts of Syst
 
 <!-- colstart -->
 
-Fall detection for elderly people:
+Fall detection for elderly people (**odd room number**):
 
 ![Smart watch](smartwatch.jpg)
 
 
 <!-- col -->
 
-Safe browsing: Blocking malicious web pages
+Safe browsing: Blocking malicious web pages (**even room number**)
 
 ![Safe browsing warning](warning.png)
 
@@ -451,7 +617,8 @@ Read more: [How fall detection is moving beyond the pendant](https://www.mobihea
 
 <!-- col -->
 
-![Architecture diagram of transcription service; many components, not just ML](transcriptionarchitecture.png)
+![Architecture diagram of transcription service; many components, not just ML](transcriptionarchitecture.svg)
+<!-- .element: class="plain" -->
 
 
 <!-- colend -->
@@ -503,17 +670,16 @@ Design for telemetry
 ## Pipeline Thinking
 
 
-![Pipeline](pipeline.png)
+![Pipeline](pipeline2.svg)
+<!-- .element: class="plain" -->
 
-<!-- references -->
-
-* Graphic: Amershi et al. "[Software engineering for machine learning: A case study](https://www.microsoft.com/en-us/research/uploads/prod/2019/03/amershi-icse-2019_Software_Engineering_for_Machine_Learning.pdf)." In Proc ICSE-SEIP, 2019. 
 
 
 ----
 ## Design with Pipeline and Monitoring in Mind
 
-![Architecture diagram of transcription service; many components, not just ML](transcriptionarchitecture2.png)
+![Architecture diagram of transcription service; many components, not just ML](transcriptionarchitecture2.svg)
+<!-- .element: class="plain" -->
 
 ----
 ## Shifting from Models to Pipelines is Challenging
@@ -539,13 +705,68 @@ O'Leary, Katie, and Makoto Uchida. "[Common problems with Creating Machine Learn
 
 
 
+---
+# What makes software with ML challenging?
+
+
+----
+## ML Models Make Mistakes
+
+![ML image captioning mistakes](mistakes.jpg)
+<!-- .element: class="stretch" -->
+
+
+Note: Source: https://www.aiweirdness.com/do-neural-nets-dream-of-electric-18-03-02/
+
+----
+## Lack of Specifications
+
+```java
+/**
+  Return the text spoken within the audio file
+  ????
+*/
+String transcribe(File audioFile);
+```
+
+----
+## Data Focused and Scalable
+
+![The ML Flywheel](flywheel.png)
+<!-- .element: class="plain" -->
+
+----
+## Interaction with the environment
+
+
+
+![Architecture diagram of transcription service; many components, not just ML](transcriptionarchitecture.svg)
+<!-- .element: class="plain" -->
+
+----
+## It's not all new
+
+* Safe software with unreliable components
+* Cyberphysical systems
+* Non-ML big data systems, cloud systems
+* "Good enough" and "fit for purpose" not "correct"
+*
+* We routinely build such systems
+* ML intensifies our challenges
+
+----
+## Complexity
+![Complexity prediction](complexity.svg)
+<!-- .element: class="plain" -->
+
 
 
 
 ---
-# Traditional vs AI-based Software Systems
+# ML Challenges System Decomposition
 
 (deductive vs inductive reasoning)
+
 
 ----
 ## Complexity in Engineered Systems
@@ -555,6 +776,18 @@ O'Leary, Katie, and Makoto Uchida. "[Common problems with Creating Machine Learn
 * Automobile: ~30,000 parts; Airplane: ~3,000,000 parts
 * MS Office: ~ 40,000,000 LOCs; Debian: ~ 400,000,000 LOCs
 * How do we build such complex systems?
+
+----
+## Managing Complexity in Software
+
+* **Abstraction**: Hide details & focus on high-level behaviors
+* **Reuse**: Package into reusable libraries & APIs with well-defined _contracts_
+* **Composition**: Build large components out of smaller ones
+
+
+![](system.svg)
+<!-- .element: class="plain" -->
+
 
 ----
 ## Managing Complexity in Software
@@ -740,6 +973,7 @@ Note: Using insights of how humans reason: Captions contain important objects in
 ## State of the Art Decomposition (in 2015)
 
 ![Captioning example](imgcaptioningml-decomposed.png)
+<!-- .element: class="plain" -->
 
 <!-- references -->
 Example and image from: Nushi, Besmira, Ece Kamar, Eric Horvitz, and Donald Kossmann. "[On human intellect and machine failures: troubleshooting integrative machine learning systems](http://erichorvitz.com/human_repair_AI_pipeline.pdf)." In Proc. AAAI. 2017.
