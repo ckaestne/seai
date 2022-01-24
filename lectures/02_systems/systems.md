@@ -14,6 +14,31 @@ Christian Kaestner
 
 * Hulten, Geoff. "Building Intelligent Systems: A Guide to Machine Learning Engineering." (2018), Chapters 5, 7, and 8.
 
+
+----
+## Non-update on waitlist
+
+![](frustrated.jpeg)
+<!-- .element: class="plain" -->
+
+* LTI MS AII program: Now on Canvas. Assume you are enrolled. 
+* All others: Please be patient. If enrolling late, can submit this week's quizzes and homework 1 late (1 week later). 
+
+
+
+----
+## Administrativa
+
+<!-- colstart -->
+* CATME survey for team assignment today
+* Homework 1 due on Wednesday
+* Team assignments announced most likely on Wednesday
+* Reminder on grading rubrics
+* Reminder on collaboration policy
+* `#assignments` channel on Slack
+<!-- col -->
+![Gradescope](gradescope.png)
+<!-- colend -->
 ---
 
 # Learning goals
