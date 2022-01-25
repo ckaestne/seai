@@ -1,7 +1,7 @@
 ---
 author: Christian Kaestner and Eunsuk Kang
 title: "17-445: Model Quality"
-semester: Spring 2021
+semester: Spring 2022
 footer: "17-445 Machine Learning in Production / AI Engineering, Eunsuk Kang & Christian Kaestner"
 license: Creative Commons Attribution 4.0 International (CC BY 4.0)
 ---
@@ -41,11 +41,13 @@ the data scientist's perspective
 
 the role and lack of specifications, validation vs verification
 
-## Third Part: Learning from Software Testing
+## Third Part: Learning from Software Testing 
 
-unit testing, test case curation, invariants, test case generation
+unit testing, test case curation, invariants, test case generation (next week)
 
-testing in production (next week)
+## Later: Testing in production
+
+monitoring, A/B testing, canary releases (in 2 weeks)
 
 
 
@@ -58,46 +60,14 @@ testing in production (next week)
 
 
 ---
-# Model Quality vs System Quality
-
-----
-## Prediction Accuracy of a Model
-
-*model:* $\overline{X} \rightarrow Y$
-
-*validation data (tests?):* sets of $(\overline{X}, Y)$ pairs indicating desired outcomes for select inputs
-
-For our discussion: any form of model, including machine learning models, scientific models, hardcoded heuristics, composed models, ...
+# Case Study & Reminder:
+# Model vs System Quality
 
 
 ----
-## Comparing Models
+## Case Study: Cancer Prognosis
 
-Compare two models (same or different implementation/learning technology) for the same task:
-
-* Which one supports the system goals better?
-* Which one makes fewer important mistakes?
-* Which one is easier to operate?
-* Which one is better overall?
-* Is either one good enough?
-
-
-----
-## ML Algorithm Quality vs Model Quality vs Data Quality vs System Quality
-
-Todays focus is on the quality of the produced *model*, not the algorithm used to learn the model or the data used to train the model
-
-i.e. assuming *Decision Tree Algorithm* and feature extraction are correctly implemented (according to specification), is the model learned from data any good?
-
-The model is just one component of the entire system.
-
-Focus on measuring quality, not debugging the source of quality problems (e.g., in data, in feature extraction, in learning, in infrastructure)
-
-----
-## Case Study: Cancer Detection
-
-![MRI](mri.jpg)
-<!-- .element: class="stretch" -->
+![radiology](radiology.jpg)
 
 Notes: Application to be used in hospitals to screen for cancer, both as routine preventative measure and in cases of specific suspicions. Supposed to work together with physicians, not replace.
 
@@ -111,34 +81,80 @@ Notes: Application to be used in hospitals to screen for cancer, both as routine
 
 (CC BY-SA 4.0, [Martin Sauter](https://commons.wikimedia.org/wiki/Category:GNU_Health#/media/File:Gnu_health_2-8_gynocology_general.png))
 
+
+
 ----
-## Many Qualities
+## ML Algorithm Quality vs Model Quality vs Data Quality vs System Quality
+
+Todays focus is on the quality of the produced *model*, not the algorithm used to learn the model or the data used to train the model
+
+i.e. assuming *Decision Tree Algorithm* and feature extraction are correctly implemented (according to specification), is the model learned from data any good?
+
+The model is just one component of the entire system.
+
+Focus on measuring quality, not debugging the source of quality problems (e.g., in data, in feature extraction, in learning, in infrastructure)
+
+
+
+----
+## Some System-Level Recommendations
+
+* Models used by radiologists, humans in the loop
+* Radiologists are specialists who do not directly see patients
+* Radiologists may not trust model, but are also overworked
+* Radiologist must explain findings
+* Patient can see findings before physician (CURES act)
+
+----
+## Many Model Qualities
 
 Prediction accuracy of a model is important
 
-But many other quality matters when building a system:
+But many other *model qualities* matters when building a system:
 * Model size
-* Inference time
+* Inference latency
+* Learning latency
 * User interaction model
-* Kinds of mistakes made
-* How the system deals with mistakes
 * Ability to incrementally learn
-* Safety, security, fairness, privacy
 * Explainability
-
-
-*Today: Narrow focus on prediction accuracy of the model*
+* Calibration
+* Robustness
 
 ----
-## On Terminology: Performance
+## Today and Next Lecture
 
-In machine learning, "performance" typically refers to accuracy
+*Narrow focus on prediction accuracy of the model*
+
+That's difficult enough for now.
+
+More on system vs model goals and other model qualities later
+
+
+
+
+
+
+
+
+
+
+
+
+
+---
+# On Terminology
+
+**Model:** $\overline{X} \rightarrow Y$
+
+**Validation/test data:** sets of $(\overline{X}, Y)$ pairs indicating desired outcomes for select inputs
+
+**Performance:** In machine learning, "performance" typically refers to accuracy
 
 "this model performs better" = it produces more accurate results
 
 Be aware of ambiguity across communities (see also: performance in arts, job performance, company performance, performance test (bar exam) in law, software/hardware/network performance)
 
-* When speaking of "**time**", be explicit: "learning time", "inference time", "latency", ...
+* When speaking of "**time**", be explicit: "learning time", "inference latency", ...
 * When speaking of model **accuracy** use "prediction accuracy", ...
 
 
@@ -157,6 +173,9 @@ Be aware of ambiguity across communities (see also: performance in arts, job per
 # Measuring Prediction Accuracy for Classification Tasks
 
 (The Data Scientists Toolbox)
+
+
+
 
 ----
 ## Confusion/Error Matrix
@@ -188,6 +207,16 @@ def accuracy(model, xs, ys):
 ```
 
 
+----
+## Typical Questions
+
+Compare two models (same or different implementation/learning technology) for the same task:
+
+* Which one supports the system goals better?
+* Which one makes fewer important mistakes?
+* Which one is easier to operate?
+* Which one is better overall?
+* Is either one good enough?
 
 ----
 ## Is 99% Accuracy good?
@@ -212,66 +241,11 @@ $\frac{(1 - accuracy\_\text{baseline}) - (1 - accuracy\_f)}{1 - accuracy\_\text{
 ----
 ## Baselines?
 
-Suitable baselines for cancer prediction? For recidivism?
+Suitable baselines for cancer prognosis? For audit risk prediction?
 
 <!-- discussion -->
 
 Note: Many forms of baseline possible, many obvious: Random, all true, all false, repeat last observation, simple heuristics, simpler model
-
-----
-## Types of Mistakes
-
-Two-class problem of predicting event A:
-
-
-| | **Actually A** | **Actually not A** |
-| --- | --- | --- |
-|**AI predicts A** | True Positive (TP) | False Positive (FP) |
-|**AI predicts not A** | False Negative (FN) | True Negative (TN) |
-
-True positives and true negatives: correct prediction
-
-False negatives: wrong prediction, miss, Type II error
-
-False positives: wrong prediction, false alarm, Type I error
-
- 
-
-----
-## Multi-Class problems vs Two-Class Problem
-
-| | **Actually Grade 5 Cancer** | **Actually Grade 3 Cancer** | **Actually Benign** |
-| :--- | --- | --- | --- |
-|**Model predicts Grade 5 Cancer** | **10** | 6 | 2 |
-|**Model predicts Grade 3 Cancer** | 3 | **24**  | 10 |
-|**Model predicts Benign** | 5 | 22 | **82** |
-
-
-
-
-
-----
-## Multi-Class problems vs Two-Class Problem
-
-| | **Actually Grade 5 Cancer** | **Actually Grade 3 Cancer** | **Actually Benign** |
-| :--- | --- | --- | --- |
-|**Model predicts Grade 5 Cancer** | **10** | 6 | 2 |
-|**Model predicts Grade 3 Cancer** | 3 | **24**  | 10 |
-|**Model predicts Benign** | 5 | 22 | **82** |
-
-
-****
-
-
-| | **Act. Grade 5 Cancer** | **Act. not Grade 5 Cancer** |
-| --- | --- | --- |
-|**Model predicts Grade 5 Cancer** | 10 | 8 |
-|**Model predicts not Grade 5 Cancer** | 8 | 138 |
-
-
-Notes: Individual false positive/negative classifications can be derived
-by focusing on a single value in a confusion matrix. False positives/recall/etc are always considered with regard to a single specific outcome.
-
 
 ----
 ## Consider the Baseline Probability
@@ -307,13 +281,6 @@ Predicting unlikely events -- 1 in 2000 has cancer ([stats](https://gis.cdc.gov/
 See also [Bayesian statistics](https://en.wikipedia.org/wiki/Bayesian_statistics)
 
 
-
-
-----
-## Types of Mistakes in Identifying Cancer?
-
-![MRI](mri.jpg)
-<!-- .element: class="stretch" -->
 
 
 
@@ -363,6 +330,8 @@ Consider:
 * Approving loan applications
 
 No answer vs wrong answer?
+
+*(This requires considering interactions with other parts of the system!)*
 
 ----
 ## Extreme Classifiers
@@ -431,117 +400,24 @@ Notes: The plot shows the recall precision/tradeoff at different thresholds (the
 * Cohen's kappa, Gini coefficient (improvement over random)
 
 
-
----
-# Measuring Prediction Accuracy for Regression and Ranking Tasks
-
-(The Data Scientists Toolbox)
-
-
 ----
-## Confusion Matrix for Regression Tasks?
+## Many Measures Beyond Classification
+<!-- smallish -->
 
-| Rooms | Crime Rate | ... | Predicted Price | Actual Price |
-| - | - | - | - | - | 
-| 3 | .01 | ... | 230k | 250k |
-| 4 | .01 | ... | 530k | 498k |
-| 2 | .03 | ... | 210k | 211k |
-| 2 | .02 | ... | 219k | 210k |
-
-
-Note: Confusion Matrix does not work, need a different way of measuring accuracy that can distinguish "pretty good" from "far off" predictions 
-
-
-----
-## Comparing Predicted and Expected Outcomes
-
-<!-- colstart -->
-
-Mean Absolute Percentage Error
-
-**MAPE** = 
-
-$\frac{1}{n}\sum_{t=1}^{n}\left|\frac{A_t-F_t}{A_t}\right|$
-
-($A_t$ actual outcome, $F_t$ predicted outcome, for row $t$)
-
-Compute relative prediction error per row, average over all rows
-
-<!-- col -->
-
-| Rooms | Crime Rate | ... | Predicted Price | Actual Price |
-| - | - | - | - | - | 
-| 3 | .01 | ... | 230k | 250k |
-| 4 | .01 | ... | 530k | 498k |
-| 2 | .03 | ... | 210k | 211k |
-| 2 | .02 | ... | 219k | 210k |
-
-MAPE = $\frac{1}{4}\left( 20/250 + 32/498 + 1/211 + 9/210  \right)$
-= $\frac{1}{4}\left(0.08 + 0.064 + 0.005 + 0.043\right)$ = $0.048$
-
-<!-- colend -->
-
-----
-## Other Measures for Regression Models
-
-
-* Mean Absolute Error (MAE) = $\frac{1}{n}\sum_{t=1}^{n}\left|A_t-F_t\right|$
-* Mean Squared Error (MSE) = $\frac{1}{n}\sum_{t=1}^{n}\left(A_t-F_t\right)^2$
-* Root Mean Square Error (RMSE) = $\sqrt{\frac{\sum_{t=1}^{n}(A_t-F_t)^2}{n}}$
+Regression:
+* Mean Squared Error (MSE)
+* Mean Absolute Percentage Error (MAPE)
 * $R^2$ = percentage of variance explained by model
 * ...
 
-----
-## Evaluating Rankings
-
-Ordered list of results, true results should be ranked high
-
-Common in information retrieval (e.g., search engines) and recommendations
-
-<!-- colstart -->
-Mean Average Precision 
-
-MAP@K = precision in first $K$ results
-
-Averaged over many queries
-
-<!-- col -->
-| Rank | Product | Correct? |
-| - | - | - |
-|1 | Juggling clubs | true |
-|2 | Bowling pins | false |
-|3| Juggling balls | false |
-|4| Board games | true |
-|5| Wine | false |
-|6| Audiobook | true |
-
-MAP@1 = 1,
-MAP@2 = 0.5,
-MAP@3 = 0.33,
-...
-<!-- colend -->
-
-
-----
-## Other Ranking Measures
-
+Rankings:
+* Mean Average Precision in first $K$ results (MAP@K)
 * Mean Reciprocal Rank (MRR) (average rank for first correct prediction)
-* Average precision (concentration of results in highest ranked predictions)
-* MAR@K (recall)
 * Coverage (percentage of items ever recommended)
 * Personalization (how similar predictions are for different users/queries)
-* Discounted cumulative gain
 * ...
 
-Note: Good discussion of tradeoffs at https://medium.com/swlh/rank-aware-recsys-evaluation-metrics-5191bba16832
-
-
-----
-## Model Quality in Natural Language Processing?
-
-Highly problem dependent:
-* Classify text into positive or negative -> classification problem
-* Determine truth of a statement -> classification problem
+Natural language processing:
 * Translation and summarization -> comparing sequences (e.g ngrams) to human results with specialized metrics, e.g. [BLEU](https://en.wikipedia.org/wiki/BLEU) and [ROUGE](https://en.wikipedia.org/wiki/ROUGE_(metric))
 * Modeling text -> how well its probabilities match actual text, e.g., likelyhoold or [perplexity](https://en.wikipedia.org/wiki/Perplexity)
 
@@ -549,11 +425,6 @@ Highly problem dependent:
 
 ----
 ## Always Compare Against Baselines!
-
-Accuracy measures in isolation are difficult to interpret
-
-Report baseline results, reduction in error
-
 
 Example: Baselines for house price prediction? Baseline for shopping recommendations?
 
@@ -601,7 +472,7 @@ Pictures: https://pixabay.com/photos/lost-places-panzer-wreck-metal-3907364/, ht
 ----
 ## Separate Training and Validation Data
 
-Always test for generalization on *unseen* validation data
+Always test for generalization on *unseen* validation data (independently sampled from the same distriution)
 
 Accuracy on training data (or similar measure) used during learning
 to find model parameters
@@ -674,7 +545,7 @@ Demo: Show how trees at different depth first improve accuracy on both sets and 
 ----
 ## Production Data -- The Ultimate Unseen Validation Data
 
-more next week
+more in a later lecture
 
 
 
@@ -711,8 +582,8 @@ accuracy_test = accuracy(model, test_xs, test_ys)
 ## On Terminology
 
 * The decisions in a model (weights, coefficients) are called *model parameter* of the model, their values are usually learned from the data
-  - To a software engineer, these are *constants* in an algorithm, or configuration options
-* The parameters to the learning algorithm that are not the data are called *model hyperparameters*
+  - To a software engineer, these are *constants* in the learned function
+* The inputs to the learning algorithm that are not the data are called *model hyperparameters*
   - To a software engineer, these are *parameters* to the learning algorithm, similar to compiler options
 
 ```
@@ -748,47 +619,95 @@ def f(outlook, temperature, humidity, windy) =
 <!-- discussion -->
 
 
-
 ----
-## Academic Escalation: Overfitting on Benchmarks
+## Test Data not Representative
 
+Often neither training nor test data are representative of production data 
 
-[![Overfitting Benchmarks](overfitting-benchmarks.png)](overfitting-benchmarks.png)
-<!-- .element: class="stretch" -->
-
-(Figure by Andrea Passerini)
-
-Note: If many researchers publish best results on the same benchmark, collectively they perform "hyperparameter optimization" on the test set
+![MNIST Fashion Dataset Examples](MNIST-fashion.png)
 
 
 ----
-## Overfitting in Continuous Experimentation Systems
+## Test Data not Representative
 
-![MLFlow User Interface](mlflow-web-ui.png)
-<!-- .element: class="stretch" -->
+![](radiology-distribution.png)
+<!-- .element: class="plain" -->
+
 
 ----
-## Overfitting in Continuous Experimentation Systems
+## Shortcut Learning 
 
-* Use of test sets to compare (hyperparameter-tuned) models in dashboards 
-  * -> danger of overfitting
-* Need fresh test data regularly
-* Statistical techniques to approximate the needed amount of test data and the needed rotation
+![Shortcut learning illustration from paper below](shortcutlearning.png)
+<!-- .element: class="plain" -->
 
 <!-- references -->
+Figure from: Geirhos, Robert, Jörn-Henrik Jacobsen, Claudio Michaelis, Richard Zemel, Wieland Brendel, Matthias Bethge, and Felix A. Wichmann. "[Shortcut learning in deep neural networks](https://arxiv.org/abs/2004.07780)." Nature Machine Intelligence 2, no. 11 (2020): 665-673.
 
-Recommended reading: Renggli, Cedric, Bojan Karlaš, Bolin Ding, Feng Liu, Kevin Schawinski, Wentao Wu, and Ce Zhang. "[Continuous integration of machine learning models with ease.ml/ci: Towards a rigorous yet practical treatment.](https://arxiv.org/abs/1903.00278)" arXiv preprint arXiv:1903.00278 (2019).
+Note: (From figure caption) Toy example of shortcut learning in neural networks. When trained on a simple dataset
+of stars and moons (top row), a standard neural network (three layers, fully connected) can easily
+categorise novel similar exemplars (mathematically termed i.i.d. test set, defined later in Section 3).
+However, testing it on a slightly different dataset (o.o.d. test set, bottom row) reveals a shortcut
+strategy: The network has learned to associate object location with a category. During training,
+stars were always shown in the top right or bottom left of an image; moons in the top left or bottom
+right. This pattern is still present in samples from the i.i.d. test set (middle row) but not in o.o.d. test
+images (bottom row), exposing the shortcut.
 
 
 ----
-## Evaluating on Training Data
+## Shortcut Learning 
 
-* surprisingly common in practice
-* by accident, incorrect split -- or intentional using all data for training
-* overlap between multiple datasets used
-* tuning on validation data (e.g., crossvalidation) without separate testing data
+![ML image captioning mistakes](mistakes.jpg)
+<!-- .element: class="stretch" -->
+
+----
+## Other Examples of Shortcut Learning?
+
+<!-- discussion -->
+
+
+----
+## Generalization Beyond Training Data: 
+## Is this even fair to ask?
+
+<!-- discussion -->
+
+
+
+----
+## Representative Test Data in Practice?
+
+* Target distribution may not be known in early stages of the project
+* Production data is good test data
+* Target distribution may shift over time
 * 
-* Results in overfitting and misleading accuracy measures
+* Monitoring and continuous data collection important! More later
+
+
+----
+
+## Label Leakage
+
+<!-- colstart -->
+![Tank in Forest](tank.jpg)
+<!-- col -->
+![Forest](forest.jpg)
+<!-- colend -->
+
+Notes:
+Widely shared story, authenticity not clear:
+AI research team tried to train image recognition to identify tanks hidden in forests, trained on images of tanks in forests and images of same or similar forests without tanks. The model could clearly separate the learned pictures, but would perform poorly on other pictures.
+
+Turns out the pictures with tanks were taken on a sunny day whereas the other pictures were taken on a cloudy day. The model picked up on the brightness of the picture rather than the presence of a tank, which worked great for the training set, but did not generalize.
+
+Pictures: https://pixabay.com/photos/lost-places-panzer-wreck-metal-3907364/, https://pixabay.com/photos/forest-dark-woods-trail-path-1031022/
+
+
+----
+## Label Leakage
+
+![Radiology scan with metadata](radiology-scan.jpg)
+
+Note: The image includes metadata. Models have been found to rely heavily on that metadata, for example what kind of device was used to take the scan.
 
 ----
 ## Label Leakage
@@ -803,14 +722,60 @@ Examples:
 **Is this a problem or a good thing?**
 
 
+Be cautious of "too good to be true" results
+
+
+
 
 
 ----
-## Evaluation Data Representative?
+## Evaluating on Training or Validation Data
 
-Assumption: Independently, randomly drawn from same distribution as training data
+Test data *leaks* into training data
 
-Does this distribution correspond to distribution in practice?
+* surprisingly common in practice
+* by accident, incorrect split -- or intentional using all data for training
+* overlap between multiple datasets used
+* tuning on validation data (e.g., crossvalidation) without separate testing data
+* 
+* Results in overfitting and misleading accuracy measures
+
+
+----
+## Overfitting on Benchmarks
+
+
+[![Overfitting Benchmarks](overfitting-benchmarks.png)](overfitting-benchmarks.png)
+<!-- .element: class="stretch plain" -->
+
+(Figure by Andrea Passerini)
+
+Note: If many researchers publish best results on the same benchmark, collectively they perform "hyperparameter optimization" on the test set
+
+
+
+
+----
+## Overfitting in Continuous Experimentation Systems
+
+![MLFlow User Interface](mlflow-web-ui.png)
+<!-- .element: class="stretch" -->
+
+----
+## Overfitting in Continuous Experimentation Systems
+
+* Test data should be used exactly once -- danger of overfitting with reuse
+* Use of test sets to compare (hyperparameter-tuned) models in dashboards 
+  * -> danger of overfitting
+* Need fresh test data regularly
+* Statistical techniques to approximate the needed amount of test data and the needed rotation
+
+<!-- references -->
+
+Recommended reading: Renggli, Cedric, Bojan Karlaš, Bolin Ding, Feng Liu, Kevin Schawinski, Wentao Wu, and Ce Zhang. "[Continuous integration of machine learning models with ease.ml/ci: Towards a rigorous yet practical treatment.](https://arxiv.org/abs/1903.00278)" arXiv preprint arXiv:1903.00278 (2019).
+
+
+
 
 ----
 ## Using Misleading Quality Measures
@@ -866,7 +831,7 @@ Many potential subtle and less subtle problems:
 * Pictures taken on same day
 
 ----
-## Data Dependence and Label Leakage in Cancer Case Study?
+## Data Dependence in Cancer Case Study?
 
 <!-- discussion -->
 
@@ -912,7 +877,7 @@ specifications, bugs, fit
 
 
 ----
-## Evaluating a Component's Functional Correctness
+## SE World: Evaluating a Component's Functional Correctness
 
 *Given a specification, do outputs match inputs?*
 
@@ -926,9 +891,9 @@ specifications, bugs, fit
 float computeDeductions(float agi, Expenses expenses);
 ```
 
-**Each mismatch is considered a bug, should to be fixed*.**
+**Each mismatch is considered a bug, should to be fixed†.**
 
-(*=not every bug is economical to fix, may accept some known bugs)
+(†=not every bug is economical to fix, may accept some known bugs)
 
 
 
@@ -936,7 +901,7 @@ float computeDeductions(float agi, Expenses expenses);
 ## Validation vs Verification
 
 ![Validation vs Verification](validation.png)
-<!-- .element: class="stretch" -->
+<!-- .element: class="plain" -->
 
 
 ----
@@ -1065,7 +1030,7 @@ Software testing can be applied to many qualities:
 ## Validation vs Verification
 
 ![Validation vs Verification](validation.png)
-<!-- .element: class="stretch" -->
+<!-- .element: class="plain" -->
 
 
 ----
@@ -1093,7 +1058,7 @@ We use ML precisely because we do not have a specification (too complex, rules u
 
 No specification that could tell us for any input whether the output is correct
 
-Intuitions, ideas, goals, "implicit specifications", but nothing we can write down!
+Intuitions, ideas, goals, examples, "implicit specifications", but nothing we can write down as rules!
 
 We are usually okay with some wrong predictions
 
@@ -1132,6 +1097,7 @@ void testPatient2() {
 
 
 ----
+## All Models Are Wrong
 
 
 > All models are approximations. Assumptions, whether implied or clearly stated, are never exactly true. **All models are wrong, but some models are useful**. So the question you need to ask is not "Is the model true?" (it never is) but "Is the model good enough for this particular application?" -- George Box
@@ -1155,6 +1121,7 @@ Do not generalize for very small scales, very high speeds, or in very strong gra
 Further readings: https://en.wikipedia.org/wiki/Newton%27s_laws_of_motion
 
 ----
+## All Models Are Wrong
 
 > "Since all models are wrong the scientist cannot obtain a "correct" one by excessive elaboration. On the contrary following William of Occam he should seek an economical description of natural phenomena." -- George Box, 1976
 
@@ -1164,6 +1131,13 @@ Further readings: https://en.wikipedia.org/wiki/Newton%27s_laws_of_motion
 
 <!-- references -->
 See also https://en.wikipedia.org/wiki/All_models_are_wrong
+
+----
+## Does Knowledge Empower Us?
+
+
+> Knowledge is power: The real test of "knowledge" is not whether it is true, but whether it empowers us. Scientists usually assume that no theory is 100 per cent correct. Consequently, truth is a poor test for knowledge. The real test is utility. A theory that enables us to do new things constitutes knowledge. -- Yuval Harari in [Sapiens](https://bookshop.org/books/sapiens-a-brief-history-of-humankind-9781467601573/9780062316110) about Francis Bacon's "*New Instrument*" from 1620
+
 
 
 
@@ -1261,13 +1235,31 @@ Unlike traditional software do not expect "correctness"
 ## My pet theory: [Machine Learning is Requirements Engineering](https://medium.com/@ckaestne/machine-learning-is-requirements-engineering-8957aee55ef4)
 
 ![Machine Learning Validation vs Verification](mlvalidation.png)
+<!-- .element: class="plain" -->
 
 
+<!-- references -->
 
-Long version: https://medium.com/@ckaestne/machine-learning-is-requirements-engineering-8957aee55ef4
+Long argument: Kaestner, Christian. "[Machine learning is requirements engineering—On the role of bugs, verification, and validation in machine learning](https://medium.com/@ckaestne/machine-learning-is-requirements-engineering-8957aee55ef4)." Medium, 2020.
 
 
+----
+## Software Engineering Caveat
 
+* Also software engineers rarely assure "correctness"
+* Testing finds bugs, doesn not assure their absence
+* Formal verification possible, but expensive and rare
+* Real challenges involve interactions with environment, which are hard to specify
+*
+* "Good enough" very common for software quality
+* Evaluating "fit for intended purpose" instead of correctness too
+
+----
+
+![](mary-good-enough.png)
+
+<!-- references -->
+Mary Shaw. [Myths and Mythconceptions: What does it mean to be a programming language, anyhow?](https://www.pldi21.org/prerecorded_hopl.K1.html) HOPL IV: History of Programming Languages, 2021.
 
 ----
 ## On Terminology
@@ -1276,44 +1268,6 @@ Long version: https://medium.com/@ckaestne/machine-learning-is-requirements-engi
 * *Performance* or *accuracy* or *fit* are better fitting terms than *correct* for model quality
 * Careful with the term *testing* for measuring *prediction accuracy*, be aware of "correctness" connotations
 * *Verification/validation* analogy may help frame thinking, but will likely be confusing to most without longer explanation
-
-
-
-----
-## Excursion: Performance Testing?
-
-* Performance tests are not precise (measurement noise)
-    * Averaging over repeated executions *of the same test*
-    * Commonly using diverse benchmarks, i.e., *multiple inputs*
-    * Need to control environment (hardware)
-* No precise specification
-    * Regression tests
-    * Benchmarking as open-ended comparison, or tracking results over time
-
-
-```java
-@Test(timeout=100) 
-public void testCompute() {
-   expensiveComputation(...);
-}
-```
-
-**Is this a better analogy for model quality?**
-
-
-
-----
-## Excursion: Performance Testing is Poor Analogy
-
-* Performance specifications tend to be weak
-  - no precise expectations
-  - partial specifications
-* Performance specifications are probabilistic, because algorithm behavior is nondeterministic
-  - "90% of executions shall terminate in less than 1s"
-  - but: *repetitions of same program, capturing nondeterminism in program*
-* ML models are usually deterministic
-  - accuracy measured across multiple inputs, not repeated evaluation of same input
-
 
 
 

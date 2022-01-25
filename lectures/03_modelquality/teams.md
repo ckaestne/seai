@@ -20,22 +20,14 @@ Christian Kaestner
 * Milestone 2: Model and infrastructure quality (2 weeks)
 * Milestone 3: Monitoring and continuous deployment (2 weeks)
 * Milestone 4: Drift and feedback loops (1 week)
-* Groups of 4--5 students
+* Groups of 4--6 students
 
-----
-## Pandemic: Teamwork on Hard Mode
-
-* Remote work is challenging
-* Team bonding and socializing is hard
-* Distractions! Time zones!
-* Easier to hide
 
 ----
 ## Step 1: Establish Communication and Meeting Patterns
 
 * Agree on how to communicate in the team: Email? Slack? Whatsapp?
-* Agree on communication expectation: 
-    + Note, different people have different habits and expectations. Be explicit!
+* Agree on communication expectation. Different people have different habits and expectations. Be explicit!
     * Read emails daily? On weekends?
     * Respond to urgent chat messages within 3h?
     * Be available for chat during certain hours?
@@ -69,9 +61,12 @@ Christian Kaestner
 *(not asking for amount or quality of work completed)*
 
 ----
-## Team Roles
+## Team Composition and Roles
 
 * Team members have different strength and weaknesses -- that's good
+* Make use of individual strength of team members
+  * Split responsibilities and work, ....
+  * Onboard, pair up, ...
 * Consider assigning and rotating roles and responsibilities
     - E.g., coordinator (host), moderator, and scribe for team meetings, submitter responsible for final checks and submission of milestone
 * See GitHub for example [team policy](https://github.com/ckaestne/seai/blob/F2020/other_material/team%20policy.pdf)
@@ -79,9 +74,9 @@ Christian Kaestner
 ----
 ## Step 2: Dividing the Work
 
+* Coordinate at meetings
 * Read assignment before meeting
-* Discuss big picture and how to divide work
-* Consider internal teams and pair programming
+* Discuss big picture and how to divide work (inner teams?)
 * Consider task dependencies
 * 
 * **Write down explicit deliverables**
@@ -89,7 +84,7 @@ Christian Kaestner
     - Be explicit about expected results, should be verifiable 
     - Track completion, check off when done
     - GitHub issues, Trello board, Google docs, ... -- **single source of truth, with history tracking**
-* Complete deliverable list during meeting: everybody writes their own deliverables, others read all deliverables to check understanding
+* Complete deliverable list **during meeting**: everybody writes their own deliverables, others read all deliverables to check understanding
     - if not completed during meeting or team member not at meeting, email assignment after meeting to everybody; no objection within 24h counts as agreement with task assignment
 
 ----
@@ -112,11 +107,10 @@ Christian Kaestner
 ----
 ## Meeting Tips
 
-* Regular 1h zoom meeting, assign moderator who keeps time
-* Longer work/integration meeting with needed team members if needed
-* Calendar + calendar invitations can help with timezone problems
-* Use video, muting often not needed in small groups
-* Use chat deliberately
+* Regular 1h meeting, assign moderator who keeps time
+* Longer work/integration meeting with needed team members as needed
+* If using zoom: Use video, muting often not needed in small groups
+* Use Slack/chat deliberately
     - consider chat ephemeral, don't expect everybody to catch up on all old messages
     - explicitly tag people if you need their input
     - separate social communication from work communication, urgent from not urgent
@@ -127,6 +121,7 @@ Christian Kaestner
 ----
 ## Explore Collaborative Tools
 
+Examples:
 * GitHub issue tracker: async topical discussions and todo list
 * Google docs: collaborative report editing
 * GitHub wiki or markdown files: design and documentation 
@@ -140,7 +135,7 @@ Christian Kaestner
 * Sending teams into breakout rooms
 * Say hi, introduce yourself
     - Name? SE or ML background? Location and time zone? Favorite movie? Fun fact?
-    - Find time for first team meeting in next few days
+    - Find time for first team meeting in next few days (remote/in person?)
     - Agree on primary communication until team meeting
     - Pick a movie-related team name
     - Fill out slide for your team: ...
