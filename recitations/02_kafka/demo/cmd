@@ -1,0 +1,35 @@
+## Useful Links:
+# Kafkacat Utility - https://github.com/edenhill/kafkacat
+# python-kafka - https://pypi.org/project/kafka-python/
+# Kafkacat cheat sheet - https://dev.to/de_maric/learn-how-to-use-kafkacat-the-most-versatile-kafka-cli-client-1kb4
+
+###
+
+## Running SSH Tunnel to the course Kafka server
+
+$ ssh -L 9092:localhost:9092 tunnel@128.2.204.215 -NTf
+
+# Note: The tunnel process goes to the background after entering password, useful if you don't want to waste a terminal session.
+# Skip the '-f' option if you don't care about this.
+#
+# To kill the tunnel, send a SIGKILL to the tunnel process:
+
+# To find tunnel PID
+$ ps -eaf | grep ssh 
+
+# Send a SIGKILL to process with pid 10455
+$ kill -9 10455
+
+###
+
+## Using Kafkacat
+# Once a tunnel is up and running, you can connect to Kafka and play around with it
+
+# Test connectivity to Kafka broker
+$ kcat -b localhost -L
+
+# Consume events from topic
+$ kcat -b localhost -t <topic_name> -C
+
+# Consume all events in topic
+$ kcat -b localhost -t <topic_name> -C -o beginning
