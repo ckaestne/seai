@@ -1,7 +1,7 @@
 ---
 author: Christian Kaestner and Eunsuk Kang
 title: "17-445: Teamwork Crash Course"
-semester: Fall 2020
+semester: Spring 2022
 footer: "17-445 Machine Learning in Production, Christian Kaestner"
 license: Creative Commons Attribution 4.0 International (CC BY 4.0)
 ---
