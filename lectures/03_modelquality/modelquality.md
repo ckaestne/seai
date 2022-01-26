@@ -17,6 +17,13 @@ Required reading:
 * 🗎 Ribeiro, Marco Tulio, Tongshuang Wu, Carlos Guestrin, and Sameer Singh. "[Beyond Accuracy: Behavioral Testing of NLP Models with CheckList](https://homes.cs.washington.edu/~wtshuang/static/papers/2020-acl-checklist.pdf)." In Proceedings ACL, p. 4902–4912. (2020).
 
 
+----
+## Administrativa
+
+* Waitlist update?
+* Teams assigned, see Canvas. More later in the lecture
+* Each team will receive links with details on how to access a virtual machine for the team project late this week
+* You will likely get an email from Amazon AWS with free credits soon
 
 ---
 
@@ -69,6 +76,8 @@ monitoring, A/B testing, canary releases (in 2 weeks)
 
 ![radiology](radiology.jpg)
 
+> We should stop training radiologists now. It’s just completely obvious that within five years, deep learning is going to do better than radiologists. -- [Geoffrey Hinton](https://www.youtube.com/watch?v=2HMPRXstSvQ&t=29s), 2016
+
 Notes: Application to be used in hospitals to screen for cancer, both as routine preventative measure and in cases of specific suspicions. Supposed to work together with physicians, not replace.
 
 
@@ -97,7 +106,7 @@ Focus on measuring quality, not debugging the source of quality problems (e.g., 
 
 
 ----
-## Some System-Level Recommendations
+## Some System-Level Considerations
 
 * Models used by radiologists, humans in the loop
 * Radiologists are specialists who do not directly see patients
@@ -464,7 +473,7 @@ Pictures: https://pixabay.com/photos/lost-places-panzer-wreck-metal-3907364/, ht
 
 
 ----
-## Overfitting in Cancer Detection?
+## Overfitting in Cancer Prognosis?
 
 <!-- discussion -->
 
@@ -837,19 +846,21 @@ Many potential subtle and less subtle problems:
 
 
 
-----
-## Summary: Common Pitfalls
 
+----
+## Preliminary Summary: Common Pitfalls
+
+* **Always question the i.i.d. assumption**
 * Test data not representative
+* Dependence between training and test data
 * Misleading accuracy metrics
 * Evaluating on training or validation data
-* Dependence between training and test data
 * Label leakage
 * Overfitting on test data through repeated evaluations
 
 **How to avoid? Ensure as part of process?**
 
-
+Note: i.i.d. = independent and identically distributed
 
 
 
@@ -1037,7 +1048,7 @@ Software testing can be applied to many qualities:
 ## How to evaluate prediction tasks?
 
 
-![Cancer detection with ML](cancerpred.png)
+![Cancer prognosis with ML](cancerpred.png)
 
 ```java
 /**
@@ -1053,7 +1064,7 @@ boolean hasCancer(Image scan);
 
 We use ML precisely because we do not have a specification (too complex, rules unknown)
 
-![Cancer detection with ML](cancerpred.png)
+![Cancer prognosis with ML](cancerpred.png)
 
 
 No specification that could tell us for any input whether the output is correct
@@ -1091,7 +1102,7 @@ void testPatient2() {
 * Accepting that mistakes will happen, hopefully not to frequently; "95% accuracy" may be pretty good
 * More confident for data similar to training data
 
-![Cancer detection with ML](cancerpred.png)
+![Cancer prognosis with ML](cancerpred.png)
 
 
 
@@ -1145,7 +1156,7 @@ See also https://en.wikipedia.org/wiki/All_models_are_wrong
 ----
 ## Find better models?
 
-![Cancer detection with ML](cancerpred.png)
+![Cancer prognosis with ML](cancerpred.png)
 
 We are looking for models that better **fit** the problem
 
@@ -1307,7 +1318,7 @@ Mary Shaw. [Myths and Mythconceptions: What does it mean to be a programming lan
 
 
 ---
-# Curating Validation Data
+# Curating Validation Data & Input Slicing
 
 (Learning from Software Testing)
 
@@ -1367,12 +1378,12 @@ Will not randomly sample from distribution of all days
 ## Software Test Case Design
 
 * Opportunistic/exploratory testing: Add some unit tests, without much planning
-* Black-box testing: Derive test cases from specifications
+* Specification-based testing ("black box"): Derive test cases from specifications
     - Boundary value analysis
     - Equivalence classes
     - Combinatorial testing
     - Random testing
-* White-box testing: Derive test cases to cover implementation paths
+* Structural testing ("white box"): Derive test cases to cover implementation paths
     - Line coverage, branch coverage
     - Control-flow, data-flow testing, MCDC, ...
 *
@@ -1437,6 +1448,8 @@ def busTicketPrice(age: Int,
 *(note, similar to requirements validation: did we hear all/representative stakeholders)*
 
 
+
+
 ----
 ## Not All Inputs are Equal
 
@@ -1477,11 +1490,11 @@ Curate Validation Data for Specific Problems and Subpopulations:
 * *Uniformness/fairness testing:* Separate validation dataset for different subpopulations (e.g., accents) -- expect comparable accuracy
 * *Setting goals:* Validation datasets for challenging cases or stretch goals -- accept lower accuracy
 
-Derive from requirements, experts, user feedback, expected problems etc. Think *blackbox testing*.
+Derive from requirements, experts, user feedback, expected problems etc. Think *specification-based testing*.
 
 
 ----
-## Important Input Groups for Cancer Detection?
+## Important Input Groups for Cancer Prognosis?
 
 <!-- discussion -->
 
@@ -1525,7 +1538,7 @@ Source: Barash, Guy, Eitan Farchi, Ilan Jayaraman, Orna Raz, Rachel Tzoref-Brill
 ----
 ## Input Partitioning Discussion
 
-**How to slice evaluation data for cancer detection?**
+**How to slice evaluation data for cancer prognosis?**
 
 <!-- discussion -->
 
@@ -1552,8 +1565,23 @@ Ré, Christopher, Feng Niu, Pallavi Gudipati, and Charles Srisuwananukorn. "[Ove
 
 Ré, Christopher, Feng Niu, Pallavi Gudipati, and Charles Srisuwananukorn. "[Overton: A Data System for Monitoring and Improving Machine-Learned Products](https://arxiv.org/abs/1909.05372)." arXiv preprint arXiv:1909.05372 (2019).
 
+
+
+
+
+
+
+---
+# Testing Model Capabilities
+
+("stress testing")
+
+<!-- references -->
+
+Further reading: Christian Kaestner. [Rediscovering Unit Testing: Testing Capabilities of ML Models](https://towardsdatascience.com/rediscovering-unit-testing-testing-capabilities-of-ml-models-b008c778ca81). Toward Data Science, 2021.
+
 ----
-## Testing Capabilities ("Stress Testing")
+## Testing Capabilities
 
 Even without specifications, are there "concepts" or "capabilities" the model should learn?
 
@@ -1576,7 +1604,7 @@ Ribeiro, Marco Tulio, Tongshuang Wu, Carlos Guestrin, and Sameer Singh. "[Beyond
 
 
 ----
-## Testing Capabilities ("Stress Testing")
+## Testing Capabilities 
 
 ![Examples of Capabilities from Checklist Paper](capabilities1.png)
 
@@ -1587,7 +1615,7 @@ From: Ribeiro, Marco Tulio, Tongshuang Wu, Carlos Guestrin, and Sameer Singh. "[
 
 
 ----
-## Testing Capabilities ("Stress Testing")
+## Testing Capabilities 
 
 ![Examples of Capabilities from Checklist Paper](capabilities2.png)
 
@@ -1597,36 +1625,45 @@ From: Ribeiro, Marco Tulio, Tongshuang Wu, Carlos Guestrin, and Sameer Singh. "[
 From: Ribeiro, Marco Tulio, Tongshuang Wu, Carlos Guestrin, and Sameer Singh. "[Beyond Accuracy: Behavioral Testing of NLP Models with CheckList](https://homes.cs.washington.edu/~wtshuang/static/papers/2020-acl-checklist.pdf)." In Proceedings ACL, p. 4902–4912. (2020).
 
 ----
-## Example of Capabilities
+## Examples of Capabilities
 
-**What could be capabilities of the cancer detector?**
+**What could be capabilities of the cancer classifier?**
 
-![MRI](mri.jpg)
-<!-- .element: class="stretch" -->
-
-----
-## Example of Capabilities
-
-**What could be capabilities of image captioning system?**
-
-![Image captioning task](imgcaptioning.png)
+![radiology](radiology.jpg)
 
 
 ----
-## Is it fair to expect generalization beyond training distribution?
+## Recall: Is it fair to expect generalization beyond training distribution?
 
 
-<!-- discussion -->
+![](radiology-distribution.png)
+<!-- .element: class="plain" -->
 
 *For example, shall a cancer detector generalize to other hospitals? Shall image captioning generalize to describing pictures of star formations?*
 
 Note: We wouldn't test a first year elementary school student on high-school math. This would be "out of the training distribution"
 
+----
+## Recall: Shortcut Learning
+
+![Shortcut learning illustration from paper below](shortcutlearning.png)
+<!-- .element: class="plain" -->
+
+<!-- references -->
+Figure from: Geirhos, Robert, Jörn-Henrik Jacobsen, Claudio Michaelis, Richard Zemel, Wieland Brendel, Matthias Bethge, and Felix A. Wichmann. "[Shortcut learning in deep neural networks](https://arxiv.org/abs/2004.07780)." Nature Machine Intelligence 2, no. 11 (2020): 665-673.
+
+----
+## More Shortcut Learning :)
+
+![Cows with different backgrounds](shortcutlearning-cows.png)
+
+<!-- references -->
+Figure from Beery, Sara, Grant Van Horn, and Pietro Perona. “Recognition in terra incognita.” In Proceedings of the European Conference on Computer Vision (ECCV), pp. 456–473. 2018.
 
 ----
 ## Generalization beyond Training Distribution?
 
-* Typically training and validation data from same distribution (e.g., crossvalidation)
+* Typically training and validation data from same distribution (i.i.d. assumption!)
 * Many models can achieve similar accuracy
 * Models that learn "right" abstractions possibly indistinguishable from models that use shortcuts
   - see tank detection example
@@ -1645,6 +1682,8 @@ See discussion in D'Amour, Alexander, Katherine Heller, Dan Moldovan, Ben Adlam,
 
 * Capabilities are "partial specifications", given beyond training data
 * Encode domain knowledge of the problem
+  * Capabilities are inherently domain specific
+  * Curate capability-specific test data for a problem
 * Testing for capabilities helps to distinguish models that use intended abstractions
 * May help find models that generalize better
 
@@ -1654,24 +1693,118 @@ See discussion in D'Amour, Alexander, Katherine Heller, Dan Moldovan, Ben Adlam,
 
 See discussion in D'Amour, Alexander, Katherine Heller, Dan Moldovan, Ben Adlam, Babak Alipanahi, Alex Beutel, Christina Chen et al. "[Underspecification presents challenges for credibility in modern machine learning](https://arxiv.org/abs/2011.03395)." arXiv preprint arXiv:2011.03395 (2020).
 
-<!-- 
 ----
-## How much validation data?
 
-* Problem dependent
-* Statistics can give confidence interval for results
-    - e.g. [Sample Size Calculator](https://www.surveysystem.com/sscalc.htm): 384 samples needed for ±5% confidence interval (95% conf. level; 1M population)
-* Experience and heuristics. Example: Hulten's heuristics for stable problems: 
-    - 10s is too small
-    - 100s sanity check
-    - 1000s usually good
-    - 10000s probably overkill
-    - Reserve 1000s recent data points for evaluation (or 10%, whichever is more)
-    - Reserve 100s for important subpopulations
- -->
+## Strategies for identifying capabilities
+
+* Analyze common mistakes (e.g., classify past mistakes in cancer prognosis)
+* Use existing knowledge about the problem (e.g., linguistics theories)
+* Observe humans (e.g., how do radiologists look for cancer)
+* Derive from requirements (e.g., fairness)
+* Causal discovery from observational data?
+
+<!-- references -->
+
+Further reading: Christian Kaestner. [Rediscovering Unit Testing: Testing Capabilities of ML Models](https://towardsdatascience.com/rediscovering-unit-testing-testing-capabilities-of-ml-models-b008c778ca81). Toward Data Science, 2021.
+
+
 
 ----
-## Summary: Black-Box Testing Techniques as Inspiration
+## Examples of Capabilities
+
+**What could be capabilities of image captioning system?**
+
+![Image captioning task](imgcaptioning.png)
+
+
+
+----
+## Generating Test Data for Capabilities
+
+**Idea 1: Domain-specific generators**
+
+Testing *negation* in sentiment analysis with template: <br/>
+`I {NEGATION} {POS_VERB} the {THING}.`
+
+Testing texture vs shape priority with artificial generated images:
+![Texture vs shape example](texturevsshape.png)
+
+
+<!-- references -->
+Figure from Geirhos, Robert, Patricia Rubisch, Claudio Michaelis, Matthias Bethge, Felix A. Wichmann, and Wieland Brendel. “ImageNet-trained CNNs are biased towards texture; increasing shape bias improves accuracy and robustness.” In Proc. International Conference on Learning Representations (ICLR), (2019).
+
+----
+## Generating Test Data for Capabilities
+
+**Idea 2: Mutating existing inputs**
+
+Testing *synonyms* in sentiment analysis by replacing words with synonyms, keeping label
+
+Testing *robust against noise and distraction* add `and false is not true` or random URLs to text
+
+![Examples of Capabilities from Checklist Paper](capabilities1.png)
+
+
+<!-- references -->
+
+Figure from: Ribeiro, Marco Tulio, Tongshuang Wu, Carlos Guestrin, and Sameer Singh. "[Beyond Accuracy: Behavioral Testing of NLP Models with CheckList](https://homes.cs.washington.edu/~wtshuang/static/papers/2020-acl-checklist.pdf)." In Proceedings ACL, p. 4902–4912. (2020).
+
+
+----
+## Generating Test Data for Capabilities
+
+**Idea 3: Crowd-sourcing test creation**
+
+Testing *sarcasm* in sentiment analysis: Ask humans to minimally change text to flip sentiment with sarcasm
+
+Testing *background* in object detection: Ask humans to take pictures of specific objects with unusual backgrounds
+
+![Example of modifications to text](sarcasm.png)
+
+<!-- references -->
+
+Figure from: Kaushik, Divyansh, Eduard Hovy, and Zachary C. Lipton. “Learning the difference that makes a difference with counterfactually-augmented data.” In Proc. International Conference on Learning Representations (ICLR), (2020).
+
+----
+## Generating Test Data for Capabilities
+
+**Idea 4: Slicing test data**
+
+Testing *negation* in sentiment analysis by finding sentences containing 'not'
+
+
+![Overton system](overton.png)
+
+
+<!-- references -->
+
+Ré, Christopher, Feng Niu, Pallavi Gudipati, and Charles Srisuwananukorn. "[Overton: A Data System for Monitoring and Improving Machine-Learned Products](https://arxiv.org/abs/1909.05372)." arXiv preprint arXiv:1909.05372 (2019).
+
+
+
+----
+## Examples of Capabilities
+
+**How to generate test data for capabilities of the cancer classifier?**
+
+![radiology](radiology.jpg)
+
+
+----
+## Testing vs Training Capabilities
+
+* Dual insight for testing and training
+* Strategies for curating test data can also help select training data
+* Generate capability-specific training data to guide training (data augmentation)
+
+<!-- references -->
+
+Further reading on using domain knowledge during training: Von Rueden, Laura, Sebastian Mayer, Jochen Garcke, Christian Bauckhage, and Jannis Schuecker. "Informed machine learning–towards a taxonomy of explicit integration of knowledge into machine learning." Learning 18 (2019): 19-20.
+
+ 
+
+----
+## Preliminary Summary: Specification-Based Testing Techniques as Inspiration
 
 * Boundary value analysis
 * Partition testing & equivalence classes
@@ -1731,6 +1864,11 @@ void testNextDate() {
 ```
 
 **But is it useful?**
+
+----
+## Cancer in Random Image?
+
+![](white-noise.jpg)
 
 ----
 ## Randomly Generating "Realistic" Inputs is Possible
@@ -1962,6 +2100,7 @@ Note: example source: http://web.cs.iastate.edu/~weile/cs641/9.SymbolicExecution
 * Using knowledge about feature distributions (sample from each feature's distribution)
 * Knowledge about dependencies among features and whole population distribution (e.g., model with probabilistic programming language)
 * Mutate from existing inputs (e.g., small random modifications to select features)
+* Generate "fake data" with Generative Adversarial Networks
 
 
 ----
@@ -2005,6 +2144,25 @@ Exploit relationships between inputs
 <!-- discussion -->
 
 ----
+## Some Capabilities are Invariants
+
+**Some capability tests can be expressed as invariants and automatically encoded as transformations to existing test data**
+
+
+* Negation should flip sentiment analysis result
+* Typos should not affect sentiment analysis result
+* Changes to locations or names should not affect sentiment analysis results
+
+![Examples of NLP capability tests](capabilities1.png)
+
+
+<!-- references -->
+
+From: Ribeiro, Marco Tulio, Tongshuang Wu, Carlos Guestrin, and Sameer Singh. "[Beyond Accuracy: Behavioral Testing of NLP Models with CheckList](https://homes.cs.washington.edu/~wtshuang/static/papers/2020-acl-checklist.pdf)." In Proceedings ACL, p. 4902–4912. (2020).
+
+
+
+----
 ## Examples of Invariants 
 
 * Credit rating should not depend on gender:
@@ -2034,23 +2192,6 @@ $\forall x. f(g\_I(x)) = g\_O(f(x))$
 e.g. $g\_I(x)= \texttt{replace}(x, \text{" is ", " is not "})$ and $g\_O(x)=\neg x$
 
 
-----
-## More Examples
-
-**Some capability tests can be expressed as invariants and automatically encoded as transformations to existing test data**
-
-
-* Negation should flip sentiment analysis result
-* Typos should not affect sentiment analysis result
-* Changes to locations or names should not affect sentiment analysis results
-
-![Examples of NLP capability tests](capabilities1.png)
-
-
-<!-- references -->
-
-From: Ribeiro, Marco Tulio, Tongshuang Wu, Carlos Guestrin, and Sameer Singh. "[Beyond Accuracy: Behavioral Testing of NLP Models with CheckList](https://homes.cs.washington.edu/~wtshuang/static/papers/2020-acl-checklist.pdf)." In Proceedings ACL, p. 4902–4912. (2020).
-
 
 ----
 ## On Testing with Invariants/Assertions
@@ -2071,6 +2212,7 @@ Further reading:
 ## Invariant Checking aligns with Requirements Validation
 
 ![Machine Learning Validation vs Verification](mlvalidation.png)
+<!-- .element: class="plain" -->
 
 
 
@@ -2129,7 +2271,7 @@ assertEquals(randomNumbers,
     * Render scene -> add noise -> recognize -> compare recognized result with simulator state
 * Quality depends on quality of the simulator and how well it can produce inputs from outputs: 
     * examples: render picture/video, synthesize speech, ... 
-    * Less suitable where input-output relationship unknown, e.g., cancer detection, housing price prediction, shopping recommendations
+    * Less suitable where input-output relationship unknown, e.g., cancer prognosis, housing price prediction, shopping recommendations
 <!-- col -->
 ```mermaid
 graph TD;
@@ -2144,7 +2286,7 @@ Further readings: Zhang, Mengshi, Yuqun Zhang, Lingming Zhang, Cong Liu, and Sar
 
 
 ----
-## Summary: Invariants and Generation
+## Preliminary Summary: Invariants and Generation
 
 * Generating sample inputs is easy, but knowing corresponding outputs is not (oracle problem)
 * Crashing bugs are not a concern
@@ -2178,7 +2320,7 @@ Further readings: Zhang, Mengshi, Yuqun Zhang, Lingming Zhang, Cong Liu, and Sar
 
 
 ----
-## Example: White-box testing
+## Example: Structural testing
 
 ```java
 int divide(int A, int B) {
@@ -2197,7 +2339,7 @@ int divide(int A, int B) {
 
 
 ----
-## Defining White-Box Testing
+## Defining Structural Testing ("white box")
 
 * Test case creation is driven by the implementation, not the specification
 * Typically aiming to increase coverage of lines, decisions, etc
@@ -2362,7 +2504,7 @@ Matei Zaharia. [Introducing MLflow: an Open Source Machine Learning Platform](ht
 * Software bugs vs model fit in the absence of specifications
 * Curating test data
     - Analyzing specifications, capabilities
-    - Not all inputs are equal: Identify important inputs (inspiration from blackbox testing)
+    - Not all inputs are equal: Identify important inputs (inspiration from specification-based testing)
     - Slice data for evaluation
 * Automated random testing 
     - Feasible with invariants (e.g. metamorphic relations)

@@ -22,6 +22,17 @@ Christian Kaestner
 * Milestone 4: Drift and feedback loops (1 week)
 * Groups of 4--6 students
 
+----
+## Infrastructure
+
+* We simulate 1M users on a platform with 160k movies
+* We provide an underpowered virtual machine
+* You can observe the system through logs streamed in Apache Kafka
+* We send recommendation requests to your VM
+* Technology choices entirely up to you
+* You may use additional resources (e.g. AWS)
+*
+* Focus on reliable deployment; we do not care about accuracy
 
 ----
 ## Step 1: Establish Communication and Meeting Patterns
