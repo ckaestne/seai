@@ -16,6 +16,35 @@ Christian Kaestner
 Required reading: 
 * 🗎 Ribeiro, Marco Tulio, Tongshuang Wu, Carlos Guestrin, and Sameer Singh. "[Beyond Accuracy: Behavioral Testing of NLP Models with CheckList](https://homes.cs.washington.edu/~wtshuang/static/papers/2020-acl-checklist.pdf)." In Proceedings ACL, p. 4902–4912. (2020).
 
+----
+# Administrativa
+
+* Finalized waitlist
+* Team and VM updates
+*
+* Back to in-person
+  * Subscribe to `#lecture` slack channel
+  * Experimental: using slack for breakout groups and polls
+  * Ask immediate question in person, background questions in Slack
+
+
+----
+## Teamwork Remark: Dividing the Work
+
+* Coordinate at meetings
+* Read assignment before meeting
+* Discuss big picture and how to divide work (inner teams?)
+* Consider task dependencies
+* 
+* **Write down explicit deliverables**
+    - *Who* does *what* by *when* 
+    - Be explicit about expected results, should be verifiable 
+    - Track completion, check off when done
+    - GitHub issues, Trello board, Google docs, ... -- **single source of truth, with history tracking**
+* Complete deliverable list **during meeting**: everybody writes their own deliverables, others read all deliverables to check understanding
+    - if not completed during meeting or team member not at meeting, email assignment after meeting to everybody; no objection within 24h counts as agreement with task assignment
+
+
 
 ---
 
@@ -74,13 +103,17 @@ Write a few tests for the following program:
 def nextDate(year: Int, month: Int, day: Int) = ...
 ```
 
-for example 
+A test may look like:
 ```java
 assert nextDate(2021, 2, 8) == (2021, 2, 9);
 ```
 
-
 **Discuss how you select tests. Discuss how many tests you need to feel confident.**
+
+Post answer to `#lecture` in Slack using template:
+> Selection strategy: ...<br />
+> Test quantity: ...<br />
+> AndrewIDs: ...
 
 
 ----
