@@ -51,11 +51,12 @@ Suggested complementary reading: Ajay Agrawal, Joshua Gans, Avi Goldfarb. “[Pr
 
 * Clear specifications are available
 * Simple heuristics are *good enough*
-* Cost of building and maintaining the system outweighs the benefits (see technical debt paper)
+* Cost of building and maintaining the ML system outweighs its benefits
+(see the [technical debt paper](https://research.google/pubs/pub43146.pdf))
 * Correctness is of utmost importance
-* ML is used only for the hype, to attract funding
+* ML is used only for the hype (e.g., to attract funding)
 
-**Examples?**
+**Examples of these?**
 
 Notes:
 
