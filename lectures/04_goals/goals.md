@@ -811,6 +811,10 @@ Notes:
 ---
 # Summary
 
-* Be deliberate about when to use AI/ML
-* Identify and break down system goals, define concrete measures
-* Key concepts and challenges of measurement
+* Ask yourself: Do you really need ML?
+  * Establish a  non-ML solution as a baseline & consider cost vs benefit
+* Align your system goals!
+  * Better ML models does not always lead to better business goals
+* Consider risks of measurement
+   * Are you really measuring what you want? Can your metric
+   incentivize bad behaviors? 
