@@ -207,7 +207,7 @@ LI --> OO(Organizational objectives)
 <!-- .element: class="fragment" -->
   * Regular use, time spent on site, messages posted
   * Growing user numbers, recommendations
-* Limitations
+* Caveats
 <!-- .element: class="fragment" -->
   * Often indirect, proxy measures
   * Can be misleading (e.g., more daily active users => higher profits?)
