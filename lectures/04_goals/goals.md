@@ -49,10 +49,10 @@ Suggested complementary reading: Ajay Agrawal, Joshua Gans, Avi Goldfarb. “[Pr
 ----
 ## When not to use Machine Learning?
 
-* Clear specifications are available
+* Clear specifications are available 
 * Simple heuristics are *good enough*
-* Cost of building and maintaining the ML system outweighs its benefits
-(see the [technical debt paper](https://research.google/pubs/pub43146.pdf))
+* Cost of building and maintaining the ML system outweighs its
+benefits (see the [technical debt paper](https://research.google/pubs/pub43146.pdf))
 * Correctness is of utmost importance
 * ML is used only for the hype (e.g., to attract funding)
 
@@ -69,23 +69,22 @@ Accounting systems, inventory tracking, physics simulations, safety railguards, 
 ----
 ## Consider Non-ML Baselines
 
-* Consider simple heuristics -- how far can you get?
-* Consider semi-manual approaches -- cost and benefit?
-* Consider the system without that feature
-*
-* **Discuss Examples**
-    - Ranking apps, recommending products
-    - Filtering spam or malicious advertisement
-    - Creating subtitles for conference videos
-    - Summarizing soccer games
+* Consider simple heuristics -- how far can you get? <!-- .element: class="fragment" -->
+* Consider semi-manual approaches -- cost and benefit? <!-- .element: class="fragment" -->
+* Consider the system without that feature <!-- .element: class="fragment" -->
+* Examples: <!-- .element: class="fragment" -->
+    - Recommending products on Amazon
+    - Filtering comments with profanity on public forums
+	- Credit card fraud detection
     - Controlling a washing machine
 
 ----
 ## When to use Machine Learning
 
 * Big problems: Many inputs, massive scale
-* Open-ended problems: No single solution, incremental improvements, continue to grow
-* Time-changing problems: Adapting to constant change, learn with users
+* Open-ended problems: No single "final" solution; incremental
+  improvements and growth over time
+* Time-changing problems: Adapting to constant changes, learning with users
 * Intrinsically hard problems: Unclear rules, heuristics perform poorly
 
 **Examples?**
@@ -179,10 +178,10 @@ LI --> OO(Organizational objectives)
     - Social justice improved, well-being elevated, fairness improved
 * Often not directly measurable from system output; slow indicators
 
-**Accurate models themselves are not the ultimate goal!**
+**Implication: Accurate ML models themselves are not the ultimate goal!**
 
-**AI may only very indirectly influence such organizational
-  objectives; influence hard to quantify; lagging measures**
+**ML may only indirectly influence such organizational
+  objectives; influence is often hard to quantify; lagging measures**
 
 
 <!-- ---- -->
@@ -203,26 +202,29 @@ LI --> OO(Organizational objectives)
 *Measures correlating with future success, from the business perspective*
 
 * Customers sentiment: Do they like the product? (e.g., surveys, ratings)
+<!-- .element: class="fragment" -->
 * Customer engagement: How often do they use the product?
+<!-- .element: class="fragment" -->
   * Regular use, time spent on site, messages posted
   * Growing user numbers, recommendations
-
-**Indirect proxy measures, lagging, bias**
-
-**Can be misleading (more daily active users => higher profits?)**
-
+* Limitations
+<!-- .element: class="fragment" -->
+  * Often indirect, proxy measures
+  * Can be misleading (e.g., more daily active users => higher profits?)
 
 ----
 ## User Outcomes
 
 *How well the system is serving its users, from the user's perspective*
 
-* Users receive meaningful recommendations, enjoying content
-* Users making better decisions
-* Users saving time due to system
-* Users achieving their goals
-
-**Easier and more granular to measure, but only indirect relation to organization objectives**
+* Examples: 
+<!-- .element: class="fragment" -->
+  * Users choosing recommended items and enjoying them
+  * Users making better decisions
+  * Users saving time thanks to the system
+  * Users achieving their goals
+* Easier and more granular to measure, but only indirect relation to organization objectives
+<!-- .element: class="fragment" -->
 
 ----
 ## Model Properties
@@ -235,7 +237,7 @@ LI --> OO(Organizational objectives)
 * Inference time
 * Training cost
 
-**Not directly linked to business goals**
+**Often not directly linked to organizational goals**
 
 <!-- ---- -->
 <!-- ## Layering of Success Measures -->
@@ -277,19 +279,22 @@ UO --> LI(Leading indicators)
 LI --> OO(Organizational objectives)
 ```
 
+Notes:
+
+Accuracy of song predictions does not necessarily lead to increased
+user engagement (e.g., if the UI is terrible)
+
 ----
-## Exercise: Automating Admission Decisions to Master's Program
-<!-- smallish -->
-Discuss in groups, breakout rooms
+## Breakout: Automating Admission Decisions to Master's Program
 
-What are the *goals* behind automating admissions decisions?
+What are different types of goals behind automating admissions decisions?
 
-**Organizational objectives, leading indicators, user outcomes, model properties?**
-
-Report back in 10 min
-
-<!-- discussion -->
-
+Post answer to `#lecture` in Slack using template:
+> Organizational objective: ...<br />
+> Leading indicators: ...<br />
+> User outcomes: ...<br />
+> Model properties: ...<br />
+> AndrewIDs: ...
 
 
 
@@ -438,7 +443,7 @@ For design strategy, see [Goal-Question-Metric approach](https://en.wikipedia.or
 * Ideally: An independent party should be able to independently set up infrastructure to measure outcomes
 
 ----
-## Exercise: Specific Metrics for Spotify Goals?
+## Example: Specific Metrics for Spotify Goals?
 
 * Organization objectives?
 * Leading indicators?
@@ -475,7 +480,7 @@ For design strategy, see [Goal-Question-Metric approach](https://en.wikipedia.or
     * e.g., Higher SAT scores => higher academic excellence?
 * External validity: Concerns the generalization of the findings to contexts and environments, other than the one studied
 <!-- .element: class="fragment" -->
-	* e.g., Drug effectiveness on test group: Does it hold over the general public? 
+	* e.g., Drug effectiveness on a test group: Does it hold over the general public? 
 
 ----
 ##  Correlation vs Causation
