@@ -573,15 +573,14 @@ CV -->|causal| IV
 * Originally: Opinion-based polls, but complaints by schools on subjectivity
 * Data-driven model: Rank colleges in terms of "educational excellence"
 * Input: SAT scores, student-teacher ratios, acceptance rates,
-retention rates, alumni donations, etc.,
+retention rates, campus amenities, alumni donations, etc.,
 
 ----
 ## Example: University Rankings
 
 ![US News](us-news.jpg)
 
-* Who are different stakeholders? What are their incentives? Can they
-be misused or cause unintended side effects?
+* Can the ranking-based metric be misused or cause unintended side effects?
 
 For more, see Weapons of Math Destruction by Cathy O'Neil
 
@@ -813,8 +812,8 @@ Notes:
 
 * Ask yourself: Do you really need ML?
   * Establish a  non-ML solution as a baseline & consider cost vs benefit
-* Align your system goals!
-  * Better ML models does not always lead to better business goals
+* Align your system goals
+  * Better ML models does not always lead to better business goals!
 * Consider risks of measurement
    * Are you really measuring what you want? Can your metric
    incentivize bad behaviors? 
