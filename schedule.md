@@ -11,7 +11,7 @@
 |  | [Teamwork Primer](https://ckaestne.github.io/seai/S2022/slides/03_modelquality/teams.html) |  |  |
 | Fri, Jan 28 | ![Recitation](https://img.shields.io/badge/-rec-yellow.svg) Stream processing: Apache Kafka | |  |
 | Mon, Jan 31 | [Model Quality 2: Slicing, Capabilities, Invariants](https://ckaestne.github.io/seai/S2022/slides/03_modelquality/modelquality2.html) ([book chapter](https://ckaestne.medium.com/model-quality-slicing-capabilities-invariants-and-other-testing-strategies-27e456027bd)) | [Behavioral Testing of NLP Models with CheckList](https://homes.cs.washington.edu/~wtshuang/static/papers/2020-acl-checklist.pdf) |  |
-| Wed, Feb 02 | Goals and Success Measures for AI-Enabled Systems | [Building Intelligent Systems](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436), Ch. 2, 4 |  |
+| Wed, Feb 02 | [Goals and Success Measures for AI-Enabled Systems](https://ckaestne.github.io/seai/S2022/slides/04_goals/goals.html) | [Building Intelligent Systems](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436), Ch. 2, 4 |  |
 | Fri, Feb 04 | ![Recitation](https://img.shields.io/badge/-rec-yellow.svg) Unit testing / Measurement | |  |
 | Mon, Feb 07 | Requirements, Risk, and Planning for Mistakes 1 | [The World and the Machine](http://mcs.open.ac.uk/mj665/icse17kn.pdf) |  |
 | Wed, Feb 09 | Requirements, Risk, and Planning for Mistakes 2 | [Building Intelligent Systems](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436), Ch. 6, 7, 24 | [M1: Modeling and First Deployment](https://github.com/ckaestne/seai/blob/S2022/assignments/project.md#milestone-1-recommendation-model-and-first-deployment) |
