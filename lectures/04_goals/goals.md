@@ -573,7 +573,7 @@ CV -->|causal| IV
 * Originally: Opinion-based polls, but complaints by schools on subjectivity
 * Data-driven model: Rank colleges in terms of "educational excellence"
 * Input: SAT scores, student-teacher ratios, acceptance rates,
-retention rates, campus amenities, alumni donations, etc.,
+retention rates, campus facilities, alumni donations, etc.,
 
 ----
 ## Example: University Rankings
