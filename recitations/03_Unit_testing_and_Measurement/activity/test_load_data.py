@@ -7,9 +7,9 @@ class TestLoadData(unittest.TestCase):
 
     # Arrange, Act, Assert
 
-    @mock.patch('load_data.KafkaConsumer', autospec=True)  # Act
+    @mock.patch('load_data.KafkaConsumer', autospec=True)  # Arrange
     def test_get_kafka_consumer(self, kafka_consumer_mock):
-        kafka_consumer_instance = create_consumer('test-tashee3')  # Arrange
+        kafka_consumer_instance = create_consumer('test-tashee3')  # Act
 
         kafka_consumer_mock.assert_called_once_with(  # assert
             'test-tashee3',
