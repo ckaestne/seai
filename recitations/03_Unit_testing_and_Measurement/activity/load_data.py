@@ -18,7 +18,7 @@ def create_consumer(topic):
 def get_data_from_kafka(consumer, topic):
     records = consumer.poll(timeout_ms=6000)
     consumer.seek(partition=TopicPartition(topic,0), offset=5)
-    records = consumer.poll(timeout_ms=6000)
+    #records = consumer.poll(timeout_ms=6000)
     return records
 
 

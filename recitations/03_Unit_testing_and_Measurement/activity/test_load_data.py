@@ -5,13 +5,13 @@ from load_data import create_consumer, get_data_from_kafka
 
 class TestLoadData(unittest.TestCase):
 
-    # mock create_consumer call
+    # Arrange, Act, Assert
 
-    @mock.patch('load_data.KafkaConsumer', autospec=True)
+    @mock.patch('load_data.KafkaConsumer', autospec=True)  # Arrange
     def test_get_kafka_consumer(self, kafka_consumer_mock):
-        kafka_consumer_instance = create_consumer('test-tashee3')
+        kafka_consumer_instance = create_consumer('test-tashee3')  # Act
 
-        kafka_consumer_mock.assert_called_once_with(
+        kafka_consumer_mock.assert_called_once_with(  # assert
             'test-tashee3',
             bootstrap_servers=['localhost:9092'],
             group_id='test-group-example',
