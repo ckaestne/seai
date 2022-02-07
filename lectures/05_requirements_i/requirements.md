@@ -57,19 +57,19 @@ failures
 <!-- **What went wrong? What is the root cause of the failure?** -->
 
 ----
-## Autopilot in Vehicles
+## Facial Recognition in ATM
 
-![Tesla autopilot](tesla.png)
-
-![Tesla crash](tesla-crash.jpeg)
+![ATM](atm.gif)
 <!-- .element: class="stretch" -->
 
 **Q. What went wrong? What is the root cause of the failure?**
 
 ----
-## Facial Recognition in ATM
+## Autopilot in Vehicles
 
-![ATM](atm.gif)
+![Tesla autopilot](tesla.png)
+
+![Tesla crash](tesla-crash.jpeg)
 <!-- .element: class="stretch" -->
 
 **Q. What went wrong? What is the root cause of the failure?**
