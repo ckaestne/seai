@@ -166,7 +166,7 @@ world
 environment)
 <!-- .element: class="fragment" -->
 * Machine (software) is designed to sense and manipulate the environment into
-  a desired state using input & output devices
+  this desired state using input & output devices
 <!-- .element: class="fragment" -->
 
 ----
