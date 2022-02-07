@@ -226,10 +226,9 @@ lane.
 
 * Requirement (REQ): What the system must ensure, in terms of desired
   effects on the environment 
-* Assumptions (ENV): What’s assumed about the behavior or
-  properties of the environment
 * Specification (SPEC): What software must implement, expressed over
 the shared phenomena
+* Assumptions (ENV): What’s assumed about the behavior/properties of the environment; bridges the gap between REQ and SPEC
 
 ----
 ## Shared Phenomena
@@ -240,7 +239,7 @@ the shared phenomena
 * Assumptions (ENV) are expressed in terms of world & shared phenomena
 * Specifications (SPEC) are expressed in terms of shared phenomena
 
-**Software cannot directly satisfy a requirement on its own!**
+**Software cannot directly satisfy a requirement on its own; it relies on assumptions about the environment!**
 
 ----
 ## Example: Lane Assist
