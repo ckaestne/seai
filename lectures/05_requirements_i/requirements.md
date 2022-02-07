@@ -2,7 +2,7 @@
 author: Christian Kaestner & Eunsuk Kang
 title: "11-695/17-445: Requirements and Risks"
 semester: Spring 2022
-footer: "11-695/17-44:  Machine Learning in Production/AI Engineering"
+footer: "11-695/17-445:  Machine Learning in Production/AI Engineering"
 license: Creative Commons Attribution 4.0 International (CC BY 4.0)
 ---  
 
