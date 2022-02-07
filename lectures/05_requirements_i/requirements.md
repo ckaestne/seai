@@ -65,19 +65,19 @@ failures
 **Q. What went wrong? What is the root cause of the failure?**
 
 ----
-## Autopilot in Vehicles
+## Automated Hiring
 
-![Tesla autopilot](tesla.png)
-
-![Tesla crash](tesla-crash.jpeg)
+![Amazon Hiring Tool Scraped due to Bias](amazonhiring.png)
 <!-- .element: class="stretch" -->
 
 **Q. What went wrong? What is the root cause of the failure?**
 
 ----
-## Automated Hiring
+## Autopilot in Vehicles
 
-![Amazon Hiring Tool Scraped due to Bias](amazonhiring.png)
+![Tesla autopilot](tesla.png)
+
+![Tesla crash](tesla-crash.jpeg)
 <!-- .element: class="stretch" -->
 
 **Q. What went wrong? What is the root cause of the failure?**
