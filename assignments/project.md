@@ -81,7 +81,7 @@ This milestone is worth 100 points:
 * [ ] 10pt: A link to the implementation of the prediction service is provided. The implementation matches the description and serves ranked recommendations. 
 * [ ] 10pt: The report includes a description of how the team was organized, including a description of communication channels and process for work division and responsibility assignments. A screenshot of/pointer to teamwork notes that describes how work was divided is provided.
 * [ ] 10pt: The prediction services successfully answers at least 2000 recommendation requests in the day before or after the milestone deadline. To be successful, the answer must be well-formed and arrive within the time limit. You can check success yourself by looking for the status 200 message in the movielog; we use that same information for grading.
-* [ ] 10pt: The prediction service answers at least 40% of all recommendation requests in the day before or after the milestone deadline with personalized recommendations (i.e., within the time limit, `200` status, not the same recommendation for every user).
+* [ ] 10pt: The prediction service answers at least 10% of all recommendation requests in the day before or after the milestone deadline with personalized recommendations (i.e., within the time limit, `200` status, not the same recommendation for every user).
 * [ ] 3pt: Bonus points for social activity (see very end of this document)
 
 
