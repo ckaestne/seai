@@ -70,7 +70,7 @@ between a system failure (i.e., requirement violation) and its potential causes.
   * Inform decisions about how to (re-)design the system
   * Investigate an accident & identify the root cause 
 * Often used for safety & reliability, but can also be used for
-other types of requirement (e.g., poor performance, security attacks...)
+other types of requirements (e.g., poor performance, security attacks...)
 <!-- .element: class="fragment" -->
 
 ![fta-sample](fta-sample.png)
@@ -84,7 +84,7 @@ other types of requirement (e.g., poor performance, security attacks...)
 <!-- .element: class="fragment" -->
 * ML models will EVENTUALLY make mistakes
 <!-- .element: class="fragment" -->
-  * Ouput wrong predictions/values
+  * Output wrong predictions/values
   * Fail to adapt to the changing environment
   * Confuse users, etc.,
 * How do mistakes made by ML contribute to system failures? How do we
@@ -92,7 +92,7 @@ other types of requirement (e.g., poor performance, security attacks...)
 <!-- .element: class="fragment" -->
 
 ----
-## Fault Trees:: Basic Building Blocks
+## Fault Trees: Basic Building Blocks
 
 ![fta-blocks](fta-blocks.png)
 
@@ -197,8 +197,11 @@ obtained by removing a basic event.
 ![lane-assist](lane-keeping.png)
 <!-- .element: class="stretch" -->
 
-Draw a fault tree for the lane assist system with the top event as
+* Draw a fault tree for the lane assist system with the top event as
 “Vehicle fails to stay within the lane”
+* Draw on paper, scan & upload into Slack #lecture
+* Or use the Google Slide template provided; make your own copy and
+  paste the link into Slack
 
 ----
 ## Example: FTA for Lane Assist
