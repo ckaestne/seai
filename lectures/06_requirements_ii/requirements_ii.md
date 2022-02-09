@@ -218,7 +218,7 @@ obtained by removing a basic event.
 * Domain knowledge is crucial for improving coverage
   * Talk to domain experts; augment your tree as you learn more
 * FTA is still very valuable for risk reduction!
-  * Forces you to think about & explictly document possible failures
+  * Forces you to think about & explictly document possible failure scenarios
   * A good starting basis for designing mitigations
 
 ---
@@ -259,7 +259,7 @@ system
 * Monitor: Periodically checks the output of a component for errors
 <!-- .element: class="fragment" -->
   * Challenge: Need a way to recognize errors 
-  * e.g., corrupt sensor data, slow or missing response
+  * e.g., corrupt sensor data, slow or missing response; low ML confidence
 * Doer-Checker pattern
   <!-- .element: class="fragment" -->
   * Doer: Perform primary function; untrusted and potentially faulty
@@ -275,7 +275,7 @@ system
 * ML-based controller (doer): Generate commands to steer the vehicle
 <!-- .element: class="fragment" -->
 	* Complex DNN; makes performance-optimal control decisions
-* Safe controller (checker): Checks commands from ML controller; overrides it
+* Safety controller (checker): Checks commands from ML controller; overrides it
   with a safe default command if the ML action is risky
 <!-- .element: class="fragment" -->
 	* Simpler, based on verifiable, transparent logic; conservative control
@@ -288,9 +288,9 @@ system
 * Yellow region: Slippery road, causes loss of traction; unexpected by ML
 <!-- .element: class="fragment" -->
 * ML-based controller (doer): Model ignores traction loss; generates
- unsafe maneuvering commands  (a)
+ unsafe steering commands (a)
 <!-- .element: class="fragment" -->
-* Safe controller (checker): Overrides with safe steering commands
+* Safety controller (checker): Overrides with safe steering commands
   (b)
 <!-- .element: class="fragment" -->
 
@@ -304,8 +304,8 @@ _Runtime-Safety-Guided Policy Repair_, Intl. Conference on Runtime Verification 
     <source data-src="rc-car.mp4" type="video/mp4" />
 </video>
 
-* Goal: When a component failure occurs, continue to provide
-  safety (possibly at reduced functionality and performance)
+* Goal: When a component failure occurs, achieve system 
+  safety by reducing functionality and performance
 <!-- .element: class="fragment" -->
 * Relies on a monitor to detect component failures
 <!-- .element: class="fragment" -->
@@ -448,7 +448,8 @@ high-critical (HC) components
 * Is an ML component in my system performing an LC or HC task?
 <!-- .element: class="fragment" -->
   * If HC, can we "demote" it into LC?
-  * Alternatively, replace HC ML components with non-ML ones 
+  * Alternatively, if possible, replace/augment HC ML components with
+  non-ML ones
   * Q. Examples?
 
 ---
