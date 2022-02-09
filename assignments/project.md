@@ -77,7 +77,7 @@ This milestone is worth 100 points:
 
 * [ ] 10pt: The report contains a description of the data used and the learning technique selected. The text explains why this approach was chosen. The described chosen approach matches the problem.
 * [ ] 10pt: A link to the implementation of the learning step is provided. The implementation matches the description and addresses the learning problem. 
-* [ ] 5pt each (up to 25pt): The report describes metrics and operationalization of the five qualities. Each metric is clearly defined and the description is sufficient to independently measure the quality. A pointer to implementation of each measurement is provided. The results of the measure are reported and match to the metric description and the models.
+* [ ] 6.25pt each (up to 20pt): The report describes metrics and operationalization of the four qualities. Each metric is clearly defined and the description is sufficient to independently measure the quality. A pointer to implementation of each measurement is provided. The results of the measure are reported and match to the metric description and the models. 
 * [ ] 5pt: The report argues which of the compared models should be used in production.
 * [ ] 10pt: The report contains a description of the prediction service and explains how a ranking is computed. 
 * [ ] 10pt: A link to the implementation of the prediction service is provided. The implementation matches the description and serves ranked recommendations. 
