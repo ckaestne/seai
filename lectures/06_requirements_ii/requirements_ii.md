@@ -212,11 +212,9 @@ obtained by removing a basic event.
 ----
 ## FTA: Caveats
 
-![unknowns](unknowns.png)
-<!-- .element: class="stretch" -->
-
 * In general, building a **complete** tree is impossible
   * There are probably some faulty events that you missed
+  * "Unknown unknowns"
 * Domain knowledge is crucial for improving coverage
   * Talk to domain experts; augment your tree as you learn more
 * FTA is still very valuable for risk reduction!
