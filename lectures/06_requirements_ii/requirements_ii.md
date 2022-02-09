@@ -206,6 +206,20 @@ Draw a fault tree for the lane assist system with the top event as
 <!-- ![lane-assist-fta](lane-assist-fta.png) -->
 <!-- <\!-- .element: class="stretch" -\-> -->
 
+----
+## FTA: Caveats
+
+![unknowns](unknowns.png)
+<!-- .element: class="stretch" -->
+
+* In general, building a **complete** tree is impossible
+  * There are probably some faulty events that you missed
+* Domain knowledge is crucial for improving coverage
+  * Talk to domain experts; augment your tree as you learn more
+* FTA is still very valuable for risk reduction!
+  * Forces you to think about & explictly document possible failures
+  * A good starting basis for designing mitigations
+
 ---
 # Strategies for Handling Faults in ML-based Systems
 
