@@ -83,7 +83,7 @@ Submit a report as a single PDF file to Gradescope that covers the following top
 2. **Recommendation and justification of deployment architecture** (1 page max): Recommend a deployment architecture and justify this recommendation in terms of the relative relevance of the qualities and the tradeoffs among quality attributes.
 3. **Telemetry** (1 page max): Suggest how telemetry should be selected, describe how quality would be measured from telemetry data, and briefly justify those decisions.
 
-For drawing fault trees, you may use any tool of your choice. A scan of a hand-drawn diagram is acceptable, as long as it is clearly legible. There are also several free FTA tools you may wish to use; e.g., [Fault Tree Analyzer](https://www.fault-tree-analysis-software.com) or [Open Reliability Editor](https://github.com/troeger/fuzzed).
+For drawing fault trees, you may use any tool of your choice (e.g., Google Drawings or [draw.io](https://app.diagrams.net/)). A scan of a hand-drawn diagram is acceptable, as long as it is clearly legible. There are also free FTA or drawing apps you may wish to use; e.g., [Fault Tree Analyzer](https://www.fault-tree-analysis-software.com).
 
 ## Grading
 
