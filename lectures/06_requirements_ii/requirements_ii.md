@@ -138,7 +138,7 @@ Figure from _Fault Tree Analysis and Reliability Block Diagram_
 
 * Cut set: A set of basic events whose simultaneous occurrence is
   sufficient to guarantee that the TOP event occurs.
-* _Minimal_ cut set: A cut set from which a smaller cut set can be
+* _Minimal_ cut set: A cut set from which a smaller cut set can't be
 obtained by removing a basic event.
 * Q. What are minimal cut sets in the above tree?
 
