@@ -405,7 +405,7 @@ Notes: Smart home devices, credit card applications, Powerpoint design suggestio
 ![lane-assist-fta improved](lane-assist-fta-improved.png)
 <!-- .element: class="stretch" -->
 
-* Fault mitigation strategy: An additional sensor (infraed) for redundancy
+* Fault mitigation strategy: An additional sensor (infrared) for redundancy
   * Both sensors need to fail instead of just one
   * Reflected in the FTA as an additional basic event in the minimal cutset
 
