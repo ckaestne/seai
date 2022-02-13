@@ -206,8 +206,8 @@ obtained by removing a basic event.
 ----
 ## Example: FTA for Lane Assist
 
-<!-- ![lane-assist-fta](lane-assist-fta.png) -->
-<!-- <\!-- .element: class="stretch" -\-> -->
+![lane-assist-fta](lane-assist-fta.png)
+<!-- .element: class="stretch" -->
 
 ----
 ## FTA: Caveats
@@ -394,16 +394,20 @@ Notes: Smart home devices, credit card applications, Powerpoint design suggestio
 **Possible mitigation strategies? Discuss with your neighbors**
 
 ----
-## Example: Lane Assist
+## Example: FTA for Lane Assist
 
-<!-- ![lane-assist-fta](lane-assist-fta.png) -->
-<!-- <\!-- .element: class="stretch" -\-> -->
+![lane-assist-fta](lane-assist-fta.png)
+<!-- .element: class="stretch" -->
 
-<!-- ---- -->
-<!-- ## Example: Lane Assist -->
+----
+## Modified FTA for Lane Assist
 
-<!-- ![lane-assist-fta improved](lane-assist-fta-improved.png) -->
-<!-- <\!-- .element: class="stretch" -\-> -->
+![lane-assist-fta improved](lane-assist-fta-improved.png)
+<!-- .element: class="stretch" -->
+
+* Fault mitigation strategy: An additional sensor (infraed) for redundancy
+  * Both sensors need to fail instead of just one
+  * Reflected in the FTA as an additional basic event in the minimal cutset
 
 ----
 ## Containment: Decoupling & Isolation
