@@ -149,7 +149,7 @@ Realtime use
 
 Scenario: Component for detecting credit card frauds, as a service for banks
 
-![Credit card](credit-card.jpeg)
+![Credit card](credit-card.jpg)
 
 Note: Very high volume of transactions, low cost per transaction, frequent updates
 
@@ -751,21 +751,6 @@ Strubell, Emma, Ananya Ganesh, and Andrew McCallum. "[Energy and Policy Consider
 <!-- Which additional qualities may be relevant here? -->
 <!-- Realtime use -->
 
-<!-- ---- -->
-<!-- ## Recall: Qualities of Interest? -->
-
-<!-- <\!-- smallish -\-> -->
-<!-- Consider model view, data view, system view, infrastructure view, environment view -->
-
-<!-- ![Credit card](credit-card.jpg) -->
-
-<!-- Note: Very high volume of transactions, low cost per transaction, frequent updates -->
-
-<!-- Note: Img src https://pixabay.com/photos/credit-card-payment-transaction-926862/ -->
-
-
-
-
 
 
 
@@ -802,6 +787,7 @@ Constraints define the space of attributes for valid design solutions
 **Q. Plausible constraints for cancer diagnosis?**
 
 ![mri](mri.jpg)
+<!-- .element: class="stretch" -->
 
 ----
 ## Trade-offs between ML methods
@@ -867,17 +853,9 @@ Workflows](https://conferences.oreilly.com/strata/strata2014/public/schedule/det
 ----
 ## Breakout: Qualities & ML Methods
 
-<!-- colstart -->
+![breakout](breakout.png)
 
-Fraud detection
-![Credit card](credit-card-small.jpg)
-
-<!-- col -->
-
-Lane Detection
-![Lane detection internals](lane-detect.jpg)
-
-<!-- colend -->
+__Credit card fraud__ &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;  __Lane detection__
 
 * Post answer to `#lecture` in Slack using template:
   * Constraints: ??
