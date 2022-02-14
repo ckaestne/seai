@@ -271,9 +271,9 @@ Important consideration during requirements solicitation!
 ![linear-regression](linear-regression.png)
 
 * Tasks: Regression
-* Model a linear relationship between input & output variables
-* __Pros__: ??
-* __Cons__: ??
+* Qualities: 
+  * __Advantages__: ??
+  * __Drawbacks__: ??
 
 Notes:
 * Easy to interpret, low training cost, small model size
@@ -353,7 +353,6 @@ graph TD;
 
 ----
 ## Decision Trees: Qualities
-<!-- colstart -->
 
 ```mermaid
 graph TD;
@@ -366,9 +365,10 @@ graph TD;
   Humidity -->|Normal| Yes2((Yes));
   ```
   
-* Tasks: Classification & regression, labeled data
-* __Pros__: ??
-* __Cons__: ??
+* Tasks: Classification & regression
+* Qualities: 
+  * __Advantages__: ??
+  * __Drawbacks__: ??
 
 Notes:
 * Easy to interpret (up to a size); can capture non-linearity; can do well with
@@ -429,8 +429,9 @@ graph TD;
 
 * Train multiple trees on subsets of data or subsets of decisions.
 * Return average prediction of multiple trees.
-* __Pros__: ??
-* __Cons__: ??
+* Qualities: 
+  * __Advantages__: ??
+  * __Drawbacks__: ??
 
 Note: Increased training time and model size, 
 less prone to overfitting, more difficult to interpret
@@ -543,10 +544,10 @@ Note: Essentially the same with more layers and different kinds of architectures
 
 ![neural-network](neural-network.png)
 
-* Tasks: Classification & regression, labeled data
-* __Pros__: ??
-* __Cons__: ??
-
+* Tasks: Classification & regression
+* Qualities: 
+  * __Advantages__: ??
+  * __Drawbacks__: ??
 
 Notes:
 * High accuracy; can capture a wide range of problems (linear & non-linear)
@@ -657,13 +658,13 @@ Strubell, Emma, Ananya Ganesh, and Andrew McCallum. "[Energy and Policy Consider
 <!-- references -->
 Strubell, Emma, Ananya Ganesh, and Andrew McCallum. "[Energy and Policy Considerations for Deep Learning in NLP](https://arxiv.org/pdf/1906.02243.pdf)." In Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics, pp. 3645-3650. 2019.
 
-----
-## Reusing and Retraining Networks
+<!-- ---- -->
+<!-- ## Reusing and Retraining Networks -->
 
-* Incremental learning process enables continued training, retraining, incremental updates
-* A model that captures key abstractions may be good starting point for adjustments (i.e., rather than starting with randomly initialized parameters)
-* Reused models may inherit bias from original model
-* Lineage important. Model cards promoted for documenting rationale, e.g., [Google Perspective Toxicity Model](https://github.com/conversationai/perspectiveapi/blob/master/2-api/model-cards/English/toxicity.md)
+<!-- * Incremental learning process enables continued training, retraining, incremental updates -->
+<!-- * A model that captures key abstractions may be good starting point for adjustments (i.e., rather than starting with randomly initialized parameters) -->
+<!-- * Reused models may inherit bias from original model -->
+<!-- * Lineage important. Model cards promoted for documenting rationale, e.g., [Google Perspective Toxicity Model](https://github.com/conversationai/perspectiveapi/blob/master/2-api/model-cards/English/toxicity.md) -->
 
 
 
@@ -816,6 +817,31 @@ about?
 	* And which ML method is most suitable for achieving those qualities?
 
 ----
+## Multi-Objective Optimization 
+
+![Pareto Front Example](pareto.svg)
+<!-- .element: class="stretch" -->
+
+* Determine optimal solutions given multiple, possibly
+  **conflicting** objectives
+* **Dominated** solution: A solution that is inferior to
+  others in every way 
+* **Pareto frontier**: A set of non-dominated solutions
+* Consider trade-offs among Pareto optimal solutions
+
+Image CC BY-SA 3.0 by [Nojhan](https://en.wikipedia.org/wiki/Multi-objective_optimization#/media/File:Front_pareto.svg)
+
+<!-- ---- -->
+<!-- ## Example: Credit Scoring -->
+
+<!-- ![Credit Scoring Chart](credit-score.png) -->
+<!-- <\!-- .element: class="stretch" -\-> -->
+
+<!-- * For problems with a linear relationship between input & output variables: -->
+<!--   * Linear regression: Superior in terms of accuracy, interpretability, cost  -->
+<!--   * Other methods are dominated (inferior) solutions -->
+
+----
 ## Trade-offs: Cost vs Accuracy
 
 ![Netflix prize leaderboard](netflix-leaderboard.png)
@@ -859,30 +885,6 @@ Lane Detection
   * Constraints: ??
   * Qualities of interests: ??
   * ML method(s) to use: ??
-
-----
-## Multi-Objective Optimization 
-
-![Pareto Front Example](pareto.svg)
-<!-- .element: class="stretch" -->
-
-* Determine optimal solutions given multiple, possibly
-  **conflicting** objectives
-* **Dominated** solution: A solution that is inferior to
-  others in every way 
-* **Pareto frontier**: A set of non-dominated solutions 
-
-Image CC BY-SA 3.0 by [Nojhan](https://en.wikipedia.org/wiki/Multi-objective_optimization#/media/File:Front_pareto.svg)
-
-----
-## Example: Credit Scoring
-
-![Credit Scoring Chart](credit-score.png)
-<!-- .element: class="stretch" -->
-
-* For problems with a linear relationship between input & output variables:
-  * Linear regression: Superior in terms of accuracy, interpretability, cost 
-  * Other methods are dominated (inferior) solutions
 
 ---
 # Finding the Right Qualities for your Product
