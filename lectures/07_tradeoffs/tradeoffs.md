@@ -149,14 +149,13 @@ Realtime use
 
 Scenario: Component for detecting credit card frauds, as a service for banks
 
-![Credit card](credit-card.jpg)
+![Credit card](credit-card.jpeg)
 
 Note: Very high volume of transactions, low cost per transaction, frequent updates
 
 Incrementality
 
 Note: Img src https://pixabay.com/photos/credit-card-payment-transaction-926862/
-
 
 ----
 ## Examples of Qualities to Consider
@@ -800,10 +799,9 @@ Constraints define the space of attributes for valid design solutions
 * Project constraints: Deadline, project budget, available skills
 * Design constraints: Type of ML task required (regression/classification), kind of available data, limits on computing resources, max. inference cost
 
-**Q. Plausible constraints for credit card fraud detection?**
+**Q. Plausible constraints for cancer diagnosis?**
 
-![Credit card](credit-card.jpg)
-
+![mri](mri.jpg)
 
 ----
 ## Trade-offs between ML methods
@@ -871,8 +869,8 @@ Workflows](https://conferences.oreilly.com/strata/strata2014/public/schedule/det
 
 <!-- colstart -->
 
-Cancer Diagnosis
-![Medical diagnosis](medical-diagnosis.jpg)
+Fraud detection
+![Credit card](credit-card-small.jpg)
 
 <!-- col -->
 
