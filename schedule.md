@@ -16,7 +16,7 @@
 | Mon, Feb 07 | [Requirements and Risks 1](https://ckaestne.github.io/seai/S2022/slides/05_requirements_i/requirements.html) ([short notes](https://ckaestne.medium.com/the-world-and-the-machine-and-responsible-machine-learning-1ae72353c5ae)) | [The World and the Machine](http://mcs.open.ac.uk/mj665/icse17kn.pdf) |  |
 | Wed, Feb 09 | [Requirements and Risks 2](https://ckaestne.github.io/seai/S2022/slides/06_requirements_ii/requirements_ii.html) | [Building Intelligent Systems](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436), Ch. 6, 7, 24 | [M1: Modeling and First Deployment](https://github.com/ckaestne/seai/blob/S2022/assignments/project.md#milestone-1-recommendation-model-and-first-deployment) |
 | Fri, Feb 11 | ![Recitation](https://img.shields.io/badge/-rec-yellow.svg) Requirements/Risk analysis | |  |
-| Mon, Feb 14 | Tradeoffs among Modeling Techniques | |  |
+| Mon, Feb 14 | [Tradeoffs among Modeling Techniques](https://ckaestne.github.io/seai/S2022/slides/07_tradeoffs/tradeoffs.html) | [Building Intelligent Systems](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436), Ch. 18 |  |
 | Wed, Feb 16 | Architectural Design for AI-enabled Systems | |  |
 | Fri, Feb 18 | ![Recitation](https://img.shields.io/badge/-rec-yellow.svg) Architecture | |  |
 | Mon, Feb 21 | Quality Assessment in Production ([book chapter](https://ckaestne.medium.com/quality-assurance-in-production-for-ml-enabled-systems-4d1b3442316f)) | |  |
