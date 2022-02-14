@@ -760,7 +760,8 @@ Strubell, Emma, Ananya Ganesh, and Andrew McCallum. "[Energy and Policy Consider
 ---
 # Constraints and Tradeoffs
 
-![Pareto Front Example](pareto.svg)
+![Pareto Front Example](moo.png)
+<!-- .element: class="stretch" -->
 
 
 ----
@@ -803,8 +804,7 @@ about?
 ----
 ## Multi-Objective Optimization 
 
-![Pareto Front Example](pareto.svg)
-<!-- .element: class="stretch" -->
+![Pareto Front Example](moo.png)
 
 * Determine optimal solutions given multiple, possibly
   **conflicting** objectives
