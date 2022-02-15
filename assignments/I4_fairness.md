@@ -66,3 +66,12 @@ The assignment is worth 100 points. For full credit, we expect:
   * [ ] 10 points: A discussion of harms of representation and harms of allocation and corresponding groups/protected attributes in the context of the movie recommendation example is included.
   * [ ] 10 points: A discussion of the five sources of bias in the context of the movie recommendation example is included.
   * [ ] 10 points: The report includes a justified recommendation of at least *one* engineering practice (which can be **one** of (1) data collection & pre-processing, (2) fairness criteria selection and (3) monitoring & escalation) or a justification why no practice shall be adopted. The recommendation and justifications are grounded in the realism of the movie recommendation scenario.
+
+
+# Groupwork option
+
+To encourage deeper engagement with the content and collaboration, we provide the option for this assignment to work together with one other student in the class. We suggest teams for the assignment on Canvas.
+
+If you work together as a team, you can either submit a joint solution or separate solutions on Gradescope. If you submit a joint solution, both team members must have contributed to the solution and both team members will receive the same grade. If you submit separate solutions, those solutions may share text and you may discuss all aspects of the assignment, but we will grade them separately. Always make sure that you indicate with whom you worked together, even if just for part of the assignment.
+
+Groupwork is optional. You may decide to work alone.
