@@ -99,7 +99,7 @@ The assignment is worth 200 points. For full credit, we expect:
 * [ ] 5 points: The requirement, environmental assumption, and machine specifications fit reasonably together and correspond to the scenario.
 * [ ] 15 points: A fault tree that shows possible causes behind the violation of the requirement selected in Q3 is included. The included fault tree is syntactically valid.
 * [ ] 10 points: Minimal cut sets are identified from the fault tree.
-* [ ] 10 points: At least two mitigation strategies, corresponding to the requirement and the cut sets identified, are described. The description explains how the risk is reduced. The mitigations are at the system level outside the component. The mitigations are shown in an updated fault tree.
+* [ ] 10 points: At least two mitigation strategies, corresponding to the requirement and the cut sets identified, are described. The description explains how the risk is reduced. The mitigations are at the system level outside the ML component. The mitigations are shown in an updated fault tree.
 
 **Part B: Architecture**
 
