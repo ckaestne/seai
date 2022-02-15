@@ -16,13 +16,13 @@
 | Mon, Feb 07 | [Requirements and Risks 1](https://ckaestne.github.io/seai/S2022/slides/05_requirements_i/requirements.html) ([short notes](https://ckaestne.medium.com/the-world-and-the-machine-and-responsible-machine-learning-1ae72353c5ae)) | [The World and the Machine](http://mcs.open.ac.uk/mj665/icse17kn.pdf) |  |
 | Wed, Feb 09 | [Requirements and Risks 2](https://ckaestne.github.io/seai/S2022/slides/06_requirements_ii/requirements_ii.html) | [Building Intelligent Systems](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436), Ch. 6, 7, 24 | [M1: Modeling and First Deployment](https://github.com/ckaestne/seai/blob/S2022/assignments/project.md#milestone-1-recommendation-model-and-first-deployment) |
 | Fri, Feb 11 | ![Recitation](https://img.shields.io/badge/-rec-yellow.svg) Requirements/Risk analysis | |  |
-| Mon, Feb 14 | [Tradeoffs among Modeling Techniques](https://ckaestne.github.io/seai/S2022/slides/07_tradeoffs/tradeoffs.html) | [Building Intelligent Systems](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436), Ch. 18 |  |
-| Wed, Feb 16 | Architectural Design for AI-enabled Systems | |  |
+| Mon, Feb 14 | [Tradeoffs among Modeling Techniques](https://ckaestne.github.io/seai/S2022/slides/07_tradeoffs/tradeoffs.html) ([book chapter](https://ckaestne.medium.com/quality-drivers-in-architectures-for-ml-enabled-systems-836f21c44334)) | [Building Intelligent Systems](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436), Ch. 18 |  |
+| Wed, Feb 16 | [Deploying a Model](https://ckaestne.github.io/seai/S2022/slides/08_deploying_a_model/architecture.html) | [Building Intelligent Systems](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436), Ch. 13 and [Exploring Development Patterns in Data Science](https://www.theorylane.com/2017/10/20/some-development-patterns-in-data-science/) |  |
 | Fri, Feb 18 | ![Recitation](https://img.shields.io/badge/-rec-yellow.svg) Architecture | |  |
-| Mon, Feb 21 | Quality Assessment in Production ([book chapter](https://ckaestne.medium.com/quality-assurance-in-production-for-ml-enabled-systems-4d1b3442316f)) | |  |
-| Wed, Feb 23 | Data Quality ([book chapter](https://ckaestne.medium.com/quality-assurance-in-production-for-ml-enabled-systems-4d1b3442316f)) | | [I2: Requirements and Architecture](https://github.com/ckaestne/seai/blob/S2022/assignments/I2_requirements_architecture.md) |
+| Mon, Feb 21 | Quality Assessment in Production ([book chapter](https://ckaestne.medium.com/quality-assurance-in-production-for-ml-enabled-systems-4d1b3442316f)) | [Building Intelligent Systems](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436), Ch. 14, 15 |  |
+| Wed, Feb 23 | Data Quality ([book chapter](https://ckaestne.medium.com/quality-assurance-in-production-for-ml-enabled-systems-4d1b3442316f)) | [Data Cascades in High-Stakes AI](https://dl.acm.org/doi/abs/10.1145/3411764.3445518) | [I2: Requirements and Architecture](https://github.com/ckaestne/seai/blob/S2022/assignments/I2_requirements_architecture.md) |
 | Fri, Feb 25 | ![Recitation](https://img.shields.io/badge/-rec-yellow.svg) Continuous Integration: Jenkins | |  |
-| Mon, Feb 28 | Infrastructure Quality, Deployment, and Operations | |  |
+| Mon, Feb 28 | Infrastructure Quality, Deployment, and Operations | [The ML Test Score](https://research.google.com/pubs/archive/46555.pdf) |  |
 | Wed, Mar 02 | **Midterm** | |  |
 | Fri, Mar 04 | ![Break](https://img.shields.io/badge/-break-red.svg) Midsemester break & spring break | |  |
 | Mon, Mar 14 | Managing and Processing Large Datasets | |  |
