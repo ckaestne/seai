@@ -93,7 +93,7 @@ The assignment is worth 200 points. For full credit, we expect:
 
 * [ ] 20 points: Goals are listed and appropriately grouped. The goals relate to the scenario and are reasonably complete.
 * [ ] 10 points: Environment entities and machine components relevant to the scenario are listed. The machine components include at least one AI component that performs image recognition.
-* [ ] 10 points: A selected requirement (REQ) is clearly stated. The requirement mention only phenomena in the world.
+* [ ] 10 points: A selected requirement (REQ) is clearly stated. The requirement mentions only phenomena in the world.
 * [ ] 10 points: Environmental assumptions (ENV) are clearly stated. These assumptions relate to phenomena in the world or map those to shared phenomena accessibly by the machine.
 * [ ] 10 points: Machine specifications (SPEC) are clearly stated. These specifications mention only those phenomena in the interface between the world and the machine.
 * [ ] 5 points: The requirement, environmental assumption, and machine specifications fit reasonably together and correspond to the scenario.
