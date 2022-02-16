@@ -27,13 +27,127 @@ Recommended reading: Rick Kazman, Paul Clements, and Len Bass. [Software archite
 
 # Learning Goals
 
-* Understand important quality considerations when using ML components
+* Understand important quality considerations when deploying ML components
 * Follow a design process to explicitly reason about alternative designs and their quality tradeoffs
 * Gather data to make informed decisions about what ML technique to use and where and how to deploy it
+* Understand the power of design patterns for codifying design knowledge
 *
 * Create architectural models to reason about relevant characteristics
 * Critique the decision of where an AI model lives (e.g., cloud vs edge vs hybrid), considering the relevant tradeoffs 
-* Deliberate how and when to update models and how to collect telemetry
+* Deploy models locally and to the cloud
+* Document model inference services
+
+
+
+
+
+---
+# Deploying a Model is Easy
+
+----
+## Deploying a Model is Easy
+
+Model inference component as function/library
+
+```python
+from sklearn.linear_model import LogisticRegression
+model = … # learn model or load serialized model ...
+def infer(feature1, feature2):
+    return model.predict(np.array([[feature1, feature2]])
+```
+
+----
+## Deploying a Model is Easy
+
+Model inference component as a service
+
+
+```python
+from flask import Flask, escape, request
+app = Flask(__name__)
+app.config['UPLOAD_FOLDER'] = '/tmp/uploads'
+detector_model = … # load model…
+
+# inference API that returns JSON with classes 
+# found in an image
+@app.route('/get_objects', methods=['POST'])
+def pred():
+    uploaded_img = request.files["images"]
+    coverted_img = … # feature encoding of uploaded img
+    result = detector_model(converted_img)
+    return jsonify({"response":
+                result['detection_class_entities']})
+
+```
+
+----
+## Deploying a Model is Easy
+
+Packaging a model inference service in a container
+
+
+```docker
+FROM python:3.8-buster
+RUN pip install uwsgi==2.0.20
+RUN pip install numpy==1.22.0
+RUN pip install tensorflow==2.7.0
+RUN pip install flask==2.0.2
+RUN pip install gunicorn==20.1.0
+COPY models/model.pf /model/
+COPY ./serve.py /app/main.py
+WORKDIR ./app
+EXPOSE 4040
+CMD ["gunicorn", "-b 0.0.0.0:4040", "main:app"]
+```
+
+----
+## Deploying a Model is Easy
+
+Model inference component as a service in the cloud
+
+* Package in container or other infrastructure
+* Deploy in cloud infrastructure
+* Auto-scaling with demand
+* MLOps infrastructure to automate all of this
+* (more on this later)
+*
+* Model inference is stateless and embarrassingly parallel
+* Almost always deterministic
+* "*Stateless Serving Functions Pattern*"
+* Lots of tooling available, including 
+    * [BentoML](https://github.com/bentoml/BentoML) (low code service creation, deployment, model registry), 
+    * [Cortex](https://github.com/bentoml/BentoML) (automated deployment and scaling of models on AWS), 
+    * [TFX model serving](https://www.tensorflow.org/tfx/guide/serving) (tensorflow GRPC services)
+    * [Seldon Core](https://www.seldon.io/tech/products/core/) (no-code model service and many many additional services for monitoring and operations on Kubernetes)
+
+
+----
+## But is it really easy?
+
+* Offline use?
+* Deployment at scale?
+* Hardware needs and operating cost?
+* Frequent updates?
+* Integration of the model into a system?
+* Meeting system requirements?
+* Every system is different!
+
+----
+## Every System is Different
+
+* Personalized music recommendations for Spotify
+* Transcription service startup
+* Self-driving car
+* Smart keyboard for mobile device
+
+----
+## Inference is a Component within a System
+
+![Transcription service architecture example](transcriptionarchitecture2.svg)
+<!-- .element: class="stretch plain" -->
+
+
+
 
 
 ---
@@ -273,9 +387,9 @@ Notes: Consider you want to implement an instant translation service similar toG
 
 
 ---
-# Architectural Decision: Selecting AI Techniques
+# Design Decision: Selecting ML Algorithms
 
-What AI techniques to use and why? Tradeoffs?
+What ML algorithms to use and why? Tradeoffs?
 
 ![](googletranslate.png)
 
@@ -289,61 +403,7 @@ Model size
 Explainable? Robust?
 
 ---
-# Deploying a Model is Easy
-
-----
-## Deploying a Model is Easy
-
-Model inference component as function/library
-
-```python
-from sklearn.linear_model import LogisticRegression
-model = … # learn model or load serialized model ...
-def infer(feature1, feature2):
-    return model.predict(np.array([[feature1, feature2]])
-```
-
-----
-## Deploying a Model is Easy
-
-Model inference component as a service
-
-
-```python
-from flask import Flask, escape, request
-app = Flask(__name__)
-app.config['UPLOAD_FOLDER'] = '/tmp/uploads'
-detector_model = … # load model…
-
-# inference API that returns JSON with classes 
-# found in an image
-@app.route('/get_objects', methods=['POST'])
-def pred():
-    uploaded_img = request.files["images"]
-    coverted_img = … # feature encoding of uploaded img
-    result = detector_model(converted_img)
-    return jsonify({"response":
-                result['detection_class_entities']})
-
-```
-----
-## Deploying a Model is Easy
-
-Model inference component as a service in the cloud
-
-* Package in container or other infrastructure
-* Deploy in cloud infrastructure
-* Auto-scaling with demand
-* MLOps infrastructure to automate all of this
-* (more on this later)
-*
-* Model inference is stateless and embarrassingly parallel
-* Almost always deterministic
-* "*Stateless Serving Functions Pattern*"
-
-
----
-# Architectural Decision: Where Should the Model Live?
+# Design Decision: Where Should the Model Live?
 
 (Deployment Architecture)
 
@@ -407,6 +467,7 @@ google glasses had 5 megapixel camera, 640x360 pixel screen, 1 or 2gb ram, 16gb 
 ----
 
 ![Example of an architectural diagram](arch-diagram-example.png)
+<!-- .element: class="stretch plain" -->
 
 
 ----
@@ -550,27 +611,94 @@ Hazelwood, Kim, Sarah Bird, David Brooks, Soumith Chintala, Utku Diril, Dmytro D
 
 
 
+---
+# Preview: Telemetry Design
+
+----
+## Telemetry Design
+
+How to evaluate system performance and mistakes in production?
+
+![](googletranslate.png)
+
+Notes: Discuss strategies to determine accuracy in production. What kind of telemetry needs to be collected?
+
+----
+## The Right and Right Amount of Telemetry
+
+* Purpose:
+    - Monitor operation
+    - Monitor mistakes (e.g., accuracy)
+    - Improve models over time (e.g., detect new features)
+*
+* Challenges:
+    - too much data
+    - no/not enough data
+    - hard to measure, poor proxy measures
+    - rare events
+    - cost
+    - privacy
+*
+* **Interacts with deployment decisions**
+
+----
+## Telemetry Tradeoffs
+
+What data to collect? How much? When?
+
+Estimate data volume and possible bottlenecks in system.
+
+![](googletranslate.png)
+
+Notes: Discuss alternatives and their tradeoffs. Draw models as suitable.
+
+Some data for context:
+Full-screen png screenshot on Pixel 2 phone (1080x1920) is about 2mb (2 megapixel); Google glasses had a 5 megapixel camera and a 640x360 pixel screen, 16gb of storage, 2gb of RAM. Cellar cost are about $10/GB.
+
 
 
 
 
 ---
-# Composing Models
+# Integrating Models into a System
 
 ----
-## Ensemble and metamodels
+## Recall: Inference is a Component within a System
+
+![Transcription service architecture example](transcriptionarchitecture2.svg)
+<!-- .element: class="plain stretch" -->
+
+----
+## Separating Models and Business Logic
+
+![3-tier architecture integrating ML](3tier-with-ml.svg)
+<!-- .element: class="stretch plain" -->
+
+Based on: Yokoyama, Haruki. "Machine learning system architectural pattern for improving operational stability." In 2019 IEEE International Conference on Software Architecture Companion (ICSA-C), pp. 267-274. IEEE, 2019.
+
+----
+## Separating Models and Business Logic
+
+* Clearly divide responsibilities
+* Allows largely independent and parallel work, assuming stable interfaces
+* Plan location of non-ML safeguards and other processing logic
+
+
+
+----
+## Composing Models: Ensemble and metamodels
 
 ![Ensemble models](ensemble.svg)
 <!-- .element: class="plain" -->
 
 ----
-## Decomposing the problem, sequential
+## Composing Models: Decomposing the problem, sequential
 
 ![](sequential-model-composition.svg)
 <!-- .element: class="plain" -->
 
 ----
-## Cascade/two-phase prediction
+## Composing Models: Cascade/two-phase prediction
 
 ![](2phase-prediction.svg)
 <!-- .element: class="plain" -->
@@ -788,23 +916,6 @@ Based on: Yokoyama, Haruki. "Machine learning system architectural pattern for i
 * Washizaki, Hironori, Hiromu Uchida, Foutse Khomh, and Yann-Gaël Guéhéneuc. "[Machine Learning Architecture and Design Patterns](http://www.washi.cs.waseda.ac.jp/wp-content/uploads/2019/12/IEEE_Software_19__ML_Patterns.pdf)." Draft, 2019
 * Sculley, David, Gary Holt, Daniel Golovin, Eugene Davydov, Todd Phillips, Dietmar Ebner, Vinay Chaudhary, Michael Young, Jean-Francois Crespo, and Dan Dennison. "[Hidden technical debt in machine learning systems](http://papers.nips.cc/paper/5656-hidden-technical-debt-in-machine-learning-systems.pdf)." In Advances in neural information processing systems, pp. 2503-2511. 2015.
 
-----
-## Example: Chatbot
-
-![Chatbot architecture](chatbotarch.png)
-
-<!-- references -->
-
-Image source: Yokoyama, Haruki. "Machine learning system architectural pattern for improving operational stability." In 2019 IEEE International Conference on Software Architecture Companion (ICSA-C), pp. 267-274. IEEE, 2019.
-
-----
-## Real systems are complex
-
-![Apollo Self-Driving Car Architecture](apollo.png)
-
-<!-- references -->
-Peng, Zi, Jinqiu Yang, Tse-Hsun Chen, and Lei Ma. "A first look at the integration of machine learning models in complex autonomous driving systems: a case study on Apollo." In Proceedings of the 28th ACM Joint Meeting on European Software Engineering Conference and Symposium on the Foundations of Software Engineering, pp. 1240-1250. 2020.
-
 
 
 
@@ -822,15 +933,17 @@ Peng, Zi, Jinqiu Yang, Tse-Hsun Chen, and Lei Ma. "A first look at the integrati
 
 # Summary
 
+* Model deployment seems easy, but involves many design decisions
+    * What models to use?
+    * Where to deploy?
+    * How to design feature encoding and feature engineering?
+    * How to compose with other components?
+    * How to document?
+    * How to collect telemetry?
 * Software architecture is an established discipline to reason about design alternatives
 * Understand relevant quality goals 
 * Problem-specific modeling and analysis: Gather estimates, consider design alternatives, make tradeoffs explicit
-* Examples of important design decision:
-    - modeling technique to use
-    - where to deploy the model
-    - how and how much telemetry to collect
-    - whether and how to modularize the model service
-    - when and how to update models
-    - build vs buy, cloud resources
+* Codifying design knowledge as patterns
+
 
 
