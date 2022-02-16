@@ -81,3 +81,11 @@ The assignment is worth 100 points. We will assign credit as follows:
 * [ ] 10 points: Evidence is provided that the tool was tried on data from the movie streaming scenario.
 * [ ] 10 points: Two comments on other blog posts show an engagement with the content of those blog posts (i.e., not just “looks good” or “interesting!”).
 * [ ] (optional) 3 bonus points if the blog post is posted publicly.
+
+# Groupwork option
+
+To encourage deeper engagement with the content and collaboration, we provide the option for this assignment to work together with one other student in the class. We suggest teams for the assignment on Canvas.
+
+If you work together as a team, you can either submit a joint solution or separate solutions on Gradescope. If you submit a joint solution, both team members must have contributed to the solution and both team members will receive the same grade. If you submit separate solutions, those solutions may share text and you may discuss all aspects of the assignment, but we will grade them separately. Always make sure that you indicate with whom you worked together, even if just for part of the assignment.
+
+Groupwork is optional. You may decide to work alone.

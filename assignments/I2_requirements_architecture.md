@@ -93,7 +93,7 @@ The assignment is worth 200 points. For full credit, we expect:
 
 * [ ] 20 points: Goals are listed and appropriately grouped. The goals relate to the scenario and are reasonably complete.
 * [ ] 10 points: Environment entities and machine components relevant to the scenario are listed. The machine components include at least one AI component that performs image recognition.
-* [ ] 10 points: A selected requirement (REQ) is clearly stated. The requirement mention only phenomena in the world.
+* [ ] 10 points: A selected requirement (REQ) is clearly stated. The requirement mentions only phenomena in the world.
 * [ ] 10 points: Environmental assumptions (ENV) are clearly stated. These assumptions relate to phenomena in the world or map those to shared phenomena accessibly by the machine.
 * [ ] 10 points: Machine specifications (SPEC) are clearly stated. These specifications mention only those phenomena in the interface between the world and the machine.
 * [ ] 5 points: The requirement, environmental assumption, and machine specifications fit reasonably together and correspond to the scenario.
@@ -112,3 +112,12 @@ The assignment is worth 200 points. For full credit, we expect:
 * [ ] 10 points: Telemetry design is suggested and described, describing the goal of the telemetry and what data is collected. 
 * [ ] 10 points: The telemetry section contains a description of quality measures and how they can be derived from the telemetry data. 
 * [ ] 10 points: The telemetry section contains a justification for the chosen approach. The justification considers (1) the amount of data transmitted or stored, (2) how telemetry copes with rare events, and (3) whether this form of telemetry can detect both false positives and false negatives.
+
+
+# Groupwork option
+
+To encourage deeper engagement with the content and collaboration, we provide the option for this assignment to work together with one other student in the class. We suggest teams for the assignment on Canvas.
+
+If you work together as a team, you can either submit a joint solution or separate solutions on Gradescope. If you submit a joint solution, both team members must have contributed to the solution and both team members will receive the same grade. If you submit separate solutions, those solutions may share text and you may discuss all aspects of the assignment, but we will grade them separately. Always make sure that you indicate with whom you worked together, even if just for part of the assignment.
+
+Groupwork is optional. You may decide to work alone.
