@@ -2,7 +2,7 @@
 
 This semester, the course will have a midterm, but no final exam. 
 
-Logistics will be announced later.
+The midterm will take the place of one lecture, it is 80 minutes. No electronics, but 6 pages of notes (handwritten or printed, both sides, letter size) allowed.
 
 Topic-wise, everything covered in class, in the readings, and in recitation is fair game, though the exam will focus most points on topics where you had some chance to practice (e.g., in assignments, recitation or in-class discussions) not on random recall questions.
 
