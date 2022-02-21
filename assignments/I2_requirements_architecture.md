@@ -85,6 +85,8 @@ Submit a report as a single PDF file to Gradescope that covers the following top
 
 For drawing fault trees, you may use any tool of your choice (e.g., Google Drawings or [draw.io](https://app.diagrams.net/)). A scan of a hand-drawn diagram is acceptable, as long as it is clearly legible. There are also free FTA apps you could use; e.g., [Fault Tree Analyzer](https://www.fault-tree-analysis-software.com).
 
+Page limits are recommendations and not strictly enforced. You can exceed the page limit if there is a good reason. We prefer precise and concise answers over long and rambling ones.
+
 ## Grading
 
 The assignment is worth 200 points. For full credit, we expect:
