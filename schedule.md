@@ -22,7 +22,7 @@
 | Mon, Feb 21 | [Quality Assessment in Production](https://ckaestne.github.io/seai/S2022/slides/09_qainproduction/qainproduction.html) ([book chapter](https://ckaestne.medium.com/quality-assurance-in-production-for-ml-enabled-systems-4d1b3442316f)) | [Building Intelligent Systems](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436), Ch. 14, 15 |  |
 | Wed, Feb 23 | [Data Quality](https://ckaestne.github.io/seai/S2022/slides/10_dataquality/dataquality.html) ([book chapter](https://ckaestne.medium.com/quality-assurance-in-production-for-ml-enabled-systems-4d1b3442316f)) | [Data Cascades in High-Stakes AI](https://dl.acm.org/doi/abs/10.1145/3411764.3445518) | [I2: Requirements and Architecture](https://github.com/ckaestne/seai/blob/S2022/assignments/I2_requirements_architecture.md) |
 | Fri, Feb 25 | ![Recitation](https://img.shields.io/badge/-rec-yellow.svg) Continuous Integration: Jenkins | |  |
-| Mon, Feb 28 | Infrastructure Quality, Deployment, and Operations | [The ML Test Score](https://research.google.com/pubs/archive/46555.pdf) |  |
+| Mon, Feb 28 | [Infrastructure Quality, Deployment, and Operations](https://ckaestne.github.io/seai/S2022/slides/11_infrastructurequality/infrastructurequality.html) ([book chapter 1](https://ckaestne.medium.com/automating-the-ml-pipeline-eb0f570b4fc9), book chapter 2, book chapter 3) | [The ML Test Score](https://research.google.com/pubs/archive/46555.pdf) |  |
 | Wed, Mar 02 | **[Midterm](https://github.com/ckaestne/seai/tree/S2022/exams)** | |  |
 | Fri, Mar 04 | ![Break](https://img.shields.io/badge/-break-red.svg) Midsemester break & spring break | |  |
 | Mon, Mar 14 | Managing and Processing Large Datasets | |  |
