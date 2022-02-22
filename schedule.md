@@ -25,7 +25,7 @@
 | Mon, Feb 28 | [Infrastructure Quality, Deployment, and Operations](https://ckaestne.github.io/seai/S2022/slides/11_infrastructurequality/infrastructurequality.html) ([book chapter 1](https://ckaestne.medium.com/automating-the-ml-pipeline-eb0f570b4fc9), book chapter 2, book chapter 3) | [The ML Test Score](https://research.google.com/pubs/archive/46555.pdf) |  |
 | Wed, Mar 02 | **[Midterm](https://github.com/ckaestne/seai/tree/S2022/exams)** | |  |
 | Fri, Mar 04 | ![Break](https://img.shields.io/badge/-break-red.svg) Midsemester break & spring break | |  |
-| Mon, Mar 14 | Managing and Processing Large Datasets | |  |
+| Mon, Mar 14 | [Managing and Processing Large Datasets](https://ckaestne.github.io/seai/S2022/slides/12_dataatscale/dataatscale.md) (book chapter) | |  |
 | Wed, Mar 16 | Process & Technical Debt (book chapter 1, [book chapter 2](https://ckaestne.medium.com/technical-debt-in-machine-learning-systems-62035b82b6de)) | | [I3: Open Source Tools](https://github.com/ckaestne/seai/blob/S2022/assignments/I3_se4ai_tools.md) or [PhD Project](https://github.com/ckaestne/seai/blob/S2022/assignments/research_project.md) |
 | Fri, Mar 18 | ![Recitation](https://img.shields.io/badge/-rec-yellow.svg) Containers: Docker | |  |
 | Mon, Mar 21 | Human AI Interaction | |  |
