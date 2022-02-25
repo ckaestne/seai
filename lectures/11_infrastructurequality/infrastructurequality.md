@@ -317,6 +317,103 @@ graph LR
 ```
 
 
+----
+## Subtle Bugs in Data Wrangling Code
+
+```python
+df['Join_year'] = df.Joined.dropna().map(
+    lambda x: x.split(',')[1].split(' ')[1])
+```
+```python
+df.loc[idx_nan_age,'Age'].loc[idx_nan_age] = 
+    df['Title'].loc[idx_nan_age].map(map_means)
+```
+```python
+df["Weight"].astype(str).astype(int)
+```
+```python
+df['Reviws'] = df['Reviews'].apply(int)
+```
+```python
+df["Release Clause"] = 
+    df["Release Clause"].replace(regex=['k'], value='000')
+```
+```python
+df["Release Clause"] = 
+    df["Release Clause"].astype(str).astype(float)
+```
+
+Notes:
+
+1 attempting to remove na values from column, not table
+
+2 loc[] called twice, resulting in assignment to temporary column only
+
+3 astype() is not an in-place operation
+
+4 typo in column name
+
+5&6 modeling problem (k vs K)
+
+
+----
+## Tests for Data Wranging Code?
+
+(data quality checks, data cleaning, feature engineering, ...)
+
+<!-- discussion -->
+
+----
+## Modularizing and Testing Data Cleaning 
+
+```python
+def is_valid_row(row):
+    try:
+        datetime.strptime(row['date'], '%b %d %Y')
+        return true
+    except ValueError:
+        return false
+
+def clean_row(row):
+    ...
+```
+
+```python
+@test
+def test_dates(self):
+    self.assertTrue(is_valid_row(...))
+    self.assertTrue(is_valid_row(...))
+    self.assertFalse(is_valid_row(...))
+
+@test
+def test_date_cleaning(self):
+    self.assertEquals(clean_row(...), ...)
+```
+
+----
+## Modularize and Test Feature Encoding
+
+```python
+def encode_date(df):
+    df.date_time = pd.to_datetime(df.date_time)
+def encode_day_part(df):
+    def daypart(hour):
+        if hour in [2,3,4,5]:
+            return "dawn"
+        elif hour in [6,7,8,9]:
+            return "morning"
+        elif hour in [10,11,12,13]:
+            return "noon"
+        elif ...
+    raw_dayparts = df.date_time.dt.hour.apply(daypart)
+    return pd.get_dummies(raw_dayparts)
+```
+
+```python
+@test
+def test_day_part(self):
+    ... 
+```
 
 ----
 ## Test Error Handling
@@ -772,6 +869,8 @@ Notes:
 4 typo in column name
 
 5&6 modeling problem (k vs K)
+
+
 
 ----
 ## Static Analysis, Code Linting

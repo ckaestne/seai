@@ -431,7 +431,7 @@ Figure based on Christopher Meiklejohn. [Dynamic Reduction: Optimizing Service-l
 * Independent, cohesive services
     * Each specialized for one task
     * Each with own data storage
-    * Each scalable through multiple instances + load balancer
+    * Each independently scalable through multiple instances + load balancer (autoscaling infrastructure available)
 * Remote procedure calls
 * Different teams can work on different services independently (even in different languages)
 *
