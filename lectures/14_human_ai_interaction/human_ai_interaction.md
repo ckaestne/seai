@@ -38,7 +38,6 @@ End-user Expectations of AI Systems_. Kocielnik, et al., in CHI 2019
 ---
 # Risks of Poor Interaction Design
 
-
 ----
 ## Poor Interaction Design Confuses Users
 
@@ -51,11 +50,11 @@ End-user Expectations of AI Systems_. Kocielnik, et al., in CHI 2019
 ![](wired-page.png)
 <!-- .element: class="stretch" -->
 
-----
-## Poor Interaction Design Hinders Users
+<!-- ---- -->
+<!-- ## Poor Interaction Design Hinders Users -->
 
-![](apple-mouse.png)
-<!-- .element: class="stretch" -->
+<!-- ![](apple-mouse.png) -->
+<!-- <\!-- .element: class="stretch" -\-> -->
 
 ----
 ## Poor Interaction Design Causes Harm
@@ -94,13 +93,20 @@ End-user Expectations of AI Systems_. Kocielnik, et al., in CHI 2019
 
 * Interaction design is not just about visual presentation!
 * Poor interaction design can:
-  * Cause confusion or misunderstanding
+<!-- .element: class="fragment" -->
+  * Cause confusion or misunderstanding 
+  <!-- .element: class="fragment" -->
   * Prevent the user from effectively performing their task
+  <!-- .element: class="fragment" -->
   * Increase mental and physical burden
+  <!-- .element: class="fragment" -->
   * Drive users away from the product
+  <!-- .element: class="fragment" -->
   * Contribute to security or privacy issues
+  <!-- .element: class="fragment" -->
   * Cause physical (injuries, deaths) and societal harms (bias, misrepresentation)
-
+  <!-- .element: class="fragment" -->
+  
 ---
 # Usability Concepts
 
@@ -175,11 +181,14 @@ https://www.nngroup.com/articles/usability-101-introduction-to-usability/
 ## Modes of Interaction
 
 * Automate: Take action on user's behalf
+<!-- .element: class="fragment" -->
 * Augment: Provide options or additional information
+<!-- .element: class="fragment" -->
   * Prompt: Ask the user if an action should be taken
   * Organize: Display a set of items in an order
   * Annotate: Add information to a display
 * Hybrid of above
+<!-- .element: class="fragment" -->
 
 ----
 ## Selecting Appropriate Mode of Interaction
@@ -223,14 +232,17 @@ Fall detection in a smartwatch
 ## Factors to Consider
 
 * Forcefulness: How strongly to encourage taking an action?
+<!-- .element: class="fragment" -->
 	* Active: Automate action or interrupt user and ask for confirmation
 	* Passive: Suggest action, but do not require immediate answer
 * Frequency: How often does interaction occur?	
-  * When a new prediction is available or model changes
-  * Periodically (e.g., suggest action every hour)
-  * Only when explicitly initiated by user 
+<!-- .element: class="fragment" -->
+	* When a new prediction is available or model changes
+	* Periodically (e.g., suggest action every hour)
+	* Only when explicitly initiated by user 
 * Cost: What is the effect of a wrong prediction?
-  * If possible, provide a way to undo the action of AI
+<!-- .element: class="fragment" -->
+	* If possible, provide a way to undo the action of AI
 
 ----
 ## Factors to Consider
@@ -432,11 +444,13 @@ https://pair.withgoogle.com/chapter/mental-models/
 ## Dealing with Errors
 
 * User errors: Mistakes made by users (e.g., click on a wrong button)
+<!-- .element: class="fragment" -->
   * Lots of work in cognitive science & human factors 
   * Error taxonomies, human performance modeling, task analysis,
   ergonomic analysis, etc.,
 * System errors: Failure to provide an outcome expected by the user
-	* We will focus on this
+  <!-- .element: class="fragment" -->
+	* Our focus in this class
 
 ----
 ## Example: Scheduling Assistant
@@ -503,6 +517,8 @@ https://pair.withgoogle.com/chapter/errors-failing/
 
 ----
 ## Errors in Voice Assistants
+
+CHANGE TO DIFFERENT EXAMPLE
 
 <!-- colstart -->
 
