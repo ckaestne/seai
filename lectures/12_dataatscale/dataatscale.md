@@ -17,6 +17,12 @@ Required watching: Molham Aref. [Business Systems with Machine Learning](https:/
 Suggested reading: Martin Kleppmann. [Designing Data-Intensive Applications](https://dataintensive.net/). OReilly. 2017. 
 
 ---
+# Where we are
+
+![Overview](overview.svg)
+<!-- .element: class="plain" -->
+
+---
 
 # Learning Goals
 
@@ -40,6 +46,8 @@ Notes:
 ## Adding capacity
 
 <iframe src="https://giphy.com/embed/3oz8xtBx06mcZWoNJm" width="480" height="362" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+
+*Stories of catastrophic success?*
 
 ---
 
@@ -108,9 +116,14 @@ More Machines
 * Models in safety critical parts
 * Mobile computing, edge computing, cyber-physical systems
 
+----
+## Reminder: T-Shaped People
+
+![T-shaped people illustration](tshaped.png)
+<!-- .element: class="plain" -->
 
 
-
+Go deeper with: Martin Kleppmann. [Designing Data-Intensive Applications](https://dataintensive.net/). OReilly. 2017. 
 
 ---
 # Excursion: Distributed Deep Learning with the Parameter Server Architecture
@@ -446,7 +459,7 @@ Figure based on Christopher Meiklejohn. [Dynamic Reduction: Optimizing Service-l
 Central entry point, authentication, routing, updates, ...
 
 ![API Gateway illustration](apigateway.png)
-<!-- .element: class="stretch" -->
+<!-- .element: class="stretch plain" -->
 
 
 
@@ -699,9 +712,21 @@ How do you get the right data to the right place in the right format?
 Molham Aref "[Business Systems with Machine Learning](https://www.youtube.com/watch?v=_bvrzYOA8dY)"
 
 ---
+# Breakout: Vimeo Videos
+
+In groups, discuss in slack `#lecture`:
+* How to distribute storage:
+* How to design scalable copy-right protection solution:
+* How to design scalable analytics (views, ratings, ...):
+
+[![Vimeo page](vimeo.png)](https://vimeo.com/about)
+
+---
 # Excursion: ETL Tools
 
 Extract, tranform, load
+
+**The data engineer's toolbox**
 
 ----
 ## Data Warehousing (OLAP)
