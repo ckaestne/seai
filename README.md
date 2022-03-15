@@ -1,12 +1,12 @@
 # Machine Learning in Production / AI Engineering (17-445/17-645/17-745/11-695)
 
-*Formerly **Software Engineering for AI-Enabled Systems (SE4AI)**, CMU course that covers how to build, deploy, assure, and maintain applications with machine-learned models. Covers **responsible AI** (safety, security, fairness, explainability, …) and **MLOps**.*
+*Formerly **Software Engineering for AI-Enabled Systems (SE4AI)**, CMU course that covers how to build, deploy, assure, and maintain applications with machine-learned models. Covers **responsible AI** (safety, security, fairness, explainability, transparency) and **MLOps**.*
 
 ***
 
 ![Course topics overview](overview.svg "Course topics overview")
 
-In 2022, the class will be offered in the Spring semester. The Spring 2022 offering, like Spring 2021, does not have formal prerequisites, but expects some familiarity with machine learning concepts and basic programming skills. Going forward, we plan to offer the course every spring semester.
+In 2022, the class will be offered both in the Spring and the Fall semester. In 2023, it will be offered at least in the spring. In all offerings since 2021, the class does not have formal prerequisites, but expects some familiarity with machine learning concepts and basic programming skills. 
 
 See the specific offering of the course you are interested in:
 
@@ -15,8 +15,9 @@ See the specific offering of the course you are interested in:
 * Fall 2020: [F2020 website](https://ckaestne.github.io/seai/F2020) and [F2020 GitHub branch](https://github.com/ckaestne/seai/tree/F2020)
 * Spring 2021: [S2021 website](https://ckaestne.github.io/seai/S2021) and [S2021 GitHub branch](https://github.com/ckaestne/seai/tree/S2021)
 * Spring 2022: [S2022 website](https://ckaestne.github.io/seai/S2022) and [S2022 GitHub branch](https://github.com/ckaestne/seai/tree/S2022)
+* Fall 2022: website tbd.
 
-For researchers, educators, or others interested in this topic, we share all course material, including slides and assignments, under a creative commons license on GitHub (https://github.com/ckaestne/seai/) and have recently published an article describing the rationale and the design of this course: [Teaching Software Engineering for AI-Enabled Systems](https://arxiv.org/abs/2001.06691). Video recordings of the Summer 2020 offering are online on the [course page](https://ckaestne.github.io/seai/S2020/#course-content). We would be happy to see this course or a similar version taught somewhere else. See also an [annotated bibliography](https://github.com/ckaestne/seaibib) on the topic.
+For researchers, educators, or others interested in this topic, we share all course material, including slides and assignments, under a creative commons license on GitHub (https://github.com/ckaestne/seai/) and have recently published an article describing the rationale and the design of this course: [Teaching Software Engineering for AI-Enabled Systems](https://arxiv.org/abs/2001.06691). Video recordings of the Summer 2020 offering are online on the [course page](https://ckaestne.github.io/seai/S2020/#course-content). We would be happy to see this course or a similar version taught at other universities. A [textbook](https://ckaestne.medium.com/machine-learning-in-production-book-overview-63be62393581) is on the way. See also an [annotated bibliography](https://github.com/ckaestne/seaibib) on the topic.
 
 
 ## Course Description
