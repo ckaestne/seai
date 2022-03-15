@@ -1,0 +1,20 @@
+version: "3.9"  # optional since v1.27.0
+services:
+  web_a:
+    build:
+      context: .
+      target: img1
+    ports:
+      - "7004:8082"
+    volumes:
+      - ./logvolume01:/var/log
+  web_b:
+    build:
+      context: .
+      target: img2
+    ports:
+      - "7005:8082"
+    volumes:
+      - ./logvolume02:/var/log
+volumes:
+  logvolume01: {}
