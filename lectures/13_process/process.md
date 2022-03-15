@@ -58,6 +58,10 @@ $f(size, rooms, tax, neighborhood, ...) \rightarrow price$
 # Data Science: Iteration and Exploration 
 
 
+----
+## What's your process?
+
+<!-- discussion -->
 
 
 ----
@@ -350,11 +354,15 @@ Notes: Although dated, the key idea is still essential -- think and plan before 
 (CC BY-SA 4.0, Lakeworks)
 
 ----
-## Contrasting Process Models
+## Selecting Process Models
 
-*Ad-hoc -- Waterfall -- Spiral -- Agile*
+In slack, vote:
+[1] Ad-hoc
+[2] Waterfall 
+[3] Spiral 
+[4] Agile
 
-
+And write a short justification in `#lecture`
 
 ![Zillow](zillow_main.png)
 
@@ -543,9 +551,13 @@ Source: Martin Fowler 2009, https://martinfowler.com/bliki/TechnicalDebtQuadrant
 ----
 ## Technical Debt from ML Components?
 
-<!-- discussion -->
+As a group in slack `#lecture`: Post two plausible examples technical debt in housing price prediction system:
+  1. Deliberate, prudent:
+  2. Reckless, inadvertent:
+  3. AndrewIds: 
 
-(see reading)
+![Zillow](zillow_main.png)
+
 
 <!-- references -->
 Sculley, David, et al. [Hidden technical debt in machine learning systems](http://papers.nips.cc/paper/5656-hidden-technical-debt-in-machine-learning-systems.pdf). Advances in Neural Information Processing Systems. 2015.

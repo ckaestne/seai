@@ -170,6 +170,8 @@ Focus: Interaction of ML and non-ML components, system requirements, user intera
 ---
 # Model vs System Goals
 
+<!-- twitter https://twitter.com/Fra_Pochetti/status/1502708228173578240?t=dNbEpulbras763WHt-QZvg&s=03 -->
+
 ----
 ## Case Study: Self-help legal chatbot
 
