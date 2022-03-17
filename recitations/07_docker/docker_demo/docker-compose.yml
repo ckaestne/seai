@@ -3,7 +3,6 @@ services:
   web_a:
     build:
       context: .
-      target: img1
     ports:
       - "7004:8082"
     volumes:
@@ -11,7 +10,6 @@ services:
   web_b:
     build:
       context: .
-      target: img2
     ports:
       - "7005:8082"
     volumes:
