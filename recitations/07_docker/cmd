@@ -5,27 +5,17 @@
 # Alternatively, you can add your username to docker group and avoid the sudo. 
 # Also, these are some of the bare minimum options that are good to specify. These are in no way exhaustive.
 
-
 # List Images in Container Registry
 docker ls
 
 # Check for running containers
 docker ps
 
-# Building an Image (Note that -t can be specified multiple times to have different tags)
-# Also, tagging the image with 'latest' to indicate the most up to date image is one of the best practices.
-
-docker build -t <image_name:tag1> -t <image_name:tag2> -t <image_name:latest> <Path to Dockerfile>
-
-# Running a container 
-docker container run --name <name_of_container> -d -p <host_port:container_port> <image_name:tag>
-
 # stop a container - get container ID from docker ps
 docker stop <container_id>
 
 # start a container - get container ID from docker ps
 docker start <container_id>
-
 
 # log into container - get container ID from docker ps
 docker exec -it <container_id> /bin/bash

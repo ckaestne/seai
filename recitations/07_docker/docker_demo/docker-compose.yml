@@ -4,14 +4,14 @@ services:
     build:
       context: .
     ports:
-      - "7004:8082"
+      - "7004:8081"
     volumes:
       - ./logvolume01:/var/log
   web_b:
     build:
       context: .
     ports:
-      - "7005:8082"
+      - "7005:8081"
     volumes:
       - ./logvolume02:/var/log
 volumes:
