@@ -465,7 +465,7 @@ https://pair.withgoogle.com/chapter/mental-models/
   ergonomic analysis, etc.,
   * Often due to misalignment of mental models
 * System errors: Failure to provide an outcome expected by the user
-  * Due to mistakes made by ML models
+  * Due to mistakes made by an ML model
   * __Our focus in this lecture__
 
 ----
