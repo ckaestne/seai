@@ -460,13 +460,13 @@ https://pair.withgoogle.com/chapter/mental-models/
 ## Dealing with Errors
 
 * User errors: Mistakes made by users (e.g., click on a wrong button)
-<!-- .element: class="fragment" -->
   * Lots of work in cognitive science & human factors 
   * Error taxonomies, human performance modeling, task analysis,
   ergonomic analysis, etc.,
+  * Often due to misalignment of mental models
 * System errors: Failure to provide an outcome expected by the user
-  <!-- .element: class="fragment" -->
-	* Our focus in this class
+  * Due to mistakes made by ML models
+  * __Our focus in this lecture__
 
 ----
 ## Example: Scheduling Assistant
