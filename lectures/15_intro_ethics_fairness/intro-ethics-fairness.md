@@ -200,7 +200,7 @@ Barocas, Solon and Moritz Hardt. "[Fairness in machine learning](https://mrtz.or
 ----
 ## Equality vs Equity vs Justice
 
-![Contrasting equality, equity, and justice](eej2.png)
+![Contrasting equality, equity, and justice](eej2.jpeg)
 
 ----
 ## Types of Harm on Society
