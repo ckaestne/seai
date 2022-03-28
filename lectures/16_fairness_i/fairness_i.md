@@ -125,7 +125,7 @@ See for example: Galhotra, Sainyam, Yuriy Brun, and Alexandra Meliou. "[Fairness
 
 * $X$: Feature set (e.g., age, race, education, region, income, etc.,)  
 * $A \in X$: Sensitive attribute (e.g., gender)
-* $R$: Regression score (e.g., predicted likelihood of loan default)
+* $R$: Regression score (e.g., predicted likelihood of on-time loan payment)
 * $Y'$: Classifier output
   * $Y' = 1$ if and only if $R > T$ for some threshold $T$
   * e.g., Grant the loan ($Y' = 1$) if the likelihood of paying back > 80% 
