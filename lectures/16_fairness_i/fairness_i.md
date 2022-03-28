@@ -58,7 +58,7 @@ Source: Mortiz Hardt, https://fairmlclass.github.io/
 ![](justice.jpeg)
 
 * Also called _fairness through blindness_
-* Ignore/eliminate sensitive attributes from dataset
+* Ignore certain sensitive attributes when making a decision
 * Example: Remove gender or race from a credit card scoring system
 * __Q. Advantages and limitations__?
 
@@ -85,7 +85,7 @@ Source: Mortiz Hardt, https://fairmlclass.github.io/
 
 ![](justice.jpeg)
 
-* Ignore/eliminate sensitive attributes from dataset
+* Ignore certain sensitive attributes when making a decision
 * Limitations
   * Sensitive attributes may be correlated with other features
   * Some ML tasks need sensitive attributes (e.g., medical diagnosis)
