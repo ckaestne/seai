@@ -259,6 +259,7 @@ $P[Y'=0∣Y=1,A=a] = P[Y'=0∣Y=1,A=b]$ (FNR parity)
   - Or generate *realistic*  test data, e.g. from probability distribution of population
 * Separately measure false positive and false negative rates
   * e..g, for FNR, compare P[promoted = 0 | female, good employee] vs P[promoted = 0 | male, good employee]
+* Q. How is this different from testing group fairness?
 
 ----
 ## Case Study: Cancer Diagnosis
