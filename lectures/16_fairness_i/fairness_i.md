@@ -59,7 +59,7 @@ Source: Mortiz Hardt, https://fairmlclass.github.io/
 
 * Also called _fairness through blindness_
 * Ignore certain sensitive attributes when making a decision
-* Example: Remove gender or race from a credit card scoring system
+* Example: Remove gender or race from a credit card scoring model
 * __Q. Advantages and limitations__?
 
 ----
