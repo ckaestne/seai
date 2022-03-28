@@ -41,9 +41,16 @@ Source: Mortiz Hardt, https://fairmlclass.github.io/
 ## Fairness: Definitions
 
 * Anti-classification (fairness through blindness)
-* Independence (group fairness)
+* Group fairness (independence)
 * Separation (equalized odds)
 * ...and numerous others!
+
+----
+## Fairness: Definitions
+
+* __Anti-classification (fairness through blindness)__
+* Group fairness (independence)
+* Separation (equalized odds)
 
 ----
 ## Anti-Classification
@@ -86,7 +93,7 @@ Source: Mortiz Hardt, https://fairmlclass.github.io/
 ----
 ## Testing Anti-Classification
 
-How do we test that an ML model achieves anti-classification?
+How do we test that a classifier achieves anti-classification?
 
 ----
 ## Testing Anti-Classification
@@ -104,6 +111,15 @@ Any single inconsistency shows that the protected attribute was used. Can also r
 <!-- references -->
 See for example: Galhotra, Sainyam, Yuriy Brun, and Alexandra Meliou. "[Fairness testing: testing software for discrimination](http://people.cs.umass.edu/brun/pubs/pubs/Galhotra17fse.pdf)." In Proceedings of the 2017 11th Joint Meeting on Foundations of Software Engineering, pp. 498-510. 2017.
 
+
+----
+## Fairness: Definitions
+
+* Anti-classification (fairness through blindness)
+* __Group fairness (independence)__
+* Separation (equalized odds)
+
+
 ----
 ## Notations
 
@@ -112,18 +128,20 @@ See for example: Galhotra, Sainyam, Yuriy Brun, and Alexandra Meliou. "[Fairness
 * $R$: Regression score (e.g., predicted likelihood of loan default)
 * $Y'$: Classifier output
   * $Y' = 1$ if and only if $R > T$ for some threshold $T$
-  * e.g., Deny the loan ($Y' = 1$) if the likelihood of default > 30% 
+  * e.g., Grant the loan ($Y' = 1$) if the likelihood of paying back > 80% 
 * $Y$: Target variable being predicted ($Y = 1$ if the person actually
   defaults on loan)
 
 [Setting classification thresholds: Loan lending example](https://research.google.com/bigpicture/attacking-discrimination-in-ml)
 
+
+
 ----
-## Independence
+## Group Fairness
 
 $P[Y' = 1 | A = a]  = P[Y' = 1 | A = b]$
 
-* Also called _group fairness_ or _demographic parity_
+* Also called _independence_ or _demographic parity_
 * Mathematically, $Y' \perp A$
   * Prediction ($Y'$)  must be independent of the sensitive attribute ($A$)
 * Examples:
@@ -132,9 +150,9 @@ $P[Y' = 1 | A = a]  = P[Y' = 1 | A = b]$
 		* i.e., P[promote = 1 | gender = M] = P[promote = 1 | gender = F] 
 
 ----
-## Independence
+## Group Fairness
 
-* Q. What are limitations of independence?
+* Q. What are limitations of group fairness?
   <!-- .element: class="fragment" -->
   * Ignores possible correlation between $Y$ and $A$
     <!-- .element: class="fragment" -->
@@ -153,18 +171,30 @@ $P[Y' = 1 | A = a]  = P[Y' = 1 | A = b]$
 
 
 ----
-## Calibration to Achieve Independence
+## Adjusting Thresholds for Group Fairness
 
-Select different thresholds for different groups to achieve prediction parity:
+Set $t_0$, $t_1$ such that $P[R > t_0 | A = 0]  = P[R > t_1 | A = 1]$
 
-$P[R > t_0 | A = 0]  = P[R > t_1 | A = 1]$
-
-Lowers bar for some groups -- equity, not equality
+* Select different classification thresholds ($t_0$, $t_1$) for different groups (A = 0,
+  A = 1) to achieve group fairness
+<!-- .element: class="fragment" -->
+* Example: Loan lending
+<!-- .element: class="fragment" -->
+  * R: Likelihood of paying back the loan on time
+  * Suppose: With a uniform threshold used (i.e., R = 80%), group fairness is not achieved
+	* P[R > 0.8 | A = 0] = 0.4,  P[R > 0.8 | A = 1] = 0.7
+  * Adjust thresholds to achieve group fairness
+	* P[R > 0.6 | A = 0]  = P[R > 0.8 | A = 1]
+* But this also seems unfair to some of the groups! (i.e., A = 1)
+	<!-- .element: class="fragment" -->
+   * Q. When does this type of adjustment make sense?
 
 ----
-## Testing Independence
+## Testing Group Fairness
 
-* Separate validation/telemetry data by protected attribute
+* How would you test whether a classifier achieves group fairness?
+<!-- .element: class="fragment" -->
+* Separate validation/telemetry data by protected attributes
 <!-- .element: class="fragment" -->
 	* Generate realistic test data, e.g. from probability distribution of population
 	<!-- .element: class="fragment" -->
@@ -175,7 +205,14 @@ Lowers bar for some groups -- equity, not equality
 * Report issue if the rates differ beyond some threshold $\epsilon$ across
 groups
   <!-- .element: class="fragment" -->
-  
+
+----
+## Fairness: Definitions
+
+* Anti-classification (fairness through blindness)
+* Group fairness (independence)
+* __Separation (equalized odds)__
+
 ----
 ## Separation
 
@@ -221,8 +258,7 @@ $P[Y'=0∣Y=1,A=a] = P[Y'=0∣Y=1,A=b]$ (FNR parity)
 * Separate validation/telemetry data by protected attribute
   - Or generate *realistic*  test data, e.g. from probability distribution of population
 * Separately measure false positive and false negative rates
-  * P[promoted = 0 | female, good performer]
-    vs. P[promoted = 1 | male, good performer]
+  * e..g, for FNR, compare P[promoted = 0 | female, good employee] vs P[promoted = 0 | male, good employee]
 
 ----
 ## Case Study: Cancer Diagnosis
@@ -235,9 +271,8 @@ $P[Y'=0∣Y=1,A=a] = P[Y'=0∣Y=1,A=b]$ (FNR parity)
 ![](cancer-stats.jpg)
 
 * 1000 data samples (500 male & 500 female patients)
-* Does the model achieve independence? Separation w/ FPR or FNR?
+* Does the model achieve group fairness? Separation w/ FPR or FNR?
 * What can we conclude about the model & its usage?  
-
 
 ----
 ## Review of Criteria so far:
@@ -245,7 +280,7 @@ $P[Y'=0∣Y=1,A=a] = P[Y'=0∣Y=1,A=b]$ (FNR parity)
 *Recidivism scenario: Should a person be detained?*
 
 * Anti-classification: ?
-* Independence: ?
+* Group fairness: ?
 * Separation: ?
 
 <!-- split -->
@@ -258,7 +293,7 @@ $P[Y'=0∣Y=1,A=a] = P[Y'=0∣Y=1,A=b]$ (FNR parity)
 *Recidivism scenario: Should a defendant be detained?*
 
 * Anti-classification: Race and gender should not be considered for the decision at all
-* Independence: Detention rates should be equal across gender and race groups
+* Group fairness: Detention rates should be equal across gender and race groups
 * Separation: Among defendants who would not have gone on to commit a
 violent crime if released, detention rates are equal across gender and race groups
 
@@ -286,13 +321,13 @@ _Training Well-Generalizing Classifiers for Fairness Metrics and
 Other Data-Dependent Constraints_, Cotter et al., (2018).
 
 ----
-## Trade-offs: Accuracy vs Fairness
+## Trade-offs in Fairness vs Accuracy
 
 ![](fairness-accuracy.jpeg)
 
 * In general, accuracy is at odds with fairness
   * e.g., Impossible to achieve perfect accuracy ($R = Y$) while
-  ensuring independence
+  ensuring group fairness
 * Determine how much compromise in accuracy or fairness is acceptable to
   your stakeholders
 
