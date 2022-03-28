@@ -325,6 +325,7 @@ Other Data-Dependent Constraints_, Cotter et al., (2018).
 ## Trade-offs in Fairness vs Accuracy
 
 ![](fairness-accuracy.jpeg)
+<!-- .element: class="stretch" -->
 
 * In general, accuracy is at odds with fairness
   * e.g., Impossible to achieve perfect accuracy ($R = Y$) while
