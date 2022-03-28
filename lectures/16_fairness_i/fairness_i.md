@@ -130,7 +130,7 @@ See for example: Galhotra, Sainyam, Yuriy Brun, and Alexandra Meliou. "[Fairness
   * $Y' = 1$ if and only if $R > T$ for some threshold $T$
   * e.g., Grant the loan ($Y' = 1$) if the likelihood of paying back > 80% 
 * $Y$: Target variable being predicted ($Y = 1$ if the person actually
-  defaults on loan)
+  pays back on time)
 
 [Setting classification thresholds: Loan lending example](https://research.google.com/bigpicture/attacking-discrimination-in-ml)
 
