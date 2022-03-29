@@ -487,8 +487,10 @@ static!
 ## Long-term Impact & Fairness
 
 ![](fairness-longterm.png)
+<!-- .element: class="stretch" -->
+
 * Deploying an ML model with a fairness criterion does NOT guarantee
-  improvement in equality over time
+  improvement in equality/equity over time
 * Even if a model appears to promote fairness in
 short term, it may result harm over a long-term period
 
@@ -504,6 +506,7 @@ in FAT* 2020.
 ## Monitoring & Auditing
 
 * Continuously monitor for:
+<!-- .element: class="fragment" -->
   - Match between training data, test data, and instances that you encounter in deployment
   - Fairness metrics: Is the system yielding fair results over time?
   - Population shifts: May suggest needs to adjust fairness metric/thresholds
@@ -511,9 +514,11 @@ in FAT* 2020.
     perceived to be unfair by users
 * Deploy escalation plans: How do you respond when harm occurs due to
 system?
+<!-- .element: class="fragment" -->
 	* Shutdown system? Temporary replacement?
 	* Maintain communication lines to stakeholders
 * Invite diverse stakeholders to audit system for biases
+<!-- .element: class="fragment" -->
 
 ----
 ## Monitoring & Auditing
