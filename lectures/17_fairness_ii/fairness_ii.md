@@ -173,10 +173,8 @@ essential to the safe & efficient operation)
 * Define the interface between the environment & machine (ML)
 	* What data will be sensed/measured by AI? Potential biases?
 	* What types of decisions will the system make? Punitive or assistive?
-* Devise machine specifications (SPEC) that are sufficient to
-establish REQ
-<!-- .element: class="fragment" -->
-	* What type of fairness definition is appropriate?
+* Based on the environmental assumptions and requirements, select the
+appropriate fairness metric for the ML component
 
 <!-- ---- -->
 <!-- ## Which fairness criteria? -->
