@@ -68,7 +68,7 @@ _Fairness-aware Machine Learning_, Bennett et al., WSDM Tutorial (2019).
 * Separation: Among defendants who would not have gone on to commit a
 violent crime if released, detention rates are equal across gender and race groups
 
-__Q. But how do we decide which of definitions to use?__
+__Q. But how do we decide which of these definitions to use?__
 
 ---
 # Requirements Engineering for Fairness
@@ -269,7 +269,8 @@ https://textbook.coleridgeinitiative.org/chap-bias.html
 <!-- ![](fairness-accuracy.jpeg) -->
 ![](bongo.gif)
 
-* "Impossibility Theorem": Can't satisfy multiple fairness criteria at once
+* "Impossibility Theorem": Can't satisfy multiple fairness criteria at
+  once
 * Easy to pick some definition & claim that the model is fair
   * But does a "fair" model really help reduce harm in the long term?
 * Instead of trying to "fix" bias through a model, can we understand &
