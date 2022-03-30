@@ -236,7 +236,8 @@ Results from the [2018 StackOverflow Survey](https://insights.stackoverflow.com/
 
 * Get started with existing guidelines, e.g., in [AI Ethics Guidelines Global Inventory](https://algorithmwatch.org/en/ai-ethics-guidelines-global-inventory/)
 
-
+----
+![Self regulation of tech companies on facial recognition](npr_facialrecognition.png)
 
 
 ---
