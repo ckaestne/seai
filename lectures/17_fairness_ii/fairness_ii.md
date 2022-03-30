@@ -10,7 +10,6 @@ Kaestner & Eunsuk Kang"
 
 
 ![](manymetrics.png)
-<!-- .element: class="stretch" -->
 
 
 Eunsuk Kang
@@ -269,7 +268,6 @@ https://textbook.coleridgeinitiative.org/chap-bias.html
 
 <!-- ![](fairness-accuracy.jpeg) -->
 ![](bongo.gif)
-<!-- .element: class="stretch" -->
 
 * "Impossibility Theorem": Can't satisfy multiple fairness criteria at once
 * Easy to pick some definition & claim that the model is fair
@@ -499,6 +497,7 @@ static!
 ## Long-term Impact & Fairness
 
 ![](fairness-longterm.png)
+<!-- .element: class="stretch" -->
 
 * Deploying an ML model with a fairness criterion does NOT guarantee
   improvement in equality/equity over time
