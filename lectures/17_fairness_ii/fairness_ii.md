@@ -496,7 +496,6 @@ static!
 ## Long-term Impact & Fairness
 
 ![](fairness-longterm.png)
-<!-- .element: class="stretch" -->
 
 * Deploying an ML model with a fairness criterion does NOT guarantee
   improvement in equality/equity over time
