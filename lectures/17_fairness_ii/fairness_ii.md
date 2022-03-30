@@ -70,7 +70,7 @@ _Fairness-aware Machine Learning_, Bennett et al., WSDM Tutorial (2019).
 * Separation: Among defendants who would not have gone on to commit a
 violent crime if released, detention rates are equal across gender and race groups
 
-
+__Q. But how do we decide which of definitions to use?__
 
 ---
 # Requirements Engineering for Fairness
@@ -89,11 +89,11 @@ this state
 ----
 ## Requirements for Fair ML Systems
 
-* Understand the environment and its assumptions (ENV)
+* Understand the environment and its assumptions
 	<!-- .element: class="fragment" -->
 	* Who are the stakeholders? Any disadvantaged groups?
 	* What is the target population distribution like?
-* Identify requirements (REQ) over the environment
+* Identify fairness requirements 
 <!-- .element: class="fragment" -->
 	* What is the ultimate goal of the system being developed?
 	* What types of harm can be caused as side effects?
@@ -131,10 +131,10 @@ essential to the safe & efficient operation)
 ----
 ## Requirements for Fair ML Systems
 
-* Understand the environment and its assumptions (ENV)
+* Understand the environment and its assumptions 
 	* Who are the stakeholders? Any disadvantaged groups? 
 	* What is the target population distribution like?
-* Identify requirements (REQ) over the environment
+* Identify fairness requirements 
 	* What is the ultimate goal of the system being developed?
 	* What types of harm can be caused as side effects?
 	* Are we trying to achieve equality vs. equity? 
@@ -164,10 +164,10 @@ essential to the safe & efficient operation)
 ----
 ## Requirements for Fair ML Systems
 
-* Understand the environment and its assumptions (ENV)
+* Understand the environment and its assumptions 
 	* Who are the stakeholders? Any disadvantaged groups? 
 	* What is the target population distribution like?
-* Identify requirements (REQ) over the environment
+* Identify fairness requirements
 	* What is the ultimate goal of the system being developed?
 	* What types of harm can be caused as side effects?
 	* Are we trying to achieve equality vs. equity? 
@@ -260,7 +260,7 @@ https://textbook.coleridgeinitiative.org/chap-bias.html
 * __Q. So is COMPAS both fair & unfair at the same time? Which definition
   is the "right" one?__
 
-<!--references -->
+<!-- references -->
 
 [Figure from Big Data and Social Science, Ch. 11](https://textbook.coleridgeinitiative.org/chap-bias.html#ref-angwin2016b)
 
@@ -280,7 +280,7 @@ https://textbook.coleridgeinitiative.org/chap-bias.html
   * Many of these are deeply rooted in our society, and
     can't be solved purely through technical means!
   
-<!--references -->
+<!-- references -->
 
 A. Chouldechova [Fair prediction with disparate impact: A study of bias in recidivism prediction instruments](https://arxiv.org/pdf/1703.00056.pdf)
 
@@ -389,6 +389,19 @@ _Bias in Online Freelance Marketplaces_, Hannak et al., CSCW (2017).
 <!-- references -->
 
 _Fairness-aware Machine Learning_, Bennett et al., WSDM Tutorial (2019).
+
+----
+## Breaekout: College Admission
+
+![](college-admission.jpg)
+<!-- .element: class="stretch" -->
+
+* Features: GPA, GRE/SAT, gender, race, undergrad institute, alumni
+  connections, household income, hometown, etc., 
+* Type into #lecture in Slack:
+  * What are different sub-populations?
+  * What are potential sources of data bias?
+  * What are ways to mitigate this bias?
 
 ----
 ## Data Sheets
@@ -507,7 +520,7 @@ in FAT* 2020.
 
 * Continuously monitor for:
 <!-- .element: class="fragment" -->
-  - Match between training data, test data, and instances that you encounter in deployment
+  - Mismatch between training data, test data, and instances that you encounter in deployment
   - Fairness metrics: Is the system yielding fair results over time?
   - Population shifts: May suggest needs to adjust fairness metric/thresholds
   - User reports & complaints: Log and audit system decisions
@@ -526,8 +539,8 @@ system?
 ![](model_drift.jpg)
 
 * Continously monitor the fairness metric (e.g., error rates for
-  different groups)
-* Re-train model with new data or adjust classification thresholds if needed
+different groups)
+* Re-train model with recent data or adjust classification thresholds if needed
 * Recall: Data drifts in the Data Quality lecture
 
 ----
