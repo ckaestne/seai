@@ -200,7 +200,7 @@ Barocas, Solon and Moritz Hardt. "[Fairness in machine learning](https://mrtz.or
 ----
 ## Equality vs Equity vs Justice
 
-![Contrasting equality, equity, and justice](eej2.png)
+![Contrasting equality, equity, and justice](eej2.jpeg)
 
 ----
 ## Types of Harm on Society
@@ -220,6 +220,7 @@ Barocas, Solon and Moritz Hardt. "[Fairness in machine learning](https://mrtz.or
 * Poor quality of service, degraded user experience for certain groups
 
 ![](gender-detection.png)
+<!-- .element: class="stretch" -->
 
 __Q. Other examples?__
 
@@ -231,9 +232,11 @@ Commercial Gender Classification_, Buolamwini & Gebru, ACM FAT* (2018).
 ----
 ## Harms of Representation
 
-* Over/under-representation, reinforcement of stereotypes
+* Over/under-representation of certain groups in organizations 
+* Reinforcement of stereotypes
 
 ![](online-ad.png)
+<!-- .element: class="stretch" -->
 
 __Q. Other examples?__
 
@@ -352,10 +355,11 @@ considering."
 *Bias in the dataset caused by humans*
 
 ![](amazon-hiring.png)
+<!-- .element: class="stretch" -->
 
 * Example: Hiring decision dataset
-  * Some labels created manually by employers
-  * Dataset "tainted" by biased human judgement
+  * Some labels were created manually by employers in the past
+  * Dataset is "tainted" by biased human judgement
 
 ----
 ## Skewed Sample
@@ -363,8 +367,11 @@ considering."
 *Bias compounds over time & skews sampling towards certain parts of population*
 
 ![](crime-map.jpg)
+<!-- .element: class="stretch" -->
 
 * Example: Crime prediction for policing strategy
+* More police patrol in areas with a higher crime rate -> certain
+sub-populations are sampled more 
 
 ----
 ## Limited Features
@@ -372,6 +379,7 @@ considering."
 *Features that are less informative or reliable for certain parts of the population*
 
 ![](performance-review.jpg)
+<!-- .element: class="stretch" -->
 
 * Features that support accurate prediction for the majority may not do so
 for a minority group
@@ -386,16 +394,18 @@ for a minority group
 *Less data available for certain parts of the population*
 
 ![](shirley-card.jpg)
+<!-- .element: class="stretch" -->
 
 * Example: "Shirley Card"
 	* Used by Kodak for color calibration in photo films
 	* Most "Shirley Cards" used Caucasian models
-	* Poor color quality for other skin tones
+	* This resulted in poor color quality for other skin tones
 
 ----
 ## Proxies
 
 *Certain features are correlated with class membership*
+<!-- .element: class="stretch" -->
 
 ![](neighborhoods.png)
 
@@ -403,9 +413,10 @@ for a minority group
 * Even when sensitive attributes (e.g., race) are erased, bias may still occur
 
 ----
-## Case Study: College Admission
+## Breaekout: College Admission
 
 ![](college-admission.jpg)
+<!-- .element: class="stretch" -->
 
 * Evaluate applications & identify students who are 
 likely to succeed
@@ -413,14 +424,16 @@ likely to succeed
   connections, household income, hometown, etc., 
 
 ----
-## Case Study: College Admission
+## Breakout: College Admission
 
 ![](college-admission.jpg)
+<!-- .element: class="stretch" -->
 
-* Possible harms: Allocation of resources? Quality of service?
-  Stereotyping? Denigration? Over-/Under-representation?
-* Sources of bias: Skewed sample? Tainted examples? Historical bias? Limited features?
-	Sample size disparity? Proxies?
+* Discuss & enter into #lecture:
+  * Possible harms: Allocation of resources? Quality of service? Stereotyping? Denigration? Over-/Under-representation?
+  * Sources of bias: Skewed sample? Tainted examples? Historical bias? Limited features?
+  Sample size disparity? Proxies?
+  * Andrew IDs: ??
 
 ----
 ## Feedback Loops

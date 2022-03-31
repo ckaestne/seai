@@ -815,15 +815,6 @@ about?
 
 Image CC BY-SA 3.0 by [Nojhan](https://en.wikipedia.org/wiki/Multi-objective_optimization#/media/File:Front_pareto.svg)
 
-<!-- ---- -->
-<!-- ## Example: Credit Scoring -->
-
-<!-- ![Credit Scoring Chart](credit-score.png) -->
-<!-- <\!-- .element: class="stretch" -\-> -->
-
-<!-- * For problems with a linear relationship between input & output variables: -->
-<!--   * Linear regression: Superior in terms of accuracy, interpretability, cost  -->
-<!--   * Other methods are dominated (inferior) solutions -->
 
 ----
 ## Trade-offs: Cost vs Accuracy

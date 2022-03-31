@@ -3,6 +3,6 @@ COPY . /
 WORKDIR /
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
-EXPOSE 8082
+EXPOSE 8081
 ENTRYPOINT [ "python" ]
 CMD [ "app/server.py" ]

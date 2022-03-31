@@ -28,16 +28,16 @@
 | Mon, Mar 14 | [Managing and Processing Large Datasets](https://ckaestne.github.io/seai/S2022/slides/12_dataatscale/dataatscale.html) ([book chapter](https://ckaestne.medium.com/scaling-ml-enabled-systems-b5c6b1527bc)) | [Business Systems with Machine Learning](https://www.youtube.com/watch?v=_bvrzYOA8dY) |  |
 | Wed, Mar 16 | [Process & Technical Debt](https://ckaestne.github.io/seai/S2022/slides/13_process/process.html) ([book chapter 1](https://ckaestne.medium.com/data-science-and-software-engineering-process-models-ea997ea53711), [book chapter 2](https://ckaestne.medium.com/technical-debt-in-machine-learning-systems-62035b82b6de)) | [Hidden Technical Debt in Machine Learning Systems](http://papers.nips.cc/paper/5656-hidden-technical-debt-in-machine-learning-systems.pdf) | [I3: Exploring Tools](https://github.com/ckaestne/seai/blob/S2022/assignments/I3_se4ai_tools.md) or [PhD Project](https://github.com/ckaestne/seai/blob/S2022/assignments/research_project.md) |
 | Fri, Mar 18 | ![Recitation](https://img.shields.io/badge/-rec-yellow.svg) Containers: Docker | |  |
-| Mon, Mar 21 | Human AI Interaction | |  |
-| Wed, Mar 23 | Intro to Ethics + Fairness ([book chapter](https://ckaestne.medium.com/responsible-ai-engineering-c97e44e6c57a)) | |  |
+| Mon, Mar 21 | [Human AI Interaction](https://ckaestne.github.io/seai/S2022/slides/14_human_ai_interaction/human_ai_interaction.html) | [Building Intelligent Systems](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436), Ch. 8 and [Guidelines for Human-AI Interaction](https://dl.acm.org/doi/pdf/10.1145/3290605.3300233?casa_token=LozLAS6xY1YAAAAA:969CqbfAMIhDC1AIjF7L1DZgGMg71ECwjjXa_mzdj6RLvlL8LYSaSpglBSK3xhRuBnzGp-V4ebVKVw) |  |
+| Wed, Mar 23 | [Intro to Ethics + Fairness](https://ckaestne.github.io/seai/S2022/slides/15_intro_ethics_fairness/intro-ethics-fairness.html) ([book chapter](https://ckaestne.medium.com/responsible-ai-engineering-c97e44e6c57a)) | [Algorithmic Accountability: A Primer](https://datasociety.net/wp-content/uploads/2018/04/Data_Society_Algorithmic_Accountability_Primer_FINAL-4.pdf) |  |
 | Fri, Mar 25 | ![Recitation](https://img.shields.io/badge/-rec-yellow.svg) Monitoring: Prometheus, Grafana | |  |
-| Mon, Mar 28 | Building Fairer AI-Enabled System 1 | |  |
-| Wed, Mar 30 | Building Fairer AI-Enabled System 2 | | [M2: Infrastructure Quality](https://github.com/ckaestne/seai/blob/S2022/assignments/project.md#milestone-2-model-and-infrastructure-quality) |
+| Mon, Mar 28 | [Building Fairer AI-Enabled System 1](https://ckaestne.github.io/seai/S2022/slides/16_fairness_i/fairness_i.html) | [Improving Fairness in Machine Learning Systems](http://users.umiacs.umd.edu/~hal/docs/daume19fairness.pdf) |  |
+| Wed, Mar 30 | [Building Fairer AI-Enabled System 2](https://ckaestne.github.io/seai/S2022/slides/17_fairness_ii/fairness_ii.html) | [A Mulching Proposal](https://dl.acm.org/doi/pdf/10.1145/3290607.3310433) | [M2: Infrastructure Quality](https://github.com/ckaestne/seai/blob/S2022/assignments/project.md#milestone-2-model-and-infrastructure-quality) |
 | Fri, Apr 01 | ![Recitation](https://img.shields.io/badge/-rec-yellow.svg) Fairness | |  |
-| Mon, Apr 04 | Explainability & Interpretability ([book chapter](https://ckaestne.medium.com/interpretability-and-explainability-a80131467856)) | |  |
-| Wed, Apr 06 | Transparency and Accountability ([book chapter](https://ckaestne.medium.com/transparency-and-accountability-in-ml-enabled-systems-f8ed0b6fd183)) | |  |
+| Mon, Apr 04 | [Explainability & Interpretability](https://ckaestne.github.io/seai/S2022/slides/18_explainability/explainability.html) ([book chapter](https://ckaestne.medium.com/interpretability-and-explainability-a80131467856)) | [Black boxes not required](https://dataskeptic.com/blog/episodes/2020/black-boxes-are-not-required) or [Stop Explaining Black Box ML Models…](https://arxiv.org/abs/1811.10154) |  |
+| Wed, Apr 06 | [Transparency and Accountability](https://ckaestne.github.io/seai/S2022/slides/19_transparency/transparency.html) ([book chapter](https://ckaestne.medium.com/transparency-and-accountability-in-ml-enabled-systems-f8ed0b6fd183)) | [People + AI, Ch. Explainability and Trust](https://pair.withgoogle.com/chapter/explainability-trust/) |  |
 | Fri, Apr 08 | ![Break](https://img.shields.io/badge/-break-red.svg) Spring carnival, no classes | |  |
-| Mon, Apr 11 | Versioning, Provenance, and Reproducability ([book chapter](https://ckaestne.medium.com/versioning-provenance-and-reproducibility-in-production-machine-learning-355c48665005)) | |  |
+| Mon, Apr 11 | Versioning, Provenance, and Reproducability ([book chapter](https://ckaestne.medium.com/versioning-provenance-and-reproducibility-in-production-machine-learning-355c48665005)) | [Building Intelligent Systems](https://www.buildingintelligentsystems.com/), Ch. 21 & [Goods: Organizing Google's Datasets](http://research.google.com/pubs/archive/45390.pdf) |  |
 | Wed, Apr 13 | Security and Privacy | | [M3: Monitoring and CD](https://github.com/ckaestne/seai/blob/S2022/assignments/project.md#milestone-3-monitoring-and-continuous-deployment) |
 | Fri, Apr 15 | ![Recitation](https://img.shields.io/badge/-rec-yellow.svg) Threat modeling | |  |
 | Mon, Apr 18 | Safety 1 | |  |
@@ -45,4 +45,4 @@
 | Fri, Apr 22 | ![Recitation](https://img.shields.io/badge/-rec-yellow.svg) tbd. | |  |
 | Mon, Apr 25 | Fostering Interdisciplinary Teams | |  |
 | Wed, Apr 27 | Summary and Review | | [M4: Security and Feedback Loops](https://github.com/ckaestne/seai/blob/S2022/assignments/project.md#milestone-4-drift-and-feedback-loops) |
-| tbd | **Final Project Presentations** | | [Final report](https://github.com/ckaestne/seai/blob/S2022/assignments/project.md#final-report-and-presentation) |
+| Mon, May 2, 1-4pm | **Final Project Presentations** | | [Final report](https://github.com/ckaestne/seai/blob/S2022/assignments/project.md#final-report-and-presentation) |

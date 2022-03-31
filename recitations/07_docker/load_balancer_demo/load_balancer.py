@@ -9,11 +9,14 @@ import requests
 import numpy as np
 import random
 
+app = Flask('load-balancer-server')
+
 probability = 0.7
 
 def checkHealth(ip_addr):
     return os.system('nc -vz '+ip_addr) == 0
 
+@app.route('/')
 def welcome():
     # add health check
     A_server_up = checkHealth('0.0.0.0 7004')
@@ -30,7 +33,8 @@ def welcome():
             response = requests.get('http://0.0.0.0:7005/')
     else:
         response = ''
-    return response
+    return str(response)
 
 if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=8082, debug=False)
     welcome()

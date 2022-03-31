@@ -32,8 +32,14 @@ End-user Expectations of AI Systems_. Kocielnik, et al., in CHI 2019
 * Consider design considerations for AI-based systems
   * Modes of interaction: Automate or augment?
   * Mental model: User understanding of what AI is doing
-  * Dealing with errors: Guide user towards recovery & prevention
+  * Dealing with errors: Guide user towards prevention & recovery
   * Feedback and control: Align user feedback with AI improvement
+
+---
+# What's coming next
+
+![Overview](overview.svg)
+<!-- .element: class="plain" -->
 
 ---
 # Risks of Poor Interaction Design
@@ -110,6 +116,9 @@ End-user Expectations of AI Systems_. Kocielnik, et al., in CHI 2019
 ---
 # Usability Concepts
 
+(This will be a brief tour to a complex subject. If you are interested,
+consider taking [05-318/618: Human-AI Interaction](https://haiicmu.github.io/))
+
 ----
 ## Dimensions of Usability
 
@@ -152,7 +161,18 @@ https://www.nngroup.com/articles/usability-101-introduction-to-usability/
 
 * AI has potential to greatly reduce interaction costs
   * Automate tasks through personalization & predictions
-* But also introduces new challenges
+* But also introduces new usability challenges
+  * __Q. What's new or hard about AI-based systems?__
+
+----
+## Usability & AI
+
+![](echo.jpg)
+<!-- .element: class="stretch" -->
+
+* AI has potential to greatly reduce interaction costs
+  * Automate tasks through personalization & predictions
+* But also introduces new usability challenges
   * __Unpredictability__: AI makes mistakes, sometimes unexpectedly
   * __Opaqueness__: User has difficulty understanding how system works
   * __Evolution__: AI behavior changes over time, surprising users
@@ -163,7 +183,7 @@ https://www.nngroup.com/articles/usability-101-introduction-to-usability/
 
 * __Modes of interaction__: Automate or augment?
 * __Mental model__: User understanding of what AI is doing
-* __Dealing with errors__: Guide user towards recovery & prevention
+* __Dealing with errors__: Guide user towards prevention & recovery
 * __Feedback and control__: Align user feedback with AI improvement
 
 
@@ -205,31 +225,15 @@ https://www.nngroup.com/articles/usability-101-introduction-to-usability/
     <!-- .element: class="fragment" -->
 * Augment when:
 <!-- .element: class="fragment" -->
-  * High stakes & accountability needed
+  * High stakes & accountability is needed
      <!-- .element: class="fragment" -->
-  * Difficult to communicate user's need to AI
+  * Difficult to communicate the user's need to AI
      <!-- .element: class="fragment" -->
   * User enjoys performing the task (e.g., driving)
      <!-- .element: class="fragment" -->
 
 ----
-## Automate or Augment? Why?
-
-![](powerpoint.png)
-<!-- .element: class="stretch" -->
-
-Design transformations in PowerPoint
-
-----
-## Automate or Augment? Why?
-
-![](smartwatch.jpg)
-<!-- .element: class="stretch" -->
-
-Fall detection in a smartwatch
-
-----
-## Factors to Consider
+## Other Factors to Consider
 
 * Forcefulness: How strongly to encourage taking an action?
 <!-- .element: class="fragment" -->
@@ -242,27 +246,38 @@ Fall detection in a smartwatch
 	* Only when explicitly initiated by user 
 * Cost: What is the effect of a wrong prediction?
 <!-- .element: class="fragment" -->
+	* If cost is too high, consider augmenting rather than automating
 	* If possible, provide a way to undo the action of AI
 
+<!-- ---- -->
+<!-- ## Factors to Consider -->
+
+<!-- ![](apps-combined.jpg) -->
+<!-- <\!-- .element: class="stretch" -\-> -->
+
+<!-- Design suggestions/fall detection -->
+
+<!-- __Q. Forcefulness, frequency, cost?__ -->
+
 ----
-## Factors to Consider
+## Example: Design suggestions in PowerPoint
 
-<!-- colstart -->
-Slide design transformations:
-![Powerpoint screenshot with slide designer](powerpoint.png)
+![](powerpoint.png)
+<!-- .element: class="stretch" -->
 
-<!-- col -->
-Fall detection:
-![Smart watch](smartwatch.jpg)
+* Automate or Augment? Why?
+* Forcefulness? (active vs. passive)
+* Frequency?
 
-<!-- colend -->
+----
+## Example: Fall Detection
 
-__Q. Forcefulness, frequency, cost?__
+![](smartwatch.jpg)
+<!-- .element: class="stretch" -->
 
-
-
-
-
+* Automate or Augment? Why?
+* Forcefulness? (active vs. passive)
+* Frequency?
 
 ---
 # Mental Model
@@ -271,7 +286,8 @@ __Q. Forcefulness, frequency, cost?__
 ----
 ## Mental Model
 
-![](mental-model.jpg)
+![](mental-model.png)
+<!-- .element: class="stretch" -->
 
 * What the user believes about the system 
 <!-- .element: class="fragment" -->
@@ -295,7 +311,7 @@ Mental model for shopping cart = A linear sequence of familiar steps
 2. Add items to cart
 3. Choose checkout
 4. Enter shipping & billing data
-5. Press submit
+5. Press Order
 6. Get confirmation
 
 ----
@@ -319,7 +335,7 @@ https://baymard.com/blog/checkout-process-should-be-linear
 ![](ml-mental-model.jpg)
 
 * User: "What is AI doing, and how do I use it?"
-  * Typically less transparent than traditional applications
+  * Opaqueness: Typically less transparent than traditional apps
   * AI will make mistakes, often unpredictably 
 * Unclear inputs: What are possible actions? Which of these actions matter? When
 does my action take effect?
@@ -339,7 +355,7 @@ https://www.nngroup.com/articles/machine-learning-ux/
 
 ![](echo.jpg)
 
-__Q. Can you describe what it does? What it can't do?__
+__Q. Can you describe what it does? What it cannot do?__
 
 <!-- * What can it do? What are its limitations? -->
 <!-- * How do I get it to do/say  X? -->
@@ -404,19 +420,19 @@ https://www.nngroup.com/articles/mental-model-ai-assistants/
 	* Allow user to adjust system behavior to match their expectations
 
 ----
-## Onboarding: Set User Expectations
+## Onboarding: Set User's Mental Model
 
 ![](grammar.png)
 <!-- .element: class="stretch" -->
 
-* Provide examples of how it works
+* Provide examples of how the system works
 
 ----
-## Onboarding: Set User Expectations
+## Onboarding: Set User's Mental Model
 
 ![](limitations.png)
 
-* Be clear about what system can(not) do
+* Be explicit about what system can and cannot do
 
 <!-- references -->
 
@@ -428,7 +444,7 @@ https://pair.withgoogle.com/chapter/mental-models/
 ![](why-am-i-seeing-this-post-v1.png)
 <!-- .element: class="stretch" -->
 
-* Explain how the user's actions influence output
+* Explain how the user's input actions influence output
 
 
 
@@ -444,13 +460,13 @@ https://pair.withgoogle.com/chapter/mental-models/
 ## Dealing with Errors
 
 * User errors: Mistakes made by users (e.g., click on a wrong button)
-<!-- .element: class="fragment" -->
   * Lots of work in cognitive science & human factors 
   * Error taxonomies, human performance modeling, task analysis,
   ergonomic analysis, etc.,
+  * Often due to misalignment of mental models
 * System errors: Failure to provide an outcome expected by the user
-  <!-- .element: class="fragment" -->
-	* Our focus in this class
+  * Due to mistakes made by an ML model
+  * __Our focus in this lecture__
 
 ----
 ## Example: Scheduling Assistant
@@ -477,11 +493,11 @@ End-user Expectations of AI Systems_. Kocielnik, et al. (CHI 2019)
 * Detect & record occurrences of errors
 <!-- .element: class="fragment" -->
 	* Collect telemetry or user feedback
-	* e.g. user rejects inferred meeting schedule
+	* Q. Telemetry to collect for meeting scheduler?
 * Identify sources of errors
 <!-- .element: class="fragment" -->
 	* Poor/bias training data, noise in data, data drifts
-* Provide meaningful error messages to user
+* Provide meaningful error messages to the user
 <!-- .element: class="fragment" -->
 	* Provide an explanation for the error
 	* Suggest actions to fix the error (e.g., "Edit details" option)
@@ -515,25 +531,38 @@ End-user Expectations of AI Systems_. Kocielnik, et. al. (CHI 2019)
 
 https://pair.withgoogle.com/chapter/errors-failing/
 
+
 ----
-## Errors in Voice Assistants
+## Breakout: Dealing with Errors
 
-CHANGE TO DIFFERENT EXAMPLE
+![](apps-combined.jpg)
+<!-- .element: class="stretch" -->
 
-<!-- colstart -->
+Design suggestions/fall detection
 
-![](echo.jpg)
-<!-- col -->
+* In #lecture, type:
+  * Possible error(s):
+  * How to detect the error:
+  * How to allow the user to recover from error:
+  * What additional data to collect (from user) to reduce future errors:
 
-> “...sometimes it says it does — like the reminders and the sending messages. It says it will do it. But then at the end we found that it didn’t really send the message.”
-<!-- colend -->
+<!-- ---- -->
+<!-- ## Errors in Voice Assistants -->
 
-* __Q. How do we detect an error__?
-* __Q. How can we notify/guide the user when an error occurs__?
+<!-- <\!-- colstart -\-> -->
 
-<!-- references -->
+<!-- ![](echo.jpg) -->
+<!-- <\!-- col -\-> -->
 
-https://www.nngroup.com/articles/mental-model-ai-assistants/
+<!-- > “...sometimes it says it does — like the reminders and the sending messages. It says it will do it. But then at the end we found that it didn’t really send the message.” -->
+<!-- <\!-- colend -\-> -->
+
+<!-- * __Q. How do we detect when AI makes an error__? -->
+<!-- * __Q. How can we notify/guide the user when an error occurs__? -->
+
+<!-- <\!-- references -\-> -->
+
+<!-- https://www.nngroup.com/articles/mental-model-ai-assistants/ -->
 
 
 
@@ -591,17 +620,16 @@ https://pair.withgoogle.com/chapter/feedback-controls/
 * Scheduling assistant: Adjust thresholds to achieve trade-offs
   between precision vs recall
 
-----
-## User Feedback in Voice Assistants
+<!-- ## User Feedback in Voice Assistants -->
 
-> "All of the things that even Siri herself said she could do — for example ‘I can send money via Venmo, just try and say this.’ I tried and it didn’t work, and maybe there are settings that I need to fix. But when those types of things happened, there was no button that said ‘Hey, in order to make this work in the future, click this and we’ll take you to the permissions or whatever’."
+<!-- > "All of the things that even Siri herself said she could do — for example ‘I can send money via Venmo, just try and say this.’ I tried and it didn’t work, and maybe there are settings that I need to fix. But when those types of things happened, there was no button that said ‘Hey, in order to make this work in the future, click this and we’ll take you to the permissions or whatever’." -->
 
-* __Q. How do we collect user feedback? Implicit? Explicit?__
-* __Q. What kind of control do we provide to the user?__
+<!-- * __Q. How do we collect user feedback? Implicit? Explicit?__ -->
+<!-- * __Q. What kind of control do we provide to the user?__ -->
 
-<!-- references -->
+<!-- <\!-- references -\-> -->
 
-https://www.nngroup.com/articles/mental-model-ai-assistants/
+<!-- https://www.nngroup.com/articles/mental-model-ai-assistants/ -->
 
 
 ---
@@ -640,5 +668,5 @@ lifecycle!__
 * Interaction design considerations for AI
   * Modes of interaction: Automate or augment?
   * Mental model: User understanding of what AI is doing
-  * Dealing with errors: Guide user towards recovery & prevention
+  * Dealing with errors: Guide user towards prevention & recovery
   * Feedback and control: Align user feedback with AI improvement
