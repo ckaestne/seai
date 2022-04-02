@@ -38,7 +38,7 @@
 | Wed, Apr 06 | [Transparency and Accountability](https://ckaestne.github.io/seai/S2022/slides/19_transparency/transparency.html) ([book chapter](https://ckaestne.medium.com/transparency-and-accountability-in-ml-enabled-systems-f8ed0b6fd183)) | [People + AI, Ch. Explainability and Trust](https://pair.withgoogle.com/chapter/explainability-trust/) |  |
 | Fri, Apr 08 | ![Break](https://img.shields.io/badge/-break-red.svg) Spring carnival, no classes | |  |
 | Mon, Apr 11 | Versioning, Provenance, and Reproducability ([book chapter](https://ckaestne.medium.com/versioning-provenance-and-reproducibility-in-production-machine-learning-355c48665005)) | [Building Intelligent Systems](https://www.buildingintelligentsystems.com/), Ch. 21 & [Goods: Organizing Google's Datasets](http://research.google.com/pubs/archive/45390.pdf) |  |
-| Wed, Apr 13 | Security and Privacy | | [M3: Monitoring and CD](https://github.com/ckaestne/seai/blob/S2022/assignments/project.md#milestone-3-monitoring-and-continuous-deployment) |
+| Wed, Apr 13 | Security and Privacy | [Building Intelligent Systems](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436), Ch. 25 & [The Top 10 Risks of Machine Learning Security](https://ieeexplore.ieee.org/document/9107290) | [M3: Monitoring and CD](https://github.com/ckaestne/seai/blob/S2022/assignments/project.md#milestone-3-monitoring-and-continuous-deployment) |
 | Fri, Apr 15 | ![Recitation](https://img.shields.io/badge/-rec-yellow.svg) Threat modeling | |  |
 | Mon, Apr 18 | Safety 1 | |  |
 | Wed, Apr 20 | Safety 2 | | [I4: Fairness](https://github.com/ckaestne/seai/blob/S2022/assignments/I4_fairness.md) |
