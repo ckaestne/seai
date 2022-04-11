@@ -23,7 +23,7 @@ scrape_configs:
     # scheme defaults to 'http'.
 
     static_configs:
-         - targets: ['<<___>>:9091'] #target here
+         - targets: ['<<___>>:9090'] #target here
 
   - job_name: 'kafka'
 
