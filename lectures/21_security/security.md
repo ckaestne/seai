@@ -45,11 +45,11 @@ Required reading:
 	* How do we prevent the attacker from compromising a security requirement?
 
 ----
-## Security Requirements
+## What do we mean by "secure"?
 
 ![](cia-triad.png)
 
-* "CIA triad" of information security
+* Common security requirements: "CIA triad" of information security
 * __Confidentiality__: Sensitive data must be accessed by authorized users only
 * __Integrity__: Sensitive data must be modifiable by authorized users only
 * __Availability__: Critical services must be available when needed by clients
@@ -122,7 +122,7 @@ day of the application deadline.
 ![](admission-threat-model.jpg)
 <!-- .element: class="stretch" -->
 
-* What are the attacker’s possible actions?
+* What are the actions available to the attacker (to achieve its goal)?
   * Depends on system boundary & its exposed interfaces
   * Use an architecture diagram to identify attack surface & actions
 
@@ -143,7 +143,7 @@ day of the application deadline.
 
 * A systematic approach to identifying threats (i.e., attacker actions)
   * Construct an architectural diagram with components & connections 
-  * For each component, enumerate & identify potential threats
+  * For each component/connection, identify potential threats
   * For each potential threat, devise a mitigation strategy
 
 [More info: STRIDE approach](https://docs.microsoft.com/en-us/archive/msdn-magazine/2006/november/uncover-security-design-flaws-using-the-stride-approach)
@@ -189,9 +189,9 @@ day of the application deadline.
   * Information disclosure: Attacker intercepts HTTP requests from/to
   server to read applicant info
 	  -> __Use encryption (HTTPS)__
-  * Denial of service: Attacker creates a large number of bogus
+  * Denial of service: Attacker creates many bogus
     accounts and overwhelms system with requests -> __Limit
-    registration per IP address__
+    requests per IP address__
 
 
 ----
@@ -238,7 +238,7 @@ day of the application deadline.
   <!-- .element: class="fragment" -->
 
 ----
-## Attacker Capability
+## ML Attacker Capability
 
 ![](ml-cycle.png)
 
@@ -423,27 +423,38 @@ Countermeasures_, M. Fredrikson et al. in CCS (2015).
 _Biscotti: A Ledger for Private and Secure Peer-to-Peer Machine
 Learning_, M. Shayan et al., arXiv:1811.09904 (2018).
 
-
 ----
-## Breakout: Home Assistant Robot
+## Breakout: Dashcam System
 
-![](home-assistant-robot.png)
+![](dashcam-architecture.jpg)
 <!-- .element: class="stretch" -->
 
-* Dialogue system to interact with family members
-* Use perception & speech to identify the person
-* Notify owner if stranger detected in the house
-* Log & upload interactions; re-train & update models for all robots
+* Recall: Dashcam system from I2
+* Post on #lecture in Slack:
+  * What are the security requirements?
+  * What are possible (ML-specific) attacks on the system?
+  * What are some possible mitigations against these attacks?
 
-----
-## Breakout: Home Assistant Robot
+<!-- ---- -->
+<!-- ## Breakout: Home Assistant Robot -->
 
-![](home-robot-architecture.png)
-<!-- .element: class="stretch" -->
+<!-- ![](home-assistant-robot.png) -->
+<!-- <\!-- .element: class="stretch" -\-> -->
 
-* What are the security requirements?
-* What are possible attacks on the system?
-* How can we defend against some of them?
+<!-- * Dialogue system to interact with family members -->
+<!-- * Use perception & speech to identify the person -->
+<!-- * Notify owner if stranger detected in the house -->
+<!-- * Log & upload interactions; re-train & update models for all robots -->
+
+<!-- ---- -->
+<!-- ## Breakout: Home Assistant Robot -->
+
+<!-- ![](home-robot-architecture.png) -->
+<!-- <\!-- .element: class="stretch" -\-> -->
+
+<!-- * What are the security requirements? -->
+<!-- * What are possible attacks on the system? -->
+<!-- * How can we defend against some of them? -->
 
 ----
 ## State of ML Security
