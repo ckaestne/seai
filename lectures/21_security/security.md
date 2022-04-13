@@ -271,6 +271,10 @@ quality
 _Poison Frogs! Targeted Clean-Label Poisoning Attacks on Neural
 Networks_, Shafahi et al. (2018)
 
+----
+## Defense against Poisoning Attacks
+
+* __Q. How would you mitigate poisoning attacks?__
 
 ----
 ## Defense against Poisoning Attacks
@@ -335,6 +339,10 @@ Eykholt et al., in CVPR (2018).
 <!-- references -->
 From Goodfellow et al (2018). [Making machine learning robust against adversarial inputs](https://par.nsf.gov/servlets/purl/10111674). *Communications of the ACM*, *61*(7), 56-66. 
 
+----
+## Defense against Evasion Attacks
+
+* __Q. How would you mitigate evasion attacks?__
 
 ----
 ## Defense against Evasion Attacks
