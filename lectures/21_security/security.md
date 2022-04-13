@@ -330,7 +330,6 @@ Eykholt et al., in CVPR (2018).
 ## Task Decision Boundary vs Model Boundary
 
 [![Decision boundary vs model boundary](decisionboundary.png)](decisionboundary.png)
-<!-- .element: class="stretch" -->
 
 * Decision boundary: Ground truth; often unknown and not specifiable
 * Model boundary: What the model learns; an approximation of
