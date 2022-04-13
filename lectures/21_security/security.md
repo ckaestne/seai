@@ -19,10 +19,10 @@ Required reading:
 # Learning Goals
 
 * Explain key concerns in security (in general and with regard to ML models)
+* Identify security requirements with threat modeling
 * Analyze a system with regard to attacker goals, attack surface, attacker capabilities 
 * Describe common attacks against ML models, including poisoning and evasion attacks
 * Understand design opportunities to address security threats at the system level
-* Identify security requirements with threat modeling
 * Apply key design principles for secure system design
 
 ---
@@ -31,7 +31,7 @@ Required reading:
 ----
 ## Elements of Security
 
-* Security requirements (also called policies)
+* Security requirements (also called "policies")
 <!-- .element: class="fragment" -->
   * What does it mean for my system to be secure?
 * Threat model
@@ -45,10 +45,11 @@ Required reading:
 	* How do we prevent the attacker from compromising a security requirement?
 
 ----
-## What do we mean by "secure"?
+## Security Requirements
 
 ![](cia-triad.png)
 
+* What do we mean by "secure"?
 * Common security requirements: "CIA triad" of information security
 * __Confidentiality__: Sensitive data must be accessed by authorized users only
 * __Integrity__: Sensitive data must be modifiable by authorized users only
@@ -76,9 +77,9 @@ day of the application deadline.
 ----
 ## Other Security Requirements 
 
-* Authentication (no spoofing): Users are who they say they are
-* Non-repudiation: Every change can be traced to who was responsible for it
-* Authorization (no escalation of privilege): Only users with the right permissions can access a resource/perform an action
+* Authentication: Users are who they say they are
+* Non-repudiation: Certain changes/actions in the system can be traced to who was responsible for it
+* Authorization: Only users with the right permissions can access a resource/perform an action
 
 ---
 # Threat Modeling
@@ -105,7 +106,7 @@ day of the application deadline.
 ## Attacker Goal
 
 * What is the attacker trying to achieve?
-  * Undermine one or more security requirements
+  * Typically, undermine one or more security requirements
 <!-- .element: class="fragment" -->
 * Example: College admission
 <!-- .element: class="fragment" -->
@@ -122,8 +123,8 @@ day of the application deadline.
 ![](admission-threat-model.jpg)
 <!-- .element: class="stretch" -->
 
-* What are the actions available to the attacker (to achieve its goal)?
-  * Depends on system boundary & its exposed interfaces
+* What actions are available to the attacker (to achieve its goal)?
+  * Depends on system boundary & interfaces exposed to external actors
   * Use an architecture diagram to identify attack surface & actions
 
 <!-- ---- -->
@@ -140,10 +141,12 @@ day of the application deadline.
 ## STRIDE Threat Modeling
 
 ![](stride.png)
+<!-- .element: class="stretch" -->
 
 * A systematic approach to identifying threats (i.e., attacker actions)
-  * Construct an architectural diagram with components & connections 
-  * For each component/connection, identify potential threats
+  * Construct an architectural diagram with components & connections
+  * Designate the trust boundary 
+  * For each untrusted component/connection, identify potential threats
   * For each potential threat, devise a mitigation strategy
 
 [More info: STRIDE approach](https://docs.microsoft.com/en-us/archive/msdn-magazine/2006/november/uncover-security-design-flaws-using-the-stride-approach)
@@ -154,11 +157,10 @@ day of the application deadline.
 ![](admission-threat-model.jpg)
 <!-- .element: class="stretch" -->
 
-* Example: Application Front End
-  * Spoofing: ?
-  * Tampering: ? 
-  * Information disclosure: ?
-  * Denial of service: ?
+* Spoofing: ?
+* Tampering: ? 
+* Information disclosure: ?
+* Denial of service: ?
 
 ----
 ## STRIDE: College Admission
@@ -166,12 +168,11 @@ day of the application deadline.
 ![](admission-threat-model.jpg)
 <!-- .element: class="stretch" -->
 
-* Example: Application Front End
-  * Spoofing: Attacker pretends to be another applicant by logging in
-  * Tampering: Attacker modifies applicant info using browser exploits
-  * Information disclosure: Attacker intercepts HTTP requests from/to
+* Spoofing: Attacker pretends to be another applicant by logging in
+* Tampering: Attacker modifies applicant info using browser exploits
+* Information disclosure: Attacker intercepts HTTP requests from/to
     server to read applicant info
-  * Denial of service: Attacker creates a large number of bogus
+* Denial of service: Attacker creates a large number of bogus
     accounts and overwhelms system with requests
 
 ----
@@ -180,19 +181,13 @@ day of the application deadline.
 ![](admission-threat-model.jpg)
 <!-- .element: class="stretch" -->
 
-* Example: Application Front End
-  * Spoofing: Attacker pretends to be another applicant by logging in
-    -> __Require stronger passwords__
-  * Tampering: Attacker modifies applicant info using browser
-  exploits
-	  -> __Add server-side security tokens__
-  * Information disclosure: Attacker intercepts HTTP requests from/to
-  server to read applicant info
-	  -> __Use encryption (HTTPS)__
-  * Denial of service: Attacker creates many bogus
-    accounts and overwhelms system with requests -> __Limit
-    requests per IP address__
-
+* Spoofing: Attacker pretends to be another applicant by logging in -> __Require stronger passwords__
+* Tampering: Attacker modifies applicant info using browser
+  exploits  -> __Add server-side security tokens__
+* Information disclosure: Attacker intercepts HTTP requests from/to
+  server to read applicant info -> __Use encryption (HTTPS)__
+* Denial of service: Attacker creates many bogus
+    accounts and overwhelms system with requests -> __Limit requests per IP address__
 
 ----
 ## STRIDE & Other Threat Modeling Methods
@@ -202,17 +197,11 @@ day of the application deadline.
 * A systematic approach to identifying threats & attacker actions
 * Limitations:
   * May end up with a long list of threats, not all of them critical
-	* Think cost vs. benefit trade-offs: Implementing mitigations add
-    to development cost and complexity
-	* Focus on most critical threats
   * False sense of security: STRIDE does not imply completeness!
+* Consider cost vs. benefit trade-offs: Implementing mitigations add
+    to development cost and complexity
+	* Focus on most critical/likely threats
 
-----
-## Open Web Application Security Project
-
-![](owasp.png)
-
-* OWASP: Community-driven source of knowledge & tools for web security
 
 ---
 # Threat Modeling for ML 
@@ -282,6 +271,10 @@ quality
 _Poison Frogs! Targeted Clean-Label Poisoning Attacks on Neural
 Networks_, Shafahi et al. (2018)
 
+----
+## Defense against Poisoning Attacks
+
+* __Q. Ideas on mitigating poisoning attacks?__
 
 ----
 ## Defense against Poisoning Attacks
@@ -300,7 +293,6 @@ Networks_, Shafahi et al. (2018)
     track data provenance
 
 <!-- references -->
-
 _Stronger Data Poisoning Attacks Break Data Sanitization Defenses_,
 Koh, Steinhardt, and Liang (2018).
 
@@ -318,7 +310,6 @@ Koh, Steinhardt, and Liang (2018).
     model output ("blackbox" attack)
 
 <!-- references -->
-
 _Accessorize to a Crime: Real and Stealthy Attacks on State-of-the-Art
 Face Recognition_, Sharif et al. (2016).
 
@@ -328,7 +319,6 @@ Face Recognition_, Sharif et al. (2016).
 ![](stop-sign-attacks.png)
 
 <!-- references -->
-
 _Robust Physical-World Attacks on Deep Learning Visual
 Classification_,
 Eykholt et al., in CVPR (2018).
@@ -337,14 +327,18 @@ Eykholt et al., in CVPR (2018).
 ## Task Decision Boundary vs Model Boundary
 
 [![Decision boundary vs model boundary](decisionboundary.png)](decisionboundary.png)
-<!-- .element: class="stretch" -->
 
 * Decision boundary: Ground truth; often unknown and not specifiable
-* Model boundary: What the model learns; an approximation of
-  decision boundary
+* Model boundary: What is learned; an _approximation_ of
+decision boundary
 
+<!-- references -->
 From Goodfellow et al (2018). [Making machine learning robust against adversarial inputs](https://par.nsf.gov/servlets/purl/10111674). *Communications of the ACM*, *61*(7), 56-66. 
 
+----
+## Defense against Evasion Attacks
+
+* __Q. Ideas on mitigating poisoning attacks?__
 
 ----
 ## Defense against Evasion Attacks
@@ -365,7 +359,6 @@ From Goodfellow et al (2018). [Making machine learning robust against adversaria
 
 
 <!-- references -->
-
 _Reliable Smart Road Signs_, Sayin et al. (2019).
 
 ----
@@ -377,14 +370,15 @@ _Reliable Smart Road Signs_, Sayin et al. (2019).
 ## Generating Adversarial Examples
 
 * See [counterfactual explanations](https://ckaestne.github.io/seai/F2020/slides/17_explainability/explainability.html#/7/1)
-* Find similar input with different prediction
-  - targeted (specific prediction) vs untargeted (any wrong prediction)
+* Find similar inputs with different predictions
+  - Can be targeted (specific prediction) or  untargeted (any wrong prediction)
 * Many similarity measures (e.g., change one feature vs small changes to many features) 
   - $x^* = x + arg min \\{ |\epsilon| : f(x+\epsilon)  \neq f(x) \\}$
-* Attacks more effective with access to model internals, but also black-box attacks (with many queries to the model) feasible
-  - With model internals: follow the model's gradient
-  - Without model internals: learn [surrogate model](https://ckaestne.github.io/seai/F2020/slides/17_explainability/explainability.html#/6/2)
-  - With access to confidence scores: heuristic search (e.g., hill climbing)
+* Attacks more effective with access to model internals, but black-box
+  attacks also feasible 
+  - With model internals: Follow the model's gradient
+  - Without model internals: Learn [surrogate model](https://ckaestne.github.io/seai/F2020/slides/17_explainability/explainability.html#/6/2)
+  - With access to confidence scores: Heuristic search (e.g., hill climbing)
 
 ----
 ## Model Inversion: Confidentiality
@@ -400,7 +394,6 @@ person)
     with higher confidence level
 
 <!-- references -->
-
 _Model Inversion Attacks that Exploit Confidence Information and Basic
 Countermeasures_, M. Fredrikson et al. in CCS (2015).
 
@@ -419,7 +412,6 @@ Countermeasures_, M. Fredrikson et al. in CCS (2015).
 	* More noise => higher privacy, but also lower model accuracy!
 
 <!-- references -->
-
 _Biscotti: A Ledger for Private and Secure Peer-to-Peer Machine
 Learning_, M. Shayan et al., arXiv:1811.09904 (2018).
 
@@ -432,7 +424,7 @@ Learning_, M. Shayan et al., arXiv:1811.09904 (2018).
 * Recall: Dashcam system from I2
 * Post on #lecture in Slack:
   * What are the security requirements?
-  * What are possible (ML-specific) attacks on the system?
+  * What are possible (ML) attacks on the system?
   * What are some possible mitigations against these attacks?
 
 <!-- ---- -->
@@ -530,7 +522,7 @@ Flaw in one component =>  Limited impact on the rest of the system!
 
 ![](can-bus.png)
 
-* Research project@UCSD: Remotely taking over vehicle control
+* Research project from UCSD: Remotely taking over vehicle control
   * Create MP3 with malicious code & burn onto CD
   * Play CD => send malicious commands to brakes, engine, locks...
 * Problem: Over-privilege & lack of isolation!
@@ -538,7 +530,6 @@ Flaw in one component =>  Limited impact on the rest of the system!
   * Anyone can broadcast & read messages
 
 <!-- references -->
-
 _Comprehensive Experimental Analyses of Automotive Attack Surfaces_, Checkoway et al., in USENIX Security (2011).
 
 <!-- ---- -->
@@ -635,7 +626,6 @@ _Comprehensive Experimental Analyses of Automotive Attack Surfaces_, Checkoway e
 * Many more, huge commercial interest
 
 <!-- references -->
-
 Recommended reading: Chandola, Varun, Arindam Banerjee, and Vipin Kumar. "[Anomaly detection: A survey](http://cucis.ece.northwestern.edu/projects/DMS/publications/AnomalyDetection.pdf)." ACM computing surveys (CSUR) 41, no. 3 (2009): 1-58.  
 
 ----
