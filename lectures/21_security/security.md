@@ -154,11 +154,10 @@ day of the application deadline.
 ![](admission-threat-model.jpg)
 <!-- .element: class="stretch" -->
 
-* Example: Application Front End
-  * Spoofing: ?
-  * Tampering: ? 
-  * Information disclosure: ?
-  * Denial of service: ?
+* Spoofing: ?
+* Tampering: ? 
+* Information disclosure: ?
+* Denial of service: ?
 
 ----
 ## STRIDE: College Admission
@@ -166,12 +165,11 @@ day of the application deadline.
 ![](admission-threat-model.jpg)
 <!-- .element: class="stretch" -->
 
-* Example: Application Front End
-  * Spoofing: Attacker pretends to be another applicant by logging in
-  * Tampering: Attacker modifies applicant info using browser exploits
-  * Information disclosure: Attacker intercepts HTTP requests from/to
+* Spoofing: Attacker pretends to be another applicant by logging in
+* Tampering: Attacker modifies applicant info using browser exploits
+* Information disclosure: Attacker intercepts HTTP requests from/to
     server to read applicant info
-  * Denial of service: Attacker creates a large number of bogus
+* Denial of service: Attacker creates a large number of bogus
     accounts and overwhelms system with requests
 
 ----
@@ -180,19 +178,10 @@ day of the application deadline.
 ![](admission-threat-model.jpg)
 <!-- .element: class="stretch" -->
 
-* Example: Application Front End
-  * Spoofing: Attacker pretends to be another applicant by logging in
-    -> __Require stronger passwords__
-  * Tampering: Attacker modifies applicant info using browser
-  exploits
-	  -> __Add server-side security tokens__
-  * Information disclosure: Attacker intercepts HTTP requests from/to
-  server to read applicant info
-	  -> __Use encryption (HTTPS)__
-  * Denial of service: Attacker creates many bogus
-    accounts and overwhelms system with requests -> __Limit
-    requests per IP address__
-
+* Spoofing: Attacker pretends to be another applicant by logging in -> __Require stronger passwords__
+* Tampering: Attacker modifies applicant info using browser exploits -> __Add server-side security tokens__
+* Information disclosure: Attacker intercepts HTTP requests from/to server to read applicant info -> __Use encryption (HTTPS)__
+* Denial of service: Attacker creates many bogus accounts and overwhelms system with requests -> __Limit requests per IP address__
 
 ----
 ## STRIDE & Other Threat Modeling Methods
@@ -343,6 +332,7 @@ Eykholt et al., in CVPR (2018).
 * Model boundary: What the model learns; an approximation of
   decision boundary
 
+<!-- references -->
 From Goodfellow et al (2018). [Making machine learning robust against adversarial inputs](https://par.nsf.gov/servlets/purl/10111674). *Communications of the ACM*, *61*(7), 56-66. 
 
 
