@@ -182,12 +182,9 @@ day of the application deadline.
 <!-- .element: class="stretch" -->
 
 * Spoofing: Attacker pretends to be another applicant by logging in -> __Require stronger passwords__
-* Tampering: Attacker modifies applicant info using browser
-  exploits  -> __Add server-side security tokens__
-* Information disclosure: Attacker intercepts HTTP requests from/to
-  server to read applicant info -> __Use encryption (HTTPS)__
-* Denial of service: Attacker creates many bogus
-    accounts and overwhelms system with requests -> __Limit requests per IP address__
+* Tampering: Attacker modifies applicant info using browser exploits -> __Add server-side security tokens__
+* Information disclosure: Attacker intercepts HTTP requests from/to server to read applicant info -> __Use encryption (HTTPS)__
+* Denial of service: Attacker creates many bogus accounts and overwhelms system with requests -> __Limit requests per IP address__
 
 ----
 ## STRIDE & Other Threat Modeling Methods
@@ -274,7 +271,7 @@ Networks_, Shafahi et al. (2018)
 ----
 ## Defense against Poisoning Attacks
 
-* __Q. Ideas on mitigating poisoning attacks?__
+* __Q. How would you mitigate poisoning attacks?__
 
 ----
 ## Defense against Poisoning Attacks
@@ -338,7 +335,7 @@ From Goodfellow et al (2018). [Making machine learning robust against adversaria
 ----
 ## Defense against Evasion Attacks
 
-* __Q. Ideas on mitigating poisoning attacks?__
+* __Q. How would you mitigate evasion attacks?__
 
 ----
 ## Defense against Evasion Attacks
