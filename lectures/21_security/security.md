@@ -1,12 +1,12 @@
 ---
 author: Eunsuk Kang
-title: "17-445: Security"
+title: "17-445: Security and Privacy"
 semester: Fall 2020
 footer: "17-445 ML in Production, Christian
 Kaestner & Eunsuk Kang"
 ---
 
-# Security
+# Security and Privacy
 
 Eunsuk Kang
 
@@ -478,17 +478,20 @@ another
 ----
 ## Secure Design Principles 
 
+*  Goal: Minimize the impact of a compromised component on the rest of
+the system
+<!-- .element: class="fragment" -->
+   * In poor system designs, vulnerability in one component => entire
+     system compromised!
 * Principle of least privilege
+<!-- .element: class="fragment" -->
   * A component should be given the minimal privileges needed to fulfill its functionality
 * Isolation/compartmentalization
+<!-- .element: class="fragment" -->
   * Components should be able to interact with each other no more than
   necessary
   * Components should treat inputs from each other as potentially
   malicious
-*  Goal: Minimize the impact of a compromised component on the rest of
-   the system
-   * In poor system designs, vulnerability in one component => entire
-     system compromised!
 
 ----
 ## Monolithic Design
@@ -528,44 +531,6 @@ Flaw in one component =>  Limited impact on the rest of the system!
 
 <!-- references -->
 _Comprehensive Experimental Analyses of Automotive Attack Surfaces_, Checkoway et al., in USENIX Security (2011).
-
-<!-- ---- -->
-<!-- ## Example: Mail Client -->
-
-<!-- * Requirements -->
-<!-- <\!-- .element: class="fragment" -\-> -->
-<!--   * Receive & send email over external network -->
-<!--   * Place incoming email into local user inbox files -->
-<!-- * Sendmail -->
-<!--   <\!-- .element: class="fragment" -\-> -->
-<!--   * Monolithic design; entire program runs as UNIX root -->
-<!--   * Historical source of many vulnerabilities -->
-<!-- * Qmail: “Security-aware” mail agent -->
-<!--   <\!-- .element: class="fragment" -\-> -->
-<!--   * Compartmentalized design -->
-<!--   * Isolation based on OS process isolation -->
-<!-- 	* Separate modules run as separate “users” (UID) -->
-<!-- 	* Mutually distrusting processes -->
-<!--   * Least privilege  -->
-<!-- 	* Minimal privileges for each UID; access to specific resources (files, network sockets, …) -->
-<!-- 	* Only one “root” user (with all privileges) -->
-
-<!-- ---- -->
-<!-- ## Qmail Architecture -->
-
-<!-- ![](qmail1.png) -->
-
-<!-- ---- -->
-<!-- ## Qmail Architecture -->
-
-<!-- ![](qmail2.png) -->
-
-<!-- ---- -->
-<!-- ## Qmail Architecture -->
-
-<!-- ![](qmail3.png) -->
-
-<!-- * Component running as root much smaller than in sendmail; much easier to test & verify that it's free of vulnerabilities -->
 
 ----
 ## Secure Design Principles for ML
@@ -633,17 +598,87 @@ Recommended reading: Chandola, Varun, Arindam Banerjee, and Vipin Kumar. "[Anoma
 * AI-based security solutions can be attacked themselves
 
 ----
+
 ![Equifax logo](equifax.png)
 
 Note: One contributing factor to the Equifax attack was an expired certificate for an intrusion detection system
 
 
+---
+# ML & Data Privacy
 
+----
 
+![Target headline](target-headline.png)
 
+> Andew Pole, who heads a 60-person team at Target that studies
+customer behavior, boasted at a conference in 2010 about a proprietary
+program that could identify women - based on their purchases and
+demographic profile - who were pregnant.
 
+<!-- references -->
+https://www.reuters.com/article/us-target-breach-datamining/what-target-knows-about-you-idUSBREA0M1JM20140123
 
+----
 
+![Big tech](big-tech.png)
+<!-- .element: class="stretch" -->
+
+----
+## Data Lakes
+
+Data gold mine
+
+----
+## ML in Healthcare
+
+personalized medicine
+
+----
+## iPhone Backdoor
+
+San Bernadino 
+
+----
+## Utility vs Privacy Trade-offs
+
+* ML can leverage data to improve utility for individuals and society
+* Unrestrained collection and use of data allows for abuse and harm
+* Users must be given an ability to control how their data is
+  collected and used
+
+----
+## Best Practices for ML & Data Privacy
+
+* Data collection & processing 
+  * Only collect and store what you need
+  * Remove sensitive attributes, anonymize, aggregate
+* Training: Local, on-device processing processing; federated learning
+* Basic security practices: Encryption, authentication, provenance
+* Provide transparency to the users
+* Understand and follow the data protection regulations!
+  * General Data Protection Regulation (GDPR)
+  * California Consumer Privacy Act (CCPA)
+  * In healthcare: HIPPA
+
+----
+## Federated Learning
+
+----
+## General Data Protection Regulation (GDPR)
+
+* Introduced by the European Union (EU) in 2016
+* Organizations must specify to customers:
+  * What data is being collected & stored
+  * Purpose for which data will be used
+  * Other entities that data will be shared with
+* Each customer has the right to:
+  * View, modify and delete data 
+
+----
+
+![Amazon gdpr](amazon-gdpr.png)
+<!-- .element: class="stretch" -->
 
 ---
 # Summary
