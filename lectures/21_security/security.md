@@ -627,58 +627,144 @@ https://www.reuters.com/article/us-target-breach-datamining/what-target-knows-ab
 ----
 ## Data Lakes
 
-Data gold mine
+![data lakes](data-lake.png)
 
 ----
-## ML in Healthcare
+## Data Privacy vs Utility
 
-personalized medicine
-
-----
-## iPhone Backdoor
-
-San Bernadino 
+![healthcare](healthcare.jpg)
 
 ----
-## Utility vs Privacy Trade-offs
+## Data Privacy vs Utility
 
-* ML can leverage data to improve utility for individuals and society
-* Unrestrained collection and use of data allows for abuse and harm
-* Users must be given an ability to control how their data is
+![covid-tracing](covid-tracing.png)
+
+----
+## Data Privacy vs Utility
+
+![iphone](iphone-unlock.jpg)
+
+----
+## Data Privacy vs Utility
+
+![cambridge-analytica](cambridge-analytica.jpg)
+<!-- .element: class="stretch" -->
+
+* ML can leverage data  to greatly improve utility for individuals and
+society 
+* But unrestrained collection & use of data can enable abuse and
+harm!
+* __Viewpoint__: Users should be given an ability to learn and control how their data is
   collected and used
 
 ----
 ## Best Practices for ML & Data Privacy
 
-* Data collection & processing 
+* Data collection & processing
+<!-- .element: class="fragment" -->
   * Only collect and store what you need
-  * Remove sensitive attributes, anonymize, aggregate
-* Training: Local, on-device processing processing; federated learning
-* Basic security practices: Encryption, authentication, provenance
-* Provide transparency to the users
-* Understand and follow the data protection regulations!
-  * General Data Protection Regulation (GDPR)
-  * California Consumer Privacy Act (CCPA)
-  * In healthcare: HIPPA
+  * Remove sensitive attributes, anonymize, or aggregate
+
+----
+## Data Anonymization
+
+![Anonymization](anonymization.png)
+<!-- .element: class="stretch" -->
+
+* Simply removing explicit identifiers (e.g., name) is often not
+enough
+	* {ZIP, gender, birthdate} can identiy 87% of  Americans (L. Sweeney)
+* k-anonymization: Identity-revealing data tuples appear in at least k rows
+  * Suppression: Replace certain values in columns with an asterisk
+  * Generalization: Replace individual values with broader categories
+
+----
+## Best Practices for ML & Data Privacy
+
+* Data collection & processing
+  * Only collect and store what you need
+  * Remove sensitive attributes, anonymize, or aggregate
+* Training: Local, on-device processing if possible
+  <!-- .element: class="fragment" -->
+	* Federated learning
 
 ----
 ## Federated Learning
+
+![Federated learning](federated-learning.png)
+
+* Train a global model using local data stored across multiple edge
+devices
+* Local devices push only model updates, not the raw data
+* Improved data privacy & leveraging local processing power; but
+   increased network communication and other security risks (e.g.,
+  backdoor injection)
+
+<!-- references -->
+[ML@CMU blog post on federated learning](https://blog.ml.cmu.edu/2019/11/12/federated-learning-challenges-methods-and-future-directions/)
+
+----
+## Best Practices for ML & Data Privacy
+
+* Data collection & processing
+  * Only collect and store what you need
+  * Remove sensitive attributes, anonymize, or aggregate
+* Training: Local, on-device processing if possible
+	* Federated learning
+* Basic security practices
+<!-- .element: class="fragment" -->
+  * Encryption & authentication
+  * Provenance: Track of data sources and destinations
+* Provide transparency to users
+<!-- .element: class="fragment" -->
+	* Clearly explain what data is being collected and why
+* Understand and follow the data protection regulations!
+<!-- .element: class="fragment" -->
+  * General Data Protection Regulation (GDPR)
+  * California Consumer Privacy Act (CCPA)
+  * Domain-specific regulations: HIPPA (healthcare), FERPA (educational)
 
 ----
 ## General Data Protection Regulation (GDPR)
 
 * Introduced by the European Union (EU) in 2016
-* Organizations must specify to customers:
-  * What data is being collected & stored
-  * Purpose for which data will be used
-  * Other entities that data will be shared with
-* Each customer has the right to:
-  * View, modify and delete data 
+<!-- .element: class="fragment" -->
+* Organizations must state:
+<!-- .element: class="fragment" -->
+  * What personal data is being collected & stored
+  * Purpose(s) for which the data will be used
+  * Other entities that the data will be shared with
+* Organizations must receive explicit consent from users
+  <!-- .element: class="fragment" -->
+* Each user must be provided with the ability to:
+  <!-- .element: class="fragment" -->
+  * View, modify and delete any personal data 
+* Compliance & enforcement
+  <!-- .element: class="fragment" -->
+  * Complaints are filed against non-compliant organizations
+  * A failure to comply may result in heavy penalties! 
+
+----
+## Privacy Consent and Control
+
+![Techcrunch privacy](techcrunch-privacy.png)
 
 ----
 
 ![Amazon gdpr](amazon-gdpr.png)
 <!-- .element: class="stretch" -->
+
+----
+## Best Practices for ML & Data Privacy
+
+> __Be ethical and responsible with user data!__ Think about potential
+> harms to users & society, caused by (mis-)handling of personal data
+
+* Data collection & processing
+* Training: Local, on-device processing if possible
+* Basic security practices
+* Provide transparency to users
+* Understand and follow the data protection regulations!
 
 ---
 # Summary
