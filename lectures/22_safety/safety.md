@@ -260,14 +260,16 @@ command to the engine.
 * Architecture of the Apollo autonomous driving platform 
 
 ----
-## HAZOP Exercise: Perception
+## Breakout: HAZOP on Perception
 
 ![](hazop-perception.jpg)
 
-* What is the specification of the perception component?
-* Use HAZOP to answer:
-  * What are possible deviations from the specification?
-  * What are potential hazards resulting from these deviations?
+* Type into Slack #lecture:
+  * What is the specification of the perception component?
+  * Use HAZOP to answer:
+	* What are possible deviations from the specification?
+	* What are potential hazards resulting from these deviations?
+
 
 ----
 ## HAZOP: Benefits & Limitations
