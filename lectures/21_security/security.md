@@ -673,7 +673,7 @@ harm!
 
 * Simply removing explicit identifiers (e.g., name) is often not
 enough
-	* {ZIP, gender, birthdate} can identiy 87% of  Americans (L. Sweeney)
+	* {ZIP, gender, birthdate} can identify 87% of  Americans (L. Sweeney)
 * k-anonymization: Identity-revealing data tuples appear in at least k rows
   * Suppression: Replace certain values in columns with an asterisk
   * Generalization: Replace individual values with broader categories
