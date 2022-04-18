@@ -714,7 +714,7 @@ devices
 * Basic security practices
 <!-- .element: class="fragment" -->
   * Encryption & authentication
-  * Provenance: Track of data sources and destinations
+  * Provenance: Track data sources and destinations
 * Provide transparency to users
 <!-- .element: class="fragment" -->
 	* Clearly explain what data is being collected and why
