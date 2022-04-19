@@ -155,9 +155,8 @@ __More miles tested => safer?__
 
 ![World vs Machine](machine-world.png)
 
-Software is not unsafe on its own; the control signals it generates may be
-
-Root of unsafety usually in wrong requirements & environmental assumptions
+* Software is not safe/unsafe on its own; control signals it generates may be
+* The root of unsafety is often in wrong requirements & environmental assumptions
 
 ----
 ## Recall: Requirement vs Specification
@@ -168,9 +167,8 @@ Root of unsafety usually in wrong requirements & environmental assumptions
 distance to the leading vehicle. 
 * __ENV__: Engine is working as intended; sensors are providing
   accurate information about the leading car (current speed, distance...)
-* __SPEC__: Depending on the sensor readings, the controller must
+* __SPEC__: Based on the current sensor readings, the controller must
   issue an actuator command to accelerate/decelerate the vehicle as needed.
-
 
 ----
 ## Review: Fault Tree Analysis (FTA)
@@ -181,7 +179,7 @@ distance to the leading vehicle.
   * Start with a given hazard (top event), derive a set of components
     faults (basic events)
   * Compute minimum cutsets as potential root causes
-  * __Q. But how do we identify relevant hazards in the first place?__
+  * __Q. How to identify relevant hazards (top events) in the first place?__
 
 ----
 ## Forward vs Backward Search
@@ -191,13 +189,16 @@ distance to the leading vehicle.
 ----
 ## Failure Mode and Effects Analysis (FMEA)
 
-![](fmea-radiation.png)
-<!-- .element: class="stretch" -->
+![](fmea-automotive.png)
 
 * A __forward search__ technique to identify potential hazards
 * For each function, (1) enumerate possible _failure modes_ (2) possible safety impact (_effects_) and (3) mitigation strategies.
 * Widely used in aeronautics, automotive, healthcare, food services,
   semiconductor processing, and (to some extent) software
+
+<!-- references -->
+Image: David Robert Beachum. _Methods for asessing the safety of autonomous vehicles_.
+University of Texas Theses and Dissertations (2019).
 
 ----
 ## FMEA Example: Autonomous Vehicles
@@ -211,10 +212,10 @@ distance to the leading vehicle.
 
 | Component | Failure Mode | Failure Effects | Detection | Mitigation |
 |---|---|---|---|---|
+| Perception  | ? | ? | ? | ? |
 | Perception | ? | ? | ? | ? |
-| Perception | ? | ? | ? | ? |
-| Lidar Sensor | Mechanical failure | Inability to detect objects | Monitor | Switch to manual control mode |
-| ... | ... | ... | ... |  ... | 
+| LIDAR | Mechanical failure | Loss of advanced driving functions  | Sensor health monitor | Deploy secondary sensor |
+| ... | ... | ... | ... |  ... |
 
 
 ----
@@ -222,10 +223,10 @@ distance to the leading vehicle.
 
 | Component | Failure Mode | Failure Effects | Detection | Mitigation |
 |---|---|---|---|---|
-| Perception | Failure to detect an object | Risk of collision | Human operator (if present) | Deploy secondary classifier |
+| Perception | Failure to detect an object | Risk of collision | Human operator (if present) | Switch to manual mode |
 | Perception | Detected but misclassified | " | " | " |
-| Lidar Sensor | Mechanical failure | Inability to detect objects | Monitor | Switch to manual control mode |
-| ... | ... | ... | ... |  ... | 
+| LIDAR | Mechanical failure | Loss of advanced driving functions | Sensor health monitor | Deploy secondary sensor |
+| ... | ... | ... | ... |  ... |
 
 ----
 ## Hazard and Operability Study (HAZOP)
@@ -314,16 +315,17 @@ events in FTA)
 
 * A prediction for $x$ is robust if the outcome is stable under minor perturbations of the input
   - $\forall x'. d(x, x')<\epsilon \Rightarrow f(x) = f(x')$
-  - distance function $d$ and permissible distance $\epsilon$ depends on problem
-* A model is robust if most predictions are robust
+  - distance function $d$ and permissible distance $\epsilon$ depends
+    on the problem domain!
+* A model is said to be robust if most predictions are robust
 
 ----
 ## Robustness and Distance for Images
 
-+ slight rotation, stretching, or other transformations
-+ change many pixels minimally (below human perception)
-+ change only few pixels
-+ change most pixels mostly uniformly, e.g., brightness
++ Slight rotation, stretching, or other transformations
++ Change many pixels minimally (below human perception)
++ Change only few pixels
++ Change most pixels mostly uniformly, e.g., brightness
 
 ![Handwritten number transformation](handwriting-transformation.png)
 
@@ -341,7 +343,6 @@ Image: [_An abstract domain for certifying neural networks_](https://dl.acm.org/
 ![Stop Sign](stop-sign.png)
 
 <!-- references -->
-
 Image: David Silver. [Adversarial Traffic Signs](https://medium.com/self-driving-cars/adversarial-traffic-signs-fd16b7171906). Blog post, 2017
 
 ----
@@ -482,7 +483,7 @@ software), Common Criteria (security)
 <!-- .element: class="fragment" -->
 
 ----
-## Safety Cases
+## Assurance (Safety) Cases
 
 ![](safety-case.png)
 <!-- .element: class="stretch" -->
@@ -495,7 +496,7 @@ requirement, along with supporting evidence
   inspection, expert opinions, design mechanisms...
 
 ----
-## Safety Cases: Example
+## Assurance Cases: Example
 
 ![](safety-case-example.png)
 <!-- .element: class="stretch" -->
@@ -506,7 +507,7 @@ requirement, along with supporting evidence
   * Is the evidence strong enough to discharge a leaf claim?
 
 ----
-## Safety Cases: Example
+## Assurance Cases: Example
 
 ![](uber-safety-case.png)
 <!-- .element: class="stretch" -->
@@ -515,16 +516,16 @@ requirement, along with supporting evidence
 
 
 ----
-## Safety Cases: Breakout
+## Exercise: Assurance Case for Recommender
 
 ![](movie-recommendation.png)
 
 Build a safety case to argue that your movie recommendation system
-provides at least 80% availability. Include evidence to support your
+provides at least 95% availability. Include evidence to support your
 argument. 
 
 ----
-## Safety Cases: Benefits & Limitations
+## Assurance Cases: Benefits & Limitations
 
 * Provides an explicit structure to the safety argument
 <!-- .element: class="fragment" -->
