@@ -192,7 +192,7 @@ distance to the leading vehicle.
 ![](fmea-automotive.png)
 
 * A __forward search__ technique to identify potential hazards
-* For each function, (1) enumerate possible _failure modes_ (2) possible safety impact (_effects_) and (3) mitigation strategies.
+* For each component, (1) enumerate possible _failure modes_ (2) possible safety impact (_effects_) and (3) mitigation strategies.
 * Widely used in aeronautics, automotive, healthcare, food services,
   semiconductor processing, and (to some extent) software
 
@@ -223,8 +223,8 @@ University of Texas Theses and Dissertations (2019).
 
 | Component | Failure Mode | Failure Effects | Detection | Mitigation |
 |---|---|---|---|---|
-| Perception | Failure to detect an object | Risk of collision | Human operator (if present) | Switch to manual mode |
-| Perception | Detected but misclassified | " | " | " |
+| Perception | Failure to detect an object | Risk of collision | Secondary model  | Slow down or switch to  manual model |
+| Perception | Detected but misclassified | " | Low Model confidence |"|
 | LIDAR | Mechanical failure | Loss of advanced driving functions | Sensor health monitor | Deploy secondary sensor |
 | ... | ... | ... | ... |  ... |
 
