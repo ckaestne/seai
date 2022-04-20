@@ -45,4 +45,4 @@
 | Fri, Apr 22 | ![Recitation](https://img.shields.io/badge/-rec-yellow.svg) tbd. | |  |
 | Mon, Apr 25 | Fostering Interdisciplinary Teams | |  |
 | Wed, Apr 27 | Summary and Review | | [M4: Security and Feedback Loops](https://github.com/ckaestne/seai/blob/S2022/assignments/project.md#milestone-4-drift-and-feedback-loops) |
-| Mon, May 2, 1-4pm | **Final Project Presentations** | | [Final report](https://github.com/ckaestne/seai/blob/S2022/assignments/project.md#final-report-and-presentation) |
+| Mon, May 2 | **Final Project Presentations** -- 1-4pm in GHC 4401 | | [Final report](https://github.com/ckaestne/seai/blob/S2022/assignments/project.md#final-report-and-presentation) |
