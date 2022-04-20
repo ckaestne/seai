@@ -41,7 +41,7 @@
 | Wed, Apr 13 | [Security](https://ckaestne.github.io/seai/S2022/slides/21_security/security.html) | [Building Intelligent Systems](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436), Ch. 25 & [The Top 10 Risks of Machine Learning Security](https://ieeexplore.ieee.org/document/9107290) | [M3: Monitoring and CD](https://github.com/ckaestne/seai/blob/S2022/assignments/project.md#milestone-3-monitoring-and-continuous-deployment) |
 | Fri, Apr 15 | ![Recitation](https://img.shields.io/badge/-rec-yellow.svg) Threat modeling | |  |
 | Mon, Apr 18 | [Security continued](https://ckaestne.github.io/seai/S2022/slides/21_security/security.html); [Safety](https://ckaestne.github.io/seai/S2022/slides/22_safety/safety.html) |  [Practical Solutions for Machine Learning Safety in Autonomous Vehicles](http://ceur-ws.org/Vol-2560/paper40.pdf)  | |  |
-| Wed, Apr 20 | Safety continued | | [I4: Fairness](https://github.com/ckaestne/seai/blob/S2022/assignments/I4_fairness.md) |
+| Wed, Apr 20 | [Safety continued](https://ckaestne.github.io/seai/S2022/slides/22_safety/safety.html) | [The Malicious Use of Artificial Intelligence Forecasting, Prevention, and Mitigation](https://maliciousaireport.godaddysites.com/) | [I4: Fairness](https://github.com/ckaestne/seai/blob/S2022/assignments/I4_fairness.md) |
 | Fri, Apr 22 | ![Recitation](https://img.shields.io/badge/-rec-yellow.svg) tbd. | |  |
 | Mon, Apr 25 | Fostering Interdisciplinary Teams | |  |
 | Wed, Apr 27 | Summary and Review | | [M4: Security and Feedback Loops](https://github.com/ckaestne/seai/blob/S2022/assignments/project.md#milestone-4-drift-and-feedback-loops) |
