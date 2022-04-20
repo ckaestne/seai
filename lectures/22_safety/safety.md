@@ -313,11 +313,18 @@ events in FTA)
 ----
 ## Defining Robustness:
 
-* A prediction for $x$ is robust if the outcome is stable under minor perturbations of the input
+* A prediction for input $x$ is robust if the outcome is stable under
+minor perturbations to the input:
   - $\forall x'. d(x, x')<\epsilon \Rightarrow f(x) = f(x')$
   - distance function $d$ and permissible distance $\epsilon$ depends
     on the problem domain!
 * A model is said to be robust if most predictions are robust
+* An important concept in safety and security settings
+  * In safety, perturbations tend to be random or predictable (e.g.,
+  sensor noise due to weather conditions)
+  * In security, perturbations are intentionally crafted (e.g.,
+    adversarial attacks)
+  * In some domains, both safety and security matter: Examples? 
 
 ----
 ## Robustness and Distance for Images
