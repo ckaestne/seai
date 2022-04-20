@@ -214,7 +214,7 @@ University of Texas Theses and Dissertations (2019).
 |---|---|---|---|---|
 | Perception  | ? | ? | ? | ? |
 | Perception | ? | ? | ? | ? |
-| LIDAR | Mechanical failure | Loss of advanced driving functions  | Sensor health monitor | Deploy secondary sensor |
+| LIDAR | Mechanical failure | Loss of advanced driving functions  | Sensor health monitor | Switch to manual mode |
 | ... | ... | ... | ... |  ... |
 
 
@@ -223,9 +223,9 @@ University of Texas Theses and Dissertations (2019).
 
 | Component | Failure Mode | Failure Effects | Detection | Mitigation |
 |---|---|---|---|---|
-| Perception | Failure to detect an object | Risk of collision | Secondary model  | Slow down or switch to  manual model |
+| Perception | Failure to detect an object | Risk of collision | Secondary model  | Slow down or switch to manual mode |
 | Perception | Detected but misclassified | " | Low Model confidence |"|
-| LIDAR | Mechanical failure | Loss of advanced driving functions | Sensor health monitor | Deploy secondary sensor |
+| LIDAR | Mechanical failure | Loss of advanced driving functions|Sensor health monitor | Switch to manual mode |
 | ... | ... | ... | ... |  ... |
 
 ----
