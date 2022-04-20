@@ -383,12 +383,14 @@ Image: David Silver. [Adversarial Traffic Signs](https://medium.com/self-driving
 
 * Lots of on-going research (especially for DNNs)
 * Formal verification
+<!-- .element: class="fragment" -->
   - Constraint solving or abstract interpretation over computations in neuron activations
   - Conservative abstraction, may label robust inputs as not robust
   - Currently not very scalable
   - Example: [_An abstract domain for certifying neural networks_](https://dl.acm.org/doi/pdf/10.1145/3290354).
     Gagandeep et al., POPL (2019).
 * Sampling
+	<!-- .element: class="fragment" -->
   - Sample within distance, compare prediction to majority prediction
   - Probabilistic guarantees possible (with many queries, e.g., 100k)
   - Example:
@@ -400,7 +402,7 @@ Image: David Silver. [Adversarial Traffic Signs](https://medium.com/self-driving
 
 ![](waymo-sensors.png)
 
-* Robustness checking at Inference time 
+* Robustness checking at inference time 
   - Handle inputs with non-robust predictions differently
     (e.g. discard or output low confidence score)
   - Downside: Significantly raises cost of prediction; may not be suitable
@@ -409,7 +411,7 @@ Image: David Silver. [Adversarial Traffic Signs](https://medium.com/self-driving
 <!-- .element: class="fragment" -->
   - Deploy redundant components for critical tasks
   - Ensemble learning: Combine models with different biases
-  - Multiple, independent sensors (e.g., lidar + radar + cameras)
+  - Multiple, independent sensors (e.g., LiDAR + radar + cameras)
 
 ----
 ## Improving Robustness for Safety
@@ -417,14 +419,12 @@ Image: David Silver. [Adversarial Traffic Signs](https://medium.com/self-driving
 ![](weather-conditions.png)
 
 * Learning more robust models
-  - Curate data for abnormal scenarios
-    (e.g., fogs, snow, sensor noise)
-  - Augment training data with transformed versions
+  - Think about domain-specific scenarios that might result in
+    perturbations to model input (e.g., 
+    fogs, snow, sensor noise)
+  - Curate data for those abnormal scenarios
+  - Augment training data with transformed inputs
     (but same label)
-* Testing and debugging
-  - Identify training data near model's decision boundary (i.e., is
-    the model robust around all training data?)
-  - Check robustness on test data
 
 <!-- references -->
 Image: _Automated driving recognition technologies for adverse weather
@@ -516,10 +516,10 @@ requirement, along with supporting evidence
 ----
 ## Assurance Cases: Example
 
-![](uber-safety-case.png)
+![](aurora-safety-case.png)
 <!-- .element: class="stretch" -->
 
-[Uber Safety Case](https://uberatgresources.com/safetycase/gsn)
+[Aurora Safety Case](https://aurora.tech/blog/aurora-unveils-first-ever-safety-case-framework)
 
 
 ----
