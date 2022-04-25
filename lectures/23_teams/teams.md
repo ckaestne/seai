@@ -848,10 +848,53 @@ Autonomy * Mastery * Purpose
 ![](drivebook.gif)
 
 
+---
+# Learning from DevOps
 
+![DevOps](devops.png)
+<!-- .element: class="stretch plain" -->
 
+----
+## DevOps: A culture of collaboration
 
+* Overcome historic role and goal conflicts between developers and operators
+* Joint planning for operations, joint responsibilities for testing and deployment
+*
+* Joint goals, joint vocabulary
+* Joint tools (e.g., Docker, versioning, A/B testing, monitoring)
+* Mutual benefits (faster releases, more telemetry, improved reliability, fewer conflicts)
+* T-shaped professionals
 
+----
+## Changing practices and culture is hard
+
+* Ingrained "us vs them" and blame culture
+* Inertia is hard to overcome (“this is how we always did things”)
+* Learning cost for new concepts and tools
+* Extra effort for new practices (e.g., testing)
+* Overwhelmed with current tasks, no time to learn/change
+* Poor adoption may cause more costs than benefits
+
+----
+## Working on Culture Change
+
+* Bottom-up and top-down change possible
+* Often introduced by individual advocates, convincing others
+* Always requires supportive management
+* Education helps generate buy-in
+* Consultants can help with adoption and learning
+* 
+* Demonstrate benefits in one small project, promote from there
+
+----
+## Beyond DevOps
+
+* Organizational culture and DevOps have been well studied
+* Learn from joint goal setting, joint vocabulary, win-win-collaborations, joint tooling
+*
+* *What could this look like for other groups (MLOps, MLDev, SecDevOps, LawML, DataExp, SafeML, UIDev, ...)?*
+
+<!-- discussion -->
 
 ---
 
