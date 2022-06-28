@@ -1,7 +1,7 @@
 name: publish-gh-pages
 on:
   push:
-    branches: S2022
+    branches: F2022
 
 jobs:
   gh-pages:
@@ -21,7 +21,7 @@ jobs:
     - name: Generate main page
       run: |
         cp .assets/template.html _site/index.html
-        sed 's/\](https:\/\/ckaestne.github.io\/seai\/S2022\/slides\/\([^\(]*\)\.html) (\[/\](https:\/\/ckaestne.github.io\/seai\/S2022\/slides\/\1.html) ([md](https:\/\/github.com\/ckaestne\/seai\/blob\/S2022\/lectures\/\1.md), [pdf](https:\/\/ckaestne.github.io\/seai\/S2022\/slides\/\1.pdf), \[/' < schedule.md |         sed 's/\](https:\/\/ckaestne.github.io\/seai\/S2022\/slides\/\([^\(]*\)\.html) *|/\](https:\/\/ckaestne.github.io\/seai\/S2022\/slides\/\1.html) ([md](https:\/\/github.com\/ckaestne\/seai\/blob\/S2022\/lectures\/\1.md), [pdf](https:\/\/ckaestne.github.io\/seai\/S2022\/slides\/\1.pdf)) |/'  > schedule_.md
+        sed 's/\](https:\/\/ckaestne.github.io\/seai\/F2022\/slides\/\([^\(]*\)\.html) (\[/\](https:\/\/ckaestne.github.io\/seai\/F2022\/slides\/\1.html) ([md](https:\/\/github.com\/ckaestne\/seai\/blob\/F2022\/lectures\/\1.md), [pdf](https:\/\/ckaestne.github.io\/seai\/F2022\/slides\/\1.pdf), \[/' < schedule.md |         sed 's/\](https:\/\/ckaestne.github.io\/seai\/F2022\/slides\/\([^\(]*\)\.html) *|/\](https:\/\/ckaestne.github.io\/seai\/F2022\/slides\/\1.html) ([md](https:\/\/github.com\/ckaestne\/seai\/blob\/F2022\/lectures\/\1.md), [pdf](https:\/\/ckaestne.github.io\/seai\/F2022\/slides\/\1.pdf)) |/'  > schedule_.md
         sed -i -e '/^\[Schedule\]/r schedule_.md' README.md
         lectures/node_modules/marked/bin/marked -i README.md >> _site/index.html
         cat .assets/template_end.html >> _site/index.html
@@ -40,11 +40,11 @@ jobs:
     - name: Push to gh-pages
       run: |
         git clone --quiet --branch gh-pages --depth 1 https://github.com/${{ github.repository }}.git .gh-pages
-        rm -rf .gh-pages/S2022
-        mv _site .gh-pages/S2022
+        rm -rf .gh-pages/F2022
+        mv _site .gh-pages/F2022
         cd .gh-pages
-        git add S2022
+        git add F2022
         git config --local user.email "ckaestne@nomail.cs.cmu.edu"
         git config --local user.name "GitHub Action"
-        git commit --allow-empty -m "Update gh-pages for S2022/${{ github.sha }}"
+        git commit --allow-empty -m "Update gh-pages for F2022/${{ github.sha }}"
         git push https://$GITHUB_ACTOR:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:gh-pages --force --follow-tags -v
