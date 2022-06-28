@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Peer grading preview</title>
+	<style type="text/css">
+		table, td, th { 
+			border: 1px solid black; 
+			  border-collapse: collapse;
+
+		}
+	</style>
+	<script type="text/javascript"><!--
+
+	function init() {
+		const teamsize = 5
+		const options = document.getElementById('tmpl')
+		for (let rater=1; rater<=teamsize; rater++) {
+			for (let rated=1; rated<=teamsize; rated++) {
+				const id= 'r'+rated+rater
+				const r=document.getElementById(id)
+				if (r)
+					r.innerHTML = options.innerHTML
+			}
+		}
+		updateNr()
+	}
+	function update() {
+		const teamsize = parseInt(document.getElementById('nr').value)
+		let v = [[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]]
+		let total = 0
+		for (let rater=1; rater<=teamsize; rater++) {
+			for (let rated=1; rated<=teamsize; rated++) {
+				const id= 'r'+rated+rater
+				const r=document.getElementById(id)
+				const s = parseInt(r.children[0].value)
+				v[rater-1][rated-1]= s 
+				total = total + s
+			}
+		}
+		const teamAvg = total / teamsize / teamsize
+
+		for (let rated=1; rated<=teamsize; rated++) {
+			let s=0
+			for (let rater=1; rater<=teamsize; rater++) {
+				s = s + v[rater-1][rated-1]
+			}
+			const indAvg = s / teamsize
+			document.getElementById('ia'+rated).innerHTML=indAvg.toFixed(1)
+			document.getElementById('ta'+rated).innerHTML=teamAvg.toFixed(1)
+			document.getElementById('t'+rated).innerHTML=Math.min(1.05, indAvg/teamAvg).toFixed(2)
+		}
+	}
+	function updateNr() {
+		const teamsize = parseInt(document.getElementById('nr').value)
+		for (let idx=4;idx<=5;idx++) {
+			console.log(idx,teamsize, idx<=teamsize)
+			document.getElementById('h'+idx).style.visibility = (idx<=teamsize ? '' : 'hidden')
+			document.getElementById('r'+idx).style.visibility = (idx<=teamsize ? '' : 'hidden')
+			for (let rater=1; rater<=teamsize; rater++) {
+				document.getElementById('r'+rater+idx).style.visibility = (idx<=teamsize ? '' : 'hidden')
+			}
+		}
+		update()
+	}
+
+	--></script>
+</head>
+<body onload="init()">
+
+<div style="visibility: hidden;" id='tmpl'>
+	<select onchange="update()">
+		<option value="100">Meets expectations (100)</option>
+		<option value="80">Marginal (80)</option>
+		<option value="60">Deficient (60)</option>
+		<option value="40">Unsatisfactory (40)</option>
+		<option value="20">Superficial (20)</option>
+		<option value="0">No show (0)</option>
+	</select>
+</div>
+
+<div>
+	<label>Team members: <select id='nr' onchange="updateNr()"><option>3</option><option>4</option><option selected="true">5</option></select></label>
+</div>
+<div>
+	<table>
+		<tr id="theader">
+			<th></th>
+			<th>Rated by Team member 1</th>
+			<th>Rated by Team member 2</th>
+			<th>Rated by Team member 3</th>
+			<th id='h4'>Rated by Team member 4</th>
+			<th id='h5'>Rated by Team member 5</th>
+			<th>Indiv. Avg.</th>
+			<th>Team Avg.</th>
+			<th>Grade adjustment factor</th>
+		</tr>
+		<tr>
+			<th>Team member 1</th>
+			<td><span id="r11" /></td>
+			<td><span id="r12" /></td>
+			<td><span id="r13" /></td>
+			<td><span id="r14" /></td>
+			<td><span id="r15" /></td>
+			<td><span id="ia1" /></td>
+			<td><span id="ta1" /></td>
+			<td><span id="t1" /></td>
+		</tr>
+		<tr>
+			<th>Team member 2</th>
+			<td><span id="r21" /></td>
+			<td><span id="r22" /></td>
+			<td><span id="r23" /></td>
+			<td><span id="r24" /></td>
+			<td><span id="r25" /></td>
+			<td><span id="ia2" /></td>
+			<td><span id="ta2" /></td>
+			<td><span id="t2" /></td>
+		</tr>
+		<tr>
+			<th>Team member 3</th>
+			<td><span id="r31" /></td>
+			<td><span id="r32" /></td>
+			<td><span id="r33" /></td>
+			<td><span id="r34" /></td>
+			<td><span id="r35" /></td>
+			<td><span id="ia3" /></td>
+			<td><span id="ta3" /></td>
+			<td><span id="t3" /></td>
+		</tr>
+		<tr id='r4'>
+			<th>Team member 4</th>
+			<td><span id="r41" /></td>
+			<td><span id="r42" /></td>
+			<td><span id="r43" /></td>
+			<td><span id="r44" /></td>
+			<td><span id="r45" /></td>
+			<td><span id="ia4" /></td>
+			<td><span id="ta4" /></td>
+			<td><span id="t4" /></td>
+		</tr>
+		<tr id='r5'>
+			<th>Team member 5</th>
+			<td><span id="r51" /></td>
+			<td><span id="r52" /></td>
+			<td><span id="r53" /></td>
+			<td><span id="r54" /></td>
+			<td><span id="r55" /></td>
+			<td><span id="ia5" /></td>
+			<td><span id="ta5" /></td>
+			<td><span id="t5" /></td>
+		</tr>
+	</table>
+
+
+</body>
+</html>
