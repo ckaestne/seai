@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>17-445: From Models to AI-Enabled Systems</title>
+    <link rel="stylesheet" href="./../css/reveal.css" />
+    <link rel="stylesheet" href="./../css/theme/white.css" id="theme" />
+    <link rel="stylesheet" href="./../css/highlight/zenburn.css" />
+    <link rel="stylesheet" href="./../css/print/paper.css" type="text/css" media="print" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+     <script src="./../rplugin/spreadsheet/ruleJS.all.full.min.js"></script>
+   <link rel="stylesheet" href="./../rplugin/spreadsheet/spreadsheet.css">
+    <link rel="stylesheet" href="./../_assets/_assets/cmu.css" />
+
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides"><div id="footer">17-445 Software Engineering for AI-Enabled Systems, Christian Kaestner</div><section  data-markdown><script type="text/template">  
+
+# From Models to AI-Enabled Systems
+
+
+Christian Kaestner
+
+<!-- references -->
+
+* 🕮 Hulten, Geoff. "Building Intelligent Systems: A Guide to Machine Learning Engineering." (2018), Chapters 5 (Components of Intelligent Systems).
+* 🗎 Sculley, David, Gary Holt, Daniel Golovin, Eugene Davydov, Todd Phillips, Dietmar Ebner, Vinay Chaudhary, Michael Young, Jean-Francois Crespo, and Dan Dennison. "[Hidden technical debt in machine learning systems](http://papers.nips.cc/paper/5656-hidden-technical-debt-in-machine-learning-systems.pdf)." In Advances in neural information processing systems, pp. 2503-2511. 2015.
+</script></section><section  data-markdown><script type="text/template">
+# Learning goals
+
+* Explain how machine learning fits into the larger picture of building and maintaining production systems
+* Describe the typical components relating to AI in an AI-enabled system and typical design decisions to be made
+</script></section><section ><section data-markdown><script type="text/template">
+# AI-Enabled Systems
+</script></section><section data-markdown><script type="text/template">## Whole System Perspective
+
+* A model is just one component of a larger system
+* Also pipeline to build the model
+* Also infrastructure to deploy, update, and serve the model
+* Integrating the model with the rest of the system functionality
+* User interaction design, dealing with mistakes
+* Overall system goals vs model goals
+
+*let's look at a couple of examples*
+</script></section><section data-markdown><script type="text/template">## Temi Transcription Service
+
+![Temi Screenshot](temi.png)
+<!-- .element: class="stretch" -->
+
+https://www.temi.com/
+
+<aside class="notes"><p>A model is very central to this service. Product built around
+a model. Still, lots of nonmodel code for UI, storage of customer data,
+credit card processing, ...</p>
+</aside></script></section><section data-markdown><script type="text/template">## Microsoft Powerpoint
+
+![Powerpoint screenshot with slide designer](powerpoint.png)
+<!-- .element: class="stretch" -->
+
+Read more: [How Azure Machine Learning enables PowerPoint Designer](https://azure.microsoft.com/en-us/blog/how-azure-machine-learning-enables-powerpoint-designer/), Azure Blog, March 2020
+
+
+<aside class="notes"><p>Traditional application that uses machine learning in a few smaller
+places (more and more these days).</p>
+</aside></script></section><section data-markdown><script type="text/template">## Fall Detection Devices
+
+![Smart watch](smartwatch.jpg)
+<!-- .element: class="stretch" -->
+
+(various devices explored, including smart watches, hearing aids, and wall and floor sensors)
+
+Read more: [How fall detection is moving beyond the pendant](https://www.mobihealthnews.com/content/how-fall-detection-moving-beyond-pendant), MobiHealthNews, 2019
+
+<aside class="notes"><p>Devices for older adults to detect falls and alert caretaker or emergency responders automatically or after interaction. Uses various inputs to detect falls.</p>
+</aside></script></section><section data-markdown><script type="text/template">## Google Add Fraud Detection
+
+![System Architecture of Google's Malicious Ads Detection System](adsfraud.png)
+<!-- .element: class="stretch" -->
+
+From: Sculley, D., M. Otey, M. Pohl, B. Spitznagel, J. Hainsworth, and Y. Zhou. Detecting Adversarial Advertisements in the Wild. In Proc. KDD, 2011.
+
+<aside class="notes"><p>See first homework assignment. System largely build around a model for a specific purpose but integrated into larger infrastructure.</p>
+</aside></script></section><section data-markdown><script type="text/template">## Recidivism Prediction
+
+```txt
+IF age between 18–20 and sex is male THEN predict arrest
+ELSE IF age between 21–23 and 2–3 prior offenses THEN predict arrest
+ELSE IF more than three priors THEN predict arrest
+ELSE predict no arrest
+```
+
+<!-- references -->
+Read more: Julia Angwin, Jeff Larson, Surya Mattu and Lauren Kirchner. "[Machine Bias](https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing)." ProPublica 2016
+
+<aside class="notes"><p>The system is very narrowly built around a model, but has large societal implications.</p>
+</aside></script></section><section data-markdown><script type="text/template">## Logistics, Route Planning
+
+![Truck driving in landscape](logistics.jpg)
+<!-- .element: class="stretch" -->
+
+<aside class="notes"><p>Heavy AI (not just ML) integrated in large system approximating
+planning problems with many inputs, interfacing with many other systems.</p>
+</aside></script></section><section data-markdown><script type="text/template">## Many more examples:
+
+* Product recommendations on Amazon
+* Surge price calculation for Uber
+* Inventory planning in Walmart
+* Search for new oil fields by Shell
+* Adaptive cruise control in a car
+* Smart app suggestion in Android
+* Fashion trends prediction with social media data
+* Suggesting whom to talk to in a presidential campain
+* Tracking and predicting infections in a pandemic
+* Adaptively reacting to network issues by a cell phone provider
+* Matching players in a computer game by skill
+* ...
+* 
+* Some for end users, some for employees, some for expert users
+* Big and small components of a larger system
+
+
+
+
+</script></section><section data-markdown><script type="text/template">## Thinking about Systems
+
+* Holistic approach, looking at the larger picture, involving all stakeholders
+* Looking at relationships and interactions among components and environments
+    - Everything is interconnected
+    - Combining parts creates something new with emergent behavior
+    - Understand dynamics, be aware of feedback loops, actions have effects
+* Understand how humans interact with the system
+
+> A system is a set of inter-related components that work together in a particular environment to perform whatever functions are required to achieve the system's objective -- Donella Meadows
+
+<!-- references -->
+Leyla Acaroglu. "[Tools for Systems Thinkers: The 6 Fundamental Concepts of Systems Thinking](https://medium.com/disruptive-design/tools-for-systems-thinkers-the-6-fundamental-concepts-of-systems-thinking-379cdac3dc6a)." Blogpost 2017
+</script></section><section data-markdown><script type="text/template">## System-Level Challenges for AI-Enabled Systems
+
+* Getting and updating data, concept drift, changing requirements
+* Handling massive amounts of data
+* Interactions with the real world, feedback loops
+* Lack of modularity of AI components, lack of specifications, nonlocal effects
+* Deployment and maintenance
+* Versioning, debugging and incremental improvement
+* Keeping training and operating cost manageable
+* Interdisciplinary teams
+* Setting system goals, balancing stakeholders and requirements
+* ...
+
+**Examples?**
+</script></section><section data-markdown><script type="text/template">## On Terminology
+
+* There is no standard term for referring to building systems with AI components
++ "AI-Enabled Systems", "ML-Enabled Systems" or "ML-Infused Systems"
++ SE4AI, SE4ML
++ sometimes AI engineering
++ sometimes ML Systems Engineering (but often this refers to building distributed and scalable ML learning and data storage platforms)
++ AIOps ~ using AI to make automated decisions in operations; DataOps ~ use of agile methods and automation in business data analytics; MLOps ~ technical infrastructure for operating AI-based products and on deploying updates
++ Developers with Software Engineering and ML skills were often referred to as "unicorns" in earlier days
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script></section></section><section ><section data-markdown><script type="text/template"># Components of an AI-Enabled System
+
+(Using Hulten's Terminology)
+
+<!-- references -->
+* 🕮 Hulten, Geoff. "Building Intelligent Systems: A Guide to Machine Learning Engineering." (2018).
+</script></section><section data-markdown><script type="text/template">## Elements of an Intelligent System
+
+* **Meaningful objective**: goals, requirements, business case
+* **Intelligent experience**: user interactions -- presenting model predictions to users; user interactions; eliciting feedback, telemetry
+* **Intelligence implementation**: infrastructure -- learning and serving the model and collecting feedback (telemetry)
+* **Intelligence creation**: learning and evaluating models
+* **Orchestration**: operations -- maintaining and updating the system over time, debugging, countering abuse
+</script></section><section data-markdown><script type="text/template">## Design Decisions for each Element?
+
+<!-- colstart -->
+
+* Meaningful objective
+* Intelligent experience / user interaction design
+* Intelligence implementation / infrastructure
+* Intelligence creation
+* Orchestration / operations
+<!-- col -->
+![Powerpoint screenshot with slide designer](powerpoint.png)
+
+<!-- colend -->
+
+
+
+
+</script></section></section><section ><section data-markdown><script type="text/template"># User Interactions (Intelligent Experiences)
+</script></section><section data-markdown><script type="text/template">## Designing Intelligent Experiences
+
+* How to use the output of a model's prediction (for a goal)?
+* Design considerations:
+    - How to present prediction to a user? Suggestions or automatically take actions?
+    - How to effectively influence the user's behavior toward the system's goal?
+    - How to minimize the consequences of flawed predictions?
+    - How to collect data to continue to learn from users and mistakes?
+* Balancing at least three outcomes:
+    - Achieving goals
+    - Protection from mistakes
+    - Collecting data for training
+</script></section><section data-markdown><script type="text/template">## Designing Intelligent Experiences
+
+<!-- colstart -->
+* How to use the output of a model's prediction (for a goal)?
+* Design considerations:
+    - How to present prediction to a user? Suggestions or automatically take actions?
+    - How to effectively influence the user's behavior toward the system's goal?
+    - How to minimize the consequences of flawed predictions?
+    - How to collect data to continue to learn from users and mistakes?
+
+
+<!-- col -->
+Automatic slide design:
+
+![Powerpoint screenshot with slide designer](powerpoint.png)
+
+<!-- colend --></script></section><section data-markdown><script type="text/template">## Designing Intelligent Experiences
+
+<!-- colstart -->
+* How to use the output of a model's prediction (for a goal)?
+* Design considerations:
+    - How to present prediction to a user? Suggestions or automatically take actions?
+    - How to effectively influence the user's behavior toward the system's goal?
+    - How to minimize the consequences of flawed predictions?
+    - How to collect data to continue to learn from users and mistakes?
+
+
+<!-- col -->
+Fall detection:
+![Smart watch](smartwatch.jpg)
+
+<!-- colend -->
+
+
+
+
+</script></section><section data-markdown><script type="text/template">## Forcefulness
+
+* Forceful (hard to ignore or stop):
+    * Automate an action 
+    * Interrupt the user and ask for confirmation before they can continue
+* Passive experience:
+    - Prompt that does not require immediate answer 
+    - Icon or information box making suggestion
+    
+**Examples?**
+
+**When to chose which?**
+</script></section><section data-markdown><script type="text/template">## Modes of Interaction
+
+* Automate
+* Prompting
+* Organizing information
+* Annotate
+* Hybrids
+
+**Examples?**
+
+<aside class="notes"><p>Lots of examples in Hulten&#39;s book, Chapter 8</p>
+</aside></script></section><section data-markdown><script type="text/template">## Frequency
+
+* Interact whenever a new prediction is available
+* Interact when prediction changes significantly
+* Hard limit on interaction frequency (e.g., max 1 prediction per hour)
+* Interact based on anticipated user reaction; adaptive
+* Interaction explicitly initiated by user
+
+**Examples?**
+
+*Consider notification fatigue vs missed opportunities to help vs learnability*
+
+<aside class="notes"><p>Examples: Interact frequently during navigation or giving fitness instructions (whenever things change); fewer predictions after many ignored ones</p>
+</aside></script></section><section data-markdown><script type="text/template">## Factors to Consider
+
+When designing an intelligent experience consider:
+
+* Forcefulness: How strongly to encourage taking an action (or even automate it)?
+* Frequency: How often to interact with the user?
+* Value: How much does a user (think to) benefit from the prediction?
+* Cost: What is the damage of a wrong prediction?
+* Model quality: How often is the prediction wrong?
+</script></section><section data-markdown><script type="text/template">## Factors in Case Studies
+
+Consider: forcefulness, frequency, value, cost, model quality
+
+<!-- colstart -->
+Automatic slide design:
+![Powerpoint screenshot with slide designer](powerpoint.png)
+
+<!-- col -->
+Fall detection:
+![Smart watch](smartwatch.jpg)
+
+<!-- colend -->
+
+</script></section><section data-markdown><script type="text/template">## Feedback (Telemetry)
+
+* To design good interactions we need to know how we are doing...
+* How many predictions are ignored?
+* How many actions are reversed?
+* How often does the user ask for extra predictions?
+* How much value do users get out of predictions?
+* How much are we supporting the system's goals?
+* How much cost are wrong predictions causing for users/the system's goals?
+* Are mistakes focused on specific kinds of inputs?
+
+</script></section><section data-markdown><script type="text/template">## Initial Telemetry Ideas?
+
+Identify: usage, mistakes, cost of mistakes, benefits to user, benefits to goals
+
+<!-- colstart -->
+Automatic slide design:
+![Powerpoint screenshot with slide designer](powerpoint.png)
+
+<!-- col -->
+Fall detection:
+![Smart watch](smartwatch.jpg)
+
+<!-- colend -->
+</script></section><section data-markdown><script type="text/template">## Outlook: Telemetry Design
+
+![Temi Screenshot](temi.png)
+<!-- .element: class="stretch" -->
+
+More on this later...
+
+
+
+
+
+
+
+</script></section></section><section ><section data-markdown><script type="text/template"># A Systems View on Safety
+
+</script></section><section data-markdown><script type="text/template">## The Smart Toaster
+
+> the toaster may (occasionally) burn my toast, but should never burn down my kitchen
+
+![Toaster](toaster.jpg)
+<!-- .element: class="stretch" -->
+
+</script></section><section data-markdown><script type="text/template">## Making the Smart Toaster Safe
+
+Assume classification model:
+$\text{continueToasting}(\text{camera}_\text{initial}, \text{camera}_\text{now}, \text{temperatureReading}, $
+$ \text{userPref}) \rightarrow \text{Boolean}$
+
+How to assure the toaster does not overhead?
+
+<!-- discussion -->
+</script></section><section data-markdown><script type="text/template">## Safeguards / Guardrails
+
+* Hard constraints overrule model
+    - `heat = (temperatureReading < MAX) && continueToasting(...)`
+* External hardware or software failsafe mechanisms
+    - outside the model, external observer, e.g., thermal fuses
+
+
+![A thermal fuse protecting the windings of a small motor](thermalfuse.png)
+<!-- .element: class="stretch" -->
+(Image CC BY-SA 4.0, C J Cowie)
+</script></section><section data-markdown><script type="text/template">## Other Strategies
+
+* Improve the model, more data, more testing
+* Adjusting interaction models, e.g., involving users, confirmations
+* Better hardware
+* ...
+
+**In all cases, look beyond model accuracy at the entire system**
+
+
+
+
+</script></section></section><section ><section data-markdown><script type="text/template"># A System View on Intelligence Infrastructure
+</script></section><section data-markdown><script type="text/template">## Infrastructure for ML Components
+
+![Plumming](plumming.png)
+<!-- .element: class="stretch" -->
+
+This was 2015; many of those boxes are getting increasingly standardized these days.
+
+
+Graphic from Sculley, et al. "[Hidden technical debt in machine learning systems](http://papers.nips.cc/paper/5656-hidden-technical-debt-in-machine-learning-systems.pdf)." In Proc NIPS, 2015.
+
+
+<aside class="notes"><p>Even for a single ML component and it&#39;s pipeline, there is a lot of
+infrastructure to build and serve the model.</p>
+</aside></script></section><section data-markdown><script type="text/template">## Thinking in Pipelines over Models
+
+* In production systems, models need to be deployed and updated
+* Consider the entire pipeline, not just the model
+    - Quality assurance, reproduciblity, repeatability, debugging
+    - Modifiability, agility
+    - Training cost and scalability
+    - Data availability, data wrangling cost
+    - Telemetry
+* Reported as one of the key challenges in production machine learning
+
+
+![Pipeline](pipeline.png)
+
+<!-- references -->
+
+* Graphic: Amershi et al. "[Software engineering for machine learning: A case study](https://www.microsoft.com/en-us/research/uploads/prod/2019/03/amershi-icse-2019_Software_Engineering_for_Machine_Learning.pdf)." In Proc ICSE-SEIP, 2019. 
+* Key challenge claim: O'Leary and Uchida. "[Common problems with Creating Machine Learning Pipelines from Existing Code](https://research.google/pubs/pub48984.pdf)." Proc. MLSys, 2020.
+
+
+
+</script></section></section><section ><section data-markdown><script type="text/template"># System Qualities vs Model Accuracy
+</script></section><section data-markdown><script type="text/template">## Systems have Goals
+
+... selling stuff, increasing engagement, encouraging responsible behavior
+
+Model predictions support those goals
+
+**more next lecture**
+</script></section><section data-markdown><script type="text/template">## More Accurate Predictions may not be THAT Important
+
+* "Good enough" may be good enough
+* Prediction critical for system success or just an gimmick?
+* Better predictions may come at excessive costs 
+    - need way more data, much longer training times
+    - privacy concerns
+* Better user interface ("experience") may mitigate many problems
+    - e.g. explain decisions to users
+* Use only high-confidence predictions?
+
+</script></section><section data-markdown><script type="text/template">## Beyond Model Quality
+
+Many other aspects of a model's quality may matter when operating a system
+
+**Examples?**
+
+<!-- discussion -->
+
+(more later)
+
+<aside class="notes"><p>Learning time, inference time,
+incremental learning,
+explainability,
+model size,
+kinds of mistakes,
+fairness, privacy, security, robustness,
+reproducibility,
+maintainability</p>
+</aside></script></section></section><section  data-markdown><script type="text/template">
+<svg version="1.1" viewBox="0.0 0.0 800 400" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+        <style>
+    text { font: 60px sans-serif; }
+        </style>
+        <circle r="180" cx="250", cy="200" fill="#b9ff00" fill-opacity="0.514" />
+        <circle r="180" cx="550", cy="200" fill="#ff5500" fill-opacity="0.514" />
+        <text x=230 y=160 dominant-baseline="middle" text-anchor="middle">Data</text>
+        <text x=230 y=240 dominant-baseline="middle" text-anchor="middle">Scientists</text>
+        <text x=570 y=160 dominant-baseline="middle" text-anchor="middle">Software</text>
+        <text x=570 y=240 dominant-baseline="middle" text-anchor="middle">Engineers</text>
+</svg>
+
+</script></section><section  data-markdown><script type="text/template"># Summary
+
+* Production AI-enabled systems require a *whole system perspective*, beyond just the model
+* Components: Objectives, user interface, infrastructure, AI component, and operations
+* Large design space for user interface (intelligent experience): forcefulness, frequency, telemetry
+* Quality at a system level: safety beyond the model, beyond accuracy
+* Elevating the infrastructure: Thinking in pipelines, not models</script></section></div>
+    </div>
+
+    <script src="./../js/reveal.js"></script>
+
+    <script>
+      function extend() {
+        var target = {};
+        for (var i = 0; i < arguments.length; i++) {
+          var source = arguments[i];
+          for (var key in source) {
+            if (source.hasOwnProperty(key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+        return target;
+      }
+
+      // Optional libraries used to extend on reveal.js
+      var deps = [
+        { src: './../plugin/markdown/marked.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+        { src: './../plugin/markdown/markdown.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+        { src: './../plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+        { src: './../plugin/zoom-js/zoom.js', async: true },
+        { src: './../plugin/notes/notes.js', async: true },
+        { src: './../plugin/math/math.js' },
+        { src: './../rplugin/embed-tweet/embed-tweet.js' },
+        { src: './../rplugin/menu/menu.js', async: true },
+        { src: './../rplugin/spreadsheet/spreadsheet.js' },
+        { src: './../rplugin/chalkboard/chalkboard.js', async: true }
+      ];
+
+      // default options to init reveal.js
+      var defaultOptions = {
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        dependencies: deps,
+	chalkboard: { // font-awesome.min.css must be available
+		toggleChalkboardButton: { left: "80px" },
+		toggleNotesButton: { left: "130px" },
+	},
+	keyboard: {
+	    67: function() { RevealChalkboard.toggleNotesCanvas() },	// toggle notes canvas when 'c' is pressed
+	    66: function() { RevealChalkboard.toggleChalkboard() },	// toggle chalkboard when 'b' is pressed
+	    46: function() { RevealChalkboard.clear() },	// clear chalkboard when 'DEL' is pressed
+	     8: function() { RevealChalkboard.reset() },	// reset chalkboard data on current slide when 'BACKSPACE' is pressed
+	    68: function() { RevealChalkboard.download() },	// downlad recorded chalkboard drawing when 'd' is pressed
+	    88: function() { RevealChalkboard.colorNext() },	// cycle colors forward when 'x' is pressed
+	    89: function() { RevealChalkboard.colorPrev() },	// cycle colors backward when 'y' is pressed
+	}
+      };
+
+      // options from URL query string
+      var queryOptions = Reveal.getQueryHash() || {};
+
+      var options = extend(defaultOptions, {"controls":true,"progress":true,"theme":"white","slideNumber":true,"hash":true,"center":false}, queryOptions);
+    </script>
+
+    <script src="./../_assets/_assets/mermaid.min.js"></script>
+    <script src="./../_assets/_assets/loadmymarkdown.js"></script>
+
+    <script>
+      Reveal.initialize(options);
+    </script>
+  </body>
+</html>

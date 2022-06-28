@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>17-445: Teamwork Crash Course</title>
+    <link rel="stylesheet" href="./../css/reveal.css" />
+    <link rel="stylesheet" href="./../css/theme/white.css" id="theme" />
+    <link rel="stylesheet" href="./../css/highlight/zenburn.css" />
+    <link rel="stylesheet" href="./../css/print/paper.css" type="text/css" media="print" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+     <script src="./../rplugin/spreadsheet/ruleJS.all.full.min.js"></script>
+   <link rel="stylesheet" href="./../rplugin/spreadsheet/spreadsheet.css">
+    <link rel="stylesheet" href="./../_assets/_assets/cmu.css" />
+
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides"><div id="footer">17-445 Software Engineering for AI-Enabled Systems, Christian Kaestner</div><section ><section data-markdown><script type="text/template">
+
+# Teamwork - A Primer 
+
+Christian Kaestner
+
+</script></section><section data-markdown><script type="text/template">
+## Group Project
+
+* 4 Milestones and a Final Presentation
+* Milestone 1: Build movie recommendation service (2 weeks)
+* Milestone 2: Model and infrastructure quality (2 weeks)
+* Milestone 3: Monitoring and continuous deployment (2 weeks)
+* Milestone 4: Drift and feedback loops (1 week)
+* Groups of 4--5 students
+</script></section><section data-markdown><script type="text/template">## Pandemic: Teamwork on Hard Mode
+
+* Remote work is challenging
+* Team bonding and socializing is hard
+* Distractions! Time zones!
+* Easier to hide
+</script></section><section data-markdown><script type="text/template">## Step 1: Establish Communication and Meeting Patterns
+
+* Agree on how to communicate in the team: Email? Slack? Whatsapp?
+* Agree on communication expectation: 
+    + Note, different people have different habits and expectations. Be explicit!
+    * Read emails daily? On weekends?
+    * Respond to urgent chat messages within 3h?
+    * Be available for chat during certain hours?
++ Find meeting times: one early, one or two in the middle, one late? Extra meetings as needed?
++ Write down expectations!
+
++ Set realistic expectations:  All have other classes and distractions; communicate availability openly
+</script></section><section data-markdown><script type="text/template">## Team Citizenship
+
+* Not everybody will contribute equally to every assignment -- that's okay
+* But be good team citizen!
+* 
+* Be responsive and responsible
+* Stick to commitments, work on assigned tasks
+* When problems, reach out, replan, communicate early, be proactive
+* Come to meetings on time
+
+</script></section><section data-markdown><script type="text/template">## Team Member Evaluation Form
+
+* Has the student attended team meetings? 
+* Has the student made a serious effort at assigned work before the team meetings? 
+* Has the student notified a teammate if they would not be able to attend a meeting or fulfill a responsibility? 
+* Does the student attempt to make contributions in group meetings? 
+* Does the student listen to their teammates’ ideas and opinions respectfully and give them careful consideration? 
+* Does the student cooperate with the group effort?
+
+*(not asking for amount or quality of work completed)*
+</script></section><section data-markdown><script type="text/template">## Team Roles
+
+* Team members have different strength and weaknesses -- that's good
+* Consider assigning and rotating roles and responsibilities
+    - E.g., coordinator (host), moderator, and scribe for team meetings, submitter responsible for final checks and submission of milestone
+* See GitHub for example [team policy](https://github.com/ckaestne/seai/blob/F2020/other_material/team%20policy.pdf)
+</script></section><section data-markdown><script type="text/template">## Step 2: Dividing the Work
+
+* Read assignment before meeting
+* Discuss big picture and how to divide work
+* Consider internal teams and pair programming
+* Consider task dependencies
+* 
+* **Write down explicit deliverables**
+    - *Who* does *what* by *when* 
+    - Be explicit about expected results, should be verifiable 
+    - Track completion, check off when done
+    - GitHub issues, Trello board, Google docs, ... -- **single source of truth, with history tracking**
+* Complete deliverable list during meeting: everybody writes their own deliverables, others read all deliverables to check understanding
+    - if not completed during meeting or team member not at meeting, email assignment after meeting to everybody; no objection within 24h counts as agreement with task assignment
+</script></section><section data-markdown><script type="text/template">## Common Sources of Conflict
+
+* Different team members have different working patterns and communication preferences
+    - e.g., start early vs close to deadline
+    - e.g., plan ahead vs try and error
+    - e.g., react to every notification vs reduce distractions and read email once a day
+    - *discuss and set explicit expectations; talk about conflicts*
+* Different abilities, unexpected difficulties
+    - work in pairs, plan time for rework and integration
+    - replan, contribute to teams in different ways
+    - *work around it, it's the team's responsibility*
+* Unreliable team members, poor team citizenship
+    - e.g., not starting the work in agreed time, not responding, not attending meetings
+    - have written clear deliverables with deadlines
+    - *talk about it within team, talk to course staff, peer grading*
+</script></section><section data-markdown><script type="text/template">## Meeting Tips
+
+* Regular 1h zoom meeting, assign moderator who keeps time
+* Longer work/integration meeting with needed team members if needed
+* Calendar + calendar invitations can help with timezone problems
+* Use video, muting often not needed in small groups
+* Use chat deliberately
+    - consider chat ephemeral, don't expect everybody to catch up on all old messages
+    - explicitly tag people if you need their input
+    - separate social communication from work communication, urgent from not urgent
+    - discuss non-urgent, long-term things outside of chat associated with topic (issue tracker, Google doc, ...)
+* Reserve time to reflect on teamwork and discuss possible improvements on communication and process
+* Reserve time for socializing and celebrating success
+</script></section><section data-markdown><script type="text/template">## Explore Collaborative Tools
+
+* GitHub issue tracker: async topical discussions and todo list
+* Google docs: collaborative report editing
+* GitHub wiki or markdown files: design and documentation 
+* AWS Cloud9, Google Colab, and similar: online IDE and pair programming
+* Slack: informal communication and pinging people for immediate questions
+* Zoom: planned and ad-hoc meetings
+</script></section><section data-markdown><script type="text/template">## Now: First Team Meeting
+
+* Sending teams into breakout rooms
+* Say hi, introduce yourself
+    - Name? SE or ML background? Location and time zone? Favorite movie? Fun fact?
+    - Find time for first team meeting in next few days
+    - Agree on primary communication until team meeting
+    - Pick a movie-related team name
+    - Fill out slide for your team: ...
+* No fixed end. Close zoom when done. Feel free to hang out. See you next week.</script></section></section></div>
+    </div>
+
+    <script src="./../js/reveal.js"></script>
+
+    <script>
+      function extend() {
+        var target = {};
+        for (var i = 0; i < arguments.length; i++) {
+          var source = arguments[i];
+          for (var key in source) {
+            if (source.hasOwnProperty(key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+        return target;
+      }
+
+      // Optional libraries used to extend on reveal.js
+      var deps = [
+        { src: './../plugin/markdown/marked.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+        { src: './../plugin/markdown/markdown.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+        { src: './../plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+        { src: './../plugin/zoom-js/zoom.js', async: true },
+        { src: './../plugin/notes/notes.js', async: true },
+        { src: './../plugin/math/math.js' },
+        { src: './../rplugin/embed-tweet/embed-tweet.js' },
+        { src: './../rplugin/menu/menu.js', async: true },
+        { src: './../rplugin/spreadsheet/spreadsheet.js' },
+        { src: './../rplugin/chalkboard/chalkboard.js', async: true }
+      ];
+
+      // default options to init reveal.js
+      var defaultOptions = {
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        dependencies: deps,
+	chalkboard: { // font-awesome.min.css must be available
+		toggleChalkboardButton: { left: "80px" },
+		toggleNotesButton: { left: "130px" },
+	},
+	keyboard: {
+	    67: function() { RevealChalkboard.toggleNotesCanvas() },	// toggle notes canvas when 'c' is pressed
+	    66: function() { RevealChalkboard.toggleChalkboard() },	// toggle chalkboard when 'b' is pressed
+	    46: function() { RevealChalkboard.clear() },	// clear chalkboard when 'DEL' is pressed
+	     8: function() { RevealChalkboard.reset() },	// reset chalkboard data on current slide when 'BACKSPACE' is pressed
+	    68: function() { RevealChalkboard.download() },	// downlad recorded chalkboard drawing when 'd' is pressed
+	    88: function() { RevealChalkboard.colorNext() },	// cycle colors forward when 'x' is pressed
+	    89: function() { RevealChalkboard.colorPrev() },	// cycle colors backward when 'y' is pressed
+	}
+      };
+
+      // options from URL query string
+      var queryOptions = Reveal.getQueryHash() || {};
+
+      var options = extend(defaultOptions, {"controls":true,"progress":true,"theme":"white","slideNumber":true,"hash":true,"center":false}, queryOptions);
+    </script>
+
+    <script src="./../_assets/_assets/viz.js"></script>
+    <script src="./../_assets/_assets/loadmymarkdown.js"></script>
+
+    <script>
+      Reveal.initialize(options);
+    </script>
+  </body>
+</html>

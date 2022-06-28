@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>17-445: Fairness</title>
+    <link rel="stylesheet" href="./../css/reveal.css" />
+    <link rel="stylesheet" href="./../css/theme/white.css" id="theme" />
+    <link rel="stylesheet" href="./../css/highlight/zenburn.css" />
+    <link rel="stylesheet" href="./../css/print/paper.css" type="text/css" media="print" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+     <script src="./../rplugin/spreadsheet/ruleJS.all.full.min.js"></script>
+   <link rel="stylesheet" href="./../rplugin/spreadsheet/spreadsheet.css">
+    <link rel="stylesheet" href="./../_assets/_assets/cmu.css" />
+
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides"><div id="footer">17-445 Software Engineering for AI-Enabled Systems, Christian Kaestner  & Eunsuk Kang</div><section  data-markdown><script type="text/template">  
+
+# Intro to Ethics and Fairness
+
+Eunsuk Kang
+
+<!-- references -->
+
+Required reading: R. Caplan, J. Donovan, L. Hanson, J.
+Matthews. "Algorithmic Accountability: A Primer", Data & Society
+(2018).
+</script></section><section  data-markdown><script type="text/template"># Learning Goals
+
+* Review the importance of ethical considerations in designing AI-enabled systems
+* Recall basic strategies to reason about ethical challenges
+* Diagnose potential ethical issues in a given system
+* Understand the types of harm that can be caused by ML
+* Understand the sources of bias in ML
+</script></section><section ><section data-markdown><script type="text/template"># Overview
+
+Many interrelated issues:
+* Ethics
+* Fairness
+* Justice
+* Discrimination
+* Safety
+* Privacy
+* Security
+* Transparency
+* Accountability
+
+*Each is a deep and nuanced research topic. We focus on survey of some key issues.*
+</script></section><section data-markdown><script type="text/template">
+![Martin Shkreli](Martin_Shkreli_2016.jpg)
+
+<!-- split -->
+
+*In September 2015, Shkreli received widespread criticism when Turing obtained the manufacturing license for the antiparasitic drug Daraprim and raised its price by a factor of 56 (from USD 13.5 to 750 per pill), leading him to be referred to by the media as "the most hated man in America" and "Pharma Bro".* -- [Wikipedia](https://en.wikipedia.org/wiki/Martin_Shkreli)
+
+"*I could have raised it higher and made more profits for our shareholders. Which is my primary duty.*" -- Martin Shkreli
+
+
+<aside class="notes"><p>Image source: <a href="https://en.wikipedia.org/wiki/Martin_Shkreli#/media/File:Martin_Shkreli_2016.jpg">https://en.wikipedia.org/wiki/Martin_Shkreli#/media/File:Martin_Shkreli_2016.jpg</a></p>
+</aside></script></section><section data-markdown><script type="text/template">## Terminology
+
+* Legal = in accordance to societal laws
+  - systematic body of rules governing society; set through government
+  - punishment for violation
+* Ethical = following moral principles of tradition, group, or individual
+  - branch of philosophy, science of a standard human conduct
+  - professional ethics = rules codified by professional organization
+  - no legal binding, no enforcement beyond "shame"
+  - high ethical standards may yield long term benefits through image and staff loyalty
+</script></section><section data-markdown><script type="text/template">## Anoter Example: Social Media
+
+![zuckerberg](mark-zuckerberg.png)
+<!-- .element: class="stretch" -->
+
+Q. What is the (real) organizational objective of the company?
+</script></section><section data-markdown><script type="text/template">## Optimizing for Organizational Objective
+
+![Infinite Scroll](infinitescroll.png)
+<!-- .element: class="stretch" -->
+
+* How do we maximize the user engagement?
+  - Infinite scroll: Encourage non-stop, continual use
+  - Personal recommendations: Suggest news feed to increase engagement
+  - Push notifications: Notify disengaged users to return to the app
+</script></section><section data-markdown><script type="text/template">## Addiction
+
+![social-media-driving](Social-media-driving.png)
+
+* 210M people worldwide addicted to social media
+* 71% of Americans sleep next to a mobile device
+* ~1000 people injured **per day** due to distracted
+  driving (USA)
+
+<!-- references -->
+https://www.flurry.com/blog/mobile-addicts-multiply-across-the-globe/
+
+https://www.cdc.gov/motorvehiclesafety/Distracted_Driving/index.html
+</script></section><section data-markdown><script type="text/template">## Mental Health
+
+![teen-suicide-rate](teen-suicide-rate.png)
+
+* 35% of US teenagers with low social-emotional well-being have been bullied on social media.
+* 70% of teens feel excluded when using social media.
+
+<!-- references -->
+https://leftronic.com/social-media-addiction-statistics
+</script></section><section data-markdown><script type="text/template">## Disinformation & Polarization
+
+![fake-news](fake-news.jpg)
+<!-- .element: class="stretch" -->
+</script></section><section data-markdown><script type="text/template">## Discrimination
+
+![twitter-cropping](twitter-cropping.png)
+
+<!-- references -->
+https://twitter.com/bascule/status/1307440596668182528
+</script></section><section data-markdown><script type="text/template">## Who's to blame?
+
+![dont-be-evil](dont-be-evil.png)
+<!-- .element: class="stretch" -->
+
+* Q. Are these companies intentionally trying to cause harm? If not,
+  what are the root causes of the problem?
+</script></section><section data-markdown><script type="text/template">## Challenges
+
+* Misalignment between organizational goals & societal values
+  * Financial incentives often dominate other goals ("grow or die")
+* Insufficient amount of regulations
+  * Little legal consequences for causing negative impact (with some exceptions)
+  * Poor understanding of socio-technical systems by policy makers 
+* Engineering challenges, both at system- & ML-level
+  * Difficult to clearly define or measure ethical values
+  * Difficult to predict possible usage contexts
+  * Difficult to predict impact of feedback loops
+  * Difficult to prevent malicious actors from abusing the system
+  * Difficult to interpret output of ML and make ethical decisions
+  * ...
+  
+**These problems have existed before, but they are being
+  rapidly exacerbated by the widespread use of ML**
+
+
+
+
+
+
+
+</script></section></section><section ><section data-markdown><script type="text/template"># Fairness
+</script></section><section data-markdown><script type="text/template">## Legally protected classes (US)
+
+* Race (Civil Rights Act of 1964)
+* Color (Civil Rights Act of 1964)
+* Sex (Equal Pay Act of 1963; Civil Rights Act of 1964)
+* Religion (Civil Rights Act of 1964)
+* National origin (Civil Rights Act of 1964)
+* Citizenship (Immigration Reform and Control Act)
+* Age (Age Discrimination in Employment Act of 1967)
+* Pregnancy (Pregnancy Discrimination Act)
+* Familial status (Civil Rights Act of 1968)
+* Disability status (Rehabilitation Act of 1973; Americans with Disabilities Act of 1990)
+* Veteran status (Vietnam Era Veterans' Readjustment Assistance Act of 1974; Uniformed Services Employment and Reemployment Rights Act)
+* Genetic information (Genetic Information Nondiscrimination Act)
+
+<!-- references -->
+Barocas, Solon and Moritz Hardt. "[Fairness in machine learning](https://mrtz.org/nips17/#/)." NIPS Tutorial 1 (2017).
+</script></section><section data-markdown><script type="text/template">## Regulated domains (US)
+
+* Credit (Equal Credit Opportunity Act)
+* Education (Civil Rights Act of 1964; Education Amendments of 1972)
+* Employment (Civil Rights Act of 1964)
+* Housing (Fair Housing Act)
+* ‘Public Accommodation’ (Civil Rights Act of 1964)
+
+Extends to marketing and advertising; not limited to final decision
+
+<!-- references -->
+Barocas, Solon and Moritz Hardt. "[Fairness in machine learning](https://mrtz.org/nips17/#/)." NIPS Tutorial 1 (2017).
+</script></section><section data-markdown><script type="text/template">## Equality vs Equity vs Justice
+
+![Contrasting equality, equity, and justice](eej2.png)
+</script></section><section data-markdown><script type="text/template">## Types of Harm on Society
+
+* __Harms of allocation__: Withhold opportunities or resources
+* __Harms of representation__: Reinforce stereotypes, subordination along
+  the lines of identity
+
+<!-- references -->
+
+ “The Trouble With Bias”, Kate Crawford, Keynote@N(eur)IPS (2017).
+</script></section><section data-markdown><script type="text/template">## Harms of Allocation
+
+* Withhold opportunities or resources
+* Poor quality of service, degraded user experience for certain groups
+
+![](gender-detection.png)
+
+__Q. Other examples?__
+
+<!-- references -->
+
+_Gender Shades: Intersectional Accuracy Disparities in
+Commercial Gender Classification_, Buolamwini & Gebru, ACM FAT* (2018).
+</script></section><section data-markdown><script type="text/template">## Harms of Representation
+
+* Over/under-representation, reinforcement of stereotypes
+
+![](online-ad.png)
+
+__Q. Other examples?__
+
+<!-- references -->
+
+_Discrimination in Online Ad Delivery_, Latanya Sweeney, SSRN (2013).
+</script></section><section data-markdown><script type="text/template">## Identifying harms
+
+![](harms-table.png)
+
+* Multiple types of harms can be caused by a product!
+* Think about your system objectives & identify potential harms.
+
+<!-- references -->
+
+_Challenges of incorporating algorithmic fairness into practice_, FAT* Tutorial (2019).
+</script></section><section data-markdown><script type="text/template">## Not all discrimination is harmful
+
+![](gender-bias.png)
+
+* Loan lending: Gender discrimination is illegal.
+* Medical diagnosis: Gender-specific diagnosis may be desirable.
+* The problem is _unjustified_ differentiation; i.e., discriminating on factors that should not matter
+* Discrimination is a __domain-specific__ concept, and must be
+  understood in the context of the problem domain (i.e., world vs machine)
+
+__Q. Other examples__?
+</script></section><section data-markdown><script type="text/template">## Role of Requirements Engineering
+
+* Identify system goals
+* Identify legal constraints
+* Identify stakeholders and fairness concerns
+* Analyze risks with regard to discrimination and fairness
+* Analyze possible feedback loops (world vs machine)
+* Negotiate tradeoffs with stakeholders
+* Set requirements/constraints for data and model
+* Plan mitigations in the system (beyond the model)
+* Design incident response plan
+* Set expectations for offline and online assurance and monitoring
+
+
+<!-- ---- -->
+<!-- ## On Terminology -->
+
+<!-- * Bias and discrimination are technical terms in machine learning -->
+<!--   - [selection bias](https://en.wikipedia.org/wiki/Selection_bias), [reporting bias](https://en.wikipedia.org/wiki/Reporting_bias), [bias of an estimator](https://en.wikipedia.org/wiki/Bias_of_an_estimator), [inductive/learning bias](https://en.wikipedia.org/wiki/Inductive_bias) -->
+<!--   - discrimination   refers to distinguishing outcomes (classification) -->
+<!-- * The problem is *unjustified* differentiation, ethical issues -->
+<!--   - practical irrelevance -->
+<!--   - moral irrelevance -->
+
+
+
+
+
+
+</script></section></section><section ><section data-markdown><script type="text/template"># Sources of Bias
+</script></section><section data-markdown><script type="text/template">##  Where does the bias come from?
+
+![](google-translate-bias.png)
+
+<!-- references -->
+
+_Semantics derived automatically from language corpora contain
+human-like biases_, Caliskan et al., Science (2017).
+</script></section><section data-markdown><script type="text/template">## Where does the bias come from?
+
+![](bing-translate-bias.png)
+</script></section><section data-markdown><script type="text/template">## Sources of Bias
+
+* Historial bias
+* Tainted examples
+* Skewed sample
+* Limited features
+* Sample size disparity
+* Proxies
+
+<!-- references -->
+
+_Big Data's Disparate Impact_, Barocas & Selbst California Law Review (2016).
+</script></section><section data-markdown><script type="text/template">## Historical Bias
+
+*Data reflects past biases, not intended outcomes*
+
+![Image search for "CEO"](ceo.png)
+<!-- .element: class="stretch" -->
+
+__Q. Should the algorithm reflect the reality?__
+
+<aside class="notes"><p>&quot;An example of this type of bias can be found in a 2018 image search
+result where searching for women CEOs ultimately resulted in fewer female CEO images due
+to the fact that only 5% of Fortune 500 CEOs were woman—which would cause the search
+results to be biased towards male CEOs. These search results were of course reflecting
+the reality, but whether or not the search algorithms should reflect this reality is an issue worth
+considering.&quot;</p>
+</aside></script></section><section data-markdown><script type="text/template">## Tainted Examples
+
+*Bias in the dataset caused by humans*
+
+![](amazon-hiring.png)
+
+* Example: Hiring decision dataset
+  * Some labels created manually by employers
+  * Dataset "tainted" by biased human judgement
+</script></section><section data-markdown><script type="text/template">## Skewed Sample
+
+*Bias compounds over time & skews sampling towards certain parts of population*
+
+![](crime-map.jpg)
+
+* Example: Crime prediction for policing strategy
+</script></section><section data-markdown><script type="text/template">## Limited Features
+
+*Features that are less informative or reliable for certain parts of the population*
+
+![](performance-review.jpg)
+
+* Features that support accurate prediction for the majority may not do so
+for a minority group
+* Example: Employee performance review
+  * "Leave of absence" as a feature (an indicator of poor performance)
+  * Unfair bias against employees on parental leave
+
+</script></section><section data-markdown><script type="text/template">## Sample Size Disparity
+
+*Less data available for certain parts of the population*
+
+![](shirley-card.jpg)
+
+* Example: "Shirley Card"
+	* Used by Kodak for color calibration in photo films
+	* Most "Shirley Cards" used Caucasian models
+	* Poor color quality for other skin tones
+</script></section><section data-markdown><script type="text/template">## Proxies
+
+*Certain features are correlated with class membership*
+
+![](neighborhoods.png)
+
+* Example: Neighborhood as a proxy for race
+* Even when sensitive attributes (e.g., race) are erased, bias may still occur
+</script></section><section data-markdown><script type="text/template">## Case Study: College Admission
+
+![](college-admission.jpg)
+
+* Evaluate applications & identify students who are 
+likely to succeed
+* Features: GPA, GRE/SAT, gender, race, undergrad institute, alumni
+  connections, household income, hometown, etc., 
+</script></section><section data-markdown><script type="text/template">## Case Study: College Admission
+
+![](college-admission.jpg)
+
+* Possible harms: Allocation of resources? Quality of service?
+  Stereotyping? Denigration? Over-/Under-representation?
+* Sources of bias: Skewed sample? Tainted examples? Historical bias? Limited features?
+	Sample size disparity? Proxies?
+</script></section><section data-markdown><script type="text/template">## Feedback Loops
+
+```mermaid
+graph LR
+  t[biased training data] --> o[biased outcomes]
+  o --> m[biased telemetry] 
+  m --> t
+```
+
+> "Big Data processes codify the past.  They do not invent the future.  Doing that requires moral imagination, and that’s something only humans can provide. " -- Cathy O'Neil in [Weapons of Math Destruction](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991016462699704436)
+</script></section></section><section ><section data-markdown><script type="text/template"># Building Fair ML Systems
+</script></section><section data-markdown><script type="text/template">## Fairness must be considered throughout the ML lifecycle!
+
+![](fairness-lifecycle.jpg)
+
+<!-- references -->
+
+_Fairness-aware Machine Learning_, Bennett et al., WSDM Tutorial (2019).
+</script></section></section><section  data-markdown><script type="text/template"># Summary
+
+
+* Many interrelated issues: ethics, fairness, justice, safety, security, ...
+* Both legal & ethical dimensions
+* Challenges with developing ethical systnems
+* Large potential for damage: Harm of allocation & harm of representation
+* Sources of bias in ML
+  * Skewed sample, tainted examples, limited
+features, sample size, disparity, proxies
+* Addressing fairness throughout the ML pipeline
+* Data bias & data collection for fairness
+* __Next class__: Definitions of fairness, measurement, testing for fairness
+
+</script></section></div>
+    </div>
+
+    <script src="./../js/reveal.js"></script>
+
+    <script>
+      function extend() {
+        var target = {};
+        for (var i = 0; i < arguments.length; i++) {
+          var source = arguments[i];
+          for (var key in source) {
+            if (source.hasOwnProperty(key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+        return target;
+      }
+
+      // Optional libraries used to extend on reveal.js
+      var deps = [
+        { src: './../plugin/markdown/marked.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+        { src: './../plugin/markdown/markdown.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+        { src: './../plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+        { src: './../plugin/zoom-js/zoom.js', async: true },
+        { src: './../plugin/notes/notes.js', async: true },
+        { src: './../plugin/math/math.js' },
+        { src: './../rplugin/embed-tweet/embed-tweet.js' },
+        { src: './../rplugin/menu/menu.js', async: true },
+        { src: './../rplugin/spreadsheet/spreadsheet.js' },
+        { src: './../rplugin/chalkboard/chalkboard.js', async: true }
+      ];
+
+      // default options to init reveal.js
+      var defaultOptions = {
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        dependencies: deps,
+	chalkboard: { // font-awesome.min.css must be available
+		toggleChalkboardButton: { left: "80px" },
+		toggleNotesButton: { left: "130px" },
+	},
+	keyboard: {
+	    67: function() { RevealChalkboard.toggleNotesCanvas() },	// toggle notes canvas when 'c' is pressed
+	    66: function() { RevealChalkboard.toggleChalkboard() },	// toggle chalkboard when 'b' is pressed
+	    46: function() { RevealChalkboard.clear() },	// clear chalkboard when 'DEL' is pressed
+	     8: function() { RevealChalkboard.reset() },	// reset chalkboard data on current slide when 'BACKSPACE' is pressed
+	    68: function() { RevealChalkboard.download() },	// downlad recorded chalkboard drawing when 'd' is pressed
+	    88: function() { RevealChalkboard.colorNext() },	// cycle colors forward when 'x' is pressed
+	    89: function() { RevealChalkboard.colorPrev() },	// cycle colors backward when 'y' is pressed
+	}
+      };
+
+      // options from URL query string
+      var queryOptions = Reveal.getQueryHash() || {};
+
+      var options = extend(defaultOptions, {"controls":true,"progress":true,"theme":"white","slideNumber":true,"hash":true,"center":false}, queryOptions);
+    </script>
+
+    <script src="./../_assets/_assets/viz.js"></script>
+    <script src="./../_assets/_assets/loadmymarkdown.js"></script>
+
+    <script>
+      Reveal.initialize(options);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>17-445: Experimentation</title>
+    <link rel="stylesheet" href="./../css/reveal.css" />
+    <link rel="stylesheet" href="./../css/theme/white.css" id="theme" />
+    <link rel="stylesheet" href="./../css/highlight/zenburn.css" />
+    <link rel="stylesheet" href="./../css/print/paper.css" type="text/css" media="print" />
+    <link rel="stylesheet" href="./../_assets/_assets/cmu.css" />
+
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides"><div id="footer">17-445 Software Engineering for AI-Enabled Systems, Christian Kaestner</div><section  data-markdown><script type="text/template">
+
+# Experimentation
+
+Christian Kaestner
+
+<!-- references -->
+
+Required reading: 
+* Georgi Georgiev. [Statistical Significance in A/B Testing – a Complete Guide](http://blog.analytics-toolkit.com/2017/statistical-significance-ab-testing-complete-guide/). Blog post, 2018.
+</script></section><section  data-markdown><script type="text/template">
+# Learning Goals
+
+* Plan and execute experiments (chaos, A/B, ...) in production
+* Conduct and evaluate multiple concurrent A/B tests in a system
+* Examine experimental results with statistical rigor
+* Perform sensitivity analysis in large configuration/design spaces
+
+</script></section><section ><section data-markdown><script type="text/template"># Science
+
+
+> The scientific method is an empirical method of acquiring knowledge that has characterized the development of science since at least the 17th century. It involves careful observation, applying rigorous skepticism about what is observed, given that cognitive assumptions can distort how one interprets the observation. It involves formulating hypotheses, via induction, based on such observations; experimental and measurement-based testing of deductions drawn from the hypotheses; and refinement (or elimination) of the hypotheses based on the experimental findings. -- [Wikipedia](https://en.wikipedia.org/wiki/Scientific_method)
+</script></section><section data-markdown><script type="text/template">## Excursion: The Seven Years' War (1754-63)
+
+Britain loses 1,512 sailors to enemy action...
+
+...and almost 100,000 to scurvy
+
+![Capture of the French ships Alcide and Lys in 1755 off Louisbourg by Boscawen's squadron](war.jpg "Capture of the French ships Alcide and Lys in 1755 off Louisbourg by Boscawen's squadron.")
+<!-- .element: class="stretch" -->
+
+
+(American part of [Seven Years' War](https://en.wikipedia.org/wiki/Seven_Years%27_War) known as [French and Indian War](https://en.wikipedia.org/wiki/French_and_Indian_War))
+</script></section><section data-markdown><script type="text/template">## James Lind (1716-94)
+
+<!-- colstart -->
+Possibly first ever controlled medical experiment in 1747
+
+Sailors on different ships supplemented with
+- [ ] hard cider
+- [ ] sulfric acid
+- [ ] vinegar
+- [ ] sea water
+- [x] oranges
+- [x] lemons
+- [ ] mixture of balsam of Peru, garlic, myrrh, mustard seed and radish root
+
+(initially dismissed as anecdotes since it didn't fit models of the disease; nobody paid attention until a proper Englishman repeated the experiment in 1794)
+<!-- col -->
+![James Lind](lind.jpg)
+<!-- colend --></script></section><section data-markdown><script type="text/template">## Evidence-Based Medicine
+
+Randomized double-blind trials accepted as gold standard in medical research
+
+![](placebo.jpg)
+<!-- .element: class="stretch" -->
+
+Long path towards evidence-based medicine (term coined in 1992)
+
+<aside class="notes"><p>Discuss what double-blind trial entails and why it is important</p>
+<p>Picture by <a href="https://pixabay.com/photos/cure-drug-cold-dose-the-disease-1006810/">frolicsomepl</a></p>
+</aside></script></section><section data-markdown><script type="text/template">## Example Research Questions
+
+<!-- colstart -->
+Does obtaining a CMU degree lead to a higher salary after graduation?
+![](graduation.jpg)
+<!-- col -->
+Do DNN produce higher accuracy models than random forests for forecasting the weather?
+![](weather.jpg)
+<!-- colend -->
+</script></section><section data-markdown><script type="text/template">## Controlled Experiment Design
+
+Start with hypothesis
+
+Goal: Testing the impact of independent variable X (treatment or no treatment) on outcome Y, ideally controlling all other influences that may affect Y
+
+Setup: Diving test subjects into two groups: with X (treatment group) and without X (control group), observing outcomes Y
+
+Results: Analyzing whether outcomes differ among the groups
+
+*What are X, Y, and test subjects for the graduation and weather forecast research questions?*</script></section><section data-markdown><script type="text/template">## Causal Inference with Controlled Experiments
+
+If both groups differ *only* in X, X causes difference in Y.
+
+***
+
+In practice, we usually cannot exactly repeat the same thing with and without X:
+* Don't have identical copies of test subjects (e.g., humans)
+* Subjects in different groups may have different characteristics, observable or not (e.g., one group mostly male, one group more intelligent)
+* Random other factors may influence Y (e.g., pure chance, weather in each subject's location)
+
+▶ Observed difference may be caused by factors other than X, called confounding variables
+
+</script></section><section data-markdown><script type="text/template">## Confounding Variables
+
+```mermaid
+graph TD;
+Coffee --> Cancer
+Coffee -.- Smoking
+Smoking ==> Cancer
+```
+
+Correlation != Causation
+
+<aside class="notes"><p>Coffee drinking has a strong correlation with cancer, but not a causal relation. The causal relationship is between smoking and cancer, but coffee drinking is correlated with smoking, hence the effect for smoking.</p>
+</aside></script></section><section data-markdown><script type="text/template">## Confounds for Example Research Questions?
+<!-- colstart -->
+![](graduation.jpg)
+<!-- col -->
+![](weather.jpg)
+<!-- colend -->
+
+</script></section><section data-markdown><script type="text/template">## Correlation vs Causation
+
+[![xkcd.com/552](https://imgs.xkcd.com/comics/correlation.png)](https://www.xkcd.com/552/)
+</script></section><section data-markdown><script type="text/template">## Handling Confounds
+
+Strategies:
+* Keep constant, matching
+    - e.g., same room, same demographic, same tasks
+    - eliminates influence, enables causal reasoning
+    - limits results to specific subject/conditions
+* Randomize
+    - given large enough random group, characteristics will balance out
+    - use statistics to assess chance of random effects
+* Measure and filter out later
+    - check whether groups were unbalanced
+    - regression modeling, exploring multiple factors, not just X
+    - commonly used in natural/quasi experiments where group assignment cannot be controlled
+
+
+**Examples?**
+
+<aside class="notes"><p>Without human subjects (e.g., comparing models) and with reliable measures for Y, we often have comparably little noise and can keep most factors constant.</p>
+<p>We&#39;ll come back to statistics in a bit.</p>
+</aside></script></section><section data-markdown><script type="text/template">## Research Design?
+
+<!-- colstart -->
+Does obtaining a CMU degree lead to a higher salary after graduation?
+![](graduation.jpg)
+<!-- col -->
+Do DNN produce higher accuracy models than random forests for forecasting the weather?
+![](weather.jpg)
+<!-- colend -->
+
+</script></section></section><section ><section data-markdown><script type="text/template"># Offline Experimentation
+</script></section><section data-markdown><script type="text/template">## Data Science is Exploratory and Iterative
+
+![Data Science Loop](datascienceloop.jpg)
+
+<!-- references -->
+Philip Guo. [Data Science Workflow: Overview and Challenges](https://cacm.acm.org/blogs/blog-cacm/169199-data-science-workflow-overview-and-challenges/fulltext). BLOG@CACM, 2013
+
+</script></section><section data-markdown><script type="text/template">## Constant Experimentation
+
+Which features improve the model? Which encoding? Normalization?
+
+Which modeling techniques might work better?
+
+How to tune the learning algorithm?
+
+Try more or different data?
+
+
+*Both: Ad-hoc testing & hypothesis-driven exploration*
+
+
+
+<!-- references -->
+
+Further reading: Kery, M. B., Radensky, M., Arya, M., John, B. E., & Myers, B. A. (2018, April). [The story in the notebook: Exploratory data science using a literate programming tool](https://dl.acm.org/citation.cfm?id=3173748). In Proceedings of the 2018 CHI Conference on Human Factors in Computing Systems (p. 174). ACM.
+</script></section><section data-markdown><script type="text/template">## Iterative Model Refinement
+
+```mermaid
+graph TD;
+init[Build initial model] --> measure[Measure model quality]
+measure --> feature[Add/modify features]
+feature --> measure
+measure --> param[Tweak parameters]
+param --> measure
+```
+
+Repeated evaluation of model quality until no further improvement or good enough
+
+Often on static learning and evaluation set
+</script></section><section data-markdown><script type="text/template">## Your Practices?
+
+<!-- discussion -->
+</script></section><section data-markdown><script type="text/template">## Experimentation Challenges
+
+* Notebooks allow lightweight experimentation, but 
+    * do not track history or rationale
+    * no easy merging
+    * comparison of many experiments challenging
+    * pervasive copy + paste editing
+    * later cleanup often needed
+* Experiments may be expensive (time + resources, learning + evaluation)
+* Overfitting despite separate evaluation set
+* Data versioning at scale
+
+<!-- references -->
+
+Further reading: Kery, M. B., Radensky, M., Arya, M., John, B. E., & Myers, B. A. (2018, April). [The story in the notebook: Exploratory data science using a literate programming tool](https://dl.acm.org/citation.cfm?id=3173748). In Proceedings of the 2018 CHI Conference on Human Factors in Computing Systems (p. 174). ACM.
+</script></section><section data-markdown><script type="text/template">[![PhD Comics: notFinal](http://www.phdcomics.com/comics/archive/phd101212s.gif)](http://phdcomics.com/comics/archive.php?comicid=1531)
+<!-- .element: class="stretch" --></script></section></section><section ><section data-markdown><script type="text/template"># Sensitivity Analysis
+
+<!-- references -->
+
+Further reading: Saltelli, Andrea, et al. Global sensitivity analysis: the primer. John Wiley & Sons, 2008.
+</script></section><section data-markdown><script type="text/template">## Sensitivity Analysis / What-If Analysis
+
+> The study of how uncertainty in the output of a model (numerical or otherwise) can be apportioned to different sources of uncertainty in the model input (Saltelli et al., 2008)
+
+Old idea for analyzing models: Which inputs are important?
+
+Example: Policy discussion for a new road -- Lots of stakeholders with conflicting opinions:
+* Which inputs make significant changes to the outcome and should be prioritized (e.g., in data collection and discussions)?
+* Which basic assumptions may affect the outcome if we revisited them?
+* Usually only few inputs create most of the variation.
+</script></section><section data-markdown><script type="text/template">## Case Discussion: Policy Model
+
+![Construction side](construction.jpg)
+
+<aside class="notes"><p>What factors might influence the policy decision to build new train tracks in a city or extend an airport?
+Which parameters are important for making an informed decision, which are not?</p>
+<p>Photo by <a href="https://pixabay.com/photos/site-demolition-work-demolition-3688262/">Michael Gaida</a></p>
+</aside></script></section><section data-markdown><script type="text/template">## Sensitivity Analysis 
+
+Goal: Understand influence of model choices and parameters
+
+Needs to understand the space
+
+For understanding, debugging, planning
+
+Examples: Understand influential features, test robustness
+
+<!-- split -->
+## Optimization
+
+Goal: Find the best choices and parameters
+
+Search problem
+
+For tuning
+
+Examples: Hyperparameter tuning, feature selection
+</script></section><section data-markdown><script type="text/template">## Classic Sensitivity Analysis Settings
+
+* Models of the real world (economics, policy, physics)
+* Lots of input parameters and constants 
+    - too many combinations to explore all (exponential explosion)
+* Models are often long running simulations (may take days to evaluate)
+    - e.g., climate change models, chemistry kinetics computer models
+* Many inputs are estimates or assumptions with some uncertainty
+    - e.g., future interest rates, carbon absorption of trees
+* Identify important parameters by testing which input changes affect the output's uncertainty most
+    * sampling and testing
+    * analytical methods
+</script></section><section data-markdown><script type="text/template">## Sensitivity Analysis Goals
+
+* Test the robustness of a model in the presence of uncertainty
+* Understand relationships between inputs and outputs
+* Uncertainty reduction and focus on important parameters
+* Debugging models, checking plausibility 
+* (Optimization)
+* Simplify the model
+* Enhance communication between modelers and decision makers
+
+> "For models to be used in impact assessment or other regulatory settings, it might be advisable to have a back-of-the-envelope version of the general model for the purpose of negotiating assumptions and inferences with stakeholders" (Saltelli et al., 2008.)
+
+<aside class="notes"><p>Further reading: <a href="https://en.wikipedia.org/wiki/Sensitivity_analysis">https://en.wikipedia.org/wiki/Sensitivity_analysis</a></p>
+</aside></script></section><section data-markdown><script type="text/template">## Sensitivity Analysis and AI
+
+* Models in machine learning and symbolic AI are often highly complex, hard to (fully) understand?
+* Often hundreds of features (inputs) are used, but which are important?
+* Features can be computed in different ways (e.g., normalization), but how robust is the model to such decisions?
+* Can complicated models be replaced with simpler ones?
+* How much does hyperparameter tuning affect results?
+* Is the model biased by input X (e.g., gender)?
+* 
+* Challenge: Often lots and lots of inputs
+* Opportunity: Evaluation of ML/AI models is relatively fast
+
+</script></section><section data-markdown><script type="text/template">## Sensitivity Analysis Techniques in a Nutshell
+
+* Simple models: Analytical methods  (e.g., derivative)
+* Commonly: Sampling-based approach
+    - Repeated speculative "what-if" changes to observe outcome
+    - Typically guided sampling strategy ("design of experiments")
+    - Calculating parameter influence on outcomes
+* Special handling for dependent/correlated inputs and interactions
+</script></section><section data-markdown><script type="text/template">## Plotted Influence of 4 Parameters
+
+100 random samples. Which parameter ($Z_1, Z_2, Z_3, Z_4$) has the most influence on $Y$?
+
+![](scatter.jpg)
+
+<aside class="notes"><p>Source: <a href="https://en.wikipedia.org/wiki/File:Scatter_plots_for_sensitivity_analysis_bis.jpg">https://en.wikipedia.org/wiki/File:Scatter_plots_for_sensitivity_analysis_bis.jpg</a></p>
+<p>Sampling-based sensitivity analysis by scatterplots. Y (vertical axis) is a function of four factors. The points in the four scatterplots are always the same though sorted differently, i.e. by Z1, Z2, Z3, Z4 in turn. Note that the abscissa is different for each plot: (−5, +5) for Z1, (−8, +8) for Z2, (−10, +10) for Z3 and Z4. Z4 is most important in influencing Y as it imparts more &#39;shape&#39; on Y.</p>
+</aside></script></section><section data-markdown><script type="text/template">## Exhaustive Search (Grid Search)
+
+* Explore all combinations of all variations of all inputs
+* Frequently used for hyperparameter optimization in small search spaces
+* Exponential search space
+* Covers all interactions, ideal for finding optimum
+* Readily implemented in many frameworks
+* Not feasible for most scenarios 
+</script></section><section data-markdown><script type="text/template">## One-at-a-time
+
+* Sampling:
+    * $S_0$ default assignment to all inputs
+    * For each input, create one sample that differs from $S_0$ only in that input (or multiple)
+* Compute influence as partial derivative or using linear regression
+* Simple, fast, practical, but cannot discover interactions
+*
+* Useful also for *screening*: identifying few significant inputs</script></section><section data-markdown><script type="text/template">## Regression analysis
+
+* Random sampling or other strategies
+* Fit linear regression model over findings
+    - optionally, use feature selection to keep model simple or explore interactions
+    - e.g. $3·z_1+.2·z_3-14.2·z_3·z_4$
+* Interpret sensitivity from model coefficients
+* Simple, computationally efficient, but limited to linear relationships
+*
+* **General strategy: Replacing one model with a simpler, less accurate, but more explainable model.**</script></section><section data-markdown><script type="text/template">![](splconqueror0.png)
+
+<!-- references -->
+
+Futher reading: N. Siegmund, A. Grebhahn, C. Kästner, and S. Apel. [Performance-Influence Models for Highly Configurable Systems](https://www.cs.cmu.edu/~ckaestne/pdf/fse15_influence.pdf). In Proceedings Symposium on the Foundations of Software Engineering (ESEC/FSE), pages 284--294, 2015.
+
+<aside class="notes"><p>Inputs are configuration options here and outputs performance measurements for specific configurations. In this case all inputs are boolean, 5 are shown. After sampling a set of configurations, a linear regression model can be fit to identify which options have the largest performance influence.
+Note that the regression model models all options but no interactions.</p>
+</aside></script></section><section data-markdown><script type="text/template">![](splconqueror.png)
+
+<!-- references -->
+
+Futher reading: N. Siegmund, A. Grebhahn, C. Kästner, and S. Apel. [Performance-Influence Models for Highly Configurable Systems](https://www.cs.cmu.edu/~ckaestne/pdf/fse15_influence.pdf). In Proceedings Symposium on the Foundations of Software Engineering (ESEC/FSE), pages 284--294, 2015.
+
+<aside class="notes"><p>The approach can be refined by adding interaction terms to the regression, typically as precomputed synthetic inputs. Since the number of potential interactions is quadratic for pairwise interactions and exponential for all interactions, typically only a select number of interactions is tried. This can be done with domain knowledge or with search strategies, such as trying pairwise combinations among all options that have a significant influence on their own.</p>
+</aside></script></section><section data-markdown><script type="text/template">## Sensitivity Analysis for Duplicate PR Detector
+
+* Project: ML classifier to detect duplicate pull requests on GitHub
+
+<!-- colstart -->
+![](intrude-pr.png)
+<!-- col -->
+![](intrude-sa.png)
+<!-- colend -->
+
+<!-- references -->
+L. Ren, S. Zhou, C. Kästner, and A. Wąsowski. [Identifying Redundancies in Fork-based Development](https://www.cs.cmu.edu/~ckaestne/pdf/saner19.pdf). In Proceedings of the 27th IEEE International Conference on Software Analysis, Evolution and Reengineering (SANER), pages 230--241, 2019.
+</script></section><section data-markdown><script type="text/template">## Robustness
+
+* How much does a model depend on a specific operationalization of a feature?
+    - can we measure delivery time with a different method and still get similar results?
+    - does a feature (e.g. code quality) need to be very accurate for our model to work effectively?
+    - how sensitive is our model to outliers?
+* Evaluate model accuracy with different features or versions of feature extractors
+
+</script></section><section data-markdown><script type="text/template">## Robustness Example
+
+Project: Explain which GitHub projects adopt badges in their repositories
+
+Modeling "code quality": (a) linter warnings, (b) commits with "fix" in description, (c) number of tests, (d) number of test files, (e) size of test files
+
+Output measure: model fit / stability of effects in models
+
+<!-- colstart -->
+![](badges.png)
+<!-- col -->
+![](badges-model.png)
+<!-- colend -->
+
+<!-- references -->
+
+A. Trockman, S. Zhou, C. Kästner, and B. Vasilescu. [Adding Sparkle to Social Coding: An Empirical Study of Repository Badges in the npm Ecosystem](https://www.cs.cmu.edu/~ckaestne/pdf/icse18badges.pdf). In Proceedings of the 40th International Conference on Software Engineering (ICSE), pages 511--522, 2018.
+
+<aside class="notes"><p>In this data analytics study, there were multiple ways of operationalizing and measuring an outcome (same robustness analysis can be done on inputs). A simple robustness check is whether the results change drastically when using a different measure that is supposed to measure the same underlying effect.</p>
+<p>If different proxy measures produce widely different answers, the model may pick up on characteristics of the measure more than the underlying effect. Conversely with multiple proxy measures for the same effect come to the same conclusion one can gain confidence that the results actually relate to the studied phenomenon.</p>
+</aside></script></section><section data-markdown><script type="text/template">## Sampling Strategies (Design of Experiments)
+
+* Sampling in high-dimensional spaces has been studied in detail
+* Random sampling as a baseline
+* Many designs exist that can explore spaces more systematically than random sampling
+* Constraints among inputs complicate all strategies
+
+<!-- colstart -->
+
+![](bb.gif)
+
+([Box-Behnken](https://en.wikipedia.org/wiki/Box%E2%80%93Behnken_design))
+
+<!-- col -->
+
+![](pb.gif)
+
+([Plackett-Burman](https://en.wikipedia.org/wiki/Plackett%E2%80%93Burman_design))
+
+<!-- colend -->
+</script></section><section data-markdown><script type="text/template">## Sensitivity Analysis in Soccer Commentary and Summary Project?
+For what purposes could sensitivity analysis be used? How?
+
+![Soccer](soccer.jpg) 
+
+<aside class="notes"><p>See the case study from the previous lecture.</p>
+</aside></script></section><section data-markdown><script type="text/template">## Other Examples of Sensitivity Analysis in AI Projects?
+
+<!-- discussion -->
+
+<aside class="notes"><p>Collect potential scenarios and concrete examples.</p>
+<p>Back to the list earlier:</p>
+<ul>
+<li>Models in machine learning and symbolic AI are often highly complex, hard to (fully) understand?</li>
+<li>Often hundreds of features (inputs) are used, but which are important?</li>
+<li>Features can be computed in different ways (e.g., normalization), but how robust is the model to such decisions?</li>
+<li>Can complicated models be replaced with simpler ones?</li>
+<li>How much does hyperparameter tuning affect results?</li>
+<li>Is the model biased by input X (e.g., gender)?</li>
+</ul>
+</aside></script></section><section data-markdown><script type="text/template">## Tool Support for Sensitivity Analysis?
+
+<!-- discussion -->
+
+
+
+</script></section></section><section ><section data-markdown><script type="text/template"># Online Experimentation
+</script></section><section data-markdown><script type="text/template">## What if...?
+ 
+* ... we hand plenty of subjects for experiments
+* ... we could randomly assign subjects to treatment and control group without them knowing
+* ... we could analyze small individual changes and keep everything else constant
+
+
+▶ Ideal conditions for controlled experiments
+
+![Amazon.com front page](amazon.png)
+</script></section><section data-markdown><script type="text/template">## A/B Testing for Usability
+
+* In running system, random sample of X users are shown modified version
+* Outcomes (e.g., sales, time on site) compared among groups
+
+![A/B test example](ab-groove.jpg)
+
+<aside class="notes"><p>Picture source: <a href="https://www.designforfounders.com/ab-testing-examples/">https://www.designforfounders.com/ab-testing-examples/</a></p>
+</aside></script></section><section data-markdown><script type="text/template">![A/B test example](ab-prescr.jpg)
+
+<aside class="notes"><p>Picture source: <a href="https://www.designforfounders.com/ab-testing-examples/">https://www.designforfounders.com/ab-testing-examples/</a></p>
+</aside></script></section><section data-markdown><script type="text/template">## Experiment Size
+
+* With enough subjects (users), we can run many many experiments
+* Even very small experiments become feasible
+* Toward causal inference
+
+![A/B test example of a single button's color](ab-button.png)
+
+</script></section><section data-markdown><script type="text/template">
+## Implementing A/B Testing
+
+* Implement alternative versions of the system
+    * using feature flags (decisions in implementation)
+    * separate deployments (decision in router/load balancer)
+* Map users to treatment group
+    * Randomly from distribution
+    * Static user - group mapping
+    * Online service (e.g., [launchdarkly](https://launchdarkly.com/), [split](https://www.split.io/))
+* Monitor outcomes *per group*
+    * Telemetry, sales, time on site, server load, crash rate</script></section><section data-markdown><script type="text/template">![split.io screenshot](splitio.png)
+<!-- .element: class="stretch" --> </script></section><section data-markdown><script type="text/template">
+## Comparing Averages
+
+<!-- colstart -->
+**Group A**
+
+2354158 Users
+
+average 3:13 min time on site
+
+<!-- col -->
+
+**Group B**
+
+1000 Users
+
+average 3:24 min time on site
+
+<!-- colend --></script></section><section data-markdown><script type="text/template">## Comparing Distributions
+
+![Two distributions, 10000 samples each from a normal distribution](twodist.png)
+</script></section><section data-markdown><script type="text/template">## Different effect size, same deviations
+
+<!-- colstart -->
+![](twodist.png)
+<!-- col -->
+![](twodisteffect.png)
+<!-- colend -->
+</script></section><section data-markdown><script type="text/template">## Same effect size, different deviations
+
+<!-- colstart -->
+![](twodist.png)
+<!-- col -->
+![](twodistnoise.png)
+<!-- colend -->
+
+Less noise --> Easier to recognize
+
+
+</script></section><section data-markdown><script type="text/template">
+## Dependent vs. independent measurements
+
+* Pairwise (dependent) measurements
+    * Before/after comparison
+    * With same benchmark + environment
+    * e.g., new operating system/disc drive faster
+* Independent measurements
+    * Repeated measurements
+    * Input data regenerated for each measurement
+</script></section><section data-markdown><script type="text/template">## Significance level
+* Statistical change of an error
+* Define before executing the experiment
+    * use commonly accepted values
+    * based on cost of a wrong decision
+* Common:
+    * 0.05 significant
+    * 0.01 very significant
+* Statistically significant result =!> proof
+* Statistically significant result =!> important result
+* Covers only alpha error (more later)
+</script></section><section data-markdown><script type="text/template">
+## Intuition: Error Model
+* 1 random error, influence +/- 1
+* Real mean: 10
+* Measurements: 9 (50%) und 11 (50%)
+*
+* 2 random errors, each +/- 1
+* Measurements: 8 (25%), 10 (50%) und 12 (25%)
+* 
+* 3 random errors, each +/- 1
+* Measurements : 7 (12.5%), 9 (37.5), 11 (37.5), 12 (12.5)</script></section><section data-markdown><script type="text/template"><iframe src='https://gfycat.com/ifr/PleasingMeaslyGalapagossealion' frameborder='0' scrolling='no' allowfullscreen width='640' height='524'></iframe></script></section><section data-markdown><script type="text/template">## Normal Distribution
+![Normal distribution](normaldist.png)
+
+<!-- references -->
+(CC 4.0 [D Wells](https://commons.wikimedia.org/wiki/File:Standard_Normal_Distribution.png))</script></section><section data-markdown><script type="text/template">## Confidence Intervals
+![](confint.png)</script></section><section data-markdown><script type="text/template">## Comparison with Confidence Intervals
+![](perfcomp.png)
+ 
+<!-- references -->
+Source: Andy Georges, Dries Buytaert, and Lieven Eeckhout. 2007. [Statistically rigorous java performance evaluation](https://dri.es/files/oopsla07-georges.pdf). In Proc. Conference on Object-Oriented Programming Systems and Applications (OOPSLA '07). ACM, 57-76.</script></section><section data-markdown><script type="text/template"># t-test
+
+```r
+> t.test(x, y, conf.level=0.9)
+
+        Welch Two Sample t-test
+
+t = 1.9988, df = 95.801, p-value = 0.04846
+alternative hypothesis: true difference in means is 
+not equal to 0 
+90 percent confidence interval:
+ 0.3464147 3.7520619 
+sample estimates:
+mean of x mean of y 
+ 51.42307  49.37383 
+
+> # paired t-test:
+> t.test(x-y, conf.level=0.9)
+```</script></section><section data-markdown><script type="text/template">![t-test in an A/B testing dashboard](testexample.png)
+<!-- references -->
+Source: https://conversionsciences.com/ab-testing-statistics/</script></section><section data-markdown><script type="text/template">![t-test in an A/B testing dashboard](testexample2.png)
+<!-- references -->
+Source: https://cognetik.com/why-you-should-build-an-ab-test-dashboard/</script></section><section data-markdown><script type="text/template">## How many samples needed?
+<!-- colstart -->
+**Too few?**
+
+<!-- Noise and random results -->
+<!-- col -->
+**Too many?**
+
+<!-- Risk of spreading bad designs -->
+<!-- colend -->
+
+
+<!-- discussion --></script></section><section data-markdown><script type="text/template">## A/B testing automation
+
+* Experiment configuration through DSLs/scripts
+* Queue experiments
+* Stop experiments when confident in results
+* Stop experiments resulting in bad outcomes (crashes, very low sales)
+* Automated reporting, dashboards
+
+<!-- references -->
+
+Further readings:
+* Tang, Diane, et al. [Overlapping experiment infrastructure: More, better, faster experimentation](https://ai.google/research/pubs/pub36500.pdf). Proceedings of the 16th ACM SIGKDD international conference on Knowledge discovery and data mining. ACM, 2010. (Google)
+* Bakshy, Eytan, Dean Eckles, and Michael S. Bernstein. [Designing and deploying online field experiments](https://arxiv.org/pdf/1409.3174). Proceedings of the 23rd International Conference on World Wide Web. ACM, 2014. (Facebook)</script></section><section data-markdown><script type="text/template">## DSL for scripting A/B tests at Facebook
+```java
+button_color = uniformChoice(
+    choices=['#3c539a', '#5f9647', '#b33316'],
+    unit=cookieid);
+
+button_text = weightedChoice(
+    choices=['Sign up', 'Join now'],
+    weights=[0.8, 0.2],
+    unit=cookieid); 
+
+if (country == 'US') {
+    has_translate = bernoulliTrial(p=0.2, unit=userid);
+} else {
+    has_translate = bernoulliTrial(p=0.05, unit=userid);
+}
+```
+<!-- references -->
+
+Further readings:
+* Bakshy, Eytan, Dean Eckles, and Michael S. Bernstein. [Designing and deploying online field experiments](https://arxiv.org/pdf/1409.3174). Proceedings of the 23rd International Conference on World Wide Web. ACM, 2014. (Facebook)</script></section><section data-markdown><script type="text/template">## Concurrent A/B testing
+
+* Multiple experiments at the same time
+    * Independent experiments on different populations -- interactions not explored
+    * Multi-factorial designs, well understood but typically too complex, e.g., not all combinations valid or interesting
+    * Grouping in sets of experiments
+
+<!-- references -->
+
+Further readings:
+* Tang, Diane, et al. [Overlapping experiment infrastructure: More, better, faster experimentation](https://ai.google/research/pubs/pub36500.pdf). Proceedings of the 16th ACM SIGKDD international conference on Knowledge discovery and data mining. ACM, 2010. (Google)
+* Bakshy, Eytan, Dean Eckles, and Michael S. Bernstein. [Designing and deploying online field experiments](https://arxiv.org/pdf/1409.3174). Proceedings of the 23rd International Conference on World Wide Web. ACM, 2014. (Facebook)</script></section></section><section ><section data-markdown><script type="text/template"># Planning and Tracking Experiments</script></section><section data-markdown><script type="text/template">## Your experimentation strategy?
+<!-- discussion --></script></section><section data-markdown><script type="text/template">## Lots of Experimentation
+
+* Exploration of alternatives
+  * Versions of a notebook
+  * Copied and edited notebook cells
+  * Branches in version control system
+* Parameter tuning
+</script></section><section data-markdown><script type="text/template">## Challenges
+
+* Tracking of experiments, versioning of modeling code *and* data
+* Slow experiments, slow feedback cycles
+* Many choices, many interactions
+* Many one-off experiments, little merging
+* Interaction with complex backends and datasets
+*
+* No standardized platforms</script></section><section data-markdown><script type="text/template">## Many solutions
+
+* Many companies develop their own platforms
+* Many research platforms
+* Many startups
+*
+* Common strategies
+  * Visual frontends
+  * Make experiments explicit steps, record all experiments
+  * Archive all modeling code for reproducability
+  * Store models, evaluation results
+  * Dashboards for visualization</script></section><section data-markdown><script type="text/template">## Example: Neptune
+
+![](https://miro.medium.com/max/3834/1*kxpOMPG3YSDrePd3M-Ft-Q.png)
+
+https://neptune.ml/</script></section><section data-markdown><script type="text/template">## Example: ModelDB
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/gxBb4CjJcxQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+https://github.com/mitdbg/modeldb
+</script></section><section data-markdown><script type="text/template">## Example: DVC 
+
+```sh
+dvc add images
+dvc run -d images -o model.p cnn.py
+dvc remote add myrepo s3://mybucket
+dvc push
+```
+
+* Tracks models and datasets
+* Splits learning into steps, incrementalization
+* Orchestrates learning in cloud resources
+
+
+https://dvc.org/
+</script></section><section data-markdown><script type="text/template">## Others
+
+* Pachyderm, pipelines and data versioning: https://www.pachyderm.io/
+* MissingLink for deep learning: https://missinglink.ai/
+* Michaelangeo at Uber: https://eng.uber.com/michelangelo/
+* Tensorflow Extended for reproducibility: https://www.tensorflow.org/tfx/
+</script></section></section><section  data-markdown><script type="text/template">
+
+# Interacting with and supporting data scientists
+
+<!-- discussion -->
+</script></section><section  data-markdown><script type="text/template"># Summary
+
+* Experimentation is important
+* Offline experimentation, adhoc + senstitivity analysis
+* Online experimentation: A/B testing
+  * Statistics
+  * Automation
+  * Dashboards
+* Infrastructure for experimentation</script></section></div>
+    </div>
+
+    <script src="./../js/reveal.js"></script>
+
+    <script>
+      function extend() {
+        var target = {};
+        for (var i = 0; i < arguments.length; i++) {
+          var source = arguments[i];
+          for (var key in source) {
+            if (source.hasOwnProperty(key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+        return target;
+      }
+
+      // Optional libraries used to extend on reveal.js
+      var deps = [
+        { src: './../lib/js/classList.js', condition: function() { return !document.body.classList; } },
+        { src: './../plugin/markdown/marked.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+        { src: './../plugin/markdown/markdown.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+        { src: './../plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+        { src: './../plugin/zoom-js/zoom.js', async: true },
+        { src: './../plugin/notes/notes.js', async: true },
+        { src: './../plugin/math/math.js', async: true }
+      ];
+
+      // default options to init reveal.js
+      var defaultOptions = {
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        dependencies: deps
+      };
+
+      // options from URL query string
+      var queryOptions = Reveal.getQueryHash() || {};
+
+      var options = extend(defaultOptions, {"controls":true,"progress":true,"theme":"white","slideNumber":true,"hash":true,"center":false}, queryOptions);
+    </script>
+
+    <script src="./../_assets/_assets/mermaid.min.js"></script>
+    <script src="./../_assets/_assets/loadmymarkdown.js"></script>
+
+    <script>
+      Reveal.initialize(options);
+    </script>
+  </body>
+</html>

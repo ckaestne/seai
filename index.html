@@ -1,0 +1,332 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset='utf-8'>
+    <title>Machine Learning in Production / AI Engineering</title>
+    <style type="text/css">
+    
+      @import url("https://fonts.googleapis.com/css?family=Chivo:900");.highlight table td{padding:5px}.highlight table pre{margin:0}.highlight,.highlight .w{color:#d0d0d0}.highlight .err{color:#151515;background-color:#ac4142}.highlight .c,.highlight .cd,.highlight .cm,.highlight .c1,.highlight .cs{color:#888}.highlight .cp{color:#f4bf75}.highlight .nt{color:#f4bf75}.highlight .o,.highlight .ow{color:#d0d0d0}.highlight .p,.highlight .pi{color:#d0d0d0}.highlight .gi{color:#90a959}.highlight .gd{color:#ac4142}.highlight .gh{color:#6a9fb5;font-weight:bold}.highlight .k,.highlight .kn,.highlight .kp,.highlight .kr,.highlight .kv{color:#aa759f}.highlight .kc{color:#d28445}.highlight .kt{color:#d28445}.highlight .kd{color:#d28445}.highlight .s,.highlight .sb,.highlight .sc,.highlight .sd,.highlight .s2,.highlight .sh,.highlight .sx,.highlight .s1{color:#90a959}.highlight .sr{color:#75b5aa}.highlight .si{color:#8f5536}.highlight .se{color:#8f5536}.highlight .nn{color:#f4bf75}.highlight .nc{color:#f4bf75}.highlight .no{color:#f4bf75}.highlight .na{color:#6a9fb5}.highlight .m,.highlight .mf,.highlight .mh,.highlight .mi,.highlight .il,.highlight .mo,.highlight .mb,.highlight .mx{color:#90a959}.highlight .ss{color:#90a959}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{font:inherit;font-size:100%;vertical-align:baseline;border:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-spacing:0;border-collapse:collapse}body{font-family:'Helvetica Neue', Helvetica, Arial, serif;font-size:1em;line-height:1.5;color:#6d6d6d;text-shadow:0 1px 0 rgba(255,255,255,0.8);background:#e7e7e7 url(../images/body-bg.png) 0 0 repeat}a{color:#d5000d}a:hover{color:#c5000c}h1{padding-top:35px} h1{font-family:'Chivo', 'Helvetica Neue', Helvetica, Arial, serif;font-size:48px;font-weight:900;line-height:1.2;color:#303030;letter-spacing:-1px} #cmu-17-445645-fall-2020 {font-size:24px;font-weight:normal;line-height:1.3;color:#aaa;letter-spacing:-1px}#container{min-height:595px;background:transparent url(../images/highlight-bg.jpg) 50% 0 no-repeat}.inner{width:620px;margin:0 auto}#container .inner img{max-width:100%}#downloads{margin-bottom:40px}a.button{display:block;float:left;width:179px;padding:12px 8px 12px 8px;margin-right:14px;font-size:15px;font-weight:bold;line-height:25px;color:#303030;background:#fdfdfd;background:-moz-linear-gradient(top, #fdfdfd 0%, #f2f2f2 100%);background:-webkit-gradient(linear, left top, left bottom, color-stop(0%, #fdfdfd), color-stop(100%, #f2f2f2));background:-webkit-linear-gradient(top, #fdfdfd 0%, #f2f2f2 100%);background:-o-linear-gradient(top, #fdfdfd 0%, #f2f2f2 100%);background:-ms-linear-gradient(top, #fdfdfd 0%, #f2f2f2 100%);background:linear-gradient(to top, #fdfdfd 0%, #f2f2f2 100%);filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#fdfdfd', endColorstr='#f2f2f2',GradientType=0 );border-top:solid 1px #cbcbcb;border-right:solid 1px #b7b7b7;border-bottom:solid 1px #b3b3b3;border-left:solid 1px #b7b7b7;border-radius:30px;-webkit-box-shadow:10px 10px 5px #888;-moz-box-shadow:10px 10px 5px #888;box-shadow:0px 1px 5px #e8e8e8;-moz-border-radius:30px;-webkit-border-radius:30px}a.button:hover{background:#fafafa;background:-moz-linear-gradient(top, #fdfdfd 0%, #f6f6f6 100%);background:-webkit-gradient(linear, left top, left bottom, color-stop(0%, #fdfdfd), color-stop(100%, #f6f6f6));background:-webkit-linear-gradient(top, #fdfdfd 0%, #f6f6f6 100%);background:-o-linear-gradient(top, #fdfdfd 0%, #f6f6f6 100%);background:-ms-linear-gradient(top, #fdfdfd 0%, #f6f6f6 100%);background:linear-gradient(to top, #fdfdfd 0%, #f6f6f6, 100%);filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#fdfdfd', endColorstr='#f6f6f6',GradientType=0 );border-top:solid 1px #b7b7b7;border-right:solid 1px #b3b3b3;border-bottom:solid 1px #b3b3b3;border-left:solid 1px #b3b3b3}a.button span{display:block;height:23px;padding-left:50px}#download-zip span{background:transparent url(../images/zip-icon.png) 12px 50% no-repeat}#download-tar-gz span{background:transparent url(../images/tar-gz-icon.png) 12px 50% no-repeat}#view-on-github span{background:transparent url(../images/octocat-icon.png) 12px 50% no-repeat}#view-on-github{margin-right:0}code,pre{margin-bottom:30px;font-family:Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal;font-size:14px;color:#222}code{padding:0 3px;background-color:#f2f2f2;border:solid 1px #ddd}pre{padding:20px;overflow:auto;color:#f2f2f2;text-shadow:none;background:#303030}pre code{padding:0;color:#f2f2f2;background-color:#303030;border:none}ul,ol,dl{margin-bottom:20px}hr{height:1px;padding-bottom:1em;margin-top:1em;line-height:1px;background:transparent url("../images/hr.png") 50% 0 no-repeat;border:none}strong{font-weight:bold}em{font-style:italic}table{width:100%;border:1px solid #ebebeb}th{font-weight:500}td{font-weight:300;border:1px solid #ebebeb}form{padding:20px;background:#f2f2f2}h2{margin-bottom:8px;font-size:22px;font-weight:bold;color:#303030}h3{margin-bottom:8px;font-size:18px;font-weight:bold;color:#d5000d}h4{font-size:16px;font-weight:bold;color:#303030}h5{font-size:1em;color:#303030}h6{font-size:.8em;color:#303030}p{margin-bottom:20px;font-weight:300}a{text-decoration:none}p a{font-weight:400}blockquote{padding:0 0 0 30px;margin-bottom:20px;font-size:1.6em;border-left:10px solid #e9e9e9}ul li{list-style-position:inside;list-style:disc;}ol li{list-style-position:inside;list-style:decimal;padding-left:3px}dl dt{color:#303030}footer{padding-top:20px;padding-bottom:30px;margin-top:40px;font-size:13px;color:#aaa;background:transparent url("../images/hr.png") 0 0 no-repeat}footer a{color:#666}footer a:hover{color:#444}.clearfix:after{display:block;height:0;clear:both;visibility:hidden;content:'.'}.clearfix{display:inline-block}* html .clearfix{height:1%}.clearfix{display:block}@media only screen and (max-width: 767px){header{padding-top:10px;padding-bottom:10px}#downloads{margin-bottom:25px}#download-zip,#download-tar-gz{display:none}.inner{width:94%;margin:0 auto}}
+      td {padding:4px;border-bottom:2px solid #dddddd;}
+      th {border-top: 1px solid black; border-bottom: 1px solid black;}
+      tr:nth-child(even) {
+        background-color: #eeeeee
+      }
+      table{margin-bottom: 8px}
+    </style>
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <div id="container">
+      <div class="inner">
+
+        <section id="main_content">
+
+<h1 id="machine-learning-in-production--ai-engineering-17-44517-64517-74511-695">Machine Learning in Production / AI Engineering (17-445/17-645/17-745/11-695)</h1>
+<p>*Formerly <strong>Software Engineering for AI-Enabled Systems (SE4AI)</strong>, CMU course that covers how to build, deploy, assure, and maintain applications with machine-learned models. Covers <strong>responsible AI</strong> (safety, security, fairness, explainability, transparency) and <strong>MLOps</strong>.*</p>
+<hr>
+<p><img src="overview.svg" alt="Course topics overview" title="Course topics overview"></p>
+<p>In 2022, the class will be offered both in the Spring and the Fall semester. In 2023, it will be offered at least in the spring. In all offerings since 2021, the class does not have formal prerequisites, but expects some familiarity with machine learning concepts and basic programming skills. </p>
+<p>See the specific offering of the course you are interested in:</p>
+<ul>
+<li>Fall 2019: <a href="https://ckaestne.github.io/seai/F2019">F2019 website</a> and <a href="https://github.com/ckaestne/seai/tree/F2019">F2019 GitHub branch</a>.</li>
+<li>Summer 2020 (with video recordings):  <a href="https://ckaestne.github.io/seai/S2020">S2020 website</a> and <a href="https://github.com/ckaestne/seai/tree/S2020">S2020 GitHub branch</a></li>
+<li>Fall 2020: <a href="https://ckaestne.github.io/seai/F2020">F2020 website</a> and <a href="https://github.com/ckaestne/seai/tree/F2020">F2020 GitHub branch</a></li>
+<li>Spring 2021: <a href="https://ckaestne.github.io/seai/S2021">S2021 website</a> and <a href="https://github.com/ckaestne/seai/tree/S2021">S2021 GitHub branch</a></li>
+<li>Spring 2022: <a href="https://ckaestne.github.io/seai/S2022">S2022 website</a> and <a href="https://github.com/ckaestne/seai/tree/S2022">S2022 GitHub branch</a></li>
+<li>Fall 2022: website tbd.</li>
+</ul>
+<p>For researchers, educators, or others interested in this topic, we share all course material, including slides and assignments, under a creative commons license on GitHub (<a href="https://github.com/ckaestne/seai/">https://github.com/ckaestne/seai/</a>) and have recently published an article describing the rationale and the design of this course: <a href="https://arxiv.org/abs/2001.06691">Teaching Software Engineering for AI-Enabled Systems</a>. Video recordings of the Summer 2020 offering are online on the <a href="https://ckaestne.github.io/seai/S2020/#course-content">course page</a>. We would be happy to see this course or a similar version taught at other universities. A <a href="https://ckaestne.medium.com/machine-learning-in-production-book-overview-63be62393581">textbook</a> is on the way. See also an <a href="https://github.com/ckaestne/seaibib">annotated bibliography</a> on the topic.</p>
+<h2 id="course-description">Course Description</h2>
+<p>This is a course for those who want to build <strong>applications</strong> and <strong>products</strong> with <strong>machine learning</strong>. Assuming we can learn a model to make predictions, what does it take to turn the model into a product and actually deploy it, build a business, and successfully operate and maintain it? </p>
+<p>The course is designed to establish a working relationship between <strong>software engineers</strong> and <strong>data scientists</strong>: both contribute to building production ML systems but have different expertise and focuses. To work together they need a mutual understanding of their roles, tasks, concerns, and goals and build a working relationship. This course is aimed at <strong>software engineers</strong> who want to build robust and responsible systems meeting the specific challenges of working with ML components and at <strong>data scientists</strong> who want to facilitate getting a prototype model into production; it facilitates communication and collaboration between both roles. <em>The course focuses on all the steps needed to turn a model into a production system.</em></p>
+<p>It covers topics such as:</p>
+<ul>
+<li><strong>How to design for wrong predictions the model may make?</strong> How to assure <em>safety</em> and <em>security</em> despite possible mistakes? How to design the <em>user interface</em> and the entire system to operate in the real world?</li>
+<li><strong>How to reliably deploy and update models in production?</strong> How can we <em>test</em> the entire machine learning pipeline? How can <em>MLOps</em> tools help to automate and scale the deployment process? How can we <em>experiment in production</em> (A/B testing, canary releases)? How do we detect <em>data quality</em> issues,  <em>concept drift</em>, and <em>feedback loops</em> in production?</li>
+<li><strong>How do we scale production ML systems?</strong> How do we design a system to process huge amounts of training data, telemetry data, and user requests? Should we use stream processing, batch processing, lambda architecture, or data lakes?</li>
+<li><strong>How to we test and debug production ML systems?</strong> How can we <em>evaluate</em> the quality of a model’s predictions in production? How can we <em>test</em> the entire AI-enabled system, not just the model? What lessons can we learn from <em>software testing</em>, <em>automated test case generation</em>, <em>simulation</em>, and <em>continuous integration</em> for testing for production machine learning?</li>
+<li><strong>Which qualities matter beyond a model’s prediction accuracy?</strong> How can we identify and measure important quality requirements, including <em>learning and inference latency, operating cost, scalability, explainablity, fairness, privacy, robustness</em>, and <em>safety</em>? Does the application need to be able to <em>operate offline</em> and how often do we need to update the models? How do we identify what’s important in a AI-enabled product in a production setting for a business? How do we resolve <em>conflicts</em> and <em>tradeoffs</em>?</li>
+<li><strong>What does it take to build responsible products?</strong> How to think about fairness of a production system at the model and system level? How to mitigate safety and security concerns? How can we communicate the reasons of an automated decision or explain uncertainty to users?</li>
+<li><strong>How do we build effective interdisciplinary teams?</strong> How can we bring data scientists, software engineers, UI designers, managers, domain experts, big data specialists, operators, legal council, and other roles together and develop a <em>shared understanding</em> and <em>team culture</em>?</li>
+</ul>
+<p>Examples of ML-driven products we discuss include automated audio transcription; distributed detection of missing children on webcams and instant translation in augmented reality; cancer detection, fall detection, COVID diagnosis, and other smart medical and health services; automated slide layout in Powerpoint; semi-automated college admissions; inventory management; smart playlists and movie recommendations; ad fraud detection; delivery robots and smart driving features; and many others.</p>
+<p>An extended group project focuses on building, deploying, evaluating, and maintaining a robust and scalable <em>movie recommendation service</em> under realistic  “production” conditions.</p>
+<h3 id="learning-outcomes">Learning Outcomes</h3>
+<p>After taking this course, among others, students should be able to</p>
+<ul>
+<li>analyze tradeoffs for designing production systems with AI-components, analyzing various qualities beyond accuracy such as operation cost, latency, updateability, and explainability</li>
+<li>implement production-quality systems that are robust to mistakes of AI components</li>
+<li>design fault-tolerant and scalable data infrastructure for learning models, serving models, versioning, and experimentation</li>
+<li>ensure quality of the entire machine learning pipeline with test automation and other quality assurance techniques, including automated checks for data quality, data drift, feedback loops, and model quality</li>
+<li>build systems that can be tested in production and build deployment pipelines that allow careful rollouts and canary testing</li>
+<li>consider privacy, fairness, and security when building complex AI-enabled systems</li>
+<li>communicate effectively in teams with both software engineers and data analysts</li>
+</ul>
+<p>In addition, students will gain familiarity with production-quality infrastructure tools, including stream processing with Apache Kafka, distributed data storage with SQL and NoSQL databases, deployment with Docker and Kubernetes, and test automation with Travis or Jenkins.</p>
+<h3 id="design-rationale">Design Rationale</h3>
+<ul>
+<li>Data scientists often make great progress at building models with cutting edge techniques but turning those models into products is challenging. For example, data scientists may work with unversioned notebooks on static data sets and focus on prediction accuracy while ignoring scalability, robustness, update latency, or operating cost.</li>
+<li>Software engineers are trained with clear specifications and tend to focus on code, but may not be aware of the difficulties of working with data and unreliable models. They have a large toolset for decision making and quality assurance but it is not obvious how to apply those to AI-enabled systems and their challenges.</li>
+<li>To what degree can existing SE practices be used for building intelligent systems? To what degree are new practices needed?</li>
+<li>This course adopts a software engineering and operator perspective on building intelligent systems, focusing on how to turn a machine learning idea into a scalable and reliable product. Rather than focusing on modeling and learning itself, it assumes a working relationship with a data scientist and focuses on issues of design, implementation, operation, and assurance and how those interact with the data scientist&#39;s modeling.</li>
+<li>The course will use software and systems engineering terminology and techniques (e.g., test coverage, architecture views, fault trees) and make explicit transfers to challenges posed by using machine learning/AI components. The course will not teach fundamentals of machine learning or AI, but will assume a basic understanding of relevant concepts (e.g., feature engineering, linear regression vs fault trees vs neural networks). It will heavily train design thinking and tradeoff analysis. It will focus primarily on practical approaches that can be used now and will feature hands-on practice with modern tools and infrastructure.</li>
+</ul>
+<h2 id="logistics-and-people">Logistics and People</h2>
+<p>See the specific offering for details: <a href="https://ckaestne.github.io/seai/F2019">Fall 2019</a>, <a href="https://ckaestne.github.io/seai/S2020">Summer 2020</a>, <a href="https://ckaestne.github.io/seai/F2020">Fall 2020</a>, <a href="https://ckaestne.github.io/seai/S2021">Spring 2021</a> or <a href="https://ckaestne.github.io/seai/S2022">Spring 2022</a></p>
+<h2 id="course-content">Course content</h2>
+<p>For a description of topics covered and course structure, see <a href="https://github.com/ckaestne/seai/blob/S2022/learning_goals.md">learning goals</a>.</p>
+<p>The course content evolves from semester to semester. Below is the schedule from the Summer 2020 offering. See the webpages for specific semesters above.</p>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Topic</th>
+<th>Reading</th>
+<th>Assignment due</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Tue, May 19</td>
+<td><a href="https://ckaestne.github.io/seai/S2020/slides/01_introduction/intro.html">Introduction and Motivation</a> (<a href="https://github.com/ckaestne/seai/blob/S2020/lectures/01_introduction/intro.md">md</a>, <a href="https://ckaestne.github.io/seai/S2020/slides/01_introduction/intro.pdf">pdf</a>, <a href="https://youtu.be/Wst5A6ZB7Bg">video</a>)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Wed, May 20</td>
+<td><img src="https://img.shields.io/badge/-rec-Yellow.svg" alt="Recitation"> <a href="https://github.com/ckaestne/seai/blob/S2020/recitations/01_kafka.pdf">Apache Kafka</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Thu, May 21</td>
+<td><a href="https://ckaestne.github.io/seai/S2020/slides/02_aibasics1/introml.html">Artificial Intelligence for Software Engineers 1</a> (<a href="https://github.com/ckaestne/seai/blob/S2020/lectures/02_aibasics1/introml.md">md</a>, <a href="https://ckaestne.github.io/seai/S2020/slides/02_aibasics1/introml.pdf">pdf</a>, <a href="https://youtu.be/Ccku34DU7k4">video</a>)</td>
+<td><a href="https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436">Building Intelligent Systems</a>, Ch. 16-18, 20</td>
+<td></td>
+</tr>
+<tr>
+<td>Tue, May 26</td>
+<td><a href="https://ckaestne.github.io/seai/S2020/slides/03_aibasics2/aioverview.html">Artificial Intelligence for Software Engineers 2</a> (<a href="https://github.com/ckaestne/seai/blob/S2020/lectures/03_aibasics2/aioverview.md">md</a>, <a href="https://ckaestne.github.io/seai/S2020/slides/03_aibasics2/aioverview.pdf">pdf</a>, <a href="https://youtu.be/yO5Rm8HAQd0">video</a>)</td>
+<td><a href="https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019665684604436">Hands-On Machine Learning</a> Ch. 2</td>
+<td><a href="https://github.com/ckaestne/seai/blob/S2020/assignments/I1_case_study.md">I1 Case Study</a></td>
+</tr>
+<tr>
+<td>Wed, May 27</td>
+<td><img src="https://img.shields.io/badge/-rec-Yellow.svg" alt="Recitation"> <a href="https://github.com/ckaestne/seai/blob/S2020/recitations/02_Scikit_learn.ipynb">Computational notebooks and scikit-learn</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Thu, May 28</td>
+<td><a href="https://ckaestne.github.io/seai/S2020/slides/04_modelquality/modelquality.html">Model Quality</a> (<a href="https://github.com/ckaestne/seai/blob/S2020/lectures/04_modelquality/modelquality.md">md</a>, <a href="https://ckaestne.github.io/seai/S2020/slides/04_modelquality/modelquality.pdf">pdf</a>, <a href="https://youtu.be/DDMNH0VMIIo">video</a>, <a href="https://medium.com/@ckaestne/a-software-testing-view-on-machine-learning-model-quality-d508cb9e20a6">blog post</a>)</td>
+<td><a href="https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436">Building Intelligent Systems</a>, Ch. 19-20 and <a href="https://www.aclweb.org/anthology/P18-1079.pdf">Semantically equivalent adversarial rules for debugging NLP models</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Tue, Jun 02</td>
+<td><a href="https://ckaestne.github.io/seai/S2020/slides/05_system/systems.html">From Models to AI-Enabled Systems (Systems Thinking)</a> (<a href="https://github.com/ckaestne/seai/blob/S2020/lectures/05_system/systems.md">md</a>, <a href="https://ckaestne.github.io/seai/S2020/slides/05_system/systems.pdf">pdf</a>, <a href="https://youtu.be/svKnXt1BnzM">video</a>)</td>
+<td><a href="https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436">Building Intelligent Systems</a>, Ch. 5 and <a href="http://papers.nips.cc/paper/5656-hidden-technical-debt-in-machine-learning-systems.pdf">Hidden Technical Debt in Machine Learning Systems</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Wed, Jun 03</td>
+<td><img src="https://img.shields.io/badge/-rec-Yellow.svg" alt="Recitation"> <a href="https://github.com/ckaestne/seai/blob/S2020/recitations/03_Deep_Learning.ipynb">Deep Learning</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Thu, Jun 04</td>
+<td><a href="https://ckaestne.github.io/seai/S2020/slides/06_goals/goals.html">Goals and Success Measures for AI-Enabled Systems</a> (<a href="https://github.com/ckaestne/seai/blob/S2020/lectures/06_goals/goals.md">md</a>, <a href="https://ckaestne.github.io/seai/S2020/slides/06_goals/goals.pdf">pdf</a>, <a href="https://youtu.be/LJVzI2u-QJc">video</a>)</td>
+<td><a href="https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436">Building Intelligent Systems</a>, Ch. 2, 4, and 15</td>
+<td></td>
+</tr>
+<tr>
+<td>Tue, Jun 09</td>
+<td><a href="https://ckaestne.github.io/seai/S2020/slides/07_tradeoffs/tradeoffs.html">Tradeoffs among Modeling Techniques</a> (<a href="https://github.com/ckaestne/seai/blob/S2020/lectures/07_tradeoffs/tradeoffs.md">md</a>, <a href="https://ckaestne.github.io/seai/S2020/slides/07_tradeoffs/tradeoffs.pdf">pdf</a>, <a href="https://youtu.be/Ti0pjzXaFBs">video</a>)</td>
+<td><a href="https://arxiv.org/pdf/1908.04674.pdf">Requirements Engineering for Machine Learning</a></td>
+<td><a href="https://github.com/ckaestne/seai/blob/S2020/assignments/I2_modeling_basics.md">I2 Modeling Basics</a></td>
+</tr>
+<tr>
+<td>Wed, Jun 10</td>
+<td><img src="https://img.shields.io/badge/-rec-Yellow.svg" alt="Recitation"> <a href="https://github.com/ckaestne/seai/blob/S2020/recitations/04_measurement.pdf">Measurement</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Thu, Jun 11</td>
+<td><a href="https://ckaestne.github.io/seai/S2020/slides/08_mistakes/mistakes.html">Risk and Planning for Mistakes</a> (<a href="https://github.com/ckaestne/seai/blob/S2020/lectures/08_mistakes/mistakes.md">md</a>, <a href="https://ckaestne.github.io/seai/S2020/slides/08_mistakes/mistakes.pdf">pdf</a>, <a href="https://www.youtube.com/watch?v=AYh5bJ2SR48">video</a>, <a href="https://medium.com/@ckaestne/a-software-testing-view-on-machine-learning-model-quality-d508cb9e20a6">blog post</a><a href="https://medium.com/@ckaestne/the-world-and-the-machine-and-responsible-machine-learning-1ae72353c5ae">https://medium.com/@ckaestne/the-world-and-the-machine-and-responsible-machine-learning-1ae72353c5ae</a>)</td>
+<td><a href="https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436">Building Intelligent Systems</a>, Ch. 6–8, 24</td>
+<td></td>
+</tr>
+<tr>
+<td>Tue, Jun 16</td>
+<td><a href="https://ckaestne.github.io/seai/S2020/slides/09_architecture/architecture.html">Software Architecture of AI-Enabled Systems</a> (<a href="https://github.com/ckaestne/seai/blob/S2020/lectures/09_architecture/architecture.md">md</a>, <a href="https://ckaestne.github.io/seai/S2020/slides/09_architecture/architecture.pdf">pdf</a>, <a href="https://www.youtube.com/watch?v=KIC-sFz5OT8">video</a>)</td>
+<td><a href="https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436">Building Intelligent Systems</a>, Ch. 13 and <a href="https://www.theorylane.com/2017/10/20/some-development-patterns-in-data-science/">Exploring Development Patterns in Data Science</a></td>
+<td><a href="https://github.com/ckaestne/seai/blob/S2020/assignments/I3_tradeoffs.md">I3 Tradeoff</a></td>
+</tr>
+<tr>
+<td>Wed, Jun 17</td>
+<td><img src="https://img.shields.io/badge/-rec-Yellow.svg" alt="Recitation"> <a href="https://github.com/ckaestne/seai/blob/S2020/recitations/05_requirements.pdf">Requirements decomposition</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Thu, Jun 18</td>
+<td><a href="https://ckaestne.github.io/seai/S2020/slides/10_qainproduction/qainproduction.html">Quality Assessment in Production</a> (<a href="https://github.com/ckaestne/seai/blob/S2020/lectures/10_qainproduction/qainproduction.md">md</a>, <a href="https://ckaestne.github.io/seai/S2020/slides/10_qainproduction/qainproduction.pdf">pdf</a>, <a href="https://youtu.be/RaaNSXKFDGk">video</a>)</td>
+<td><a href="https://landing.google.com/sre/workbook/chapters/canarying-releases/">Canarying Releases</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Tue, Jun 23</td>
+<td><a href="https://ckaestne.github.io/seai/S2020/slides/11_dataquality/dataquality.html">Data Quality and Data Programming</a> (<a href="https://github.com/ckaestne/seai/blob/S2020/lectures/11_dataquality/dataquality.md">md</a>, <a href="https://ckaestne.github.io/seai/S2020/slides/11_dataquality/dataquality.pdf">pdf</a>, <a href="https://www.youtube.com/watch?v=60lBFv9tyWk">video</a>, <a href="https://www.youtube.com/watch?v=6e6aI4yjAxc">video2</a>)</td>
+<td><a href="http://www.vldb.org/pvldb/vol11/p1781-schelter.pdf">Automating large-scale data quality verification</a> and <a href="http://learningsys.org/nips17/assets/papers/paper_19.pdf">The Data Linter</a></td>
+<td><a href="https://github.com/ckaestne/seai/blob/S2020/assignments/I4_requirements_architecture.md">I4 Requirements and Architecture</a></td>
+</tr>
+<tr>
+<td>Wed, Jun 24</td>
+<td><img src="https://img.shields.io/badge/-rec-Yellow.svg" alt="Recitation"> <a href="https://github.com/ckaestne/seai/blob/S2020/recitations/06_Collaborative_Filtering.ipynb">Collaborative filtering</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Thu, Jun 25</td>
+<td>Invited talk “<a href="https://www.youtube.com/watch?v=_bvrzYOA8dY">Business Systems with Machine Learning</a>” by Molham Aref</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Tue, Jun 30</td>
+<td><a href="https://ckaestne.github.io/seai/S2020/slides/12_dataatscale/dataatscale.html">Managing and Processing Large Datasets</a> (<a href="https://github.com/ckaestne/seai/blob/S2020/lectures/12_dataatscale/dataatscale.md">md</a>, <a href="https://ckaestne.github.io/seai/S2020/slides/12_dataatscale/dataatscale.pdf">pdf</a>, <a href="https://youtu.be/iPmQ5ezQNPY">video</a>)</td>
+<td><a href="https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019578119704436">Designing Data-Intensive Applications</a>, Ch. 1</td>
+<td><a href="https://github.com/ckaestne/seai/blob/S2020/assignments/project.md">QA Project Milestone 1</a></td>
+</tr>
+<tr>
+<td>Wed, Jul 01</td>
+<td><img src="https://img.shields.io/badge/-rec-Yellow.svg" alt="Recitation"> Review session</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Thu, Jul 02</td>
+<td><a href="https://github.com/ckaestne/seai/blob/S2020/exams/midterm.pdf"><strong>Midterm</strong></a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Tue, Jul 07</td>
+<td><a href="https://ckaestne.github.io/seai/S2020/slides/13_infrastructurequality/infrastructurequality.html">Infrastructure Quality, Deployment, and Operations</a> (<a href="https://github.com/ckaestne/seai/blob/S2020/lectures/13_infrastructurequality/infrastructurequality.md">md</a>, <a href="https://ckaestne.github.io/seai/S2020/slides/13_infrastructurequality/infrastructurequality.pdf">pdf</a>, <a href="https://www.youtube.com/watch?v=iBaJgWjpK24">video</a>)</td>
+<td><a href="https://research.google.com/pubs/archive/46555.pdf">The ML Test Score</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Wed, Jul 08</td>
+<td><img src="https://img.shields.io/badge/-rec-Yellow.svg" alt="Recitation"> <a href="https://github.com/ckaestne/seai/tree/S2020/recitations/07_Monitoring">Monitoring</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Thu, Jul 09</td>
+<td><a href="https://ckaestne.github.io/seai/S2020/slides/14_fairness1/fairness1.html">Intro to Ethics + Fairness</a> (<a href="https://github.com/ckaestne/seai/blob/S2020/lectures/14_fairness1/fairness1.md">md</a>, <a href="https://ckaestne.github.io/seai/S2020/slides/14_fairness1/fairness1.pdf">pdf</a>, <a href="https://www.youtube.com/watch?v=0wCJKw3-siY">video</a>)</td>
+<td><a href="https://datasociety.net/wp-content/uploads/2018/04/Data_Society_Algorithmic_Accountability_Primer_FINAL-4.pdf">Algorithmic Accountability: A Primer</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Tue, Jul 14</td>
+<td><a href="https://ckaestne.github.io/seai/S2020/slides/15_fairness2/fairness2.html">Building Fairer AI-Enabled System</a> (<a href="https://github.com/ckaestne/seai/blob/S2020/lectures/15_fairness2/fairness2.md">md</a>, <a href="https://ckaestne.github.io/seai/S2020/slides/15_fairness2/fairness2.pdf">pdf</a>, <a href="https://www.youtube.com/watch?v=iFgJiEz3jz0">video</a>)</td>
+<td><a href="http://users.umiacs.umd.edu/~hal/docs/daume19fairness.pdf">Improving fairness in machine learning systems</a></td>
+<td><a href="https://github.com/ckaestne/seai/blob/S2020/assignments/I5_se4ai_tools.md">I5 Open Source Tools</a></td>
+</tr>
+<tr>
+<td>Wed, Jul 15</td>
+<td><img src="https://img.shields.io/badge/-rec-Yellow.svg" alt="Recitation"> <a href="https://github.com/ckaestne/seai/tree/S2020/recitations/08_Kubernetes">Container orchestration</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Thu, Jul 16</td>
+<td><a href="https://ckaestne.github.io/seai/S2020/slides/16_explainability/explainability.html">Explainability &amp; Interpretability 1</a> (<a href="https://github.com/ckaestne/seai/blob/S2020/lectures/16_explainability/explainability.md">md</a>, <a href="https://ckaestne.github.io/seai/S2020/slides/16_explainability/explainability.pdf">pdf</a>, <a href="https://youtu.be/JJTCnlMXJ0M">video</a>)</td>
+<td><a href="https://dataskeptic.com/blog/episodes/2020/black-boxes-are-not-required">Black boxes not required</a> or <a href="https://arxiv.org/abs/1811.10154">Stop Explaining Black Box ML Models…</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Tue, Jul 21</td>
+<td><a href="https://ckaestne.github.io/seai/S2020/slides/16_explainability/explainability.html">Explainability &amp; Interpretability 2</a> (<a href="https://github.com/ckaestne/seai/blob/S2020/lectures/16_explainability/explainability.md">md</a>, <a href="https://ckaestne.github.io/seai/S2020/slides/16_explainability/explainability.pdf">pdf</a>, <a href="https://www.youtube.com/watch?v=3xm5rMM_rCY">video</a>)</td>
+<td><a href="https://pair.withgoogle.com/chapter/explainability-trust/">People + AI, Ch. “Explainability and Trust”</a></td>
+<td><a href="https://github.com/ckaestne/seai/blob/S2020/assignments/project.md">QA Project Milestone 2</a></td>
+</tr>
+<tr>
+<td>Wed, Jul 22</td>
+<td><img src="https://img.shields.io/badge/-rec-Yellow.svg" alt="Recitation"> <a href="https://github.com/ckaestne/seai/blob/S2020/recitations/09_fairness.pdf">Fairness</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Thu, Jul 23</td>
+<td><a href="https://ckaestne.github.io/seai/S2020/slides/18_provenance/provenance.html">Versioning, Provenance, and Reproducability</a> (<a href="https://github.com/ckaestne/seai/blob/S2020/lectures/18_provenance/provenance.md">md</a>, <a href="https://ckaestne.github.io/seai/S2020/slides/18_provenance/provenance.pdf">pdf</a>, <a href="https://www.youtube.com/watch?v=eGlIW28eRfA">video</a>)</td>
+<td><a href="https://www.buildingintelligentsystems.com/">Building Intelligent Systems</a>, Ch. 21 &amp; <a href="http://research.google.com/pubs/archive/45390.pdf">Goods: Organizing Google&#39;s Datasets</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Tue, Jul 28</td>
+<td><a href="https://ckaestne.github.io/seai/S2020/slides/19_security/security.html">Security, Adversarial Learning, and Privacy</a> (<a href="https://github.com/ckaestne/seai/blob/S2020/lectures/19_security/security.md">md</a>, <a href="https://ckaestne.github.io/seai/S2020/slides/19_security/security.pdf">pdf</a>, <a href="https://www.youtube.com/watch?v=5ZdrNYvTmq8">video</a>, <a href="https://store.robotime.com/product/rokr/locomotive-lk701/">train</a>)</td>
+<td><a href="https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436">Building Intelligent Systems</a>, Ch. 13 &amp; <a href="https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019698987304436">Prediction machines</a>, Ch. 19</td>
+<td><a href="https://github.com/ckaestne/seai/blob/S2020/assignments/I6_fairness.md">I6 Fairness</a></td>
+</tr>
+<tr>
+<td>Wed, Jul 29</td>
+<td><img src="https://img.shields.io/badge/-rec-Yellow.svg" alt="Recitation"> <a href="https://github.com/ckaestne/seai/blob/S2020/recitations/10_Threat_Modeling.pdf">Threat modeling</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Thu, Jul 30</td>
+<td><a href="https://ckaestne.github.io/seai/S2020/slides/20_safety/safety.html">Safety</a> (<a href="https://github.com/ckaestne/seai/blob/S2020/lectures/20_safety/safety.md">md</a>, <a href="https://ckaestne.github.io/seai/S2020/slides/20_safety/safety.pdf">pdf</a>, <a href="https://www.youtube.com/watch?v=xRlFDXV3-8E">video</a>)</td>
+<td><a href="https://arxiv.org/pdf/1709.02435">An analysis of ISO 26262: Using machine learning safely in automotive software</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Tue, Aug 04</td>
+<td><a href="https://ckaestne.github.io/seai/S2020/slides/21_teams/teams.html">Fostering Interdisciplinary Teams</a> (<a href="https://github.com/ckaestne/seai/blob/S2020/lectures/21_teams/teams.md">md</a>, <a href="https://ckaestne.github.io/seai/S2020/slides/21_teams/teams.pdf">pdf</a>, <a href="https://www.youtube.com/watch?v=bQGjlKWErfg">video</a>)</td>
+<td><a href="https://andrewbegel.com/papers/data-scientists.pdf">Data Scientists in Software Teams: State of the Art and Challenges</a></td>
+<td><a href="https://github.com/ckaestne/seai/blob/S2020/assignments/project.md">QA Project Milestone 3</a></td>
+</tr>
+<tr>
+<td>Thu, Aug 06</td>
+<td><a href="https://ckaestne.github.io/seai/S2020/slides/22_summary/all.html">Summary and Review</a> (<a href="https://github.com/ckaestne/seai/blob/S2020/lectures/22_summary/all.md">md</a>, <a href="https://ckaestne.github.io/seai/S2020/slides/22_summary/all.pdf">pdf</a>, <a href="https://www.youtube.com/watch?v=kQJSwtFo7KA">video</a>)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Fri, Aug 07</td>
+<td><strong>Final Project Presentation</strong></td>
+<td></td>
+<td><a href="https://github.com/ckaestne/seai/blob/S2020/assignments/project.md">QA Project Due</a></td>
+</tr>
+</tbody></table>
+<h2 id="course-syllabus-and-policies">Course Syllabus and Policies</h2>
+<p>See the web pages for the specific semester for details.</p>
+<p>Students taking the PhD version of this class (17-745) will replace two individual assignments with a research project instead, resulting in a draft of a paper of at least workshop quality.</p>
+<h2 id="related-courses">Related Courses</h2>
+<ul>
+<li>17-649 Artificial Intelligence for Software Engineering: This course focuses on how AI techniques can be used to build better software engineering tools and goes into more depth with regard to specific AI techniques, whereas we focus on how software engineering techniques can be used to build AI-enabled systems. Our application scenarios are typical web-based systems for end users, rather than tools for software developers.</li>
+<li><a href="http://www.humanaiclass.org/">05-318 Human-AI Interaction</a>: Focuses on the HCI angle on designing AI-enabled products. Overlaps in some coverage on fairness, covers in much more detail user interface design and how to involving humans in ML-supported decisions, whereas this course focuses more on architecture design, requirements engineering, and deploying systems in production. Both courses are complementary.</li>
+<li><a href="https://mse.isri.cmu.edu/applicants/course-offerings.html">17-646 DevOps: Modern Deployment</a>, <a href="https://mse.isri.cmu.edu/applicants/course-offerings.html">17-647 Engineering Data Intensive Scalable Systems</a>, and similar: These course cover techniques to build scalable, reactive, and reliable systems in depth. We will survey DevOps, and big data systems in the context of designing and deploying systems, but will not explore them in as much detail as a dedicated course can. We will look at MLOps as a ML-specific variant of DevOps.</li>
+<li><a href="https://www.cmu.edu/mits/curriculum/core/10-601.html">10-601 Machine Learning</a>, <a href="https://www.cs.cmu.edu/~15381-f17/">15-381 Artificial Intelligence: Representation and Problem Solving</a>, <a href="https://www.cmu.edu/mits/curriculum/core/05-834.html">05-834  Applied Machine Learning</a>, <a href="https://www.andrew.cmu.edu/user/georgech/95-865/">95-865 Unstructured Data Analytics</a>, and many others: CMU offers many course that teach how machine learning and artificial intelligence techniques work internally or how to apply them to specific problems (including feature engineering and model evaluation), often on static data sets. We assume a basic understanding of such techniques and processes (see prerequisites) but focus on the engineering process for production ML systems.</li>
+</ul>
+
+        </section>
+
+        <footer>
+        
+          See GitHub repository with all resources at <a href="https://github.com/ckaestne/seai">https://github.com/ckaestne/seai</a>.
+        </footer>
+
+      </div>
+    </div>
+
+    
+  </body>
+</html>

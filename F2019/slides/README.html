@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>reveal-md</title>
+    <link rel="stylesheet" href="./css/reveal.css" />
+    <link rel="stylesheet" href="./css/theme/white.css" id="theme" />
+    <link rel="stylesheet" href="./css/highlight/zenburn.css" />
+    <link rel="stylesheet" href="./css/print/paper.css" type="text/css" media="print" />
+    <link rel="stylesheet" href="./_assets/_assets/cmu.css" />
+
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides"><div id="footer">17-445 Software Engineering for AI-Enabled Systems</div><section  data-markdown><script type="text/template"># Lecture Slides
+
+This folder contains lecture slides for 17-445/645. Feel free to contribute to the slides through pull requests -- from fixing small issues to new discussions or case studies, pull requests from students, instructors, and other interested parties are certainly welcome.
+
+The rendered versions of these slides can be found at https://ckaestne.github.io/seai/slides/
+
+## Slide format and infrastructure
+
+Slides are written in markdown, one slidedeck per folder, and converted to slides with a slightly patched version of `reveal-md` ([original version](https://github.com/webpro/reveal-md), [patched version](https://github.com/ckaestne/reveal-md)) which uses `reveal.js` ([github](https://github.com/hakimel/reveal.js/)). 
+
+Each slide deck is in a separate subdirectory. Can use all the usual markdown features of `reveal.js` plus a few custom ones created with scripts in the `_assets` directory.
+
+Basics:
+* Formatting, including headers, links, lists, bold font, quotes, and source code can be done as usual in markdown.
+* Slide separators are `---` for chapters and `----` for slides within a chapter.
+* `<aside class="notes"><p>` introduces a part of the slide that is hidden from the presentation but included when printing/in PDFs.</p>
+<ul>
+<li>Frontmatter in yaml format define title, footer, and author.</li>
+</ul>
+<p>Custom extensions in <code>/_assets/plugin/mymarkdown.js</code>:</p>
+<ul>
+<li><code>&lt;!-- small --&gt;</code>, <code>&lt;!-- smaller --&gt;</code>, and <code>&lt;!-- smallish --&gt;</code> can be used to adjust font sizes in a slide</li>
+<li><code>&lt;!-- references --&gt;</code> starts a segment for the bottom of the slide in a smaller font, intended for references and additional readings.</li>
+<li><code>&lt;!-- split --&gt;</code> can be used to make a two column slide</li>
+<li>Explicit column handling, included nested columns and more than two columns, is possible between <code>&lt;!-- colstart --&gt;</code> and <code>&lt;!-- colend --&gt;</code> with <code>&lt;!-- col --&gt;</code> as the separator</li>
+<li><code>&lt;!-- fit --&gt;</code> in a title tries to make long titles fit to a slide by scaling it down</li>
+<li>Empty items in a list can be used as a space/separator between two list</li>
+<li><code>&lt;!-- left --&gt;</code> and <code>&lt;!-- right --&gt;</code> change the alignment</li>
+<li>Mermaid diagrams can be integrated with a code blob in the <code>mermaid</code> language</li>
+<li><code>&lt;!-- discussion  --&gt;</code> marks the slide as a discussion slide, adding a picture (possibly exploring other design features later)</li>
+</ul>
+<p>Other useful suggestions:</p>
+<ul>
+<li><code>&lt;!-- .element: class=&quot;stretch&quot; --&gt;</code> is a useful extension for figures that should stretch to the remainder of the page (add in new line after image)</li>
+<li>Let&#39;s use links when referencing sources </li>
+<li>Use chapters with <code>#</code> headings (separated by <code>---</code>) and slides with <code>##</code> headings within a chapter (separated by <code>----</code>), turning into horizontal and vertical navigation in the final presentation</li>
+</ul>
+<h2 id="editing">Editing</h2>
+<p>Run <code>reveal-md . --watch</code> to run a local webserver that shows the slides and automatically updates on changes to the .md files. (Run <code>npm install</code> first to install the dependencies locally)</p>
+<h2 id="static-sites-and-circle-ci-automation">Static sites and circle-CI automation</h2>
+<p>To produce static slides, run <code>reveal-md . --static</code>. The slides will be created in the <code>_static</code> directory. Circle-ci automates the process and pushes the results to the <code>gh-pages</code> branch, which can be seen at <a href="https://ckaestne.github.io/seai/slides/">https://ckaestne.github.io/seai/slides/</a>.</p>
+</aside></script></section></div>
+    </div>
+
+    <script src="./js/reveal.js"></script>
+
+    <script>
+      function extend() {
+        var target = {};
+        for (var i = 0; i < arguments.length; i++) {
+          var source = arguments[i];
+          for (var key in source) {
+            if (source.hasOwnProperty(key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+        return target;
+      }
+
+      // Optional libraries used to extend on reveal.js
+      var deps = [
+        { src: './lib/js/classList.js', condition: function() { return !document.body.classList; } },
+        { src: './plugin/markdown/marked.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+        { src: './plugin/markdown/markdown.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+        { src: './plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+        { src: './plugin/zoom-js/zoom.js', async: true },
+        { src: './plugin/notes/notes.js', async: true },
+        { src: './plugin/math/math.js', async: true }
+      ];
+
+      // default options to init reveal.js
+      var defaultOptions = {
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        dependencies: deps
+      };
+
+      // options from URL query string
+      var queryOptions = Reveal.getQueryHash() || {};
+
+      var options = extend(defaultOptions, {"controls":true,"progress":true,"theme":"white","slideNumber":true,"hash":true,"center":false}, queryOptions);
+    </script>
+
+    <script src="./_assets/_assets/mermaid.min.js"></script>
+    <script src="./_assets/_assets/loadmymarkdown.js"></script>
+
+    <script>
+      Reveal.initialize(options);
+    </script>
+  </body>
+</html>

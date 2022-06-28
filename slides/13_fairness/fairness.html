@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>17-445: Fairness</title>
+    <link rel="stylesheet" href="./../css/reveal.css" />
+    <link rel="stylesheet" href="./../css/theme/white.css" id="theme" />
+    <link rel="stylesheet" href="./../css/highlight/zenburn.css" />
+    <link rel="stylesheet" href="./../css/print/paper.css" type="text/css" media="print" />
+    <link rel="stylesheet" href="./../_assets/_assets/cmu.css" />
+
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides"><div id="footer">17-445 Software Engineering for AI-Enabled Systems, Christian Kaestner  & Eunsuk Kang</div><section  data-markdown><script type="text/template">  
+
+# Fairness in AI-Enabled Systems
+
+Eunsuk Kang
+
+<!-- references -->
+
+Required reading: R. Caplan, J. Donovan, L. Hanson, J.
+Matthews. "Algorithmic Accountability: A Primer", Data & Society
+(2018).
+</script></section><section  data-markdown><script type="text/template"># Learning Goals
+
+* Understand the types of harm that can be caused by ML.
+* Understand the sources of bias in ML.
+* Discuss ways to reduce bias in training data. 
+</script></section><section ><section data-markdown><script type="text/template"># Fairness
+</script></section><section data-markdown><script type="text/template">## Discrimination
+
+![](laws.jpg)
+
+* Population includes various minority groups
+	* Ethnic, religious, medical, geographic 
+* Protected by laws & policies
+* __How do we monitor & regulate decisions made by ML__?
+</script></section><section data-markdown><script type="text/template">## Example: Recidivism
+
+![](examples/recidivism-propublica.png)
+</script></section><section data-markdown><script type="text/template">## Example: Recidivism
+
+![](examples/recidivism-bias.jpeg)
+
+* COMPAS (Correctional Offender Management Profiling for Alternative
+Sanctions)
+	* Assess the likelihood of a defendant repeating an offence
+	* Used by judges in sentencing decisions
+	* In deployment throughout numerous states (PA, FL, NY, WI, CA, etc.,)
+</script></section><section data-markdown><script type="text/template">## Example: Recruiting
+
+![](examples/xing-bias.jpeg)
+
+* XING online recruiting platform
+</script></section><section data-markdown><script type="text/template">## Types of Harm on Society
+
+* __Harms of allocation__: Withhold opportunities or resources
+* __Harms of representation__: Reinforce stereotypes, subordination along
+  the lines of identity
+
+<!-- references -->
+
+ “The Trouble With Bias”, Kate Crawford, Keynote@N(eur)IPS (2017).
+</script></section><section data-markdown><script type="text/template">## Harms of Allocation
+
+![](examples/gender-detection.png)
+
+* Poor quality of service, degraded user experience for certain groups
+* __Q. Other examples__?
+
+<!-- references -->
+
+_Gender Shades: Intersectional Accuracy Disparities in
+Commercial Gender Classification_, Buolamwini & Gebru, ACM FAT* (2018).
+</script></section><section data-markdown><script type="text/template">## Harms of Representation
+
+![](examples/online-ad.png)
+
+* Over/under-representation, reinforcement of stereotypes
+* __Q. Other examples__?
+
+<!-- references -->
+
+_Discrimination in Online Ad Delivery_, Latanya Sweeney, SSRN (2013).
+</script></section><section data-markdown><script type="text/template">## Identifying harms
+
+![](harms-table.png)
+
+* Multiple types of harms can be caused by a product!
+* Think about your system objectives & identify potential harms.
+
+<!-- references -->
+
+_Challenges of incorporating algorithmic fairness into practice_, FAT* Tutorial (2019).
+</script></section><section data-markdown><script type="text/template">## Case Study: College Admission
+
+![](college-admission.jpg)
+
+* Objective: Decide "Is this student likely to succeed"?
+* Possible harms: Allocation of resources? Quality of service?
+  Stereotyping? Denigration? Over-/Under-representation?
+</script></section><section data-markdown><script type="text/template">## Not all discrimination is harmful
+
+![](gender-bias.png)
+
+* Loan lending: Gender discrimination is illegal.
+* Medical diagnosis: Gender-specific diagnosis may be desirable.
+* Discrimination is a __domain-specific__ concept!
+* __Q. Other examples__?
+</script></section></section><section ><section data-markdown><script type="text/template"># Sources of Bias
+</script></section><section data-markdown><script type="text/template">##  Where does the bias come from?
+
+![](google-translate-bias.png)
+
+<!-- references -->
+
+_Semantics derived automatically from language corpora contain
+human-like biases_, Caliskan et al., Science (2017).
+</script></section><section data-markdown><script type="text/template">## Where does the bias come from?
+
+![](bing-translate-bias.png)
+</script></section><section data-markdown><script type="text/template">## Sources of Bias
+
+* Skewed sample
+* Tainted examples
+* Limited features
+* Sample size disparity
+* Proxies
+
+<!-- references -->
+
+_Big Data's Disparate Impact_, Barocas & Selbst California Law Review (2016).
+</script></section><section data-markdown><script type="text/template">## Skewed Sample
+
+![](examples/crime-map.jpg)
+
+* Initial bias in the data set, amplified through feedback loop
+* Example: Crime prediction for policing strategy
+</script></section><section data-markdown><script type="text/template">## Tainted Examples
+
+![](examples/amazon-hiring.png)
+
+* Bias in the dataset caused by humans
+* Example: Hiring decision dataset
+  * Some labels created manually by employers
+  * Dataset "tainted" by biased human judgement
+</script></section><section data-markdown><script type="text/template">## Limited Features
+
+![](performance-review.jpg)
+
+* Features are less informative or reliable for certain parts of the population
+* Features that support accurate prediction for the majority may not do so
+for a minority group
+* Example: Employee performance review
+  * "Leave of absence" as a feature (an indicator of poor performance)
+  * Unfair bias against employees on parental leave
+</script></section><section data-markdown><script type="text/template">## Sample Size Disparity
+
+![](examples/shirley-card.jpg)
+
+* Less data available for certain parts of the population
+* Example: "Shirley Card"
+	* Used by Kodak for color calibration in photo films
+	* Most "Shirley Cards" used Caucasian models
+	* Poor color quality for other skin tones
+</script></section><section data-markdown><script type="text/template">## Proxies
+
+![](neighborhoods.png)
+
+* Certain features are correlated with class membership
+* Example: Neighborhood as a proxy for race
+* Even when sensitive attributes (e.g., race) are erased, bias may still occur
+</script></section><section data-markdown><script type="text/template">## Case Study: College Admission
+
+![](college-admission.jpg)
+
+* Classification: Is this student likely to succeed?
+* Features: GPA, SAT, race, gender, household income, city, etc.,
+  * Skewed sample? Tainted examples? Limited features?
+  * Sample size disparity? Proxies?
+</script></section></section><section ><section data-markdown><script type="text/template"># Building Fair ML Systems
+</script></section><section data-markdown><script type="text/template">## Fairness must be considered throughout the ML lifecycle!
+
+![](fairness-lifecycle.jpg)
+
+<!-- references -->
+
+_Fairness-aware Machine Learning_, Bennett et al., WSDM Tutorial (2019).
+</script></section></section><section ><section data-markdown><script type="text/template"># Dataset Construction for Fairness
+</script></section><section data-markdown><script type="text/template">## Data Bias
+
+![](data-bias-stage.png)
+
+* A __systematic distortion__ in data that compromises its use for a task
+* Bias can be introduced at any stage of the data pipeline!
+</script></section><section data-markdown><script type="text/template">## Types of Data Bias
+
+* __Population bias__
+* __Behavioral bias__
+* Content production bias
+* Linking bias
+* Temporal bias
+
+<!-- references -->
+
+_Social Data: Biases, Methodological Pitfalls, and Ethical
+Boundaries_, Olteanu et al., Frontiers in Big Data (2016).
+</script></section><section data-markdown><script type="text/template">## Population Bias
+
+![](examples/gender-detection.png)
+
+* Differences in demographics between a dataset vs a target population
+* Example: Does the Twitter demographics represent the general population?
+* In many tasks, datasets should match the target population
+* But some tasks require equal representation for fairness (Q. example?)
+</script></section><section data-markdown><script type="text/template">## Behavioral Bias
+
+![](examples/freelancing.png)
+
+* Differences in user behavior across platforms or social contexts
+* Example: Freelancing platforms (Fiverr vs TaskRabbit)
+  * Bias against certain minority groups on different platforms
+
+<!-- references -->
+
+_Bias in Online Freelance Marketplaces_, Hannak et al., CSCW (2017).
+</script></section><section data-markdown><script type="text/template">## Faireness-Aware Data Collection
+
+* Address population bias
+  * Does the dataset reflect the demographics in the target population?
+* Address under- & over-representation issues
+   * Ensure sufficient amount of data for all groups to avoid being
+   treated as "outliers" by ML
+   * But also avoid over-representation of certain groups (e.g.,
+     remove historical data)
+* Data augmentation: Synthesize data for minority groups
+  * Observed: "He is a doctor" -> synthesize "She is a doctor"
+* Fairness-aware active learning
+  * Collect more data for groups with highest error rates 
+
+<!-- references -->
+
+_Fairness-aware Machine Learning_, Bennett et al., WSDM Tutorial (2019).
+</script></section><section data-markdown><script type="text/template">## Data Sheets
+
+![](datasheet.png)
+
+* A process for documenting datasets
+* Common practice in the electronics industry, medicine
+* Purpose, provenance, creation, __composition__, distribution
+  * "Does the dataset relate to people?"
+  * "Does the dataset identify any subpopulations (e.g., by age,
+  gender)?"
+
+<!-- references -->
+
+_Datasheets for Dataset_, Gebru et al., (2019). https://arxiv.org/abs/1803.09010
+</script></section><section data-markdown><script type="text/template">## Exercise: Crime Map
+
+![](examples/crime-map.jpg)
+
+Q. How can we modify an existing dataset or change the data collection
+process to reduce the effects the feedback loop?
+</script></section></section><section  data-markdown><script type="text/template"># Summary
+
+* Types of harm that can be caused by ML
+  * Harm of allocation & harm of representation
+* Sources of bias in ML
+  * Skewed sample, tainted examples, limited features, sample size
+    disparity, proxies
+* Addressing fairness throughout the ML pipeline
+* Data bias & data collection for fairness
+* __Next class__: Definitions of fairness, measurement, testing for fairness
+
+</script></section></div>
+    </div>
+
+    <script src="./../js/reveal.js"></script>
+
+    <script>
+      function extend() {
+        var target = {};
+        for (var i = 0; i < arguments.length; i++) {
+          var source = arguments[i];
+          for (var key in source) {
+            if (source.hasOwnProperty(key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+        return target;
+      }
+
+      // Optional libraries used to extend on reveal.js
+      var deps = [
+        { src: './../lib/js/classList.js', condition: function() { return !document.body.classList; } },
+        { src: './../plugin/markdown/marked.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+        { src: './../plugin/markdown/markdown.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+        { src: './../plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+        { src: './../plugin/zoom-js/zoom.js', async: true },
+        { src: './../plugin/notes/notes.js', async: true },
+        { src: './../plugin/math/math.js', async: true }
+      ];
+
+      // default options to init reveal.js
+      var defaultOptions = {
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        dependencies: deps
+      };
+
+      // options from URL query string
+      var queryOptions = Reveal.getQueryHash() || {};
+
+      var options = extend(defaultOptions, {"controls":true,"progress":true,"theme":"white","slideNumber":true,"hash":true,"center":false}, queryOptions);
+    </script>
+
+    <script src="./../_assets/_assets/mermaid.min.js"></script>
+    <script src="./../_assets/_assets/loadmymarkdown.js"></script>
+
+    <script>
+      Reveal.initialize(options);
+    </script>
+  </body>
+</html>

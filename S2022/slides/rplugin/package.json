@@ -1,0 +1,23 @@
+{
+  "name": "reveal.js-plugins",
+  "version": "1.0.0",
+  "description": "A plugin collection for your reveal.js presentations",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rajgoel/reveal.js-plugins.git"
+  },
+  "keywords": [
+    "reveal",
+    "plugins"
+  ],
+  "author": "Asvin Goel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rajgoel/reveal.js-plugins/issues"
+  },
+  "homepage": "https://github.com/rajgoel/reveal.js-plugins/blob/master/README.md",
+  "dependencies": {
+    "npm": "^6.13.4"
+  }
+}
+

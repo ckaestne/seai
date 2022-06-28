@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>17-445: Process and Team Reflections</title>
+    <link rel="stylesheet" href="./../css/reveal.css" />
+    <link rel="stylesheet" href="./../css/theme/white.css" id="theme" />
+    <link rel="stylesheet" href="./../css/highlight/zenburn.css" />
+    <link rel="stylesheet" href="./../css/print/paper.css" type="text/css" media="print" />
+    <link rel="stylesheet" href="./../_assets/_assets/cmu.css" />
+
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides"><div id="footer">17-445 Software Engineering for AI-Enabled Systems, Christian Kaestner</div><section  data-markdown><script type="text/template">
+
+# Process and Team Reflections
+
+Christian Kaestner
+
+<!-- references -->
+
+Required reading: DeMarco and Lister. Peopleware: Productive Projects and Teams. Addison-Wesley, 3rd ed., 2013. Chapters 22, 23, and 28.
+</script></section><section  data-markdown><script type="text/template">
+# Learning Goals
+
+* Plan development activities in an inclusive fashion for participants in different roles
+* Describe agile techniques to address common process and communication issues
+</script></section><section ><section data-markdown><script type="text/template">
+# Case Studies
+
+Disclaimer: All pictures represent abstract developer groups or products to give a sense of scale; they are not necessarily the developers of those products or developers at all.
+</script></section><section data-markdown><script type="text/template">
+## How to structure teams?
+
+Microblogging platform; 3 friends
+
+<!-- colstart -->
+![Small team](team4.jpg)
+<!-- col -->
+![Twitter](twitter.png)
+<!-- colend -->
+</script></section><section data-markdown><script type="text/template">## How to structure teams?
+
+Banking app; 15 developers and data analysts
+
+<!-- colstart -->
+![Small team](team15.jpg)
+<!-- col -->
+![PNC app](pnc.jpg)
+<!-- colend -->
+</script></section><section data-markdown><script type="text/template">## How to structure teams?
+
+Mobile game; 
+50ish developers;
+distributed teams?
+
+![Team 50](team50.jpg)</script></section><section data-markdown><script type="text/template">## How to structure teams?
+
+Mobile game; 
+50ish developers;
+distributed teams?
+
+![Team 200](team200.png)
+</script></section><section data-markdown><script type="text/template">## How to structure teams?
+
+Self-driving cars; 1200 developers and data analysts
+
+<!-- colstart -->
+![Large team](team1200.jpg)
+<!-- col -->
+![Uber self driving car](uber.png)
+<!-- colend -->
+</script></section></section><section ><section data-markdown><script type="text/template"># Teams
+</script></section><section data-markdown><script type="text/template">## Necessity of Groups
+
+* Division of labor
+* Division of expertise (e.g., security expert, ML expert, data cleaning expert, database expert)
+</script></section><section data-markdown><script type="text/template">## Team Issues
+
+* Interdisciplinary
+* Process costs
+* Groupthink
+* Social loafing
+* Multiple/conflicting goals
+</script></section></section><section ><section data-markdown><script type="text/template"># Team issues: Process costs</script></section><section data-markdown><script type="text/template">## Mythical Man Month
+
+> Brooks's law: Adding manpower to a late software project makes it later
+
+![](mmmbook.jpg)
+
+1975, describing experience at 
+IBM developing OS/360</script></section><section data-markdown><script type="text/template">## Process Costs
+
+![](connected.png)
+
+*n(n − 1) / 2* communication links</script></section><section data-markdown><script type="text/template">## Process Costs
+
+![](connectedteams.png)</script></section><section data-markdown><script type="text/template">## Brook's Surgical Teams
+
+* Chief programmer – most programming and initial documentation
+* Support staff
+    * Copilot: supports chief programmer in development tasks, represents team at meetings
+    * Administrator: manages people, hardware and other resources
+    * Editor: editing documentation 
+    * Two secretaries: one each for the administrator and editor
+    * Program clerk: keeps records of source code and documentation
+    * Toolsmith: builds specialized programming tools
+    * Tester: develops and runs tests
+    * Language lawyer: expert in programming languages, provides advice on producing optimal code.
+
+<!-- references -->
+
+Brooks. The Mythical Man-Month. 1971
+</script></section><section data-markdown><script type="text/template">## Microsoft's Small Team Practices
+
+* Vision statement and milestones (2-4 month), no formal spec
+* Feature selection, prioritized by market, assigned to milestones
+* Modular architecture
+* Allows small federated teams (Conway's law)
+* Small teams of overlapping functional specialists
+
+(Windows 95: 200 developers and testers, one of 250 products)
+</script></section><section data-markdown><script type="text/template">## Microsoft's Feature Teams
+
+* 3-8 developers (design, develop)
+* 3-8 testers (validation, verification, usability, market analysis)
+* 1 program manager (vision, schedule communication; leader, facilitator) – working on several features
+* 1 product manager (marketing research, plan, betas)</script></section><section data-markdown><script type="text/template">## Microsoft's Process
+
+* "Synchronize and stabilize"
+* For each milestone
+    * 6-10 weeks feature development and continuous testing
+frequent merges, daily builds
+    * 2-5 weeks integration and testing (“zero-bug release”, external betas   )
+    * 2-5 weeks buffer
+</script></section><section data-markdown><script type="text/template">## Agile Practices (e.g., Scrum)
+
+* 7±2 team members, collocated
+* self managing
+* Scrum master (potentially shared among 2-3 teams)
+* Product owner / customer representative
+</script></section><section data-markdown><script type="text/template">> Large teams (29 people) create around six times as many defects as small teams (3 people) and obviously burn through a lot more money. Yet, the large team appears to produce about the same mount of output in only an average of 12 days’ less time. This is a truly astonishing finding, through it fits with my personal experience on projects over 35 years. - Phillip Amour, 2006, CACM 49:9
+</script></section><section data-markdown><script type="text/template">## Establish communication patterns
+
+* Avoid overhead
+* Ensure reliability
+* Constraint latency
+* 
+* e.g. Issue tracker vs email; online vs face to face
+</script></section><section data-markdown><script type="text/template">## Awareness
+
+* Notifications
+* Brook's documentation book
+* Email to all
+* Code reviews
+</script></section><section data-markdown><script type="text/template">## Conway’s Law
+
+> “Any organization that designs a system (defined broadly) will produce a design whose structure is a copy of the organization's communication structure.” — Mel Conway, 1967
+
+> “If you have four groups working on a compiler, you'll get a 4-pass compiler.”
+</script></section></section><section  data-markdown><script type="text/template">## Congurence
+
+![](congruence.png)
+
+Structural congruence,
+Geographical congruence,
+Task congruence,
+IRC communication congruence
+</script></section><section ><section data-markdown><script type="text/template"># Team issues: Multiple/conflicting goals
+
+(Organization of Interdisciplinary Teams)
+</script></section><section data-markdown><script type="text/template">## Matrix Organization
+
+![](teammatrix.png)</script></section><section data-markdown><script type="text/template">## Project Organization
+
+![](teamproject.png)
+</script></section><section data-markdown><script type="text/template">## Case Study: Brøderbund
+
+> As the functional departments grew, staffing the heavily matrixed projects became more and more of a nightmare. To address this, the company reorganized itself into “Studios”, each with dedicated resources for each of the major functional areas reporting up to a Studio manager. Given direct responsibility for performance and compensation, Studio managers could allocate resources freely.
+
+> The Studios were able to exert more direct control on the projects and team members, but not without a cost. The major problem that emerged from Brøderbund’s Studio reorganization was that members of the various functional disciplines began to lose touch with their functional counterparts. Experience wasn’t shared as easily. Over time, duplicate effort began to appear.
+</script></section><section data-markdown><script type="text/template">## Conflicting Goals
+
+* Software engineers vs Data scientists
+* Software engineers vs Security specialists
+* Data scientists vs Privacy lawyers
+
+<!-- discussion -->
+
+CC 3.0 SA by Shishirdasika
+</script></section><section data-markdown><script type="text/template">![Computational Notebook](notebook.png)
+
+<!-- references -->
+
+<aside class="notes"><p>Different practices and goals. Transitional exploratory notebook code into production?</p>
+</aside></script></section><section data-markdown><script type="text/template">## Specialist Allocation (Organizational Architectures)
+
+* Centralized: development teams consult with a core group of  specialists when they need help
+* Distributed: development teams hire specialists to be a first-class member of the team
+* Weak Hybrid: centralized group of specialists and teams with  critical applications hire specialists
+* Strong Hybrid: centralized group of specialists and most teams also hire specialists
+
+**Tradeoffs?**
+</script></section><section data-markdown><script type="text/template">## Example: Security Roles
+
+* Everyone: “security awareness” – buy into the process
+* Developers: know the security capabilities of development tools and use them, know how to spot and avoid relevant, common vulnerabilities
+* Managers: enable the use of security practices
+* Security specialists: everything security
+</script></section><section data-markdown><script type="text/template">## Data Scientists on Software Teams
+
+<!-- discussion -->
+</script></section><section data-markdown><script type="text/template">## Commitment & Accountability
+
+* Conflict is useful, expose all views
+* Come to decision, commit to it
+* Assign responsibilities
+* Record decisions and commitments; make record available
+</script></section><section data-markdown><script type="text/template">## Bell & Hart – 8 Causes of Conflict
+
+* Conflicting resources.
+* Conflicting styles.
+* Conflicting perceptions.
+* Conflicting goals.
+* Conflicting pressures.
+* Conflicting roles.
+* Different personal values.
+* Unpredictable policies.
+
+<!-- references -->
+Bell, Art. (2002). Six ways to resolve workplace conflicts.
+McLaren School of Business, University of San Francisco., https://www.mindtools.com/pages/article/eight-causes-conflict.htm</script></section></section><section ><section data-markdown><script type="text/template"># Team issues: Groupthink
+
+![](groupthink.png)
+</script></section><section data-markdown><script type="text/template">## Groupthink
+
+* Group minimizing conflict
+* Avoid exploring alternatives
+* Suppressing dissenting views
+* Isolating from outside influences
+* -> Irrational/dysfunctional decision making
+</script></section><section data-markdown><script type="text/template">## Example: Time and Cost Estimation
+
+<!-- discussion -->
+</script></section><section data-markdown><script type="text/template">## Example: Use of Hype Technology
+
+(agile, block chain, machine learning, devops, AIOps, ...)
+
+<!-- discussion -->
+</script></section><section data-markdown><script type="text/template">## Causes of Groupthink
+
+* High group cohesiveness, homogeneity
+* Structural faults (insulation,  biased leadership, lack of methodological exploration)
+* Situational context (stressful external threats, recent failures, moral dilemmas)
+</script></section><section data-markdown><script type="text/template">## Symptoms
+
+* Overestimation of ability: invulnerability, unquestioned believe in morality
+* Closed-mindedness: ignore warnings, stereotyping; innovation averse
+Pressure toward uniformity: self-censorship, illusion of unanimity, …</script></section><section data-markdown><script type="text/template">![](svposter.png)</script></section><section data-markdown><script type="text/template">## Diversity
+
+> “Men and women have different viewpoints, ideas, and market insights, which enables better **problem solving**. A gender-diverse workforce provides easier **access to resources**, such as various sources of credit, multiple sources of information, and wider industry knowledge. A gender-diverse workforce allows the company to serve an **increasingly diverse customer base**. Gender diversity helps companies **attract and retain talented women**.”
+
+> “Cultural diversity leads to **process losses** through task conflict and decreased social integration, but to process gains through increased creativity and satisfaction.”
+
+<!-- references -->
+
+
+Stahl, Günter K., et al. "Unraveling the effects of cultural diversity in teams: A meta-analysis of research on multicultural work groups." Journal of international business studies 41.4 (2010): 690-709.
+
+http://www.gallup.com/businessjournal/166220/business-benefits-gender-diversity.aspx
+</script></section><section data-markdown><script type="text/template">## Groupthink and AI
+
+* Fairness
+* Safety requirements (e.g. Pitt delivery robot)
+* Ethics
+</script></section><section data-markdown><script type="text/template">## Mitigation Strategies
+
+<!-- discussion -->
+</script></section></section><section ><section data-markdown><script type="text/template"># Team issues: Social loafing
+
+![](tug.png)
+</script></section><section data-markdown><script type="text/template">![](loafinggraph.png)
+
+<!-- references -->
+
+Latane, Bibb, Kipling Williams, and Stephen Harkins. "Many hands make light the work: The causes and consequences of social loafing." Journal of personality and social psychology 37.6 (1979): 822.
+</script></section><section data-markdown><script type="text/template">## Social Loafing
+
+* People exerting less effort within a group
+* Reasons
+    * Diffusion of responsibility
+    * Motivation
+    * Dispensability of effort / missing recognition
+    * Avoid pulling everybody / "sucker effect"
+    * Submaximal goal setting
+* “Evaluation potential, expectations of co-worker performance, task meaningfulness, and culture had especially strong influence”
+
+
+<!-- references -->
+
+Karau, Steven J., and Kipling D. Williams. "Social loafing: A meta-analytic review and theoretical integration." Journal of personality and social psychology 65.4 (1993): 681.
+</script></section><section data-markdown><script type="text/template">## Mitigation Strategies
+
+<!-- discussion -->
+</script></section><section data-markdown><script type="text/template">## Mitigation Strategies
+
+* Involve all team members, colocation
+* Assign specific tasks with individual responsibility
+    * Increase identifiability
+    * Team contracts, measurement
+* Provide choices in selecting tasks
+* Promote involvement, challenge developers
+* Reviews and feedback
+* Team cohesion, team forming exercises
+* Small teams
+</script></section><section data-markdown><script type="text/template">## Responsibilities & Buy-In
+
+* Involve team members in decision making
+* Assign responsibilities (ideally goals not tasks)
+* Record decisions and commitments; make record available
+</script></section><section data-markdown><script type="text/template">## Motivation
+
+Autonomy * Mastery * Purpose
+
+![](drivebook.gif)
+
+</script></section></section><section ><section data-markdown><script type="text/template"># General Guidelines
+</script></section><section data-markdown><script type="text/template">## Hints for team functioning
+
+* Trust them; strategic not tactical direction
+* Reduce bureaucracy, protect team
+* Physical colocation, time for interaction
+* Avoid in-team competition (bonuses etc)
+* Time for quality assurance, cult of quality
+* Realistic deadlines
+* Peer coaching
+* Sense of elitism
+* Allow and encourage heterogenity
+
+<!-- references -->
+
+DeMarco and Lister. Peopleware. Chapter 23
+</script></section><section data-markdown><script type="text/template">## Elitism Case Study: The Black Team
+
+* Legendary team at IBM in the 1960s
+* Group of talented ("slightly better") testers
+    * Goal: Final testing of critical software before delivery
+* Improvement over first year
+* Formed team personality and energy
+    * "adversary philosophy of testing"
+    * Cultivated image of destroyers
+    * Started to dress in black, crackled laughs, grew mustaches
+* Team survived loss of original members
+
+
+<!-- references -->
+
+DeMarco and Lister. Peopleware. Chapter 22
+</script></section><section data-markdown><script type="text/template">## Troubleshooting Teams
+
+* Cynicism as warning sign
+* Training to improve practices
+* Getting to know each other; celebrate success; bonding over meals
+* “A meeting without notes is a meeting that never happened”
+
+</script></section></section><section  data-markdown><script type="text/template">
+# Summary
+
+* Team disfunctions well studied
+* Know the signs, know the interventions
+* Small teams, crossfunctional teams
+* Create awareness and accountability
+* Further Readings:
+    * Mantle and Lichty. Managing the Unmanageable. Addison-Wesley, 2013
+    * DeMarco and Lister. Peopleware. 3rd Edition. Addison Wesley, 2013
+</script></section></div>
+    </div>
+
+    <script src="./../js/reveal.js"></script>
+
+    <script>
+      function extend() {
+        var target = {};
+        for (var i = 0; i < arguments.length; i++) {
+          var source = arguments[i];
+          for (var key in source) {
+            if (source.hasOwnProperty(key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+        return target;
+      }
+
+      // Optional libraries used to extend on reveal.js
+      var deps = [
+        { src: './../lib/js/classList.js', condition: function() { return !document.body.classList; } },
+        { src: './../plugin/markdown/marked.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+        { src: './../plugin/markdown/markdown.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+        { src: './../plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+        { src: './../plugin/zoom-js/zoom.js', async: true },
+        { src: './../plugin/notes/notes.js', async: true },
+        { src: './../plugin/math/math.js', async: true }
+      ];
+
+      // default options to init reveal.js
+      var defaultOptions = {
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        dependencies: deps
+      };
+
+      // options from URL query string
+      var queryOptions = Reveal.getQueryHash() || {};
+
+      var options = extend(defaultOptions, {"controls":true,"progress":true,"theme":"white","slideNumber":true,"hash":true,"center":false}, queryOptions);
+    </script>
+
+    <script src="./../_assets/_assets/mermaid.min.js"></script>
+    <script src="./../_assets/_assets/loadmymarkdown.js"></script>
+
+    <script>
+      Reveal.initialize(options);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>reveal-md</title>
+    <link rel="stylesheet" href="./../css/reveal.css" />
+    <link rel="stylesheet" href="./../css/theme/white.css" id="theme" />
+    <link rel="stylesheet" href="./../css/highlight/zenburn.css" />
+    <link rel="stylesheet" href="./../css/print/paper.css" type="text/css" media="print" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+     <script src="./../rplugin/spreadsheet/ruleJS.all.full.min.js"></script>
+   <link rel="stylesheet" href="./../rplugin/spreadsheet/spreadsheet.css">
+    <link rel="stylesheet" href="./../_assets/_assets/cmu.css" />
+
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides"><div id="footer">17-445 Software Engineering for AI-Enabled Systems</div><section ><section data-markdown><script type="text/template">  
+
+# Recitation: Decomposing Requirements
+
+Christian Kaestner
+
+Slides adopted from Eunsuk Kang
+
+</script></section><section data-markdown><script type="text/template">## The Role of Requirements Engineering
+
+* Requirements engineering essential to understand risks and mistake mitigation
+* Understand 
+    * user interactions
+    * safety requirements
+    * security and privacy requirements
+    * fairness requirements
+    * possible feedback loops
+</script></section><section data-markdown><script type="text/template">## Machine vs World
+
+![machine-world](machine-world.png)
+
+* No software lives in vacuum; every system is deployed as part of the world
+* A requirement describes a desired state of the world (i.e., environment)
+* Machine (software) is _created_ to manipulate the environment into
+  this state 
+</script></section><section data-markdown><script type="text/template">## Shared Phenomena
+
+![phenomena](phenomena.jpg)
+
+* Shared phenomena: Interface between the world & machine (actions,
+  events, dataflow, etc.,)
+* Requirements (REQ) are expressed only in terms of world phenomena 
+* Assumptions (ENV) are expressed in terms of world & shared phenomena
+* Specifications (SPEC) are expressed in terms of machine & shared phenomena
+
+</script></section><section data-markdown><script type="text/template">## Task 1: Machine vs World
+
+![machine-world](machine-world.png)
+
+**Task: In groups, identify Requirements, Assumptions and Specifications for (1) Amazon product recommendations, (2) predictive policing, (3) screening applicants for Masters program**
+
+</script></section><section data-markdown><script type="text/template">## What could go wrong?
+
+![machine-world](machine-world.png)
+
+* Missing/incorrect environmental assumptions (ENV)
+* Wrong specification (SPEC)
+* Inconsistency in assumptions & spec (ENV ∧ SPEC = False)
+* Inconsistency in requirements (REQ = False)
+
+</script></section><section data-markdown><script type="text/template">## Non-AI Example: Lufthansa 2904 Runway Crash
+
+![Plane Crash](lufthansacrash.jpg)
+<!-- .element: class="stretch" -->
+
+
+* Reverse thrust (RT): Decelerates plane during landing
+* What was required (REQ): RT enabled if and only if plane on the ground
+* What was implemented (SPEC): RT enabled if and only if wheel turning
+* But: Runway wet + wind, wheels did not turn, pilot overridden by software
+
+
+</script></section><section data-markdown><script type="text/template">## Feedback Loops and Adversaries
+
+![machine-world](machine-world.png)
+<!-- .element: class="stretch" -->
+
+* Feedback loops: Behavior of the machine affects the world, which affects inputs to the machine
+* Data drift: Behavior of the world changes over time, assumptions no longer valid
+* Adversaries: Bad actors deliberately may manipulate inputs, violate environment assumptions
+</script></section><section data-markdown><script type="text/template">## Task 2: Identify potential problems
+
+* Missing/incorrect environmental assumptions (ENV)
+* Wrong specification (SPEC)
+* Inconsistency in assumptions & spec (ENV ∧ SPEC = False)
+* Inconsistency in requirements (REQ = False)
+* Resulting in problems with feedback loops, data drift, adversaries
+
+**Task: In groups, identify examples of problems in (1) Amazon product recommendations, (2) predictive policing, (3) screening applicants for Masters program**
+
+
+
+</script></section></section></div>
+    </div>
+
+    <script src="./../js/reveal.js"></script>
+
+    <script>
+      function extend() {
+        var target = {};
+        for (var i = 0; i < arguments.length; i++) {
+          var source = arguments[i];
+          for (var key in source) {
+            if (source.hasOwnProperty(key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+        return target;
+      }
+
+      // Optional libraries used to extend on reveal.js
+      var deps = [
+        { src: './../plugin/markdown/marked.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+        { src: './../plugin/markdown/markdown.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+        { src: './../plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+        { src: './../plugin/zoom-js/zoom.js', async: true },
+        { src: './../plugin/notes/notes.js', async: true },
+        { src: './../plugin/math/math.js' },
+        { src: './../rplugin/embed-tweet/embed-tweet.js' },
+        { src: './../rplugin/menu/menu.js', async: true },
+        { src: './../rplugin/spreadsheet/spreadsheet.js' },
+        { src: './../rplugin/chalkboard/chalkboard.js', async: true }
+      ];
+
+      // default options to init reveal.js
+      var defaultOptions = {
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        dependencies: deps,
+	chalkboard: { // font-awesome.min.css must be available
+		toggleChalkboardButton: { left: "80px" },
+		toggleNotesButton: { left: "130px" },
+	},
+	keyboard: {
+	    67: function() { RevealChalkboard.toggleNotesCanvas() },	// toggle notes canvas when 'c' is pressed
+	    66: function() { RevealChalkboard.toggleChalkboard() },	// toggle chalkboard when 'b' is pressed
+	    46: function() { RevealChalkboard.clear() },	// clear chalkboard when 'DEL' is pressed
+	     8: function() { RevealChalkboard.reset() },	// reset chalkboard data on current slide when 'BACKSPACE' is pressed
+	    68: function() { RevealChalkboard.download() },	// downlad recorded chalkboard drawing when 'd' is pressed
+	    88: function() { RevealChalkboard.colorNext() },	// cycle colors forward when 'x' is pressed
+	    89: function() { RevealChalkboard.colorPrev() },	// cycle colors backward when 'y' is pressed
+	}
+      };
+
+      // options from URL query string
+      var queryOptions = Reveal.getQueryHash() || {};
+
+      var options = extend(defaultOptions, {"controls":true,"progress":true,"theme":"white","slideNumber":true,"hash":true,"center":false}, queryOptions);
+    </script>
+
+    <script src="./../_assets/_assets/viz.js"></script>
+    <script src="./../_assets/_assets/loadmymarkdown.js"></script>
+
+    <script>
+      Reveal.initialize(options);
+    </script>
+  </body>
+</html>

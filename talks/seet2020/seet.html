@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>Software Engineering for AI-Enabled Systems</title>
+    <link rel="stylesheet" href="./../css/reveal.css" />
+    <link rel="stylesheet" href="./../css/theme/white.css" id="theme" />
+    <link rel="stylesheet" href="./../css/highlight/zenburn.css" />
+    <link rel="stylesheet" href="./../css/print/paper.css" type="text/css" media="print" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+     <script src="./../rplugin/spreadsheet/ruleJS.all.full.min.js"></script>
+   <link rel="stylesheet" href="./../rplugin/spreadsheet/spreadsheet.css">
+    <link rel="stylesheet" href="./../_assets/_assets/cmu.css" />
+
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides"><div id="footer">17-445 Software Engineering for AI-Enabled Systems, Christian Kaestner & Eunsuk Kang</div><section  data-markdown><script type="text/template">
+
+# Teaching Software Engineering for AI-Enabled Systems
+
+Christian Kaestner and Eunsuk Kang
+
+Carnegie Mellon University
+
+https://ckaestne.github.io/seai/
+
+ICSE-SEET 2020
+</script></section><section  data-markdown><script type="text/template">
+
+## Software Engineering for ML-Enabled Systems
+
+> Building, operating, and maintaining software systems with machine-learned components
+
+
+</script></section><section ><section data-markdown><script type="text/template">## SE 4 ML-Systems != Training models
+
+![Notebook](notebook.png)
+
+
+
+
+</script></section><section data-markdown><script type="text/template">
+
+## SE 4 ML-Systems != ML 4 SE
+
+![Code Completion with AI](codecompl.png)
+
+</script></section><section data-markdown><script type="text/template">![Powerpoint screenshot with slide designer](powerpoint.png)
+</script></section><section data-markdown><script type="text/template">![](temi.png)
+
+</script></section></section><section ><section data-markdown><script type="text/template">
+
+<svg version="1.1" viewBox="0.0 0.0 800 400" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+    <style>
+    text { font: 60px sans-serif; }
+    </style>
+    <circle r="180" cx="180", cy="200" fill="#b9ff00" fill-opacity="0.514" />
+    <circle r="180" cx="620", cy="200" fill="#ff5500" fill-opacity="0.514" />
+    <text x=180 y=160 dominant-baseline="middle" text-anchor="middle">Data</text>
+    <text x=180 y=240 dominant-baseline="middle" text-anchor="middle">Scientists</text>
+    <text x=620 y=160 dominant-baseline="middle" text-anchor="middle">Software</text>
+    <text x=620 y=240 dominant-baseline="middle" text-anchor="middle">Engineers</text>
+</svg>
+
+</script></section><section data-markdown><script type="text/template">
+<svg version="1.1" viewBox="0.0 0.0 800 400" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+    <style>
+    text { font: 60px sans-serif; }
+    </style>
+    <circle r="180" cx="250", cy="200" fill="#b9ff00" fill-opacity="0.514" />
+    <circle r="180" cx="550", cy="200" fill="#ff5500" fill-opacity="0.514" />
+    <text x=230 y=160 dominant-baseline="middle" text-anchor="middle">Data</text>
+    <text x=230 y=240 dominant-baseline="middle" text-anchor="middle">Scientists</text>
+    <text x=570 y=160 dominant-baseline="middle" text-anchor="middle">Software</text>
+    <text x=570 y=240 dominant-baseline="middle" text-anchor="middle">Engineers</text>
+</svg>
+
+</script></section></section><section ><section data-markdown><script type="text/template">## Many challenges
+
+
+* Missing specifications
+* Environment is important (feedback loops, data drift)
+* Nonlocal and nonmonotonic effects 
+* Testing in production
+* Data management, versioning, and provenance
+* Fairness, robustness, interpretability
+
+</script></section><section data-markdown><script type="text/template">## Software Engineers Can Contribute
+
+
+* Missing specifications -- *implicit, vague specs very common; safe systems from unreliable components, risk analysis* <small>(["ML is requirements engineering"](https://medium.com/@ckaestne/machine-learning-is-requirements-engineering-8957aee55ef4))</small>
+* Environment is important -- *the world vs the machine* <small>([paper](https://courses.cs.washington.edu/courses/csep503/19wi/schedule/papers/TheWorldAndTheMachine.pdf))</small>
+* Nonlocal and nonmonotonic effects -- *feature interactions, system testing* 
+* Testing in production -- *continuous deployment, A/B testing*
+* Data management, versioning, and provenance -- *stream processing, event sourcing, data modeling*
+* Fairness, robustness, interpretability -- *traditional requirements engineering questions*
+
+</script></section><section data-markdown><script type="text/template">
+![Overview](overview.png)
+
+https://github.com/ckaestne/seai
+
+</script></section><section data-markdown><script type="text/template">## Our View
+
+> While developers of simple traditional systems may get away with poor practices, most developers of AI-enabled systems will not.
+
+> This is an education problem, more than a research problem. 
+
+</script></section></section><section  data-markdown><script type="text/template">## Assignments
+
+Break the habit of modeling in notebooks on static datasets
+
+Design for realistic "production" setting: deployment, experimentation in production, data drift and feedback loops
+
+Movie recommendations for 1 million simulated users in real time
+
+![Assignment infrastructure](sim.png)
+
+</script></section><section  data-markdown><script type="text/template">## Summary: Software Engineering for ML-Enabled Systems
+
+* Building, operating, and maintaining systems with ML component
+* Data scientists and software engineers have different expertise, both needed
+* Software engineering view on intelligent *systems*:
+    - User interaction design
+    - Model qualities and deployment tradeoffs
+    - Risk analysis and safety
+    - Architecture, deployment, telemetry design
+    - Quality assurance, fairness, robustness, interpretability
+* All material, including slides, assignments, video recordings, shared under Creative Commons license
+
+https://ckaestne.github.io/seai/
+</script></section></div>
+    </div>
+
+    <script src="./../js/reveal.js"></script>
+
+    <script>
+      function extend() {
+        var target = {};
+        for (var i = 0; i < arguments.length; i++) {
+          var source = arguments[i];
+          for (var key in source) {
+            if (source.hasOwnProperty(key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+        return target;
+      }
+
+      // Optional libraries used to extend on reveal.js
+      var deps = [
+        { src: './../plugin/markdown/marked.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+        { src: './../plugin/markdown/markdown.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+        { src: './../plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+        { src: './../plugin/zoom-js/zoom.js', async: true },
+        { src: './../plugin/notes/notes.js', async: true },
+        { src: './../plugin/math/math.js' },
+        { src: './../rplugin/embed-tweet/embed-tweet.js' },
+        { src: './../rplugin/menu/menu.js', async: true },
+        { src: './../rplugin/spreadsheet/spreadsheet.js' },
+        { src: './../rplugin/chalkboard/chalkboard.js', async: true }
+      ];
+
+      // default options to init reveal.js
+      var defaultOptions = {
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        dependencies: deps,
+	chalkboard: { // font-awesome.min.css must be available
+		toggleChalkboardButton: { left: "80px" },
+		toggleNotesButton: { left: "130px" },
+	},
+	keyboard: {
+	    67: function() { RevealChalkboard.toggleNotesCanvas() },	// toggle notes canvas when 'c' is pressed
+	    66: function() { RevealChalkboard.toggleChalkboard() },	// toggle chalkboard when 'b' is pressed
+	    46: function() { RevealChalkboard.clear() },	// clear chalkboard when 'DEL' is pressed
+	     8: function() { RevealChalkboard.reset() },	// reset chalkboard data on current slide when 'BACKSPACE' is pressed
+	    68: function() { RevealChalkboard.download() },	// downlad recorded chalkboard drawing when 'd' is pressed
+	    88: function() { RevealChalkboard.colorNext() },	// cycle colors forward when 'x' is pressed
+	    89: function() { RevealChalkboard.colorPrev() },	// cycle colors backward when 'y' is pressed
+	}
+      };
+
+      // options from URL query string
+      var queryOptions = Reveal.getQueryHash() || {};
+
+      var options = extend(defaultOptions, {"controls":true,"progress":true,"theme":"white","slideNumber":true,"hash":true,"center":false}, queryOptions);
+    </script>
+
+    <script src="./../_assets/_assets/viz.js"></script>
+    <script src="./../_assets/_assets/loadmymarkdown.js"></script>
+
+    <script>
+      Reveal.initialize(options);
+    </script>
+  </body>
+</html>

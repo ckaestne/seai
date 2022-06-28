@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>17-445: Trade-offs among AI Techniques</title>
+    <link rel="stylesheet" href="./../css/reveal.css" />
+    <link rel="stylesheet" href="./../css/theme/white.css" id="theme" />
+    <link rel="stylesheet" href="./../css/highlight/zenburn.css" />
+    <link rel="stylesheet" href="./../css/print/paper.css" type="text/css" media="print" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+     <script src="./../rplugin/spreadsheet/ruleJS.all.full.min.js"></script>
+   <link rel="stylesheet" href="./../rplugin/spreadsheet/spreadsheet.css">
+    <link rel="stylesheet" href="./../_assets/_assets/cmu.css" />
+
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides"><div id="footer">17-445 Software Engineering for AI-Enabled Systems, Christian Kaestner</div><section  data-markdown><script type="text/template">  
+
+# Trade-offs among AI Techniques
+
+
+Christian Kaestner
+
+<!-- references -->
+With slides adopted from Eunsuk Kang
+
+Required reading: 🗎 Vogelsang, Andreas, and Markus Borg. "[Requirements Engineering for Machine Learning: Perspectives from Data Scientists](https://arxiv.org/pdf/1908.04674.pdf)." In Proc. of the 6th International Workshop on Artificial Intelligence for Requirements Engineering (AIRE), 2019.
+
+
+</script></section><section  data-markdown><script type="text/template"># Learning Goals
+
+* Describe the most common models and learning strategies used for AI components and summarize how they work
+* Organize and prioritize the relevant qualities of concern for a given project
+* Plan and execute an evaluation of the qualities of alternative AI components for a given purpose
+
+</script></section><section  data-markdown><script type="text/template">## Today's Case Study: Lane Assist
+
+![Street](lane.jpg)
+
+<!-- references -->
+
+Image CC BY-SA 4.0 by  [Ian Maddox](https://commons.wikimedia.org/wiki/User:Isnoop)
+</script></section><section ><section data-markdown><script type="text/template">## Today's Case Study: Lane Assist
+
+![Lane detection internals](lane-detect.jpg)
+
+<!-- references -->
+
+Image CC BY-SA 4.0 by [Vidyakv](https://en.wikipedia.org/wiki/Lane_departure_warning_system#/media/File:Lane_Detection_Example.jpg)
+
+</script></section><section data-markdown><script type="text/template">## Background: Lane Assist
+From audio, haptic, and visual signal ("lane departure warning") to automated steering ("lane keeping"); often combined with adaptive cruise control
+
+Safety or comfort feature
+
+Multiple inputs: camera, indicators, speed, possibly radar, hands on steering wheel sensor
+
+Multiple AI components: Lane recognition, automated steering, automated breaking
+
+Integrated into larger systems with user interface, sensors, actuators, and other AI and non-AI components, working together with humans
+
+Classic systems based on old line detection techniques in images (no deep learning)
+
+See https://en.wikipedia.org/wiki/Lane_departure_warning_system
+
+</script></section></section><section ><section data-markdown><script type="text/template"># Quality
+
+<!-- colstart -->
+![Art](art.jpg)
+<!-- col -->
+![Car](car.jpg)
+<!-- colend -->
+</script></section><section data-markdown><script type="text/template">## Views of Quality
+
+* **Transcendent** – Experiential. Quality can be recognized but not defined or measured
+* **Product-based** – Level of attributes (More of this, less of that)
+* **User-based** – Fitness for purpose, quality in use
+* **Value-based** – Level of attributes/fitness for purpose at given cost
+* **Manufacturing** – Conformance to specification, process excellence
+
+<!-- references -->
+
+Reference:
+Garvin, David A., [What Does Product Quality Really Mean](http://oqrm.org/English/What_does_product_quality_really_means.pdf). Sloan management review 25 (1984).
+
+</script></section><section data-markdown><script type="text/template">
+## Garvin’s eight categories of product quality
+
+* Performance
+* Features
+* Reliability
+* Conformance
+* Durability
+* Serviceability
+* Aesthetics
+* Perceived Quality
+
+<!-- references -->
+
+Reference:
+Garvin, David A., [What Does Product Quality Really Mean](http://oqrm.org/English/What_does_product_quality_really_means.pdf). Sloan management review 25 (1984).
+
+
+</script></section><section data-markdown><script type="text/template">## Attributes
+
+![Lane detection internals](lane-detect.jpg)
+
+* **Quality attributes:** How well the product (system) delivers its
+functionality (usability, reliability, availability, security...)
+* **Project attributes:** Time-to-market, development & HR cost...
+* **Design attributes:** Type of AI method used, accuracy, training time, inference time, memory usage...
+
+</script></section><section data-markdown><script type="text/template">## Constraints
+
+Constraints define the space of attributes for valid design solutions
+
+![constraints](constraints.png)
+
+</script></section><section data-markdown><script type="text/template">## Types of Constraints
+
+* Problem constraints: Minimum required QAs for an acceptable product
+* Project constraints: Deadline, project budget, available skills
+* Design constraints: Type of ML task required (regression/classification), kind of available data, limits on computing resources, max. inference cost
+
+**Plausible constraints for Lane Assist?**
+
+![Lane detection internals](lane-detect.jpg)
+</script></section><section data-markdown><script type="text/template">## AI Selection Problem
+
+* How to decide which AI method to use in project?
+* Find method that:
+  1. satisfies the given constraints and 
+  2. is optimal with respect to the set of relevant attributes
+
+
+
+</script></section></section><section ><section data-markdown><script type="text/template"># Requirements Engineering: 
+
+# Identify Relevant Qualities of AI Components in AI-Enabled Systems
+
+</script></section><section data-markdown><script type="text/template">## Accuracy is not Everything
+
+Beyond prediction accuracy, what qualities may be relevant for an AI component?
+
+<!-- discussion -->
+
+<aside class="notes"><p>Collect qualities on whiteboard</p>
+</aside></script></section><section data-markdown><script type="text/template">## Qualities of Interest?
+
+Scenario: Component detecting line markings in camera picture
+
+<!-- discussion -->
+
+<aside class="notes"><p>Which of the previously discussed qualities are relevant?
+Which additional qualities may be relevant here?</p>
+</aside></script></section><section data-markdown><script type="text/template">## Qualities of Interest?
+
+Scenario: Component predicting defaulting on loan (credit rating)
+
+<!-- discussion -->
+</script></section><section data-markdown><script type="text/template">## Measuring Qualities
+
+* Define a metric -- define units of interest 
+  - e.g., requests per second, max memory per inference, average training time in seconds for 1 million datasets
+* Operationalize metric -- define measurement protocol
+  - e.g., conduct experiment: train model with fixed dataset, report median training time across 5 runs, file size, average accuracy with leave-one-out crossvalidation after hyperparameter tuning
+  - e.g., ask 10 humans to independently label evaluation data, report reduction in error from machine-learned model over human predictions
+  - describe all relevant factors: inputs/experimental units used, configuration decisions and tuning, hardware used, protocol for manual steps
+
+**On terminology:** *metric/measure* refer a method or standard format for measuring something; *operationalization* is identifying and implementing a method to measure some factor
+</script></section><section data-markdown><script type="text/template">## Examples of Qualities to Consider
+
+* Accuracy
+* Correctness guarantees? Probabilistic guarantees (--> symbolic AI)
+* How many features? Interactions among features?
+* How much data needed? Data quality important?
+* Incremental training possible?
+* Training time, memory need, model size -- depending on training data volume and feature size
+* Inference time, energy efficiency, resources needed, scalability
+* Interpretability/explainability
+* Robustness, reproducibility, stability
+* Security, privacy
+* Fairness
+</script></section><section data-markdown><script type="text/template">## On terminology
+
+* Data scientists seem to speak of *model properties* when referring to accuracy, inference time, fairness, etc
+  * ... but they also use this term for whether a *learning technique* can learn non-linear relationships or whether the learning algorithm is monotonic
+* Software engineering wording would usually be *quality attributes*, *non-functional requirements*, ...
+
+</script></section><section data-markdown><script type="text/template">## Interpretability/Explainability
+
+*"Why did the model predict X?"*
+
+**Explaining predictions + Validating Models + Debugging**
+
+```
+IF age between 18–20 and sex is male THEN predict arrest
+ELSE IF age between 21–23 and 2–3 prior offenses THEN predict arrest
+ELSE IF more than three priors THEN predict arrest
+ELSE predict no arrest
+```
+
+Some models inherently simpler to understand
+
+Some tools may provide post-hoc explanations
+
+Explanations may be more or less truthful
+
+How to measure interpretability?
+
+**more in a later lecture**
+</script></section><section data-markdown><script type="text/template">## Robustness
+
+![Adversarial Example](adversarial.png)
+
+Small input modifications may change output
+
+Small training data modifications may change predictions
+
+How to measure robustness?
+
+**more in a later lecture**
+
+
+<!-- references -->
+Image source: [OpenAI blog](https://openai.com/blog/adversarial-example-research/)
+</script></section><section data-markdown><script type="text/template">## Fairness
+
+*Does the model perform differently for different populations?*
+
+```
+IF age between 18–20 and sex is male THEN predict arrest
+ELSE IF age between 21–23 and 2–3 prior offenses THEN predict arrest
+ELSE IF more than three priors THEN predict arrest
+ELSE predict no arrest
+```
+
+Many different notions of fairness
+
+Often caused by bias in training data
+
+Enforce invariants in model or apply corrections outside model
+
+Important consideration during requirements solicitation!
+
+**more in a later lecture**
+
+</script></section><section data-markdown><script type="text/template">## Requirements Engineering for AI-Enabled Systems
+
+* Set minimum accuracy expectations ("functional requirement")
+* Identify explainability needs
+* Identify protected characteristics and possible fairness concerns
+* Identify security and privacy requirements (ethical and legal), e.g., possible use of data
+* Understand data availability and need (quality, quantity, diversity, formats, provenance)
+* 
+* Involve data scientists and legal experts
+* Map system goals to AI components
+* Establish constraints, set goals
+
+<!-- references -->
+
+Further reading: Vogelsang, Andreas, and Markus Borg. "[Requirements Engineering for Machine Learning: Perspectives from Data Scientists](https://arxiv.org/pdf/1908.04674.pdf)." In Proc. of the 6th International Workshop on Artificial Intelligence for Requirements Engineering (AIRE), 2019.
+
+
+
+
+
+
+
+
+
+
+</script></section></section><section ><section data-markdown><script type="text/template"># Some Tradeoffs of Common ML Techniques
+
+![scikit-learn](ml_map.png)
+<!-- .element: class="stretch" -->
+
+Image: [Scikit Learn Tutorial](https://scikit-learn.org/stable/tutorial/machine_learning_map/)
+</script></section><section data-markdown><script type="text/template">## Linear Regression
+
+![linear-regression](linear-regression.png)
+
+* Tasks: Regression, labeled data
+* Linear relationship between input & output variables
+* Advantages: ??
+* Disadvantages: ??
+
+<aside class="notes"><ul>
+<li>Easy to interpret, low training cost, small model size</li>
+<li>Can&#39;t capture non-linear relationships well</li>
+</ul>
+</aside></script></section><section data-markdown><script type="text/template">## Decision Tree Learning
+
+<!-- colstart -->
+
+* Tasks: Classification & regression, labeled data
+* Advantages: ??
+* Disadvantages: ??
+
+<!-- col -->
+```mermaid
+graph TD;
+  Outlook -->|Sunny| Windy;
+  Outlook -->|Overcast| Yes((Yes));
+  Outlook -->|Rainy| Humidity;
+  Windy -->|true| No((No));
+  Windy -->|false| No2((No));
+  Humidity -->|high| No3((No));
+  Humidity -->|Normal| Yes2((Yes));
+```
+<!-- colend -->
+
+<aside class="notes"><ul>
+<li>Easy to interpret (up to a size); can capture non-linearity; can do well with
+little data</li>
+<li>High risk of overfitting; possibly very large tree size</li>
+</ul>
+</aside></script></section><section data-markdown><script type="text/template">## Random Forests
+
+![Random Forests](random-forest.png)
+
+* Construct lots of decision trees with some randomness (e.g., on subsets of data or subsets of features)
+* Advantages: ??
+* Disadvantages: ??
+
+<!-- references -->
+Image CC-BY-SA-4.0 by [Venkata Jagannath](https://commons.wikimedia.org/wiki/File:Random_forest_diagram_complete.png)
+
+<aside class="notes"><ul>
+<li>High accuracy &amp; reduced overfitting; incremental (can add new trees)</li>
+<li>Reduced interpretability; large number of trees can take up space</li>
+</ul>
+</aside></script></section><section data-markdown><script type="text/template">## Neural Network
+
+<!-- colstart -->
+* Tasks: Classification & regression, labeled data
+* Advantages: ??
+* Disadvantages: ??
+<!-- col -->
+![neural-network](mlperceptron.svg)
+<!-- colend -->
+
+<aside class="notes"><ul>
+<li>High accuracy; can capture a wide range of problems (linear &amp; non-linear)</li>
+<li>Difficult to interpret; high training costs (time &amp; amount of
+data required, hyperparameter tuning)</li>
+</ul>
+</aside></script></section><section data-markdown><script type="text/template">## k-Nearest Neighbors (k-NN)
+
+![knn](knn.png)
+
+* Tasks: Classification & regression, unsupervised
+* Infer the class/property of an object based on that of _k_ nearest neighbors
+* **Lazy learning**: Generalization is delayed until
+  the inference takes place 
+* Advantages: ??
+* Disadvantages: ??
+
+<aside class="notes"><ul>
+<li>Easy to interpret; no training required (due to lazy learning); incremental (can continuously add new data) </li>
+<li>Potentially slow inference (again, due to lazy learning); high data storage
+requirement (must store training instances)</li>
+</ul>
+</aside></script></section><section data-markdown><script type="text/template">## Ensemble Learning
+
+![ensemble-learning](ensemble.png)
+
+* Combine a set of low-accuracy (but cheaper to learn) models to
+provide high-accuracy predictions
+
+
+</script></section><section data-markdown><script type="text/template">## Which Method for Lane Detection?
+
+![Lane detection internals](lane-detect.jpg)
+
+</script></section><section data-markdown><script type="text/template">## Which method for Credit Scoring?
+
+![Credit Scoring Chart](credit-score.png)
+<!-- .element: class="stretch" -->
+
+Linear regression, decision tree, neural network, or k-NN?
+
+Image  CC-BY-2.0 by [Pne](https://commons.wikimedia.org/wiki/File:Credit-score-chart.svg)
+</script></section><section data-markdown><script type="text/template">## Which Method for Video Recommendations?
+
+![youtube](youtube-recommendation.png)
+
+Linear regression, decision tree, neural network, or k-NN?
+
+(Youtube: 500 hours of videos uploaded per sec)
+</script></section><section data-markdown><script type="text/template">[![scikit-learn](ml_map.png)](ml_map.png)
+<!-- .element: class="stretch" -->
+
+Image: [Scikit Learn Tutorial](https://scikit-learn.org/stable/tutorial/machine_learning_map/)
+
+
+
+
+
+
+</script></section></section><section ><section data-markdown><script type="text/template"># Tradeoff Analysis
+
+![Pareto Front Example](pareto.svg)
+
+</script></section><section data-markdown><script type="text/template">## Trade-offs: Cost vs Accuracy
+
+![Netflix prize leaderboard](netflix-leaderboard.png)
+
+_"We evaluated some of the new methods offline but the additional
+accuracy gains that we measured did not seem to justify the
+engineering effort needed to bring them into a production
+environment.”_
+
+<!-- references -->
+
+Amatriain & Basilico. [Netflix Recommendations: Beyond the 5 stars](https://netflixtechblog.com/netflix-recommendations-beyond-the-5-stars-part-1-55838468f429),
+Netflix Technology Blog (2012)
+</script></section><section data-markdown><script type="text/template">## Trade-offs: Accuracy vs Interpretability
+
+![Illustrated interpretability accuracy tradeoff](tradeoffs.png)
+
+<!-- references -->
+
+Bloom & Brink. [Overcoming the Barriers to Production-Ready Machine Learning
+Workflows](https://conferences.oreilly.com/strata/strata2014/public/schedule/detail/32314), Presentation at O'Reilly Strata Conference (2014).
+</script></section><section data-markdown><script type="text/template">## Multi-Objective Optimization 
+
+![Pareto Front Example](pareto.svg)
+<!-- .element: class="stretch" -->
+
+* Determine optimal solutions given multiple, possibly
+  **conflicting** objectives
+* **Dominated** solution: A solution that is inferior to
+  others in every way 
+* **Pareto frontier**: A set of non-dominated solutions 
+
+Image CC BY-SA 3.0 by [Nojhan](https://en.wikipedia.org/wiki/Multi-objective_optimization#/media/File:Front_pareto.svg)
+</script></section><section data-markdown><script type="text/template">## Example: Credit Scoring
+
+![Credit Scoring Chart](credit-score.png)
+<!-- .element: class="stretch" -->
+
+* For problems with a linear relationship between input & output variables:
+  * Linear regression: Superior in terms of accuracy, interpretability, cost 
+  * Other methods are dominated (inferior) solutions
+</script></section><section data-markdown><script type="text/template">## ML Method Selection as Multi-Objective Optimization
+
+1. Identify a set of constraints
+	* Start with problem & project constraints
+	* From them, derive design constraints on ML components
+2. Eliminate ML methods that do not satisfy the constraints
+3. Evaluate remaining methods against each attribute
+	* Measure everything that can be measured! (e.g., training cost,
+    accuracy, inference time...)
+4. Eliminate dominated methods to find the Pareto frontier 
+5. Consider priorities among attributes to select an optimal method
+	* Which attribute(s) do I care the most about? Utility function? Judgement!
+</script></section><section data-markdown><script type="text/template">## Example: Lane Detection
+
+![Lane detection internals](lane-detect.jpg)
+
+* Constraints: ??
+* Invalid solutions: ??
+* Priority among attributes: ??
+
+<aside class="notes"><ul>
+<li>Constraints: ML task (classification), inference time (fast,
+real-time), model size (moderate, for on-vehicle storage)</li>
+<li>Invalid solutions: Linear regression, k-NN</li>
+<li>Priority among attributes: What if accuracy &gt; interpretability = cost?</li>
+</ul>
+</aside></script></section></section><section  data-markdown><script type="text/template"># Summary
+
+* Quality is multifaceted
+* Requirements engineering to solicit important qualities and constraints 
+* Many qualities of interest, define metrics and operationalize
+* Survey of ML techniques and some of their tradeoffs
+* AI method selection as multi-objective optimization 
+</script></section></div>
+    </div>
+
+    <script src="./../js/reveal.js"></script>
+
+    <script>
+      function extend() {
+        var target = {};
+        for (var i = 0; i < arguments.length; i++) {
+          var source = arguments[i];
+          for (var key in source) {
+            if (source.hasOwnProperty(key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+        return target;
+      }
+
+      // Optional libraries used to extend on reveal.js
+      var deps = [
+        { src: './../plugin/markdown/marked.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+        { src: './../plugin/markdown/markdown.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+        { src: './../plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+        { src: './../plugin/zoom-js/zoom.js', async: true },
+        { src: './../plugin/notes/notes.js', async: true },
+        { src: './../plugin/math/math.js' },
+        { src: './../rplugin/embed-tweet/embed-tweet.js' },
+        { src: './../rplugin/menu/menu.js', async: true },
+        { src: './../rplugin/spreadsheet/spreadsheet.js' },
+        { src: './../rplugin/chalkboard/chalkboard.js', async: true }
+      ];
+
+      // default options to init reveal.js
+      var defaultOptions = {
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        dependencies: deps,
+	chalkboard: { // font-awesome.min.css must be available
+		toggleChalkboardButton: { left: "80px" },
+		toggleNotesButton: { left: "130px" },
+	},
+	keyboard: {
+	    67: function() { RevealChalkboard.toggleNotesCanvas() },	// toggle notes canvas when 'c' is pressed
+	    66: function() { RevealChalkboard.toggleChalkboard() },	// toggle chalkboard when 'b' is pressed
+	    46: function() { RevealChalkboard.clear() },	// clear chalkboard when 'DEL' is pressed
+	     8: function() { RevealChalkboard.reset() },	// reset chalkboard data on current slide when 'BACKSPACE' is pressed
+	    68: function() { RevealChalkboard.download() },	// downlad recorded chalkboard drawing when 'd' is pressed
+	    88: function() { RevealChalkboard.colorNext() },	// cycle colors forward when 'x' is pressed
+	    89: function() { RevealChalkboard.colorPrev() },	// cycle colors backward when 'y' is pressed
+	}
+      };
+
+      // options from URL query string
+      var queryOptions = Reveal.getQueryHash() || {};
+
+      var options = extend(defaultOptions, {"controls":true,"progress":true,"theme":"white","slideNumber":true,"hash":true,"center":false}, queryOptions);
+    </script>
+
+    <script src="./../_assets/_assets/mermaid.min.js"></script>
+    <script src="./../_assets/_assets/loadmymarkdown.js"></script>
+
+    <script>
+      Reveal.initialize(options);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>Toward a system-wide and interdisciplinary perspective on ML system performance</title>
+    <link rel="stylesheet" href="./../css/reveal.css" />
+    <link rel="stylesheet" href="./../css/theme/white.css" id="theme" />
+    <link rel="stylesheet" href="./../css/highlight/zenburn.css" />
+    <link rel="stylesheet" href="./../css/print/paper.css" type="text/css" media="print" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+     <script src="./../rplugin/spreadsheet/ruleJS.all.full.min.js"></script>
+   <link rel="stylesheet" href="./../rplugin/spreadsheet/spreadsheet.css">
+    <link rel="stylesheet" href="./../_assets/_assets/cmu.css" />
+
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides"><div id="footer">FastPath'21</div><section  data-markdown><script type="text/template">
+
+# Toward a system-wide and interdisciplinary perspective on ML system performance
+
+Christian Kaestner
+
+Carnegie Mellon University
+
+@ FASTPATH 2021
+
+</script></section><section  data-markdown><script type="text/template">
+![Picture of Christian](me.jpg)
+
+<!-- split -->
+## Christian Kästner
+
+[@p0nk](https://twitter.com/p0nk)
+
+kaestner@cs.cmu.edu
+
+Associate Professor @ CMU
+
+Interests:
+* Software Engineering for ML-Enabled Systems
+* Highly-Configurable Systems (incl. performance analysis)
+* Sustainability and Stress in Open Source
+
+
+</script></section><section ><section data-markdown><script type="text/template">
+# Software Engineering for ML-Enabled Systems
+
+> Building, operating, and maintaining software systems with machine-learned components
+
+> with interdisciplinary collaborative teams of 
+**data scientists**, **software engineers**, **operators**, ... 
+</script></section><section data-markdown><script type="text/template">
+
+## SE for ML-Enabled Systems != 
+## Developing ML frameworks
+
+![Parameter server architecture](parameterserver.png)
+<!-- .element: class="stretch" -->
+
+
+</script></section><section data-markdown><script type="text/template">## SE for ML-Enabled Systems
+
+![Powerpoint screenshot with slide designer](powerpoint.png)
+</script></section><section data-markdown><script type="text/template">## SE for ML-Enabled Systems
+
+![Screenshot of Temi](temi.png)
+[temi.com](https://www.temi.com/)
+</script></section><section data-markdown><script type="text/template">## System = ML + Non-ML Components
+
+![Transcription service architecture](transcriptionarchitecture.png)
+<!-- .element: class="stretch plain" -->
+
+
+</script></section></section><section ><section data-markdown><script type="text/template"># System Design Matters
+</script></section><section data-markdown><script type="text/template">## Most ML Courses
+
+Focus narrowly on modeling techniques or building models
+
+Using notebooks, static datasets, evaluating accuracy
+
+![Notebook](notebook.png)
+
+</script></section><section data-markdown><script type="text/template">## SE for ML-Enabled Systems
+
+![Screenshot of Temi](temi.png)
+[temi.com](https://www.temi.com/)
+
+</script></section><section data-markdown><script type="text/template">## The Flywheel
+
+![Flywheel](flywheel.png)
+<!-- .element: class="stretch plain" -->
+</script></section><section data-markdown><script type="text/template">## Telemetry Design
+
+![](temi.png)
+[temi.com](https://www.temi.com/)
+
+</script></section><section data-markdown><script type="text/template">## ML is a Component in a System
+
+![Transcription service architecture](transcriptionarchitecture.png)
+<!-- .element: class="stretch plain" -->
+
+</script></section><section data-markdown><script type="text/template">## System Design to Support ML
+
+![Transcription service architecture](transcriptionarchitecture2.png)
+<!-- .element: class="stretch plain" -->
+
+
+
+
+
+
+
+
+</script></section></section><section ><section data-markdown><script type="text/template"># Everything is a Tradeoff
+</script></section><section data-markdown><script type="text/template">
+![It depends](it-depends.png)
+
+</script></section><section data-markdown><script type="text/template">## Many qualities of interest
+
+* Accuracy
+* Inference latency, throughput, energy consumption
+* Learning time, incremental learning, scalability, resources needed
+* Simplicity, maintainability, extensibility, 
+* Interpretability/explainability, fairness
+* Robustness, reproducibility, stability
+* 
+* Usability, trust, accountability
+* User satisfaction
+* Dealing with mistakes
+* Safety, security, privacy
+* Development velocity, predictability
+* Profit
+* ...
+
+
+</script></section><section data-markdown><script type="text/template">## Model Quality vs System Quality
+
+![Booking.com example](bookingcom.png)
+
+<!-- references -->
+Bernardi, Lucas, Themistoklis Mavridis, and Pablo Estevez. "150 successful machine learning models: 6 lessons learned at Booking.com." In Proc. International Conference on Knowledge Discovery & Data Mining, 2019.
+</script></section><section data-markdown><script type="text/template">## Model Quality vs System Quality
+
+![Booking.com example](bookingcom2.png)
+<!-- .element: class="stretch" -->
+
+</script></section><section data-markdown><script type="text/template">## Many qualities of interest
+
+* Accuracy
+* Inference latency, throughput, energy consumption
+* Learning time, incremental learning, scalability, resources needed
+* Simplicity, maintainability, extensibility, 
+* Interpretability/explainability, fairness
+* Robustness, reproducibility, stability
+* 
+* Usability, trust, accountability
+* User satisfaction
+* Dealing with mistakes
+* Safety, security, privacy
+* Development velocity, predictability
+* Profit
+* ...
+
+
+</script></section><section data-markdown><script type="text/template">## Example: AR Instant Translation
+
+
+![Seoul Street Signs](seoul.jpg)
+<!-- .element: class="stretch" -->
+
+</script></section><section data-markdown><script type="text/template">## Example: AR Instant Translation
+
+![Google Translate](googletranslate.png)
+</script></section><section data-markdown><script type="text/template">## Example: AR Instant Translation
+
+<iframe width="800" height="505" src="https://www.youtube.com/embed/w_pTFBbe5hQ?start=313" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+</script></section><section data-markdown><script type="text/template">## Example: AR Instant Translation
+
+![Google Glasses](googleglasses.jpg)
+</script></section><section data-markdown><script type="text/template">## Example: AR Instant Translation
+
+![Deployment architecture choices](artransl.png)
+
+
+</script></section><section data-markdown><script type="text/template">## Tradeoff: Accuracy vs Latency + Energy + Model Size
+
+![Deployment architecture choices](artransl.png)
+</script></section><section data-markdown><script type="text/template">## Tradeoff: Latency vs Energy Consumption vs Bandwidth
+
+
+![Deployment architecture choices](artransl.png)
+</script></section><section data-markdown><script type="text/template">## Tradeoff: Privacy vs Telemetry
+
+
+![Deployment architecture choices](artransl.png)
+</script></section><section data-markdown><script type="text/template">## Tradeoff: Telemetry benefits vs telemetry costs
+
+
+![Deployment architecture choices](artransl.png)
+</script></section><section data-markdown><script type="text/template">## Tradeoff: Update latency vs Offline use
+
+![Deployment architecture choices](artransl.png)
+</script></section><section data-markdown><script type="text/template">## Tradeoff: Training cost vs update frequency
+
+
+![Deployment architecture choices](artransl.png)
+</script></section><section data-markdown><script type="text/template">
+![It depends](it-depends.png)
+
+
+
+</script></section></section><section ><section data-markdown><script type="text/template"># Think like a 
+# software architect
+</script></section><section data-markdown><script type="text/template">![Waterfall](waterfall.png)
+<!-- .element: class="stretch plain" -->
+
+</script></section><section data-markdown><script type="text/template">
+## Excursion: Twitter
+
+![twitter](twitter.png)
+
+<!-- references -->
+Raffi. [New Tweets per second record, and how!](https://blog.twitter.com/engineering/en_us/a/2013/new-tweets-per-second-record-and-how.html) Twitter Blog, 2013
+</script></section><section data-markdown><script type="text/template">
+## Twitter - Caching Architecture
+
+![twitter](twitter-caching.png)
+<!-- .element: class="stretch plain" -->
+
+<aside class="notes"><ul>
+<li>Running one of the world’s largest Ruby on Rails installations</li>
+<li>200 engineers</li>
+<li>Monolithic: managing raw database, memcache, rendering the site, and * presenting the public APIs in one codebase</li>
+<li>Increasingly difficult to understand system; organizationally challenging to manage and parallelize engineering teams</li>
+<li>Reached the limit of throughput on our storage systems (MySQL); read and write hot spots throughout our databases</li>
+<li>Throwing machines at the problem; low throughput per machine (CPU + RAM limit, network not saturated)</li>
+<li>Optimization corner: trading off code readability vs performance</li>
+</ul>
+</aside></script></section><section data-markdown><script type="text/template">
+## Twitter's Redesign Goals
+
+* Performance
+    * Improve median latency; lower outliers 
+    * Reduce number of machines 10x
++ Reliability
+    * Isolate failures
++ Maintainability
+    * "We wanted cleaner boundaries with “related” logic being in one place": 
+encapsulation and modularity at the systems level (rather than at the class, module, or package level)
+* Modifiability
+    * Quicker release of new features: "run small and empowered engineering teams that could make local decisions and ship user-facing changes, independent of other teams"
+
+<!-- references -->
+
+Raffi. [New Tweets per second record, and how!](https://blog.twitter.com/engineering/en_us/a/2013/new-tweets-per-second-record-and-how.html) Twitter Blog, 2013
+</script></section><section data-markdown><script type="text/template">
+## Twitter: Redesign Decisions
+
+* Ruby on Rails -> JVM/Scala 
+* Monolith -> Microservices
+* RPC framework with monitoring, connection pooling, failover strategies, loadbalancing, ... built in
+* New storage solution, temporal clustering, "roughly sortable ids"
+* Data driven decision making
+
+<!-- split -->
+
+![Gizzard](gizzard.png)
+<!-- .element: class="stretch" -->
+</script></section><section data-markdown><script type="text/template">
+## Twitter Case Study: Key Insights
+
+* Architectural decisions affect entire systems, not only individual modules
+* Abstract, different abstractions for different scenarios
+* Reason about quality attributes early
+* Make architectural decisions explicit
+
+
+
+</script></section><section data-markdown><script type="text/template">## Architectural planning
+
+* Identify and prioritize relevant qualities
+* Identify system structure and relevant interactions
+* Understand constraints and tradeoffs
+* Conduct research into requirements and constraints
+* Explore alternatives
+* Set obligations for components
+
+![Deployment architecture choices](artransl.png)
+
+</script></section></section><section ><section data-markdown><script type="text/template"># Teams and Process
+</script></section><section data-markdown><script type="text/template"><svg version="1.1" viewBox="0.0 0.0 800 600" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+    <style>
+    text { font: 60px sans-serif; }
+    </style>
+    <circle r="180" cx="180", cy="150" fill="#b9ff00" fill-opacity="0.514" />
+    <circle r="180" cx="620", cy="150" fill="#ff5500" fill-opacity="0.514" />
+    <circle r="180" cx="400", cy="470" fill="#55ff" fill-opacity="0.514" />
+    <text x=180 y=110 dominant-baseline="middle" text-anchor="middle">Data</text>
+    <text x=180 y=190 dominant-baseline="middle" text-anchor="middle">Scientists</text>
+    <text x=620 y=110 dominant-baseline="middle" text-anchor="middle">Software</text>
+    <text x=620 y=190 dominant-baseline="middle" text-anchor="middle">Engineers</text>
+    <text x=400 y=470 dominant-baseline="middle" text-anchor="middle">Operators</text>
+</svg>
+</script></section><section data-markdown><script type="text/template">## Data scientist
+
+* Often fixed dataset for training and evaluation (e.g., PBS interviews)
+* Focused on accuracy
+* Prototyping, often Jupyter notebooks or similar 
+* Expert in modeling techniques and feature engineering
+* Model size, updateability, implementation stability typically does not matter
+* Starting to worry about fairness, robustness, ...
+
+<!-- split -->
+
+## Software engineer
+
+* Builds a product
+* Concerned about cost, performance, stability, release time
+* Identify quality through customer satisfaction
+* Must scale solution, handle large amounts of data
+* Plan for mistakes and safeguards
+* Maintain, evolve, and extend the product over long periods
+* Consider requirements for security, safety, fairness
+
+
+</script></section><section data-markdown><script type="text/template">
+![Netflix](netflix.png)
+
+<!-- split -->
+
+CMU 17-445 Class Project
+
+![Simulator](sim.png)
+<!-- .element: class="plain" -->
+
+
+</script></section><section data-markdown><script type="text/template">## Data Science Practices by Software Engineers
+
+* Many software engineers get involved in data science without explicit training
+* Copying from public examples, little reading of documentation
+* Lack of data visualization/exploration/understanding, no focus on data quality
+* Strong preference for code editors, non-GUI tools
+* Try improving model by adding more data or using deep learning, rarely feature engineering or debugging
+* Lack of awareness about overfitting/bias problems, single focus on accuracy, no monitoring
+
+
+
+<!-- references -->
+
+Yang, Qian, Jina Suh, Nan-Chen Chen, and Gonzalo Ramos. "[Grounding interactive machine learning tool design in how non-experts actually build models](http://www.audentia-gestion.fr/MICROSOFT/Machine_Teaching_DIS_18.pdf)." In *Proceedings of the 2018 Designing Interactive Systems Conference*, pp. 573-584. 2018.
+
+
+</script></section><section data-markdown><script type="text/template">![Unicorn](unicorn.jpg)
+<!-- .element: class="stretch" -->
+
+</script></section><section data-markdown><script type="text/template">
+![Roles Venn Diagram](roles_venn.svg)
+<!-- .element: class="stretch plain" -->
+
+By Steven Geringer, via Ryan Orban. [Bridging the Gap Between Data Science & Engineer: Building High-Performance Teams](https://www.slideshare.net/ryanorban/bridging-the-gap-between-data-science-engineer-building-highperformance-teams/3-Software_Engineer_Data_Engineer_Data). 2016
+
+
+</script></section><section data-markdown><script type="text/template">## T-Shaped People
+
+*Broad-range generalist + Deep expertise*
+
+![T-Shaped](tshaped.png)
+<!-- .element: class="stretch plain" -->
+
+Figure: Jason Yip. [Why T-shaped people?](https://medium.com/@jchyip/why-t-shaped-people-e8706198e437). 2018
+
+</script></section><section data-markdown><script type="text/template">## DevOps as Inspiration
+
+![DevOps](devops.png)
+<!-- .element: class="stretch plain" -->
+
+Distinct roles and expertise, but joint responsibilities, joint tooling
+
+
+Interdisciplinary teams, split expertise, but joint responsibilities
+
+Joint vocabulary and tools
+
+Foster system thinking
+
+
+</script></section><section data-markdown><script type="text/template">## Process models
+
+![Data science pipeline](pipeline.png)
+<!-- .element: class="stretch plain" -->
+
+</script></section><section data-markdown><script type="text/template">## Process models
+
+![CRISP-DM](crispdm.png)
+<!-- .element: class="stretch plain" -->
+
+(CRISP-DM)
+</script></section><section data-markdown><script type="text/template">## Process models
+
+<!-- colstart -->
+![Waterfall](waterfall.png)
+<!-- .element: class="plain" -->
+<!-- col -->
+![Scrum](scrum.svg)
+<!-- .element: class="plain" -->
+ <!-- colend -->
+
+</script></section><section data-markdown><script type="text/template">## Integrated ML/Non-ML Process
+![Combined process](combinedprocess4.png)
+<!-- .element: class="plain" -->
+</script></section><section data-markdown><script type="text/template">## Development Trajectories
+
+![Combined process](combinedprocess4.png)
+<!-- .element: class="stretch plain" -->
+
+
+Upfront design? ML first? Non-ML system first? Incremental refinement?
+</script></section></section><section  data-markdown><script type="text/template"># Summary
+
+* Adopt a whole-system perspective on ML in production
+* Design for quality, don't patch it in later
+* Understand qualities and tradeoffs, including performance
+* Consider implications of qualities on non-ML components
+* Build interdisciplinary teams, integrative process
+
+<!-- references -->
+
+Interested in talking about your experiences in interdisciplinary ML teams? Contact us.
+
+</script></section><section  data-markdown><script type="text/template">## Tradeoff: Model improvement vs System safeguards
+
+<!-- colstart -->
+![Toaster](toaster.jpg)
+<!-- col -->
+![Thermal fuse](thermalfuse.png)
+<!-- colend -->
+
+
+
+
+</script></section></div>
+    </div>
+
+    <script src="./../js/reveal.js"></script>
+
+    <script>
+      function extend() {
+        var target = {};
+        for (var i = 0; i < arguments.length; i++) {
+          var source = arguments[i];
+          for (var key in source) {
+            if (source.hasOwnProperty(key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+        return target;
+      }
+
+      // Optional libraries used to extend on reveal.js
+      var deps = [
+        { src: './../plugin/markdown/marked.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+        { src: './../plugin/markdown/markdown.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+        { src: './../plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+        { src: './../plugin/zoom-js/zoom.js', async: true },
+        { src: './../plugin/notes/notes.js', async: true },
+        { src: './../plugin/math/math.js' },
+        { src: './../rplugin/embed-tweet/embed-tweet.js' },
+        { src: './../rplugin/menu/menu.js', async: true },
+        { src: './../rplugin/spreadsheet/spreadsheet.js' },
+        { src: './../rplugin/chalkboard/chalkboard.js', async: true }
+      ];
+
+      // default options to init reveal.js
+      var defaultOptions = {
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        dependencies: deps,
+	chalkboard: { // font-awesome.min.css must be available
+		toggleChalkboardButton: { left: "80px" },
+		toggleNotesButton: { left: "130px" },
+	},
+	keyboard: {
+	    67: function() { RevealChalkboard.toggleNotesCanvas() },	// toggle notes canvas when 'c' is pressed
+	    66: function() { RevealChalkboard.toggleChalkboard() },	// toggle chalkboard when 'b' is pressed
+	    46: function() { RevealChalkboard.clear() },	// clear chalkboard when 'DEL' is pressed
+	     8: function() { RevealChalkboard.reset() },	// reset chalkboard data on current slide when 'BACKSPACE' is pressed
+	    68: function() { RevealChalkboard.download() },	// downlad recorded chalkboard drawing when 'd' is pressed
+	    88: function() { RevealChalkboard.colorNext() },	// cycle colors forward when 'x' is pressed
+	    89: function() { RevealChalkboard.colorPrev() },	// cycle colors backward when 'y' is pressed
+	}
+      };
+
+      // options from URL query string
+      var queryOptions = Reveal.getQueryHash() || {};
+
+      var options = extend(defaultOptions, {"controls":true,"progress":true,"theme":"white","slideNumber":true,"hash":true,"center":false}, queryOptions);
+    </script>
+
+    <script src="./../_assets/_assets/viz.js"></script>
+    <script src="./../_assets/_assets/loadmymarkdown.js"></script>
+
+    <script>
+      Reveal.initialize(options);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>17-445: Fairness Continued</title>
+    <link rel="stylesheet" href="./../css/reveal.css" />
+    <link rel="stylesheet" href="./../css/theme/white.css" id="theme" />
+    <link rel="stylesheet" href="./../css/highlight/zenburn.css" />
+    <link rel="stylesheet" href="./../css/print/paper.css" type="text/css" media="print" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+     <script src="./../rplugin/spreadsheet/ruleJS.all.full.min.js"></script>
+   <link rel="stylesheet" href="./../rplugin/spreadsheet/spreadsheet.css">
+    <link rel="stylesheet" href="./../_assets/_assets/cmu.css" />
+
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides"><div id="footer">17-445 Software Engineering for AI-Enabled Systems, Christian Kaestner & Eunsuk Kang</div><section  data-markdown><script type="text/template">
+
+# Fairness: Definitions and Measurements
+
+Eunsuk Kang
+
+<!-- references -->
+
+Required reading: Holstein, Kenneth, Jennifer Wortman Vaughan, Hal
+Daumé III, Miro Dudik, and Hanna
+Wallach. "[Improving fairness in machine learning systems: What do industry practitioners need?](http://users.umiacs.umd.edu/~hal/docs/daume19fairness.pdf)"
+In Proceedings of the 2019 CHI Conference on Human Factors in
+Computing Systems, pp. 1-16. 2019.
+</script></section><section  data-markdown><script type="text/template"># Learning Goals
+
+* Understand different definitions of fairness
+* Discuss methods for measuring fairness
+* Consider fairness throughout an ML lifecycle
+</script></section><section ><section data-markdown><script type="text/template"># Fairness: Definitions
+</script></section><section data-markdown><script type="text/template">### Fairness is still an actively studied & disputed concept!
+
+![](fairness-papers.jpeg)
+
+<!-- references -->
+Source: Mortiz Hardt, https://fairmlclass.github.io/
+</script></section><section data-markdown><script type="text/template">## Fairness: Definitions
+
+* Anti-classification (fairness through blindness)
+* Independence (group fairness)
+* Separation (equalized odds)
+* ...and numerous others!
+</script></section><section data-markdown><script type="text/template">## Anti-Classification
+
+![](justice.jpeg)
+
+* Also called _fairness through blindness_
+* Ignore/eliminate sensitive attributes from dataset
+* Example: Remove gender or race from a credit card scoring system
+* __Q. Advantages and limitations__?
+</script></section><section data-markdown><script type="text/template">## Recall: Proxies
+
+*Features correlate with protected attributes*
+
+![](neighborhoods.png)
+</script></section><section data-markdown><script type="text/template">## Recall: Not all discrimination is harmful
+
+![](gender-bias.png)
+
+* Loan lending: Gender discrimination is illegal.
+* Medical diagnosis: Gender-specific diagnosis may be desirable.
+* Discrimination is a __domain-specific__ concept!
+
+**Other examples?**
+</script></section><section data-markdown><script type="text/template">## Anti-Classification
+
+![](justice.jpeg)
+
+* Ignore/eliminate sensitive attributes from dataset
+* Limitations
+  * Sensitive attributes may be correlated with other features
+  * Some ML tasks need sensitive attributes (e.g., medical diagnosis)
+</script></section><section data-markdown><script type="text/template">## Testing Anti-Classification
+
+How do we test that an ML model achieves anti-classification?
+</script></section><section data-markdown><script type="text/template">## Testing Anti-Classification
+
+Straightforward invariant for classifier $f$ and protected attribute $p$: 
+
+$\forall x. f(x[p\leftarrow 0]) = f(x[p\leftarrow 1])$
+
+*(does not account for correlated attributes)*
+
+Test with random input data or on any test data
+
+Any single inconsistency shows that the protected attribute was used. Can also report percentage of inconsistencies.
+
+<!-- references -->
+See for example: Galhotra, Sainyam, Yuriy Brun, and Alexandra Meliou. "[Fairness testing: testing software for discrimination](http://people.cs.umass.edu/brun/pubs/pubs/Galhotra17fse.pdf)." In Proceedings of the 2017 11th Joint Meeting on Foundations of Software Engineering, pp. 498-510. 2017.
+</script></section><section data-markdown><script type="text/template">## Notations
+
+* $X$: Feature set (e.g., age, race, education, region, income, etc.,)  
+* $A \in X$: Sensitive attribute (e.g., gender)
+* $R$: Regression score (e.g., predicted likelihood of loan default)
+* $Y'$: Classifier output
+  * $Y' = 1$ if and only if $R > T$ for some threshold $T$
+  * e.g., Deny the loan ($Y' = 1$) if the likelihood of default > 30% 
+* $Y$: Target variable being predicted ($Y = 1$ if the person actually
+  defaults on loan)
+
+[Setting classification thresholds: Loan lending example](https://research.google.com/bigpicture/attacking-discrimination-in-ml)
+</script></section><section data-markdown><script type="text/template">## Independence
+
+$P[Y' = 1 | A = a]  = P[Y' = 1 | A = b]$
+
+* Also called _group fairness_ or _demographic parity_
+* Mathematically, $Y' \perp A$
+  * Prediction ($Y'$)  must be independent of the sensitive attribute ($A$)
+* Examples:
+	* The predicted rate of recidivism is the same across all races
+	* Both women and men have the equal probability of being promoted
+	* i.e., P[promote = 1 | gender = M] = P[promote = 1 | gender = F] 
+</script></section><section data-markdown><script type="text/template">## Independence
+
+* Q. What are limitations of independence?
+  <!-- .element: class="fragment" -->
+  * Ignores possible correlation between $Y$ and $A$
+    <!-- .element: class="fragment" -->
+	* Rules out perfect predictor $Y' = Y$ when $Y$ & $A$ are correlated
+  * Permits abuse and laziness: Can be satisfied by randomly assigning
+    a positive outcome ($Y' = 1$) to protected groups
+    <!-- .element: class="fragment" -->
+	* e.g., Randomly promote people (regardless of their
+      job performance) to match the rate across all groups
+
+</script></section><section data-markdown><script type="text/template">## Recall: Equality vs Equity
+
+![Contrasting equality, equity, and justice](eej2.png)
+
+</script></section><section data-markdown><script type="text/template">## Calibration to Achieve Independence
+
+Select different thresholds for different groups to achieve prediction parity:
+
+$P[R > t_0 | A = 0]  = P[R > t_1 | A = 1]$
+
+Lowers bar for some groups -- equity, not equality
+</script></section><section data-markdown><script type="text/template">## Testing Independence
+
+* Separate validation/telemetry data by protected attribute
+<!-- .element: class="fragment" -->
+	* Or generate realistic test data, e.g. from probability distribution of population
+	<!-- .element: class="fragment" -->
+* Separately measure rate of positive predictions
+<!-- .element: class="fragment" -->
+* Report issue if rate differs beyond $\epsilon$ across groups
+  <!-- .element: class="fragment" -->
+</script></section><section data-markdown><script type="text/template">## Separation
+
+$P[Y'=1∣Y=0,A=a] = P[Y'=1∣Y=0,A=b]$
+$P[Y'=0∣Y=1,A=a] = P[Y'=0∣Y=1,A=b]$
+
+* Also called _equalized odds_ 
+* $Y' \perp A | Y$
+  * Prediction must be independent of the sensitive attribute
+  _conditional_ on the target variable
+</script></section><section data-markdown><script type="text/template">## Review: Confusion Matrix
+
+![](confusion-matrix.jpg)
+
+Can we explain separation in terms of model errors?
+
+$P[Y'=1∣Y=0,A=a] = P[Y'=1∣Y=0,A=b]$
+$P[Y'=0∣Y=1,A=a] = P[Y'=0∣Y=1,A=b]$
+</script></section><section data-markdown><script type="text/template">## Separation
+
+$P[Y'=1∣Y=0,A=a] = P[Y'=1∣Y=0,A=b]$ (FPR parity)
+$P[Y'=0∣Y=1,A=a] = P[Y'=0∣Y=1,A=b]$ (FNR parity)
+
+* $Y' \perp A | Y$
+  * Prediction must be independent of the sensitive attribute
+    _conditional_ on the target variable
+* i.e., All groups are susceptible to the same false positive/negative rates
+<!-- .element: class="fragment" -->
+* Example: Promotion
+<!-- .element: class="fragment" -->
+  * Y': Promotion decision, A: Gender of applicant: Y: Actual job performance
+  * Separation w/ FNR: Probability of being incorrectly denied promotion is equal
+    across both male & female employees
+</script></section><section data-markdown><script type="text/template">## Testing Separation
+
+* Generate separate validation sets for each group
+* Separate validation/telemetry data by protected attribute
+  - Or generate *realistic*  test data, e.g. from probability distribution of population
+* Separately measure false positive and false negative rates
+</script></section><section data-markdown><script type="text/template">## Case Study: Cancer Diagnosis
+
+![](mri.jpg)
+</script></section><section data-markdown><script type="text/template">## Exercise: Cancer Diagnosis
+
+![](cancer-stats.jpg)
+
+* 1000 data samples (500 male & 500 female patients)
+* Does the model achieve independence? Separation w/ FPR or FNR?
+* What can we conclude about the model & its usage?  
+
+</script></section><section data-markdown><script type="text/template">## Review of Criteria so far:
+
+*Recidivism scenario: Should a person be detained?*
+
+* Anti-classification: ?
+* Independence: ?
+* Separation: ?
+
+<!-- split -->
+
+![Courtroom](courtroom.jpg)
+</script></section><section data-markdown><script type="text/template">## Review of Criteria so far:
+
+*Recidivism scenario: Should a defendant be detained?*
+
+* Anti-classification: Race and gender should not be considered for the decision at all
+* Independence: Detention rates should be equal across gender and race groups
+* Separation: Among defendants who would not have gone on to commit a
+violent crime if released, detention rates are equal across gender and race groups
+</script></section></section><section ><section data-markdown><script type="text/template"># Achieving Fairness Criteria
+</script></section><section data-markdown><script type="text/template">## Can we achieve fairness during the learning process?
+
+* Data acquisition:
+  - Collect additional data if performance is poor on some groups
+* Pre-processing:
+  * Clean the dataset to reduce correlation between the feature set
+    and sensitive attributes
+* Training time constraint
+  * ML is a constraint optimization problem (i.e., minimize errors)
+  * Impose additional parity constraint into ML optimization process
+    (as part of the loss function)
+* Post-processing
+  * Adjust thresholds to achieve a desired fairness metric
+* (Still active area of research! Many new techniques published each year)
+
+<!-- references -->
+_Training Well-Generalizing Classifiers for Fairness Metrics and
+Other Data-Dependent Constraints_, Cotter et al., (2018).
+</script></section><section data-markdown><script type="text/template">## Trade-offs: Accuracy vs Fairness
+
+![](fairness-accuracy.jpeg)
+
+* In general, accuracy is at odds with fairness
+  * e.g., Impossible to achieve perfect accuracy ($R = Y$) while
+  ensuring independence
+* Determine how much compromise in accuracy or fairness is acceptable to
+  your stakeholders
+
+<!-- references -->
+
+_Fairness Constraints: Mechanisms for Fair Classification_, Zafar et
+al., AISTATS (2017).
+
+</script></section></section><section ><section data-markdown><script type="text/template"># Building Fair ML Systems
+</script></section><section data-markdown><script type="text/template">## Fairness must be considered throughout the ML lifecycle!
+
+![](fairness-lifecycle.jpg)
+
+<!-- references -->
+
+_Fairness-aware Machine Learning_, Bennett et al., WSDM Tutorial (2019).
+
+</script></section><section data-markdown><script type="text/template">## Practitioner Challenges
+
+* Fairness is a system-level property
+  - consider goals, user interaction design, data collection, monitoring, model interaction (properties of a single model may not matter much)
+* Fairness-aware data collection, fairness testing for training data
+* Identifying blind spots
+  - Proactive vs reactive
+  - Team bias and (domain-specific) checklists
+* Fairness auditing processes and tools
+* Diagnosis and debugging (outlier or systemic problem? causes?)
+* Guiding interventions (adjust goals? more data? side effects? chasing mistakes? redesign?)
+* Assessing human bias of humans in the loop
+
+
+<!-- references -->
+Holstein, Kenneth, Jennifer Wortman Vaughan, Hal Daumé III, Miro Dudik, and Hanna Wallach. "[Improving fairness in machine learning systems: What do industry practitioners need?](http://users.umiacs.umd.edu/~hal/docs/daume19fairness.pdf)" In Proceedings of the 2019 CHI Conference on Human Factors in Computing Systems, pp. 1-16. 2019.
+
+
+</script></section></section><section ><section data-markdown><script type="text/template"># Requirements Engineering for Fairness
+
+</script></section><section data-markdown><script type="text/template">## Recall: Machine vs World
+
+![](machine-world.png)
+
+* No ML/AI lives in vacuum; every system is deployed as part of the world
+* A requirement describes a desired state of the world (i.e., environment)
+* Machine (software) is _created_ to manipulate the environment into
+this state
+
+</script></section><section data-markdown><script type="text/template">## Requirements for Fair ML Systems
+
+* Identify requirements (REQ) over the environment
+	* What types of harm can be caused by biased decisions?
+	* Who are stakeholders? Which population groups can be harmed?
+	* Are we trying to achieve equality vs. equity? 
+	* What are legal requirements to consider?
+* Define the interface between the environment & machine (ML)
+	* What data will be sensed/measured by AI? Potential biases?
+	* What types of decisions will the system make? Punitive or assistive?
+* Identify the environmental assumptions (ENV)
+  * Adversarial? Misuse? Unfair (dis-)advantages?
+  * Population distributions?
+* Devise machine specifications (SPEC) that are sufficient to establish REQ
+	* What type of fairness definition is appropriate?
+
+</script></section><section data-markdown><script type="text/template">## "Four-fifth rule" (or "80% rule")
+
+$(P[R = 1 | A = a]) / (P[R = 1 | A = b]) \geq 0.8$
+
+* Selection rate for a protected group (e.g., $A = a$) <
+80% of highest rate => selection procedure considered as having "adverse
+impact"
+* Guideline adopted by Federal agencies (Department of Justice, Equal
+  Employment Opportunity Commission, etc.,) in 1978
+* If violated, must justify business necessity (i.e., the selection procedure is
+  essential to the safe & efficient operation)
+* Example: Hiring
+  * 50% of male applicants vs 20% female applicants hired
+  (0.2/0.5 = 0.4)
+  * Is there a business justification for hiring men at a higher rate?
+
+  </script></section><section data-markdown><script type="text/template">## Example: Loan Application
+
+![](loans.jpg)
+
+* Who are the stakeholders?
+* Types of harm?
+* Legal & policy considerations?
+
+</script></section><section data-markdown><script type="text/template">## Recall: Equality vs Equity
+
+![Contrasting equality, equity, and justice](eej2.png)
+
+</script></section><section data-markdown><script type="text/template">## Type of Decision & Possible Harm
+
+* If decision is _punitive_ in nature:
+  * e.g. decide whom to deny bail based on risk of recidivism
+  * Harm is caused when a protected group is given an unwarranted penalty
+  * Heuristic: Use a fairness metric (separation) based on __false positive rate__
+* If decision is _assistive_ in nature:
+  * e.g., decide who should receive a loan or a food subsidy
+  * Harm is caused when a group in need is incorrectly denied assistance
+  * Heuristic: Use a fairness metric based on __false negative rate__
+</script></section><section data-markdown><script type="text/template">## Which fairness criteria?
+
+![Courtroom](courtroom.jpg)
+
+<!-- split -->
+
+* Decision: Classify whether a defendant should be detained
+* Criteria: Anti-classification, independence, or seperation w/ FPR or FNR?
+</script></section><section data-markdown><script type="text/template">## Which fairness criteria?
+
+![](loans.jpg)
+
+* Decision: Classify whether an applicant should be granted a loan. 
+* Criteria: Anti-classification, independence, or seperation w/ FPR or FNR?
+</script></section><section data-markdown><script type="text/template">## Which fairness criteria?
+
+![](mri.jpg)
+
+* Decision: Classify whether a patient has a high risk of cancer
+* Criteria: Anti-classification, independence, or seperation w/ FPR or FNR?
+</script></section><section data-markdown><script type="text/template">## Fairness Tree
+
+![fairness-tree](fairness_tree.png)
+
+For details on other types of fairness metrics, see:
+https://textbook.coleridgeinitiative.org/chap-bias.html
+
+
+
+</script></section></section><section  data-markdown><script type="text/template"># Summary
+
+* Definitions of fairness
+  * Anti-classification, independence, separation
+* Achieving fairness
+  * Trade-offs between accuracy & fairness
+* Achieving fairness as an activity throughout the entire development cycle
+* Requirements engineering for fair ML systems
+  * Stakeholders, sub-populations & unfair (dis-)advantages
+  * Types of harms
+  * Legal requirements
+</script></section></div>
+    </div>
+
+    <script src="./../js/reveal.js"></script>
+
+    <script>
+      function extend() {
+        var target = {};
+        for (var i = 0; i < arguments.length; i++) {
+          var source = arguments[i];
+          for (var key in source) {
+            if (source.hasOwnProperty(key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+        return target;
+      }
+
+      // Optional libraries used to extend on reveal.js
+      var deps = [
+        { src: './../plugin/markdown/marked.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+        { src: './../plugin/markdown/markdown.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+        { src: './../plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+        { src: './../plugin/zoom-js/zoom.js', async: true },
+        { src: './../plugin/notes/notes.js', async: true },
+        { src: './../plugin/math/math.js' },
+        { src: './../rplugin/embed-tweet/embed-tweet.js' },
+        { src: './../rplugin/menu/menu.js', async: true },
+        { src: './../rplugin/spreadsheet/spreadsheet.js' },
+        { src: './../rplugin/chalkboard/chalkboard.js', async: true }
+      ];
+
+      // default options to init reveal.js
+      var defaultOptions = {
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        dependencies: deps,
+	chalkboard: { // font-awesome.min.css must be available
+		toggleChalkboardButton: { left: "80px" },
+		toggleNotesButton: { left: "130px" },
+	},
+	keyboard: {
+	    67: function() { RevealChalkboard.toggleNotesCanvas() },	// toggle notes canvas when 'c' is pressed
+	    66: function() { RevealChalkboard.toggleChalkboard() },	// toggle chalkboard when 'b' is pressed
+	    46: function() { RevealChalkboard.clear() },	// clear chalkboard when 'DEL' is pressed
+	     8: function() { RevealChalkboard.reset() },	// reset chalkboard data on current slide when 'BACKSPACE' is pressed
+	    68: function() { RevealChalkboard.download() },	// downlad recorded chalkboard drawing when 'd' is pressed
+	    88: function() { RevealChalkboard.colorNext() },	// cycle colors forward when 'x' is pressed
+	    89: function() { RevealChalkboard.colorPrev() },	// cycle colors backward when 'y' is pressed
+	}
+      };
+
+      // options from URL query string
+      var queryOptions = Reveal.getQueryHash() || {};
+
+      var options = extend(defaultOptions, {"controls":true,"progress":true,"theme":"white","slideNumber":true,"hash":true,"center":false}, queryOptions);
+    </script>
+
+    <script src="./../_assets/_assets/viz.js"></script>
+    <script src="./../_assets/_assets/loadmymarkdown.js"></script>
+
+    <script>
+      Reveal.initialize(options);
+    </script>
+  </body>
+</html>

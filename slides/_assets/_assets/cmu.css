@@ -1,0 +1,30 @@
+.container{
+    display: flex;
+}
+.col{
+    flex: 1;
+}
+.small {
+	font-size: 70%;
+}
+.smaller {
+	font-size: 50%;
+}
+.smallish {
+	font-size: 85%;
+}
+.right {
+	width: 50%;
+	margin-left:50%;
+}
+/*section { text-align: left; }*/
+.hidden { visibility: hidden; }
+.reveal { font-size: 28px; }
+.reveal pre { font-size: .8em; }
+.reveal h1 { font-size: 80px; }
+.reveal h2 { font-size: 44px; }
+.reveal h3 { font-size: 28px; font-weight: bold; }
+.references { font-size: 70%; ; margin-bottom: 2em }
+#footer { font-size: 16px; color:gray; position: absolute;
+        bottom: 0%;
+        left: 0%}
