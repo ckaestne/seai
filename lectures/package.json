@@ -14,12 +14,12 @@
   },
   "author": "Christian Kaestner",
   "devDependencies": {
-    "gh-pages": "^2.1.1",
-    "marked": "^0.7.0",
+    "gh-pages": "^4.0.0",
+    "marked": "^4.0.17",
     "reveal-md": "github:ckaestne/reveal-md#master"
   },
   "license": "CC-BY-SA-4.0",
   "dependencies": {
-    "puppeteer": "^13.0.1"
+    "puppeteer": "^15.1.1"
   }
 }

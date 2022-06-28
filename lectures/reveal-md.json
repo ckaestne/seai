@@ -2,7 +2,7 @@
   "footer": "17-445 Machine Learning in Production",
   "theme": "white",
   "css": "_assets/cmu.css",
-  "scripts": "_assets/mermaid.min.js,_assets/viz.js,_assets/loadmymarkdown.js",
+  "scripts": "_assets/loadmymarkdown.js",
   "staticDirs": "_assets",
   "listingTemplate": "_assets/listing.html",
   "puppeteerLaunchArgs": "--no-sandbox --disable-setuid-sandbox --disable-dev-shm-usage --disable-gpu"
