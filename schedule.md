@@ -4,45 +4,48 @@
 
 | Date  | Topic | Reading | Assignment due |
 | -     | -     | -       | -              |
-| Wed, Jan 19 | [Introduction and Motivation](https://ckaestne.github.io/seai/S2022/slides/01_introduction/intro.html) ([book chapter](https://ckaestne.medium.com/introduction-to-machine-learning-in-production-eef7427426f1)) | |  |
-| Fri, Jan 21 | ![Recitation](https://img.shields.io/badge/-rec-yellow.svg) [Git and Team Collaboration](https://github.com/ckaestne/seai/tree/S2022/recitations/01_git_and_collaboration) | |  |
-| Mon, Jan 24 | [From Models to AI-Enabled Systems](https://ckaestne.github.io/seai/S2022/slides/02_systems/systems.html) ([book chapter](https://ckaestne.medium.com/machine-learning-in-production-from-models-to-systems-e1422ec7cd65)) | [Building Intelligent Systems](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436), Ch. 5, 7, 8 |  |
-| Wed, Jan 26 | [Model Quality 1: Accuracy and Correctness](https://ckaestne.github.io/seai/S2022/slides/03_modelquality/modelquality1.html) ([book chapter 1](https://ckaestne.medium.com/model-quality-defining-correctness-and-fit-a8361b857df), [book chapter 2](https://ckaestne.medium.com/model-quality-measuring-prediction-accuracy-38826216ebcb)) | [Building Intelligent Systems](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436), Ch. 19 | [I1: Case Study](https://github.com/ckaestne/seai/blob/S2022/assignments/I1_case_study.md) |
-|  | [Teamwork Primer](https://ckaestne.github.io/seai/S2022/slides/03_modelquality/teams.html) |  |  |
-| Fri, Jan 28 | ![Recitation](https://img.shields.io/badge/-rec-yellow.svg) [Stream processing: Apache Kafka](https://github.com/ckaestne/seai/tree/S2022/recitations/02_kafka) | |  |
-| Mon, Jan 31 | [Model Quality 2: Slicing, Capabilities, Invariants](https://ckaestne.github.io/seai/S2022/slides/03_modelquality/modelquality2.html) ([book chapter](https://ckaestne.medium.com/model-quality-slicing-capabilities-invariants-and-other-testing-strategies-27e456027bd)) | [Behavioral Testing of NLP Models with CheckList](https://homes.cs.washington.edu/~wtshuang/static/papers/2020-acl-checklist.pdf) |  |
-| Wed, Feb 02 | [Goals and Success Measures for AI-Enabled Systems](https://ckaestne.github.io/seai/S2022/slides/04_goals/goals.html) | [Building Intelligent Systems](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436), Ch. 2, 4 |  |
-| Fri, Feb 04 | ![Recitation](https://img.shields.io/badge/-rec-yellow.svg) [Measurement & unit testing](https://github.com/ckaestne/seai/tree/S2022/recitations/03_Unit_testing_and_Measurement) | |  |
-| Mon, Feb 07 | [Requirements and Risks 1](https://ckaestne.github.io/seai/S2022/slides/05_requirements_i/requirements.html) ([short notes](https://ckaestne.medium.com/the-world-and-the-machine-and-responsible-machine-learning-1ae72353c5ae)) | [The World and the Machine](http://mcs.open.ac.uk/mj665/icse17kn.pdf) |  |
-| Wed, Feb 09 | [Requirements and Risks 2](https://ckaestne.github.io/seai/S2022/slides/06_requirements_ii/requirements_ii.html) | [Building Intelligent Systems](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436), Ch. 6, 7, 24 | [M1: Modeling and First Deployment](https://github.com/ckaestne/seai/blob/S2022/assignments/project.md#milestone-1-recommendation-model-and-first-deployment) |
-| Fri, Feb 11 | ![Recitation](https://img.shields.io/badge/-rec-yellow.svg) [Requirements/Risk analysis](https://github.com/ckaestne/seai/tree/S2022/recitations/04_requirements_and_risk) | |  |
-| Mon, Feb 14 | [Tradeoffs among Modeling Techniques](https://ckaestne.github.io/seai/S2022/slides/07_tradeoffs/tradeoffs.html) ([book chapter](https://ckaestne.medium.com/quality-drivers-in-architectures-for-ml-enabled-systems-836f21c44334)) | [Building Intelligent Systems](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436), Ch. 18 |  |
-| Wed, Feb 16 | [Deploying a Model](https://ckaestne.github.io/seai/S2022/slides/08_deploying_a_model/architecture.html)  ([book chapter 1](https://ckaestne.medium.com/thinking-like-a-software-architect-121ea6919871), [book chapter 2](https://ckaestne.medium.com/deploying-a-model-f0b7ffefd06a)) | [Building Intelligent Systems](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436), Ch. 13 and [Exploring Development Patterns in Data Science](https://www.theorylane.com/2017/10/20/some-development-patterns-in-data-science/) |  |
-| Fri, Feb 18 | ![Recitation](https://img.shields.io/badge/-rec-yellow.svg) [Architecture](https://github.com/ckaestne/seai/blob/S2022/recitations/05_software_architecture/Recitation%205%20-%20Software%20Architecture.pdf) | |  |
-| Mon, Feb 21 | [Quality Assessment in Production](https://ckaestne.github.io/seai/S2022/slides/09_qainproduction/qainproduction.html) ([book chapter](https://ckaestne.medium.com/quality-assurance-in-production-for-ml-enabled-systems-4d1b3442316f)) | [Building Intelligent Systems](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436), Ch. 14, 15 |  |
-| Wed, Feb 23 | [Data Quality](https://ckaestne.github.io/seai/S2022/slides/10_dataquality/dataquality.html) ([book chapter](https://ckaestne.medium.com/quality-assurance-in-production-for-ml-enabled-systems-4d1b3442316f)) | [Data Cascades in High-Stakes AI](https://dl.acm.org/doi/abs/10.1145/3411764.3445518) | [I2: Requirements and Architecture](https://github.com/ckaestne/seai/blob/S2022/assignments/I2_requirements_architecture.md) |
-| Fri, Feb 25 | ![Recitation](https://img.shields.io/badge/-rec-yellow.svg) [Continuous Integration: Jenkins](https://github.com/ckaestne/seai/tree/S2022/recitations/06_continuous_integration) | |  |
-| Mon, Feb 28 | [Infrastructure Quality, Deployment, and Operations](https://ckaestne.github.io/seai/S2022/slides/11_infrastructurequality/infrastructurequality.html) ([book chapter 1](https://ckaestne.medium.com/automating-the-ml-pipeline-eb0f570b4fc9), [book chapter 2](https://ckaestne.medium.com/planning-for-operations-of-ml-enabled-systems-a3d18e07ef7c), book chapter 3) | [The ML Test Score](https://research.google.com/pubs/archive/46555.pdf) |  |
-| Wed, Mar 02 | **[Midterm](https://github.com/ckaestne/seai/tree/S2022/exams)** | |  |
-| Fri, Mar 04 | ![Break](https://img.shields.io/badge/-break-red.svg) Midsemester break & spring break | |  |
-| Mon, Mar 14 | [Managing and Processing Large Datasets](https://ckaestne.github.io/seai/S2022/slides/12_dataatscale/dataatscale.html) ([book chapter](https://ckaestne.medium.com/scaling-ml-enabled-systems-b5c6b1527bc)) | [Business Systems with Machine Learning](https://www.youtube.com/watch?v=_bvrzYOA8dY) |  |
-| Wed, Mar 16 | [Process & Technical Debt](https://ckaestne.github.io/seai/S2022/slides/13_process/process.html) ([book chapter 1](https://ckaestne.medium.com/data-science-and-software-engineering-process-models-ea997ea53711), [book chapter 2](https://ckaestne.medium.com/technical-debt-in-machine-learning-systems-62035b82b6de)) | [Hidden Technical Debt in Machine Learning Systems](http://papers.nips.cc/paper/5656-hidden-technical-debt-in-machine-learning-systems.pdf) | [I3: Exploring Tools](https://github.com/ckaestne/seai/blob/S2022/assignments/I3_se4ai_tools.md) or [PhD Project](https://github.com/ckaestne/seai/blob/S2022/assignments/research_project.md) |
-| Fri, Mar 18 | ![Recitation](https://img.shields.io/badge/-rec-yellow.svg) [Containers: Docker](https://github.com/ckaestne/seai/tree/S2022/recitations/07_docker) | |  |
-| Mon, Mar 21 | [Human AI Interaction](https://ckaestne.github.io/seai/S2022/slides/14_human_ai_interaction/human_ai_interaction.html) | [Building Intelligent Systems](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436), Ch. 8 and [Guidelines for Human-AI Interaction](https://dl.acm.org/doi/pdf/10.1145/3290605.3300233?casa_token=LozLAS6xY1YAAAAA:969CqbfAMIhDC1AIjF7L1DZgGMg71ECwjjXa_mzdj6RLvlL8LYSaSpglBSK3xhRuBnzGp-V4ebVKVw) |  |
-| Wed, Mar 23 | [Intro to Ethics + Fairness](https://ckaestne.github.io/seai/S2022/slides/15_intro_ethics_fairness/intro-ethics-fairness.html) ([book chapter](https://ckaestne.medium.com/responsible-ai-engineering-c97e44e6c57a)) | [Algorithmic Accountability: A Primer](https://datasociety.net/wp-content/uploads/2018/04/Data_Society_Algorithmic_Accountability_Primer_FINAL-4.pdf) |  |
-| Fri, Mar 25 | ![Recitation](https://img.shields.io/badge/-rec-yellow.svg) [Monitoring: Prometheus, Grafana](https://github.com/ckaestne/seai/tree/S2022/recitations/08_monitoring) | |  |
-| Mon, Mar 28 | [Building Fairer AI-Enabled System 1](https://ckaestne.github.io/seai/S2022/slides/16_fairness_i/fairness_i.html) | [Improving Fairness in Machine Learning Systems](http://users.umiacs.umd.edu/~hal/docs/daume19fairness.pdf) |  |
-| Wed, Mar 30 | [Building Fairer AI-Enabled System 2](https://ckaestne.github.io/seai/S2022/slides/17_fairness_ii/fairness_ii.html) | [A Mulching Proposal](https://dl.acm.org/doi/pdf/10.1145/3290607.3310433) | [M2: Infrastructure Quality](https://github.com/ckaestne/seai/blob/S2022/assignments/project.md#milestone-2-model-and-infrastructure-quality) |
-| Fri, Apr 01 | ![Recitation](https://img.shields.io/badge/-rec-yellow.svg) [Fairness](https://github.com/ckaestne/seai/tree/S2022/recitations/09_fairness) | |  |
-| Mon, Apr 04 | [Versioning, Provenance, and Reproducability](https://ckaestne.github.io/seai/S2022/slides/20_provenance/provenance.html) ([book chapter](https://ckaestne.medium.com/versioning-provenance-and-reproducibility-in-production-machine-learning-355c48665005)) | [Building Intelligent Systems](https://www.buildingintelligentsystems.com/), Ch. 21 & [Goods: Organizing Google's Datasets](http://research.google.com/pubs/archive/45390.pdf) |                                                              |
-| Wed, Apr 06 | [Explainability & Interpretability](https://ckaestne.github.io/seai/S2022/slides/18_explainability/explainability.html) ([book chapter](https://ckaestne.medium.com/interpretability-and-explainability-a80131467856)) | [Black boxes not required](https://dataskeptic.com/blog/episodes/2020/black-boxes-are-not-required) or [Stop Explaining Black Box ML Models…](https://arxiv.org/abs/1811.10154) |  |
-| Fri, Apr 08 | ![Break](https://img.shields.io/badge/-break-red.svg) Spring carnival, no classes | |  |
-| Mon, Apr 11 | [Transparency and Accountability](https://ckaestne.github.io/seai/S2022/slides/19_transparency/transparency.html) ([book chapter](https://ckaestne.medium.com/transparency-and-accountability-in-ml-enabled-systems-f8ed0b6fd183)) | [People + AI, Ch. Explainability and Trust](https://pair.withgoogle.com/chapter/explainability-trust/) |  |
-| Wed, Apr 13 | [Security](https://ckaestne.github.io/seai/S2022/slides/21_security/security.html) | [Building Intelligent Systems](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436), Ch. 25 & [The Top 10 Risks of Machine Learning Security](https://ieeexplore.ieee.org/document/9107290) | [M3: Monitoring and CD](https://github.com/ckaestne/seai/blob/S2022/assignments/project.md#milestone-3-monitoring-and-continuous-deployment) |
-| Fri, Apr 15 | ![Recitation](https://img.shields.io/badge/-rec-yellow.svg) Threat modeling | |  |
-| Mon, Apr 18 | [Security continued](https://ckaestne.github.io/seai/S2022/slides/21_security/security.html); [Safety](https://ckaestne.github.io/seai/S2022/slides/22_safety/safety.html) |  [Practical Solutions for Machine Learning Safety in Autonomous Vehicles](http://ceur-ws.org/Vol-2560/paper40.pdf)  | |  |
-| Wed, Apr 20 | [Safety continued](https://ckaestne.github.io/seai/S2022/slides/22_safety/safety.html) | [The Malicious Use of Artificial: Intelligence Forecasting, Prevention, and Mitigation](https://maliciousaireport.godaddysites.com/) | [I4: Fairness](https://github.com/ckaestne/seai/blob/S2022/assignments/I4_fairness.md) |
-| Fri, Apr 22 | ![Recitation](https://img.shields.io/badge/-rec-yellow.svg) recitation canceled | |  |
-| Mon, Apr 25 | [Fostering Interdisciplinary Teams](https://ckaestne.github.io/seai/S2022/slides/23_teams/teams.html) ([book chapter](https://ckaestne.medium.com/building-machine-learning-products-with-interdisciplinary-teams-a1fdfbf49e81)) | [Collaboration Challenges in Building ML-Enabled Systems](https://arxiv.org/abs/2110.10234) |  |
-| Wed, Apr 27 | [Summary and Review](https://ckaestne.github.io/seai/S2022/slides/24_summary/all.html) and [Closing discussion](https://ckaestne.github.io/seai/S2022/slides/24_summary/future.html) | | [M4: Security and Feedback Loops](https://github.com/ckaestne/seai/blob/S2022/assignments/project.md#milestone-4-drift-and-feedback-loops) |
-| Mon, May 2 | **Final Project Presentations** -- 1-4pm in GHC 4401 | | [Final report](https://github.com/ckaestne/seai/blob/S2022/assignments/project.md#final-report-and-presentation) |
+| Mon, Aug 29 | Introduction and Motivation  | |  |
+| Wed, Aug 31 | From Models to AI-Enabled Systems (Systems Thinking)  | |  |
+| Fri, Sep 02 | ![Recitation](https://img.shields.io/badge/-rec-yellow.svg) Collaboration: Git & Team Conflicts | |  |
+| Mon, Sep 05 | ![Break](https://img.shields.io/badge/-break-red.svg) Labor day, no classes | |  |
+| Wed, Sep 07 | Teamwork Primer & Model Quality | | I1: ML Product |
+| Fri, Sep 09 | ![Recitation](https://img.shields.io/badge/-rec-yellow.svg) Stream processing: Apache Kafka | |  |
+| Mon, Sep 12 | Model Testing Beyond Accuracy | |  |
+| Wed, Sep 14 | Goals and Measurement | |  |
+| Fri, Sep 16 | ![Recitation](https://img.shields.io/badge/-rec-yellow.svg) Unit testing / Measurement | |  |
+| Mon, Sep 19 | Requirements and Risk | |  |
+| Wed, Sep 21 | Planning for Mistakes | | M1: Modeling and First Deployment |
+| Fri, Sep 23 | ![Recitation](https://img.shields.io/badge/-rec-yellow.svg) Requirements/Risk analysis | |  |
+| Mon, Sep 26 | Quality Tradeoffs | |  |
+| Wed, Sep 28 | Deploying a Model | | I2: Requirements |
+| Fri, Sep 30 | ![Recitation](https://img.shields.io/badge/-rec-yellow.svg) Architecture | |  |
+| Mon, Oct 03 | Testing in Production | |  |
+| Wed, Oct 05 | ![Midterm](https://img.shields.io/badge/-midterm-blue.svg) **Midterm** | |  |
+| Fri, Oct 07 | ![Recitation](https://img.shields.io/badge/-rec-yellow.svg) Containers: Docker | |  |
+| Mon, Oct 10 | Data Quality | |  |
+| Wed, Oct 12 | Infrastructure Quality and Operations | | I3: Architecture |
+| Fri, Oct 14 | ![Recitation](https://img.shields.io/badge/-rec-yellow.svg) Continuous Integration: Jenkins | |  |
+| Mon, Oct 17 | ![Break](https://img.shields.io/badge/-break-red.svg) Fall break, no classes | |  |
+| Wed, Oct 19 | ![Break](https://img.shields.io/badge/-break-red.svg) Fall break, no classes | |  |
+| Fri, Oct 21 | ![Break](https://img.shields.io/badge/-break-red.svg) Fall break, no classes | |  |
+| Mon, Oct 24 | Scaling Data Storage and Data Processing | |  |
+| Wed, Oct 26 | Process & Technical Debt | |  |
+| Fri, Oct 28 | ![Break](https://img.shields.io/badge/-break-red.svg) Tartan community day, no classes | |  |
+| Mon, Oct 31 | Intro to Ethics + Fairness | |  |
+| Wed, Nov 02 | Measuring Fairness | | M2: Infrastructure Quality |
+| Fri, Nov 04 | ![Recitation](https://img.shields.io/badge/-rec-yellow.svg) Monitoring: Prometheus, Grafana | |  |
+| Mon, Nov 07 | Building Fairer Systems | |  |
+| Wed, Nov 09 | Explainability & Interpretability | | I4: Open Source Tools |
+| Fri, Nov 11 | ![Recitation](https://img.shields.io/badge/-rec-yellow.svg) Fairness | |  |
+| Mon, Nov 14 | Transparency & Accountability | |  |
+| Wed, Nov 16 | Versioning, Provenance, and Reproducability | |  |
+| Fri, Nov 18 | ![Recitation](https://img.shields.io/badge/-rec-yellow.svg) Debugging | |  |
+| Mon, Nov 21 | Debugging (Guest lecture) / Human-AI Interaction | |  |
+| Wed, Nov 23 | ![Break](https://img.shields.io/badge/-break-red.svg) Thanksgiving break | |  |
+| Fri, Nov 25 | ![Break](https://img.shields.io/badge/-break-red.svg) Threat modeling | |  |
+| Mon, Nov 28 | Security and Privacy | |  |
+| Wed, Nov 30 | Safety | | M3: Monitoring and CD |
+| Fri, Dec 02 | ![Recitation](https://img.shields.io/badge/-rec-yellow.svg) Threat modeling | |  |
+| Mon, Dec 05 | Fostering Interdisciplinary Teams | |  |
+| Wed, Dec 07 | Summary and Review | | M4: Fairness, Security and Feedback Loops |
+| tbd | **Final Project Presentations** | | Final report |
