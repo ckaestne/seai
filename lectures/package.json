@@ -14,8 +14,6 @@
   },
   "author": "Christian Kaestner",
   "devDependencies": {
-    "gh-pages": "^4.0.0",
-    "marked": "^4.0.17",
     "reveal-md": "github:ckaestne/reveal-md#master"
   },
   "license": "CC-BY-SA-4.0",
