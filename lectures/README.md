@@ -24,8 +24,6 @@ Custom extensions in `/_assets/plugin/mymarkdown.js`:
 * `<!-- fit -->` in a title tries to make long titles fit to a slide by scaling it down
 * Empty items in a list can be used as a space/separator between two list
 * `<!-- left -->` and `<!-- right -->` change the alignment
-* Mermaid diagrams can be integrated with a code blob in the `mermaid` language
-* Graphviz dot diagrams can be integrated with a code blob in the `dot` language
 * `<!-- discussion  -->` marks the slide as a discussion slide, adding a picture (possibly exploring other design features later)
 
 Other useful suggestions:
