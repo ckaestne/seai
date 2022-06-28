@@ -1,0 +1,738 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset='utf-8'>
+    <title>17-445 Machine Learning in Production / AI Engineering</title>
+    <style type="text/css">
+    
+      @import url("https://fonts.googleapis.com/css?family=Chivo:900");.highlight table td{padding:5px}.highlight table pre{margin:0}.highlight,.highlight .w{color:#d0d0d0}.highlight .err{color:#151515;background-color:#ac4142}.highlight .c,.highlight .cd,.highlight .cm,.highlight .c1,.highlight .cs{color:#888}.highlight .cp{color:#f4bf75}.highlight .nt{color:#f4bf75}.highlight .o,.highlight .ow{color:#d0d0d0}.highlight .p,.highlight .pi{color:#d0d0d0}.highlight .gi{color:#90a959}.highlight .gd{color:#ac4142}.highlight .gh{color:#6a9fb5;font-weight:bold}.highlight .k,.highlight .kn,.highlight .kp,.highlight .kr,.highlight .kv{color:#aa759f}.highlight .kc{color:#d28445}.highlight .kt{color:#d28445}.highlight .kd{color:#d28445}.highlight .s,.highlight .sb,.highlight .sc,.highlight .sd,.highlight .s2,.highlight .sh,.highlight .sx,.highlight .s1{color:#90a959}.highlight .sr{color:#75b5aa}.highlight .si{color:#8f5536}.highlight .se{color:#8f5536}.highlight .nn{color:#f4bf75}.highlight .nc{color:#f4bf75}.highlight .no{color:#f4bf75}.highlight .na{color:#6a9fb5}.highlight .m,.highlight .mf,.highlight .mh,.highlight .mi,.highlight .il,.highlight .mo,.highlight .mb,.highlight .mx{color:#90a959}.highlight .ss{color:#90a959}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{font:inherit;font-size:100%;vertical-align:baseline;border:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-spacing:0;border-collapse:collapse}body{font-family:'Helvetica Neue', Helvetica, Arial, serif;font-size:1em;line-height:1.5;text-shadow:0 1px 0 rgba(255,255,255,0.8);}a{color:#d5000d}a:hover{color:#c5000c}h1{padding-top:35px} h1{font-family:'Chivo', 'Helvetica Neue', Helvetica, Arial, serif;font-size:48px;font-weight:900;line-height:1.2;color:#303030;letter-spacing:-1px} #cmu-17-445645-fall-2020 {font-size:24px;font-weight:normal;line-height:1.3;color:#aaa;letter-spacing:-1px}#container{min-height:595px;background:transparent url(../images/highlight-bg.jpg) 50% 0 no-repeat}.inner{width:620px;margin:0 auto}#container .inner img{max-width:100%}#downloads{margin-bottom:40px}a.button{display:block;float:left;width:179px;padding:12px 8px 12px 8px;margin-right:14px;font-size:15px;font-weight:bold;line-height:25px;color:#303030;background:#fdfdfd;background:-moz-linear-gradient(top, #fdfdfd 0%, #f2f2f2 100%);background:-webkit-gradient(linear, left top, left bottom, color-stop(0%, #fdfdfd), color-stop(100%, #f2f2f2));background:-webkit-linear-gradient(top, #fdfdfd 0%, #f2f2f2 100%);background:-o-linear-gradient(top, #fdfdfd 0%, #f2f2f2 100%);background:-ms-linear-gradient(top, #fdfdfd 0%, #f2f2f2 100%);background:linear-gradient(to top, #fdfdfd 0%, #f2f2f2 100%);filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#fdfdfd', endColorstr='#f2f2f2',GradientType=0 );border-top:solid 1px #cbcbcb;border-right:solid 1px #b7b7b7;border-bottom:solid 1px #b3b3b3;border-left:solid 1px #b7b7b7;border-radius:30px;-webkit-box-shadow:10px 10px 5px #888;-moz-box-shadow:10px 10px 5px #888;box-shadow:0px 1px 5px #e8e8e8;-moz-border-radius:30px;-webkit-border-radius:30px}a.button:hover{background:#fafafa;background:-moz-linear-gradient(top, #fdfdfd 0%, #f6f6f6 100%);background:-webkit-gradient(linear, left top, left bottom, color-stop(0%, #fdfdfd), color-stop(100%, #f6f6f6));background:-webkit-linear-gradient(top, #fdfdfd 0%, #f6f6f6 100%);background:-o-linear-gradient(top, #fdfdfd 0%, #f6f6f6 100%);background:-ms-linear-gradient(top, #fdfdfd 0%, #f6f6f6 100%);background:linear-gradient(to top, #fdfdfd 0%, #f6f6f6, 100%);filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#fdfdfd', endColorstr='#f6f6f6',GradientType=0 );border-top:solid 1px #b7b7b7;border-right:solid 1px #b3b3b3;border-bottom:solid 1px #b3b3b3;border-left:solid 1px #b3b3b3}a.button span{display:block;height:23px;padding-left:50px}#download-zip span{background:transparent url(../images/zip-icon.png) 12px 50% no-repeat}#download-tar-gz span{background:transparent url(../images/tar-gz-icon.png) 12px 50% no-repeat}#view-on-github span{background:transparent url(../images/octocat-icon.png) 12px 50% no-repeat}#view-on-github{margin-right:0}code,pre{margin-bottom:30px;font-family:Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal;font-size:14px;color:#222}code{padding:0 3px;background-color:#f2f2f2;border:solid 1px #ddd}pre{padding:20px;overflow:auto;color:#f2f2f2;text-shadow:none;background:#303030}pre code{padding:0;color:#f2f2f2;background-color:#303030;border:none}ul,ol,dl{margin-bottom:20px}hr{height:1px;padding-bottom:1em;margin-top:1em;line-height:1px;background:transparent url("../images/hr.png") 50% 0 no-repeat;border:none}strong{font-weight:bold}em{font-style:italic}table{width:100%;border:1px solid #ebebeb}th{font-weight:500}td{font-weight:300;border:1px solid #ebebeb}form{padding:20px;background:#f2f2f2}h2{margin-bottom:8px;font-size:22px;font-weight:bold;color:#303030}h3{margin-bottom:8px;font-size:18px;font-weight:bold;color:#d5000d}h4{font-size:16px;font-weight:bold;color:#303030}h5{font-size:1em;color:#303030}h6{font-size:.8em;color:#303030}p{margin-bottom:20px;font-weight:300}a{text-decoration:none}p a{font-weight:400}blockquote{padding:0 0 0 30px;margin-bottom:20px;font-size:1.6em;border-left:10px solid #e9e9e9}ul li{list-style-position:inside;list-style:disc;}ol li{list-style-position:inside;list-style:decimal;padding-left:3px}dl dt{color:#303030}footer{padding-top:20px;padding-bottom:30px;margin-top:40px;font-size:13px;color:#aaa;background:transparent url("../images/hr.png") 0 0 no-repeat}footer a{color:#666}footer a:hover{color:#444}.clearfix:after{display:block;height:0;clear:both;visibility:hidden;content:'.'}.clearfix{display:inline-block}* html .clearfix{height:1%}.clearfix{display:block}@media only screen and (max-width: 767px){header{padding-top:10px;padding-bottom:10px}#downloads{margin-bottom:25px}#download-zip,#download-tar-gz{display:none}.inner{width:94%;margin:0 auto}}
+      td {padding:4px;border-bottom:2px solid #dddddd;}
+      th {border-top: 1px solid black; border-bottom: 1px solid black;}
+      tr:nth-child(even) {
+        background-color: #eeeeee
+      }
+      table{margin-bottom: 8px}
+    </style>
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <div id="container">
+      <div class="inner">
+
+        <section id="main_content">
+
+<h1 id="machine-learning-in-production-17-44517-64517-745">Machine Learning in Production (17-445/17-645/17-745)</h1>
+<h3 id="spring-2022">Spring 2022</h3>
+<p>*Formerly <strong>Software Engineering for AI-Enabled Systems (SEAI)</strong> and also taught as <strong>AI Engineering (11-695)</strong>, CMU course that covers how to build, deploy, assure, and maintain products with machine-learned models. Covers also <strong>responsible AI</strong> (safety, security, fairness, explainability) and <strong>MLOps</strong>. The course is crosslisted both as <strong>Machine Learning in Production</strong> and <strong>AI Engineering</strong>. For earlier offerings see websites for <a href="https://ckaestne.github.io/seai/F2019">Fall 2019</a>, <a href="https://ckaestne.github.io/seai/S2020">Summer 2020</a>, <a href="https://ckaestne.github.io/seai/F2020/">Fall 2020</a>, <a href="https://ckaestne.github.io/seai/S2021/">Spring 2021</a> and <a href="https://ckaestne.github.io/seai/S2022/">Spring 2022</a>. This Fall 2022 offering is designed for students with some data science experience (e.g., has taken a machine learning course, has used sklearn) and basic programming skills, but will not expect a software engineering background (i.e., experience with testing, requirements, architecture, process, or teams is not required). Going forward we expect to offer this course at least every spring semester and possibly some fall semesters (not summer semesters).*</p>
+<p>For researchers, educators, or others interested in this topic, we share all course material, including slides and assignments, under a creative commons license on GitHub (<a href="https://github.com/ckaestne/seai/">https://github.com/ckaestne/seai/</a>) and have also published an article describing the rationale and the initial design of this course: <a href="https://arxiv.org/abs/2001.06691">Teaching Software Engineering for AI-Enabled Systems</a>. A <a href="https://ckaestne.medium.com/machine-learning-in-production-book-overview-63be62393581">textbook</a> is emerging. Video recordings of the Summer 2020 offering are online on the <a href="https://ckaestne.github.io/seai/S2020/#course-content">course page</a>. We would be happy to see this course or a similar version taught at other universities. See also an <a href="https://github.com/ckaestne/seaibib">annotated bibliography</a> on research in this field.</p>
+<h2 id="course-description">Course Description</h2>
+<p>This is a course for those who want to build <strong>applications</strong> and <strong>products</strong> with <strong>machine learning</strong>. Assume you can learn a model to make predictions, what does it take to turn the model into a product and actually deploy it, have confidence in its quality, and successfully operate and maintain it? </p>
+<p>The course is designed to establish a working relationship between <strong>software engineers</strong> and <strong>data scientists</strong>: both contribute to building AI-enabled systems but have different expertise and focuses. To work together they need a mutual understanding of their roles, tasks, concerns, and goals and build a working relationship. This course is aimed at <strong>software engineers</strong> who want to build robust and responsible systems meeting the specific challenges of working with AI components and at <strong>data scientists</strong> who want to understand the requirements of the model for production use and want to facilitate getting a prototype model into production; it facilitates communication and collaboration between both roles. The course is a good fit for student looking at a career as an <strong>ML engineer</strong>. <em>The course focuses on all the steps needed to turn a model into a production system in a responsible and reliable manner.</em></p>
+<p><img src="overview.svg" alt="Course overview"></p>
+<p>It covers topics such as:</p>
+<ul>
+<li><strong>How to design for wrong predictions the model may make?</strong> How to assure <em>safety</em> and <em>security</em> despite possible mistakes? How to design the <em>user interface</em> and the entire system to operate in the real world?</li>
+<li><strong>How to reliably deploy and update models in production?</strong> How can we <em>test</em> the entire machine learning pipeline? How can <em>MLOps</em> tools help to automate and scale the deployment process? How can we <em>experiment in production</em> (A/B testing, canary releases)? How do we detect <em>data quality</em> issues,  <em>concept drift</em>, and <em>feedback loops</em> in production?</li>
+<li><strong>How do we scale production ML systems?</strong> How do we design a system to process huge amounts of training data, telemetry data, and user requests? Should we use stream processing, batch processing, lambda architecture, or data lakes?</li>
+<li><strong>How to we test and debug production ML systems?</strong> How can we <em>evaluate</em> the quality of a model’s predictions in production? How can we <em>test</em> the entire AI-enabled system, not just the model? What lessons can we learn from <em>software testing</em>, <em>automated test case generation</em>, <em>simulation</em>, and <em>continuous integration</em> for testing for production machine learning?</li>
+<li><strong>Which qualities matter beyond a model’s prediction accuracy?</strong> How can we identify and measure important quality requirements, including <em>learning and inference latency, operating cost, scalability, explainablity, fairness, privacy, robustness</em>, and <em>safety</em>? Does the application need to be able to <em>operate offline</em> and how often do we need to update the models? How do we identify what’s important in a AI-enabled product in a production setting for a business? How do we resolve <em>conflicts</em> and <em>tradeoffs</em>?</li>
+<li><strong>How do we build effective interdisciplinary teams?</strong> How can we bring data scientists, software engineers, UI designers, managers, domain experts, big data specialists, operators, legal council, and other roles together and develop a <em>shared understanding</em> and <em>team culture</em>?</li>
+</ul>
+<p><strong>Examples and case studies</strong> of ML-driven products we discuss include automated audio transcription; distributed detection of missing children on webcams and instant translation in augmented reality; cancer detection, fall detection, COVID diagnosis, and other smart medical and health services; automated slide layout in Powerpoint; semi-automated college admissions; inventory management; smart playlists and movie recommendations; ad fraud detection; delivery robots and smart driving features; and many others.</p>
+<p>An extended group project focuses on building, deploying, evaluating, and maintaining a robust and scalable <em>movie recommendation service</em> under somewhat realistic  “production” conditions.</p>
+<h3 id="learning-outcomes">Learning Outcomes</h3>
+<p>After taking this course, among others, students should be able to</p>
+<ul>
+<li>analyze tradeoffs for designing production systems with AI-components, analyzing various qualities beyond accuracy such as operation cost, latency, updateability, and explainability</li>
+<li>plan for mistakes in AI components and implement production-quality systems that are robust to those mistakes</li>
+<li>design fault-tolerant and scalable data infrastructure for learning models, serving models, versioning, and experimentation</li>
+<li>ensure quality of the entire machine learning pipeline with test automation and other quality assurance techniques, including automated checks for data quality, data drift, feedback loops, and model quality</li>
+<li>build systems that can be tested and monitored in production and build robust deployment pipelines</li>
+<li>consider system-level requirements such as safety, security, privacy, fairness, and usability when building complex AI-enabled products</li>
+<li>communicate effectively in interdisciplinary teams</li>
+</ul>
+<p>In addition, students will gain familiarity with production-quality infrastructure tools, including stream processing with Apache Kafka, test automation with Jenkins, monitoring with Prometheus and Grafana, and deployment with Docker and various MLOps tools.</p>
+<h2 id="logistics-and-people">Logistics and People</h2>
+<p>17-445/17-645/17-745, 12 Units</p>
+<p>The course is the same under all course numbers, with the exception of the PhD-level 17-745 which replaces two homework assignments with a mandatory <a href="https://github.com/ckaestne/seai/blob/F2022/assignments/research_project.md">research project</a>.</p>
+<p>Open to undergraduate and graduate students meeting the prerequisites.</p>
+<h3 id="fall-2022">Fall 2022</h3>
+<p>Lectures Monday/Wednesday 1:25-2:45pm, in person, TEP 1308</p>
+<p>Recitations Friday 10:10-11:00am and 1:25-2:55pm</p>
+<p>Instructors: <a href="https://www.cs.cmu.edu/~ckaestne/">Christian Kaestner</a></p>
+<h3 id="coordination">Coordination</h3>
+<p>We are happy to answer questions by email, over Slack, over Canvas, meet in person, and will jump on a quick Zoom call if you ask us. We also always arrive 5 to 10 min early to class and stay longer for discussions and questions.</p>
+<h2 id="course-content">Course content</h2>
+<p>The general course content has been fairly stable over the last few years, though specific topics and tools are constantly updated with new research and tooling. Our list of learning goals under <a href="https://github.com/ckaestne/seai/blob/S2022/learning_goals.md">Learning Goals</a> describes what we aim to cover. Below is a table of a preliminary  schedule. This is subject to change and will be updated as the semester progresses, especially to help focus on requested topics or support learning.</p>
+<p><a href="https://github.com/ckaestne/seai/blob/S2021/schedule.md">Schedule</a></p>
+<p>(Preliminary schedule, subject to change)</p>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Topic</th>
+<th>Reading</th>
+<th>Assignment due</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Mon, Aug 29</td>
+<td>Introduction and Motivation</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Wed, Aug 31</td>
+<td>From Models to AI-Enabled Systems (Systems Thinking)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Fri, Sep 02</td>
+<td><img src="https://img.shields.io/badge/-rec-yellow.svg" alt="Recitation"> Collaboration: Git &amp; Team Conflicts</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Mon, Sep 05</td>
+<td><img src="https://img.shields.io/badge/-break-red.svg" alt="Break"> Labor day, no classes</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Wed, Sep 07</td>
+<td>Teamwork Primer &amp; Model Quality</td>
+<td></td>
+<td>I1: ML Product</td>
+</tr>
+<tr>
+<td>Fri, Sep 09</td>
+<td><img src="https://img.shields.io/badge/-rec-yellow.svg" alt="Recitation"> Stream processing: Apache Kafka</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Mon, Sep 12</td>
+<td>Model Testing Beyond Accuracy</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Wed, Sep 14</td>
+<td>Goals and Measurement</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Fri, Sep 16</td>
+<td><img src="https://img.shields.io/badge/-rec-yellow.svg" alt="Recitation"> Unit testing / Measurement</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Mon, Sep 19</td>
+<td>Requirements and Risk</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Wed, Sep 21</td>
+<td>Planning for Mistakes</td>
+<td></td>
+<td>M1: Modeling and First Deployment</td>
+</tr>
+<tr>
+<td>Fri, Sep 23</td>
+<td><img src="https://img.shields.io/badge/-rec-yellow.svg" alt="Recitation"> Requirements/Risk analysis</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Mon, Sep 26</td>
+<td>Quality Tradeoffs</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Wed, Sep 28</td>
+<td>Deploying a Model</td>
+<td></td>
+<td>I2: Requirements</td>
+</tr>
+<tr>
+<td>Fri, Sep 30</td>
+<td><img src="https://img.shields.io/badge/-rec-yellow.svg" alt="Recitation"> Architecture</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Mon, Oct 03</td>
+<td>Testing in Production</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Wed, Oct 05</td>
+<td><img src="https://img.shields.io/badge/-midterm-blue.svg" alt="Midterm"> <strong>Midterm</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Fri, Oct 07</td>
+<td><img src="https://img.shields.io/badge/-rec-yellow.svg" alt="Recitation"> Containers: Docker</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Mon, Oct 10</td>
+<td>Data Quality</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Wed, Oct 12</td>
+<td>Infrastructure Quality and Operations</td>
+<td></td>
+<td>I3: Architecture</td>
+</tr>
+<tr>
+<td>Fri, Oct 14</td>
+<td><img src="https://img.shields.io/badge/-rec-yellow.svg" alt="Recitation"> Continuous Integration: Jenkins</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Mon, Oct 17</td>
+<td><img src="https://img.shields.io/badge/-break-red.svg" alt="Break"> Fall break, no classes</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Wed, Oct 19</td>
+<td><img src="https://img.shields.io/badge/-break-red.svg" alt="Break"> Fall break, no classes</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Fri, Oct 21</td>
+<td><img src="https://img.shields.io/badge/-break-red.svg" alt="Break"> Fall break, no classes</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Mon, Oct 24</td>
+<td>Scaling Data Storage and Data Processing</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Wed, Oct 26</td>
+<td>Process &amp; Technical Debt</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Fri, Oct 28</td>
+<td><img src="https://img.shields.io/badge/-break-red.svg" alt="Break"> Tartan community day, no classes</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Mon, Oct 31</td>
+<td>Intro to Ethics + Fairness</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Wed, Nov 02</td>
+<td>Measuring Fairness</td>
+<td></td>
+<td>M2: Infrastructure Quality</td>
+</tr>
+<tr>
+<td>Fri, Nov 04</td>
+<td><img src="https://img.shields.io/badge/-rec-yellow.svg" alt="Recitation"> Monitoring: Prometheus, Grafana</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Mon, Nov 07</td>
+<td>Building Fairer Systems</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Wed, Nov 09</td>
+<td>Explainability &amp; Interpretability</td>
+<td></td>
+<td>I4: Open Source Tools</td>
+</tr>
+<tr>
+<td>Fri, Nov 11</td>
+<td><img src="https://img.shields.io/badge/-rec-yellow.svg" alt="Recitation"> Fairness</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Mon, Nov 14</td>
+<td>Transparency &amp; Accountability</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Wed, Nov 16</td>
+<td>Versioning, Provenance, and Reproducability</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Fri, Nov 18</td>
+<td><img src="https://img.shields.io/badge/-rec-yellow.svg" alt="Recitation"> Debugging</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Mon, Nov 21</td>
+<td>Debugging (Guest lecture) / Human-AI Interaction</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Wed, Nov 23</td>
+<td><img src="https://img.shields.io/badge/-break-red.svg" alt="Break"> Thanksgiving break</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Fri, Nov 25</td>
+<td><img src="https://img.shields.io/badge/-break-red.svg" alt="Break"> Threat modeling</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Mon, Nov 28</td>
+<td>Security and Privacy</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Wed, Nov 30</td>
+<td>Safety</td>
+<td></td>
+<td>M3: Monitoring and CD</td>
+</tr>
+<tr>
+<td>Fri, Dec 02</td>
+<td><img src="https://img.shields.io/badge/-rec-yellow.svg" alt="Recitation"> Threat modeling</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Mon, Dec 05</td>
+<td>Fostering Interdisciplinary Teams</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Wed, Dec 07</td>
+<td>Summary and Review</td>
+<td></td>
+<td>M4: Fairness, Security and Feedback Loops</td>
+</tr>
+<tr>
+<td>tbd</td>
+<td><strong>Final Project Presentations</strong></td>
+<td></td>
+<td>Final report</td>
+</tr>
+<tr>
+<td>(Preliminary schedule, subject to change)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Topic</th>
+<th>Reading</th>
+<th>Assignment due</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Wed, Jan 19</td>
+<td><a href="https://ckaestne.github.io/seai/S2022/slides/01_introduction/intro.html">Introduction and Motivation</a> (<a href="https://github.com/ckaestne/seai/blob/S2022/lectures/01_introduction/intro.md">md</a>, <a href="https://ckaestne.github.io/seai/S2022/slides/01_introduction/intro.pdf">pdf</a>, <a href="https://ckaestne.medium.com/introduction-to-machine-learning-in-production-eef7427426f1">book chapter</a>)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Fri, Jan 21</td>
+<td><img src="https://img.shields.io/badge/-rec-yellow.svg" alt="Recitation"> <a href="https://github.com/ckaestne/seai/tree/S2022/recitations/01_git_and_collaboration">Git and Team Collaboration</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Mon, Jan 24</td>
+<td><a href="https://ckaestne.github.io/seai/S2022/slides/02_systems/systems.html">From Models to AI-Enabled Systems</a> (<a href="https://github.com/ckaestne/seai/blob/S2022/lectures/02_systems/systems.md">md</a>, <a href="https://ckaestne.github.io/seai/S2022/slides/02_systems/systems.pdf">pdf</a>, <a href="https://ckaestne.medium.com/machine-learning-in-production-from-models-to-systems-e1422ec7cd65">book chapter</a>)</td>
+<td><a href="https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436">Building Intelligent Systems</a>, Ch. 5, 7, 8</td>
+<td></td>
+</tr>
+<tr>
+<td>Wed, Jan 26</td>
+<td><a href="https://ckaestne.github.io/seai/S2022/slides/03_modelquality/modelquality1.html">Model Quality 1: Accuracy and Correctness</a> (<a href="https://github.com/ckaestne/seai/blob/S2022/lectures/03_modelquality/modelquality1.md">md</a>, <a href="https://ckaestne.github.io/seai/S2022/slides/03_modelquality/modelquality1.pdf">pdf</a>, <a href="https://ckaestne.medium.com/model-quality-defining-correctness-and-fit-a8361b857df">book chapter 1</a>, <a href="https://ckaestne.medium.com/model-quality-measuring-prediction-accuracy-38826216ebcb">book chapter 2</a>)</td>
+<td><a href="https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436">Building Intelligent Systems</a>, Ch. 19</td>
+<td><a href="https://github.com/ckaestne/seai/blob/S2022/assignments/I1_case_study.md">I1: Case Study</a></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://ckaestne.github.io/seai/S2022/slides/03_modelquality/teams.html">Teamwork Primer</a> (<a href="https://github.com/ckaestne/seai/blob/S2022/lectures/03_modelquality/teams.md">md</a>, <a href="https://ckaestne.github.io/seai/S2022/slides/03_modelquality/teams.pdf">pdf</a>)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Fri, Jan 28</td>
+<td><img src="https://img.shields.io/badge/-rec-yellow.svg" alt="Recitation"> <a href="https://github.com/ckaestne/seai/tree/S2022/recitations/02_kafka">Stream processing: Apache Kafka</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Mon, Jan 31</td>
+<td><a href="https://ckaestne.github.io/seai/S2022/slides/03_modelquality/modelquality2.html">Model Quality 2: Slicing, Capabilities, Invariants</a> (<a href="https://github.com/ckaestne/seai/blob/S2022/lectures/03_modelquality/modelquality2.md">md</a>, <a href="https://ckaestne.github.io/seai/S2022/slides/03_modelquality/modelquality2.pdf">pdf</a>, <a href="https://ckaestne.medium.com/model-quality-slicing-capabilities-invariants-and-other-testing-strategies-27e456027bd">book chapter</a>)</td>
+<td><a href="https://homes.cs.washington.edu/~wtshuang/static/papers/2020-acl-checklist.pdf">Behavioral Testing of NLP Models with CheckList</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Wed, Feb 02</td>
+<td><a href="https://ckaestne.github.io/seai/S2022/slides/04_goals/goals.html">Goals and Success Measures for AI-Enabled Systems</a> (<a href="https://github.com/ckaestne/seai/blob/S2022/lectures/04_goals/goals.md">md</a>, <a href="https://ckaestne.github.io/seai/S2022/slides/04_goals/goals.pdf">pdf</a>)</td>
+<td><a href="https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436">Building Intelligent Systems</a>, Ch. 2, 4</td>
+<td></td>
+</tr>
+<tr>
+<td>Fri, Feb 04</td>
+<td><img src="https://img.shields.io/badge/-rec-yellow.svg" alt="Recitation"> <a href="https://github.com/ckaestne/seai/tree/S2022/recitations/03_Unit_testing_and_Measurement">Measurement &amp; unit testing</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Mon, Feb 07</td>
+<td><a href="https://ckaestne.github.io/seai/S2022/slides/05_requirements_i/requirements.html">Requirements and Risks 1</a> (<a href="https://github.com/ckaestne/seai/blob/S2022/lectures/05_requirements_i/requirements.md">md</a>, <a href="https://ckaestne.github.io/seai/S2022/slides/05_requirements_i/requirements.pdf">pdf</a>, <a href="https://ckaestne.medium.com/the-world-and-the-machine-and-responsible-machine-learning-1ae72353c5ae">short notes</a>)</td>
+<td><a href="http://mcs.open.ac.uk/mj665/icse17kn.pdf">The World and the Machine</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Wed, Feb 09</td>
+<td><a href="https://ckaestne.github.io/seai/S2022/slides/06_requirements_ii/requirements_ii.html">Requirements and Risks 2</a> (<a href="https://github.com/ckaestne/seai/blob/S2022/lectures/06_requirements_ii/requirements_ii.md">md</a>, <a href="https://ckaestne.github.io/seai/S2022/slides/06_requirements_ii/requirements_ii.pdf">pdf</a>)</td>
+<td><a href="https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436">Building Intelligent Systems</a>, Ch. 6, 7, 24</td>
+<td><a href="https://github.com/ckaestne/seai/blob/S2022/assignments/project.md#milestone-1-recommendation-model-and-first-deployment">M1: Modeling and First Deployment</a></td>
+</tr>
+<tr>
+<td>Fri, Feb 11</td>
+<td><img src="https://img.shields.io/badge/-rec-yellow.svg" alt="Recitation"> <a href="https://github.com/ckaestne/seai/tree/S2022/recitations/04_requirements_and_risk">Requirements/Risk analysis</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Mon, Feb 14</td>
+<td><a href="https://ckaestne.github.io/seai/S2022/slides/07_tradeoffs/tradeoffs.html">Tradeoffs among Modeling Techniques</a> (<a href="https://github.com/ckaestne/seai/blob/S2022/lectures/07_tradeoffs/tradeoffs.md">md</a>, <a href="https://ckaestne.github.io/seai/S2022/slides/07_tradeoffs/tradeoffs.pdf">pdf</a>, <a href="https://ckaestne.medium.com/quality-drivers-in-architectures-for-ml-enabled-systems-836f21c44334">book chapter</a>)</td>
+<td><a href="https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436">Building Intelligent Systems</a>, Ch. 18</td>
+<td></td>
+</tr>
+<tr>
+<td>Wed, Feb 16</td>
+<td><a href="https://ckaestne.github.io/seai/S2022/slides/08_deploying_a_model/architecture.html">Deploying a Model</a>  (<a href="https://ckaestne.medium.com/thinking-like-a-software-architect-121ea6919871">book chapter 1</a>, <a href="https://ckaestne.medium.com/deploying-a-model-f0b7ffefd06a">book chapter 2</a>)</td>
+<td><a href="https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436">Building Intelligent Systems</a>, Ch. 13 and <a href="https://www.theorylane.com/2017/10/20/some-development-patterns-in-data-science/">Exploring Development Patterns in Data Science</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Fri, Feb 18</td>
+<td><img src="https://img.shields.io/badge/-rec-yellow.svg" alt="Recitation"> <a href="https://github.com/ckaestne/seai/blob/S2022/recitations/05_software_architecture/Recitation%205%20-%20Software%20Architecture.pdf">Architecture</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Mon, Feb 21</td>
+<td><a href="https://ckaestne.github.io/seai/S2022/slides/09_qainproduction/qainproduction.html">Quality Assessment in Production</a> (<a href="https://github.com/ckaestne/seai/blob/S2022/lectures/09_qainproduction/qainproduction.md">md</a>, <a href="https://ckaestne.github.io/seai/S2022/slides/09_qainproduction/qainproduction.pdf">pdf</a>, <a href="https://ckaestne.medium.com/quality-assurance-in-production-for-ml-enabled-systems-4d1b3442316f">book chapter</a>)</td>
+<td><a href="https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436">Building Intelligent Systems</a>, Ch. 14, 15</td>
+<td></td>
+</tr>
+<tr>
+<td>Wed, Feb 23</td>
+<td><a href="https://ckaestne.github.io/seai/S2022/slides/10_dataquality/dataquality.html">Data Quality</a> (<a href="https://github.com/ckaestne/seai/blob/S2022/lectures/10_dataquality/dataquality.md">md</a>, <a href="https://ckaestne.github.io/seai/S2022/slides/10_dataquality/dataquality.pdf">pdf</a>, <a href="https://ckaestne.medium.com/quality-assurance-in-production-for-ml-enabled-systems-4d1b3442316f">book chapter</a>)</td>
+<td><a href="https://dl.acm.org/doi/abs/10.1145/3411764.3445518">Data Cascades in High-Stakes AI</a></td>
+<td><a href="https://github.com/ckaestne/seai/blob/S2022/assignments/I2_requirements_architecture.md">I2: Requirements and Architecture</a></td>
+</tr>
+<tr>
+<td>Fri, Feb 25</td>
+<td><img src="https://img.shields.io/badge/-rec-yellow.svg" alt="Recitation"> <a href="https://github.com/ckaestne/seai/tree/S2022/recitations/06_continuous_integration">Continuous Integration: Jenkins</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Mon, Feb 28</td>
+<td><a href="https://ckaestne.github.io/seai/S2022/slides/11_infrastructurequality/infrastructurequality.html">Infrastructure Quality, Deployment, and Operations</a> (<a href="https://github.com/ckaestne/seai/blob/S2022/lectures/11_infrastructurequality/infrastructurequality.md">md</a>, <a href="https://ckaestne.github.io/seai/S2022/slides/11_infrastructurequality/infrastructurequality.pdf">pdf</a>, <a href="https://ckaestne.medium.com/automating-the-ml-pipeline-eb0f570b4fc9">book chapter 1</a>, <a href="https://ckaestne.medium.com/planning-for-operations-of-ml-enabled-systems-a3d18e07ef7c">book chapter 2</a>, book chapter 3)</td>
+<td><a href="https://research.google.com/pubs/archive/46555.pdf">The ML Test Score</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Wed, Mar 02</td>
+<td><strong><a href="https://github.com/ckaestne/seai/tree/S2022/exams">Midterm</a></strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Fri, Mar 04</td>
+<td><img src="https://img.shields.io/badge/-break-red.svg" alt="Break"> Midsemester break &amp; spring break</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Mon, Mar 14</td>
+<td><a href="https://ckaestne.github.io/seai/S2022/slides/12_dataatscale/dataatscale.html">Managing and Processing Large Datasets</a> (<a href="https://github.com/ckaestne/seai/blob/S2022/lectures/12_dataatscale/dataatscale.md">md</a>, <a href="https://ckaestne.github.io/seai/S2022/slides/12_dataatscale/dataatscale.pdf">pdf</a>, <a href="https://ckaestne.medium.com/scaling-ml-enabled-systems-b5c6b1527bc">book chapter</a>)</td>
+<td><a href="https://www.youtube.com/watch?v=_bvrzYOA8dY">Business Systems with Machine Learning</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Wed, Mar 16</td>
+<td><a href="https://ckaestne.github.io/seai/S2022/slides/13_process/process.html">Process &amp; Technical Debt</a> (<a href="https://github.com/ckaestne/seai/blob/S2022/lectures/13_process/process.md">md</a>, <a href="https://ckaestne.github.io/seai/S2022/slides/13_process/process.pdf">pdf</a>, <a href="https://ckaestne.medium.com/data-science-and-software-engineering-process-models-ea997ea53711">book chapter 1</a>, <a href="https://ckaestne.medium.com/technical-debt-in-machine-learning-systems-62035b82b6de">book chapter 2</a>)</td>
+<td><a href="http://papers.nips.cc/paper/5656-hidden-technical-debt-in-machine-learning-systems.pdf">Hidden Technical Debt in Machine Learning Systems</a></td>
+<td><a href="https://github.com/ckaestne/seai/blob/S2022/assignments/I3_se4ai_tools.md">I3: Exploring Tools</a> or <a href="https://github.com/ckaestne/seai/blob/S2022/assignments/research_project.md">PhD Project</a></td>
+</tr>
+<tr>
+<td>Fri, Mar 18</td>
+<td><img src="https://img.shields.io/badge/-rec-yellow.svg" alt="Recitation"> <a href="https://github.com/ckaestne/seai/tree/S2022/recitations/07_docker">Containers: Docker</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Mon, Mar 21</td>
+<td><a href="https://ckaestne.github.io/seai/S2022/slides/14_human_ai_interaction/human_ai_interaction.html">Human AI Interaction</a> (<a href="https://github.com/ckaestne/seai/blob/S2022/lectures/14_human_ai_interaction/human_ai_interaction.md">md</a>, <a href="https://ckaestne.github.io/seai/S2022/slides/14_human_ai_interaction/human_ai_interaction.pdf">pdf</a>)</td>
+<td><a href="https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436">Building Intelligent Systems</a>, Ch. 8 and <a href="https://dl.acm.org/doi/pdf/10.1145/3290605.3300233?casa_token=LozLAS6xY1YAAAAA:969CqbfAMIhDC1AIjF7L1DZgGMg71ECwjjXa_mzdj6RLvlL8LYSaSpglBSK3xhRuBnzGp-V4ebVKVw">Guidelines for Human-AI Interaction</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Wed, Mar 23</td>
+<td><a href="https://ckaestne.github.io/seai/S2022/slides/15_intro_ethics_fairness/intro-ethics-fairness.html">Intro to Ethics + Fairness</a> (<a href="https://github.com/ckaestne/seai/blob/S2022/lectures/15_intro_ethics_fairness/intro-ethics-fairness.md">md</a>, <a href="https://ckaestne.github.io/seai/S2022/slides/15_intro_ethics_fairness/intro-ethics-fairness.pdf">pdf</a>, <a href="https://ckaestne.medium.com/responsible-ai-engineering-c97e44e6c57a">book chapter</a>)</td>
+<td><a href="https://datasociety.net/wp-content/uploads/2018/04/Data_Society_Algorithmic_Accountability_Primer_FINAL-4.pdf">Algorithmic Accountability: A Primer</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Fri, Mar 25</td>
+<td><img src="https://img.shields.io/badge/-rec-yellow.svg" alt="Recitation"> <a href="https://github.com/ckaestne/seai/tree/S2022/recitations/08_monitoring">Monitoring: Prometheus, Grafana</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Mon, Mar 28</td>
+<td><a href="https://ckaestne.github.io/seai/S2022/slides/16_fairness_i/fairness_i.html">Building Fairer AI-Enabled System 1</a> (<a href="https://github.com/ckaestne/seai/blob/S2022/lectures/16_fairness_i/fairness_i.md">md</a>, <a href="https://ckaestne.github.io/seai/S2022/slides/16_fairness_i/fairness_i.pdf">pdf</a>)</td>
+<td><a href="http://users.umiacs.umd.edu/~hal/docs/daume19fairness.pdf">Improving Fairness in Machine Learning Systems</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Wed, Mar 30</td>
+<td><a href="https://ckaestne.github.io/seai/S2022/slides/17_fairness_ii/fairness_ii.html">Building Fairer AI-Enabled System 2</a> (<a href="https://github.com/ckaestne/seai/blob/S2022/lectures/17_fairness_ii/fairness_ii.md">md</a>, <a href="https://ckaestne.github.io/seai/S2022/slides/17_fairness_ii/fairness_ii.pdf">pdf</a>)</td>
+<td><a href="https://dl.acm.org/doi/pdf/10.1145/3290607.3310433">A Mulching Proposal</a></td>
+<td><a href="https://github.com/ckaestne/seai/blob/S2022/assignments/project.md#milestone-2-model-and-infrastructure-quality">M2: Infrastructure Quality</a></td>
+</tr>
+<tr>
+<td>Fri, Apr 01</td>
+<td><img src="https://img.shields.io/badge/-rec-yellow.svg" alt="Recitation"> <a href="https://github.com/ckaestne/seai/tree/S2022/recitations/09_fairness">Fairness</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Mon, Apr 04</td>
+<td><a href="https://ckaestne.github.io/seai/S2022/slides/20_provenance/provenance.html">Versioning, Provenance, and Reproducability</a> (<a href="https://github.com/ckaestne/seai/blob/S2022/lectures/20_provenance/provenance.md">md</a>, <a href="https://ckaestne.github.io/seai/S2022/slides/20_provenance/provenance.pdf">pdf</a>, <a href="https://ckaestne.medium.com/versioning-provenance-and-reproducibility-in-production-machine-learning-355c48665005">book chapter</a>)</td>
+<td><a href="https://www.buildingintelligentsystems.com/">Building Intelligent Systems</a>, Ch. 21 &amp; <a href="http://research.google.com/pubs/archive/45390.pdf">Goods: Organizing Google&#39;s Datasets</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Wed, Apr 06</td>
+<td><a href="https://ckaestne.github.io/seai/S2022/slides/18_explainability/explainability.html">Explainability &amp; Interpretability</a> (<a href="https://github.com/ckaestne/seai/blob/S2022/lectures/18_explainability/explainability.md">md</a>, <a href="https://ckaestne.github.io/seai/S2022/slides/18_explainability/explainability.pdf">pdf</a>, <a href="https://ckaestne.medium.com/interpretability-and-explainability-a80131467856">book chapter</a>)</td>
+<td><a href="https://dataskeptic.com/blog/episodes/2020/black-boxes-are-not-required">Black boxes not required</a> or <a href="https://arxiv.org/abs/1811.10154">Stop Explaining Black Box ML Models…</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Fri, Apr 08</td>
+<td><img src="https://img.shields.io/badge/-break-red.svg" alt="Break"> Spring carnival, no classes</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Mon, Apr 11</td>
+<td><a href="https://ckaestne.github.io/seai/S2022/slides/19_transparency/transparency.html">Transparency and Accountability</a> (<a href="https://github.com/ckaestne/seai/blob/S2022/lectures/19_transparency/transparency.md">md</a>, <a href="https://ckaestne.github.io/seai/S2022/slides/19_transparency/transparency.pdf">pdf</a>, <a href="https://ckaestne.medium.com/transparency-and-accountability-in-ml-enabled-systems-f8ed0b6fd183">book chapter</a>)</td>
+<td><a href="https://pair.withgoogle.com/chapter/explainability-trust/">People + AI, Ch. Explainability and Trust</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Wed, Apr 13</td>
+<td><a href="https://ckaestne.github.io/seai/S2022/slides/21_security/security.html">Security</a> (<a href="https://github.com/ckaestne/seai/blob/S2022/lectures/21_security/security.md">md</a>, <a href="https://ckaestne.github.io/seai/S2022/slides/21_security/security.pdf">pdf</a>)</td>
+<td><a href="https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436">Building Intelligent Systems</a>, Ch. 25 &amp; <a href="https://ieeexplore.ieee.org/document/9107290">The Top 10 Risks of Machine Learning Security</a></td>
+<td><a href="https://github.com/ckaestne/seai/blob/S2022/assignments/project.md#milestone-3-monitoring-and-continuous-deployment">M3: Monitoring and CD</a></td>
+</tr>
+<tr>
+<td>Fri, Apr 15</td>
+<td><img src="https://img.shields.io/badge/-rec-yellow.svg" alt="Recitation"> Threat modeling</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Mon, Apr 18</td>
+<td><a href="https://ckaestne.github.io/seai/S2022/slides/21_security/security.html">Security continued</a>; <a href="https://ckaestne.github.io/seai/S2022/slides/22_safety/safety.html">Safety</a> (<a href="https://github.com/ckaestne/seai/blob/S2022/lectures/22_safety/safety.md">md</a>, <a href="https://ckaestne.github.io/seai/S2022/slides/22_safety/safety.pdf">pdf</a>)</td>
+<td><a href="http://ceur-ws.org/Vol-2560/paper40.pdf">Practical Solutions for Machine Learning Safety in Autonomous Vehicles</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Wed, Apr 20</td>
+<td><a href="https://ckaestne.github.io/seai/S2022/slides/22_safety/safety.html">Safety continued</a> (<a href="https://github.com/ckaestne/seai/blob/S2022/lectures/22_safety/safety.md">md</a>, <a href="https://ckaestne.github.io/seai/S2022/slides/22_safety/safety.pdf">pdf</a>)</td>
+<td><a href="https://maliciousaireport.godaddysites.com/">The Malicious Use of Artificial: Intelligence Forecasting, Prevention, and Mitigation</a></td>
+<td><a href="https://github.com/ckaestne/seai/blob/S2022/assignments/I4_fairness.md">I4: Fairness</a></td>
+</tr>
+<tr>
+<td>Fri, Apr 22</td>
+<td><img src="https://img.shields.io/badge/-rec-yellow.svg" alt="Recitation"> recitation canceled</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Mon, Apr 25</td>
+<td><a href="https://ckaestne.github.io/seai/S2022/slides/23_teams/teams.html">Fostering Interdisciplinary Teams</a> (<a href="https://github.com/ckaestne/seai/blob/S2022/lectures/23_teams/teams.md">md</a>, <a href="https://ckaestne.github.io/seai/S2022/slides/23_teams/teams.pdf">pdf</a>, <a href="https://ckaestne.medium.com/building-machine-learning-products-with-interdisciplinary-teams-a1fdfbf49e81">book chapter</a>)</td>
+<td><a href="https://arxiv.org/abs/2110.10234">Collaboration Challenges in Building ML-Enabled Systems</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Wed, Apr 27</td>
+<td><a href="https://ckaestne.github.io/seai/S2022/slides/24_summary/all.html">Summary and Review</a> and <a href="https://ckaestne.github.io/seai/S2022/slides/24_summary/future.html">Closing discussion</a> (<a href="https://github.com/ckaestne/seai/blob/S2022/lectures/24_summary/future.md">md</a>, <a href="https://ckaestne.github.io/seai/S2022/slides/24_summary/future.pdf">pdf</a>)</td>
+<td></td>
+<td><a href="https://github.com/ckaestne/seai/blob/S2022/assignments/project.md#milestone-4-drift-and-feedback-loops">M4: Security and Feedback Loops</a></td>
+</tr>
+<tr>
+<td>Mon, May 2</td>
+<td><strong>Final Project Presentations</strong> -- 1-4pm in GHC 4401</td>
+<td></td>
+<td><a href="https://github.com/ckaestne/seai/blob/S2022/assignments/project.md#final-report-and-presentation">Final report</a></td>
+</tr>
+</tbody></table>
+<h2 id="course-syllabus-and-policies">Course Syllabus and Policies</h2>
+<p>The course uses Canvas and Gradescope for homework submission, grading, discussion, questions, announcements, and supplementary documents; slides will be posted here; Slack is used for communication around homeworks and projects; Github is used to coordinate group work. All public course material (assignments, slides, syllabus) can be found in the course’s <a href="https://github.com/ckaestne/seai/tree/F2022">GitHub repository</a>; announcements and all <em>private</em> material (e.g., grades, passwords) will be shared through Canvas.</p>
+<p><strong>Prerequisites:</strong> The course does not have formal prerequesites, but we describe background knowledge that will help you be successful in the course. In a nutshell, we expect basic exposure to machine learning and basic programming skills, but do not require software engineering experience. </p>
+<p><em>Machine learning (some experience recommended):</em> We suggest that you have basic familiarity with the process of extracting features, building and evaluating models, and a basic understanding of how and when different kinds of learning techniques work. Familiarity with Python and Jupyter notebooks is helpful. Courses such as 10-301, 10-315, and 05-434 will prepare you well, but project experience or self-learning from books or online courses will likely be sufficient for our purposes. For example, we recommend the book <a href="https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019665684604436">Hands-On Machine Learning</a> to get practical experience in building and evaluating models prior to taking this course. We have set up a <em><a href="https://forms.gle/JcS61Uao7wHSFQen8">prerequisite knowledge check</a></em> as a Google Form, where we ask 10 questions on machine learning, which help you assess your background. This is set up as an anonymous and ungraded quiz, where you can compare your knowledge against what we believe is useful for you to be successful in this course (click on <em>“view score”</em> after submitting your answer). After submitting your answers, the system will give specific pointers to readings and exercises that may help you fill gaps in background knowledge. </p>
+<p><em>Programming (basic proficiency required):</em> The course has a substantial programming component, especially in the first assignment and the team project, so basic programming skills will be needed. If you take the course without programming experience, you will significantly struggle. If you do not meet the following criteria, we expect you might struggle significantly and might need to catch up on your own: (1) basic fluency in a programming language like Python, (2) ability to install and use libraries in that language, (3) ability to ssh into a unix machine and perform basic command line operations. We do not prescribe a programming language, but most student teams decide to work primarily in Python. We will will provide some introductions and examples for essential tools like Git, Docker, Grafana, and Jenkins in recitations, but we expect that you will be able to pick up new tools and libraries on your own. For example, we expect that you will be able, on your own, to learn basic use of a library like <a href="https://flask.palletsprojects.com/en/2.1.x/">Flask</a> to write a web service. Throughout the semester, expect to read lots of documentation and tutorials to learn various libraries and tools on your own.</p>
+<p><em>Software engineering (no experience required):</em> Many students will have some software engineering experience beyond basic programming skills from software engineering courses or from working in larger software teams or on larger software projects, for example experience with requirements engineering, software design, software testing, distributed systems, continuous deployment, or managing teams. No such experience is expected as a prerequisite; we will cover basics for these topics in the course.</p>
+<p>Email the instructors if you would like to further talk to us about prerequisites.</p>
+<p><strong>In-person teaching and lecture recordings:</strong> The course will be taught in person and we consider in-class participation as an important part of the learning experience. We will not provide an online option. We will <em>not</em> make recordings of lectures or recitations available.</p>
+<p>We regularly use Slack for in-class activities. Please make sure that you have access to slack on a laptop, tablet, or mobile phone.</p>
+<p>If you cannot attend class due to a medical issue, family emergency, or other unforeseeable reason, please contact us about possible accommodations. We try to be as flexible as we can, but will handle these cases individually.</p>
+<p><strong>Grading:</strong> Evaluation will be based on the following distribution: 40% individual assignments, 30% group project, 10% midterm, 10% participation, 10% reading quizzes. No final exam.</p>
+<p>We strive for providing clear specifications and clear point breakdowns for all homework to set clear expectations and taking the guessing out of homework. We often give you choices to self-direct your learning, deciding what to work on and how to address a problem (e.g., we never prescribe a programming language and often give choices to answer a subset of possible questions). Clear specifications and point breakdowns allow you to intentionally decide to skip parts of assignments with clear upfront consequences. All parts will be graded pass/fail, no partial credit. For opportunities to redo work, see <em>resubmissions</em> below. For grading participation and quizzes see below. Some assignments have a small amount of bonus points. </p>
+<p>Since we give flexibility to resubmit assignments, we set grade boundaries fairly high. We expect the following grade boundaries:</p>
+<table>
+<thead>
+<tr>
+<th>Grade</th>
+<th>Cutoff</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>A+</td>
+<td>&gt;99%</td>
+</tr>
+<tr>
+<td>A</td>
+<td>&gt;96%</td>
+</tr>
+<tr>
+<td>A-</td>
+<td>&gt;93%</td>
+</tr>
+<tr>
+<td>B+</td>
+<td>&gt;90%</td>
+</tr>
+<tr>
+<td>B</td>
+<td>&gt;85%</td>
+</tr>
+<tr>
+<td>B-</td>
+<td>&gt;82%</td>
+</tr>
+<tr>
+<td>C</td>
+<td>&gt;75%</td>
+</tr>
+<tr>
+<td>D</td>
+<td>&gt;60%</td>
+</tr>
+</tbody></table>
+<p><strong>Participation:</strong> Design and engineering content requires active engagement with the material and discussions of judgment decisions on specific scenarios and cases. We strongly believe in in-class discussions and in-class exercises and want all students to participate, e.g., answering or asking questions in class, sharing own experiences, presenting results, or participating in in-class votes and surveys. We will give many opportunities for participation in every lecture and recitation. We take notes on participation throughout the semester and grade participation. Note that we do not consider mere passive attendance as participation, but only active engagement. We will provide feedback at mid-semester so you can check in on how you’re doing. Again, please talk to us if you need accommodations.</p>
+<p>We assign participation grades as follows:</p>
+<ul>
+<li>100%: Participates actively at least once in most lectures</li>
+<li>90%: Participates actively at least once in over half of the lectures</li>
+<li>50%: Participates actively at least once in 25% of the lectures</li>
+<li>20%: Participates actively at least once in at least 3 lectures.</li>
+<li>0%: No participation in the entire semester.</li>
+</ul>
+<p><strong>Textbook, reading assignments, and reading quizzes:</strong> We will be using Goeff Hulten&#39;s &quot;<em>Building Intelligent Systems: A Guide to Machine Learning Engineering</em>&quot; (ISBN: 1484234316) throughout much of the course. The library provides an <a href="https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436">electronic copy</a>. In addition, we will provide various additional readings, including blog posts and academic papers, throughout the semester.</p>
+<p>We are currently also working on a textbook of our own that closely mirrors the course content. The book is freely <a href="https://ckaestne.medium.com/machine-learning-in-production-book-overview-63be62393581">online</a>. We will not assign chapters from our own textbook but always refer to the corresponding chapter as optional supplementary reading.</p>
+<p>We will assign readings for most classes and post a corresponding quiz on Canvas that is due before class. Each quiz contains an open ended question that relates to the reading. Reading quizzes are graded pass/fail for a good-faith effort to engage with the question. </p>
+<p><strong>Teamwork:</strong> Teamwork is an essential part of this course. The course contains a multi-milestone group project to be done in teams of 3-5 students. Teams will be assigned by the instructor. We will help teams throughout the semester and cover some specific content on teamwork as part of the course. Peer rating will be performed for team assignments with regard to <em>team citizenship</em> (i.e., being active and cooperative members), following the procedure from <a href="https://www.cs.tufts.edu/~nr/cs257/archive/teaching/barbara-oakley/JSCL-collaboration.pdf">this article</a>. Use <a href="https://ckaestne.github.io/seai/F2022/assignments/peergrading.html">this site</a> to preview the expected adjustments for peer ratings.</p>
+<p><strong>Late work policy and resubmissions:</strong> We understand that students will always have competing deadlines, unusual events, interviews for job searches, and other activities that compete with coursework. We therefore build flexibility and a safety net directly into the rubric. If you need additional accommodations, please contact us.</p>
+<p>In addition, we expect that the past/fail grading scheme without partial credit, may lead to harsh point deductions for missing parts of the requirements, so we provide a mechanism to resubmit work to regain lost points.</p>
+<p>Every student receives <em>7 individual tokens</em> that they can spend throughout the semester in the following ways:</p>
+<ul>
+<li>For each token a student can submit a homework assignment 1 day late (with 7 tokens a student can submit multiple homeworks one day late each or a single homework up to 7 days late).</li>
+<li>For <em>three</em> tokens a student can improve or redo an individual homework assignment and resubmit. The earlier submission is discarded and the regraded assignment counts toward the final grade. Resubmissions can be made at any time in the semester up to the final project presentation (see schedule). – Note that this technically allows to blow the original deadline and submit a homework arbitrarily late for three tokens.</li>
+<li>For one token a student can submit a reading quiz late (any time before the final presentation) or resubmit a graded reading quiz.</li>
+<li>Remaining tokens at the end of the semester are counted as one participation day each.</li>
+</ul>
+<p>If a student runs out of tokens, late individual assignments receive a penalty of 15% per started day.</p>
+<p>Every team independently receives <em>7 team tokens</em> that they can spend for extensions of any milestone deadline (1 token per day per milestone, except final presentation deadline) or to resubmit any milestone (3 tokens each, resubmitted any time before the final presentation). If a team runs out of tokens, late submissions in group assignments will receive feedback but no credit.</p>
+<p>In general, late submissions and resubmissions can be done at any point in the semester before the final presentations. If submitting any work more than 3 days late, use the provided form in Canvas rather submitting to Gradescope. </p>
+<p>Exceptions to this policy will be made at discretion of the instructor in important circumstances, almost always involving a family or medical emergency and an email from your advisor — you can ask your academic advisor or the Dean of Student Affairs requesting the exception on your behalf. Please communicate also with your team about potential timing issues.</p>
+<p><strong>Communication:</strong> We make announcements through Canvas. We answer email, Canvas messages, and monitor Slack, which may all be used for clarifying homework assignments and other interactions. We suggest to monitor slack for public questions and interactions with your teams. Email or slack us if you would like to make an appointment.</p>
+<p><strong>Auditing:</strong> We welcome students to audit the course as long as the room capacities allow it. Auditing students will have access to all course materials (which is online anyway) and can attend lectures. Unfortunately we won&#39;t be able to grade homework submissions of auditing students or assign them to teams in the group project. To have auditing be on your transcript, approach us with the necessary paperwork. To assign a passing auditing grade at the end of the semester, we expect the student to get at least a 90% participation grade (see above) and a 70% score on reading quizzes.</p>
+<p><strong>Time management:</strong> This is a 12-unit course, and it is our intention to manage it so that you spend close to 12 hours a week on the course, on average. In general, 4 hours/week will be spent in class and 1-2 hours on readings and reading quizzes, and 6-7 hours on assignments. Notice that much homework is done in groups, so please account for the overhead and decreased time flexibility that comes with groupwork. Please give the course staff feedback if the time the course is taking for you differs significantly from our intention.</p>
+<p><strong>Writing:</strong> Describing tradeoffs among decisions and communication with stakeholders from other backgrounds are key aspects of this class. Many homework assignments have a component that requires discussing issues in written form or reflecting about experiences. To practice writing skills, the Global Communications Center (GCC) offers one-on-one help for students, along with workshops. The instructors are also happy to provide additional guidance if requested.</p>
+<p><strong>Academic honesty and collaboration:</strong> The usual policies apply, especially the University Policy on Academic Integrity. Many parts of the work will be done in groups. We expect that group members collaborate with one another, but that groups work independently from other groups, not exchanging results with other groups. Within groups and pairs, we expect that you are honest about your contribution to the group&#39;s work. This implies not taking credit for others&#39; work and not covering for team members that have not contributed to the team. Otherwise, our expectations regarding academic honestly and collaboration for group and pair work are the same as for individual work, substituting elevated to the level of &quot;group.&quot;
+The rest of this academic honesty and collaboration content is taken from the policy used in 17-214, which we reuse almost directly (with minor modifications, and attribution).
+&quot;You may not copy any part of a solution to a problem that was written by another student, or was developed together with another student, or was copied from another unauthorized source such as the Internet. You may not look at another student&#39;s solution, even if you have completed your own, nor may you knowingly give your solution to another student or leave your solution where another student can see it.
+Here are some examples of behavior that are inappropriate:</p>
+<ul>
+<li>Copying or retyping, or referring to, files or parts of files (such as source code, written text, or unit tests) from another person or source (whether in final or draft form, regardless of the permissions set on the associated files) while producing your own. This is true even if your version includes minor modifications such as style or variable name changes or minor logic modifications.</li>
+<li>Getting help that you do not fully understand, and from someone whom you do not acknowledge on your solution.</li>
+<li>Writing, using, or submitting a program that attempts to alter or erase grading information or otherwise compromise security of course resources.</li>
+<li>Lying to course staff.</li>
+<li>Giving copies of work to others, or allowing someone else to copy or refer to your code or written assignment to produce their own, either in draft or final form. This includes making your work publicly available in a way that other students (current or future) can access your solutions, even if others&#39; access is accidental or incidental to your goals. Beware the privacy settings on your open source accounts!</li>
+<li>Coaching others step-by-step without them understanding your help.
+If any of your work contains any statement that was not written by you, you must put it in quotes and cite the source. If you are paraphrasing an idea you read elsewhere, you must acknowledge the source. Using existing material without proper citation is plagiarism, a form of cheating. If there is any question about whether the material is permitted, you must get permission in advance. We will be using automated systems to detect software plagiarism.
+It is not considered cheating to clarify vague points in the assignments, lectures, lecture notes; to give help or receive help in using the computer systems, compilers, debuggers, profilers, or other facilities; or to discuss ideas at a very high level, without referring to or producing code.
+Any violation of this policy is cheating. The minimum penalty for cheating (including plagiarism) will be a zero grade for the whole assignment. Cheating incidents will also be reported through University channels, with possible additional disciplinary action (see the University Policy on Academic Integrity).
+If you have any question about how this policy applies in a particular situation, ask the instructors or TAs for clarification.&quot;</li>
+</ul>
+<p>Note that the instructors respect honesty in these (and indeed all) situations.</p>
+<p><strong>Accommodations for students with disabilities:</strong> If you have a disability and have an accommodations letter from the Disability Resources office, we encourage you to discuss your accommodations and needs with us as early in the semester as possible. We will work with you to ensure that accommodations are provided as appropriate. If you suspect that you may have a disability and would benefit from accommodations but are not yet registered with the Office of Disability Resources, we encourage you to contact them at <a href="mailto:&#x61;&#99;&#x63;&#101;&#115;&#115;&#x40;&#x61;&#x6e;&#100;&#x72;&#101;&#119;&#46;&#99;&#x6d;&#117;&#46;&#101;&#100;&#x75;">&#x61;&#99;&#x63;&#101;&#115;&#115;&#x40;&#x61;&#x6e;&#100;&#x72;&#101;&#119;&#46;&#99;&#x6d;&#117;&#46;&#101;&#100;&#x75;</a>.</p>
+<p><strong>Respect for diversity:</strong> It is our intent that students from all diverse backgrounds and perspectives be well served by this course, that students’ learning needs be addressed both in and out of class, and that the diversity that students bring to this class be viewed as a resource, strength and benefit. It is my intent to present materials and activities that are respectful of diversity: gender, sexuality, disability, age, socioeconomic status, ethnicity, race, and culture. Especially in lectures on fairness we will also cover diversity discussions, typically through a lens of the contemporary discourse in the US. Your suggestions are encouraged and appreciated. Please let us know ways to improve the effectiveness of the course for you personally or for other students or student groups. </p>
+<p><strong>A note on self care.</strong> Please take care of yourself. Do your best to maintain a healthy lifestyle this semester by eating well, exercising, avoiding drugs and alcohol, getting enough sleep and taking some time to relax. This will help you achieve your goals and cope with stress. All of us benefit from support during times of struggle. You are not alone. There are many helpful resources available on campus and an important part of the college experience is learning how to ask for help. Asking for support sooner rather than later is often helpful.
+If you or anyone you know experiences any academic stress, difficult life events, or feelings like anxiety or depression, we strongly encourage you to seek support. Counseling and Psychological Services (CaPS) is here to help: call 412-268-2922 and visit their website at <a href="http://www.cmu.edu/counseling/">http://www.cmu.edu/counseling/</a>. Consider reaching out to a friend, faculty or family member you trust for help getting connected to the support that can help.</p>
+
+        </section>
+
+        <footer>
+        
+          See GitHub repository with all resources at <a href="https://github.com/ckaestne/seai">https://github.com/ckaestne/seai</a>.
+        </footer>
+
+      </div>
+    </div>
+
+    
+  </body>
+</html>
