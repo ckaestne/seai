@@ -27,7 +27,6 @@ jobs:
         cat .assets/template_end.html >> _site/index.html
         cp *.svg _site/
         cp *.png _site/
-        cp *.jpg _site/
         mkdir _site/assignments
         cp assignments/*.html site/assignments/
         rm schedule_.md
