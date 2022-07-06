@@ -28,7 +28,7 @@ jobs:
         cp *.svg _site/
         cp *.png _site/
         mkdir _site/assignments
-        cp assignments/*.html site/assignments/
+        cp assignments/*.html _site/assignments/
         rm schedule_.md
 
     - name: Generate slides
