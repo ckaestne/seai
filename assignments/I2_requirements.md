@@ -57,8 +57,6 @@ Third, think about what could go wrong and analyze one possible risk with fault 
 
 Submit a report as a single PDF file to Gradescope that covers the following topics in clearly labeled sections (ideally each section starts on a new page):
 
-**Part A: Requirements and Risks**
-
 1. **Goals** (1 page max): Provide a list of organizational objectives, leading indicators, user outcomes, and model properties.
 2. **Environment and Machine** (0.5 page max): Identify environmental entities and machine components (AI and non-AI) in this scenario. The machine components must include at least one AI component that performs image recognition.
 3. **Requirement Decomposition** (1 page max): Select **one** requirement to analyze based on the goals identified above. Specify a list of environment assumptions (ENV) and specifications (SPEC) that are needed to establish this requirement (REQ).
