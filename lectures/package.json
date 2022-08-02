@@ -18,6 +18,6 @@
   },
   "license": "CC-BY-SA-4.0",
   "dependencies": {
-    "puppeteer": "^15.1.1"
+    "puppeteer": "^15.5.0"
   }
 }
