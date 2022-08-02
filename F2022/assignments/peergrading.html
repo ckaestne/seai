@@ -47,7 +47,8 @@
 			const indAvg = s / teamsize
 			document.getElementById('ia'+rated).innerHTML=indAvg.toFixed(1)
 			document.getElementById('ta'+rated).innerHTML=teamAvg.toFixed(1)
-			document.getElementById('t'+rated).innerHTML=Math.min(1.05, indAvg/teamAvg).toFixed(2)
+			const adj = Math.min(1.05, indAvg/teamAvg).toFixed(2)
+			document.getElementById('t'+rated).innerHTML=(adj>=1?"+":"")+Math.round((adj-1)*100)+"%"
 		}
 	}
 	function updateNr() {
@@ -69,11 +70,10 @@
 
 <div style="visibility: hidden;" id='tmpl'>
 	<select onchange="update()">
-		<option value="100">Meets expectations (100)</option>
-		<option value="80">Marginal (80)</option>
+		<option value="100">Good team citizen (100)</option>
+		<option value="90">Needs improvement (90)</option>
 		<option value="60">Deficient (60)</option>
 		<option value="40">Unsatisfactory (40)</option>
-		<option value="20">Superficial (20)</option>
 		<option value="0">No show (0)</option>
 	</select>
 </div>
@@ -92,7 +92,7 @@
 			<th id='h5'>Rated by Team member 5</th>
 			<th>Indiv. Avg.</th>
 			<th>Team Avg.</th>
-			<th>Grade adjustment factor</th>
+			<th>Grade adjustment</th>
 		</tr>
 		<tr>
 			<th>Team member 1</th>
