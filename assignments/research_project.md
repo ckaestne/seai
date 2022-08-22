@@ -1,6 +1,6 @@
-# PhD Project
+# Research Project
 
-(17-745 Machine Learning in Production / AI Engineering)
+(17-745 Machine Learning in Production)
 
 ## Overview
 
@@ -30,9 +30,9 @@ The presentation is due at the same time as those for the final team project. Th
 
 We strongly suggest the following milestones to better scope the project together with the instructors:
 
-* Feb 23: Reach out to instructors for an initial discussion of possible project ideas
-* Mar 16: Send a brief description of the project (not more than 1 page) to the instructors. The description should include references to at least 2 pieces of related work and some initial progress.
-* Apr 20: Send an initial draft of the paper to the instructors. It does not need to be complete, but should contain the entire structure, an initial complete draft of the introduction, and some initial content in other sections.
+* Sep 21: Reach out to instructors for an initial discussion of possible project ideas
+* Oct 12: Send a brief description of the project (not more than 1 page) to the instructors. The description should include references to at least 2 pieces of related work and some initial progress.
+* Nov 9: Send an initial draft of the paper to the instructors. It does not need to be complete, but should contain the entire structure, an initial complete draft of the introduction, and some initial content in other sections.
 
 We are happy to discuss ideas or drafts at any time during the semester, not just at the milestones.
 
