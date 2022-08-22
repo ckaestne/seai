@@ -265,8 +265,9 @@ Second, create a 8 min presentation to the class presenting the project and your
 
 For the presentation, we recommend that you prepare slides and practice timing. The target audience for this talk is other teams in this class: Share what you did and what you learned or found interesting or challenging. Note that all teams worked on the same project, so you can assume familiarity with the task and do not need to introduce basics. Generally, discussions of interesting or unusual technical choices and reflection are more interesting than a standard description of the project.
 
-**Deliverables:** Upload your slides to GitHub and submit the reflection to Gradescope with two sections:
+**Deliverables:** Upload your slides to GitHub and submit the reflection to Gradescope with a link and two sections:
 
+* *Link to Slides in Github Repository*
 * *Reflection on the recommendation service* (2 page max): Reflect on the recommendation service you built. The following questions may guide your reflection: What parts were the most challenging? Which aspects are still unstable and would require additional investment if you had to deploy the recommendation service at scale in production? How would you address these issues if you had more time and more resources? If you had to start over, what would you do differently?
 * *Reflection on teamwork* (1 page max): Reflect on your team's teamwork throughout this project. The following questions may guide your reflection: What went well or less well in the team assignments? What were some of the main challenges you faced in teamwork? If you had to do this over, what would you change? What lesson have you identified for future team projects? 
 
