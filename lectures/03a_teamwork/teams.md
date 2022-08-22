@@ -95,6 +95,7 @@ Based on research and years of own experience
 
 > After last minute stress at the last assignment, you team agrees to start earlier and to integrate at a milestone days before the deadline to leave a buffer. Yet you see little progress from half the team in GitHub and hardly anybody responds in Slack. Little is done at the agreed milestone. The work gets done before the deadline, but with the same stress as in the last assignment.
 
+
 ----
 ## How would you handle...
 
@@ -102,12 +103,19 @@ Based on research and years of own experience
 
 
 ----
+## How would you handle...
+
+> This homework is low priority for one team member. They rarely contribute beyond the bare minimum at the last minute.
+
+> The rest of the team grudgingly compensates and achieves full points. You do not feel comfortable criticizing the student as it may negatively affect their grade.
+
+----
 ## Summary: How would you handle...
 
 1. One team member has very little technical experience and is struggling with basic Python scripts and the Unix shell. It is faster for other team members to take over the task rather than helping them.
 2. You divide the work and but when you try to integrate on the evening before the deadline you learn that one team member has failed to complete their part. They tried the day before, but got stuck with a compatibility problem.
 3. After last minute stress at the last assignment, you team agrees to start earlier and to integrate at a milestone days before the deadline to leave a buffer. Yet you see little progress from half the team in GitHub and hardly anybody responds in Slack. Little is done at the agreed milestone. The work gets done before the deadline, but with the same stress as in the last assignment.
-4. This homework is low priority for one team member. They rarely contribute beyond the bare minimum at the last minute.
+4. This homework is low priority for one team member. They rarely contribute beyond the bare minimum at the last minute. (The rest of the team grudgingly compensates and achieves full points. You do not feel comfortable criticizing the student as it may negatively affect their grade.)
 
 
 
@@ -153,6 +161,17 @@ We will adjust grades if complains about:
 * If entire team agrees, this can be used to adjust grades for intentionally imbalanced contributions too
 
 ![Peer rating preview form](adj.png)
+
+----
+## Avoiding Adversarial Peer Grading
+
+* Peer grading focuses only on team citizenship
+* Comments are required and read by instructors
+* Instructor may follow up individually or with the group, especially in tricky cases; instructor listens to nuance and appeals, may request/collect evidence
+*
+* *Avoid avoiding conflict:* Set high standards and give honest feedback to avoid mounting frustration and spiraling problems
+
+
 
 ----
 ## Step 1: Establish Communication and Meeting Patterns
