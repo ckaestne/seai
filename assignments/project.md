@@ -223,7 +223,7 @@ For analyzing issues with actual data, you will analyze past recommendations and
 
 We have introduced some bias in the data and introduced mechanisms for specific feedback loops in our infrastructure. It is okay if you look for issues that are not actually occurring or detect issues that we did not plan for. It is perfectly acceptable to report that you did not find evidence that the potential issue you looked for is a real problem. You can receive full credit with a rigorous analysis, independent of whether you find any actual issues and independent of whether you detect the issues that we artificially encoded. 
 
-**Deliverables:** Submit your analysis code and results to GitHub and submit a report with 12 clearly identifiable sections to Gradescope:
+**Deliverables:** Submit your analysis code and results to GitHub and submit a report with 8 clearly identifiable sections to Gradescope:
 
 * *Fairness requirements* (2 page max): Describe the process you use for identifying fairness requirements and provide evidence that you followed this process.  The process should include (a) understanding potential fairness harms, (b) exploring bias in data and the sources of such bias, (c) identifying protected attributes, (d) negotiating conflicting fairness goals, and (e) considering how fairness interacts with other system goals (e.g. profits). As a result from this analysis state one plausible fairness requirements that should hold *for the system* and one plausible fairness requirement that should hold for *your recommendation model*. Include a brief justification for each requirement and a measure each for assessing whether the requirement is met. 
 * *Fairness improvement suggestions* (0.5 pages max): Briefly describe how you could improve fairness in the system, focused on the two fairness requirements. In particular, your suggestions should describe practices pertaining to at least *one* of the following activities: (1) fairer data collection, (2) system design to mitigate bias, (3) process integration, and (4) monitoring and operation.
@@ -265,8 +265,9 @@ Second, create a 8 min presentation to the class presenting the project and your
 
 For the presentation, we recommend that you prepare slides and practice timing. The target audience for this talk is other teams in this class: Share what you did and what you learned or found interesting or challenging. Note that all teams worked on the same project, so you can assume familiarity with the task and do not need to introduce basics. Generally, discussions of interesting or unusual technical choices and reflection are more interesting than a standard description of the project.
 
-**Deliverables:** Upload your slides to GitHub and submit the reflection to Gradescope with two sections:
+**Deliverables:** Upload your slides to GitHub and submit the reflection to Gradescope with a link and two sections:
 
+* *Link to Slides in Github Repository*
 * *Reflection on the recommendation service* (2 page max): Reflect on the recommendation service you built. The following questions may guide your reflection: What parts were the most challenging? Which aspects are still unstable and would require additional investment if you had to deploy the recommendation service at scale in production? How would you address these issues if you had more time and more resources? If you had to start over, what would you do differently?
 * *Reflection on teamwork* (1 page max): Reflect on your team's teamwork throughout this project. The following questions may guide your reflection: What went well or less well in the team assignments? What were some of the main challenges you faced in teamwork? If you had to do this over, what would you change? What lesson have you identified for future team projects? 
 
