@@ -5,14 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
     <title>reveal-md</title>
-    <link rel="stylesheet" href="./css/reveal.css" />
-    <link rel="stylesheet" href="./css/theme/white.css" id="theme" />
-    <link rel="stylesheet" href="./css/highlight/zenburn.css" />
-    <link rel="stylesheet" href="./css/print/paper.css" type="text/css" media="print" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-     <script src="./rplugin/spreadsheet/ruleJS.all.full.min.js"></script>
-   <link rel="stylesheet" href="./rplugin/spreadsheet/spreadsheet.css">
-    <link rel="stylesheet" href="./_assets/_assets/cmu.css" />
+    <link rel="shortcut icon" href="./favicon.ico" />
+    <link rel="stylesheet" href="./dist/reset.css" />
+    <link rel="stylesheet" href="./dist/reveal.css" />
+    <link rel="stylesheet" href="./dist/theme/white.css" id="theme" />
+    <link rel="stylesheet" href="./css/highlight/base16/zenburn.css" />
+    <link rel="stylesheet" href="./_assets/cmu.css" />
+
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato" />
+
+    <!-- <link rel="stylesheet" href="./css/print/paper.css" type="text/css" media="print" /> -->
 
   </head>
   <body>
@@ -25,7 +27,7 @@ The rendered versions of these slides can be found at https://ckaestne.github.io
 
 ## Slide format and infrastructure
 
-Slides are written in markdown, one slidedeck per folder, and converted to slides with a slightly patched version of `reveal-md` ([original version](https://github.com/webpro/reveal-md), [patched version](https://github.com/ckaestne/reveal-md)) which uses `reveal.js` ([github](https://github.com/hakimel/reveal.js/)). 
+Slides are written in markdown, one slidedeck per folder, and converted to slides with a slightly patched version of [reveal-md](https://github.com/webpro/reveal-md)
 
 Each slide deck is in a separate subdirectory. Can use all the usual markdown features of `reveal.js` plus a few custom ones created with scripts in the `_assets` directory.
 
@@ -38,13 +40,10 @@ Basics:
 </ul>
 <p>Custom extensions in <code>/_assets/plugin/mymarkdown.js</code>:</p>
 <ul>
-<li><code>&lt;!-- small --&gt;</code>, <code>&lt;!-- smaller --&gt;</code>, and <code>&lt;!-- smallish --&gt;</code> can be used to adjust font sizes in a slide</li>
+<li><code>&lt;div class=&quot;small&quot;&gt;</code>, <code>smaller</code> and <code>smallish</code> can be used to adjust font sizes in a slide</li>
 <li><code>&lt;!-- references --&gt;</code> starts a segment for the bottom of the slide in a smaller font, intended for references and additional readings.</li>
-<li><code>&lt;!-- split --&gt;</code> can be used to make a two column slide</li>
 <li>Explicit column handling, included nested columns and more than two columns, is possible between <code>&lt;!-- colstart --&gt;</code> and <code>&lt;!-- colend --&gt;</code> with <code>&lt;!-- col --&gt;</code> as the separator</li>
-<li><code>&lt;!-- fit --&gt;</code> in a title tries to make long titles fit to a slide by scaling it down</li>
 <li>Empty items in a list can be used as a space/separator between two list</li>
-<li><code>&lt;!-- left --&gt;</code> and <code>&lt;!-- right --&gt;</code> change the alignment</li>
 <li><code>&lt;!-- discussion  --&gt;</code> marks the slide as a discussion slide, adding a picture (possibly exploring other design features later)</li>
 </ul>
 <p>Other useful suggestions:</p>
@@ -60,7 +59,18 @@ Basics:
 </aside></script></section></div>
     </div>
 
-    <script src="./js/reveal.js"></script>
+    <script src="./dist/reveal.js"></script>
+
+    <script src="./_assets/mymarkdown.js"></script>
+    <script src="./plugin/markdown/markdown.js"></script>
+    <script src="./plugin/highlight/highlight.js"></script>
+    <script src="./plugin/zoom/zoom.js"></script>
+    <script src="./plugin/notes/notes.js"></script>
+    <script src="./plugin/math/math.js"></script>
+
+    <script src="./node_modules/reveal.js-menu/menu.js"></script>
+    <script src="./node_modules/reveal.js-plugins/embed-tweet/plugin.js"></script>
+
 
     <script>
       function extend() {
@@ -76,20 +86,6 @@ Basics:
         return target;
       }
 
-      // Optional libraries used to extend on reveal.js
-      var deps = [
-        { src: './plugin/markdown/marked.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
-        { src: './plugin/markdown/markdown.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
-        { src: './plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-        { src: './plugin/zoom-js/zoom.js', async: true },
-        { src: './plugin/notes/notes.js', async: true },
-        { src: './plugin/math/math.js' },
-        { src: './rplugin/embed-tweet/embed-tweet.js' },
-        { src: './rplugin/menu/menu.js', async: true },
-        { src: './rplugin/spreadsheet/spreadsheet.js' },
-        { src: './rplugin/chalkboard/chalkboard.js', async: true }
-      ];
-
       // default options to init reveal.js
       var defaultOptions = {
         controls: true,
@@ -97,29 +93,28 @@ Basics:
         history: true,
         center: true,
         transition: 'default', // none/fade/slide/convex/concave/zoom
-        dependencies: deps,
-	chalkboard: { // font-awesome.min.css must be available
-		toggleChalkboardButton: { left: "80px" },
-		toggleNotesButton: { left: "130px" },
-	},
-	keyboard: {
-	    67: function() { RevealChalkboard.toggleNotesCanvas() },	// toggle notes canvas when 'c' is pressed
-	    66: function() { RevealChalkboard.toggleChalkboard() },	// toggle chalkboard when 'b' is pressed
-	    46: function() { RevealChalkboard.clear() },	// clear chalkboard when 'DEL' is pressed
-	     8: function() { RevealChalkboard.reset() },	// reset chalkboard data on current slide when 'BACKSPACE' is pressed
-	    68: function() { RevealChalkboard.download() },	// downlad recorded chalkboard drawing when 'd' is pressed
-	    88: function() { RevealChalkboard.colorNext() },	// cycle colors forward when 'x' is pressed
-	    89: function() { RevealChalkboard.colorPrev() },	// cycle colors backward when 'y' is pressed
-	}
+        controls: true,
+        slideNumber: true,
+        markdown: {
+          renderer: patchMarkdown(RevealMarkdown().marked)
+        },
+        plugins: [
+          RevealMarkdown,
+          RevealHighlight,
+          RevealZoom,
+          RevealNotes,
+          RevealMath,
+          RevealMenu,
+          RevealEmbedTweet
+        ]
       };
 
       // options from URL query string
-      var queryOptions = Reveal.getQueryHash() || {};
+      var queryOptions = Reveal().getQueryHash() || {};
 
-      var options = extend(defaultOptions, {"controls":true,"progress":true,"theme":"white","slideNumber":true,"hash":true,"center":false}, queryOptions);
+      var options = extend(defaultOptions, {"controls":true,"progress":true,"theme":"white","slideNumber":true,"hash":true,"history":false,"center":false,"width":1280,"height":720,"margin":0.1,"transition":"none"}, queryOptions);
     </script>
 
-    <script src="./_assets/_assets/loadmymarkdown.js"></script>
 
     <script>
       Reveal.initialize(options);

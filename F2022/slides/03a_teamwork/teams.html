@@ -5,14 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
     <title>17-445: Teamwork Crash Course</title>
-    <link rel="stylesheet" href="./../css/reveal.css" />
-    <link rel="stylesheet" href="./../css/theme/white.css" id="theme" />
-    <link rel="stylesheet" href="./../css/highlight/zenburn.css" />
-    <link rel="stylesheet" href="./../css/print/paper.css" type="text/css" media="print" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-     <script src="./../rplugin/spreadsheet/ruleJS.all.full.min.js"></script>
-   <link rel="stylesheet" href="./../rplugin/spreadsheet/spreadsheet.css">
-    <link rel="stylesheet" href="./../_assets/_assets/cmu.css" />
+    <link rel="shortcut icon" href="./../favicon.ico" />
+    <link rel="stylesheet" href="./../dist/reset.css" />
+    <link rel="stylesheet" href="./../dist/reveal.css" />
+    <link rel="stylesheet" href="./../dist/theme/white.css" id="theme" />
+    <link rel="stylesheet" href="./../css/highlight/base16/zenburn.css" />
+    <link rel="stylesheet" href="./../_assets/cmu.css" />
+
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato" />
+
+    <!-- <link rel="stylesheet" href="./../css/print/paper.css" type="text/css" media="print" /> -->
 
   </head>
   <body>
@@ -226,7 +228,18 @@ We will adjust grades if complains about:
 </script></section></div>
     </div>
 
-    <script src="./../js/reveal.js"></script>
+    <script src="./../dist/reveal.js"></script>
+
+    <script src="./../_assets/mymarkdown.js"></script>
+    <script src="./../plugin/markdown/markdown.js"></script>
+    <script src="./../plugin/highlight/highlight.js"></script>
+    <script src="./../plugin/zoom/zoom.js"></script>
+    <script src="./../plugin/notes/notes.js"></script>
+    <script src="./../plugin/math/math.js"></script>
+
+    <script src="./../node_modules/reveal.js-menu/menu.js"></script>
+    <script src="./../node_modules/reveal.js-plugins/embed-tweet/plugin.js"></script>
+
 
     <script>
       function extend() {
@@ -242,20 +255,6 @@ We will adjust grades if complains about:
         return target;
       }
 
-      // Optional libraries used to extend on reveal.js
-      var deps = [
-        { src: './../plugin/markdown/marked.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
-        { src: './../plugin/markdown/markdown.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
-        { src: './../plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-        { src: './../plugin/zoom-js/zoom.js', async: true },
-        { src: './../plugin/notes/notes.js', async: true },
-        { src: './../plugin/math/math.js' },
-        { src: './../rplugin/embed-tweet/embed-tweet.js' },
-        { src: './../rplugin/menu/menu.js', async: true },
-        { src: './../rplugin/spreadsheet/spreadsheet.js' },
-        { src: './../rplugin/chalkboard/chalkboard.js', async: true }
-      ];
-
       // default options to init reveal.js
       var defaultOptions = {
         controls: true,
@@ -263,29 +262,28 @@ We will adjust grades if complains about:
         history: true,
         center: true,
         transition: 'default', // none/fade/slide/convex/concave/zoom
-        dependencies: deps,
-	chalkboard: { // font-awesome.min.css must be available
-		toggleChalkboardButton: { left: "80px" },
-		toggleNotesButton: { left: "130px" },
-	},
-	keyboard: {
-	    67: function() { RevealChalkboard.toggleNotesCanvas() },	// toggle notes canvas when 'c' is pressed
-	    66: function() { RevealChalkboard.toggleChalkboard() },	// toggle chalkboard when 'b' is pressed
-	    46: function() { RevealChalkboard.clear() },	// clear chalkboard when 'DEL' is pressed
-	     8: function() { RevealChalkboard.reset() },	// reset chalkboard data on current slide when 'BACKSPACE' is pressed
-	    68: function() { RevealChalkboard.download() },	// downlad recorded chalkboard drawing when 'd' is pressed
-	    88: function() { RevealChalkboard.colorNext() },	// cycle colors forward when 'x' is pressed
-	    89: function() { RevealChalkboard.colorPrev() },	// cycle colors backward when 'y' is pressed
-	}
+        controls: true,
+        slideNumber: true,
+        markdown: {
+          renderer: patchMarkdown(RevealMarkdown().marked)
+        },
+        plugins: [
+          RevealMarkdown,
+          RevealHighlight,
+          RevealZoom,
+          RevealNotes,
+          RevealMath,
+          RevealMenu,
+          RevealEmbedTweet
+        ]
       };
 
       // options from URL query string
-      var queryOptions = Reveal.getQueryHash() || {};
+      var queryOptions = Reveal().getQueryHash() || {};
 
-      var options = extend(defaultOptions, {"controls":true,"progress":true,"theme":"white","slideNumber":true,"hash":true,"center":false}, queryOptions);
+      var options = extend(defaultOptions, {"controls":true,"progress":true,"theme":"white","slideNumber":true,"hash":true,"history":false,"center":false,"width":1280,"height":720,"margin":0.1,"transition":"none"}, queryOptions);
     </script>
 
-    <script src="./../_assets/_assets/loadmymarkdown.js"></script>
 
     <script>
       Reveal.initialize(options);

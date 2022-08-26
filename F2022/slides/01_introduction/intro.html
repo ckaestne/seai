@@ -4,80 +4,42 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-    <title>17-445: Motivation, Syllabus, and Introductions</title>
-    <link rel="stylesheet" href="./../css/reveal.css" />
-    <link rel="stylesheet" href="./../css/theme/white.css" id="theme" />
-    <link rel="stylesheet" href="./../css/highlight/zenburn.css" />
-    <link rel="stylesheet" href="./../css/print/paper.css" type="text/css" media="print" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-     <script src="./../rplugin/spreadsheet/ruleJS.all.full.min.js"></script>
-   <link rel="stylesheet" href="./../rplugin/spreadsheet/spreadsheet.css">
-    <link rel="stylesheet" href="./../_assets/_assets/cmu.css" />
+    <title>17-645: Motivation, Syllabus, and Introductions</title>
+    <link rel="shortcut icon" href="./../favicon.ico" />
+    <link rel="stylesheet" href="./../dist/reset.css" />
+    <link rel="stylesheet" href="./../dist/reveal.css" />
+    <link rel="stylesheet" href="./../dist/theme/white.css" id="theme" />
+    <link rel="stylesheet" href="./../css/highlight/base16/zenburn.css" />
+    <link rel="stylesheet" href="./../_assets/cmu.css" />
+
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato" />
+
+    <!-- <link rel="stylesheet" href="./../css/print/paper.css" type="text/css" media="print" /> -->
 
   </head>
   <body>
     <div class="reveal">
-      <div class="slides"><div id="footer">17-445 Machine Learning in Production / AI Engineering, Eunsuk Kang & Christian Kaestner</div><section  data-markdown><script type="text/template">  
+      <div class="slides"><div id="footer">17-645 Machine Learning in Production • Christian Kaestner, Carnegie Mellon University • Fall 2022</div><section  data-markdown><script type="text/template">  
+<!-- .element: class="titleslide"  data-background="../_chapterimg/01_intro.jpg" -->
+<div class="stretch"></div>
 
-# Machine Learning in Production /
-# AI Engineering 
+## Machine Learning in Production
 
-## Motivation, Syllabus, and Introductions
-
-Spring 2022, Eunsuk Kang & Christian Kaestner
-
-</script></section><section ><section data-markdown><script type="text/template">
-# We are back online :(
-
-If you can hear me, open the participant panel in Zoom and check "yes"
-
-![Zoom interface](zoomvote.png)
-</script></section><section data-markdown><script type="text/template">## This is not normal. We understand.
-
-![Fire](https://www.abc27.com/wp-content/uploads/sites/55/2020/08/AP20232111894684.jpg)
-<!-- .element: class="stretch" -->
+# Motivation, Syllabus, and Introductions
 
 
-<aside class="notes"><p>Picture AP Photo/Noah Berger, <a href="https://www.abc27.com/news/thats-2020-photographers-california-wildfire-image-a-sign-of-the-times/">https://www.abc27.com/news/thats-2020-photographers-california-wildfire-image-a-sign-of-the-times/</a></p>
-</aside></script></section><section data-markdown><script type="text/template">## This is not normal. We understand.
-
-Expect:
-* Internet and bandwidth issues
-* Timezone issues?
-* Distractions -- parents, siblings, pets
-* Feeling isolated, feeling overwhelmed
-* Additional sources of stress
-* Hard time dealing with -gestures widely- *everything*...
-
-*Talk to us about accommodations of any kind*
-
-
-</script></section><section data-markdown><script type="text/template">## Simulating in-class experience
-
-> Discussions and interactions are important. We'll have regular in-class discussions and exercises
-
-* Use chat, "raise hand" feature, or just speak
-* If possible, keep camera on, muted by default
-* Set preferred name in Zoom
-* Synchronous "live" attendance only
-* 
-* Suggestion: Have chat and participant list open, maybe separate window for gallery view for faces, second monitor highly recommended
-* **Contact us for accommodations!**
-
-</script></section><section data-markdown><script type="text/template">## Catastrophic Success
+</script></section><section ><section data-markdown><script type="text/template">## Catastrophic Success
 
 ![Crowd](crowd.jpg)
+</script></section><section data-markdown><script type="text/template">## The Waitlist Situation
 
-</script></section><section data-markdown><script type="text/template">## Personal Connection
+Waitlist unlikely to fully clear
 
-> This is hard. We know.
+For those joining late:
+  * Record early lectures
+  * Extension for Homework 1
 
-* Talk inside and outside of class
-* We are here always 10 min before class and stay after class if you have questions, want to chat
-* We encourage collaboration in all assignments, even "individual" assignments and reading quizzes
-* We encourage social activities in teams
-
-
+Finalizing enrollment on Sep 7 (start of group projects)
 
 </script></section></section><section  data-markdown><script type="text/template">
 ## Learning Goals
@@ -87,36 +49,31 @@ Expect:
 * Explain the role of specifications and their lack in machine learning and the relationship to deductive and inductive reasoning
 * Summarize the respective goals and challenges of software engineers vs data scientists
 * Explain the concept and relevance of "T-shaped people"
+
+
 </script></section><section  data-markdown><script type="text/template">
-# Disclaimers
+# Agenda Today
 
-This class captures a rapidly evolving field. 
+1. Preliminaries (just done)
+2. Case Study
+3. Syllabus
+4. Introductions
 
-We are scaling from 30 to 150 students. Expect some friction.
-
-We are software engineers.
-</script></section><section  data-markdown><script type="text/template">
-# Agenda
-
-```mermaid
-graph LR;
-    Preliminaries --> C["Case Study"];
-    C --> Syllabus;
-    Syllabus --> Introductions;
-```
 </script></section><section ><section data-markdown><script type="text/template">
-# Case Study: The Transcription Service Startup
+# Case Study: A Transcription Service Startup
 </script></section><section data-markdown><script type="text/template">
 ![competitor](transcription.png)
 </script></section><section data-markdown><script type="text/template">
 ## Transcription services
 
-* Take audio or video files and produce text.
-    - Used by academics to analyze interview text
-    - Podcast show notes
-    - Subtitles for videos
+Take audio or video files and produce text.
+- Used by academics to analyze interview text
+- Podcast show notes
+- Subtitles for videos
 
-* State of the art: Manual transcription, often mechanical turk (1.5 $/min)
+State of the art a few years ago: Manual transcription, often mechanical turk (1.5 $/min)
+
+Recently: Many ML models for transcription (e.g., in Youtube, Alexa, Siri, Zoom)
 </script></section><section data-markdown><script type="text/template">
 ## The startup idea
 
@@ -128,19 +85,21 @@ Research has shown amazing accuracy for talks in medicine, poverty and inequalit
 
 Idea: Let's commercialize the software and sell to academics and conference organizers
 </script></section><section data-markdown><script type="text/template">
-## Short Breakout
+## Breakout: Likely challenges in building commercial product?
 
-**Likely challenges in building commercial product?**
+<div class="smallish">
 
-* Think about challenges that the team will likely focus when turning their research into *a product*:
-  * One machine-learning challenge
-  * One engineering challenge in building the product
-  * One challenge from operating and updating the product
-  * One team or management challenge
-  * One business challenge
-  * One safety or ethics challenge
+As a group, think about challenges that the team will likely focus when turning their research into *a product*:
+* One machine-learning challenge
+* One engineering challenge in building the product
+* One challenge from operating and updating the product
+* One team or management challenge
+* One business challenge
+* One safety or ethics challenge
 
-* Fill out one form per team and meet back here in 8 minutes to share suggestions
+*Post answer to `#lecture` on Slack, include AndrewID of all group members*
+
+</div>
 </script></section><section data-markdown><script type="text/template">
 ## What qualities are important for a good commercial transcription product?
 
@@ -150,20 +109,20 @@ Idea: Let's commercialize the software and sell to academics and conference orga
 
 
 ![Architecture diagram of transcription service; many components, not just ML](transcriptionarchitecture.svg)
-<!-- .element: class="plain" -->
+<!-- .element: class="plain stretch" -->
 
 </script></section><section data-markdown><script type="text/template">## ML in a Production System
 
 
 ![Architecture diagram of transcription service; many components, not just ML](transcriptionarchitecture2.svg)
-<!-- .element: class="plain" -->
+<!-- .element: class="plain stretch" -->
 
 </script></section><section data-markdown><script type="text/template">
 ![Screenshot of Temi transcription service](temi.png)
 
 <aside class="notes"><p>Highlights challenging fragments. Can see what users fix inplace to correct. Star rating for feedback.</p>
 </aside></script></section><section data-markdown><script type="text/template">
-<svg version="1.1" viewBox="0.0 0.0 800 400" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+<svg version="1.1" viewBox="0.0 0.0 800 400" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" class="stretch">
         <style>
     text { font: 60px sans-serif; }
         </style>
@@ -175,8 +134,12 @@ Idea: Let's commercialize the software and sell to academics and conference orga
         <text x=570 y=240 dominant-baseline="middle" text-anchor="middle">Engineers</text>
 </svg>
 
-and Data engineers + Domain specialists + Operators + Business team + Project managers + Designers, UI Experts + Safety, security specialists + Lawyers + Social scientists + ...
-</script></section><section data-markdown><script type="text/template">## Data scientist
+
+<div class="small">and Data engineers + Domain specialists + Operators + Business team + Project managers + Designers, UI Experts + Safety, security specialists + Lawyers + Social scientists + ...</div>
+</script></section><section data-markdown><script type="text/template"><div class="smallish">
+
+<!-- colstart -->
+## Data scientist
 
 * Often fixed dataset for training and evaluation (e.g., PBS interviews)
 * Focused on accuracy
@@ -184,7 +147,7 @@ and Data engineers + Domain specialists + Operators + Business team + Project ma
 * Expert in modeling techniques and feature engineering
 * Model size, updateability, implementation stability typically does not matter
 
-<!-- split -->
+<!-- col -->
 
 ## Software engineer
 
@@ -195,10 +158,11 @@ and Data engineers + Domain specialists + Operators + Business team + Project ma
 * Detect and handle mistakes, preferably automatically
 * Maintain, evolve, and extend the product over long periods
 * Consider requirements for security, safety, fairness
-</script></section><section data-markdown><script type="text/template">
+
+<!-- colend -->
+</div></script></section><section data-markdown><script type="text/template">
 ## Likely collaboration challenges?
 
-* Everybody, **type one or two likely collaboration challenges in the chat but *do not send them yet*. Vote "yes" when done.**
 
 <!-- discussion -->
 
@@ -210,12 +174,11 @@ and Data engineers + Domain specialists + Operators + Business team + Project ma
 
 
 </script></section><section data-markdown><script type="text/template">
-![Unicorns](roles_venn.svg)
-<!-- .element: class="plain" -->
+![Unicorns](roles_venn.svg)<!-- .element: class="plain" style="width:46%"-->
 
 
-<!-- references -->
 By Steven Geringer, via Ryan Orban. [Bridging the Gap Between Data Science & Engineer: Building High-Performance Teams](https://www.slideshare.net/ryanorban/bridging-the-gap-between-data-science-engineer-building-highperformance-teams/3-Software_Engineer_Data_Engineer_Data). 2016
+<!-- .element: class="smaller"-->
 
 </script></section><section data-markdown><script type="text/template">## T-Shaped People
 
@@ -235,7 +198,8 @@ Example:
 * Basic skills of software engineering, business, distributed computing, and communication
 * Deep skills in deep neural networks (technique) and medical systems (domain)
 
-</script></section><section data-markdown><script type="text/template">
+</script></section><section data-markdown><script type="text/template"><div class="small">
+
 ## Examples for discussion
 
 * What does correctness or accuracy really mean? What accuracy do customers care about?
@@ -248,7 +212,9 @@ Example:
 * Can we cope with an influx of customers?
 * Will transcribing the same audio twice produce the same result? Does it matter? 
 * How can we debug and fix problems? How quickly?
-</script></section><section data-markdown><script type="text/template">
+
+</div></script></section><section data-markdown><script type="text/template"><div class="small">
+
 ## Examples for discussion 2
 
 * With more customers, transcriptions are taking longer and longer -- what can we do?
@@ -263,7 +229,9 @@ Example:
 * Models are continuously improved. When to deploy? Can we roll back?
 * Can we offer live transcription as an app? As a web service?
 * Can we get better the longer a person talks? Should we then go back and reanalyze the beginning? Will this benefit the next upload as well?
-</script></section><section data-markdown><script type="text/template">
+
+</div></script></section><section data-markdown><script type="text/template"><div class="small">
+
 ## Examples for discussion 3
 
 * How many domains can be supported? Do we have the server capacity?
@@ -279,84 +247,158 @@ Example:
 * Can competitors or bad actors attack our system?
 
 
-
+</div>
 </script></section></section><section ><section data-markdown><script type="text/template">
 # Syllabus and Class Structure
 
-11-695/17-445/17-645/17-745, Spring 2022, 12 units
+17-445/17-645/17-745, Fall 2022, 12 units
 
 Monday/Wednesdays 1:25-2:45pm
 
-Recitation Fridays 10:10 / 11:15am
+Recitation Fridays 10:10-11:00am / 1:25-2:45pm
 </script></section><section data-markdown><script type="text/template">
 ## Instructors
 
-Christian Kaestner, Eunsuk Kang
+Christian Kaestner
 
-Luke Dramko, Nadia Nahar, Sreenidhi Sundaram, Tasheena Narraidoo, Xuchen Zhang
+Priyank Bhandia
 
-< brief introductions >
+Ranadeep Singh
+
+Tianye Song
+
 </script></section><section data-markdown><script type="text/template">
 ## Communication
 
 * Email us or ping us on Slack (invite link on Canvas)
 * Class announcements made through Canvas
 * Weekly office hours (see Canvas for schedule)
-  * Online for the first two weeks
 * Post questions on Slack
-  * Please use #general and post publicly if possible; your classmates will benefit from your Q&A!
-* All course materials (lectures, assignments, etc.,) available on GitHub. Pull requests encouraged!
+  * Please use `#general` or `#assignments` and post publicly if possible; your classmates will benefit from your Q&A!
+* All course materials (lectures, assignments, etc.,) available on GitHub and course website. Pull requests encouraged!
 </script></section><section data-markdown><script type="text/template">
 ## Class with software engineering flavor
 
-* Focused on engineering judgment
-* Arguments, tradeoffs, and justification, rather than single correct answer 
-* "it depends..."
-* Practical engagement, building systems, testing, automation
-* Strong teamwork component
-* Not focused on formal guarantees or machine learning fundamentals (modeling, statistics)
-* Both text-based and code-based homework assignments
-</script></section><section data-markdown><script type="text/template">
+<!-- colstart -->
+
+<div class="smallish">
+
+Focused on engineering judgment
+
+Arguments, tradeoffs, and justification, rather than single correct answer 
+
+Practical engagement, building systems, testing, automation
+
+Strong teamwork component
+
+Both text-based and code-based homework assignments
+
+</div>
+
+<!-- col -->
+![It depends sticker](it_depends.jpg)
+<!-- colend --></script></section><section data-markdown><script type="text/template">
 ## Prerequisites
+
+<div class="small">
+
 
 <!-- colstart -->
 **Some machine-learning experience required**
 
-* Basic understanding of data science process, incl data cleaning, feature engineering, learning
+* Basic understanding of data science process, incl. data cleaning, feature engineering, using ML libraries
 * High level understand of machine-learning approaches
     - supervised learning
     - regression, decision trees, neural networks
     - accuracy, recall, precision, ROC curve
-* Ideally, some experience with notebooks,  Sklearn or other frameworks
+* Ideally, some experience with notebooks, sklearn or other frameworks
 
 <!-- col -->
-**No software-engineering knowledge required**
+**Basic programming and command-line skills will be needed**
 
-* Basic programming and command-line skills will be needed
+
+**No further software-engineering knowledge required**
+
 * Teamwork experience in product team is useful but not required
 * No required exposure to requirements, software testing, software design, continuous integration, containers, process management, etc 
     * If you are familiar with these, there will be some redundancy -- sorry!
 
 <!-- colend -->
 
+</div>
+</script></section><section data-markdown><script type="text/template">## First Homework Assignment 
 
+<!-- colstart -->
+*"Coding warmup assignment"*
+
+[Out now](https://github.com/ckaestne/seai/blob/F2022/assignments/I1_mlproduct.md), due Sep 7
+
+Enhance simple web *application* with ML-based feature: Automated image captioning
+
+Open ended coding assignment, change existing code, learn new APIs
+
+
+<!-- col -->
+![Screenshot of Albumy](albumy.png)
+<!-- colend -->
 </script></section><section data-markdown><script type="text/template">
 ## Active lecture
 
-* Case study driven
-* Discussions highly encouraged
-* Contribute your own experience!
-* Regular active in-class exercises
-* In-class presentations 
-* Discussions over definitions
+<!-- colstart -->
+
+Case study driven
+
+Discussions highly encouraged
+
+Regular in-class activities, breakouts
+
+Contribute your own experience!
+
+Discussions over definitions
+
+<!-- col -->
+
+![Screenshot of Temi](temi.png)
+
+<!-- colend -->
+
+</script></section><section data-markdown><script type="text/template">## Recordings and Attendance
+
+
+Try to attend lecture -- discussions are important to learning
+
+Participation is part of your grade
+
+No lecture recordings, textbook and slides available
+
+Contact us for accommodations (illness, interview travel, unforseen events) or have your advisor reach out. We try to be flexible
+
+
+
+</script></section><section data-markdown><script type="text/template">
+## Participation
+
+Participation != Attendance
+
+Grading:
+  * 100%: Participates at least once in most lectures by
+    (1) asking or responding to questions or (2) contributing to breakout discussions
+  * 100%: Participates in 25% of lectures and actively contributes to discussions in most recitations
+  * 90%: Participates at least once in over half of the lectures
+  * 70%: Participates at least once in 25% of the lectures
+  * 40%: Participates at least once in at least 3 lectures or recitations.
+  * 0%: No participation in the entire semester.
+
+
+
 </script></section><section data-markdown><script type="text/template">
 ![Class Overview](overview.svg)
 <!-- .element: class="plain" -->
 
-</script></section><section data-markdown><script type="text/template">## Textbook
+</script></section><section data-markdown><script type="text/template">## Reading Assignments & Quizzes
 
-Building Intelligent Systems: A Guide to Machine Learning Engineering
-
+<!-- colstart -->
+*Building Intelligent Systems*
 by Geoff Hulten
 
 https://www.buildingintelligentsystems.com/
@@ -367,64 +409,83 @@ Supplemented with research articles, blog posts, videos, podcasts, ...
 
 [Electronic version](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436) in the library
 
-<!-- split -->
+<!-- col -->
 
 ![Building intelligent systems book](book.webp)
-</script></section><section data-markdown><script type="text/template">## We are writting a book
+
+<!-- colend -->
+</script></section><section data-markdown><script type="text/template">
+## Reading Quizzes
+
+Short essay questions on readings, due before start of lecture (Canvas quiz)
+
+Planned for: about 30-45 min for reading, 15 min for discussing and answering quiz
+
+Can be done with changing partner (optional)
+* Not the same partner for more than 2 weeks
+* Suggested partners on Canvas or find your own
+* Both submit same answer, name partner in answer
+</script></section><section data-markdown><script type="text/template">## Book for the Class
 
 > "Machine Learning in Production: 
 > From Models to Products"
 
-Mostly similar coverage to lecture.
+Mostly similar coverage to lecture
 
-Not required, use as supplementary reading.
+Not required, use as supplementary reading
 
-Not all chapters finished yet.
+Still editing, not all chapters final
 
-Feedback appreciated.
+Feedback appreciated! 
 
 Published [online](https://ckaestne.medium.com/machine-learning-in-production-book-overview-63be62393581)
-</script></section><section data-markdown><script type="text/template">
-## Readings and Quizzes
 
-* Reading assignments for most lectures
-  * Preparing in-class discussions
-  * Background material, case descriptions, possibly also podcast, video, wikipedia
-  * Complement with own research
-* Short essay questions on readings, due before start of lecture (Canvas quiz)
-* Planned for: about 30-45 min for reading, 15 min for discussing and answering quiz
+
+
 </script></section><section data-markdown><script type="text/template">
 ## Assignments
 
-* All [assignments](https://github.com/ckaestne/seai/tree/S2022/assignments) available on GitHub
-* Series of 4 small to medium-sized individual assignments 
-    * Engage with practical challenges
-    * Analyze risks, fairness
-    * Reason about tradeoffs and justify your decisions
-    * Mostly written reports, a little modeling, limited coding
-    * May be done with a partner (more on this later)
+<div class="smallish">
 
-* Large [team project](https://github.com/ckaestne/seai/blob/S2022/assignments/project.md) with 4 milestones (mostly in second half)
-    - Build and deploy a prediction (movie recommendation) service
-    - Testing in production, monitoring
-    - Final presentation
+All [assignments](https://github.com/ckaestne/seai/tree/F2022/assignments) available on GitHub now
 
-* Usually due Wednesday night; see schedule
-</script></section><section data-markdown><script type="text/template">
+Series of 4 small to medium-sized **individual assignments**:
+* Engage with practical challenges
+* Analyze risks, fairness
+* Reason about tradeoffs and justify your decisions
+* Mostly written reports, a little modeling, some coding
+
+Large **team project** with 4 milestones:
+- Build and deploy a prediction (movie recommendation) service
+- Testing in production, monitoring
+- Final presentation
+
+Usually due Wednesday night; see schedule
+
+</div></script></section><section data-markdown><script type="text/template">
 ## 17-745 PhD Research Project
 
-* Research project instead of individual assignments I3 and I4
-* Design your own research project and write a report
-  * A case study, empiricial study, literature survey, etc., 
-* See the [project description](https://github.com/ckaestne/seai/blob/S2022/assignments/research_project.md) and talk to us
+Research project instead of individual assignments 3 and 4
+
+Design your own research project and write a report
+* A case study, empiricial study, literature survey, etc., 
+
+Very open ended: Align with own research interests and existing projects
+
+See the [project description](https://github.com/ckaestne/seai/blob/F2022/assignments/research_project.md) and talk to us
+
+</script></section><section data-markdown><script type="text/template">## Timeline
+
+
+![Timeline](timeline.svg)<!-- .element: class="plain" style="width:100%" -->
 
 </script></section><section data-markdown><script type="text/template">## Recitations
 
-Typically hands on exercises, use tools, analyze cases
+Typically hands on exercises, use tools, analyze cases -- bring a laptop
 
 Designed to introduce tools and discuss material relevant for assignments
 
-First recitation on **this Friday, Jan 21**! Remote work and collaboration with Git
+First recitation on **this Friday**: Git and calling model APIs
 </script></section><section data-markdown><script type="text/template">
 ## Grading
 
@@ -433,76 +494,58 @@ First recitation on **this Friday, Jan 21**! Remote work and collaboration with 
 * 10% midterm
 * 10% participation
 * 10% reading quizzes
-* No final exam (final presentations will take place instead)
-*
-* expected grade cutoffs: 81-90% B, 91-100% A
+* No final exam (final presentations will take place in that timeslot)
+
+Expected grade cutoffs in syllabus (>82% B, >93 A-, >96% A, >99% A+)
 </script></section><section data-markdown><script type="text/template">## Grading Philosophy
 
-* Specification grading, based in adult learning theory
-* Giving you choices in what to work on or how to prioritize your work
-* We are making every effort to be clear about expectations (specifications), will clarify if you have questions
-* Assignments broken down into expectations with point values, each graded **pass/fail**
-* You should be able to tell what grade you will get for an assignment when you submit it, depending on what work you chose to do
-* Opportunities to resubmit work until last day of class
+Specification grading, based in adult learning theory
 
-[[Example]](https://github.com/ckaestne/seai/blob/S2022/assignments/I1_case_study.md#grading)
+Giving you choices in what to work on or how to prioritize your work
+
+We are making every effort to be clear about expectations (specifications), will clarify if you have questions
 
 
-</script></section><section data-markdown><script type="text/template">
-## Participation
+Assignments broken down into expectations with point values, each graded **pass/fail**
 
-* Participation is important
-    - Participation in in-class discussions
-    - Active participation in recitations
-    - Alternative arrangements if you cannot attend classes live
-* Participation != Attendance
+Opportunities to resubmit work until last day of class
 
-* Grading:
-  * 100%: Participates at least once in most lectures by
-    (1) asking or responding to questions or (2) contributing to breakout discussions
-  * 100%: Participates in 25% of lectures and actively contributes to discussions in most recitations
-  * 90%: Participates at least once in over half of the lectures
-  * 70%: Participates at least once in 25% of the lectures
-  * 40%: Participates at least once in at least 3 lectures or recitations.
-  * 0%: No participation in the entire semester.
+[[Example]](https://github.com/ckaestne/seai/blob/F2022/assignments/I1_mlproduct.md#grading)
 
-</script></section><section data-markdown><script type="text/template">## Flexibility and Accommodations
-(details in syllabus)
 
-* 7 tokens per student:
-    - Submit individual assignment 1 day late for 1 token (after running out of tokens 15% penalty per late day)
-    - Redo individual assignment for 3 token
-    - Resubmit or submit reading quiz late for 1 token
-    - Remaining tokens count toward participation
-*
-* 7 tokens per team:
-    - Submit milestone 1 day late for 1 token (no late submissions accepted when out of tokens)
-    - Redo milestone for 3 token 
+</script></section><section data-markdown><script type="text/template">## Token System for Flexibility
 
-* Exceptions and accommodations on request, email us.
+7 individual tokens per student:
+- Submit individual assignment 1 day late for 1 token (after running out of tokens 15% penalty per late day)
+- Redo individual assignment for 3 token
+- Resubmit or submit reading quiz late for 1 token
+- Remaining tokens count toward participation
+
+7 team tokens per team:
+- Submit milestone 1 day late for 1 token (no late submissions accepted when out of tokens)
+- Redo milestone for 3 token 
+
+
 </script></section><section data-markdown><script type="text/template">## Group project
 
-* Instructor-assigned teams
-* Teams stay together for project throughout semester, starting next week
-* Please fill out survey after class on **Monday, Jan 24**
-* Some advice in lectures; we'll help with debugging team issues
-* Peer grading on all milestones (based on citizenship on team)
-</script></section><section data-markdown><script type="text/template">## Additional groupwork options
+Instructor-assigned teams
 
-* Encouraging interactions 
-* Can complete all individual assignments and quizzes as pairs 
-* Can't work with the same partner again on a different assignment/quiz
-* 
-* Bonus points for social interaction in project teams
-  * See "Social Activities Bonus" on the [project description](https://github.com/ckaestne/seai/blob/S2022/assignments/project.md)
+Teams stay together for project throughout semester, starting next week
 
+Fill out Catme Team survey before Sep 6 11:59pm
+
+Some advice in lectures; we'll help with debugging team issues
+
+Peer grading on all milestones (based on citizenship on team)
+
+Bonus points for social interaction in project teams
 
 </script></section><section data-markdown><script type="text/template">
 ## Academic honesty
 
 See web page
 
-In a nutshell: do not copy, do not lie, do not share or publicly release your solutions
+In a nutshell: do not copy from other students, do not lie, do not share or publicly release your solutions
 
 In group work, be honest about contributions of team members, do not cover for others
 
@@ -514,7 +557,7 @@ If you feel overwhelmed or stressed, please come and talk to us (see syllabus fo
 </script></section><section data-markdown><script type="text/template">## ML Models Make Mistakes
 
 ![ML image captioning mistakes](mistakes.jpg)
-<!-- .element: class="stretch" -->
+<!-- .element: class="r-stretch" -->
 
 
 <aside class="notes"><p>Source: <a href="https://www.aiweirdness.com/do-neural-nets-dream-of-electric-18-03-02/">https://www.aiweirdness.com/do-neural-nets-dream-of-electric-18-03-02/</a></p>
@@ -536,20 +579,20 @@ String transcribe(File audioFile);
 
 
 ![Architecture diagram of transcription service; many components, not just ML](transcriptionarchitecture.svg)
-<!-- .element: class="plain" -->
+<!-- .element: class="plain stretch" -->
 </script></section><section data-markdown><script type="text/template">## It's not all new
 
+We routinely build:
 * Safe software with unreliable components
 * Cyberphysical systems
 * Non-ML big data systems, cloud systems
 * "Good enough" and "fit for purpose" not "correct"
-*
-* We routinely build such systems
-* ML intensifies our challenges
+
+ML intensifies our challenges
 </script></section><section data-markdown><script type="text/template">## Complexity
 ![Complexity prediction](complexity.svg)
 <!-- .element: class="plain" -->
-</script></section></section><section  data-markdown><script type="text/template"># INTRODUCTIONS
+</script></section></section><section  data-markdown><script type="text/template"># Introductions
 
 By the end of today, enter into Slack channel #intro:
 
@@ -561,15 +604,28 @@ By the end of today, enter into Slack channel #intro:
 </script></section><section  data-markdown><script type="text/template">
 # Summary
 
-* Machine learning components are part of larger systems
-* *Data scientists* and *software engineers* have different goals and focuses
+Machine learning components are part of larger systems
+
+*Data scientists* and *software engineers* have different goals and focuses
   * Building systems requires both
   * Various qualities are relevant, beyond just accuracy
-* Machine learning brings new challenges and intensifies old ones
+
+Machine learning brings new challenges and intensifies old ones
 </script></section></div>
     </div>
 
-    <script src="./../js/reveal.js"></script>
+    <script src="./../dist/reveal.js"></script>
+
+    <script src="./../_assets/mymarkdown.js"></script>
+    <script src="./../plugin/markdown/markdown.js"></script>
+    <script src="./../plugin/highlight/highlight.js"></script>
+    <script src="./../plugin/zoom/zoom.js"></script>
+    <script src="./../plugin/notes/notes.js"></script>
+    <script src="./../plugin/math/math.js"></script>
+
+    <script src="./../node_modules/reveal.js-menu/menu.js"></script>
+    <script src="./../node_modules/reveal.js-plugins/embed-tweet/plugin.js"></script>
+
 
     <script>
       function extend() {
@@ -585,20 +641,6 @@ By the end of today, enter into Slack channel #intro:
         return target;
       }
 
-      // Optional libraries used to extend on reveal.js
-      var deps = [
-        { src: './../plugin/markdown/marked.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
-        { src: './../plugin/markdown/markdown.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
-        { src: './../plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-        { src: './../plugin/zoom-js/zoom.js', async: true },
-        { src: './../plugin/notes/notes.js', async: true },
-        { src: './../plugin/math/math.js' },
-        { src: './../rplugin/embed-tweet/embed-tweet.js' },
-        { src: './../rplugin/menu/menu.js', async: true },
-        { src: './../rplugin/spreadsheet/spreadsheet.js' },
-        { src: './../rplugin/chalkboard/chalkboard.js', async: true }
-      ];
-
       // default options to init reveal.js
       var defaultOptions = {
         controls: true,
@@ -606,29 +648,28 @@ By the end of today, enter into Slack channel #intro:
         history: true,
         center: true,
         transition: 'default', // none/fade/slide/convex/concave/zoom
-        dependencies: deps,
-	chalkboard: { // font-awesome.min.css must be available
-		toggleChalkboardButton: { left: "80px" },
-		toggleNotesButton: { left: "130px" },
-	},
-	keyboard: {
-	    67: function() { RevealChalkboard.toggleNotesCanvas() },	// toggle notes canvas when 'c' is pressed
-	    66: function() { RevealChalkboard.toggleChalkboard() },	// toggle chalkboard when 'b' is pressed
-	    46: function() { RevealChalkboard.clear() },	// clear chalkboard when 'DEL' is pressed
-	     8: function() { RevealChalkboard.reset() },	// reset chalkboard data on current slide when 'BACKSPACE' is pressed
-	    68: function() { RevealChalkboard.download() },	// downlad recorded chalkboard drawing when 'd' is pressed
-	    88: function() { RevealChalkboard.colorNext() },	// cycle colors forward when 'x' is pressed
-	    89: function() { RevealChalkboard.colorPrev() },	// cycle colors backward when 'y' is pressed
-	}
+        controls: true,
+        slideNumber: true,
+        markdown: {
+          renderer: patchMarkdown(RevealMarkdown().marked)
+        },
+        plugins: [
+          RevealMarkdown,
+          RevealHighlight,
+          RevealZoom,
+          RevealNotes,
+          RevealMath,
+          RevealMenu,
+          RevealEmbedTweet
+        ]
       };
 
       // options from URL query string
-      var queryOptions = Reveal.getQueryHash() || {};
+      var queryOptions = Reveal().getQueryHash() || {};
 
-      var options = extend(defaultOptions, {"controls":true,"progress":true,"theme":"white","slideNumber":true,"hash":true,"center":false}, queryOptions);
+      var options = extend(defaultOptions, {"controls":true,"progress":true,"theme":"white","slideNumber":true,"hash":true,"history":false,"center":false,"width":1280,"height":720,"margin":0.1,"transition":"none"}, queryOptions);
     </script>
 
-    <script src="./../_assets/_assets/loadmymarkdown.js"></script>
 
     <script>
       Reveal.initialize(options);
