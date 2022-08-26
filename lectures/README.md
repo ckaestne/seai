@@ -6,7 +6,7 @@ The rendered versions of these slides can be found at https://ckaestne.github.io
 
 ## Slide format and infrastructure
 
-Slides are written in markdown, one slidedeck per folder, and converted to slides with a slightly patched version of `reveal-md` ([original version](https://github.com/webpro/reveal-md), [patched version](https://github.com/ckaestne/reveal-md)) which uses `reveal.js` ([github](https://github.com/hakimel/reveal.js/)). 
+Slides are written in markdown, one slidedeck per folder, and converted to slides with a slightly patched version of [reveal-md](https://github.com/webpro/reveal-md)
 
 Each slide deck is in a separate subdirectory. Can use all the usual markdown features of `reveal.js` plus a few custom ones created with scripts in the `_assets` directory.
 
@@ -17,13 +17,10 @@ Basics:
 * Frontmatter in yaml format define title, footer, and author.
 
 Custom extensions in `/_assets/plugin/mymarkdown.js`:
-* `<!-- small -->`, `<!-- smaller -->`, and `<!-- smallish -->` can be used to adjust font sizes in a slide
+* `<div class="small">`, `smaller` and `smallish` can be used to adjust font sizes in a slide
 * `<!-- references -->` starts a segment for the bottom of the slide in a smaller font, intended for references and additional readings.
-* `<!-- split -->` can be used to make a two column slide
 * Explicit column handling, included nested columns and more than two columns, is possible between `<!-- colstart -->` and `<!-- colend -->` with `<!-- col -->` as the separator
-* `<!-- fit -->` in a title tries to make long titles fit to a slide by scaling it down
 * Empty items in a list can be used as a space/separator between two list
-* `<!-- left -->` and `<!-- right -->` change the alignment
 * `<!-- discussion  -->` marks the slide as a discussion slide, adding a picture (possibly exploring other design features later)
 
 Other useful suggestions:

@@ -4,5 +4,10 @@
   "theme": "white",
   "slideNumber": true,
   "hash": true,
-  "center": false
+  "history": false,
+  "center": false, 
+  "width": 1280,
+  "height": 720, 
+  "margin": 0.1,
+  "transition": "none"
 }

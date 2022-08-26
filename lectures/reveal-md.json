@@ -1,9 +1,8 @@
 {
   "footer": "17-445 Machine Learning in Production",
   "theme": "white",
-  "css": "_assets/cmu.css",
-  "scripts": "_assets/loadmymarkdown.js",
-  "staticDirs": "_assets",
-  "listingTemplate": "_assets/listing.html",
-  "puppeteerLaunchArgs": "--no-sandbox --disable-setuid-sandbox --disable-dev-shm-usage --disable-gpu"
+  "assetsDir": "__assets",
+  "staticDirs": ["_assets", "_chapterimg","node_modules/reveal.js-plugins/embed-tweet", "node_modules/reveal.js-menu"],
+  "__puppeteerLaunchArgs": "--no-sandbox --disable-setuid-sandbox --disable-dev-shm-usage --disable-gpu",
+  "template": "_assets/slide_template.html"
 }
