@@ -5,7 +5,7 @@
 | Date  | Topic | Reading | Assignment due |
 | -     | -     | -       | -              |
 | Mon, Aug 29 | [Introduction and Motivation](https://ckaestne.github.io/seai/F2022/slides/01_introduction/intro.html) ([book chapter](https://ckaestne.medium.com/introduction-to-machine-learning-in-production-eef7427426f1)) | |  |
-| Wed, Aug 31 | From Models to AI-Enabled Systems (Systems Thinking)  | [Building Intelligent Systems](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436), Ch. 5, 7, 8 |  |
+| Wed, Aug 31 | [From Models to Systems](https://ckaestne.github.io/seai/F2022/slides/02_systems/systems.html) ([book chapter](https://ckaestne.medium.com/machine-learning-in-production-from-models-to-systems-e1422ec7cd65)) | [Building Intelligent Systems](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436), Ch. 5, 7, 8 |  |
 | Fri, Sep 02 | ![Recitation](https://img.shields.io/badge/-rec-yellow.svg) Git & ML APIs | |  |
 | Mon, Sep 05 | ![Break](https://img.shields.io/badge/-break-red.svg) Labor day, no classes | |  |
 | Wed, Sep 07 | [Teamwork Primer](https://ckaestne.github.io/seai/F2022/slides/03a_teamwork/teams.html) & Model Quality | [Building Intelligent Systems](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436), Ch. 19 | [I1: ML Product](https://github.com/ckaestne/seai/blob/F2022/assignments/I1_mlproduct.md) |
