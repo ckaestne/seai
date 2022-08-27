@@ -100,7 +100,7 @@ As a group, think about challenges that the team will likely focus when turning 
 * One business challenge
 * One safety or ethics challenge
 
-*Post answer to `#lecture` on Slack, include AndrewID of all group members*
+*Post answer to `#lecture` on Slack and tag all group members*
 
 </div>
 
@@ -370,7 +370,7 @@ Both text-based and code-based homework assignments
 </div>
 
 ----
-## First Homework Assignment 
+## First Homework Assignment
 
 <!-- colstart -->
 *"Coding warmup assignment"*
@@ -686,7 +686,7 @@ ML intensifies our challenges
 ---
 # Introductions
 
-By the end of today, enter into Slack channel #intro:
+By the end of today, enter into Slack channel `#intro`:
 
 * Your (preferred) name
 * In 1~2 sentences, your data science background and goals (e.g., coursework, internships, work experience)
