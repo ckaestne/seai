@@ -14,6 +14,8 @@ function patchMarkdown(marked) {
 			return '</div></div>'
 		if (html.trim() == "<!-- references -->")
 			return '<div class="stretch"></div><div class="references">'
+		if (html.trim() == "<!-- references_ -->")
+			return '<div class="references">'
 		if (html.trim() == "<!-- discussion -->")
 			return '<img src="../_assets/discussion.jpg" alt="Discussion" />'
 		return html

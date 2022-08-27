@@ -40,8 +40,11 @@
   box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
 }
 
-p {
+.reveal p {
   margin: calc(var(--r-block-margin)*1.75) 0 calc(var(--r-block-margin)*.25) !important;
+}
+.reveal blockquote p {
+  margin: 0 0 !important;
 }
 
 .titleslide h1, .titleslide h2, .titleslide p {
