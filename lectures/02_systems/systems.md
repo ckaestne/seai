@@ -123,6 +123,11 @@ Note: Transcription service, where interface is all built around an ML component
 <!-- references_ -->
 From https://openai.com/blog/dall-e/
 
+----
+## Products using ... a Juggling Robot?
+
+<iframe width="100%" height="600" src="https://www.youtube.com/embed/9asDO_1A27U?start=24" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
 ----
 ## Many more examples of ML in products:
@@ -359,6 +364,10 @@ Passi, S., & Sengers, P. (2020). [Making data science systems work](https://jour
 ![Dall-e generated example of chairs in the form of an avocado](dall-e.png)
 <!-- .element: class="plain stretch" -->
 
+----
+## Model vs System Goal?
+
+<iframe width="100%" height="600" src="https://www.youtube.com/embed/9asDO_1A27U?start=24" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 ----
