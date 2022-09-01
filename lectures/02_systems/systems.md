@@ -423,6 +423,8 @@ Wagstaff, Kiri. "Machine learning that matters." In Proceedings of the 29 th Int
 
 </div>
 
+![Random letters](../_assets/onterminology.jpg)<!-- .element: class="cornerimg" -->
+
 
 
 
