@@ -78,3 +78,11 @@
   left: 0;
   width: 100%;
 }
+
+.reveal .cornerimg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  height: calc(1*var(--r-heading1-size));
+}
