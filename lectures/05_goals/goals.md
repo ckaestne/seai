@@ -13,8 +13,18 @@ license: Creative Commons Attribution 4.0 International (CC BY 4.0)
 # Goals and Measurement
 
 
+
 ---
-# Learning goals
+## Exploring Requirements...
+
+![Overview of course content](overview.svg)
+<!-- .element: class="plain stretch" -->
+
+
+----
+
+
+## Learning goals
 
 * Judge when to apply ML for a problem in a system
 * Define system goals and map them to goals for ML components
@@ -22,7 +32,7 @@ license: Creative Commons Attribution 4.0 International (CC BY 4.0)
 
 ----
 
-# Readings
+## Readings
 
 Required Readings: Hulten, Geoff. "[Building Intelligent Systems: A Guide to Machine Learning Engineering](https://www.buildingintelligentsystems.com/)" (2018), Chapters 2 (Knowing when to use IS) and 4 (Defining the IS’s Goals)
 
