@@ -12,9 +12,9 @@
 |  | [Teamwork Primer](https://ckaestne.github.io/seai/F2022/slides/03a_teamwork/teams.html) |  |  |
 | Fri, Sep 09 | ![Recitation](https://img.shields.io/badge/-rec-yellow.svg) Stream processing: Apache Kafka ([pdf](https://drive.google.com/file/d/1i2X2jYWJKMOuEDyaxOEgEtxT5tYsBkMW/view?usp=sharing)) | |  |
 | Mon, Sep 12 | [Model Testing Beyond Accuracy](https://ckaestne.github.io/seai/F2022/slides/04_modeltesting/modelquality2.html) ([book chapter](https://ckaestne.medium.com/model-quality-slicing-capabilities-invariants-and-other-testing-strategies-27e456027bd)) | [Behavioral Testing of NLP Models with CheckList](https://homes.cs.washington.edu/~wtshuang/static/papers/2020-acl-checklist.pdf) |  |
-| Wed, Sep 14 | Goals and Measurement | [Building Intelligent Systems](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436), Ch. 2, 4 |  |
+| Wed, Sep 14 | [Goals and Measurement](https://ckaestne.github.io/seai/F2022/slides/05_goals/goals.html) ([book chapter 1](https://ckaestne.medium.com/when-to-use-machine-learning-83fe9be1b8e1), [book chapter 2](https://ckaestne.medium.com/setting-and-measuring-goals-for-machine-learning-projects-c887bc6ab9d0)) | [Building Intelligent Systems](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436), Ch. 2, 4 |  |
 | Fri, Sep 16 | ![Recitation](https://img.shields.io/badge/-rec-yellow.svg) Unit testing / Measurement | |  |
-| Mon, Sep 19 | Requirements and Risk | [The World and the Machine](http://mcs.open.ac.uk/mj665/icse17kn.pdf) |  |
+| Mon, Sep 19 | Gathering and Untangling Requirements ([chapter](https://ckaestne.medium.com/gathering-requirements-for-ml-enabled-systems-4f0a7a23730f)) | [The World and the Machine](http://mcs.open.ac.uk/mj665/icse17kn.pdf) |  |
 | Wed, Sep 21 | Planning for Mistakes | [Building Intelligent Systems](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436), Ch. 6, 7, 24 | [M1: Modeling and First Deployment](https://github.com/ckaestne/seai/blob/F2022/assignments/project.md#milestone-1-recommendation-model-and-first-deployment) |
 | Fri, Sep 23 | ![Recitation](https://img.shields.io/badge/-rec-yellow.svg) Requirements/Risk analysis | |  |
 | Mon, Sep 26 | Quality Tradeoffs | |  |
