@@ -1,6 +1,6 @@
 ---
 author: Christian Kaestner
-title: "17-445: From Models to AI-Enabled Systems"
+title: "17-645: From Models to Systems"
 semester: Fall 2022
 footer: "17-645 Machine Learning in Production • Christian Kaestner, Carnegie Mellon University • Fall 2022"
 license: Creative Commons Attribution 4.0 International (CC BY 4.0)

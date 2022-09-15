@@ -1,6 +1,6 @@
 ---
 author: Christian Kaestner and Eunsuk Kang
-title: "17-445: Model Testing beyond Accuracy"
+title: "17-645: Model Testing beyond Accuracy"
 semester: Fall 2022
 footer: "17-645 Machine Learning in Production • Christian Kaestner, Carnegie Mellon University • Fall 2022"
 license: Creative Commons Attribution 4.0 International (CC BY 4.0)
