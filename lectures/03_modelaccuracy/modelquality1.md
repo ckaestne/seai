@@ -158,7 +158,7 @@ Be aware of ambiguity across communities (see also: performance in arts, job per
 
 </div>
 
-![Random letters](onterminology.jpg)<!-- .element: class="cornerimg" -->
+![Random letters](../_assets/onterminology.jpg)<!-- .element: class="cornerimg" -->
 
 
 
@@ -629,7 +629,7 @@ def f(outlook, temperature, humidity, windy) =
 
 
 
-![Random letters](onterminology.jpg)<!-- .element: class="cornerimg" -->
+![Random letters](../_assets/onterminology.jpg)<!-- .element: class="cornerimg" -->
 
 
 
@@ -1383,7 +1383,7 @@ Mary Shaw. [Myths and Mythconceptions: What does it mean to be a programming lan
 * *Verification/validation* analogy may help frame thinking, but will likely be confusing without longer explanation
 
 
-![Random letters](onterminology.jpg)<!-- .element: class="cornerimg" -->
+![Random letters](../_assets/onterminology.jpg)<!-- .element: class="cornerimg" -->
 
 
 

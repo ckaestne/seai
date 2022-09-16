@@ -17,7 +17,7 @@ license: Creative Commons Attribution 4.0 International (CC BY 4.0)
 ---
 ## Exploring Requirements...
 
-![Overview of course content](overview.svg)
+![Overview of course content](../_assets/overview.svg)
 <!-- .element: class="plain stretch" -->
 
 
@@ -34,9 +34,9 @@ license: Creative Commons Attribution 4.0 International (CC BY 4.0)
 
 ## Readings
 
-Required Readings: Hulten, Geoff. "[Building Intelligent Systems: A Guide to Machine Learning Engineering](https://www.buildingintelligentsystems.com/)" (2018), Chapters 2 (Knowing when to use IS) and 4 (Defining the IS’s Goals)
+Required Readings: 🕮 Hulten, Geoff. "[Building Intelligent Systems: A Guide to Machine Learning Engineering](https://www.buildingintelligentsystems.com/)" (2018), Chapters 2 (Knowing when to use IS) and 4 (Defining the IS’s Goals)
 
-Suggested complementary reading: Ajay Agrawal, Joshua Gans, Avi Goldfarb. “[Prediction Machines: The Simple Economics of Artificial Intelligence](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019698987304436)” 2018 
+Suggested complementary reading: 🕮 Ajay Agrawal, Joshua Gans, Avi Goldfarb. “[Prediction Machines: The Simple Economics of Artificial Intelligence](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019698987304436)” 2018 
 
 
 
@@ -524,6 +524,9 @@ Douglas Hubbard, “[How to Measure Anything: finding the value of intangibles i
   - Metric and measure synonymous for our purposes (some distinguish metrics as derived from multiple measures, or metrics to be standardizes measures)
 * **Operationalization** is identifying and implementing a method to
   measure some factor (e.g., identifying mistakes from telemetry log file)
+
+![Random letters](../_assets/onterminology.jpg)<!-- .element: class="cornerimg" -->
+
 
 ----
 <!-- colstart -->
