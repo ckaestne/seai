@@ -15,38 +15,38 @@
 | Wed, Sep 14 | [Goals and Measurement](https://ckaestne.github.io/seai/F2022/slides/05_goals/goals.html) ([book chapter 1](https://ckaestne.medium.com/when-to-use-machine-learning-83fe9be1b8e1), [book chapter 2](https://ckaestne.medium.com/setting-and-measuring-goals-for-machine-learning-projects-c887bc6ab9d0)) | [Building Intelligent Systems](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436), Ch. 2, 4 |  |
 | Fri, Sep 16 | ![Recitation](https://img.shields.io/badge/-rec-yellow.svg) [Measurement and Teamwork](https://github.com/ckaestne/seai/tree/F2022/recitations/03_measurements_and_teamwork) | |  |
 | Mon, Sep 19 | [Gathering and Untangling Requirements](https://ckaestne.github.io/seai/F2022/slides/06_requirements/requirements.html) ([chapter](https://ckaestne.medium.com/gathering-requirements-for-ml-enabled-systems-4f0a7a23730f)) | [The World and the Machine](http://mcs.open.ac.uk/mj665/icse17kn.pdf) |  |
-| Wed, Sep 21 | Planning for Mistakes ([chapter](https://ckaestne.medium.com/planning-for-machine-learning-mistakes-2574f4fcf529)) | [Building Intelligent Systems](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436), Ch. 6, 7, 24 | [M1: Modeling and First Deployment](https://github.com/ckaestne/seai/blob/F2022/assignments/project.md#milestone-1-recommendation-model-and-first-deployment) |
+| Wed, Sep 21 | [Planning for Mistakes](https://ckaestne.github.io/seai/F2022/slides/07_mistakes/mistakes.htm) ([chapter](https://ckaestne.medium.com/planning-for-machine-learning-mistakes-2574f4fcf529)) | [Building Intelligent Systems](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436), Ch. 6, 7, 24 | [M1: Modeling and First Deployment](https://github.com/ckaestne/seai/blob/F2022/assignments/project.md#milestone-1-recommendation-model-and-first-deployment) |
 | Fri, Sep 23 | ![Recitation](https://img.shields.io/badge/-rec-yellow.svg) Requirements and Risk Analysis | |  |
-| Mon, Sep 26 | Quality Tradeoffs | |  |
-| Wed, Sep 28 | Deploying a Model | | [I2: Requirements](https://github.com/ckaestne/seai/blob/F2022/assignments/I2_requirements.md) |
+| Mon, Sep 26 | Quality Tradeoffs | [Building Intelligent Systems](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436), Ch. 18 & [Choosing the right ML alg.](https://hackernoon.com/choosing-the-right-machine-learning-algorithm-68126944ce1f) |  |
+| Wed, Sep 28 | Deploying a Model | [Building Intelligent Systems](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436), Ch. 13 and [Machine Learning Design Patterns](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/1feg4j8/alma991019735160604436), Ch. 16 | [I2: Requirements](https://github.com/ckaestne/seai/blob/F2022/assignments/I2_requirements.md) |
 | Fri, Sep 30 | ![Recitation](https://img.shields.io/badge/-rec-yellow.svg) Architecture | |  |
-| Mon, Oct 03 | Testing in Production | |  |
+| Mon, Oct 03 | Testing in Production | [Building Intelligent Systems](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436), Ch. 14, 15 |  |
 | Wed, Oct 05 | ![Midterm](https://img.shields.io/badge/-midterm-blue.svg) **[Midterm](https://github.com/ckaestne/seai/tree/F2022/exams)** | |  |
 | Fri, Oct 07 | ![Recitation](https://img.shields.io/badge/-rec-yellow.svg) Containers: Docker | |  |
-| Mon, Oct 10 | Data Quality | |  |
-| Wed, Oct 12 | Infrastructure Quality and Operations | | [I3: Architecture](https://github.com/ckaestne/seai/blob/F2022/assignments/I3_architecture.md) |
+| Mon, Oct 10 | Data Quality | [Data Cascades in High-Stakes AI](https://dl.acm.org/doi/abs/10.1145/3411764.3445518) |  |
+| Wed, Oct 12 | Infrastructure Quality and Operations | [The ML Test Score](https://research.google.com/pubs/archive/46555.pdf) | [I3: Architecture](https://github.com/ckaestne/seai/blob/F2022/assignments/I3_architecture.md) |
 | Fri, Oct 14 | ![Recitation](https://img.shields.io/badge/-rec-yellow.svg) Continuous Integration: Jenkins | |  |
 | Mon, Oct 17 | ![Break](https://img.shields.io/badge/-break-red.svg) Fall break, no classes | |  |
 | Wed, Oct 19 | ![Break](https://img.shields.io/badge/-break-red.svg) Fall break, no classes | |  |
 | Fri, Oct 21 | ![Break](https://img.shields.io/badge/-break-red.svg) Fall break, no classes | |  |
 | Mon, Oct 24 | Scaling Data Storage and Data Processing | |  |
-| Wed, Oct 26 | Process & Technical Debt | |  |
+| Wed, Oct 26 | Process & Technical Debt | [Hidden Technical Debt in Machine Learning Systems](http://papers.nips.cc/paper/5656-hidden-technical-debt-in-machine-learning-systems.pdf) |  |
 | Fri, Oct 28 | ![Break](https://img.shields.io/badge/-break-red.svg) Tartan community day, no classes | |  |
-| Mon, Oct 31 | Intro to Ethics + Fairness | |  |
+| Mon, Oct 31 | Intro to Ethics + Fairness | [Algorithmic Accountability: A Primer](https://datasociety.net/wp-content/uploads/2018/04/Data_Society_Algorithmic_Accountability_Primer_FINAL-4.pdf) |  |
 | Wed, Nov 02 | Measuring Fairness | | [M2: Infrastructure Quality](https://github.com/ckaestne/seai/blob/F2022/assignments/project.md#milestone-2-model-and-infrastructure-quality) |
 | Fri, Nov 04 | ![Recitation](https://img.shields.io/badge/-rec-yellow.svg) Monitoring: Prometheus, Grafana | |  |
 | Mon, Nov 07 | Building Fairer Systems | |  |
-| Wed, Nov 09 | Explainability & Interpretability | | [I4: MLOps Tools](https://github.com/ckaestne/seai/blob/F2022/assignments/I4_mlops_tools.md) |
+| Wed, Nov 09 | Explainability & Interpretability | [Black boxes not required](https://dataskeptic.com/blog/episodes/2020/black-boxes-are-not-required) or [Stop Explaining Black Box ML Models…](https://arxiv.org/abs/1811.10154) | [I4: MLOps Tools](https://github.com/ckaestne/seai/blob/F2022/assignments/I4_mlops_tools.md) |
 | Fri, Nov 11 | ![Recitation](https://img.shields.io/badge/-rec-yellow.svg) Fairness | |  |
-| Mon, Nov 14 | Transparency & Accountability | |  |
-| Wed, Nov 16 | Versioning, Provenance, and Reproducability | |  |
+| Mon, Nov 14 | Transparency & Accountability | [People + AI, Ch. Explainability and Trust](https://pair.withgoogle.com/chapter/explainability-trust/) |  |
+| Wed, Nov 16 | Versioning, Provenance, and Reproducability | [Building Intelligent Systems](https://www.buildingintelligentsystems.com/), Ch. 21 & [Goods: Organizing Google's Datasets](http://research.google.com/pubs/archive/45390.pdf) |  |
 | Fri, Nov 18 | ![Recitation](https://img.shields.io/badge/-rec-yellow.svg) Debugging | |  |
 | Mon, Nov 21 | Debugging (Guest lecture) / Human-AI Interaction | |  |
 | Wed, Nov 23 | ![Break](https://img.shields.io/badge/-break-red.svg) Thanksgiving break | |  |
 | Fri, Nov 25 | ![Break](https://img.shields.io/badge/-break-red.svg) Threat modeling | |  |
-| Mon, Nov 28 | Security and Privacy | |  |
+| Mon, Nov 28 | Security and Privacy | [Building Intelligent Systems](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436), Ch. 25 & [The Top 10 Risks of Machine Learning Security](https://ieeexplore.ieee.org/document/9107290) |  |
 | Wed, Nov 30 | Safety | | [M3: Monitoring and CD](https://github.com/ckaestne/seai/blob/F2022/assignments/project.md#milestone-3-monitoring-and-continuous-deployment) |
 | Fri, Dec 02 | ![Recitation](https://img.shields.io/badge/-rec-yellow.svg) Threat modeling | |  |
-| Mon, Dec 05 | Fostering Interdisciplinary Teams | |  |
+| Mon, Dec 05 | Fostering Interdisciplinary Teams | [Collaboration Challenges in Building ML-Enabled Systems](https://arxiv.org/abs/2110.10234) |  |
 | Wed, Dec 07 | Summary and Review | | [M4: Fairness, Security and Feedback Loops](https://github.com/ckaestne/seai/blob/F2022/assignments/project.md#milestone-4-fairness-security-and-feedback-loops) |
 | tbd | **Final Project Presentations** | | [Final report](https://github.com/ckaestne/seai/blob/F2022/assignments/project.md#final-report-and-presentation) |
