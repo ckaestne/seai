@@ -117,7 +117,7 @@ Need to also understand other parts and environment
 
 
 ---
-# Software Requirements 
+# Software Requirements
 
 ----
 ## Software Requirements
@@ -189,6 +189,32 @@ Requirements & Design: **Think before coding**
 # Untangling Requirements
 
 
+----
+## For completeness: Beh. vs quality req.
+
+<div class="smallish">
+
+  <!-- colstart -->
+
+**Behavioral requirements** (functional requirements)
+* What the system shall do
+* How inputs and outputs relate
+* ... typically clear 'correctness' specifications
+
+<!-- col -->
+
+**Quality requirements** (non-functional requirements)
+* How the system should operate and be built
+* Development budget and deadlines
+* Code quality, maintainability, extensibility requirements
+* Latency, scalability, throughput requirements
+* Safety, security, fairness req.
+* Usability requirements
+* ... all require measurement
+
+<!-- colend -->
+
+</div>
 
 ----
 ## Machine vs World
@@ -458,25 +484,45 @@ As a group, post answer to `#lecture` and tag group members:
 
 
 ----
-## For completeness: Behavioral vs quality requirements
+## What went wrong? (REQ, ASM, SPEC)?
 
-<div class="small">
+![ATM](atm.gif)
+<!-- .element: class="stretch" -->
 
-Behavioral requirements (functional requirements)
-* What the system shall do
-* How inputs and outputs relate
-* ... typically clear 'correctness' specifications
+----
+## What went wrong? (REQ, ASM, SPEC)?
 
-Quality requirements (non-functional requirements)
-* How the system should operate and be built
-* Development budget and deadlines
-* Code quality, maintainability, extensibility requirements
-* Latency, scalability, throughput requirements
-* Safety, security, fairness requirements
-* Usability requirements
-* ... all require measurement
+![Amazon Hiring Tool Scraped due to Bias](amazonhiring.png)
+<!-- .element: class="stretch" -->
 
-</div>
+
+----
+## What went wrong? (REQ, ASM, SPEC)?
+
+![Tesla autopilot](tesla.png)
+
+![Tesla crash](tesla-crash.jpeg)
+<!-- .element: class="stretch" -->
+
+
+
+----
+## What went wrong? (REQ, ASM, SPEC)?
+
+![IBM Watson sold](watson_sold.png)
+<!-- .element: class="stretch" -->
+
+> "We got concerns from them that the recommendations that it was
+> giving were just not relevant...it would suggest a particular
+> kind of treatment that wasn’t available in the locality in which it
+> was making the recommendation, or the recommendation did not at all
+> square with the treatment protocols that were in use at the local
+> institution..."
+
+Slate, 01/2022
+
+
+
 
 ----
 ## Takeaway
@@ -640,7 +686,7 @@ Systems with higher risk -> consider more formal documentation
 
 
 ----
-## Requirements evaluation 
+## Requirements evaluation
 
 Manual inspection (like code review)
 
