@@ -106,7 +106,7 @@ Machine learning is a component within a system
 Need to also understand other parts and environment
 
 
-</script></section></section><section ><section data-markdown><script type="text/template"># Software Requirements 
+</script></section></section><section ><section data-markdown><script type="text/template"># Software Requirements
 </script></section><section data-markdown><script type="text/template">## Software Requirements
 
 * Describe what the system should do, in terms of the services that it provides
@@ -167,7 +167,31 @@ Requirements & Design: **Think before coding**
 
 </script></section></section><section ><section data-markdown><script type="text/template"># Untangling Requirements
 
+</script></section><section data-markdown><script type="text/template">## For completeness: Beh. vs quality req.
 
+<div class="smallish">
+
+  <!-- colstart -->
+
+**Behavioral requirements** (functional requirements)
+* What the system shall do
+* How inputs and outputs relate
+* ... typically clear 'correctness' specifications
+
+<!-- col -->
+
+**Quality requirements** (non-functional requirements)
+* How the system should operate and be built
+* Development budget and deadlines
+* Code quality, maintainability, extensibility requirements
+* Latency, scalability, throughput requirements
+* Safety, security, fairness req.
+* Usability requirements
+* ... all require measurement
+
+<!-- colend -->
+
+</div>
 </script></section><section data-markdown><script type="text/template">## Machine vs World
 
 ![machine-world](worldvsmachine.svg)
@@ -389,25 +413,39 @@ As a group, post answer to `#lecture` and tag group members:
 > Specification: ...<br />
 > What can go wrong: ... <br />
 
-</script></section><section data-markdown><script type="text/template">## For completeness: Behavioral vs quality requirements
+</script></section><section data-markdown><script type="text/template">## What went wrong? (REQ, ASM, SPEC)?
 
-<div class="small">
+![ATM](atm.gif)
+<!-- .element: class="stretch" -->
+</script></section><section data-markdown><script type="text/template">## What went wrong? (REQ, ASM, SPEC)?
 
-Behavioral requirements (functional requirements)
-* What the system shall do
-* How inputs and outputs relate
-* ... typically clear 'correctness' specifications
+![Amazon Hiring Tool Scraped due to Bias](amazonhiring.png)
+<!-- .element: class="stretch" -->
 
-Quality requirements (non-functional requirements)
-* How the system should operate and be built
-* Development budget and deadlines
-* Code quality, maintainability, extensibility requirements
-* Latency, scalability, throughput requirements
-* Safety, security, fairness requirements
-* Usability requirements
-* ... all require measurement
+</script></section><section data-markdown><script type="text/template">## What went wrong? (REQ, ASM, SPEC)?
 
-</div>
+![Tesla autopilot](tesla.png)
+
+![Tesla crash](tesla-crash.jpeg)
+<!-- .element: class="stretch" -->
+
+
+</script></section><section data-markdown><script type="text/template">## What went wrong? (REQ, ASM, SPEC)?
+
+![IBM Watson sold](watson_sold.png)
+<!-- .element: class="stretch" -->
+
+> "We got concerns from them that the recommendations that it was
+> giving were just not relevant...it would suggest a particular
+> kind of treatment that wasn’t available in the locality in which it
+> was making the recommendation, or the recommendation did not at all
+> square with the treatment protocols that were in use at the local
+> institution..."
+
+Slate, 01/2022
+
+
+
 </script></section><section data-markdown><script type="text/template">## Takeaway
 
 
@@ -541,7 +579,7 @@ Systems with higher risk -> consider more formal documentation
 ![Validation vs verification](validation.png)
 <!-- .element: class="plain" -->
 
-</script></section><section data-markdown><script type="text/template">## Requirements evaluation 
+</script></section><section data-markdown><script type="text/template">## Requirements evaluation
 
 Manual inspection (like code review)
 
