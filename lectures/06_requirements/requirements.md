@@ -262,15 +262,9 @@ lane.
 ## Shared Phenomena
 
 ![phenomena](phenomena.jpg)
+<!-- .element: class="stretch" -->
 
-* Shared phenomena: Interface between the environment & software
-  * Input: Lidar, camera, pressure sensors, GPS
-  * Output: Signals generated & sent to the engine or brake control
-
-----
-## Shared Phenomena
-
-![phenomena](phenomena.jpg)
+<div class="smallish">
 
 * Shared phenomena: Interface between the environment & software
   * Input: Lidar, camera, pressure sensors, GPS
@@ -279,6 +273,7 @@ lane.
   * Unshared parts of the environment are beyond software’s control
   * We can only **assume** how these parts will behave
 
+</div>
 ----
 ## Requirement vs Specification
 
@@ -459,6 +454,8 @@ Missing or incorrect environmental assumptions (ASM)?
 
 Wrong or violated specification (SPEC)?
 
+
+
 ----
 ## Process for Establishing Requirements
 
@@ -630,6 +627,13 @@ Note: In a wizard of oz experiment a human fills in for the ML model that is to 
 
 See examples and details http://gendermag.org/foundations.php
 
+----
+## Requirements elicitation example
+
+![Albumy screenshot](albumy.png)
+<!-- .element: class="stretch" -->
+
+For accessibility feature: What would you do?
 
 ----
 ## Negotiating Requirements
@@ -722,6 +726,13 @@ Rarely ever fully completely upfront and stable, anticipate change
 Low-risk problems often use lightweight, agile approaches
 
 (We'll return to this later)
+
+----
+## How much requirements eng. and when?
+
+![Albumy screenshot](albumy.png)
+<!-- .element: class="stretch" -->
+
 
 ---
 # Summary

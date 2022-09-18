@@ -576,6 +576,7 @@ Containment and isolation
 
 What design strategies would you consider to mitigate ML mistakes:
 * Credit card fraud detection
+* Image captioning for accessibility in photo sharing site
 * Speed limiter for cars (with vision system to detect traffic signs)
 
 Consider: Human in the loop, Undoable actions, Guardrails, Mistake detection and recovery (monitoring, doer-checker, fail-over, redundancy), Containment and isolation
@@ -636,6 +637,12 @@ Note: Discussion on existential risk. Toby Ord, Oxford philosopher predicts
 ## What's the worst that could happen?
 
 ![Amazon Hiring Tool Scraped due to Bias](amazonhiring.png)
+<!-- .element: class="stretch" -->
+
+----
+## What's the worst that could happen?
+
+![Albumy screenshot](albumy.png)
 <!-- .element: class="stretch" -->
 
 
