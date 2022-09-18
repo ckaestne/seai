@@ -32,11 +32,9 @@ license: Creative Commons Attribution 4.0 International (CC BY 4.0)
 
 
 
-Required reading: Hulten, Geoff. "Building Intelligent Systems: A
+Required reading: 🕮 Hulten, Geoff. "Building Intelligent Systems: A
 Guide to Machine Learning Engineering." (2018), Chapters 6–7 (Why
 creating IE is hard, balancing IE) and 24 (Dealing with mistakes)
-
-
 
 ---
 # ML Models = Unreliable Components
@@ -1131,3 +1129,18 @@ Intended as structured approaches to thinking about failures
   * Human in the loop, Undoable actions, Guardrails, Mistake detection and recovery (monitoring, doer-checker, fail-over, redundancy), Containment and isolation
 * Use risk analysis to identify and mitigate potential problems
   - FTA, FMEA, HAZOP
+
+
+----
+## Further readings
+
+<div class="small">
+
+* 🕮 Google PAIR. People + AI Guidebook. 2019, especially chapters “Errors + Graceful Failure” and “Mental Models.”
+* 🗎 Martelaro, Nikolas, Carol J. Smith, and Tamara Zilovic. “Exploring Opportunities in Usable Hazard Analysis Processes for AI Engineering.” In AAAI Spring Symposium Series Workshop on AI Engineering: Creating Scalable, Human-Centered and Robust AI Systems (2022).
+* 🗎 Qi, Yi, Philippa Ryan Conmy, Wei Huang, Xingyu Zhao, and Xiaowei Huang. “A Hierarchical HAZOP-Like Safety Analysis for Learning-Enabled Systems.” In AISafety2022 Workshop at IJCAI2022 (2022).
+* 🗎 Beachum, David Robert. “Methods for assessing the safety of autonomous vehicles.” MSc thesis, 2019.
+*  🗎 Amershi, Saleema, Dan Weld, Mihaela Vorvoreanu, Adam Fourney, Besmira Nushi, Penny Collisson, Jina Suh et al. “Guidelines for human-AI interaction.” In Proceedings of the 2019 CHI Conference on Human Factors in Computing Systems, 2019.
+*  🗎 Shneiderman, Ben. “Bridging the gap between ethics and practice: Guidelines for reliable, safe, and trustworthy Human-Centered AI systems.” ACM Transactions on Interactive Intelligent Systems (TiiS) 10, no. 4 (2020): 1–31.
+
+</div>

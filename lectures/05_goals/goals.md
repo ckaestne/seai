@@ -164,7 +164,7 @@ see Hulten, Chapter 2
 
 ---
 
-# The Business View 
+# The Business View
 
 <!-- references --> 
 Ajay Agrawal, Joshua Gans, Avi Goldfarb. “[Prediction Machines: The Simple Economics of Artificial Intelligence](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019698987304436)” 2018  
@@ -174,7 +174,7 @@ Ajay Agrawal, Joshua Gans, Avi Goldfarb. “[Prediction Machines: The Simple Eco
 
 
 ----
-## AI as Prediction Machines 
+## AI as Prediction Machines
 
 <!-- colstart --> 
 
@@ -202,7 +202,7 @@ May now use more predictions than before
 Notes: May use new, cheaper predictions for traditional tasks -> inventory and demand forecast; May now use predictions for new kinds of problems -> navigation and translation 
 
 ----
-## The economic lense 
+## The economic lense
 
 
 
@@ -215,7 +215,7 @@ Notes: May use new, cheaper predictions for traditional tasks -> inventory and d
 * use of (cheaper, more) predictions can be economic advantage 
 
 ----
-## Predicting the Best Route 
+## Predicting the Best Route
 
 ![Taxi in London](taxi.jpg) 
 <!-- .element: class="stretch" --> 
@@ -227,7 +227,7 @@ At the same time, the value of human judgement increases. Making more decisions 
 Picture source: https://pixabay.com/photos/cab-oldtimer-taxi-car-city-london-203486/ 
 
 ----
-## Predictions vs Judgement 
+## Predictions vs Judgement
 
 Predictions are an input to decision making under uncertainty 
 
@@ -238,7 +238,7 @@ Judgement often left to humans ("value function engineering")
 ML may learn to predict human judgment if enough data 
 
 ----
-## Automation with predictions 
+## Automation with predictions
 
 
 * Automated predictions scale much better than human ones 
@@ -253,7 +253,7 @@ ML may learn to predict human judgment if enough data
 *Automated decisions desirable but not necessary*
 
 ----
-## The Cost and Value of Data 
+## The Cost and Value of Data
 
 * (1) Data for training, (2) input data for decisions, (3) telemetry data for continued improving 
 * Collecting and storing data can be costly (direct and indirect costs, including reputation/privacy) 
@@ -262,7 +262,7 @@ ML may learn to predict human judgment if enough data
 * May need constant access to data to update models 
 
 ----
-## Where to use AI? 
+## Where to use AI?
 
 * Decompose tasks to identify the use of (or potential use of) predictions 
 * Estimate the benefit of better/cheaper predictions 
@@ -272,7 +272,7 @@ ML may learn to predict human judgment if enough data
 
 
 ----
-## Cost Per Prediction 
+## Cost Per Prediction
 
 *What contributes to the average cost of a single prediction?* 
 
@@ -281,7 +281,7 @@ Examples: Music recommendation, credit card fraud detection, product recommendat
 <!-- discussion --> 
 
 ----
-## Cost Per Prediction 
+## Cost Per Prediction
 
 * Useful conceptual measure, factoring in all costs 
     - Development cost 
@@ -336,7 +336,7 @@ Guiding questions:
 
 * **Organizational objectives:** Innate/overall goals of the organization
 * **Leading indicators:** Measures correlating with future success, from the business perspective
-* **System goals:** Goals of the software system to be built
+* **System goals:** Goals of the software system/feature to be built
 * **User outcomes:** How well the system is serving its users, from the user's perspective
 * **Model properties:** Quality of the model used in a system, from the model's perspective
  
@@ -396,15 +396,17 @@ Caveats
 </div>
 
 ----
-## System Goals
+## System/Feature Goals
 
-*Concrete outputs the system should produce*
+*Concrete outputs the system (or a feature of the system) should produce*
 
 Relates to system requirements
 
 Examples:
 * Detect cancer in radiology scans
 * Provide and recommend music to stream
+* Make personalized music recommendations
+* Transcribe audio files
 * Provide legal help with a self-service chatbot
 
 
@@ -668,7 +670,7 @@ Identify measure, data collection, and operationalization...
 https://www.tylervigen.com/spurious-correlations
 
 ----
-##  Correlation vs Causation
+## Correlation vs Causation
 
 <div class="smallish">
 
