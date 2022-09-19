@@ -116,6 +116,10 @@ experts, marketing team, industry regulators...)
 
 ![requirements](requirements.png)
 <!-- .element: class="stretch" -->
+
+</script></section><section data-markdown><script type="text/template">
+![Needs vs requirements vs coding](validation.svg)<!-- .element: class="plain" style="width:800px" -->
+
 </script></section><section data-markdown><script type="text/template">## Importance of Requirements
 
 
@@ -229,13 +233,9 @@ lane.</p>
 </aside></script></section><section data-markdown><script type="text/template">## Shared Phenomena
 
 ![phenomena](phenomena.jpg)
+<!-- .element: class="stretch" -->
 
-* Shared phenomena: Interface between the environment & software
-  * Input: Lidar, camera, pressure sensors, GPS
-  * Output: Signals generated & sent to the engine or brake control
-</script></section><section data-markdown><script type="text/template">## Shared Phenomena
-
-![phenomena](phenomena.jpg)
+<div class="smallish">
 
 * Shared phenomena: Interface between the environment & software
   * Input: Lidar, camera, pressure sensors, GPS
@@ -243,7 +243,8 @@ lane.</p>
 * Software can influence the environment **only** through the shared interface
   * Unshared parts of the environment are beyond software’s control
   * We can only **assume** how these parts will behave
-</script></section><section data-markdown><script type="text/template">## Requirement vs Specification
+
+</div></script></section><section data-markdown><script type="text/template">## Requirement vs Specification
 
 * System Requirement (REQ): What the system must ensure, in terms of desired
   effects on the environment 
@@ -393,6 +394,8 @@ Missing or incorrect environmental assumptions (ASM)?
 * Concept drift?  Adversaries?
 
 Wrong or violated specification (SPEC)?
+
+
 </script></section><section data-markdown><script type="text/template">## Process for Establishing Requirements
 
 1. Identify environmental entities and machine components
@@ -474,6 +477,14 @@ Slate, 01/2022
 </script></section></section><section ><section data-markdown><script type="text/template"># Gathering and Negotiating Requirements
 </script></section><section data-markdown><script type="text/template">## Understanding requirements is hard
 
+**Why?**
+
+<!-- discussion -->
+
+<!-- references -->
+See 🗎 Jackson, Michael. "[The world and the machine](https://web.archive.org/web/20170519054102id_/http://mcs.open.ac.uk:80/mj665/icse17kn.pdf)." In Proceedings of the International Conference on Software Engineering. IEEE, 1995.
+</script></section><section data-markdown><script type="text/template">## Understanding requirements is hard
+
 * Customers don't know what they want until they see it
 * Customers change their mind ("no, not like that")
 * Descriptions are vague
@@ -534,7 +545,12 @@ Start creating a list of all possible stakeholders
 
 
 See examples and details http://gendermag.org/foundations.php
+</script></section><section data-markdown><script type="text/template">## Requirements elicitation example
 
+![Albumy screenshot](albumy.png)
+<!-- .element: class="stretch" -->
+
+For accessibility feature: What would you do?
 </script></section><section data-markdown><script type="text/template">## Negotiating Requirements
 
 Many requirements are conflicting/contradictory
@@ -576,8 +592,8 @@ Formal requirements documents often seen as bureaucratic, lightweight options in
 Systems with higher risk -> consider more formal documentation
 </script></section><section data-markdown><script type="text/template">## Requirements evaluation (validation!)
 
-![Validation vs verification](validation.png)
-<!-- .element: class="plain" -->
+![Validation vs verification](validation.svg)
+<!-- .element: class="plain stretch" -->
 
 </script></section><section data-markdown><script type="text/template">## Requirements evaluation
 
@@ -596,7 +612,7 @@ Look for unrealistic ML-related assumptions (no false positives, unbiased repres
 
 </script></section><section data-markdown><script type="text/template">## How much requirements eng. and when?
 
-![Waterfall process picture](waterfall.png)<!-- .element: class="plain" style="width:1100px" -->
+![Waterfall process picture](waterfall.svg)<!-- .element: class="plain" style="width:1100px" -->
 
 </script></section><section data-markdown><script type="text/template">## How much requirements eng. and when?
 
@@ -611,6 +627,11 @@ Rarely ever fully completely upfront and stable, anticipate change
 Low-risk problems often use lightweight, agile approaches
 
 (We'll return to this later)
+</script></section><section data-markdown><script type="text/template">## How much requirements eng. and when?
+
+![Albumy screenshot](albumy.png)
+<!-- .element: class="stretch" -->
+
 </script></section></section><section ><section data-markdown><script type="text/template"># Summary
 
 Requirements state the needs of the stakeholders and are expressed
