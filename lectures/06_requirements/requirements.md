@@ -130,6 +130,12 @@ experts, marketing team, industry regulators...)
 ![requirements](requirements.png)
 <!-- .element: class="stretch" -->
 
+
+----
+
+![Needs vs requirements vs coding](validation.svg)<!-- .element: class="plain" style="width:800px" -->
+
+
 ----
 ## Importance of Requirements
 
@@ -554,6 +560,16 @@ Slate, 01/2022
 ----
 ## Understanding requirements is hard
 
+**Why?**
+
+<!-- discussion -->
+
+<!-- references -->
+See 🗎 Jackson, Michael. "[The world and the machine](https://web.archive.org/web/20170519054102id_/http://mcs.open.ac.uk:80/mj665/icse17kn.pdf)." In Proceedings of the International Conference on Software Engineering. IEEE, 1995.
+
+----
+## Understanding requirements is hard
+
 * Customers don't know what they want until they see it
 * Customers change their mind ("no, not like that")
 * Descriptions are vague
@@ -685,8 +701,8 @@ Systems with higher risk -> consider more formal documentation
 ----
 ## Requirements evaluation (validation!)
 
-![Validation vs verification](validation.png)
-<!-- .element: class="plain" -->
+![Validation vs verification](validation.svg)
+<!-- .element: class="plain stretch" -->
 
 
 ----
@@ -709,7 +725,7 @@ Look for unrealistic ML-related assumptions (no false positives, unbiased repres
 ----
 ## How much requirements eng. and when?
 
-![Waterfall process picture](waterfall.png)<!-- .element: class="plain" style="width:1100px" -->
+![Waterfall process picture](waterfall.svg)<!-- .element: class="plain" style="width:1100px" -->
 
 
 ----
