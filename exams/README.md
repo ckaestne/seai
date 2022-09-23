@@ -16,4 +16,5 @@ Midterms from previous semesters are available as practice. We expect the midter
 * [Midterm from Summer 2020](https://github.com/ckaestne/seai/blob/S2020/exams/midterm.pdf) (slightly fewer topics covered than this semester)
 * [Midterm from Fall 2020](https://github.com/ckaestne/seai/blob/F2020/exams/midterm_f20.pdf) (similar coverage)
 * [Midterm from Spring 2021](https://github.com/ckaestne/seai/blob/S2021/exams/) (similar coverage)
+* [Midterm from Spring 2022](https://github.com/ckaestne/seai/blob/S2022/exams/) (similar coverage)
 
