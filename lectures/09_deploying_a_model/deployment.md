@@ -20,7 +20,23 @@ license: Creative Commons Attribution 4.0 International (CC BY 4.0)
 <!-- .element: class="plain stretch" -->
 
 
+
 ---
+## Midterm
+
+Next week Wednesday, here
+
+Questions based on shared scenario, apply concepts
+
+Past midterms [online](https://github.com/ckaestne/seai/tree/F2022/exams), similar style
+
+All lectures and readings in scope, focus on concepts with opportunity to practice (e.g., recitations, homeworks, in-class exercises)
+
+Closed book, but 6 sheets of notes
+
+
+
+----
 
 ## Learning Goals
 

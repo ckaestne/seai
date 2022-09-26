@@ -39,20 +39,6 @@ Guide to Machine Learning Engineering." (2018), Chapters 17 and 18
 Recommended reading: Siebert, Julien, Lisa Joeckel, Jens Heidrich, Koji Nakamichi, Kyoko Ohashi, Isao Namba, Rieko Yamamoto, and Mikio Aoyama. “Towards Guidelines for Assessing Qualities of Machine Learning Systems.” In International Conference on the Quality of Information and Communications Technology, pp. 17–31. Springer, Cham, 2020.
 
 
-----
-## Midterm
-
-Next week Wednesday, here
-
-Questions based on shared scenario, apply concepts
-
-Past midterms [online](https://github.com/ckaestne/seai/tree/F2022/exams), similar style
-
-All lectures and readings in scope, focus on concepts with opportunity to practice (e.g., recitations, homeworks, in-class exercises)
-
-Closed book, but 6 sheets of notes
-
-
 
 
 
