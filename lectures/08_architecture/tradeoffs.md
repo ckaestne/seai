@@ -39,7 +39,18 @@ Guide to Machine Learning Engineering." (2018), Chapters 17 and 18
 Recommended reading: Siebert, Julien, Lisa Joeckel, Jens Heidrich, Koji Nakamichi, Kyoko Ohashi, Isao Namba, Rieko Yamamoto, and Mikio Aoyama. “Towards Guidelines for Assessing Qualities of Machine Learning Systems.” In International Conference on the Quality of Information and Communications Technology, pp. 17–31. Springer, Cham, 2020.
 
 
+----
+## Midterm
 
+Next week Wednesday, here
+
+Questions based on shared scenario, apply concepts
+
+Past midterms [online](https://github.com/ckaestne/seai/tree/F2022/exams), similar style
+
+All lectures and readings in scope, focus on concepts with opportunity to practice (e.g., recitations, homeworks, in-class exercises)
+
+Closed book, but 6 sheets of notes
 
 
 
@@ -370,14 +381,14 @@ From System Quality Requirements to Component Quality Specifications
 ![not-dl](not-dl.jpg)
 
 ----
-## ML Methods Today
+## ML Algorithms Today
 
 ![ml-methods-poll](ml-methods-poll.jpg)
 
 ----
 ## ML Model Selection
 
-How do I decide which ML method to use for my project?
+How do I decide which ML algorithm to use for my project?
 
 Criteria: Quality Attributes & Constraints
 
@@ -560,7 +571,7 @@ Software engineering wording would usually be *quality attribute*, *quality requ
 
 
 ---
-# Common ML Methods and their Qualities
+# Common ML Algorithms and their Qualities
 
 ----
 ## Linear Regression: Qualities
@@ -887,7 +898,7 @@ Strubell, Emma, Ananya Ganesh, and Andrew McCallum. "[Energy and Policy Consider
 ----
 ## ML Model Selection
 
-How do I decide which ML method to use for my project?
+How do I decide which ML algorithm to use for my project?
 
 Criteria: Quality Attributes & Constraints
 
@@ -915,9 +926,9 @@ Design constraints: Type of ML task required (regression/classification), kind o
 
 
 ----
-## Trade-offs between ML methods
+## Trade-offs between ML algorithms
 
-If there are multiple ML methods that satisfy the given constraints, which
+If there are multiple ML algorithms that satisfy the given constraints, which
 one do we select?
 
 Different ML qualities may conflict with each other; this requires
@@ -925,7 +936,7 @@ making a __trade-off__ between these qualities
 
 Among the qualities of interest, which one(s) do we care the most
 about?
-* And which ML method is most suitable for achieving those qualities?
+* And which ML algorithm is most suitable for achieving those qualities?
 * (Similar to requirements conflicts)
 
 ----
@@ -984,16 +995,16 @@ Bloom & Brink. [Overcoming the Barriers to Production-Ready Machine Learning
 Workflows](https://conferences.oreilly.com/strata/strata2014/public/schedule/detail/32314), Presentation at O'Reilly Strata Conference (2014).
 
 ----
-## Breakout: Qualities & ML Methods
+## Breakout: Qualities & ML Algorithms
 
 Consider two scenarios:
 1. Credit card fraud detection
 2. Pedestrian detection in sidewalk robot
 
 As a group, post to `#lecture` tagging all group members:
->  * Constraints: ??
 >  * Qualities of interests: ??
->  * ML method(s) to use: ??
+>  * Constraints: ??
+>  * ML algorithm(s) to use: ??
 
 
 
