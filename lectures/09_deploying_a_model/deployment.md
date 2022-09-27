@@ -13,13 +13,6 @@ license: Creative Commons Attribution 4.0 International (CC BY 4.0)
 # Deploying a Model
 
 
----
-## Deeper into architecture and design...
-
-![Overview of course content](../_assets/overview.svg)
-<!-- .element: class="plain stretch" -->
-
-
 
 ---
 ## Midterm
@@ -33,6 +26,14 @@ Past midterms [online](https://github.com/ckaestne/seai/tree/F2022/exams), simil
 All lectures and readings in scope, focus on concepts with opportunity to practice (e.g., recitations, homeworks, in-class exercises)
 
 Closed book, but 6 sheets of notes
+
+
+
+----
+## Deeper into architecture and design...
+
+![Overview of course content](../_assets/overview.svg)
+<!-- .element: class="plain stretch" -->
 
 
 
