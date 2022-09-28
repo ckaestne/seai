@@ -45,8 +45,12 @@ license: Creative Commons Attribution 4.0 International (CC BY 4.0)
 
 
 
+----
 
+![Xkcd commit 1838](xkcd1838.png)<!-- .element: class="plain" style="width:480px" -->
 
+<!-- references -->
+[XKCD 1838](https://xkcd.com/1838/), cc-by-nc 2.5 Randall Munroe
 
 
 

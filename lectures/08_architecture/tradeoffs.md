@@ -637,9 +637,10 @@ less prone to overfitting, more difficult to interpret
 
 # Neural Networks
 
-![Diversity of neuronal morphologies in the auditory cortex](nervsys.jpg)
-<!-- .element: class="stretch" -->
+![Xkcd commit 2173](xkcd2173.png)<!-- .element: class="plain" style="width:300px" -->
 
+<!-- references -->
+[XKCD 2173](https://xkcd.com/2173/), cc-by-nc 2.5 Randall Munroe
 
 Note: Artificial neural networks are inspired by how biological neural networks work ("groups of chemically connected or functionally associated neurons" with synapses forming connections)
 
