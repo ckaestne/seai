@@ -1,0 +1,34 @@
+# Typically, the easiest way to learn a command line tool, is to find a cheat sheet. Sometimes, the official documentation can be a little hard to begin with.
+# For Docker, the official documentation is very good. But there are a lot of cheat sheets that you can explore too.
+
+# Note: All commands need to have root access. The 'sudo' before every command is omitted. 
+# Alternatively, you can add your username to docker group and avoid the sudo. 
+# Also, these are some of the bare minimum options that are good to specify. These are in no way exhaustive.
+
+# List Images in Container Registry
+docker ls
+
+# Check for running containers
+docker ps
+
+# stop a container - get container ID from docker ps
+docker stop <container_id>
+
+# start a container - get container ID from docker ps
+docker start <container_id>
+
+# log into container - get container ID from docker ps
+docker exec -it <container_id> /bin/bash
+
+# --name - Name to be given to the container after it spawns
+# -d - Detached mode, container runs as a background process
+# -p - port mapping (in our example, the traffic at port 7005 of VM will be forwarded to port 8082 of container)
+
+# Tailing logs
+docker logs <container_id> -f
+
+# Remove all docker containers
+docker rm -f $(docker ps -aq)
+
+# Remove all docker images
+docker rmi -f $(docker images -aq)
