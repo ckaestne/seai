@@ -469,6 +469,12 @@ Incrementality
 * Robustness, reproducibility, stability
 * Security, privacy, fairness
 
+----
+![Table of NFPs and their relationship to different components](nfps.png)
+<!-- .element: class="plain stretch" -->
+
+<!-- references_ -->
+From: Habibullah, Khan Mohammad, Gregory Gay, and Jennifer Horkoff. "[Non-Functional Requirements for Machine Learning: An Exploration of System Scope and Interest](https://arxiv.org/abs/2203.11063)." arXiv preprint arXiv:2203.11063 (2022).
 
 ----
 ## Preview: Interpretability/Explainability
@@ -1017,7 +1023,7 @@ Constraints and tradeoff analysis for selecting ML techniques in production ML s
 ----
 ## Further Readings
 
-<div class="small">
+<div class="smaller">
 
 * Bass, Len, Paul Clements, and Rick Kazman. Software architecture in practice. Addison-Wesley Professional, 3rd edition, 2012.
 * Yokoyama, Haruki. “Machine learning system architectural pattern for improving operational stability.” In 2019 IEEE International Conference on Software Architecture Companion (ICSA-C), pp. 267–274. IEEE, 2019.
@@ -1025,6 +1031,6 @@ Constraints and tradeoff analysis for selecting ML techniques in production ML s
 * Lakshmanan, Valliappa, Sara Robinson, and Michael Munn. Machine learning design patterns. O’Reilly Media, 2020.
 * Lewis, Grace A., Ipek Ozkaya, and Xiwei Xu. “Software Architecture Challenges for ML Systems.” In 2021 IEEE International Conference on Software Maintenance and Evolution (ICSME), pp. 634–638. IEEE, 2021.
 * Vogelsang, Andreas, and Markus Borg. “Requirements Engineering for Machine Learning: Perspectives from Data Scientists.” In Proc. of the 6th International Workshop on Artificial Intelligence for Requirements Engineering (AIRE), 2019.
-
+* Habibullah, Khan Mohammad, Gregory Gay, and Jennifer Horkoff. "[Non-Functional Requirements for Machine Learning: An Exploration of System Scope and Interest](https://arxiv.org/abs/2203.11063)." arXiv preprint arXiv:2203.11063 (2022).
 
 </div>
