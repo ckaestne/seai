@@ -72,13 +72,13 @@ Page limits are recommendations and not strictly enforced. You can exceed the pa
 The assignment is worth 100 points. For full credit, we expect:
 
 * [ ] 10 points: Goals are listed and appropriately grouped. There is at least one goal for each of the four categories of goals. The goals relate to the scenario and are reasonably complete.
-* [ ] 10 points: A measure is provided for each goal. The measure is clearly described that somebody could independently conduct measurement.
+* [ ] 10 points: A measure is provided for each goal. Each measure is clearly described that somebody could independently conduct measurement.
 * [ ] 10 points: Environment entities and machine components relevant to the scenario are listed. The machine components include at least one AI component that performs image recognition.
 * [ ] 10 points: A single selected requirement (REQ) is clearly stated. The requirements mention only phenomena in the world.
 * [ ] 10 points: Environmental assumptions (ENV) are clearly stated. All stated assumptions relate to phenomena in the world or map those to shared phenomena accessibly by the machine.
 * [ ] 10 points: Machine specifications (SPEC) are clearly stated. All stated specifications mention only those phenomena in the interface between the world and the machine.
 * [ ] 5 points: The requirement, environmental assumption, and machine specifications fit reasonably together and correspond to the scenario.
 * [ ] 15 points: A fault tree that shows possible causes behind the violation of the requirement selected in Q3 is included. The included fault tree is syntactically valid.
-* [ ] 10 points: Minimal cut sets are identified from the fault tree.
+* [ ] 10 points: All minimal cut sets are identified from the fault tree.
 * [ ] 10 points: At least two mitigation strategies, corresponding to the requirement and the cut sets identified, are described. The description explains how the risk is reduced. The mitigations are at the system level outside the ML component. The mitigations are shown in an updated fault tree.
 
