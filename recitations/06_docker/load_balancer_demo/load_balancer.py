@@ -28,9 +28,9 @@ def welcome():
         response = requests.get('http://0.0.0.0:7005/')
     elif A_server_up and B_server_up:
         if random.uniform(0, 1) < probability:
-            response = requests.get('http://0.0.0.0:7004/')
+            response = f"Server A: {requests.get('http://0.0.0.0:7004/').text}"
         else:
-            response = requests.get('http://0.0.0.0:7005/')
+            response = f"Server B: {requests.get('http://0.0.0.0:7005/').text}"
     else:
         response = ''
     return str(response)
