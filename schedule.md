@@ -25,7 +25,7 @@
 | Fri, Oct 07 | ![Recitation](https://img.shields.io/badge/-rec-yellow.svg) [Containers: Docker](https://github.com/ckaestne/seai/blob/F2022/recitations/06_docker/Recitation%206%20Docker.pdf) [(Code)](https://github.com/ckaestne/seai/tree/F2022/recitations/06_docker) | |  |
 | Mon, Oct 10 | [Infrastructure Quality and MLOp](https://ckaestne.github.io/seai/F2022/slides/11_infrastructurequality/infrastructurequality.html) (qa chapter tbd, [operations chapter](https://ckaestne.medium.com/planning-for-operations-of-ml-enabled-systems-a3d18e07ef7c)) | [The ML Test Score](https://research.google.com/pubs/archive/46555.pdf) | |
 | Wed, Oct 12 | [Data Quality](https://ckaestne.github.io/seai/F2022/slides/12_dataquality/dataquality.html) ([book chapter](https://ckaestne.medium.com/data-quality-for-building-production-ml-systems-2e0cc7e6113f)) | [Data Cascades in High-Stakes AI](https://dl.acm.org/doi/abs/10.1145/3411764.3445518) | [I3: Architecture](https://github.com/ckaestne/seai/blob/F2022/assignments/I3_architecture.md)  |
-| Fri, Oct 14 | ![Recitation](https://img.shields.io/badge/-rec-yellow.svg) Continuous Integration: Jenkins | |  |
+| Fri, Oct 14 | ![Recitation](https://img.shields.io/badge/-rec-yellow.svg) [Unit Tests and Continuous Integration](https://drive.google.com/file/d/1trLB68hSuh8MIpCdTLEvjyog0CPy7ILp/view?usp=sharing) [(Code)](https://github.com/ranadeepsingh/CI_Tutorial) | |  |
 | Mon, Oct 17 | ![Break](https://img.shields.io/badge/-break-red.svg) Fall break, no classes | |  |
 | Wed, Oct 19 | ![Break](https://img.shields.io/badge/-break-red.svg) Fall break, no classes | |  |
 | Fri, Oct 21 | ![Break](https://img.shields.io/badge/-break-red.svg) Fall break, no classes | |  |
