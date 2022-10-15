@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>17-645: Scaling Data Storage and Data Processing</title>
+    <link rel="shortcut icon" href="./../favicon.ico" />
+    <link rel="stylesheet" href="./../dist/reset.css" />
+    <link rel="stylesheet" href="./../dist/reveal.css" />
+    <link rel="stylesheet" href="./../dist/theme/white.css" id="theme" />
+    <link rel="stylesheet" href="./../css/highlight/base16/zenburn.css" />
+    <link rel="stylesheet" href="./../_assets/cmu.css" />
+
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato" />
+
+    <!-- <link rel="stylesheet" href="./../css/print/paper.css" type="text/css" media="print" /> -->
+
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides"><div id="footer">17-645 Machine Learning in Production • Christian Kaestner, Carnegie Mellon University • Fall 2022</div><section  data-markdown><script type="text/template">  
+<!-- .element: class="titleslide"  data-background="../_chapterimg/13_dataatscale.jpg" -->
+<div class="stretch"></div>
+
+## Machine Learning in Production
+
+# Scaling Data Storage and Data Processing
+
+</script></section><section ><section data-markdown><script type="text/template">## Design and operations
+
+![Overview of course content](../_assets/overview.svg)
+<!-- .element: class="plain stretch" -->
+
+</script></section><section data-markdown><script type="text/template">## Readings
+
+Required reading: 🕮 Nathan Marz. Big Data: Principles and best practices of scalable realtime data systems. Simon and Schuster, 2015. Chapter 1: A new paradigm for Big Data
+
+Suggested watching: Molham Aref. [Business Systems with Machine Learning](https://www.youtube.com/watch?v=_bvrzYOA8dY). Guest lecture, 2020.
+
+Suggested reading: Martin Kleppmann. [Designing Data-Intensive Applications](https://dataintensive.net/). OReilly. 2017. 
+</script></section><section data-markdown><script type="text/template">
+# Learning Goals
+
+* Organize different data management solutions and their tradeoffs
+* Understand the scalability challenges involved in large-scale machine learning and specifically deep learning
+* Explain the tradeoffs between batch processing and stream processing and the lambda architecture
+* Recommend and justify a design and corresponding technologies for a given system
+</script></section></section><section ><section data-markdown><script type="text/template"># Case Study
+
+![Google Photos Screenshot](gphotos.png)
+<!-- .element: class="stretch" -->
+
+<aside class="notes"><ul>
+<li>Discuss possible architecture and when to predict (and update)</li>
+<li>in may 2017: 500M users, uploading 1.2billion photos per day (14k/sec)</li>
+<li>in Jun 2019 1 billion users</li>
+</ul>
+</aside></script></section><section data-markdown><script type="text/template">
+## Adding capacity
+
+<iframe src="https://giphy.com/embed/3oz8xtBx06mcZWoNJm" width="480" height="362" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+
+*Stories of catastrophic success?*
+</script></section></section><section ><section data-markdown><script type="text/template">
+# Data Management and Processing in ML-Enabled Systems
+</script></section><section data-markdown><script type="text/template">## Kinds of Data
+
+* Training data
+* Input data
+* Telemetry data
+* (Models)
+
+*all potentially with huge total volumes and high throughput*
+
+*need strategies for storage and processing*
+</script></section><section data-markdown><script type="text/template">## Data Management and Processing in ML-Enabled Systems
+
+Store, clean, and update training data
+
+Learning process reads training data, writes model
+
+Prediction task (inference) on demand or precomputed
+
+Individual requests (low/high volume) or large datasets?
+ 
+*Often both learning and inference data heavy, high volume tasks*
+</script></section><section data-markdown><script type="text/template">## Scaling Computations
+
+<!-- colstart -->
+Efficent Algorithms
+<!-- col -->
+Faster Machines
+<!-- col -->
+More Machines
+<!-- colend -->
+</script></section><section data-markdown><script type="text/template">## Distributed Everything
+
+Distributed data cleaning
+
+Distributed feature extraction
+
+Distributed learning
+
+Distributed large prediction tasks
+
+Incremental predictions
+
+Distributed logging and telemetry
+
+
+</script></section><section data-markdown><script type="text/template">## Reliability and Scalability Challenges in AI-Enabled Systems?
+
+<!-- discussion -->
+
+
+</script></section><section data-markdown><script type="text/template">## Distributed Systems and AI-Enabled Systems
+
+* Learning tasks can take substantial resources
+* Datasets too large to fit on single machine
+* Nontrivial inference time, many many users
+* Large amounts of telemetry
+* Experimentation at scale
+* Models in safety critical parts
+* Mobile computing, edge computing, cyber-physical systems
+</script></section><section data-markdown><script type="text/template">## Reminder: T-Shaped People
+
+![T-shaped people illustration](tshaped.png)
+<!-- .element: class="plain" -->
+
+
+Go deeper with: Martin Kleppmann. [Designing Data-Intensive Applications](https://dataintensive.net/). OReilly. 2017. 
+</script></section></section><section ><section data-markdown><script type="text/template"># Excursion: Distributed Deep Learning with the Parameter Server Architecture
+
+<!-- references -->
+Li, Mu, et al. "[Scaling distributed machine learning with the parameter server](https://www.usenix.org/system/files/conference/osdi14/osdi14-paper-li_mu.pdf)." OSDI, 2014.
+</script></section><section data-markdown><script type="text/template">## Recall: Backpropagation
+
+![Multi Layer Perceptron](mlperceptron.svg)
+<!-- .element: class="stretch" -->
+</script></section><section data-markdown><script type="text/template">## Training at Scale is Challenging
+
+Already 2012 at Google: 1TB-1PB of training data, $10^9-10^{12}$ parameters
+
+Need distributed training; learning is often a sequential problem
+
+Just exchanging model parameters requires substantial network bandwidth
+
+Fault tolerance essential (like batch processing), add/remove nodes
+
+Tradeoff between convergence rate and system efficiency
+
+<!-- references -->
+Li, Mu, et al. "[Scaling distributed machine learning with the parameter server](https://www.usenix.org/system/files/conference/osdi14/osdi14-paper-li_mu.pdf)." OSDI, 2014.
+</script></section><section data-markdown><script type="text/template">## Distributed Gradient Descent
+
+[![Parameter Server](parameterserver.png)](https://www.usenix.org/system/files/conference/osdi14/osdi14-paper-li_mu.pdf)
+<!-- .element: class="stretch" -->
+</script></section><section data-markdown><script type="text/template">## Parameter Server Architecture
+
+[![Parameter Server](parameterserver2.png)](https://www.usenix.org/system/files/conference/osdi14/osdi14-paper-li_mu.pdf)
+<!-- .element: class="stretch" -->
+
+<aside class="notes"><p>Multiple parameter servers that each only contain a subset of the parameters, and multiple workers that each require only a subset of each</p>
+<p>Ship only relevant subsets of mathematical vectors and matrices, batch communication</p>
+<p>Resolve conflicts when multiple updates need to be integrated (sequential, eventually, bounded delay)</p>
+<p>Run more than one learning algorithm simulaneously</p>
+</aside></script></section><section data-markdown><script type="text/template">## SysML Conference
+
+
+Increasing interest in the systems aspects of machine learning
+
+e.g., building large scale and robust learning infrastructure
+
+https://mlsys.org/
+
+
+
+
+
+
+
+
+
+
+
+
+</script></section></section><section ><section data-markdown><script type="text/template"># Data Storage Basics
+
+Relational vs document storage
+
+1:n and n:m relations
+
+Storage and retrieval, indexes
+
+Query languages and optimization
+</script></section><section data-markdown><script type="text/template">## Relational Data Models
+
+<div class="smaller">
+
+**Photos:** 
+
+|photo_id|user_id|path|upload_date|size|camera_id|camera_setting|
+|-|-|-|-|-|-|-|
+|133422131|54351|/st/u211/1U6uFl47Fy.jpg|2021-12-03T09:18:32.124Z|5.7|663|ƒ/1.8; 1/120; 4.44mm; ISO271|
+|133422132|13221| /st/u11b/MFxlL1FY8V.jpg |2021-12-03T09:18:32.129Z|3.1|1844|ƒ/2, 1/15, 3.64mm, ISO1250|
+|133422133|54351|/st/x81/ITzhcSmv9s.jpg|2021-12-03T09:18:32.131Z|4.8|663|ƒ/1.8; 1/120; 4.44mm; ISO48|
+
+<!-- colstart -->
+
+**Users:**
+
+
+| user_id |account_name|photos_total|last_login|
+|-|-|-|-|
+|54351| ckaestne | 5124 | 2021-12-08T12:27:48.497Z |
+|13221| eva.burk     |3|2021-12-21T01:51:54.713Z|
+
+<!-- col -->
+
+**Cameras:**
+
+
+| camera_id |manufacturer|print_name|
+|-|-|-|
+|663| Google | Google Pixel 5 |
+|1844|Motorola|Motorola MotoG3|
+
+<!-- colend -->
+
+```sql
+select p.photo_id, p.path, u.photos_total 
+from photos p, users u 
+where u.user_id=p.user_id and u.account_name = "ckaestne"
+```
+
+</div>
+</script></section><section data-markdown><script type="text/template">
+## Document Data Models
+<!-- smallish -->
+
+```js
+{
+    "_id": 133422131,
+    "path": "/st/u211/1U6uFl47Fy.jpg",
+    "upload_date": "2021-12-03T09:18:32.124Z",
+    "user": {
+        "account_name": "ckaestne", 
+        "account_id": "a/54351"
+    },
+	"size": "5.7",
+    "camera": { 
+        "manufacturer": "Google", 
+        "print_name": "Google Pixel 5", 
+        "settings": "ƒ/1.8; 1/120; 4.44mm; ISO271" 
+    }
+}
+
+```
+
+```js
+db.getCollection('photos').find( { "user.account_name": "ckaestne"})
+```
+</script></section><section data-markdown><script type="text/template">## Log files, unstructured data
+
+```text
+02:49:12 127.0.0.1 GET /img13.jpg 200
+02:49:35 127.0.0.1 GET /img27.jpg 200
+03:52:36 127.0.0.1 GET /main.css 200
+04:17:03 127.0.0.1 GET /img13.jpg 200
+05:04:54 127.0.0.1 GET /img34.jpg 200
+05:38:07 127.0.0.1 GET /img27.jpg 200
+05:44:24 127.0.0.1 GET /img13.jpg 200
+06:08:19 127.0.0.1 GET /img13.jpg 200
+```
+
+</script></section><section data-markdown><script type="text/template">## Tradeoffs
+
+<!-- discussion -->
+</script></section><section data-markdown><script type="text/template">## Data Encoding
+
+Plain text (csv, logs)
+
+Semi-structured, schema-free (JSON, XML)
+
+Schema-based encoding (relational, Avro, ...)
+
+Compact encodings (protobuffer, ...)
+</script></section></section><section ><section data-markdown><script type="text/template"># Distributed Data Storage
+</script></section><section data-markdown><script type="text/template">## Replication vs Partitioning
+
+<!-- discussion -->
+</script></section><section data-markdown><script type="text/template">## Partitioning
+
+<!-- colstart -->
+Divide data:
+
+* *Horizontal partitioning:* Different rows in different tables; e.g., movies by decade, hashing often used
+* *Vertical partitioning:* Different columns in different tables; e.g., movie title vs. all actors
+
+**Tradeoffs?**
+
+<!-- col -->
+
+![Horizontal partitioning](horizonalpartition.svg)
+<!-- .element: class="plain" -->
+
+<!-- colend -->
+</script></section><section data-markdown><script type="text/template">## Replication with Leaders and Followers
+
+![Leader-follower replication](leaderfollowerreplication.svg)
+<!-- .element: class="plain stretch" -->
+
+</script></section><section data-markdown><script type="text/template">## Replication Strategies: Leaders and Followers
+
+Write to leader, propagated synchronously or async.
+
+Read from any follower
+
+Elect new leader on leader outage; catchup on follower outage
+
+Built in model of many databases (MySQL, MongoDB, ...)
+
+**Benefits and Drawbacks?**
+
+</script></section><section data-markdown><script type="text/template">## Recall: Google File System
+
+![](gfs.png)<!-- .element: style="width:1050px" -->
+
+
+<!-- references -->
+Ghemawat, Sanjay, Howard Gobioff, and Shun-Tak Leung. "[The Google file system.](https://ai.google/research/pubs/pub51.pdf)" ACM SIGOPS operating systems review. Vol. 37. No. 5. ACM, 2003.
+
+</script></section><section data-markdown><script type="text/template">## Multi-Leader Replication
+
+Scale write access, add redundancy
+
+Requires coordination among leaders
+* Resolution of write conflicts
+
+Offline leaders (e.g. apps), collaborative editing
+
+
+</script></section><section data-markdown><script type="text/template">## Leaderless Replication
+
+Client writes to multiple replica, propagate from there
+
+Read from multiple replica (quorum required)
+* Repair on reads, background repair process
+
+Versioning of entries (clock problem)
+
+*e.g. Amazon Dynamo, Cassandra, Voldemort*
+</script></section><section data-markdown><script type="text/template">## Transactions
+
+Multiple operations conducted as one, all or nothing
+
+Avoids problems such as
+* dirty reads
+* dirty writes
+
+Various strategies, including locking and optimistic+rollback
+
+Overhead in distributed setting
+</script></section></section><section  data-markdown><script type="text/template"># Data Processing (Overview)
+
+* Services (online)
+    * Responding to client requests as they come in
+    * Evaluate: Response time
+* Batch processing (offline)
+    * Computations run on large amounts of data
+    * Takes minutes to days; typically scheduled periodically
+    * Evaluate: Throughput
+* Stream processing (near real time)
+    * Processes input events, not responding to requests
+    * Shortly after events are issued
+</script></section><section ><section data-markdown><script type="text/template"># Microservices
+</script></section><section data-markdown><script type="text/template">## Microservices
+
+![Audible example](microservice.svg)
+<!-- .element: class="plain stretch" -->
+
+<!-- references_ -->
+Figure based on Christopher Meiklejohn. [Dynamic Reduction: Optimizing Service-level Fault Injection Testing With Service Encapsulation](http://christophermeiklejohn.com/filibuster/2021/10/14/filibuster-4.html). Blog Post 2021
+</script></section><section data-markdown><script type="text/template">## Microservices
+
+<div class="smallish">
+
+Independent, cohesive services
+ * Each specialized for one task
+ * Each with own data storage
+ * Each independently scalable through multiple instances + load balancer
+
+Remote procedure calls
+
+Different teams can work on different services independently (even in different languages)
+
+But: Substantial complexity from distributed system nature: various network failures,
+ latency from remote calls, ...
+
+*Avoid microservice complexity unless really needed for scalability*
+
+</div>
+</script></section><section data-markdown><script type="text/template">## API Gateway Pattern
+
+Central entry point, authentication, routing, updates, ...
+
+![API Gateway illustration](apigateway.svg)
+<!-- .element: class="plain stretch" -->
+
+
+</script></section></section><section ><section data-markdown><script type="text/template"># Batch Processing
+</script></section><section data-markdown><script type="text/template">## Large Jobs
+
+* Analyzing TB of data, typically distributed storage
+* Filtering, sorting, aggregating
+* Producing reports, models, ...
+
+```sh
+cat /var/log/nginx/access.log |
+    awk '{print $7}' |
+    sort |
+    uniq -c |
+    sort -r -n |
+    head -n 5
+```</script></section><section data-markdown><script type="text/template">[![Map Reduce example](mapreduce.svg)](mapreduce.svg)
+<!-- .element: class="stretch plain" -->
+</script></section><section data-markdown><script type="text/template">## Distributed Batch Processing
+
+Process data locally at storage
+
+Aggregate results as needed
+
+Separate pluming from job logic
+
+*MapReduce* as common framework
+
+</script></section><section data-markdown><script type="text/template">## MapReduce -- Functional Programming Style
+
+Similar to shell commands: Immutable inputs, new outputs, avoid side effects
+
+Jobs can be repeated (e.g., on crashes)
+
+Easy rollback
+
+Multiple jobs in parallel (e.g., experimentation)
+</script></section><section data-markdown><script type="text/template">## Machine Learning and MapReduce
+
+<!-- discussion -->
+
+<aside class="notes"><p>Useful for big learning jobs, but also for feature extraction</p>
+</aside></script></section><section data-markdown><script type="text/template">## Dataflow Engines (Spark, Tez, Flink, ...)
+
+Single job, rather than subjobs
+
+More flexible than just map and reduce
+
+Multiple stages with explicit dataflow between them
+
+Often in-memory data
+
+Pluming and distribution logic separated
+</script></section><section data-markdown><script type="text/template">## Key Design Principle: Data Locality
+
+> Moving Computation is Cheaper than Moving Data -- [Hadoop Documentation](https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/HdfsDesign.html#aMoving_Computation_is_Cheaper_than_Moving_Data)
+
+Data often large and distributed, code small
+
+Avoid transfering large amounts of data
+
+Perform computation where data is stored (distributed)
+
+Transfer only results as needed
+ 
+*"The map reduce way"*
+
+
+</script></section></section><section ><section data-markdown><script type="text/template"># Stream Processing
+
+Event-based systems, message passing style, publish subscribe
+</script></section><section data-markdown><script type="text/template">## Stream Processing (e.g., Kafka)
+![Stream example](stream.svg)
+<!-- .element: class="stretch plain" -->
+</script></section><section data-markdown><script type="text/template">## Messaging Systems
+
+Multiple producers send messages to topic
+
+Multiple consumers can read messages
+
+-> Decoupling of producers and consumers
+
+Message buffering if producers faster than consumers
+
+Typically some persistency to recover from failures
+
+Messages removed after consumption or after timeout
+
+Various error handling strategies (acknowledgements, redelivery, ...)
+</script></section><section data-markdown><script type="text/template">## Common Designs
+
+Like shell programs: Read from stream, produce output in other stream. -> loose coupling
+
+
+![](stream-dataflow.svg)
+<!-- .element: class="stretch plain" -->
+</script></section><section data-markdown><script type="text/template">## Stream Queries
+
+Processing one event at a time independently
+
+vs incremental analysis over all messages up to that point
+
+vs floating window analysis across recent messages
+
+Works well with probabilistic analyses
+</script></section><section data-markdown><script type="text/template">## Consumers
+
+Multiple consumers share topic for scaling and load balancing
+
+Multiple consumers read same message for different work
+
+Partitioning possible
+</script></section><section data-markdown><script type="text/template">## Design Questions
+
+Message loss important? (at-least-once processing)
+
+Can messages be processed repeatedly (at-most-once processing)
+
+Is the message order important?
+
+Are messages still needed after they are consumed?
+</script></section><section data-markdown><script type="text/template">## Stream Processing and AI-enabled Systems?
+
+<!-- discussion -->
+
+<aside class="notes"><p>Process data as it arrives, prepare data for learning tasks,
+use models to annotate data, analytics</p>
+</aside></script></section><section data-markdown><script type="text/template">## Event Sourcing
+
+* Append only databases
+* Record edit events, never mutate data
+* Compute current state from all past events, can reconstruct old state
+* For efficiency, take state snapshots
+* *Similar to traditional database logs, but persistent*
+
+```text
+addPhoto(id=133422131, user=54351, path="/st/u211/1U6uFl47Fy.jpg", date="2021-12-03T09:18:32.124Z")
+updatePhotoData(id=133422131, user=54351, title="Sunset")
+replacePhoto(id=133422131, user=54351, path="/st/x594/vipxBMFlLF.jpg", operation="/filter/palma")
+deletePhoto(id=133422131, user=54351)
+```
+</script></section><section data-markdown><script type="text/template">## Benefits of Immutability (Event Sourcing)
+
+<div class="smallish">
+
+* All history is stored, recoverable
+* Versioning easy by storing id of latest record
+* Can compute multiple views
+* Compare *git*
+
+> *On a shopping website, a customer may add an item to their cart and then
+remove it again. Although the second event cancels out the first event [...], it may be useful to know for analytics purposes that the
+customer was considering a particular item but then decided against it. Perhaps they
+will choose to buy it in the future, or perhaps they found a substitute. This information is recorded in an event log, but would be lost in a database [...].*
+
+</div>
+
+<!-- references -->
+
+Source: Greg Young. [CQRS and Event Sourcing](https://www.youtube.com/watch?v=JHGkaShoyNs). Code on the Beach 2014 via Martin Kleppmann. Designing Data-Intensive Applications. OReilly. 2017.
+</script></section><section data-markdown><script type="text/template">## Drawbacks of Immutable Data
+
+<!-- discussion -->
+
+<aside class="notes"><ul>
+<li>Storage overhead, extra complexity of deriving state</li>
+<li>Frequent changes may create massive data overhead</li>
+<li>Some sensitive data may need to be deleted (e.g., privacy, security)</li>
+</ul>
+</aside></script></section></section><section ><section data-markdown><script type="text/template"># The Lambda Architecture
+</script></section><section data-markdown><script type="text/template">## 3 Layer Storage Architecture
+
+
+* Batch layer: best accuracy, all data, recompute periodically
+* Speed layer: stream processing, incremental updates, possibly approximated
+* Serving layer: provide results of batch and speed layers to clients
+
+Assumes append-only data
+
+Supports tasks with widely varying latency
+
+Balance latency, throughput and fault tolerance
+</script></section><section data-markdown><script type="text/template">## Lambda Architecture and Machine Learning
+
+![Lambda Architecture](lambda.svg)
+<!-- .element: class="stretch plain" -->
+
+
+* Learn accurate model in batch job
+* Learn incremental model in stream processor
+</script></section><section data-markdown><script type="text/template">## Data Lake
+
+Trend to store all events in raw form (no consistent schema)
+
+May be useful later
+
+Data storage is comparably cheap
+
+<!-- discussion -->
+</script></section><section data-markdown><script type="text/template">## Data Lake
+
+Trend to store all events in raw form (no consistent schema)
+
+May be useful later
+
+Data storage is comparably cheap
+
+Bet: *Yet unknown future value of data is greater than storage costs*
+</script></section><section data-markdown><script type="text/template">## Reasoning about Dataflows
+
+Many data sources, many outputs, many copies
+
+Which data is derived from what other data and how? 
+
+Is it reproducible? Are old versions archived?
+
+How do you get the right data to the right place in the right format?
+
+**Plan and document data flows**
+</script></section><section data-markdown><script type="text/template">![](issueanalysis.svg)
+<!-- .element: class="stretch" --></script></section><section data-markdown><script type="text/template">
+![](stream-dataflow.svg)
+<!-- .element: class="stretch plain" -->
+</script></section><section data-markdown><script type="text/template">
+[![Lots of data storage systems](etleverywhere.png)](https://youtu.be/_bvrzYOA8dY?t=1452)
+
+<!-- reference -->
+Molham Aref "[Business Systems with Machine Learning](https://www.youtube.com/watch?v=_bvrzYOA8dY)"
+</script></section></section><section  data-markdown><script type="text/template"># Breakout: Vimeo Videos
+
+As a group, discuss and post in `#lecture`, tagging group members:
+* How to distribute storage:
+* How to design scalable copy-right protection solution:
+* How to design scalable analytics (views, ratings, ...):
+
+[![Vimeo page](vimeo.png)](https://vimeo.com/about)
+</script></section><section ><section data-markdown><script type="text/template"># Excursion: ETL Tools
+
+Extract, tranform, load
+
+**The data engineer's toolbox**
+</script></section><section data-markdown><script type="text/template">## Data Warehousing (OLAP)
+
+Large denormalized databases with materialized views for large scale reporting queries
+* e.g. sales database, queries for sales trends by region
+ 
+Read-only except for batch updates: Data from OLTP systems loaded periodically, e.g. over night
+
+
+![Data warehouse](datawarehouse.jpg)
+
+<aside class="notes"><p>Image source: <a href="https://commons.wikimedia.org/wiki/File:Data_Warehouse_Feeding_Data_Mart.jpg">https://commons.wikimedia.org/wiki/File:Data_Warehouse_Feeding_Data_Mart.jpg</a></p>
+</aside></script></section><section data-markdown><script type="text/template">## ETL: Extract, Transform, Load
+
+* Transfer data between data sources, often OLTP -> OLAP system
+* Many tools and pipelines
+    - Extract data from multiple sources (logs, JSON, databases), snapshotting
+    - Transform: cleaning, (de)normalization, transcoding, sorting, joining
+    - Loading in batches into database, staging
+* Automation, parallelization, reporting, data quality checking, monitoring, profiling, recovery
+* Many commercial tools
+
+<!-- references -->
+Examples of tools in [several](https://www.softwaretestinghelp.com/best-etl-tools/) [lists](https://www.scrapehero.com/best-data-management-etl-tools/)
+</script></section><section data-markdown><script type="text/template">[![XPlenty Web Page Screenshot](xplenty.png)](https://www.xplenty.com/)
+</script></section><section data-markdown><script type="text/template">
+[![ETL everywhere](etleverywhere.png)](https://youtu.be/_bvrzYOA8dY?t=1452)
+
+<!-- reference -->
+Molham Aref "[Business Systems with Machine Learning](https://www.youtube.com/watch?v=_bvrzYOA8dY)"
+
+
+</script></section></section><section ><section data-markdown><script type="text/template"># Complexity of Distributed Systems
+</script></section><section data-markdown><script type="text/template">![Stop Fail](bluescreen.png)<!-- .element: style="width:900px" -->
+
+</script></section><section data-markdown><script type="text/template">## Common Distributed System Issues
+
+* Systems may crash
+* Messages take time
+* Messages may get lost
+* Messages may arrive out of order
+* Messages may arrive multiple times
+* Messages may get manipulated along the way
+* Bandwidth limits
+* Coordination overhead
+* Network partition
+* ...
+</script></section><section data-markdown><script type="text/template">## Types of failure behaviors
+
+* Fail-stop
+* Other halting failures
+* Communication failures
+    * Send/receive omissions
+    * Network partitions
+    * Message corruption
+* Data corruption
+* Performance failures
+    * High packet loss rate
+    * Low throughput, High latency
+* Byzantine failures
+</script></section><section data-markdown><script type="text/template">## Common Assumptions about Failures
+
+* Behavior of others is fail-stop 
+* Network is reliable 
+* Network is semi-reliable but asynchronous
+* Network is lossy but messages are not corrupt
+* Network failures are transitive
+* Failures are independent
+* Local data is not corrupt
+* Failures are reliably detectable
+* Failures are unreliably detectable
+</script></section><section data-markdown><script type="text/template">## Strategies to Handle Failures
+
+* Timeouts, retry, backup services
+* Detect crashed machines (ping/echo, heartbeat)
+* Redundant + first/voting
+* Transactions
+*
+* Do lost messages matter?
+* Effect of resending message?
+</script></section><section data-markdown><script type="text/template">## Test Error Handling
+
+* Recall: Testing with stubs
+* Recall: Chaos experiments
+
+
+
+
+
+
+</script></section></section><section ><section data-markdown><script type="text/template"># Performance Planning and Analysis
+</script></section><section data-markdown><script type="text/template">## Performance Planning and Analysis
+
+Ideally architectural planning upfront
+ * Identify key components and their interactions
+ * Estimate performance parameters
+ * Simulate system behavior (e.g., queuing theory)
+
+Existing system: Analyze performance bottlenecks
+ * Profiling of individual components
+ * Performance testing (stress testing, load testing, etc)
+ * Performance monitoring of distributed systems
+</script></section><section data-markdown><script type="text/template">## Performance Analysis
+
+What is the average waiting?
+
+How many customers are waiting on average? 
+
+How long is the average service time?
+
+What are the chances of one or more servers being idle? 
+
+What is the average utilization of the servers?
+
+-> Early analysis of different designs for bottlenecks
+
+-> Capacity planning
+</script></section><section data-markdown><script type="text/template">## Queuing Theory
+
+<div class="small">
+
+Queuing theory deals with the analysis of lines where customers wait to receive a service
+* Waiting at Quiznos
+* Waiting to check-in at an airport
+* Kept on hold at a call center
+* Streaming video over the net
+* Requesting a web service
+
+A queue is formed when request for services outpace the ability of the server(s) to service them immediately
+  * Requests arrive faster than they can be processed (unstable queue)
+  * Requests do not arrive faster than they can be processed but their processing is delayed by some time (stable queue)
+
+Queues exist because infinite capacity is infinitely expensive and excessive capacity is excessively expensive
+
+</div>
+</script></section><section data-markdown><script type="text/template">## Queuing Theory
+
+![Simple Queues](queuingth.png)
+<!-- .element: class="stretch" -->
+</script></section><section data-markdown><script type="text/template">## Analysis Steps (roughly)
+
+Identify system abstraction to analyze (typically architectural level, e.g. services, but also protocols, datastructures and components, parallel processes, networks)
+
+Model connections and dependencies
+
+Estimate latency and capacity per component (measurement and testing, prior systems, estimates, …)
+
+Run simulation/analysis to gather performance curves
+
+Evaluate sensitivity of simulation/analysis to various parameters (‘what-if questions’)
+</script></section><section data-markdown><script type="text/template">## Simulation (e.g., JMT)
+
+![JMT screenshot](jmt1.png)
+<!-- .element: class="stretch" -->
+
+<!-- references_ -->
+
+G.Serazzi Ed. Performance Evaluation Modelling with JMT: learning by examples. Politecnico di Milano - DEI, TR 2008.09, 366 pp., June 2008 
+</script></section><section data-markdown><script type="text/template">## Profiling
+
+Mostly used during development phase in single components
+
+![VisualVM profiler](profiler.jpg)<!-- .element: style="width:700px" -->
+
+</script></section><section data-markdown><script type="text/template">## Performance Testing
+
+* Load testing: Assure handling of maximum expected load
+* Scalability testing: Test with increasing load
+* Soak/spike testing: Overload application for some time, observe stability
+* Stress testing: Overwhelm system resources, test graceful failure + recovery
+*
+* Observe (1) latency, (2) throughput, (3) resource use
+* All automateable; tools like JMeter
+</script></section><section data-markdown><script type="text/template">## Performance Monitoring of Distr. Systems
+
+[![](distprofiler.png)](distprofiler.png)
+<!-- .element: class="stretch" -->
+
+<!-- references_ -->
+Source: https://blog.appdynamics.com/tag/fiserv/
+</script></section><section data-markdown><script type="text/template">## Performance Monitoring of Distributed Systems
+
+* Instrumentation of (Service) APIs
+* Load of various servers
+* Typically measures: latency, traffic, errors, saturation
+* 
+* Monitoring long-term trends
+* Alerting
+* Automated releases/rollbacks
+* Canary testing and A/B testing
+
+
+
+
+</script></section></section><section ><section data-markdown><script type="text/template">
+# Summary
+
+* Large amounts of data (training, inference, telemetry, models)
+* Distributed storage and computation for scalability
+* Common design patterns (e.g., batch processing, stream processing, lambda architecture)
+* Design considerations: mutable vs immutable data
+* Distributed computing also in machine learning
+* Lots of tooling for data extraction, transformation, processing
+* Many challenges through distribution: failures, debugging, performance, ...
+
+<!-- references -->
+Recommended reading: Martin Kleppmann. [Designing Data-Intensive Applications](https://dataintensive.net/). OReilly. 2017.
+
+
+
+</script></section><section data-markdown><script type="text/template">
+## Further Readings
+
+<div class="smallish">
+
+* Molham Aref "[Business Systems with Machine Learning](https://www.youtube.com/watch?v=_bvrzYOA8dY)" Invited Talk 2020
+* Sawadogo, Pegdwendé, and Jérôme Darmont. "[On data lake architectures and metadata management](https://hal.archives-ouvertes.fr/hal-03114365/)." Journal of Intelligent Information Systems 56, no. 1 (2021): 97-120.
+* Warren, James, and Nathan Marz. [Big Data: Principles and best practices of scalable realtime data systems](https://bookshop.org/books/big-data-principles-and-best-practices-of-scalable-realtime-data-systems/9781617290343). Manning, 2015.
+* Smith, Jeffrey. [Machine Learning Systems: Designs that Scale](https://bookshop.org/books/machine-learning-systems-designs-that-scale/9781617293337). Manning, 2018.
+* Polyzotis, Neoklis, Sudip Roy, Steven Euijong Whang, and Martin Zinkevich. 2017. “[Data Management Challenges in Production Machine Learning](https://dl.acm.org/doi/pdf/10.1145/3035918.3054782).” In Proceedings of the 2017 ACM International Conference on Management of Data, 1723–26. ACM.
+
+</div></script></section></section></div>
+    </div>
+
+    <script src="./../dist/reveal.js"></script>
+
+    <script src="./../_assets/mymarkdown.js"></script>
+    <script src="./../plugin/markdown/markdown.js"></script>
+    <script src="./../plugin/highlight/highlight.js"></script>
+    <script src="./../plugin/zoom/zoom.js"></script>
+    <script src="./../plugin/notes/notes.js"></script>
+    <script src="./../plugin/math/math.js"></script>
+
+    <script src="./../node_modules/reveal.js-menu/menu.js"></script>
+    <script src="./../node_modules/reveal.js-plugins/embed-tweet/plugin.js"></script>
+
+
+    <script>
+      function extend() {
+        var target = {};
+        for (var i = 0; i < arguments.length; i++) {
+          var source = arguments[i];
+          for (var key in source) {
+            if (source.hasOwnProperty(key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+        return target;
+      }
+
+      // default options to init reveal.js
+      var defaultOptions = {
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        controls: true,
+        slideNumber: true,
+        markdown: {
+          renderer: patchMarkdown(RevealMarkdown().marked)
+        },
+        plugins: [
+          RevealMarkdown,
+          RevealHighlight,
+          RevealZoom,
+          RevealNotes,
+          RevealMath,
+          RevealMenu,
+          RevealEmbedTweet
+        ]
+      };
+
+      // options from URL query string
+      var queryOptions = Reveal().getQueryHash() || {};
+
+      var options = extend(defaultOptions, {"controls":true,"progress":true,"theme":"white","slideNumber":true,"hash":true,"history":false,"center":false,"width":1280,"height":720,"margin":0.1,"transition":"none"}, queryOptions);
+    </script>
+
+
+    <script>
+      Reveal.initialize(options);
+    </script>
+  </body>
+</html>
