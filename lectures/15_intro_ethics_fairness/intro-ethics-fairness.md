@@ -67,6 +67,29 @@ Many interrelated issues:
 *Each is a deep and nuanced research topic. We focus on survey of some key issues.*
 
 ----
+## With a few lines of code...
+
+![News headline about airlines splitting up passengers seating](airline.png)
+
+----
+## With a few lines of code...
+
+Developers have substantial power in shaping products
+
+Small design decisions can have substantial impact (safety, security, discrimination, ...) -- not always deliberate
+
+Endagering users by not thinking through consequences? Anticipating mistakes?
+
+Machine learning as a particular powerful and dangerous tool...
+
+----
+## With a few lines of code...
+
+<div class="tweet" data-src="https://twitter.com/naotokui_en/status/1556128063913615360?t=S6OZTCookeK14CrRZJGwig&s=03"></div>
+
+
+
+----
 
 <!-- colstart -->
 
