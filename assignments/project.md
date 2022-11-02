@@ -113,7 +113,7 @@ Evaluate *infrastructure code quality* by testing all steps in your model learni
 
 Writing unit tests for the code related to online evaluation is not required, but is highly recommended. Your online evaluation logic is technically part of the deployment, and should be subject to all standards that hold for other components. You should consider writing unit tests for the telemetry/monitoring code in the online evaluation and the evaluation mechanism you chose in the offline evaluation. 
 
-Set up an continuous integration service. You could install Jenkins on your virtual machine or use a cloud service, such as GitHub Actions and Circle-CI. You may use the same or different services for testing the infrastructure and automating the learning process. This service should run the unit tests every time code changes are pushed to GitHub. 
+Set up an continuous integration service. You could install Jenkins on your virtual machine or use a cloud service, such as GitHub Actions and Circle-CI. You may use the same or different services for testing the infrastructure and automating the learning process. This service should run the unit tests every time code changes are pushed to GitHub. You can, but are not required to run the full pipeline on the full dataset and report model accuracy on every commit.
 
 You do not need to create a visual frontend for this milestone, but online model quality, offline model quality, and continuous-integration reports should be stored in a readable format (e.g., JSON or log files).
 
@@ -127,7 +127,7 @@ If you hit resource limits of your virtual machine, contact the course staff or 
 * *Online evaluation* (1 page of text max): Briefly describe the metric used for evaluating model quality in production, the telemetry data collected, and the operationalization of the metric. Include or link to evaluation results in your report (figures do not count toward the page limit). Provide a pointer to the corresponding implementation in your code (preferably a direct GitHub link).
 * *Data quality* (0.5 pages max): Briefly describe the steps you have taken with regard to data quality and provide a pointer to the corresponding implementation in your code (preferably a direct GitHub link).
 * *Pipeline implementation and testing* (1 page max): Briefly describe how you structured the implementation of your pipeline and how you conducted testing. Include or link to a coverage report (figures do not count toward the page limit). Briefly argue why you think the testing is adequate. Provide a pointer to the corresponding implementation and test suite in your code (preferably a direct GitHub link).
-* *Continuous integration* (0.5 pages max): Describe your continuous integration setup both for infrastructure testing and for automatically training and evaluating models. Provide a pointer to the service (and credentials if needed to access the platform).
+* *Continuous integration* (0.5 pages max): Describe your continuous integration setup for infrastructure testing. Provide a pointer to the service (and credentials if needed to access the platform).
 * *Pull requests* (optional): If you use code reviews and pull requests within you team, provide a very short description of your process and link to 3 examples of your own pull requests.
 
 **Grading:** This milestone is worth 100 points: 
