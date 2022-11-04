@@ -81,4 +81,5 @@ The assignment is worth 100 points. We will assign credit as follows:
 * [ ] 10 points: Evidence is provided that the tool was tried on data from the movie streaming scenario.
 * [ ] 10 points: Two comments on other blog posts show an engagement with the content of those blog posts (i.e., not just “looks good” or “interesting!”).
 * [ ] (optional) 3 bonus points if the blog post is posted publicly.
+* [ ] (optional) 3 bonus points for doing a video or podcast instead of a blog post.
 
