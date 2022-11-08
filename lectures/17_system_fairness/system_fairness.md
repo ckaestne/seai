@@ -121,7 +121,7 @@ Anticipate harms from unfair decisions
 
 Consider how automation can amplify harm
 
-Overcome blindspots within teams
+Overcome blind spots within teams
 * Systematically consider consequences of bias
 * Consider safety engineering techniques (e.g., FTA)
 * Assemble diverse teams, use personas, crowdsource audits
@@ -163,14 +163,14 @@ Use anti-discrimination law as starting point, but do not end there
 * Socio-economic status? Body height? Weight? Hair style? Eye color? Sports team preferences?
 * Protected attributes for non-humans? Animals, inanimate objects?
 
-Involve stakeholders, colsult lawyers, read research, ask experts, ...
+Involve stakeholders, consult lawyers, read research, ask experts, ...
 
 ----
 ## Negotiate Fairness Goals/Measures
 
-Equalify or equity? Equalized odds? ...
+Equality or equity? Equalized odds? ...
 
-Cannot satisfy all. People have conflicting prefernces...
+Cannot satisfy all. People have conflicting preferences...
 
 > *Treating everybody equally in a meritocracy will reinforce existing inequalities whereas uplifting disadvantaged communities can be seen as giving unfair advantages to people who contributed less, making it harder to succeed in the advantaged group merely due to group status.*
 
@@ -202,7 +202,7 @@ Fairness can conflict with organizational goals (profits, usability)
 
 Fairer products may attract more customers
 
-Unfair products may receive bad press, reputation damange
+Unfair products may receive bad press, reputation damage
 
 Improving fairness through better data can benefit everybody
 
@@ -221,7 +221,7 @@ Power structures often influence outcomes
 * Users and activists and press can create pressure
 
 Just like other requirements negotiation:
-* Consider design space, expose tradeoffs explictly
+* Consider design space, expose tradeoffs explicitly
 * Somebody will need to make a decision, often project owner
 * Document decision with justification
 

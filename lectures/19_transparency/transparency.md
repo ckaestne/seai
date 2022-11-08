@@ -5,7 +5,7 @@ semester: Fall 2022
 footer: "17-645 Machine Learning in Production • Christian Kaestner, Carnegie Mellon University • Fall 2022"
 license: Creative Commons Attribution 4.0 International (CC BY 4.0)
 ---
-<!-- .element: class="titleslide"  data-background="../_chapterimg/19_transparency.png" -->
+<!-- .element: class="titleslide"  data-background="../_chapterimg/19_accountability.jpg" -->
 <div class="stretch"></div>
 
 ## Machine Learning in Production
