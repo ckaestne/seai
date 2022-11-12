@@ -13,6 +13,7 @@ license: Creative Commons Attribution 4.0 International (CC BY 4.0)
 
 # Transparency and Accountability
 
+<!-- image: https://commons.wikimedia.org/wiki/File:Kerlikowske_testifies_before_Senate_Finance_Committee_(26349370364).jpg -->
 
 ---
 ## More Explainability, Policy, and Politics
