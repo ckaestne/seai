@@ -1,6 +1,6 @@
 ---
 author: Christian Kaestner
-title: "17-645: Transparency and Accountability"
+title: "17-645: Versioning, Provenance, and Reproducability"
 semester: Fall 2022
 footer: "17-645 Machine Learning in Production • Christian Kaestner, Carnegie Mellon University • Fall 2022"
 license: Creative Commons Attribution 4.0 International (CC BY 4.0)

@@ -11,7 +11,7 @@ license: Creative Commons Attribution 4.0 International (CC BY 4.0)
 ## Machine Learning in Production
 
 
-# Model Testing beyond Accuracy 
+# Model Testing beyond Accuracy
 
 <p class="small" style="margin-top:0 !important">(Slicing, Capabilities, Invariants, Simulation, ...)</p>
 
@@ -28,7 +28,7 @@ license: Creative Commons Attribution 4.0 International (CC BY 4.0)
 * Select and deploy automated infrastructure to evaluate and monitor model quality
 
 ---
-# Model Quality 
+# Model Quality
 
 
 **First Part:** Measuring Prediction Accuracy
@@ -369,7 +369,7 @@ Ribeiro, Marco Tulio, Tongshuang Wu, Carlos Guestrin, and Sameer Singh. "[Beyond
 
 
 ----
-## Testing Capabilities 
+## Testing Capabilities
 
 ![Examples of Capabilities from Checklist Paper](capabilities1.png)
 
@@ -380,7 +380,7 @@ From: Ribeiro, Marco Tulio, Tongshuang Wu, Carlos Guestrin, and Sameer Singh. "[
 
 
 ----
-## Testing Capabilities 
+## Testing Capabilities
 
 ![Examples of Capabilities from Checklist Paper](capabilities2.png)
 
@@ -943,7 +943,7 @@ From: Ribeiro, Marco Tulio, Tongshuang Wu, Carlos Guestrin, and Sameer Singh. "[
 
 
 ----
-## Examples of Invariants 
+## Examples of Invariants
 
 <div class="smallish">
 
