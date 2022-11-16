@@ -41,7 +41,7 @@
 | Mon, Nov 14 | [Transparency & Accountability](https://ckaestne.github.io/seai/F2022/slides/19_transparency/transparency.html) ([book chapter](https://ckaestne.medium.com/transparency-and-accountability-in-ml-enabled-systems-f8ed0b6fd183)) | [People + AI, Ch. Explainability and Trust](https://pair.withgoogle.com/chapter/explainability-trust/) |  |
 | Wed, Nov 16 | [Versioning, Provenance, and Reproducability](https://ckaestne.github.io/seai/F2022/slides/20_provenance/provenance.html) ([book chapter](https://ckaestne.medium.com/versioning-provenance-and-reproducibility-in-production-machine-learning-355c48665005)) | [Building Intelligent Systems](https://www.buildingintelligentsystems.com/), Ch. 21 & [Goods: Organizing Google's Datasets](http://research.google.com/pubs/archive/45390.pdf) |  |
 | Fri, Nov 18 | ![Recitation](https://img.shields.io/badge/-rec-yellow.svg) Debugging | |  |
-| Mon, Nov 21 | Debugging (Guest lecture) / Human-AI Interaction | - |  |
+| Mon, Nov 21 | Debugging (Guest lecture by [Sherry Tongshuang Wu](https://www.cs.cmu.edu/~sherryw/)) | - |  |
 | Wed, Nov 23 | ![Break](https://img.shields.io/badge/-break-red.svg) Thanksgiving break | |  |
 | Fri, Nov 25 | ![Break](https://img.shields.io/badge/-break-red.svg) Thanksgiving break | |  |
 | Mon, Nov 28 | Security and Privacy | [Building Intelligent Systems](https://cmu.primo.exlibrisgroup.com/permalink/01CMU_INST/6lpsnm/alma991019649190004436), Ch. 25 & [The Top 10 Risks of Machine Learning Security](https://ieeexplore.ieee.org/document/9107290) |  |
