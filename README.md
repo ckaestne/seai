@@ -6,6 +6,9 @@
 
 ---
 
+
+**Note for Spring 2023: We have a fairly long waitlist on all sections for master students, but we are optimistic that we will be able to enroll most students within the first week of the semester.**
+
 For researchers, educators, or others interested in this topic, we share all course material, including slides and assignments, under a creative commons license on GitHub (https://github.com/ckaestne/seai/) and have also published an article describing the rationale and the initial design of this course: [Teaching Software Engineering for AI-Enabled Systems](https://arxiv.org/abs/2001.06691). A [textbook](https://ckaestne.medium.com/machine-learning-in-production-book-overview-63be62393581) is emerging. Video recordings of the Summer 2020 offering are online on the [course page](https://ckaestne.github.io/seai/S2020/#course-content). We would be happy to see this course or a similar version taught at other universities. See also an [annotated bibliography](https://github.com/ckaestne/seaibib) on research in this field.
 
 ## Course Description
