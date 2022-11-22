@@ -40,7 +40,7 @@
 | Fri, Nov 11 | ![Recitation](https://img.shields.io/badge/-rec-yellow.svg) Fairness | |  |
 | Mon, Nov 14 | [Transparency & Accountability](https://ckaestne.github.io/seai/F2022/slides/19_transparency/transparency.html) ([book chapter](https://ckaestne.medium.com/transparency-and-accountability-in-ml-enabled-systems-f8ed0b6fd183)) | [People + AI, Ch. Explainability and Trust](https://pair.withgoogle.com/chapter/explainability-trust/) |  |
 | Wed, Nov 16 | [Versioning, Provenance, and Reproducability](https://ckaestne.github.io/seai/F2022/slides/20_provenance/provenance.html) ([book chapter](https://ckaestne.medium.com/versioning-provenance-and-reproducibility-in-production-machine-learning-355c48665005)) | [Building Intelligent Systems](https://www.buildingintelligentsystems.com/), Ch. 21 & [Goods: Organizing Google's Datasets](http://research.google.com/pubs/archive/45390.pdf) |  |
-| Fri, Nov 18 | ![Recitation](https://img.shields.io/badge/-rec-yellow.svg) Debugging | |  |
+| Fri, Nov 18 | ![Recitation](https://img.shields.io/badge/-rec-yellow.svg) [Model Explainability & Interpretability](https://docs.google.com/presentation/d/13BCWL35LM2DXv5Hxj_aKBpdEP4CQhabc9mbUIWJDLm4/edit?usp=sharing) ([PDF](https://drive.google.com/file/d/1ZoFXFO5MkDxHvu9h4qB7xrvUXjslt3wP/view?usp=sharing), [Code](https://colab.research.google.com/drive/1ZiawXPUplLVVTAjz-734dChjyxII0XZO?usp=sharing), [Video](https://youtu.be/tYRWFSIc2IM)) | |  |
 | Mon, Nov 21 | Debugging (Guest lecture by [Sherry Tongshuang Wu](https://www.cs.cmu.edu/~sherryw/)) | - |  |
 | Wed, Nov 23 | ![Break](https://img.shields.io/badge/-break-red.svg) Thanksgiving break | |  |
 | Fri, Nov 25 | ![Break](https://img.shields.io/badge/-break-red.svg) Thanksgiving break | |  |
