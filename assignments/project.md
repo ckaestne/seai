@@ -84,8 +84,8 @@ This milestone is worth 100 points:
 * [ ] 10pt: The report contains a description of the prediction service and explains how a ranking is computed. 
 * [ ] 10pt: A link to the implementation of the prediction service is provided. The implementation matches the description and serves ranked recommendations. 
 * [ ] 10pt: The report includes a description of how the team was organized, including a description of communication channels and process for work division and responsibility assignments. A screenshot of/pointer to teamwork notes that describes how work was divided is provided. The notes answer *who* was supposed to do *what* by *when*.
-* [ ] 10pt: The prediction services successfully answers at least 2000 recommendation requests in the day before or after the milestone deadline. To be successful, the answer must be well-formed and arrive within the time limit. You can check success yourself by looking for the status 200 message in the movielog; we use that same information for grading.
-* [ ] 10pt: The prediction service answers at least 10% of all recommendation requests in the day before or after the milestone deadline with personalized recommendations (i.e., within the time limit, `200` status, not the same recommendation for every user).
+* [ ] 10pt: The prediction services successfully answers at least 2000 recommendation requests in the 24 hours before or after submission. To be successful, the answer must be well-formed and arrive within the time limit. You can check success yourself by looking for the status 200 message in the movielog; we use that same information for grading.
+* [ ] 10pt: The prediction service answers at least 10% of all recommendation requests in the 24 hours before or after submission with personalized recommendations (i.e., within the time limit, `200` status, not the same recommendation for every user).
 * [ ] 3pt: Bonus points for social activity (see very end of this document)
 
 
@@ -197,8 +197,8 @@ If you hit resource limits of your virtual machine, contact the course staff or 
 - [ ] 25pt: A monitoring infrastructure observes (a) service availability and (b) model quality. The report describes the infrastructure. The report describes and justifies what alerts were set up or why no alerts were used. A screenshot of the service is included and pointers to implementation and running dashboard are provided. The description matches the implementation.
 - [ ] 25pt: An infrastructure for online experimentation is implemented and has been used for at least one experiment. Appropriate statistical tests are used to report confidence in the experiments’ results. The report describes how users are split, how quality is tracked, and how results are reported. A screenshot of an experiment’s outcome is included and links to the corresponding implementation are provided. The description matches the implementation.
 - [ ] 10pt: The report describes how provenance is tracked. It explains how for a given prediction the responsible model can be identified and how for that model the corresponding pipeline version and training data can be identified. It illustrates that process with one concrete example. Links to the corresponding implementation are provided. The description matches the implementation.
-- [ ] 10pt: The recommendation service is at least 70% available in the 4 days before the day of the submission, the day of the submission, and the 3 days after (i.e., max downtime of 57h), while at least two updates are performed in that time period.
-- [ ] 5pt: Bonus points if the recommendation service is at least 99% available in the same 8-day window (max 115min downtime), while at least two updates are performed in that time period.
+- [ ] 10pt: The recommendation service is at least 70% available in the 96 hours before the submission and the 72 hours after (i.e., max downtime of 50h), while at least two updates are performed in that time period.
+- [ ] 5pt: Bonus points if the recommendation service is at least 99% available in the same 7-day window (max 100min downtime), while at least two updates are performed in that time period.
 - [ ] 3pt: Bonus points for social activity (see very end of this document)
 
 
