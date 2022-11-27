@@ -95,134 +95,13 @@ day of the application deadline.
 * The acceptance notices can only be sent out by the program director.
 
 ----
-## Other Security Requirements 
+## Other Security Requirements
 
 **Authentication:** Users are who they say they are
 
 **Non-repudiation:** Certain changes/actions in the system can be traced to who was responsible for it
 
 **Authorization:** Only users with the right permissions can access a resource/perform an action
-
----
-# Threat Modeling
-
-----
-## Why Threat Model?
-
-![](gate.png)
-
-----
-## Threat model: A profile of an attacker
-
-* __Goal__: What is the attacker trying to achieve?
-* __Capability__:
-  * Knowledge: What does the attacker know?
-  * Actions: What can the attacker do?
-  * Resources: How much effort can it spend? 
-* __Incentive__: Why does the attacker want to do this?
-
-![](art-of-war.png)
-
-----
-## Attacker Goal
-
-What is the attacker trying to achieve?
-* Typically, undermine one or more security requirements
-
-Example: College admission
-* Access other applicants info without being authorized
-	* Modify application status to “accepted”
-  * Modify admissions model to reject certain applications
-  * Cause website shutdown to sabotage other applicants
-	
-----
-## Attacker Capability
-
-![](admission-threat-model.jpg)
-<!-- .element: class="stretch" -->
-
-What actions are available to the attacker (to achieve its goal)?
- * Depends on system boundary/interfaces exposed to external actors
- * Use an architecture diagram to identify attack surface & actions
-
-<!-- ---- -->
-<!-- ## Architecture Diagram for Threat Modeling -->
-
-<!-- ![](admission-threat-model.jpg) -->
-
-<!-- * You can use any notation, as long as: -->
-<!--   * its constructs (e.g., boxes and lines) have clear meanings; use legend! -->
-<!--   * it clearly shows potentially malicious/untrusted agent(s) & interactions -->
-<!--     with the system -->
-
-----
-## STRIDE Threat Modeling
-
-![](stride.png)
-<!-- .element: class="stretch" -->
-
-A systematic approach to identifying threats (i.e., attacker actions)
-* Construct an architectural diagram with components & connections
-* Designate the trust boundary 
-* For each untrusted component/connection, identify threats
-* For each potential threat, devise a mitigation strategy
-
-<!-- references_ -->
-
-[More info: STRIDE approach](https://docs.microsoft.com/en-us/archive/msdn-magazine/2006/november/uncover-security-design-flaws-using-the-stride-approach)
-
-----
-## STRIDE: College Admission
-
-![](admission-threat-model.jpg)
-<!-- .element: class="stretch" -->
-
-* Spoofing: ?
-* Tampering: ? 
-* Information disclosure: ?
-* Denial of service: ?
-
-----
-## STRIDE: Example Threats
-
-![](admission-threat-model.jpg)
-<!-- .element: class="stretch" -->
-
-<div class="smallish">
-
-* Spoofing: Attacker pretends to be another applicant by logging in
-* Tampering: Attacker modifies applicant info using browser exploits
-* Information disclosure: Attacker intercepts HTTP requests from/to
-    server to read applicant info
-* Denial of service: Attacker creates a large number of bogus
-    accounts and overwhelms system with requests
-
-</div>
-----
-## STRIDE: Example Mitigations
-
-* Spoofing: Attacker pretends to be another applicant by logging in 
-  * -> __Require stronger passwords__
-* Tampering: Attacker modifies applicant info using browser exploits 
-  * -> __Add server-side security tokens__
-* Information disclosure: Attacker intercepts HTTP requests from/to server to read applicant info 
-  * -> __Use encryption (HTTPS)__
-* Denial of service: Attacker creates many bogus accounts and overwhelms system with requests 
-  * -> __Limit requests per IP address__
-
-----
-## STRIDE & Other Threat Modeling Methods
-
-A systematic approach to identifying threats & attacker actions
-
-Limitations:
-  * May end up with a long list of threats, not all of them critical
-  * False sense of security: STRIDE does not imply completeness!
-
-Consider cost vs. benefit trade-offs 
-* Implementing mitigations add
-    to development cost and complexity
-* Focus on most critical/likely threats
 
 
 ---
@@ -267,71 +146,16 @@ Who can access/influence...
 **Availability attacks:** Disruption to critical services
   * Reduce the accuracy of a model (e.g., induce model to misclassify many data points)
  
-----
-## Poisoning Attack on Availability
-
-<!-- colstart -->
-
-Inject mislabeled training data to damage model quality
-  * 3% poisoning => 11% decrease in accuracy (Steinhardt, 2017)
-
-Attacker must have some access to the public or private training set
-
-<!-- col -->
-
-*Example: Anti-virus (AV) scanner: AV company (allegedly) poisoned competitor's model by submitting fake viruses*
-
-![](virus.png)
-
-
-<!-- colend -->
-  
 
 ----
-## Poisoning Attacks on Integrity
+## Overview of Discussed ML-Specific Attacks
 
-Insert training data with seemingly correct labels
+* Evasion attacks/adversarial examples (integrity violation)
+* Targeted poisoning attacks (integrity violation)
+* Untargeted poisoning attacks (availability violation)
+* Model stealing attacks (confidentiality violation against model data)
+* Model inversion attack (confidentiality violation against training data)
 
-![](spam.jpg)
-<!-- .element: class="stretch" -->
-
-More targeted than availability attack, cause specific misclassification
-
-<!-- references_ -->
-_Poison Frogs! Targeted Clean-Label Poisoning Attacks on Neural
-Networks_, Shafahi et al. (2018)
-
-----
-## Defense against Poisoning Attacks
-
-
-<!-- discussion -->
-
-__How would you mitigate poisoning attacks?__
-
-----
-## Defense against Poisoning Attacks
-
-![](data-sanitization.png)
-
-Anomaly detection & data sanitization
-----
-## Defense against Poisoning Attacks
-
-
-Anomaly detection & data sanitization
-  * Identify and remove outliers in training set (see [data quality lecture](https://ckaestne.github.io/seai/F2020/slides/11_dataquality/dataquality.html#/3))
-  * Identify and understand drift from telemetry
-
-Quality control over your training data
-  * Who can modify or add to my training set? Do I trust the data
-  source? *Model data flows and trust boundaries!*
-  * Use security mechanisms (e.g., authentication) and logging to
-    track data provenance
-
-<!-- references -->
-_Stronger Data Poisoning Attacks Break Data Sanitization Defenses_,
-Koh, Steinhardt, and Liang (2018).
 
 ----
 ## Evasion Attacks (Adversarial Examples)
@@ -435,6 +259,106 @@ _Reliable Smart Road Signs_, Sayin et al. (2019).
   - Without model internals: Learn [surrogate model](https://ckaestne.github.io/seai/F2020/slides/17_explainability/explainability.html#/6/2)
   - With access to confidence scores: Heuristic search (e.g., hill climbing)
 
+
+----
+## Untargeted Poisoning Attack on Availability
+
+<!-- colstart -->
+
+Inject mislabeled training data to damage model quality
+  * 3% poisoning => 11% decrease in accuracy (Steinhardt, 2017)
+
+Attacker must have some access to the public or private training set
+
+<!-- col -->
+
+*Example: Anti-virus (AV) scanner: AV company (allegedly) poisoned competitor's model by submitting fake viruses*
+
+![](virus.png)
+
+
+<!-- colend -->
+  
+
+----
+## Targeted Poisoning Attacks on Integrity
+
+Insert training data with seemingly correct labels
+
+![](spam.jpg)
+<!-- .element: class="stretch" -->
+
+More targeted than availability attack, cause specific misclassification
+
+<!-- references_ -->
+_Poison Frogs! Targeted Clean-Label Poisoning Attacks on Neural
+Networks_, Shafahi et al. (2018)
+
+----
+## Defense against Poisoning Attacks
+
+
+<!-- discussion -->
+
+__How would you mitigate poisoning attacks?__
+
+----
+## Defense against Poisoning Attacks
+
+![](data-sanitization.png)
+
+Anomaly detection & data sanitization
+----
+## Defense against Poisoning Attacks
+
+
+Anomaly detection & data sanitization
+  * Identify and remove outliers in training set (see [data quality lecture](https://ckaestne.github.io/seai/F2020/slides/11_dataquality/dataquality.html#/3))
+  * Identify and understand drift from telemetry
+
+Quality control over your training data
+  * Who can modify or add to my training set? Do I trust the data
+  source? *Model data flows and trust boundaries!*
+  * Use security mechanisms (e.g., authentication) and logging to
+    track data provenance
+
+<!-- references -->
+_Stronger Data Poisoning Attacks Break Data Sanitization Defenses_,
+Koh, Steinhardt, and Liang (2018).
+
+
+
+----
+## Model Stealing Attacks
+
+![Bing stealing search results from Google](bing.png)
+<!-- .element: class="stretch" -->
+
+<!-- references_ -->
+Singel. [Google Catches Bing Copying; Microsoft Says 'So What?'](https://www.wired.com/2011/02/bing-copies-google/). Wired 2011.
+
+
+----
+## Model Stealing Attacks
+
+Copy a model without direct access
+
+-> Query model repeatedly and build surrogate model
+
+**Defenses?**
+
+----
+## Defending against Model Stealing Attacks
+
+Use model internally
+
+Rate limit API
+
+Abuse detection
+
+Inject artificial noise (vs. accuracy)
+
+
 ----
 ## Model Inversion against Confidentiality
 
@@ -482,6 +406,15 @@ _Biscotti: A Ledger for Private and Secure Peer-to-Peer Machine
 Learning_, M. Shayan et al., arXiv:1811.09904 (2018).
 
 ----
+## Review: ML-Specific Attacks
+
+* Evasion attacks/adversarial examples (integrity violation)
+* Targeted poisoning attacks (integrity violation)
+* Untargeted poisoning attacks (availability violation)
+* Model stealing attacks (confidentiality violation against model data)
+* Model inversion attack (confidentiality violation against training data)
+
+----
 ## Breakout: Dashcam System
 
 <!-- colstart -->
@@ -527,6 +460,130 @@ Remember: There may be easier ways to compromise system
 
 
 
+---
+# Threat Modeling
+
+----
+## Why Threat Model?
+
+![](gate.png)
+
+----
+## Threat model: A profile of an attacker
+
+* __Goal__: What is the attacker trying to achieve?
+* __Capability__:
+  * Knowledge: What does the attacker know?
+  * Actions: What can the attacker do?
+  * Resources: How much effort can it spend? 
+* __Incentive__: Why does the attacker want to do this?
+
+![](art-of-war.png)
+
+----
+## Attacker Goal
+
+What is the attacker trying to achieve?
+* Typically, undermine one or more security requirements
+
+Example: College admission
+* Access other applicants info without being authorized
+  * Modify application status to “accepted”
+  * Modify admissions model to reject certain applications
+  * Cause website shutdown to sabotage other applicants
+  
+----
+## Attacker Capability
+
+![](admission-threat-model.jpg)
+<!-- .element: class="stretch" -->
+
+What actions are available to the attacker (to achieve its goal)?
+ * Depends on system boundary/interfaces exposed to external actors
+ * Use an architecture diagram to identify attack surface & actions
+
+<!-- ---- -->
+<!-- ## Architecture Diagram for Threat Modeling -->
+
+<!-- ![](admission-threat-model.jpg) -->
+
+<!-- * You can use any notation, as long as: -->
+<!--   * its constructs (e.g., boxes and lines) have clear meanings; use legend! -->
+<!--   * it clearly shows potentially malicious/untrusted agent(s) & interactions -->
+<!--     with the system -->
+
+----
+## STRIDE Threat Modeling
+
+![](stride.png)
+<!-- .element: class="stretch" -->
+
+A systematic approach to identifying threats (i.e., attacker actions)
+* Construct an architectural diagram with components & connections
+* Designate the trust boundary 
+* For each untrusted component/connection, identify threats
+* For each potential threat, devise a mitigation strategy
+
+<!-- references_ -->
+
+[More info: STRIDE approach](https://docs.microsoft.com/en-us/archive/msdn-magazine/2006/november/uncover-security-design-flaws-using-the-stride-approach)
+
+----
+## STRIDE: College Admission
+
+![](admission-threat-model.jpg)
+<!-- .element: class="stretch" -->
+
+* Spoofing: ?
+* Tampering: ? 
+* Information disclosure: ?
+* Denial of service: ?
+
+----
+## STRIDE: Example Threats
+
+![](admission-threat-model.jpg)
+<!-- .element: class="stretch" -->
+
+<div class="smallish">
+
+* Spoofing: Attacker pretends to be another applicant by logging in
+* Tampering: Attacker modifies applicant info using browser exploits
+* Information disclosure: Attacker intercepts HTTP requests from/to
+    server to read applicant info
+* Denial of service: Attacker creates a large number of bogus
+    accounts and overwhelms system with requests
+
+</div>
+----
+## STRIDE: Example Mitigations
+
+* Spoofing: Attacker pretends to be another applicant by logging in 
+  * -> __Require stronger passwords__
+* Tampering: Attacker modifies applicant info using browser exploits 
+  * -> __Add server-side security tokens__
+* Information disclosure: Attacker intercepts HTTP requests from/to server to read applicant info 
+  * -> __Use encryption (HTTPS)__
+* Denial of service: Attacker creates many bogus accounts and overwhelms system with requests 
+  * -> __Limit requests per IP address__
+
+----
+## STRIDE & Other Threat Modeling Methods
+
+A systematic approach to identifying threats & attacker actions
+
+Limitations:
+  * May end up with a long list of threats, not all of them critical
+  * False sense of security: STRIDE does not imply completeness!
+
+Consider cost vs. benefit trade-offs 
+* Implementing mitigations add
+    to development cost and complexity
+* Focus on most critical/likely threats
+
+
+
+
 
 ---
 # Designing for Security
@@ -542,7 +599,7 @@ Remember: There may be easier ways to compromise system
 * Aim for risk minimization, not perfect security
 
 ----
-## Secure Design Principles 
+## Secure Design Principles
 
 *Minimize the impact of a compromised component*
  * **Principle of least privilege:** A component given only minimal privileges needed to fulfill its functionality
