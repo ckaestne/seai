@@ -943,7 +943,7 @@ Autonomy * Mastery * Purpose
 * Know the signs, know the interventions
 * Small teams, crossfunctional teams
 	* Deliberately create teams, respect congruence, define interfaces
-	* Hire T-Shared developers
+	* Hire T-shaped developers
 * Create awareness and accountability
 
 ----
