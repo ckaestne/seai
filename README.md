@@ -16,7 +16,7 @@ See the specific offering of the course you are interested in:
 * Spring 2021: [S2021 website](https://ckaestne.github.io/seai/S2021) and [S2021 GitHub branch](https://github.com/ckaestne/seai/tree/S2021)
 * Spring 2022: [S2022 website](https://ckaestne.github.io/seai/S2022) and [S2022 GitHub branch](https://github.com/ckaestne/seai/tree/S2022)
 * Fall 2022: [F2022 website](https://ckaestne.github.io/seai/F2022) and [F2022 GitHub branch](https://github.com/ckaestne/seai/tree/F2022)
-* Spring 2023: [S2023 website](https://ckaestne.github.io/mlip-s23/) and [S2023 on GitHub](https://github.com/ckaestne/mlip-s23)
+* Spring 2023: [S2023 website](https://mlip-cmu.github.io/s2023/) and [S2023 on GitHub](https://github.com/mlip-cmu/s2023)
 
 For researchers, educators, or others interested in this topic, we share all course material, including slides and assignments, under a creative commons license on GitHub (https://github.com/ckaestne/seai/) and have recently completed a [textbook](https://ckaestne.medium.com/machine-learning-in-production-book-overview-63be62393581) complementing the course. We also
 published an article describing the rationale and the design of the first iteration of the course: [Teaching Software Engineering for AI-Enabled Systems](https://arxiv.org/abs/2001.06691). Video recordings of the Summer 2020 offering, now slightly dated, are online on the [course page](https://ckaestne.github.io/seai/S2020/#course-content). We would be happy to see this course or a similar version taught at other universities.  See also an [annotated bibliography](https://github.com/ckaestne/seaibib) on the topic.
