@@ -1,7 +1,7 @@
 name: publish-gh-pages
 on:
   push:
-    branches: master
+    branches: main
 
 jobs:
   gh-pages:
@@ -32,5 +32,5 @@ jobs:
         git add *
         git config --local user.email "ckaestne@nomail.cs.cmu.edu"
         git config --local user.name "GitHub Action"
-        git commit --allow-empty -m "Update gh-pages for master/${{ github.sha }}"
+        git commit --allow-empty -m "Update gh-pages for main/${{ github.sha }}"
         git push https://$GITHUB_ACTOR:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:gh-pages --force --follow-tags -v
